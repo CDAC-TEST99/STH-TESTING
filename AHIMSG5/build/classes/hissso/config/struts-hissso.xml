@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+        "http://struts.apache.org/dtds/struts-2.5.dtd">
+
+<struts>
+     <constant name="struts.devMode" value="true" />
+     <constant name="struts.action.extension" value=","/> 
+   	<constant name="struts.enable.DynamicMethodInvocation" value="false" />
+   	
+   	
+     
+    <package name="hissso" namespace="/hissso" extends="struts-default" >
+    	
+    	<default-action-ref name="Login"/>
+		<action name="Login" class="hissso.controller.action.LoginACT">
+	    	<result name="INITIAL">/hissso/jsp/sso_login.jsp</result>
+	    	<result name="CGHSLOGIN">/hissso/jsp/sso_cghs_login.jsp</result>
+	    	<result name="EMPENALMENT">/hissso/jsp/sso_empanelled_hpst_labs.jsp</result>
+	    	<result name="BENLOGIN">/hissso/jsp/sso_ben_login.jsp</result>
+	    	<result name="ERROR">/hissso/jsp/sso_error_page.jsp</result>
+	    	<result name="MAIN">/hissso/jsp/sso_main_login.jsp</result>
+	    	<result name="SEAT">/hissso/jsp/sso_seat_login.jsp</result>
+	    	<result name="FIRSTLOGIN">/hissso/jsp/sso_first_login.jsp</result>
+	    	<result name="FIRSTBENLOGIN">/hissso/jsp/sso_first_ben_login.jsp</result>
+	    	<result name="SAVEBENPASSWORD">/hissso/jsp/registerNewPasswordBen.jsp</result>
+	    	<result name="FORGETBENPASSWORD">/hissso/jsp/sso_forget_password_ben.jsp</result>
+	    	<result name="FORGETPASSWORD">/hissso/jsp/sso_forget_password.jsp</result>
+	    	<result name="REGISTERBENPASSWORD">/hissso/jsp/sso_register_ben_password.jsp</result> 
+	    	<result name="CONSTRUCTION">/hissso/jsp/error/construction.jsp</result>
+	    	<result name="UNLOCKUSER">/hissso/jsp/benUnlockUser.jsp</result>
+	    	
+	    	<!-- <result name="PORTAL">/hissso/jsp/sso_portal.jsp</result> -->
+	    	<!-- <result name="MAIN">/hislogin/transactions/jsp/st_login_desk_mobile.jsp</result> -->
+	    	<allowed-methods>execute,init,portal,login,cghs,ben,benlogin,logout,desk,firstLogin,captcha,getToken,mlogin,mloginValidateOtp,NewloginValidateOTP,beneficiarylogin,role,switchRole,mbenlogin,mbenloginValidateOtp,construction,changePasswordFirst,changePasswordFirstBen,forgetPassword,forgetPasswordOtp,resetPassword,resetPasswordBen,forgetPasswordBen,forgetPasswordOtpBen,
+	    	registerPasswordBen, registerPasswordOtpBen, regPassBen,SaveBenPassword,unlockben,unlockbeneficiary,unlockBenvalidate,empanelled,cghsWC,restMedicine</allowed-methods>
+	    </action>
+    	 
+    	  
+    	 
+    	 
+	    <action name="*Login" method="{1}"  class="hissso.controller.action.LoginACT" >
+			<interceptor-ref name="basicStack" />			
+	    	<result name="INITIAL">/hissso/jsp/sso_login.jsp</result>
+	    	<!-- <result name="INITIAL">/hislogin/transactions/jsp/st_login_desk_mobile.jsp</result> -->
+	    	<result name="CGHSLOGIN">/hissso/jsp/sso_cghs_login.jsp</result>
+	    	<result name="EMPENALMENT">/hissso/jsp/sso_empanelled_hpst_labs.jsp</result>
+	    	<result name="CGHSWC">/hissso/jsp/sso_cghs_wc.jsp</result>
+	    	<result name="RESTRICTEDMEDICINE">/hissso/jsp/sso_restricted_medicine.jsp</result>
+	    	<result name="BENLOGIN">/hissso/jsp/sso_ben_login.jsp</result>
+	    	<result name="ERROR">/hissso/jsp/sso_error_page.jsp</result>
+	    	<result name="MAIN">/hissso/jsp/sso_main_login.jsp</result>
+	    	<result name="SEAT">/hissso/jsp/sso_seat_login.jsp</result>
+	    	<result name="FIRSTLOGIN">/hissso/jsp/sso_first_login.jsp</result>
+	    	<result name="FIRSTBENLOGIN">/hissso/jsp/sso_first_ben_login.jsp</result>
+	    	<result name="SAVEBENPASSWORD">/hissso/jsp/registerNewPasswordBen.jsp</result>
+	    	<result name="FORGETBENPASSWORD">/hissso/jsp/sso_forget_password_ben.jsp</result>
+	    	<result name="FORGETPASSWORD">/hissso/jsp/sso_forget_password.jsp</result>
+	    	<result name="REGISTERBENPASSWORD">/hissso/jsp/sso_register_ben_password.jsp</result>
+	    	<result name="CONSTRUCTION">/hissso/jsp/error/construction.jsp</result>
+	    	<result name="UNLOCKUSER">/hissso/jsp/benUnlockUser.jsp</result>
+	    	<!-- 
+	    		<result name="PORTAL">/hissso/jsp/sso_portal.jsp</result>
+	    	<result name="MAIN">/hislogin/transactions/jsp/st_login_desk_mobile.jsp</result> -->
+	    	<result name="DESK">/hislogin/UserDesk</result>	    	
+	    	<allowed-methods>execute,init,portal,login,cghs,empanelled,restMedicine,cghsWC,ben,benlogin,logout,desk,firstLogin,captcha,getToken,mlogin,mloginValidateOtp,NewloginValidateOTP,beneficiarylogin,benLogin,role,switchRole,mbenlogin,mbenloginValidateOtp,construction,changePasswordFirst,changePasswordFirstBen,forgetPassword,forgetPasswordOtp,forgetPasswordBen,forgetPasswordOtpBen,resetPassword, resetPasswordBen, registerPasswordBen, 
+	    	registerPasswordOtpBen, regPassBen, SaveBenPassword,unlockben,unlockbeneficiary,unlockBenvalidate</allowed-methods>
+	    	
+	    </action>
+	    
+	     
+	      
+    </package>
+</struts>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+        "http://struts.apache.org/dtds/struts-2.5.dtd">
+
+<struts>
+    <constant name="struts.devMode" value="false" />
+     <constant name="struts.action.extension" value=","/> 
+   	<constant name="struts.enable.DynamicMethodInvocation" value="false" />
+    
+    <package name="hislogin" namespace="/hislogin" extends="struts-default" >
+	  
+	    <action name="*UserDesk" method="{1}" class="hislogin.transactions.action.UserDeskACT">
+	    	  <result name="SUCCESS_BENIFICIARY">/hislogin/transactions/jsp/st_login_desk_beneficiary.jsp</result>	    	  
+	    	  <result name="SUCCESS_CLENT">/hislogin/transactions/jsp/st_login_desk_client.jsp</result> 	    	    
+	     	<!--   <result name="SUCCESS_CLENT">/hislogin/transactions/jsp/st_login_desk_mobile.jsp</result> --> 	     	
+	    	<result name="ERROR">/application/jsp/app_error_page.jsp</result>
+	    	
+	    	<allowed-methods>execute,load,cashCollectionDtl,getAlertDtl,reloadCash,refreshHome,reloadManualDtl,hospitalHeader,readFile,downloadManual,
+	    	getHighPriorityAlert,logMenuDtl,getHospitalsByCity,fetchWellnessCenterByCity,restMedicineDetail,getCityNames,viewerHITCount</allowed-methods>
+	    </action>
+	    
+
+	    <action name="*LgnFtr" method="{1}" class="hislogin.transactions.action.LoginFeaturesACT">
+	    	 
+	    	<result name="FORGETPASSWORD">/hislogin/transactions/jsp/st_forgot_password.jsp</result>
+	    	<result name="FIRSTLOGIN">/hislogin/transactions/jsp/st_first_login_details.jsp</result>
+	    	<result name="CHANGEPASSWORD">/hislogin/transactions/jsp/st_change_password.jsp</result>
+	    	<result name="CHANGEUSERDETAILS">/hislogin/transactions/jsp/st_change_user_details.jsp</result>
+	    	<result name="ADDUPDATEMOBILENO">/hislogin/transactions/jsp/st_add_update_mobile_no.jsp</result>
+	    	<result name="USERLOGDETAILS">/hislogin/transactions/jsp/st_user_log_details.jsp</result>
+	    	<result name="NEWHOSPREG">/hislogin/transactions/jsp/st_new_hospital_reg.jsp</result>
+	    	<result name="NEWCONTACTUS">/hislogin/transactions/jsp/st_new_contact_us.jsp</result>
+	    	<result name="NEWTRAIL">/hislogin/transactions/jsp/st_new_trail.jsp</result>
+	     
+	    	<allowed-methods>execute,processRequest,doGet,doPost,SENDOTPFgtPwd,EXPIREOTPFgtPwd,VALIDATEOTPFgtPwd,getOTPValidationStatusEmail,
+	    	CHECKLOGINID,SENDOTP,EXPIREOTP, VALIDATEOTP,initForgetPassword,validateForgetPassword,saveForgetPassword,initFirstLogin,saveFirstLogin,
+	    	initChangePassword, saveChangePassword,initChangeUserDetails,validateChangeUserDetails,saveChangeUserDetails,initAddUpdateMobileNo,validateAddUpdateMobileNo,
+	    	saveAddUpdateMobileNo,getManualList,getMenuList,initUserLogDetails,allUserLogDetails,datewiseUserLogDetails,captcha,newContactUsModal
+	    	,newTrailRequestModal,saveContactUs,saveTrailRequest,newHospitalRegModal,getDistrictList,getPatientHandlingCharge,genOTP,
+	    	validateRegOTP,saveHospitalRegistration,getFormContent,fetchCircularDetails,downloadManual,getHospitalsByCity,fetchWellnessCenterByCity,restMedicineDetail,viewerHITCount,getCityNames</allowed-methods>
+	    </action>
+    </package>
+</struts>

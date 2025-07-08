@@ -1,0 +1,33 @@
+<context>
+	 
+	 
+ <!-- dev -->
+<Resource 
+        name="AHIS"
+        auth="Container"
+        type="javax.sql.DataSource"
+		driverClassName="com.edb.Driver"
+		url="jdbc:edb://10.226.80.35:5444/hmis_punjab"
+		username="hmis_punjab"
+		password="hmis_punjab"
+		maxActive="4"
+		maxIdle="2"
+		maxWait="5000"/>
+		 
+	<!-- staging -->	 
+		 <Resource 
+        name="AHIS_staging"
+        auth="Container"
+        type="javax.sql.DataSource"
+		driverClassName="com.edb.Driver"
+		url="jdbc:edb://10.10.10.149:5445/hmis_punjab"
+		username="hmispunjab"
+		password="hmis12punjab"
+		maxActive="4"
+		maxIdle="2"
+		maxWait="5000"/>
+		 
+	
+	 
+	<WatchedResource>WEB-INF/web.xml</WatchedResource>
+</context>

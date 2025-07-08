@@ -1,0 +1,121 @@
+
+<script src="/AHIMSG5/hislogin/transactions/js/inventoryListing.js"></script>
+<script src="/AHIMSG5/hislogin/transactions/js/security.js"></script>
+
+
+<form id="inventoryList" method='POST'>
+	<section class="pt-1 mt-1 bg-white"
+		style='min-height: 100vh; letter-spacing: 1px; padding: 15px;'>
+		<div class='row'>
+			<div class='col-md-3  mb-2'>
+				<div class="form-group">
+					<label class="col-form-label col-form-label-md" for="patDOB">Search
+						:</label>
+					<div class='input-group'>
+						<input type='text' class='form-control'
+							placeholder='Name/CRNO/Mobile/ABHA ' id='search' name='search'
+							aria-label='Username' aria-describedby='input-group-right'>
+						<span class='input-group-text' id='input-group-right-example'><i
+							class='fa-solid fa-magnifying-glass fa-fw'></i></span>
+					</div>
+					<div class="text-primary" id='searchInfo' style="display: none;">Press
+						enter to search</div>
+				</div>
+			</div>
+			<div class='col-md-2  mb-2 hideOnSearch'>
+				<div class="form-group">
+					<label class="col-form-label col-form-label-md" for="patDOB">Date
+						:</label> <input type="text" class="form-control form-control"
+						maxlength="11" readonly="true" id='filterDate' name='filterDate'
+						placeholder="dd-Mon-yyyy">
+					<div class="invalid-feedback"></div>
+				</div>
+			</div>
+			<div class='col-md-1 mt-5 mb-2' style="display: none"
+				id='divResetFilter'>
+				<a class='btn-his-sm' id='resetFilter'>Reset</a>
+			</div>
+			<div class='col-md-7' style='text-align: right' id='divbuttons'></div>
+		</div>
+		<div class='row  hideOnSearch' id='divrowkpis'
+			style="text-align: right;">
+			<div class='col-md-12' id='divKpis'>
+				<h6>
+					<span class='col-2 p-3 text-primary kpi'>Medication Awaited
+						: <span class='kpiNum' id='kpiNewPatient'></span>
+					</span>&nbsp;|&nbsp; <span class='col-2 p-3 text-success kpi'>Drug
+						Issued Patient : <span class='kpiNum' id='kpiRevisitedPatient'></span>
+					</span>
+				</h6>
+			</div>
+		</div>
+		<div class="row">
+			<div class="table-wrapper">
+				<!-- <button onclick="return generateReport();">Generate</button> -->
+				<div id='reportgendiv' class="dropdown">
+					<button class="btn btn-sm dropdown-his dropdown-toggle show"
+						type="button" id="generateMenu" data-bs-toggle="dropdown"
+						aria-expanded="true">
+						<i class="fa fa-cog fa-spin fa-1x"></i>
+					</button>
+					<ul class="dropdown-menu hide" aria-labelledby="generateMenu"
+						style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate(-143px, 33px);"
+						data-popper-placement="bottom-start">
+						<li><a class="dropdown-item dropdown-button btnRptMenu"
+							data-format="XLS"><div class="button-content">
+									<div class="button__icon">
+										<i class="fa-solid fa-file-excel fa-2x"></i>
+									</div>
+									<span class="button__text">Excel</span>
+								</div></a></li>
+						<li><a class="dropdown-item dropdown-button btnRptMenu"
+							data-format="PDF"><div class="button-content">
+									<div class="button__icon">
+										<i class="fa-solid fa-file-pdf fa-2x"></i>
+									</div>
+									<span class="button__text">PDF</span>
+								</div></a></li>
+						<li><a class="dropdown-item dropdown-button btnRptMenu"
+							data-format="HTML"><div class="button-content">
+									<div class="button__icon">
+										<i class="fa-brands fa-html5 fa-2x"></i>
+									</div>
+									<span class="button__text">HTML</span>
+								</div></a></li>
+					</ul>
+				</div>
+				<div class="col-md-12  no-more-tables">
+					<table class="table table-striped border" id='tbl_Inventory_List'>
+						<thead></thead>
+						<tbody></tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12" style="text-align: right;">
+				<div class="btn-group" role="group" aria-label="Basic button group">
+					<button class="button" id='more' style="display: none;">
+						<div class="button-content">
+							<div class="button__icon">
+								<i class="fa-solid fa-square-caret-down fa-fw  fa-2x"></i>
+							</div>
+							<span class="button__text">More</span>
+						</div>
+					</button>
+				</div>
+			</div>
+		</div>
+		<div class="row ">
+			<div class="col-md-12 alert alert-info text-center fw-bold"
+				id='dataMsg' style='display: none;'></div>
+		</div>
+		<input type='hidden' id='currentPageNo' name="currentPageNo" value='1'>
+		<input type='hidden' id='noOfPages' name="noOfPages" value='1'>
+		<input type='hidden' id='currentDate' name="currentDate"> <input
+			type='hidden' name="fhttf" id='fhttf' /> <input type='hidden'
+			name='hmode' />
+
+
+	</section>
+</form>

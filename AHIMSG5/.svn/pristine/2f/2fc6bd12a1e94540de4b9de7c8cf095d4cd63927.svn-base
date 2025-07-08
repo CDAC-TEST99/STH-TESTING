@@ -1,0 +1,297 @@
+  body {
+ 			font-family: Arial, sans-serif;
+            display: flex;
+            height: 100vh;
+            margin: 0;
+            padding: 20px;
+            background-color: #f8f8f8;
+        }
+		.container {
+            display: flex;
+            justify-content: space-between;
+			max-width: 98%;
+            margin: 0 auto;
+        }
+        .box {
+            flex: 1;
+            margin: 10px;
+            padding: 20px;
+            border: 1px solid #000;
+			overflow: auto;
+			height: 88vh;
+         
+        }
+        
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input, textarea, select {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+		
+		.menu ul {
+            list-style-type: none;
+            padding-left: 20px;
+        }
+       .menu ul li {
+            margin: 5px 0;
+            position: relative;
+        }
+        ul li::before {
+            content: '';
+            position: absolute;
+            left: -20px;
+            top: 0;
+            width: 1px;
+            height: 100%;
+            background-color: #000;
+        }
+       .menu ul li::after {
+            content: '';
+            position: absolute;
+            left: -20px;
+            top: 10px;
+            width: 10px;
+            height: 1px;
+            background-color: #000;
+        }
+       .menu ul li a {
+            position: relative;
+            padding-left: 10px;
+            text-decoration: none;
+            color: #000;
+        }
+       .menu ul li a::before {
+            content: '';
+            position: absolute;
+            left: -10px;
+            color: #000;
+        }
+		
+		.menu ul li a:hover {
+            background-color: lightblue; /* Change to any color you prefer */
+            color: white;
+        }
+		
+		.menu ul li a.selected {
+            background-color: darkblue; /* Change to any color you prefer */
+            color: white;
+		}
+				
+        .highlight {
+            background-color: yellow;
+			color:black;
+        }
+        .hidden {
+            display: none;
+        } 
+        
+         .editorcontainer {
+         max-width: 100%;
+  		max-height: 300px;
+         background: #fff;
+         border-radius: 8px;
+         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+         overflow: hidden;
+      }
+      
+      .editorHeader{
+      font-weight: bolder;
+	  font-style: italic;
+	  background-color: gray;
+	  padding-left: 10px;
+	  padding-top: 10px;
+	 
+      }
+      
+      .toolbar {
+         display: flex;
+         background: #333;
+         color: #fff;
+        
+         
+      }
+      .toolbar button, .toolbar select {
+         border: none;
+         background: none;
+         cursor: pointer;
+         color: #fff;
+      }
+      .toolbar button:hover, .toolbar select:hover {
+         color: #00aaff;
+      }
+      .toolbar select {
+         padding: 5px;
+         background: #444;
+         border-radius: 4px;
+      }
+      .editor {
+          width: 96%;
+		  height: 150px;
+		  border: 1px solid #ccc;
+		  padding: 10px;
+		  font-size: 16px;
+		  line-height: 1.5;
+		  outline: none;
+         resize: vertical;
+         border-radius: 0 0 8px 8px;
+         overflow: auto;
+      }
+        
+        
+   .float-container {
+    border: 3px solid #fff;
+	}
+	.float-child {
+	    width: 50%;
+	    float: left;
+	}  
+        
+        
+        .switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 25px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 20px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/* Style the tab */
+.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+    background-color: silver;
+    color: black;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    margin-top: 0;
+}
+.tab .active {background-color: lightgreen !important;color: black;}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+    background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {   
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+        
+        
+
+ .form-container, .table-container {
+     flex: 1;
+     padding: 20px;
+ }
+ .table-container {
+     height: 80vh;
+     overflow-y: auto;
+ }
+ .table-container table {
+     width: 100%;
+     border-collapse: collapse;
+ }
+ .table-container thead th {
+     position: sticky;
+     top: 0;
+     z-index: 1;
+     background-color: #f8f8f8;
+ }
+ .fa-edit {
+     color: blue;
+     cursor: pointer;
+ }
+ .fa-trash {
+     color: red;
+     cursor: pointer;
+ }
+ .highlight {
+     background-color: yellow;
+ }        
+        

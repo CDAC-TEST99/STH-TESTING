@@ -1,0 +1,66 @@
+
+checkForModuleIdWiseListpage	=	{"procedureType":"query", "procedureName":"usm.pkg_user_listing_Page.checkForModuleIdWiseListpage"}
+
+checkForMenuAsDeskListpage =	{"procedureType":"query", "procedureName":"usm.pkg_user_listing_Page.checkForMenuAsDeskListpage"}
+
+getregistrationlistpagedata	=	{"procedureType":"query", "procedureName":"usm.pkg_user_listing_Page.getregistrationlistpagedata"}
+
+getregistrationkpidata	=	{"procedureType":"query", "procedureName":"usm.pkg_user_listing_Page.getregistrationkpidata"}
+
+
+getCurrentDate	= {"procedureType":"query", "procedureName":"usm.pkg_user_listing_Page.getCurrentDate"}
+
+getcurrentdateWithTime	= {"procedureType":"query", "procedureName":"usm.pkg_user_listing_Page.getcurrentdateWithTime"}
+
+
+getappointmentlistpagedata	=	{"procedureType":"query", "procedureName":"usm.pkg_user_listing_Page.getappointmentlistpagedata"}
+
+getappointmentkpidata = {"procedureType":"query", "procedureName":"usm.pkg_user_listing_Page.getappointmentkpidata"}
+
+
+getAdtlistpagedata	=	{"procedureType":"query", "procedureName":"usm.pkg_user_listing_Page.getAdtlistpagedata"}
+
+getAdtkpidata	=	{"procedureType":"query", "procedureName":"usm.pkg_user_listing_Page.getAdtkpidata"}
+
+getInvestigationlistpagedata	=	{"procedureType":"query", "procedureName":"usm.pkg_user_listing_Page.getInvestigationlistpagedata"}
+
+getInvestigationkpidata	=	{"procedureType":"query", "procedureName":"usm.pkg_user_listing_Page.getInvestigationkpidata"}
+
+getBillinglistpagedata	=	{"procedureType":"query", "procedureName":"usm.pkg_user_listing_Page.getBillinglistpagedata"}
+
+getBillingkpidata	=	{"procedureType":"query", "procedureName":"usm.pkg_user_listing_Page.getBillingkpidata"}
+
+getInventorylistpagedata	=	{"procedureType":"query", "procedureName":"usm.pkg_user_listing_Page.getInventorylistpagedata"}
+
+getInventorykpidata	=	{"procedureType":"query", "procedureName":"usm.pkg_user_listing_Page.getInventorykpidata"}
+
+
+
+getpharmacylistpagedata	=	{"procedureType":"query", "procedureName":"usm.pkg_user_listing_Page.getpharmacylistpagedata"}
+
+
+getpharmacykpidata	=	{"procedureType":"query", "procedureName":"usm.pkg_user_listing_Page.getpharmacykpidata"}
+
+
+getCardApplicationStatus	=	{"procedureType":"query", "procedureName":"usm.pkg_user_listing_Page.getCardApplicationStatus"}
+
+getcardlistpagedata	=	{"procedureType":"query", "procedureName":"usm.pkg_user_listing_Page.getcardlistpagedata"}
+
+getcardkpidata	=	{"procedureType":"query", "procedureName":"usm.pkg_user_listing_Page.getcardkpidata"}
+
+getApplicationType=	{"procedureType":"query", "procedureName":"usm.pkg_user_listing_Page.getApplicationType"}
+
+getGrievanceApplicationStatus	=	{"procedureType":"query", "procedureName":"usm.pkg_user_listing_Page.getGrievanceApplicationstatus"}
+
+getGrievancelistpagedata	=	{"procedureType":"query", "procedureName":"usm.pkg_user_listing_Page.getgrievancelistpagedata"} 
+
+getnotification	=	{"procedureType":"query", "procedureName":"usm.pkg_user_listing_Page.getnotification"}
+
+getcardtransferListPage={"procedureType":"query", "procedureName":"usm.pkg_user_listing_Page.getcardtransferListPage"}
+
+getcardTrasferstatus	=	{"procedureType":"query", "procedureName":"usm.pkg_user_listing_Page.getcardTrasferstatus"}
+
+getBenDetail	=	{"procedureType":"query", "procedureName":"usm.pkg_beneficiary_desk.getBenDetail"}
+
+
+

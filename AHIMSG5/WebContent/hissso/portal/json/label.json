@@ -1,0 +1,176 @@
+{
+"cghsFullName":{"en" :"Central Government Health Scheme" ,"hi":"केंद्रीय सरकार स्वास्थ्य योजना"},
+"cghsShortName":{"en" :"CGHS" ,"hi":"सीजीएचएस"},
+"MinistryofHealthFamilyWelfare":{"en" :"Ministry of Health & Family Welfare" ,"hi":"स्वास्थ्य और परिवार कल्याण मंत्रालय"},
+"GovernmentOfIndia":{"en" :"Government of India" ,"hi":"भारत सरकार"},
+
+"CGHSBenLogin":{"en": "Beneficiary Login" , "hi":"लाभार्थी लॉगिन "},
+"CGHSLogin":{"en": "CGHS Login" , "hi":"सीजीएचएस लॉगिन "},
+"applyForCGHSCard":{"en" :"Apply for CGHS card" ,"hi":"सीजीएचएस कार्ड के लिए आवेदन "},
+"applyForCGHSCardOnline":{"en" :"Apply for <br/> CGHS card (Online)" ,"hi":"सीजीएचएस कार्ड के <br/> लिए आवेदन (ऑनलाइन) "},
+"EmpaneledHospitals":{"en" :"Empaneled Hospitals and Labs" ,"hi":"पैनलबद्ध अस्पताल और प्रयोगशालाएँ "},
+"BookOnlineAppointment":{"en" :"Book Online Appointment" ,"hi":"ऑनलाइन अपॉइंटमेंट बुक करें"},
+"ConnectWithUs":{"en" :"CONNECT ON" ,"hi":"हमसे जुड़ें"},
+"AlsoAvailableOn":{"en" :"ALSO AVAILABLE ON" ,"hi":"यहां भी उपलब्ध है"},
+"LatestNews":{"en" :"Empowering Healthcare Management" ,"hi":"नए अपडेट"},
+"ExploreMore":{"en" :"GET TO KNOW US" ,"hi":"हमारे साथ और अधिक अन्वेषण करें"},
+"GetToKnowUs":{"en" :"Get to Know Us" ,"hi":"हमको जानें"},
+"WelcomeToCGHS":{"en" :"Welcome to CGHS" ,"hi":"सीजीएचएस में आपका स्वागत है"},
+"CGHSIntroduction":{	
+"en" :"For the last six decades <b>Central Government Health Scheme</b> is providing comprehensive medical care to the Central Government employees and pensioners enrolled under the scheme. In fact CGHS caters to the healthcare needs of eligible beneficiaries covering all four pillars of democratic set up in India namely Legislature, Judiciary, Executive and Press. CGHS is the model Health care facility provider for Central Government employees & Pensioners and is unique of its kind due to the large volume of beneficiary base, and open ended generous approach of providing health care." ,
+"hi":"पिछले छह दशकों से केंद्र सरकार की स्वास्थ्य योजना केंद्र सरकार के कर्मचारियों और योजना के तहत नामांकित पेंशनभोगियों को व्यापक चिकित्सा देखभाल प्रदान कर रही है। वास्तव में सीजीएचएस भारत में लोकतांत्रिक व्यवस्था के सभी चार स्तंभों अर्थात् विधायिका, न्यायपालिका, कार्यपालिका और प्रेस को कवर करने वाले पात्र लाभार्थियों की स्वास्थ्य संबंधी जरूरतों को पूरा करता है। सीजीएचएस केंद्र सरकार के कर्मचारियों और पेंशनभोगियों के लिए मॉडल स्वास्थ्य देखभाल सुविधा प्रदाता है और लाभार्थी आधार की बड़ी मात्रा और स्वास्थ्य देखभाल प्रदान करने के खुले अंत उदार दृष्टिकोण के कारण अपनी तरह का अनूठा है। सेवाओं की पहुंच में सुधार के लिए और अधिक शहरों को शामिल करने का प्रयास किया जा रहा है।"
+},
+"HelpLine":{"en" :"24 X 7 Helpline number: 1800-208-8900" ,"hi":"24 X 7 हेल्पलाइन नंबर: 1800-208-8900"},
+"Onlinesupport":{"en" :"24 X 7 Helpline number","hi":"24 X 7 हेल्पलाइन नंबर"},
+"Onlinesupporttext":{"en" :"For any queries or support related to CGHS services, please reach out to us. We're here to assist you with information, guidance, and help.","hi":"CGHS सेवाओं से संबंधित किसी भी प्रश्न या सहायता के लिए, कृपया हमसे संपर्क करें। हम आपको जानकारी, मार्गदर्शन और सहायता प्रदान करने के लिए यहाँ हैं।"},
+"Moreinfo":{"en" :"More Information","hi":"और जानकारी"},
+"Moreinfomessage":{"en" :"Presently approximately 42 lakh beneficiaries are covered by CGHS in 80 cities all over India and the endeavour is to include more cities to improve the accessibility of the services.","hi":"वर्तमान में भारत भर के 80 शहरों में लगभग 42 लाख लाभार्थी सीजीएचएस के अंतर्गत आते हैं तथा सेवाओं की पहुंच में सुधार के लिए अधिक शहरों को इसमें शामिल करने का प्रयास किया जा रहा है।"},
+"CGHSCoveredCities":{"en" :"CGHS Covered Cities" ,"hi":"सीजीएचएस के अंतर्गत शहर"},
+"FacilitiesUnderCGHS":{"en" :"Facilities available under CGHS" ,"hi":"सीजीएचएस के अंतर्गत उपलब्ध सुविधाएं"},
+"CGHSVision":{"en" :"Vision" ,"hi":"दूरदर्शिता"},
+"CGHSVisionInfo":{"en" :"To be the first choice in providing quality healthcare services and ensuring holistic well bein*0g across clients' entire life span." ,"hi":"गुणवत्तापूर्ण स्वास्थ्य सेवाएं प्रदान करने और ग्राहकों के पूरे जीवन काल में समग्र कल्याण सुनिश्चित करने में पहली पसंद बनना।"},
+"CGHSMission":{"en" :"Mission" ,"hi":"मिशन"},
+"CGHSMissionInfo":{"en" :"Preventive, promotive and curative health and wellness services that are responsive, accountable and cost effective, providing financial risk protection and ensuring healthy lives." ,"hi":"निवारक, प्रोत्साहक और उपचारात्मक स्वास्थ्य और कल्याण सेवाएं जो उत्तरदायी, जवाबदेह और लागत प्रभावी हैं, वित्तीय जोखिम सुरक्षा प्रदान करती हैं और स्वस्थ जीवन सुनिश्चित करती हैं।"},
+"HealthAndPriority":{"en" :"Your health, our priority - always and everywhere" ,"hi":"आपका स्वास्थ्य, हमारी प्राथमिकता - हमेशा और हर जगह"},
+
+
+"SearchEmpanelledHospitals": {
+    "en": "Search Empanelled Hospitals",
+    "hi": "पैनल में शामिल अस्पताल खोजें"
+  },
+  "HospitalsDiagnosticsCentres": {
+    "en": "Hospitals/Diagnostics Centres",
+    "hi": "अस्पताल / डायग्नोस्टिक केंद्र"
+  },
+  "SelectCity": {
+    "en": "Select City",
+    "hi": "शहर चुनें"
+  },
+  
+   "Submit": {
+    "en": "Submit",
+    "hi": "जमा करें"
+  },
+  "SearchNewsUpdates": {
+  "en": "Search News & Updates....",
+  "hi": "समाचार और अपडेट खोजें...."
+},
+  "BestViewedNote": {
+    "en": "Note: Best viewed on the latest versions of Mozilla Firefox (v125+) or Google Chrome (v124+), preferably in Incognito/Private Mode for optimal security and performance.",
+    "hi": "नोट: वेबसाइट को बेहतर तरीके से देखने के लिए नवीनतम संस्करणों जैसे Mozilla Firefox (v125+) या Google Chrome (v124+) का उपयोग करें, अधिमानतः इन्कॉग्निटो/प्राइवेट मोड में, बेहतर सुरक्षा और प्रदर्शन के लिए।"
+  },
+  "ScreenResolutionNote": {
+    "en": "Recommended screen resolution: 1366 x 768 pixels or higher. | Last Updated: 20/06/2025 12:30 PM ",
+    "hi": "अनुशंसित स्क्रीन रेजोल्यूशन: 1366 x 768 पिक्सेल या अधिक। | अंतिम अपडेट: 20/06/2025 12:30 PM "
+  },
+  "DisclaimerNote": {
+    "en": "Disclaimer: Website content managed by Ministry of Health and Family Welfare, GOI Design, Developed and Hosted by Center for Development of Advanced Computing",
+    "hi": "अस्वीकरण: वेबसाइट की सामग्री स्वास्थ्य और परिवार कल्याण मंत्रालय, भारत सरकार द्वारा प्रबंधित है। डिज़ाइन, विकास और होस्टिंग सेंटर फॉर डेवलपमेंट ऑफ एडवांस्ड कंप्यूटिंग द्वारा की गई है।"
+  },
+  
+  "OnlineSupport": {
+  "en": "Online Support",
+  "hi": "ऑनलाइन सहायता"
+},
+
+"Visitors": {
+  "en": "Visitors:",
+  "hi": "आगंतुक:"
+},
+"CGHSSupportMessage": {
+  "en": "For any queries or support related to CGHS services, please reach out to us. We're here to assist you with information, guidance, and help.",
+  "hi": "सीजीएचएस सेवाओं से संबंधित किसी भी प्रश्न या सहायता के लिए कृपया हमसे संपर्क करें। हम आपको जानकारी, मार्गदर्शन और सहायता प्रदान करने के लिए यहां हैं।"
+},
+ "ClickHere": {
+    "en": "click here",
+    "hi": "यहाँ क्लिक करें"
+  },
+"PrimeMinisterName":{"en" :"Shri Narendra Modi" ,"hi":"श्री नरेंद्र मोदी"},
+"HonblePM":{"en" :"Hon'ble Prime Minister" ,"hi":"माननीय प्रधान मंत्री "},
+"SaathVikasPrayas": { "en": "\"Saath\", \"Vikas\", \"Vishwas\", \"Prayas\"", "hi":"\"साथ\", \"विकास\", \"विश्वास\", \"प्रयास\"" },
+"S":{"en" :"S" ,"hi":"स"},
+"abka":{"en" :"abka" ,"hi":"बका"},
+
+"MinisterName":{"en" :"Shri Jagat Prakash Nadda" ,"hi":"श्री जगत प्रकाश नड्डा"},
+"honbleMinister":{"en" :"<b>Hon'ble Minister </b>- Health & Family Welfare " ,"hi":"<b>माननीय मंत्री </b>- स्वास्थ्य और परिवार कल्याण मंत्रालय"},
+"MinisterTagLine":{"en" :"Over 900 healthcare organisations empanelled under CGHS - JP Nadda" ,"hi":"सीजीएचएस के तहत 900 से अधिक स्वास्थ्य सेवा संगठन पैनलबद्ध - जेपी नड्डा"},
+
+"PrivacyPolicy":{"en" :"Privacy Policy" ,"hi":"गोपनीयता नीति"},
+"Disclaimer":{"en" :"Disclaimer" ,"hi":"अस्वीकरण"},
+"T&C":{"en" :"Terms and Conditions" ,"hi":"नियम और शर्तें"},
+"HyperLinkingPolivy":{"en" :"Hyper Linking Policy" ,"hi":"हाइपर लिंकिंग नीति"},
+"Copyright":{"en" :"Copyright Policy","hi":"कॉपीराइट नीति"},
+"ContentReviewPolicy": {
+    "en": "Content Review Policy",
+    "hi": "सामग्री समीक्षा नीति"
+  },
+  "ContentContribution": {
+    "en": "Content Contribution",
+    "hi": "सामग्री योगदान"
+  },
+  "ContentArchivalPolicy": {
+    "en": "Content Archival Policy",
+    "hi": "सामग्री पुरालेख नीति"
+  },
+  "PasswordAuthPolicy": {
+    "en": "CGHS Password and Authentication Policy",
+    "hi": "सीजीएचएस पासवर्ड और प्रमाणीकरण नीति"
+  },
+
+"AccessibilityStatement":{"en" :"Accessibility Statement","hi":"अभिगम्यता वक्तव्य"},
+"WebistePolicies":{"en" :"Website Policies","hi":"वेबसाइट नीतियाँ"},
+"WebInformation":{"en" :"Web Information Manager","hi":"वेब सूचना मैनेजर"},
+"ImportantLinks":{"en" :"Important Links","hi":"महत्वपूर्ण लिंक"},
+
+
+  "LatestNewsUpdates": {
+    "en": "Latest News & Updates",
+    "hi": "नवीनतम समाचार और अपडेट"
+  },
+ 
+
+
+"HowToGenerateABHA": {
+    "en": "How to generate ABHA number and address",
+    "hi": "एबीएचए नंबर और पता कैसे बनाएं"
+  },
+  "HowToApplyPlasticCard": {
+    "en": "How to apply for Plastic Card",
+    "hi": "प्लास्टिक कार्ड के लिए आवेदन कैसे करें"
+  },
+  "ProcedureReferral": {
+    "en": "Procedure for Referral",
+    "hi": "रेफरल की प्रक्रिया"
+  },
+  "InvestigationTreatment": {
+    "en": "Investigations and Treatment Procedures",
+    "hi": "जांच और उपचार प्रक्रिया"
+  },
+  "Hospitalization": {
+    "en": "Hospitalization",
+    "hi": "अस्पताल में भर्ती"
+  },
+  "ReimbursementClaims": {
+    "en": "Reimbursement of Medical Claims",
+    "hi": "चिकित्सा दावों की प्रतिपूर्ति"
+  },
+  "Teleconsultation": {
+    "en": "Teleconsultation",
+    "hi": "टेलीपरामर्श"
+  },
+  "ServiceFeedback": {
+    "en": "CGHS Service Feedback",
+    "hi": "सीजीएचएस सेवा प्रतिक्रिया"
+  },
+
+"cghsInfo1":{"en" :"Presently approximately","hi":"वर्तमान में पूरे भारत के "},
+"cghsInfo2":{"en" :"42 lakh beneficiaries","hi":"&nbsp;80 शहरों"},
+"cghsInfo3":{"en" :"are covered by CGHS in&nbsp;","hi":"में लगभग"},
+"cghsInfo4":{"en" :" 80 cities&nbsp;","hi":"&nbsp;42 लाख लाभार्थी "},
+"cghsInfo5":{"en" :"all over India.","hi":"&nbsp;सीजीएचएस द्वारा कवर किए गए हैं।"},
+"newsUpdates":{"en":"News & Updates", "hi":"नएअपडेट"},
+"backTOSearch":{"en":"Back to Search", "hi":"नएअपडेट"},
+"search.placeholder":{"en":"News & updates", "hi":"नएअपडेट"}
+}
+
+
