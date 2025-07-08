@@ -1,0 +1,1326 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link rel="stylesheet" href="/HIS/hisglobal/eUpkaranTemplate/dist/css/adminlte.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet"
+	href="/eUpkaran/global/plugins/eUpkaranTemplate/plugins/daterangepicker/daterangepicker.css">
+<script
+	src="/eUpkaran/global/plugins/eUpkaranTemplate/plugins/daterangepicker/daterangepicker.js"></script>
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	
+</head>
+<body>
+
+
+<div style="letter-spacing: 1px;">
+
+<style type="text/css">
+.table td, .table th{
+	padding: 2px;
+	border: none;
+}
+</style>
+
+
+<div id="listPage">
+<table class='table' style="width: 100%">
+<tbody>
+<tr>
+   <td style="font-weight: bold;text-align: left;"><h4>Demand Raise Desk</h4></td>
+   <td>
+   <div style="text-align: right;">
+   <button   style="text-align: right; background-color: DodgerBlue;" onclick="newDemand()"><i class="fa fa-plus-circle"></i>&nbsp;New Demand</button>&nbsp;
+   <button   style="text-align: right; background-color: DodgerBlue;" onclick="newDemandBackModify()"><i class="fa fa-edit"></i>&nbsp;Modify</button>&nbsp;
+   <button  type="button" style="text-align: right; background-color: red;" onclick="document.getElementById('cancelModal').style.display='block'"
+   ><i class="fa fa-close"></i>&nbsp;Cancel</button>&nbsp;
+   <button  type="button" style="text-align: right; background-color: DodgerBlue;" onclick="document.getElementById('cancelModalView').style.display='block'"
+   ><i class=" fa fa-eye"></i>&nbsp;View</button>
+	</div>	
+   </td>
+</tr>
+
+</tbody>
+</table>
+
+<hr style=" border-top: 1px solid DodgerBlue;" ><br>
+<!-- <table class='table' style="width: 100%">
+<tbody> -->
+<div class="row">
+
+       
+             
+             <div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="locationId" data-langtag="Institute Name" >Institute Name</label>
+	                			<select class="form-control form-control-sm  select2" id ='locationId' name="locationId" data-validation="mandatory">
+	                				<option value="0">OSMCL</option>
+	                				<option value="1">ODISHA GOVERNMENT MULTI SUPER SPECIALITY HOSPITAL</option>
+	                			</select>
+	                			<div class="invalid-feedback"></div>
+	              			</div>          			
+					 	</div>
+					 	
+					 <div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="locationId" data-langtag="Department Name" >Department Name</label>
+	                			<select class="form-control form-control-sm  select2" id ='locationId' name="locationId" data-validation="mandatory">
+	                				<option value="0">ODISHA GOVERNMENT-DEPARTMENT OF ANESTHESIA</option>
+	                			</select>
+	                			<div class="invalid-feedback"></div>
+	              			</div>          			
+					 	</div> 	
+					 	
+					 	<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="locationId" data-langtag="Location" >Equipment Name</label>
+	                			<select class="form-control form-control-sm  select2" id ='locationId' name="locationId" data-validation="mandatory">
+	                				<option value="1">Select Value</option>
+	                				<option value="2">0 Degree Nasal Endoscope</option>
+	                			</select>
+	                			<div class="invalid-feedback"></div>
+	              			</div>          			
+					 	</div> 	
+					 	
+					 	<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="locationId" data-langtag="Status" >Status</label>
+	                			<select class="form-control form-control-sm  select2" id ='locationId' name="locationId" data-validation="mandatory">
+	                				<option value="0">Select</option>
+	                				<option value="1">New</option>
+	                				<option value="2">Cancel</option>
+	                				<option value="3">Verified</option>
+	                				<option value="4">Rejected</option>
+	                				<option value="2">Compilation is Processed</option>
+	                				<option value="3">Compilation Freezed</option>
+	                				<option value="4">PO Generated</option>
+	                				
+	                			</select>
+	                			<div class="invalid-feedback"></div>
+	              			</div>          			
+					 	</div> 	
+					 	
+					</div>
+					 	
+
+		<div class="row">
+
+       <button  type="button" style="text-align: right; background-color: DodgerBlue;"><i class="fa fa-cog"></i></button>&nbsp;&nbsp;&nbsp;
+             
+             <label for="Search">Search</label>
+  <input type="text" id="Search" name="Search">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+  
+   <label for="Search" style="text-align: left;">Show</label>
+  <select type="text" id="Search" name="Search">
+  <option>10</option>
+  <option>20</option>
+  <option>50</option>
+  <option>All</option>
+  </select>entries
+  
+					 	
+			</div>			 	
+
+
+
+<table style="width: 100%;length:80%;font-size:15px;margin-top: 10px;" class='tbldatavo2'>
+<thead>
+	<tr >
+	<th style="vertical-align: top; width:5%;text-align: center;background:purple;color:white;" ><input type="checkbox"><br></th>
+	<th style="vertical-align: top;text-align: center;background:purple;color:white;" bgcolor="purple">Institute Name <br></th>
+	<th style="vertical-align: top; text-align: center;background:purple;color:white;" bgcolor="purple">Department Name <br></th>
+	<th style="vertical-align: top;text-align: center;background:purple;color:white;" bgcolor="purple">Demanded Qty<br></th>
+	
+	<th style="vertical-align: top;text-align: center;background:purple;color:white;" bgcolor="purple">Demand Date<br></th>
+	<th style="vertical-align: top;text-align: center;background:purple;color:white;" bgcolor="purple">Demand Status<br></th>
+	
+	</tr>
+</thead>
+<tbody>
+<tr>
+<td style="vertical-align: top;text-align: center;"><input type="checkbox"><br></td>
+<td style="vertical-align: top;text-align: center">ODISHA GOVERNMENT MULTI SUPER SPECIALITY HOSPITAL<br></td>
+<td style="vertical-align: top;text-align: center">ODISHA GOVERNMENT MULTI SUPER SPECIALITY HOSPITAL-DEPARTMENT OF ANESTHESIA<br></td>
+<td style="vertical-align: top;text-align: center;padding-right:5px">25<br></td>
+<td style="vertical-align: top;text-align: center">3-may-2021<br></td>
+<td style="vertical-align: top;text-align: center;padding-right:5px">New<br></td>
+
+
+</tr>
+
+<tr>
+<td style="vertical-align: top;text-align: center;"><input type="checkbox"></td>
+<td style="vertical-align: top;text-align: center">ODISHA GOVERNMENT MULTI SUPER SPECIALITY HOSPITAL</td>
+<td style="vertical-align: top;text-align: center">ODISHA GOVERNMENT MULTI SUPER SPECIALITY HOSPITAL-DEPARTMENT OF ANESTHESIA</td>
+<td style="vertical-align: top;text-align: center;padding-right:5px">10</td>
+<td style="vertical-align: top;text-align: center">03-may-2021</td>
+<td style="vertical-align: top;text-align: center;padding-right:5px">Compilation in Process</td>
+
+
+
+<tr>
+<td style="vertical-align: top;text-align: center;"><input type="checkbox"></td>
+<td style="vertical-align: top;text-align: center">ODISHA GOVERNMENT MULTI SUPER SPECIALITY HOSPITAL</td>
+<td style="vertical-align: top;text-align: center">ODISHA GOVERNMENT MULTI SUPER SPECIALITY HOSPITAL-DEPARTMENT OF ANESTHESIA</td>
+<td style="vertical-align: top;text-align: center;padding-right:5px">35</td>
+<td style="vertical-align: top;text-align: center">30-apr-2021</td>
+<td style="vertical-align: top;text-align: center;padding-right:5px">Verified</td>
+
+
+</tr><tr>
+<td style="vertical-align: top;text-align: center;"><input type="checkbox"></td>
+<td style="vertical-align: top;text-align: center">ODISHA GOVERNMENT MULTI SUPER SPECIALITY HOSPITAL</td>
+<td style="vertical-align: top;text-align: center">ODISHA GOVERNMENT MULTI SUPER SPECIALITY HOSPITAL-DEPARTMENT OF ANESTHESIA</td>
+<td style="vertical-align: top;text-align: center;padding-right:5px">10</td>
+<td style="vertical-align: top;text-align: center">29-apr-2021</td>
+<td style="vertical-align: top;text-align: center;padding-right:5px">Compilation in Process</td>
+
+
+</tr>
+</tbody>
+
+</table>
+
+</div>
+
+<script>
+function newDemand() {
+	
+ document. getElementById("listPage"). style. display = "none"; //hide.
+ document. getElementById("newDemandAdd"). style. display = "block"; //show.
+ document. getElementById("newDemandAddModify"). style. display = "none";
+}
+
+function newDemandBack() {
+	
+	
+	 document. getElementById("listPage"). style. display = "block"; 
+	 document. getElementById("newDemandAdd"). style. display = "none"; 
+	 document. getElementById("newDemandAddModify"). style. display = "none";
+	}
+
+function newDemandBackModify() {
+	
+	
+	 document. getElementById("listPage"). style. display = "none"; 
+	 document. getElementById("newDemandAdd"). style. display = "none"; 
+	 document. getElementById("newDemandAddModify"). style. display = "block";
+	}
+
+function displayDivDemoOther(id, elementValue) {
+	
+  
+     //document.getElementById("cancelModal").showModal();
+	 document.getElementById(id).style.display = elementValue.value == 3 ? 'block' : 'none';
+ 
+     }
+
+function displayDivDemo(id, elementValue) {
+
+	    document.getElementById(id).style.display = elementValue.value == 0 ? 'block' : 'none';
+ }
+
+
+</script>
+
+
+<div id="newDemandAdd" style="display:none;">
+
+<table class='table' style="width: 100%">
+<tbody>
+<tr>
+   <td style="font-weight: bold;text-align: left;"><h4>Demand Raise Desk>>Add Demand</h4></td>
+   <td>
+   <div style="text-align: right;">
+   <button   style="text-align: right; background-color: DodgerBlue;" onclick="newDemandBack()"><i class="fa fa-save"></i>&nbsp;SAVE</button>&nbsp;
+   <button   style="text-align: right; background-color: DodgerBlue;"><i class="fas fa-sync"></i>&nbsp;RESET</button>&nbsp;
+   <button  type="button" style="text-align: right; background-color: DodgerBlue;" onclick="newDemandBack()"><i class="fa fa-arrow-circle-left"></i>&nbsp;BACK</button>&nbsp;
+ </div>	
+   </td>
+</tr>
+
+</tbody>
+</table>
+<hr style=" border-top: 1px solid DodgerBlue;" >
+
+
+<table class='table' style="width: 100%;" >
+<tbody>
+<tr  bgcolor="purple">
+   <td style="font-weight: bold;text-align: left; color:white;"><h5>Institution Details</h5></td>
+
+</tr>
+</tbody>
+</table>
+<div class="row">
+
+           <div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="locationId" data-langtag="Financial Year" >Financial Year </label>
+	                			<select class="form-control form-control-sm  select2" id ='locationId' name="locationId" data-validation="mandatory">
+	                				<option value="0">2021-2022</option>
+	                				<option value="1">2022-2023</option>
+	                			</select>
+	                			<div class="invalid-feedback"></div>
+	              			</div>          			
+					 	</div>
+       
+            <div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="locationId" data-langtag="Institute Type" >Institute Type</label>
+	                			<select class="form-control form-control-sm  select2" id ='locationId' name="locationId" data-validation="mandatory">
+	                				<option value="0">UG-PHC</option>
+	                				<option value="1">UG-PHC(MCH)</option>
+	                				<option value="0">WOMEN AND CHILDREN</option>
+	                				<option value="1">URBAN-PHC(MCH)</option>
+	                			</select>
+	                			<div class="invalid-feedback"></div>
+	              			</div>          			
+					 	</div>
+					 	
+					 	
+			 <div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="locationId" data-langtag="Department Name" >District</label>
+	                			<select class="form-control form-control-sm  select2" id ='locationId' name="locationId" data-validation="mandatory">
+	                				<option value="0">Odisha</option>
+	                				<option value="0">All</option>
+	                			</select>
+	                			<div class="invalid-feedback"></div>
+	              			</div>          			
+					 	</div> 	
+             
+             <div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="locationId" data-langtag="Institute Name" >Institute Name</label>
+	                			<select class="form-control form-control-sm  select2" id ='locationId' name="locationId" data-validation="mandatory">
+	                				<option value="0">ODISHA GOVERNMENT MULTI SUPER SPECIALITY HOSPITAL</option>
+	                			    <option value="1">OSMCL</option>
+	                				</select>
+	                			<div class="invalid-feedback"></div>
+	              			</div>          			
+					 	</div>
+					 	
+					 <div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="locationId" data-langtag="Department Name" >Department Name</label>
+	                			<select class="form-control form-control-sm  select2" id ='locationId' name="locationId" data-validation="mandatory">
+	                				<option value="0">ODISHA GOVERNMENT-DEPARTMENT OF ANESTHESIA</option>
+	                			</select>
+	                			<div class="invalid-feedback"></div>
+	              			</div>          			
+					 	</div> 	
+					 	
+					 	
+					 	
+					 	
+					 	</div>
+
+
+<table class='table' style="width: 100%;" >
+<tbody>
+<tr  bgcolor="purple">
+   <td style="font-weight: bold;text-align: left; color:white;"><h5>Equipment Details</h5></td>
+
+</tr>
+</tbody>
+</table>
+
+<div class="row">
+
+       
+              <div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="locationId" data-langtag="Location" >Name of the EIF</label>
+	                			<select class="form-control form-control-sm  select2" id ='locationId' name="locationId" data-validation="mandatory">
+	                				<option value="1">0 Degree Nasal Endoscope</option>
+	                				<option value="2">Select Value</option>
+	                			</select>
+	                			<div class="invalid-feedback"></div>
+	              			</div>          			
+					 	</div> 	
+             
+              <div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="locationId" data-langtag="Equipment Code" >Equipment Code</label>
+	                			<input class="form-control form-control-sm  select2" value ='EQUIP001' name="locationId" data-validation="mandatory" disabled> 
+	                				
+	                			<div class="invalid-feedback"></div>
+	              			</div>          			
+					 	</div>
+             
+             
+					 	
+					 	
+					 	 <div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="locationId" data-langtag="Total Available Quantity (Nos.) " >Total Available Quantity (Nos.)</label>
+	                			<input class="form-control form-control-sm  select2" value ='35' name="locationId" data-validation="mandatory" disabled>
+	                				
+	                			<div class="invalid-feedback"></div>
+	              			</div>          			
+					 	</div>
+					 	
+					 	 <div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="locationId" data-langtag="Non Functional  Quantity (Nos.) " >Functional Quantity (Nos.)</label>
+	                			<input class="form-control form-control-sm  select2" value ='20' name="locationId" data-validation="mandatory" disabled>
+	                				
+	                			<div class="invalid-feedback"></div>
+	              			</div>          			
+					 	</div>
+					 	
+					 	 <div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="locationId" data-langtag="Non Functional  Quantity (Nos.) " >Non Functional  Quantity (Nos.)</label>
+	                			<input class="form-control form-control-sm  select2" value ='15' name="locationId" data-validation="mandatory" disabled>
+	                				
+	                			<div class="invalid-feedback"></div>
+	              			</div>          			
+					 	</div>
+					 	
+					 	<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="locationId" data-langtag="Reason Of Non Functionality" >Reason Of Non Functionality</label>
+	                			<textarea	 class="form-control form-control-sm  select2" id ='locationId' name="locationId" data-validation="mandatory">
+	                				</textarea>
+	                			<div class="invalid-feedback"></div>
+	              			</div>          			
+					 	</div> 
+					 	
+					 	<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="locationId" data-langtag="New Requirement  Quantity (Nos.) " >New Requirement Quantity (Nos.)</label>
+	                			<input class="form-control form-control-sm  select2" id ='locationId' name="locationId" data-validation="mandatory">
+	                				
+	                			<div class="invalid-feedback"></div>
+	              			</div>          			
+					 	</div>
+					 	
+					 	 <div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="locationId" data-langtag="Deviation From Standard Specification " >Deviation From Standard Specification (SEL)</label>
+	                			<select class="form-control form-control-sm  select2" onchange="displayDivDemo('upload', this)" name="locationId" data-validation="mandatory">
+	                				<option value="0">Yes</option>
+	                				<option value="1">No</option>
+	                			</select>
+	                			<div class="invalid-feedback"></div>
+	              			</div>          			
+					 	</div> 	
+					 	
+					 		<div class='col-lg-6' id="upload">
+						 	
+			 	<input type="hidden" name="filename01" id="filename2" value="" />
+					<label class="col-form-label col-form-label-sm" for="docForEquipment" data-langtag=" Upload The Technical Specification" >Upload The Technical Specification </label>
+						 		
+						 <div id="displayFile2" class="file-group">
+							<label class="div-inline" style="float: left;margin-right: 2px;">
+							 	 <button   style="text-align: right; background-color: lightblue;">Choose File</button>&nbsp;
+      
+							</label> 
+							
+								<input type="text" class="form-control form-control-sm" readonly="readonly" style="float: left;margin-right: 2px;width:35%">
+						</div>
+
+						<div id="divFaIcon2" style="float: left; margin-right: 2px;" class='divuploadFile'>
+       <button   style="text-align: right; background-color: lightblue;"> Upload</button>&nbsp;
+       						</div>	
+							
+						 <div class="invalid-feedback"> </div>
+						 	
+							<br/><br/>
+							<span style ="color: red;">(Only .pdf, .jpg, .jpeg, .png, .docx, .txt Files are allowed)</span>		
+						 	
+				</div>
+					 	
+					 	
+					 	<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="locationId" data-langtag="Consumable/ Recurring Cost, if Any (Per year) " >Consumable/ Recurring Cost, if Any (Per year)</label>
+	                			<input class="form-control form-control-sm  select2" id ='locationId' name="locationId" data-validation="mandatory">
+	                				
+	                			<div class="invalid-feedback"></div>
+	              			</div>          			
+					 	</div>
+					 	
+					 	 <div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="locationId" data-langtag="Expected Source of Funding " >Expected Source of Funding</label>
+	                			<select class="form-control form-control-sm  select2" onchange="displayDivDemoOther('uploadother', this)" name="locationId" data-validation="mandatory">
+	                				<option value="0">State</option>
+	                				<option value="1">NHM</option>
+	                				<option value="2">Central Govt.</option>
+	                				<option value="3">Any Other</option>
+	                			</select>
+	                			<br>
+	                			 <div style="display:none;" id="uploadother">
+	                			<input class="form-control form-control-sm  select2" id ='locationId' name="locationId" placeholder="Other Detail.......">
+	                			</div>
+	                			<div class="invalid-feedback"></div>
+	              			</div>          			
+					 	</div>
+					 	
+					 	<!-- <div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="locationId" data-langtag="Availability of Trained Manpower(Specify the Positions)" >Availability of Trained Manpower(Specify the Positions)</label>
+	                			<input	 class="form-control form-control-sm  select2" id ='locationId' name="locationId" data-validation="mandatory">
+	                				
+	                			<div class="invalid-feedback"></div>
+	              			</div>          			
+					 	</div>  -->
+					 	
+					 	<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="locationId" data-langtag="Availability of Space For Installation(Specify the Details)" >Availability of Space For Installation(Specify the Details)</label>
+	                			<textarea	 class="form-control form-control-sm  select2" id ='locationId' name="locationId" data-validation="mandatory">
+	                				</textarea>
+	                			<div class="invalid-feedback"></div>
+	              			</div>          			
+					 	</div> 
+					 	
+					 	<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="locationId" data-langtag="Purpose of use/ Area of Application of the equipment" > Purpose of use/ Area of Application of the equipment</label>
+	                			<textarea	 class="form-control form-control-sm  select2" id ='locationId' name="locationId" data-validation="mandatory">
+	                				</textarea>
+	                			<div class="invalid-feedback"></div>
+	              			</div>          			
+					 	</div>   	
+					 	
+					 	
+					 <div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="locationId" data-langtag="Specification Status" >Specification Status</label>
+	                			<select class="form-control form-control-sm  select2" id ='locationId' name="locationId" data-validation="mandatory">
+	                				<option value="0">Received</option>
+	                				<option value="1">Not Received</option>
+	                			</select>
+	                			<div class="invalid-feedback"></div>
+	              			</div>          			
+					 	</div> 	
+					 	
+					 <div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="locationId" data-langtag="Specification Date" >Specification Date</label>
+	                			<input class="form-control form-control-sm  select2" id ='locationId' name="locationId" data-validation="mandatory">
+	                				
+	                			<div class="invalid-feedback"></div>
+	              			</div>          			
+					 	</div>
+					 	
+					 		
+					 	
+					 	<!--  <div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="locationId" data-langtag="Expected Caseload of the Department for the Equipment" >Expected Caseload of the Department for the Equipment</label>
+	                			<input class="form-control form-control-sm  select2" id ='locationId' name="locationId" data-validation="mandatory">
+	                				
+	                			<div class="invalid-feedback"></div>
+	              			</div>          			
+					 	</div>	 -->
+					 	
+					 	
+					
+					 
+					  <div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="locationId" data-langtag="Remarks" >Remarks</label>
+	                			<textarea	 class="form-control form-control-sm  select2" id ='locationId' name="locationId" data-validation="mandatory">
+	                				</textarea>
+	                			<div class="invalid-feedback"></div>
+	              			</div>          			
+					 	</div> 
+					 	
+					 		<div class='col-lg-6'>
+						 	
+			 	<input type="hidden" name="filename01" id="filename2" value="" />
+					<label class="col-form-label col-form-label-sm" for="docForEquipment" data-langtag="Supportive Document" >Any Other Upload : </label>
+						 		
+						 <div id="displayFile2" class="file-group">
+							<label class="div-inline" style="float: left;margin-right: 2px;">
+							 	<button   style="text-align: right; background-color: lightblue;">Choose File</button>&nbsp;
+      
+							</label> 
+							
+								<input type="text" class="form-control form-control-sm" readonly="readonly" style="float: left;margin-right: 2px;width:35%">
+						</div>
+
+						<div id="divFaIcon2" style="float: left; margin-right: 2px;" class='divuploadFile'>
+								<button   style="text-align: right; background-color: lightblue;">Upload</button>&nbsp;
+     
+						</div>	
+							
+						 <div class="invalid-feedback"> </div>
+						 	
+							<br/><br/>
+							<span style ="color: red;">(Only .pdf, .jpg, .jpeg, .png, .docx, .txt Files are allowed)</span>		
+						 	
+				</div>
+					 	
+					 	
+					 	</div>
+					 	
+					 	
+<table class='table' style="width: 100%;" >
+<tbody>
+<tr  bgcolor="purple">
+   <td style="font-weight: bold;text-align: left; color:white;"><h5>Equipment Other Details</h5></td>
+
+</tr>
+</tbody>
+</table>
+
+<div class="row">
+				<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="locationId" data-langtag="Department Name" >New, Replacement or up gradation :</label>
+	                			<select class="form-control form-control-sm  select2" id ='locationId' name="locationId" data-validation="mandatory">
+	                				<option value="5">Replacement of old equipment of more than 10 years of old and beyond economical repair.</option>
+	                				<option value="10">New Equipment that was not earlier available in the facility.</option>
+	                			</select>
+	                			<div class="invalid-feedback"></div>
+	              			</div>          			
+					 	</div> 	
+       
+            <div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="locationId" data-langtag="Manpower Availability(Specialist and support staff)" >Manpower Availability(Specialist and support staff)</label>
+	                			<select class="form-control form-control-sm  select2" id ='locationId' name="locationId" data-validation="mandatory">
+	                				<option value="15">Medical Officer/ Specialist available </option>
+	                				<option value="10">Operator and Support staff available</option>
+	                				<option value="0">Not available</option>
+	                			</select>
+	                			<div class="invalid-feedback"></div>
+	              			</div>          			
+					 	</div>
+             
+             <div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="locationId" data-langtag="Availability of the service in the near by location(Govt.)" >Availability of the service in the near by location(Govt.)</label>
+	                			<select class="form-control form-control-sm  select2" id ='locationId' name="locationId" data-validation="mandatory">
+	                				<option value="0">Available within 05KM</option>
+	                				<option value="0">Available within 10KM</option>
+	                				<option value="0">Available within 20KM</option>
+	                			</select>
+	                			<div class="invalid-feedback"></div>
+	              			</div>          			
+					 	</div>
+					 	
+					 <div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="locationId" data-langtag="Department Name" >Realistic Assessment of the expected caseload</label>
+	                			<select class="form-control form-control-sm  select2" id ='locationId' name="locationId" data-validation="mandatory">
+	                				<option value="15">More than 50% capacity utilisation</option>
+	                				<option value="30">More than 100% capacity utilisation</option>
+	                			
+	                			</select>
+	                			<div class="invalid-feedback"></div>
+	              			</div>          			
+					 	</div> 	
+					 	
+					 	
+					 	
+					 	 
+					 	
+					 <div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="locationId" data-langtag="Department Name" >Available of the alternative facility of the same equipment</label>
+	                			<select class="form-control form-control-sm  select2" id ='locationId' name="locationId" data-validation="mandatory">
+	                				<option value="10">No alternative facility available for the same equipment.</option>
+	                				<option value="0"> alternative facility available for the same equipment.</option>
+	                			</select>
+	                			<div class="invalid-feedback"></div>
+	              			</div>          			
+					 	</div> 	
+					 	
+					 		
+					 	
+					 	 <div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="locationId" data-langtag="Department Name" >Item falls under category of minimum essential item for the level of facility as per IPHC/ MCI/ DCI/ INC / any other regulatory norm as applicable.</label>
+	                			<select class="form-control form-control-sm  select2" id ='locationId' name="locationId" data-validation="mandatory">
+	                				<option value="10">Yes</option>
+	                				<option value="0">No</option>
+	                			</select>
+	                			<div class="invalid-feedback"></div>
+	              			</div>          			
+					 	</div> 	
+					 	
+					 	
+
+           <div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="locationId" data-langtag="Infrastructure Readiness" >Infrastructure Readiness </label>
+	                			<select class="form-control form-control-sm  select2" id ='locationId' name="locationId" data-validation="mandatory">
+	                				<option value="15">This Site is ready</option>
+	                				<option value="10">Work in progress, likely to be completed in 3 months.</option>
+	                				<option value="0">This Site is not ready</option>
+	                			</select>
+	                			<div class="invalid-feedback"></div>
+	              			</div>          			
+					 	</div>
+					 	
+					 
+					 	
+					 	 <div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="locationId" data-langtag="Total Score" >Total Score</label>
+	                			<input class="form-control form-control-sm  select2" value ='70' name="locationId" data-validation="mandatory" disabled>
+	                				
+	                			<div class="invalid-feedback"></div>
+	              			</div>          			
+					 	</div>
+					 	
+					 	
+					 	
+			</div>
+
+
+
+					 	
+					 	
+<hr>
+
+ <div class="text-center">
+           
+             <button   style="text-align: right; background-color: DodgerBlue;"><i class="fa fa-plus"></i>&nbsp;Add Institute</button>&nbsp;
+          </div> 
+
+
+<table class='table' style="width: 100%;" >
+<tbody>
+<tr  bgcolor="purple">
+   <td style="font-weight: bold;text-align: left; color:white;"><h5>Added Details</h5></td>
+
+</tr>
+</tbody>
+</table>
+
+
+<table style="width: 100%;length:50%;font-size:15px;margin-top: 10px;" class='tbldatavo2'>
+<thead>
+	<tr>
+	<th style="vertical-align: top; width:15%;text-align: center;background:#dee2e6" >Institute Name</th>
+	<th style="vertical-align: top; width:15%;text-align: center;background:#dee2e6">Department Name</th>
+	<th style="vertical-align: top;width:20%;text-align: center;background:#dee2e6">Equipment Name</th>
+	<th style="vertical-align: top;width:5%;text-align: center;background:#dee2e6">Specification Status</th>
+	<th style="vertical-align: top; width:5%;text-align: center;background:#dee2e6">Specification Date </th>
+	<th style="vertical-align: top;width:5%;text-align: center;background:#dee2e6">Quantity</th>
+	<th style="vertical-align: top;width:5%;text-align: center;background:#dee2e6">Total Score</th>
+	<th style="vertical-align: top;width:5%;text-align: center;background:#dee2e6">Remarks</th>
+	<th style="vertical-align: top;width:5%;text-align: center;background:#dee2e6">Action</th>
+	
+	
+	</tr>
+</thead>
+<tbody>
+<tr>
+<td style="vertical-align: top;text-align: center;">ODISHA GOVERNMENT MULTI SUPER SPECIALITY HOSPITAL</td>
+<td style="vertical-align: top;text-align: left">ODISHA GOVERNMENT MULTI SUPER SPECIALITY HOSPITAL-DEPARTMENT OF ANESTHESIA </td>
+<td style="vertical-align: top;text-align: left">0 Degree Nasal Endoscope</td>
+<td style="vertical-align: top;text-align: center;padding-right:5px"> Received</td>
+<td style="vertical-align: top;text-align: center;">05-May-2021</td>
+<td style="vertical-align: top;text-align: left"> 15 </td>
+<td style="vertical-align: top;text-align: left"> 70 </td>
+<td style="vertical-align: top;text-align: left">Equipment Received</td>
+<td style="vertical-align: top;text-align: center;padding-right:5px"> - </td>
+
+
+
+</tr>
+</tbody>
+
+
+</table>
+
+
+
+</div>
+
+
+
+<div id="newDemandAddModify" style="display:none;">
+
+<table class='table' style="width: 100%">
+<tbody>
+<tr>
+   <td style="font-weight: bold;text-align: left;"><h4>Demand Raise Desk>>Modify</h4></td>
+   <td>
+   <div style="text-align: right;">
+   <button   style="text-align: right; background-color: DodgerBlue;" onclick="newDemandBack()"><i class="fa fa-save"></i>&nbsp;SAVE</button>&nbsp;
+   <button   style="text-align: right; background-color: DodgerBlue;"><i class="fa fa-sync"></i>&nbsp;RESET</button>&nbsp;
+   <button  type="button" style="text-align: right; background-color: DodgerBlue;" onclick="newDemandBack()"><i class="fa fa-arrow-circle-left"></i>&nbsp;BACK</button>&nbsp;
+ </div>	
+   </td>
+</tr>
+
+</tbody>
+</table>
+<hr style=" border-top: 1px solid DodgerBlue;" >
+
+
+<table class='table' style="width: 100%;" >
+<tbody>
+<tr  bgcolor="purple">
+   <td style="font-weight: bold;text-align: left; color:white;"><h5>Institution Details</h5></td>
+
+</tr>
+</tbody>
+</table>
+<div class="row">
+
+              <div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="locationId" data-langtag="Institute Name" >Financial Year</label>
+	                			<br>2021-2022
+	              			</div>          			
+					 	</div>
+					 	
+					 <div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="locationId" data-langtag="Department Name" >Institution Type </label>
+	                			<br>DME
+	                			<div class="invalid-feedback"></div>
+	              			</div>          			
+					 	</div> 	
+					 	
+             
+             <div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="locationId" data-langtag="Institute Name" >Institute Name</label>
+	                			<br>ODISHA GOVERNMENT MULTI SUPER SPECIALITY HOSPITAL
+	              			</div>          			
+					 	</div>
+					 	
+					 <div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="locationId" data-langtag="Department Name" >Department Name</label>
+	                			<br>ODISHA GOVERNMENT MULTI SUPER SPECIALITY HOSPITAL-DEPARTMENT OF ANESTHESIA
+	                			<div class="invalid-feedback"></div>
+	              			</div>          			
+					 	</div> 	
+					 
+					 	<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="locationId" data-langtag="Department Name" >District </label>
+	                			<br>ODISHA 
+	                			<div class="invalid-feedback"></div>
+	              			</div>          			
+					 	</div> 	
+					 	
+					 	</div>
+
+
+<table class='table' style="width: 100%;" >
+<tbody>
+<tr  bgcolor="purple">
+   <td style="font-weight: bold;text-align: left; color:white;"><h5>Equipment Details</h5></td>
+
+</tr>
+</tbody>
+</table>
+
+<div class="row">
+
+       
+             
+            <div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="locationId" data-langtag="Location" >Equipment Name</label>
+	                			<select class="form-control form-control-sm  select2" id ='locationId' name="locationId" data-validation="mandatory">
+	                				<option value="1">0 Degree Nasal Endoscope</option>
+	                				<option value="2">Select Value</option>
+	                			</select>
+	                			<div class="invalid-feedback"></div>
+	              			</div>          			
+					 	</div> 	
+             
+              <div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="locationId" data-langtag="Equipment Code" >Equipment Code</label>
+	                			<input class="form-control form-control-sm  select2" value ='EQUIP001' name="locationId" data-validation="mandatory">
+	                				
+	                			<div class="invalid-feedback"></div>
+	              			</div>          			
+					 	</div>
+             
+              <div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="locationId" data-langtag="Name of the EIF" >Name of the EIF </label>
+	                			<input class="form-control form-control-sm  select2" value ='Equipment And Furniture' name="locationId" data-validation="mandatory">
+	                				
+	                			<div class="invalid-feedback"></div>
+	              			</div>          			
+					 	</div>
+					 	
+					 	
+					 	 <div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="locationId" data-langtag="Total Available Quantity (Nos.) " >Total Available Quantity (Nos.)</label>
+	                			<input class="form-control form-control-sm  select2" value ='18' name="locationId" data-validation="mandatory">
+	                				
+	                			<div class="invalid-feedback"></div>
+	              			</div>          			
+					 	</div>
+					 	
+					 	 <div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="locationId" data-langtag="Non Functional  Quantity (Nos.) " >Functional Quantity (Nos.)</label>
+	                			<input class="form-control form-control-sm  select2" value ='10' name="locationId" data-validation="mandatory">
+	                				
+	                			<div class="invalid-feedback"></div>
+	              			</div>          			
+					 	</div>
+					 	
+					 	 <div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="locationId" data-langtag="Non Functional  Quantity (Nos.) " >Non Functional  Quantity (Nos.)</label>
+	                			<input class="form-control form-control-sm  select2" value ='7' name="locationId" data-validation="mandatory">
+	                				
+	                			<div class="invalid-feedback"></div>
+	              			</div>          			
+					 	</div>
+					 	
+					 	<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="locationId" data-langtag="Reason Of Non Functionality" >Reason Of Non Functionality</label>
+	                			<textarea	 class="form-control form-control-sm  select2" id ='locationId' name="locationId" data-validation="mandatory">
+	                				</textarea>
+	                			<div class="invalid-feedback"></div>
+	              			</div>          			
+					 	</div> 
+					 	
+					 	<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="locationId" data-langtag="New Requirement  Quantity (Nos.) " >New Requirement Quantity (Nos.)</label>
+	                			<input class="form-control form-control-sm  select2" value ='20' name="locationId" data-validation="mandatory">
+	                				
+	                			<div class="invalid-feedback"></div>
+	              			</div>          			
+					 	</div>
+					 	
+					 	 <div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="locationId" data-langtag="Deviation From Standard Specification " >Deviation From Standard Specification (SEL)</label>
+	                			<select class="form-control form-control-sm  select2" id ='locationId' name="locationId" data-validation="mandatory">
+	                				<option value="0">Yes</option>
+	                				<option value="1">No</option>
+	                			</select>
+	                			<div class="invalid-feedback"></div>
+	              			</div>          			
+					 	</div> 	
+					 	
+					 	<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="locationId" data-langtag="Consumable/ Recurring Cost, if Any (Per year) " >Consumable/ Recurring Cost, if Any (Per year)</label>
+	                			<input class="form-control form-control-sm  select2" value ='1200.00' name="locationId" data-validation="mandatory">
+	                				
+	                			<div class="invalid-feedback"></div>
+	              			</div>          			
+					 	</div>
+					 	
+					 	 <div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="locationId" data-langtag="Expected Source of Funding " >Expected Source of Funding</label>
+	                			<select class="form-control form-control-sm  select2" id ='locationId' name="locationId" data-validation="mandatory">
+	                				<option value="0">NHM</option>
+	                				<option value="1">DME</option>
+	                				<option value="2">DMS</option>
+	                			</select>
+	                			<div class="invalid-feedback"></div>
+	              			</div>          			
+					 	</div>
+					 	
+					 	<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="locationId" data-langtag="Availability of Trained Manpower(Specify the Positions)" >Availability of Trained Manpower(Specify the Positions)</label>
+	                			<input	 class="form-control form-control-sm  select2" value="Specified " name="locationId" data-validation="mandatory">
+	                				
+	                			<div class="invalid-feedback"></div>
+	              			</div>          			
+					 	</div> 
+					 	
+					 	<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="locationId" data-langtag="Availability of Space For Installation(Specify the Details)" >Availability of Space For Installation(Specify the Details)</label>
+	                			<textarea	 class="form-control form-control-sm  select2" id ='locationId' name="locationId" data-validation="mandatory">
+	                				</textarea>
+	                			<div class="invalid-feedback"></div>
+	              			</div>          			
+					 	</div> 
+					 	
+					 	<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="locationId" data-langtag="Purpose of use/ Area of Application of the equipment" > Purpose of use/ Area of Application of the equipment</label>
+	                			<textarea	 class="form-control form-control-sm  select2" id ='locationId' name="locationId" data-validation="mandatory">
+	                				</textarea>
+	                			<div class="invalid-feedback"></div>
+	              			</div>          			
+					 	</div>   	
+					 	
+					 	
+					 <div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="locationId" data-langtag="Specification Status" >Specification Status</label>
+	                			<select class="form-control form-control-sm  select2" id ='locationId' name="locationId" data-validation="mandatory">
+	                				<option value="0">Received</option>
+	                				<option value="1">Not Received</option>
+	                			</select>
+	                			<div class="invalid-feedback"></div>
+	              			</div>          			
+					 	</div> 	
+					 	
+					 <div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="locationId" data-langtag="Specification Date" >Specification Date</label>
+	                			<input class="form-control form-control-sm  select2" value="DD/MM/YYYY" name="locationId" data-validation="mandatory">
+	                				
+	                			<div class="invalid-feedback"></div>
+	              			</div>          			
+					 	</div>
+					 	
+					 		
+					 	
+					 	 <div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="locationId" data-langtag="Expected Caseload of the Department for the Equipment" >Expected Caseload of the Department for the Equipment</label>
+	                			<input class="form-control form-control-sm  select2" value="Equipment Status" name="locationId" data-validation="mandatory">
+	                				
+	                			<div class="invalid-feedback"></div>
+	              			</div>          			
+					 	</div>	
+					 	
+					 	
+					
+					 
+					  <div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="locationId" data-langtag="Remarks" >Remarks</label>
+	                			<textarea	 class="form-control form-control-sm  select2" value="Equipment Details" name="locationId" data-validation="mandatory">
+	                				</textarea>
+	                			<div class="invalid-feedback"></div>
+	              			</div>          			
+					 	</div> 
+					 	
+					 	
+</div>
+
+<table class='table' style="width: 100%;" >
+<tbody>
+<tr  bgcolor="purple">
+   <td style="font-weight: bold;text-align: left; color:white;"><h5>Equipment Other Details</h5></td>
+
+</tr>
+</tbody>
+</table>
+
+<div class="row">
+				<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="locationId" data-langtag="Department Name" >New, Replacement or up gradation :</label>
+	                			<select class="form-control form-control-sm  select2" id ='locationId' name="locationId" data-validation="mandatory">
+	                				<option value="5">Replacement of old equipment of more than 10 years of old and beyond economical repair.</option>
+	                				<option value="10">New Equipment that was not earlier available in the facility.</option>
+	                			</select>
+	                			<div class="invalid-feedback"></div>
+	              			</div>          			
+					 	</div> 	
+       
+            <div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="locationId" data-langtag="Manpower Availability(Specialist and support staff)" >Manpower Availability(Specialist and support staff)</label>
+	                			<select class="form-control form-control-sm  select2" id ='locationId' name="locationId" data-validation="mandatory">
+	                				<option value="15">Medical Officer/ Specialist available </option>
+	                				<option value="10">Operator and Support staff available</option>
+	                				<option value="0">Not available</option>
+	                			</select>
+	                			<div class="invalid-feedback"></div>
+	              			</div>          			
+					 	</div>
+             
+             <div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="locationId" data-langtag="Availability of the service in the near by location(Govt.)" >Availability of the service in the near by location(Govt.)</label>
+	                			<select class="form-control form-control-sm  select2" id ='locationId' name="locationId" data-validation="mandatory">
+	                				<option value="0">Available within 05KM</option>
+	                				<option value="0">Available within 10KM</option>
+	                				<option value="0">Available within 20KM</option>
+	                			</select>
+	                			<div class="invalid-feedback"></div>
+	              			</div>          			
+					 	</div>
+					 	
+					 <div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="locationId" data-langtag="Department Name" >Realistic Assessment of the expected caseload</label>
+	                			<select class="form-control form-control-sm  select2" id ='locationId' name="locationId" data-validation="mandatory">
+	                				<option value="15">More than 50% capacity utilization</option>
+	                				<option value="30">More than 100% capacity utilization</option>
+	                			
+	                			</select>
+	                			<div class="invalid-feedback"></div>
+	              			</div>          			
+					 	</div> 	
+					 	
+					 	
+					 	
+					 	 
+					 	
+					 <div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="locationId" data-langtag="Department Name" >Available of the alternative facility of the same equipment</label>
+	                			<select class="form-control form-control-sm  select2" id ='locationId' name="locationId" data-validation="mandatory">
+	                				<option value="10">No alternative facility available for the same equipment.</option>
+	                				<option value="0"> alternative facility available for the same equipment.</option>
+	                			</select>
+	                			<div class="invalid-feedback"></div>
+	              			</div>          			
+					 	</div> 	
+					 	
+					 		
+					 	
+					 	 <div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="locationId" data-langtag="Department Name" >Item falls under category of minimum essential item for the level of facility as per IPHC/ MCI/ DCI/ INC / any other regulatory norm as applicable.</label>
+	                			<select class="form-control form-control-sm  select2" id ='locationId' name="locationId" data-validation="mandatory">
+	                				<option value="10">Yes</option>
+	                				<option value="0">No</option>
+	                			</select>
+	                			<div class="invalid-feedback"></div>
+	              			</div>          			
+					 	</div> 	
+					 	
+					 	
+
+           <div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="locationId" data-langtag="Infrastructure Readiness" >Infrastructure Readiness </label>
+	                			<select class="form-control form-control-sm  select2" id ='locationId' name="locationId" data-validation="mandatory">
+	                				<option value="15">This Site is ready</option>
+	                				<option value="10">Work in progress, likely to be completed in 3 months.</option>
+	                				<option value="0">This Site is not ready</option>
+	                			</select>
+	                			<div class="invalid-feedback"></div>
+	              			</div>          			
+					 	</div>
+					 	
+					 
+					 	
+					 	 <div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="locationId" data-langtag="Total Score" >Total Score</label>
+	                			<input class="form-control form-control-sm  select2" value ='70' name="locationId" data-validation="mandatory" disabled>
+	                				
+	                			<div class="invalid-feedback"></div>
+	              			</div>          			
+					 	</div>
+					 	
+					 	
+					 	
+			</div>
+
+
+
+
+
+
+</div>
+
+ 
+
+
+
+<div id="cancelModal" class="w3-modal">
+    <div class="w3-modal-content">
+      <div class="w3-container">
+      
+      <h4 class='card-title float-left' data-langtag='Demand Cancel Detail'>Demand Cancel Detail</h4>
+        <div style="text-align: right;">
+     <button  type="button" style="text-align: right; background-color: red;" onclick="document.getElementById('cancelModal').style.display='none'""><i class="fa fa-save"></i>&nbsp;Cancel</button>&nbsp;
+     <button  type="button" style="text-align: right; background-color: DodgerBlue;" onclick="document.getElementById('cancelModal').style.display='none'""><i class="fa fa fa-arrow-circle-left"></i>&nbsp;BACK</button>&nbsp;
+         </div>
+   <br>
+        <hr style=" border-top: 1px solid DodgerBlue;" >
+        <div class="modal-body">
+						<div class="card" id='bgDtls'>
+							
+							<div class="form-group">
+
+								<label class="col-form-label col-form-label-sm"
+									for="cancelRemarks" data-langtag="Cancel Remarks">Cancel
+									Remarks</label>
+								<textarea class="form-control form-control-sm  "
+									id="cancelRemarks" name='cancelRemarks' maxlength="100"
+									data-validation="mandatory"></textarea>
+
+								<div class="invalid-feedback"></div>
+							</div>
+							
+
+						</div>
+
+</div>
+      </div>
+    </div>
+  </div>
+
+
+<div id="cancelModalView" class="w3-modal">
+    <div class="w3-modal-content">
+      <div class="w3-container">
+      
+      <h4 class='card-title float-left' data-langtag='Demand Raise>> View'>Demand Raise>> View</h4>
+  
+      
+         <span onclick="document.getElementById('cancelModalView').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+   <br>
+        <hr style=" border-top: 1px solid DodgerBlue;" >
+        <div class="modal-body">
+						<div class="card" id='bgDtlsss'>
+							
+							<div class="row">
+
+       
+             
+             <div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="locationId" data-langtag="Institute Name" >Institute Name</label>
+	                			</br>ODISHA GOVERNMENT MULTI SUPER SPECIALITY HOSPITAL
+	              			</div>          			
+					 	</div>
+					 	
+					 <div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="locationId" data-langtag="Department Name" >Department Name</label>
+	                			</br>ODISHA GOVERNMENT MULTI SUPER SPECIALITY HOSPITAL-DEPARTMENT OF ANESTHESIA
+	                			<div class="invalid-feedback"></div>
+	              			</div>          			
+					 	</div> 	
+					 	
+					 	<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="locationId" data-langtag="Institute Name" >Equipment Name</label>
+	                			</br>0 DEGREE NASAL ENDOSCOPE
+	              			</div>          			
+					 	</div>
+					 	
+					 	 <div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="locationId" data-langtag="Department Name" >Equipment Code :-</label>
+	                			</br>EQUIP001
+	                			<div class="invalid-feedback"></div>
+	              			</div>          			
+					 	</div> 	
+					 	
+					 	
+					 	<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="locationId" data-langtag="Institute Name" >Name of the EIF:-</label>
+	                			</br>Equipment and Furniture
+	              			</div>          			
+					 	</div>
+					 	
+					 <div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="locationId" data-langtag="Department Name" >Reason Of Non Functionality :-</label>
+	                			</br>Functionality of equipment
+	                			<div class="invalid-feedback"></div>
+	              			</div>          			
+					 	</div> 	
+					 	
+					 	<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="locationId" data-langtag="Institute Name" >Deviation From Standard Specification (SEL) :-</label>
+	                			</br>Yes
+	              			</div>          			
+					 	</div>
+					 	<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="locationId" data-langtag="Institute Name" >Consumable/ Recurring Cost, if Any (Per year):-</label>
+	                			</br>15000.00
+	              			</div>          			
+					 	</div>
+					 	
+					 <div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="locationId" data-langtag="Department Name" >Expected Source of Funding :-</label>
+	                			</br>NHM
+	                			<div class="invalid-feedback"></div>
+	              			</div>          			
+					 	</div> 	
+					 	
+					 	<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="locationId" data-langtag="Institute Name" >Financial Year  :-</label>
+	                			</br>2021-2022
+	              			</div>          			
+					 	</div>
+					 	
+					 	
+					 <div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="locationId" data-langtag="Department Name" >Specification Status :-</label>
+	                			</br>Recieved
+	                			<div class="invalid-feedback"></div>
+	              			</div>          			
+					 	</div> 	
+					 	
+					 	
+					 	<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="locationId" data-langtag="Institute Name" >Specification Date :-</label>
+	                			</br>22-apr-2021
+	              			</div>          			
+					 	</div>
+					 	
+					 <div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="locationId" data-langtag="Department Name" >Demanded Qty. :-</label>
+	                			</br>20
+	                			<div class="invalid-feedback"></div>
+	              			</div>          			
+					 	</div> 	
+					 	
+					 	<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="locationId" data-langtag="Institute Name" >Demanded Qty. :-</label>
+	                			</br>29-apr-2021
+	              			</div>          			
+					 	</div>
+					 	
+					 <div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="locationId" data-langtag="Department Name" >Demand Status :-</label>
+	                			</br>Compilation in Process
+	                			<div class="invalid-feedback"></div>
+	              			</div>          			
+					 	</div> 	
+					 	
+					 	</div>
+
+							
+
+						</div>
+
+
+      </div>
+    </div>
+  </div>
+
+
+
+
+</div>
+
+
+
+</div>
+</body>
+</html>

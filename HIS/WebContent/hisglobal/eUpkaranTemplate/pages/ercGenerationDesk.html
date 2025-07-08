@@ -1,0 +1,175 @@
+<script>
+$(document).ready(function () {
+	$('#btngo').click(function(){
+		$('#LISTFORM').addClass('hideData');
+		$('#VIEWPAGEFORM ').removeClass('hideData');		
+	});
+	
+	$('#btnBack').click(function(){
+		$('#LISTFORM').removeClass('hideData');
+		$('#VIEWPAGEFORM ').addClass('hideData');		
+	});
+	
+})
+</script>
+
+<div class="card card-info border-info center m-1" id='LISTFORM' >
+			<div class="card-header bg-navy"><h5 class="card-title text-center ">
+Equipment Receipt Certificate >> Generation Form</h5>
+			</div>
+
+
+	<div class="card-body form-group">
+ 	
+  		 <div class='row'>
+  				 
+				         <div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="consigneeName " data-validation="mandatory" data-langtag="Consignee Name" >Consignee Name : </label>
+	                			<select class="form-control form-control-sm  " id ='consigneeName ' name="consigneeName ">
+	                				
+											<option title="Select Value" selected value="0">Select Value</option>
+											<option title="AAAAA" value="5057864">AAAAA</option>
+											<option title="AAAAA - ANC ROOM" value="5057865">AAAAA - ANC ROOM</option>
+											<option title="Aagar- CS" value="5055972">Aagar- CS</option>
+											<option title="Aagar- DH" value="5001672">Aagar- DH</option>
+											<option title="Aagar PHC  Indore-PHC" value="5002615">Aagar PHC  Indore-PHC</option>
+											<option title="Aagasod   Sagar-PHC" value="5003031">Aagasod   Sagar-PHC</option>
+											<option title="Aamdhana  Betul-PHC" value="5002278">Aamdhana  Betul-PHC</option>
+											<option title="Aamgaon  Narsinghpur-PHC" value="5002879">Aamgaon  Narsinghpur-PHC</option>
+											<option title="Aamkui  Satna-PHC" value="5003058">Aamkui  Satna-PHC</option>
+											<option title="Aamla  Betul-CH" value="5001866">Aamla  Betul-CH</option>
+											<option title="Aamla  Dewas-PHC" value="5002472">Aamla  Dewas-PHC</option>
+											<option title="Aamni Piparia  Dindori-PHC" value="5002540">Aamni Piparia  Dindori-PHC</option>
+											<option title="Aari  Seoni-PHC" value="5003116">Aari  Seoni-PHC</option>
+											<option title="Aathner  Betul-CHC" value="5001867">Aathner  Betul-CHC</option>
+											<option title="Aawan   Guna-PHC" value="5002563">Aawan   Guna-PHC</option>
+											<option title="Abhana  Damoh-PHC" value="5002448">Abhana  Damoh-PHC</option>
+											<option title="Adegaon  Seoni-PHC" value="5003117">Adegaon  Seoni-PHC</option>
+											<option title="Agara  Sheopur-PHC" value="5003197">Agara  Sheopur-PHC</option>
+											<option title="Agar-CMHO" value="5001723">Agar-CMHO</option>
+	                			</select>
+	              			<div class="invalid-feedback"></div>
+ 	  					</div>
+ 	  					</div>
+ 	  					<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="numPOReferenceNo " data-validation="mandatory" data-langtag="PO Reference No" >PO Reference No.  : </label>
+	                			<select class="form-control form-control-sm  " id ='numPOReferenceNo ' name="numPOReferenceNo ">
+	                				<option title="Select Value" selected value="0">Select Value</option>
+									<option title="719129980010[ABG MACHINE]" value="719129980010">719129980010[ABG MACHINE]</option>
+									<option title="719129980007[ABG MACHINE]" value="719129980007">719129980007[ABG MACHINE]</option>
+									<option title="719129980005[ABG MACHINE]" value="719129980005">719129980005[ABG MACHINE]</option>
+									<option title="719129980006[CENTRAL MONITORING SYSTEM]" value="719129980006">719129980006[CENTRAL MONITORING SYSTEM]</option>
+									<option title="719129980003[3 Fold Labour table SS with foam mattress]" value="719129980003">719129980003[3 Fold Labour table SS with foam mattress]</option>
+									<option title="719129980001[3 Fold Labour table SS with foam mattress]" value="719129980001">719129980001[3 Fold Labour table SS with foam mattress]</option>
+									<option title="719109980002[ELISA READER AND WASHER]" value="719109980002">719109980002[ELISA READER AND WASHER]</option>
+									<option title="719089980003[SYRINGE INFUSION PUMP]" value="719089980003">719089980003[SYRINGE INFUSION PUMP]</option>
+									<option title="719089980002[PULSE OXIMETER]" value="719089980002">719089980002[PULSE OXIMETER]</option>
+									<option title="719029980961[Laryngoscope Set NEONATAL]" value="719029980961">719029980961[Laryngoscope Set NEONATAL]</option>
+									<option title="719029980958[Bed Side Locker SS]" value="719029980958">719029980958[Bed Side Locker SS]</option>
+									<option title="719029980959[Bed Side Locker SS]" value="719029980959">719029980959[Bed Side Locker SS]</option>
+									<option title="719029980960[Emergency Cart]" value="719029980960">719029980960[Emergency Cart]</option>
+
+	                			</select>
+	              			<div class="invalid-feedback"></div>
+ 	  					</div></div>
+	</div>
+			
+	 		</div>
+ <div class="card-footer">
+		
+			<div class='text-center'>
+<button class='btn bg-gradient-success mt-4 btn-sm' id="btngo"><i class="fa fa-arrow-left"></i> Go</button>
+			  		
+	
+	</div>
+	
+	</div>
+			 
+	 
+		
+
+</div>
+
+<div class="card card card-info border-info center m-1 hideData" id='VIEWPAGEFORM'  >
+	<div class="card-header bg-navy">
+	Equipment Receipt Certificate >> Generation Form
+		
+	</div>
+	<div class="card-body form-group">
+	
+	
+	<div class='row no-more-tables'>
+			<table class="table table-hover">
+			  <thead class="bg-light">
+			      <tr>
+			      	
+			        <th >SNo</th>
+			        <th>Supplier Name</th>
+			        <th>Dispatch No</th>
+			        <th> Dispatch Date</th>
+			        <th>PO No.</th>
+			        <th>PO Date</th>
+			        <th>Serial No./Quantity</th>
+			        <th>Received Date</th>
+			        <th>Penalty</th>
+			       
+			      </tr>
+			    </thead>
+			    <tbody>
+			      <tr>
+			      	<td class='d-none d-sm-block' ><input type="checkbox"></td>
+			        <td data-title='Equipment Name' >Adarsh Enterprises</td>
+			        <td data-title='Equipment Model'>819129980005</td>
+			        <td data-title='Serial No.'>17-Dec-2019</td>
+			        <td data-title='Bar Code'>719129980006</td>
+			        <td data-title='Manufacturer Name'>17-Dec-2019</td>
+			        <td data-title='Equipment Status'>9233/1</td>
+			        <td data-title='Verification Status'>17-Dec-2019</td>
+			         
+			        <td data-title='Verification Status'>ERC</td>
+			      </tr>
+			      <tr>
+			      	<td class='d-none d-sm-block' ><input type="checkbox"></td>
+			        <td data-title='Equipment Name' >Adarsh Enterprises</td>
+			        <td data-title='Equipment Model'>819129980005</td>
+			        <td data-title='Serial No.'>17-Dec-2019</td>
+			        <td data-title='Bar Code'>719129980006</td>
+			        <td data-title='Manufacturer Name'>17-Dec-2019</td>
+			        <td data-title='Equipment Status'>9233/1</td>
+			        <td data-title='Verification Status'>17-Dec-2019</td>
+			         
+			        <td data-title='Verification Status'>ERC</td>
+			      </tr>
+			      <tr>
+			      	<td class='d-none d-sm-block' ><input type="checkbox"></td>
+			        <td data-title='Equipment Name' >Adarsh Enterprises</td>
+			        <td data-title='Equipment Model'>819129980005</td>
+			        <td data-title='Serial No.'>17-Dec-2019</td>
+			        <td data-title='Bar Code'>719129980006</td>
+			        <td data-title='Manufacturer Name'>17-Dec-2019</td>
+			        <td data-title='Equipment Status'>9233/1</td>
+			        <td data-title='Verification Status'>17-Dec-2019</td>
+			         
+			        <td data-title='Verification Status'>ERC</td>
+			      </tr>
+			    </tbody>
+			 </table>	
+			</div>
+	
+	
+	</div>
+	
+	
+    <div class="card-footer">
+		<div class="text-center">
+              <button class="btn bg-gradient-success mt-4 btn-sm" id="btnBack"><i class="fas fa-arrow-circle-left"></i> Back</button>    
+              <button class="btn bg-gradient-success mt-4 btn-sm" > <i class=" fa fa-check"></i> Approve</button>
+              <button class="btn bg-gradient-success mt-4 btn-sm" > <i class=" fa fa-key"></i> Reset</button>                        
+		</div>
+	</div>  
+ 
+  
+</div>
+  

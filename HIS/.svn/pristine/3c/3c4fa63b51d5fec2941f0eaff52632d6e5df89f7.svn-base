@@ -1,0 +1,1532 @@
+:root {
+  --primary: #38415F;
+  --secondary: #5F5638; 
+  --tarciary: #1F1B0D;
+  --bg-color1:#E8E6E2;
+  --color2:#C01F29;    
+  --color3:#00B4DB;
+  --color4:#0c7e70;
+  --color5:#feb505;
+  
+}
+
+
+	@font-face {
+		  font-family: 'Roboto-Regular';
+		  src: url('/HIS/hisglobal/cdac_awesome/fonts/Roboto/Roboto-Regular.ttf'); 
+		  src: url('/HIS/hisglobal/cdac_awesome/fonts/Roboto/Roboto-Regular.ttf?#iefix') format('embedded-opentype'), 
+		       url('/HIS/hisglobal/cdac_awesome/fonts/Roboto/Roboto-Regular.ttf') format('ttf'), 
+		       url('/HIS/hisglobal/cdac_awesome/fonts/Roboto/Roboto-Regular.ttf')  format('truetype'),       
+		}
+		 @font-face {
+		  font-family: 'Roboto-Bold';
+		  src: url('/HIS/hisglobal/cdac_awesome/fonts/Roboto/Roboto-Bold.ttf'); 
+		  src: url('/HIS/hisglobal/cdac_awesome/fonts/Roboto/Roboto-Bold.ttf?#iefix') format('embedded-opentype'), 
+		       url('/HIS/hisglobal/cdac_awesome/fonts/Roboto/Roboto-Bold.ttf') format('ttf'), 
+		       url('/HIS/hisglobal/cdac_awesome/fonts/Roboto/Roboto-Bold.ttf')  format('truetype'),       
+		}
+		 @font-face {
+		  font-family: 'Roboto-Medium';
+		  src: url('/HIS/hisglobal/cdac_awesome/fonts/Roboto/Roboto-Medium.ttf'); 
+		  src: url('/HIS/hisglobal/cdac_awesome/fonts/Roboto/Roboto-Medium.ttf?#iefix') format('embedded-opentype'), 
+		       url('/HIS/hisglobal/cdac_awesome/fonts/Roboto/Roboto-Medium.ttf') format('ttf'), 
+		       url('/HIS/hisglobal/cdac_awesome/fonts/Roboto/Roboto-Medium.ttf')  format('truetype'),       
+		}
+		
+		html {
+ 		 scroll-behavior: smooth;
+		}
+		.esushrut-text{
+  			color: var(--color2) !important;
+  			text-shadow: rgb(244, 214, 214) 2px 2px 4px;
+  		}
+  		.bg-nav{
+  		 background: var(--bg-color1);
+  		}
+		.btn-esushrut{
+			background: var(--primary);
+			color: var(--color5) !important ;			
+			font-family: Roboto-Regular;
+			font-weight: 600;
+			letter-spacing: 1px;
+			letter-spacing: 1px;	
+			cursor: pointer;
+		}
+		.btn-esushrut:hover {
+			background: var(--color3);  /* fallback for old browsers */
+			color: #fff !important ;
+		}
+		.modicon{
+			cursor: pointer;
+		}
+		.modlink{
+			height: 46px;
+			padding-top: 12px !important;
+		}
+		.navbar{
+			padding: 1px;			
+		}	
+		 .sheight
+		 {
+		 	height:25rem;
+		 }
+		  .img_features
+		 {
+		 	border:solid 1px black; 
+		 	height:95px; 
+		 	width:100%; 
+		 	flex-wrap:wrap;
+		 }
+		 
+		 .img_service{
+		   height: 18rem;
+		 }
+		 
+		
+		.navbar-light .navbar-toggler{
+			 border: none !important;
+			 padding: 0 !important;		
+		}
+		.navbar-light .navbar-toggler .navbar-toggler-icon {
+			 color: #C62D42;
+			 background-image: none !important;
+		 }
+		 .navbar-light .navbar-brand{
+		  padding-bottom: 0;
+		 }
+		
+		.top-bg { padding: 5px 0;
+			background: #fff;  /* fallback for old browsers */
+			color:#205B86; 
+			padding-bottom: 0px;
+			margin-top: 8px;			
+		}
+		.imglogo{
+			height: 60px;
+			width: 72px;
+		}	 
+		
+		.top-bg .header-info-left ul li {
+		    color: #fff;
+		    display: inline-block;
+		    margin-right: 33px;
+		    padding-right: 33px;
+		    border-right: 1px solid #fff;		    
+		    text-shadow: 5px 5px 10px #484340;
+			letter-spacing: 2px;
+		    font-size: 16px;
+		    margin-top: 10px;
+		     }
+		.top-bg .header-info-left ul li:last-child {
+		      border-right: 0;
+		      margin-right: 0;
+		      padding-right: 0px; }
+		.top-bg .header-info-right ul li {
+		    color: #fff;
+		    font-size: 14px;
+		    display: inline-block;
+		    }
+		
+		
+		
+		
+		.eshusrut-brandName-color1{
+			color: var(--primary);
+			font-style: italic;
+		}
+		
+		.eshusrut-brandName-color2{
+		color: var(--color2);
+		}
+		.eshusrut-brandName-color3{
+			color: var(--primary);
+			text-emphasis-style: circle;
+		}	
+		.eshusrut-brandName-color4{
+			color: var(--secondary);			
+		}
+		.eshusrut-brandName-color5{
+			color: var(--color3);			
+		}	
+		.navbar-light .navbar-nav .nav-link{
+			background: transparent;
+		    color: var(--color2);
+			padding: .5rem;	
+		  }
+		  
+		  .navbar-light .navbar-nav .nav-link{
+			padding-left: 10px;padding-right: 10px;
+			border-right:1px solid  #aca9a9;
+		 }
+		 .navbar-light .navbar-nav .nav-link .icolor{
+		 	color: var(--primary);
+		 	margin: 3px;
+		 }
+		 .navbar-light .navbar-nav .nav-link .eshusrut-menu{
+			font-family: Roboto-Regular;
+			font-weight: 700;
+			letter-spacing: 1px;			
+			font-size: 0.9375em;
+		 }
+		 .navbar-light .navbar-nav .nav-link:hover{
+		    background: var(--color3);
+			color: #fff !important ;
+		 }
+		 .navbar-light .navbar-nav .nav-link:hover .icolor{		 
+		    color: #fff !important;
+		 }
+		 
+		 
+		.navbar-light .navbar-nav .nav-link .nav-item{
+		 	margin-right: 2px;
+		 }
+		.navbar-light .navbar-nav  .eshusrut-menu-highLight{
+		 	background:var(--primary);
+			color: var(--color5) !important ;
+		    font-family: Roboto-Regular;
+			font-weight: 600;
+			letter-spacing: 1px;
+			letter-spacing: 1px;	
+			cursor: pointer;	
+		 }
+		 .navbar-light .navbar-nav  .eshusrut-menu-highLight .icolor{
+		 	color: var(--color5);
+		 	margin: 3px;
+		 }
+		.navbar-light .navbar-nav .nav-link .nav-link:hover .icolor{
+		 	color: #fff;
+		 }
+		.navbar-light .navbar-nav .nav-link .nav-link:active{
+		 	background: linear-gradient(to bottom, #205B86, #00416A);
+			color: var(--color5) !important ;
+		 }
+		.navbar-light .navbar-nav .nav-link .nav-link:active .icolor{
+		 	color: #fff;
+		 }
+		 
+		 .mainPagecard{
+		 	height:100vh;
+		 	border: none;
+		 	background: transparent;
+		 }
+		 .mainPagecard .card-body{
+		 	padding: 0px;
+		 }
+		 
+		 
+		 .vheight{
+		 	height: 100vh;		 	
+		 }
+		 .esushrutCardTitle{
+		 	font-family: Roboto-Medium;
+		 	font-size: 185%;
+		 	
+		 }
+		 .esushrut-p{
+		 	text-align: justify;
+		 }
+		body{
+			background:#fff;	
+			font-family: Roboto-Regular;	
+			letter-spacing: 1px;
+			color: var(--primary);
+			font-size: 0.9375em
+		}
+		
+	.kpiCard{
+		border: 1px solid #D0D2D9;
+		box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+		margin-left: 20px;
+		margin-right: 27px;
+		background: #fff;
+	}	
+	.kpiCard .kpiCardHeading{
+		background: #141E30;  /* fallback for old browsers */
+			background: -webkit-linear-gradient(to top, #243B55, #141E30);  /* Chrome 10-25, Safari 5.1-6 */
+			background: linear-gradient(to top, #243B55, #141E30); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+			
+		color: #fff;
+		font-family: Roboto-Regular;
+		font-weight: 600;
+		letter-spacing:1px;
+	}
+	.kpiCard .kpiTextCounter{
+		padding-top: 10px
+	}
+	
+	.kpiCard .kpi_msg{
+		color: var(--secondary);
+		font-family: Roboto-Bold;
+		font-size:100%;
+		letter-spacing:1px;	
+		text-shadow:  5px 5px 10px #d0c1c1;		
+	}
+	.kpiCard .kpiCounter{
+		color: var(--primary);
+		font-family: Roboto-Bold;
+		font-size:200%;
+		letter-spacing:1px;	
+		text-shadow:  5px 5px 10px #d0c1c1;		
+	}
+	.kpiCard .kpiimg{
+		width: 80px;height: 80px;padding: 10px;
+		
+	}
+	.contactusbk{
+		background: #fceabb;  /* fallback for old browsers */
+		background: -webkit-linear-gradient(to top, #f8b500, #fceabb);  /* Chrome 10-25, Safari 5.1-6 */
+		background: linear-gradient(to top, #f8b500, #fceabb); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	}
+	.mt-120 {
+		  margin-top: 120px !important;
+		}
+	.mb-45 {
+		  margin-bottom: 45px !important;
+		}
+		
+		
+span.highlight {
+  position: relative;
+  z-index: 1;
+  font-family: 'Roboto-Bold';
+}
+span.highlight::after {
+  content: "";
+  position: absolute;
+  top: calc(100% - 7.5px);
+  right: 0;
+  left: 0;
+  height: 15px;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='282' height='15' fill='none'%3e%3cpath fill='%23FFBB38' fill-rule='evenodd' d='M267.969 2.18c13.232 1.358 11.07.341 10.716 1.01l3.315.794-2.502 1.14c.158.117.379.283.601.45-.163.077-.349.244-.515.236-4.099-.199-8.062.718-12.194.533-4.145-.185-8.371-.29-12.475.037-3.343.264-6.657.346-9.997.425-1.03.024-1.871-.543-3.123-.09-.937.34-2.393.068-3.619.068h-4.041c-1.226 0-2.45-.003-3.675.001-1.22.002-2.441.008-3.661.026-.089.001-.174.106-.484.309 1.15.097 2.121.178 3.092.258l-.014.305c-1.278.02-2.556.05-3.833.059-1.347.01-2.694.006-4.042-.001-.229-.001-.57.007-.67-.08-1.356-1.19-2.885-1.043-4.691-.434-.678.228-1.686.037-2.543.037-11.514 0-23.029-.012-34.541.018-1.254.003-2.702-.4-3.748.458-.048.038-.297.039-.349 0-1.034-.795-2.212.391-3.034-.03-1.062-.54-1.776-.447-2.777-.003-.304.137-1.102-.107-1.6-.273-.695-.232-.651-.554-.006-.836-.127-.098-.23-.252-.386-.282-.213-.04-.597-.04-.677.042-.241.245-.272.6-.567.793-.392.258-.954.555-1.448.559-.849.007-1.895-.455-2.51-.257-.988.318-1.608.278-2.586.017-.668-.177-1.656.25-2.505.26-3.419.036-6.841.014-10.181.014-.337-.357-.621-.66-.906-.96l-1.771.987c-1.43.236-3.91-.655-5.404.968l-1.209-.87c-2.906.53-5.718.607-8.525-.02-2.904.875-5.913.112-8.847.412.063-.442.217-.943.125-.962-1.143-.251-.959.43-1.28.888h-3.893l-.518.921c-.171-.055-.408-.082-.497-.172-.698-.696-1.891-.981-2.833-.67-2.207.73-4.477.343-6.71.425-1.924.07-3.858.014-5.825.362l3.534.233c-2.693.154-5.556 1.147-7.57-.448-1.414.133-2.543.32-3.678.333-3.525.04-7.052.015-10.505.015l-.586 1.103-1.562-1.538c-.25.66-.83 1.343-1.88.87-1.113-.499-1.749-.156-2.767-.023-1.86.242-3.848.069-5.839.38.913.093 1.825.186 2.785.286-.152.156-.252.35-.355.35-2.694.017-5.397.096-8.083-.013-1.982-.08-3.894-.66-5.943-.452-.333.035-.66.097-.994.369l2.95.201c-3.074.207-6.084.755-9.181.005-1.371-.332-3.086-.056-4.74.2l2.05.328c-.12.126-.215.322-.317.323-1.222.016-2.443.003-3.664-.002-.657-1.013-1.638.492-2.635-.174-.65-.433-2.002.584-3.315-.205-.716-.428-2.526-.076-3.894.235l2.894.296c-.214.154-.344.33-.48.332-1.836.018-3.677-.04-5.51.023-3.576.123-7.205.113-10.698.548-1.883.235-3.73.283-5.592.431-1.599.126-3.157.494-3.781 1.877-.638 0-2.054.164-2.18-.029-.546-.844-2.205-.932-2.577-1.658-.35-.686-.927-.897-1.797-1.216-1.753-.644-2.13-1.876-1.244-3.076L.003 7.952c.022-.173-.054-.382.073-.475C1.449 6.46 3.059 5.937 5.253 5.76c3.595-.291 7.11-1.01 10.793-.898 2.111-.842 4.45-.332 6.677-.489 1.741-.122 3.465-.374 5.21-.455 1.704-.08 3.605.285 5.1-.09 2.151-.537 4.26-.469 6.346-.365 2.682.134 5.155-.574 7.784-.532 2.694.04 5.501.327 8.061-.06 4.94-.744 9.911-.003 14.775-.46 6.03-.569 12.117-.017 18.062-.515 8.008-.673 15.985-.162 23.965-.395.977-.028 1.959.004 2.939-.005.825-.007 1.73.143 2.282-.457.437.758 1.384-.076 2.148.29.468.223 1.633-.24 2.501-.297.97-.063 1.957-.015 2.937-.015h11.023c.98 0 1.967-.046 2.939.012 1.148.07 2.285-.183 3.475.349.573.256 1.905-.323 2.899-.341 3.06-.054 6.125.015 9.185-.038 1.139-.019 2.42.349 3.392-.452.636-.526 1.112.918 2.075.131.304-.248 1.831-.29 1.994-.11.926 1.008 1.973-.523 2.678.098 1.001.88 1.622-.155 2.428-.122.456.019.906.111 1.359.169.792.102 2.051.455 2.298.26 1.006-.794 2.181-.015 3.284-.32 1.141-.317 2.631-.114 3.968-.114 24.005-.003 48.014.021 72.02-.03 3.202-.007 6.507.518 9.616-.453 1.636.918 3.25-.1 4.907-.053 5.132.147 10.278.053 15.772.053-.184.375-.296.913-.482.924-2.594.156-5.106.62-7.777.556-5.382-.128-10.776-.04-16.165-.029-.195.001-.389.15-.584.23.245.08.477.193.736.235.648.105 1.243.637 2.006.03.196-.157.935-.023 1.424-.023 7.095 0 14.187 0 8.666.201-12.8.118-12.786.033-12.773-.052-1.137-.2-2.26-.462-3.419-.576-.615-.06-4.504.028-5.062-.023-.476-.044-1.21-.16-1.411-.008-.999.754-2.27.443-3.413.444-17.401.019-34.801.02-52.201-.007-1.021 0-2.186.354-3.113-.31-.177-.128-.817-.19-.945-.1-1.115.788-2.526.332-3.791.42-2.589.177-5.238-.29-7.81.446-.726.208-1.834-.092-2.743-.225-1.749-.256-3.485-.44-5.191.085-.595.183-1.331-.504-1.822.146-.941-.774-2.519-.648-3.336-.368-1.363.468-2.348-.42-3.497-.076-.205.06-.513.041-.64.136-.604.452-1.038.35-1.828.07-.765-.272-1.965-.349-2.775-.155-1.05.252-2.321.446-3.129.338-1.255-.166-2.317.06-3.463.088-8.965.214-17.933-.292-26.91.429-6.7.537-13.494-.192-20.289.454-6.18.587-12.516-.152-18.81.494-4.96.51-10.086-.213-15.136.495-2.343.329-4.896-.045-7.33.085-2.234.12-4.415-.217-6.762.314-2.188.494-4.832.12-7.275.144-.377.004-.753.095-1.13.146.5.328.955.337 1.41.326 4.314-.098 8.606.035 12.946-.403 5.213-.525 10.55.143 15.875-.48 4.942-.577 10.134.437 15.109-.566.7-.14 1.295.922 1.987.04.796.79 1.542-.05 2.312-.06 6.029-.082 12.091.394 18.084-.433.803-.11 2.005-.201 2.465.083 1.042.645 1.551-.362 2.456-.14.751.186 1.693.039 2.55.039 4.903 0 9.805.026 14.705-.018 1.26-.011 2.665.364 3.796-.412.126-.086.788.195 1.217.256.569.082 1.495.288 1.667.14.684-.584 1.088-.074 1.672-.014.581.06 1.256-.402 1.889-.402 1.024 0 2.219-.334 3.036.4.71-.55 1.688-.431 2.606-.426.931.005 1.968-.198 2.631.468.66-.682 1.713-.464 2.64-.466 6.128-.012 12.257.086 18.38-.033 6.025-.118 12.104.547 18.078-.454.736.461 1.692.213 2.517.256 1.065.057 2.163-.233 3.248-.236 1.257-.003 2.63-.284 3.714.418 1.199-.859 2.763-.411 4.133-.415 16.174-.036 32.349-.022 48.524-.027 1.181 0 2.363-.047 16.357-.275' clip-rule='evenodd'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  z-index: -1;
+}
+
+span.highlight {
+  position: relative;
+  z-index: 1;
+}
+span.highlight::after {
+  content: "";
+  position: absolute;
+  top: calc(100% - 7.5px);
+  right: 0;
+  left: 0;
+  height: 15px;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='282' height='15' fill='none'%3e%3cpath fill='%23FFBB38' fill-rule='evenodd' d='M267.969 2.18c13.232 1.358 11.07.341 10.716 1.01l3.315.794-2.502 1.14c.158.117.379.283.601.45-.163.077-.349.244-.515.236-4.099-.199-8.062.718-12.194.533-4.145-.185-8.371-.29-12.475.037-3.343.264-6.657.346-9.997.425-1.03.024-1.871-.543-3.123-.09-.937.34-2.393.068-3.619.068h-4.041c-1.226 0-2.45-.003-3.675.001-1.22.002-2.441.008-3.661.026-.089.001-.174.106-.484.309 1.15.097 2.121.178 3.092.258l-.014.305c-1.278.02-2.556.05-3.833.059-1.347.01-2.694.006-4.042-.001-.229-.001-.57.007-.67-.08-1.356-1.19-2.885-1.043-4.691-.434-.678.228-1.686.037-2.543.037-11.514 0-23.029-.012-34.541.018-1.254.003-2.702-.4-3.748.458-.048.038-.297.039-.349 0-1.034-.795-2.212.391-3.034-.03-1.062-.54-1.776-.447-2.777-.003-.304.137-1.102-.107-1.6-.273-.695-.232-.651-.554-.006-.836-.127-.098-.23-.252-.386-.282-.213-.04-.597-.04-.677.042-.241.245-.272.6-.567.793-.392.258-.954.555-1.448.559-.849.007-1.895-.455-2.51-.257-.988.318-1.608.278-2.586.017-.668-.177-1.656.25-2.505.26-3.419.036-6.841.014-10.181.014-.337-.357-.621-.66-.906-.96l-1.771.987c-1.43.236-3.91-.655-5.404.968l-1.209-.87c-2.906.53-5.718.607-8.525-.02-2.904.875-5.913.112-8.847.412.063-.442.217-.943.125-.962-1.143-.251-.959.43-1.28.888h-3.893l-.518.921c-.171-.055-.408-.082-.497-.172-.698-.696-1.891-.981-2.833-.67-2.207.73-4.477.343-6.71.425-1.924.07-3.858.014-5.825.362l3.534.233c-2.693.154-5.556 1.147-7.57-.448-1.414.133-2.543.32-3.678.333-3.525.04-7.052.015-10.505.015l-.586 1.103-1.562-1.538c-.25.66-.83 1.343-1.88.87-1.113-.499-1.749-.156-2.767-.023-1.86.242-3.848.069-5.839.38.913.093 1.825.186 2.785.286-.152.156-.252.35-.355.35-2.694.017-5.397.096-8.083-.013-1.982-.08-3.894-.66-5.943-.452-.333.035-.66.097-.994.369l2.95.201c-3.074.207-6.084.755-9.181.005-1.371-.332-3.086-.056-4.74.2l2.05.328c-.12.126-.215.322-.317.323-1.222.016-2.443.003-3.664-.002-.657-1.013-1.638.492-2.635-.174-.65-.433-2.002.584-3.315-.205-.716-.428-2.526-.076-3.894.235l2.894.296c-.214.154-.344.33-.48.332-1.836.018-3.677-.04-5.51.023-3.576.123-7.205.113-10.698.548-1.883.235-3.73.283-5.592.431-1.599.126-3.157.494-3.781 1.877-.638 0-2.054.164-2.18-.029-.546-.844-2.205-.932-2.577-1.658-.35-.686-.927-.897-1.797-1.216-1.753-.644-2.13-1.876-1.244-3.076L.003 7.952c.022-.173-.054-.382.073-.475C1.449 6.46 3.059 5.937 5.253 5.76c3.595-.291 7.11-1.01 10.793-.898 2.111-.842 4.45-.332 6.677-.489 1.741-.122 3.465-.374 5.21-.455 1.704-.08 3.605.285 5.1-.09 2.151-.537 4.26-.469 6.346-.365 2.682.134 5.155-.574 7.784-.532 2.694.04 5.501.327 8.061-.06 4.94-.744 9.911-.003 14.775-.46 6.03-.569 12.117-.017 18.062-.515 8.008-.673 15.985-.162 23.965-.395.977-.028 1.959.004 2.939-.005.825-.007 1.73.143 2.282-.457.437.758 1.384-.076 2.148.29.468.223 1.633-.24 2.501-.297.97-.063 1.957-.015 2.937-.015h11.023c.98 0 1.967-.046 2.939.012 1.148.07 2.285-.183 3.475.349.573.256 1.905-.323 2.899-.341 3.06-.054 6.125.015 9.185-.038 1.139-.019 2.42.349 3.392-.452.636-.526 1.112.918 2.075.131.304-.248 1.831-.29 1.994-.11.926 1.008 1.973-.523 2.678.098 1.001.88 1.622-.155 2.428-.122.456.019.906.111 1.359.169.792.102 2.051.455 2.298.26 1.006-.794 2.181-.015 3.284-.32 1.141-.317 2.631-.114 3.968-.114 24.005-.003 48.014.021 72.02-.03 3.202-.007 6.507.518 9.616-.453 1.636.918 3.25-.1 4.907-.053 5.132.147 10.278.053 15.772.053-.184.375-.296.913-.482.924-2.594.156-5.106.62-7.777.556-5.382-.128-10.776-.04-16.165-.029-.195.001-.389.15-.584.23.245.08.477.193.736.235.648.105 1.243.637 2.006.03.196-.157.935-.023 1.424-.023 7.095 0 14.187 0 8.666.201-12.8.118-12.786.033-12.773-.052-1.137-.2-2.26-.462-3.419-.576-.615-.06-4.504.028-5.062-.023-.476-.044-1.21-.16-1.411-.008-.999.754-2.27.443-3.413.444-17.401.019-34.801.02-52.201-.007-1.021 0-2.186.354-3.113-.31-.177-.128-.817-.19-.945-.1-1.115.788-2.526.332-3.791.42-2.589.177-5.238-.29-7.81.446-.726.208-1.834-.092-2.743-.225-1.749-.256-3.485-.44-5.191.085-.595.183-1.331-.504-1.822.146-.941-.774-2.519-.648-3.336-.368-1.363.468-2.348-.42-3.497-.076-.205.06-.513.041-.64.136-.604.452-1.038.35-1.828.07-.765-.272-1.965-.349-2.775-.155-1.05.252-2.321.446-3.129.338-1.255-.166-2.317.06-3.463.088-8.965.214-17.933-.292-26.91.429-6.7.537-13.494-.192-20.289.454-6.18.587-12.516-.152-18.81.494-4.96.51-10.086-.213-15.136.495-2.343.329-4.896-.045-7.33.085-2.234.12-4.415-.217-6.762.314-2.188.494-4.832.12-7.275.144-.377.004-.753.095-1.13.146.5.328.955.337 1.41.326 4.314-.098 8.606.035 12.946-.403 5.213-.525 10.55.143 15.875-.48 4.942-.577 10.134.437 15.109-.566.7-.14 1.295.922 1.987.04.796.79 1.542-.05 2.312-.06 6.029-.082 12.091.394 18.084-.433.803-.11 2.005-.201 2.465.083 1.042.645 1.551-.362 2.456-.14.751.186 1.693.039 2.55.039 4.903 0 9.805.026 14.705-.018 1.26-.011 2.665.364 3.796-.412.126-.086.788.195 1.217.256.569.082 1.495.288 1.667.14.684-.584 1.088-.074 1.672-.014.581.06 1.256-.402 1.889-.402 1.024 0 2.219-.334 3.036.4.71-.55 1.688-.431 2.606-.426.931.005 1.968-.198 2.631.468.66-.682 1.713-.464 2.64-.466 6.128-.012 12.257.086 18.38-.033 6.025-.118 12.104.547 18.078-.454.736.461 1.692.213 2.517.256 1.065.057 2.163-.233 3.248-.236 1.257-.003 2.63-.284 3.714.418 1.199-.859 2.763-.411 4.133-.415 16.174-.036 32.349-.022 48.524-.027 1.181 0 2.363-.047 16.357-.275' clip-rule='evenodd'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  z-index: -1;
+}
+		
+	.loginForm{
+		 	
+	}
+	.loginForm .img-login{
+		width: 100%;
+		height: 100%;
+	}
+	 .list-group-item {
+	  	font-size: 0.8rem;
+	  	font-family: Roboto-Medium;
+	  	opacity: 0.9;
+	 }
+	 .list-group-item .text-icon-feature{
+	  	 color:#0c7e70;
+	 }
+	 .list-group-item .ptext{
+	  	 padding-left:24px;
+	  	 color: var(--color2);
+	 }
+	 #nav-tab .nav-link{
+	 	color: var(--primary);
+		font-size: 0.8rem;
+		font-family: Roboto-Medium;
+		background: #fff;
+		opacity: 0.9;
+		border-color: var(--primary);
+	 }
+	 #nav-tab .active{
+	 	background-image: radial-gradient( circle farthest-corner at 10% 20%, rgba(14,174,87,1) 0%, rgba(12,116,117,1) 90% );
+		color: #fff !important ;
+	 }		
+
+ .text-icon-color{
+	  	 color:#0c7e70;
+	 }
+	  .e-shushrut-text-color{
+	  	 color:var(--primary);
+	 }
+	 
+/* text slider*/
+
+#textSlider {
+	 width: 100%;
+	 height: 100%;
+	 position: relative;
+	 overflow: hidden;
+	 background: transparent;
+	
+}
+ #textSlider .slide {
+	 display: flex;
+	 flex-direction: column;
+	 height: 100%;
+	 min-width: 100%;
+	 position: absolute;
+}
+#textSlider .slide p{
+	color: 000080;
+  font-weight: bold;
+  font-family: Roboto-Medium;
+  letter-spacing: 1px;
+  
+}
+
+ #textSlider .slide:nth-of-type(3n+1) p:nth-of-type(3n+1) {
+	/*  background: #FF9933; */
+	background: #FFB75E;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #ED8F03, #FFB75E);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #ED8F03, #FFB75E); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	
+	border: 1px solid silver;
+}
+ #textSlider .slide:nth-of-type(3n+1) p:nth-of-type(3n+2) {
+	 background: #ECE9E6;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #FFFFFF, #ECE9E6);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #FFFFFF, #ECE9E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+	 border: 1px solid silver;
+	 
+}
+ #textSlider .slide:nth-of-type(3n+1) p:nth-of-type(3n+3) {
+	 background: #56ab2f;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to left, #a8e063, #56ab2f);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to left, #a8e063, #56ab2f); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+	 border: 1px solid silver;
+}
+
+
+ #textSlider .slide:nth-of-type(3n+2) p:nth-of-type(3n+1) {
+	 /* background: #FF9933; */
+	 background: #FFB75E;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #ED8F03, #FFB75E);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #ED8F03, #FFB75E); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	 
+	 border: 1px solid silver;
+}
+ #textSlider .slide:nth-of-type(3n+2) p:nth-of-type(3n+2) {
+	background: #ECE9E6;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #FFFFFF, #ECE9E6);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #FFFFFF, #ECE9E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+	border: 1px solid silver;
+}
+ #textSlider .slide:nth-of-type(3n+2) p:nth-of-type(3n+3) {
+	background: #56ab2f;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to left, #a8e063, #56ab2f);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to left, #a8e063, #56ab2f); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+	 border: 1px solid silver;
+}
+
+
+ #textSlider .slide:nth-of-type(3n+3) p:nth-of-type(3n+1) {
+	/*  background: #FF9933; */
+	background: #FFB75E;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #ED8F03, #FFB75E);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #ED8F03, #FFB75E); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	
+	 border: 1px solid silver;
+}
+ #textSlider .slide:nth-of-type(3n+3) p:nth-of-type(3n+2) {
+	background: #ECE9E6;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #FFFFFF, #ECE9E6);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #FFFFFF, #ECE9E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+	 border: 1px solid silver;
+}
+ #textSlider .slide:nth-of-type(3n+3) p:nth-of-type(3n+3) {
+	background: #56ab2f;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to left, #a8e063, #56ab2f);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to left, #a8e063, #56ab2f); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+	 border: 1px solid silver;
+}
+
+
+ #textSlider .slide.active p {
+	 transform: translateX(0%);
+}
+ #textSlider .slide.out p {
+	 transform: translateX(-100%);
+}
+ #textSlider .slide p {
+	 display: flex;
+	 align-items: center;
+	 margin: 0;
+	 padding: 0 0 0 2em;
+	 flex: 1;
+	 transform-origin: 0 0;
+	 transform: translateX(100%);
+	 transition: 0.3s;
+}
+ #textSlider .slide p:nth-of-type(5n+1) {
+	 transition: 2s;
+}
+ #textSlider .slide p:nth-of-type(5n+2) {
+	 transition: 1s;
+}
+ #textSlider .slide p:nth-of-type(5n+3) {
+	 transition: 2.5s;
+}
+ #textSlider .slide p:nth-of-type(5n+4) {
+	 transition: 1.75s;
+}
+ #textSlider .slide p:nth-of-type(5n+5) {
+	 transition: 2.25s;
+}
+ 
+/*text slide end*/
+
+
+/*progress bar*/
+/* #msform {
+            text-align: center;
+            position: relative;
+        } */
+
+ #progressbar {
+            margin-bottom: 30px;
+            overflow: hidden;
+            color: lightgrey;
+            text-align: center;
+        }
+
+        #progressbar .active {
+            color: var(--primary)
+        }
+
+        #progressbar li {
+            list-style-type: none;
+            font-size: 12px;
+            width: 25%;
+            float: left;
+            position: relative
+        }
+
+        #progressbar #account:before {
+            font-family: FontAwesome;
+            content: "\f007"
+        }
+
+
+        #progressbar #verify:before {
+            font-family: FontAwesome;
+            content: "\e493"
+        }
+
+        #progressbar #hospital:before {
+            font-family: FontAwesome;
+            content: "\f0f8"
+        }
+
+        #progressbar #payment:before {
+            font-family: FontAwesome;
+            content: "\f09d"
+        }
+
+        #progressbar #confirm:before {
+            font-family: FontAwesome;
+            content: "\f00c"
+        }
+
+        #progressbar li:before {
+            width: 50px;
+            height: 50px;
+            line-height: 45px;
+            display: block;
+            font-size: 18px;
+            color: #ffffff;
+            background: lightgray;
+            border-radius: 50%;
+            margin: 0 auto 10px auto;
+            padding: 2px
+        }
+
+        #progressbar li:after {
+            content: '';
+            width: 100%;
+            height: 2px;
+            background: lightgray;
+            position: absolute;
+            left: 0;
+            top: 25px;
+            z-index: -1
+        }
+
+        #progressbar li.active:before,
+        #progressbar li.active:after {
+            background: var(--primary)
+        }
+        
+.tab-bg { padding-left: 10px; 
+background: #F1FAFF;  /* fallback for old browsers */
+}   
+
+.galarypic{
+	height:250px;
+}     
+/*progress bar-----------------------*/
+
+.deskbk{
+ background:#f3f4e9; 
+/* background: #FFEFBA;  fallback for old browsers
+background: -webkit-linear-gradient(to top, #FFFFFF, #FFEFBA);  Chrome 10-25, Safari 5.1-6
+background: linear-gradient(to top, #FFFFFF, #FFEFBA); W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+
+ */
+
+}
+.menubk{
+	background: transparent;
+}
+/*preloader starts */
+	
+	
+#preloader {
+    /* background-color: #f7f7f7; */
+	  width: 100%;
+	  height: 100%;
+	  position: fixed;
+	  top: 0;
+	  left: 0;
+	  right: 0;
+	  bottom: 0;
+	  z-index: 999999;
+	  -webkit-transition: .6s;
+	  -o-transition: .6s;
+	  transition: .6s;
+	  margin: 0 auto;
+	  background-image: url("/HIS/hisglobal/images/e-clinic/Medical-Background-3.jpg");
+	  background-repeat: no-repeat;
+	  
+}
+#loader {
+    display: block;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    width: 150px;
+    height: 150px;
+    margin: -75px 0 0 -75px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: var(--primary);
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+}
+#preloader h5{ 
+	display: block;
+	position: relative;
+	left: 47%;
+	top: 33%;
+	font-family: Roboto-Medium;
+	color: var(--primary);
+}
+
+#loader:before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: #FEB300;
+    -webkit-animation: spin 3s linear infinite;
+    animation: spin 3s linear infinite;
+}
+#loader:after {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: var(--color2);
+    -webkit-animation: spin 1.5s linear infinite;
+    animation: spin 1.5s linear infinite;
+}
+@-webkit-keyframes spin {
+    0%   {
+        -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+@keyframes spin {
+    0%   {
+        -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+	  /*preloader ends */
+	  
+
+.eshusrut-logo {
+		  margin: -6px 5px 0 0;
+		  width: 72px;
+		  height: 60px;
+		  vertical-align: middle;
+		  
+		}
+		.eshusrut-brandName{
+			font-family: Roboto-Bold;
+			font-weight: 900;
+			font-size: 120%;
+			text-shadow: 5px 5px 10px #d0c1c1;	
+			letter-spacing: 2px;		
+		}
+		.img-mainPagecard{
+		 	height: 60vh;
+		 	width: 100%;
+		 }
+
+
+.shadow_box{
+	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.usernameMenu{
+	font-size: 151%;
+}		 
+	
+	
+
+.selectedMenu{
+	background-color: #b2b4b7;
+	background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+	box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;
+	margin: 10px;
+} 
+
+.selectedModuleCSS{
+  background-color: var(--primary) !important;
+  color: #fff !important ;
+  font-family: Roboto-Bold;
+  padding-top: 10px;
+  text-align: center;
+}
+	
+ .modtxt {
+		  color: var(--color2);
+			display: inline-block;
+			font-family: Roboto-Regular;
+			font-size: 14px;
+			letter-spacing: 1px;
+			line-height: 18px;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+			margin-top: 7px;
+			font-weight: bold;
+			width: 100%;
+			text-align: center;
+			text-shadow: 5px 5px 10px #d0c1c1;
+		}
+.moduleDesc{
+	text-align: center;
+	font-family: Roboto-Regular;
+	font-size: 90%;
+	color: #f2f20e;
+	font-weight:bold;
+	padding-bottom: 10px
+}
+.userdropdownli{
+	border-bottom:1px solid rgba(0,0,0,.15); 
+}
+.dropdown-menu{
+	background: #FFFFFF;  /* fallback for old browsers */
+	box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px !important;
+}
+.menu-accordion-item{
+	background: transparent !important;
+}
+.menu-accordion-button{
+	background: transparent !important;
+	box-shadow: none;
+}
+
+
+
+
+.userName {
+  color: #202124;
+  display: inline-block;
+  font-family: Roboto-Regular;
+  font-size: 14px;
+  letter-spacing: 1px;
+  line-height: 18px;
+  overflow: hidden;
+  white-space: nowrap; 
+  margin-top: 7px;
+}
+.deskmenucol {
+	padding: 2px !important;
+	margin-top: 2px;
+	}	  
+.deskmenucol .deskmenualert{
+	font-family: Roboto-Medium;
+	padding-right:0px;
+	font-size: 75%;
+	overflow: hidden;
+  	text-overflow: ellipsis ellipsis;
+  	margin-bottom: 1px;
+	letter-spacing: 1px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	color:var(--primary);
+	background: #f9f9fb; 	
+ 	cursor:pointer;
+}
+.deskmenucol .active{
+	border-color: var(--primary);	
+	background:  var(--primary);
+	color: var(--color5) !important ;
+}
+.deskmenucol .btn-close{
+	background: none;
+	color: var(--color2) !important;
+	font-weight: bolder;
+	text-decoration: none;
+	margin-top: -4px;
+	opacity: 1;
+}
+
+
+.deskmenucol .active .btn-close{
+	background: none;
+	color: #fff !important;
+	font-weight: bolder;
+	text-decoration: none;
+	margin-top: -4px;
+}
+
+.menuiconusm{
+	color:var(--primary);
+}
+.menutextusm{
+  font-size:80%;
+  padding: 1em 1.5em;
+  text-decoration: none; 
+  font-family: Roboto-Regular;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: var(--secondary);
+  cursor: pointer;
+}
+
+.non-accordion-li{
+	margin-bottom:10px;
+}
+
+
+.deskmenucol .deskmenualert .deskmenualertClose{
+	padding:0.5rem .5rem !important; 
+}
+
+
+#divElementErrorsId .errorMessage{
+	list-style: none;
+	padding: 0px;
+	margin-bottom: 0;
+}
+.nav-item .dropdown-toggle::after{
+	display: none !important;
+}
+.welcome-toast-icon{
+	font-size: 300%;color: var(--primary);
+}
+.welcome-toast-text{
+	font-family: Roboto-Medium;color: var(--primary);
+}
+.ifcontainer {
+	   width: 100%;   
+	   height:81vh;
+	   margin-left: -12px;
+}
+.iframecss {
+	    /* position: absolute; */
+	    top: 0;
+	    left: 0;
+	    width: 102%;
+	    height: 100%;
+} 	
+
+.position-relative {
+  position: relative !important;
+}
+
+.font-size-13 {
+  font-size: 0.875em;
+}
+.rounded-4 {
+  border-radius: 20px !important;
+}
+.bg-accent-2 {
+  background-image: radial-gradient( circle farthest-corner at 10% 20%, rgba(14,174,87,1) 0%, rgba(12,116,117,1) 90% );
+}
+.circle-icon {
+		  display: -webkit-inline-box;
+		  display: -webkit-inline-flex;
+		  display: -ms-inline-flexbox;
+		  display: inline-flex;
+		  -webkit-box-align: center;
+		  -webkit-align-items: center;
+		      -ms-flex-align: center;
+		          align-items: center;
+		  -webkit-box-pack: center;
+		  -webkit-justify-content: center;
+		      -ms-flex-pack: center;
+		          justify-content: center;
+		  width: 80px;
+		  height: 80px;
+		  border-radius: 50%;
+		}
+				
+		.service-box {
+		  padding: 35px 30px;
+		}
+		.service-box-text{
+			color: var(--primary);
+			font-weight: bold;
+		}
+		.service-box-arrow:hover {
+		  color: #F01F4B;
+		}
+		
+		.service-box-sm {
+		  padding: 35px 25px 25px;
+		 
+		}
+		.welcome-serviceBox{
+			 height:185px;
+			 /* width:245%; */
+		}
+		.kpiimgcol{
+			background: var(--primary);
+			border-top-left-radius: 25px;
+			border-bottom-left-radius: 25px;
+			margin: -1px;
+		}
+		
+		.lift {
+		  -webkit-transition: -webkit-transform 150ms linear;
+		  transition: -webkit-transform 150ms linear;
+		  transition: transform 150ms linear;
+		  transition: transform 150ms linear, -webkit-transform 150ms linear;
+		  -webkit-transform: translate3d(0, 0, 0);
+		          transform: translate3d(0, 0, 0);
+		  will-change: transform;
+		}
+		.lift:hover {
+		  -webkit-transform: translate3d(0, -15px, 0);
+		          transform: translate3d(0, -15px, 0);
+		}
+		
+		.no-transform {
+		  -webkit-transform: none !important;
+		      -ms-transform: none !important;
+		          transform: none !important;
+		}
+
+.font-size-18 {
+  font-size: 1.1875em;
+}
+.fw-medium {
+  font-weight: 500;
+}
+.pe-lg-30 {
+    padding-right: 30px !important;
+  }
+  
+   .blink_me {
+ 	 animation: blinker 1s linear infinite;
+ 	 color: #f0f711 !important;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+/* For Desktop View */
+@media screen and (min-width: 1024px) {
+	.font-size-18 {
+    font-size: 1.125em;
+  }
+  
+  .welcomeImagebg{
+	padding: 0px;background-position: 0px 0px;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;    
+    background-repeat: no-repeat;
+    width: 100%;height: 85vh;	
+}
+.welcomediv{ 
+	background:  rgba(255, 255, 255, 0.6);width: 50%;margin-left: 10px;padding: 10px;
+}
+  
+  .esushrut-bg{
+			background-color: var(--primary) !important;
+		}
+.eshusrut-logo {
+		  margin: -6px 5px 0 0;
+		  width: 57px;
+		  height: 57px;
+		  vertical-align: middle;
+		  
+		}
+		.eshusrut-brandName{
+			font-family: Roboto-Bold;
+			font-weight: 900;
+			font-size: 120%;
+			text-shadow: 5px 5px 10px #d0c1c1;	
+			letter-spacing: 2px;		
+		}
+		.welcomebg-brandName{
+			font-family: Roboto-Bold;
+			font-weight: 900;
+			font-size: 87%;
+			text-shadow: 5px 5px 10px #d0c1c1;	
+			letter-spacing: 2px;		
+		}
+		.img-mainPagecard{
+		 	height: 60vh;
+		 	width: 100%;
+		 }
+		.usernameMenu{	font-size: 200%;}
+		.imgmoduleicon{height: 62px;display: block; margin-left: auto; margin-right: auto;  width:62px;}
+		.menutextusm-accordion-header{
+		  font-size:40%;	
+		  padding: 1em 1.5em;
+		  text-decoration: none; 
+		  font-family: Roboto-Regular;
+		  font-weight: 600;
+		  letter-spacing: 1px;
+		  color: var(--secondary);;
+		  padding-left: 19px;
+		  padding-top: 5px;
+		  padding-bottom: 10px;
+		  cursor: pointer;
+		}
+		
+		
+		
+		.moduleDesc{
+			text-align: center;
+			font-family: Roboto-Regular;
+			font-size: 90%;
+			color: .moduleDesc;
+			font-weight:bold;
+			padding-bottom: 10px
+		}
+		
+		
+		
+}
+				 
+}
+ 
+/* For Tablet View */
+@media screen and (min-device-width: 768px)
+and (max-device-width: 1024px) {
+		.eshusrut-logo {
+		  width: 57px;
+		  height: 57px;
+		}
+		.welcomeImagebg{
+	padding: 0px;background-image: url('/HIS/hisglobal/images/e-clinic/bgimg.jpg');background-position: 0px 0px;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;    
+    background-repeat: no-repeat;
+    width: 100%;height: 85vh;	
+}
+		
+		.esushrut-bg{
+			background-color: #00416A !important;
+		}
+		.welcomediv{ 
+			background:  rgba(255, 255, 255, 0.6);width: 46%;margin-left: 10px;padding: 10px;
+		}
+		
+		.eshusrut-brandName{
+			font-size: 120%;
+		}
+		.img-mainPagecard{
+		 	height: 60vh;
+		 	width: 100%;
+		 }
+		 .usernameMenu{	font-size: 200%;}
+		.imgmoduleicon{height: 62px;display: block; margin-left: auto; margin-right: auto;  width: 62px;}
+		.menutextusm-accordion-header{
+		  font-size:40%;	
+		  
+		  padding: 1em 1.5em;
+		  text-decoration: none; 
+		  font-family: Roboto-Regular;
+		  font-weight: 600;
+		  letter-spacing: 1px;
+		  color: var(--secondary);
+		  padding-left: 19px;
+		  padding-top: 5px;
+		  padding-bottom: 10px;
+		  cursor: pointer;
+		}
+		
+		.moduleDesc{
+			text-align: center;
+			font-family: Roboto-Regular;
+			font-size: 90%;
+			color: .moduleDesc;
+			font-weight:bold;
+			padding-bottom: 10px
+		}
+		
+		
+}
+ 
+/* For Mobile Portrait View */
+@media screen and (max-device-width: 480px)
+and (orientation: portrait) {
+		.eshusrut-logo {
+		  width: 57px;
+		  height: 57px;
+		}
+		.welcomeImagebg{
+	padding: 0px;background-image: url('/HIS/hisglobal/images/e-clinic/bgimg.jpg');background-position: 0px 0px;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;    
+    background-repeat: no-repeat;
+    width: 100%;height: 50vh;	
+}
+	.welcomediv{ 
+			background:  rgba(255, 255, 255, 0.6);width: 100%;margin-left: 10px;padding: 10px;
+		}
+		
+		
+		.esushrut-bg{
+			background-color: #00416A !important;
+		}
+		.eshusrut-brandName{
+			font-size: 100%;
+		}
+		.img-mainPagecard {
+		  height: 30vh;
+		  width: 96%;
+		}
+		 .usernameMenu{	font-size: 100%;}
+		
+		.menutextusm-accordion-header{
+		  font-size:51%;	
+		  padding: 1em 1.5em;
+		  text-decoration: none; 
+		  font-family: Roboto-Regular;
+		  font-weight: 600;
+		  letter-spacing: 1px;
+		  color: var(--secondary);
+		  padding-left: 19px;
+		  padding-top: 5px;
+		  padding-bottom: 10px;
+		  cursor: pointer;
+		}
+		
+		.moduleDesc{
+			display: none;
+		}
+		.imgmoduleicon{height: 62px;display: block; margin-left: auto; margin-right: auto;  width:62px;}
+}
+ 
+/* For Mobile Landscape View */
+@media screen and (max-device-width: 640px)
+and (orientation: landscape) {
+		.eshusrut-logo {
+		  width: 40px;
+		  height: 40px;
+		}
+		.welcomeImagebg{
+	padding: 0px;background-image: url('/HIS/hisglobal/images/e-clinic/bgimg.jpg');background-position: 0px 0px;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;    
+    background-repeat: no-repeat;
+    width: 100%;height: 50vh;	
+}
+		
+		.esushrut-bg{
+			background-color: #00416A !important;
+		}
+		.welcomediv{ 
+			background:  rgba(255, 255, 255, 0.6);width: 46%;margin-left: 10px;padding: 10px;
+		}
+		
+		.eshusrut-brandName{
+			font-size: 100%;
+		}
+		.img-mainPagecard {
+		  height: 30vh;
+		  width: 96%;
+		}
+		.usernameMenu{	font-size: 100%;}
+		.menutextusm-accordion-header{
+		  font-size:51%;	
+		  padding: 1em 1.5em;
+		  text-decoration: none; 
+		  font-family: Roboto-Regular;
+		  font-weight: 600;
+		  letter-spacing: 1px;
+		  color: var(--secondary);
+		  padding-left: 19px;
+		  padding-top: 5px;
+		  padding-bottom: 10px;
+		  cursor: pointer;
+		}
+		
+		.moduleDesc{
+			display: none;
+		}
+		.imgmoduleicon{height: 62px;display: block; margin-left: auto; margin-right: auto;  width:62px;}
+	
+}
+ 
+/* For Mobile Phones Portrait or Landscape View */
+@media screen and (max-device-width: 640px) {
+	.eshusrut-logo {
+		  width: 40px;
+		  height: 40px;
+		}
+		.welcomeImagebg{
+	padding: 0px;background-image: url('/HIS/hisglobal/images/e-clinic/bgimg.jpg');background-position: 0px 0px;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;    
+    background-repeat: no-repeat;
+    width: 100%;height: 50vh;	
+}
+		
+		.esushrut-bg{
+			background-color: #00416A !important;
+		}
+		.welcomediv{ 
+			background:  rgba(255, 255, 255, 0.6);width: 100%;margin-left: 10px;padding: 10px;
+		}
+		
+		.eshusrut-brandName{
+			font-size: 100%;
+		}
+		.img-mainPagecard {
+		  height: 30vh;
+		  width: 96%;
+		}
+		.usernameMenu{	font-size: 100%;}
+		.menutextusm-accordion-header{
+		  font-size:51%;	
+		  
+		  padding: 1em 1.5em;
+		  text-decoration: none; 
+		  font-family: Roboto-Regular;
+		  font-weight: 600;
+		  letter-spacing: 1px;
+		  color: var(--secondary);
+		  padding-left: 19px;
+		  padding-top: 5px;
+		  padding-bottom: 10px;
+		  cursor: pointer;
+		}
+		
+		.moduleDesc{
+			display: none;
+		}
+		.imgmoduleicon{height: 62px;display: block; margin-left: auto; margin-right: auto;  width:62px;}
+	
+}
+ 
+/* For iPhone 4 Portrait or Landscape View */
+@media screen and (min-device-width: 320px)
+and (-webkit-min-device-pixel-ratio: 2) {
+	.eshusrut-logo {
+		  width: 30px;
+		  height: 30px;
+		}
+		.welcomeImagebg{
+	padding: 0px;background-image: url('/HIS/hisglobal/images/e-clinic/bgimg.jpg');background-position: 0px 0px;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;    
+    background-repeat: no-repeat;
+    width: 100%;height: 85vh;	
+}
+		.welcomediv{ 
+			background:  rgba(255, 255, 255, 0.6);width: 100%;margin-left: 10px;padding: 10px;
+		}
+		
+		.esushrut-bg{
+			background-color: #00416A !important;
+		}
+		.eshusrut-brandName{
+			font-size: 90%;
+		}
+		.img-mainPagecard {
+		  height: 30vh;
+		  width: 96%;
+		}
+		.usernameMenu{	font-size: 100%;}
+		.menutextusm-accordion-header{
+		  font-size:51%;	
+		  padding: 1em 1.5em;
+		  text-decoration: none; 
+		  font-family: Roboto-Regular;
+		  font-weight: 600;
+		  letter-spacing: 1px;
+		  color: var(--secondary);
+		  padding-left: 19px;
+		  padding-top: 5px;
+		  padding-bottom: 10px;
+		  cursor: pointer;
+		}
+		
+		.moduleDesc{
+			display: none;
+		}
+		.imgmoduleicon{height: 62px;display: block; margin-left: auto; margin-right: auto;  width:62px;}
+		
+}
+ 
+/* For iPhone 5 Portrait or Landscape View */
+@media (device-height: 568px) and (device-width: 320px)
+and (-webkit-min-device-pixel-ratio: 2) {
+	.eshusrut-logo {
+		  width: 30px;
+		  height: 30px;
+		}
+		.welcomeImagebg{
+	padding: 0px;background-image: url('/HIS/hisglobal/images/e-clinic/bgimg.jpg');background-position: 0px 0px;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;    
+    background-repeat: no-repeat;
+    width: 100%;height: 50vh;	
+}
+		.welcomediv{ 
+			background:  rgba(255, 255, 255, 0.6);width: 100%;margin-left: 10px;padding: 10px;
+		}
+		
+		.esushrut-bg{
+			background-color: #00416A !important;
+		}
+		.eshusrut-brandName{
+			font-size: 90%;
+		}
+		.img-mainPagecard {
+		  height: 30vh;
+		  width: 96%;
+		}
+		.usernameMenu{	font-size: 100%;}
+		.menutextusm-accordion-header{
+		  font-size:51%;	
+		  padding: 1em 1.5em;
+		  text-decoration: none; 
+		  font-family: Roboto-Regular;
+		  font-weight: 600;
+		  letter-spacing: 1px;
+		  color: var(--secondary);
+		  padding-left: 19px;
+		  padding-top: 5px;
+		  padding-bottom: 10px;
+		  cursor: pointer;
+		}
+		
+		.moduleDesc{
+			display: none;
+		}
+		.imgmoduleicon{height: 62px;display: block; margin-left: auto; margin-right: auto;  width:62px;}
+	
+}
+ 
+/* For iPhone 6 and 6 plus Portrait or Landscape View */
+@media (min-device-height: 667px) and (min-device-width: 375px)
+and (-webkit-min-device-pixel-ratio: 3) {
+	.eshusrut-logo {
+		  width: 30px;
+		  height: 30px;
+		}
+		.welcomeImagebg{
+	padding: 0px;background-image: url('/HIS/hisglobal/images/e-clinic/bgimg.jpg');background-position: 0px 0px;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;    
+    background-repeat: no-repeat;
+    width: 100%;height: 50vh;	
+}
+		.welcomediv{ 
+			background:  rgba(255, 255, 255, 0.6);width: 100%;margin-left: 10px;padding: 10px;
+		}
+		
+		.esushrut-bg{
+			background-color: #00416A !important;
+		}
+		.eshusrut-brandName{
+			font-size: 90%;
+		}
+		.img-mainPagecard {
+		  height: 30vh;
+		  width: 96%;
+		}
+		.usernameMenu{	font-size: 100%;}
+		.menutextusm-accordion-header{
+		  font-size:51%;	
+		  padding: 1em 1.5em;
+		  text-decoration: none; 
+		  font-family: Roboto-Regular;
+		  font-weight: 600;
+		  letter-spacing: 1px;
+		  color: var(--secondary);
+		  padding-left: 19px;
+		  padding-top: 5px;
+		  padding-bottom: 10px;
+		  cursor: pointer;
+		}
+		
+		.moduleDesc{
+			display: none;
+		}
+		.imgmoduleicon{height: 62px;display: block; margin-left: auto; margin-right: auto;  width:62px;}
+		
+		.msg{
+			width: 100%;
+			text-align: center;
+			background: #fafafa;
+			border: 1px solid #fafafa;
+			font-weight: 500;
+			padding: 10px;
+			color:#f40707;
+		}
+}
+.contactusCard{
+	border-left: 7px solid #198754;border-bottom: 1px solid var(--primary);border-right: 1px solid var(--primary);border-top: 1px solid var(--primary);
+}
+
+
+
+.card1 
+		{
+		    width: 300px;
+		    height: 100px;
+		    transform-style: preserve-3d;
+		    perspective: 500px;
+		    border: none;
+		    background-color: inherit;
+		}
+		
+		.card1 .face 
+		{
+		    position: absolute;
+		    color: #666;
+		    width: 100%;
+		    height: 100%;
+		    overflow: hidden;
+		    /* box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1); */
+		    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+		    border-radius: 15px;
+		    background: rgba(255, 255, 255, 0.06);
+		    transform-style: preserve-3d;
+		    transition: 0.5s;
+		    font-weight:bold;
+		    backface-visibility: hidden;
+		    border-top: 1px solid #ddd;
+		    border-left: 1px solid #ddd;
+			background-image: linear-gradient( 89.9deg,  rgba(208,246,255,1) 0.1%, rgba(255,237,237,1) 47.9%, rgba(255,255,231,1) 100.2% );
+		}
+		
+		.card1 .face.front-face,
+		.card1 .face.back-face 
+		{
+		    position: absolute;
+		    display: flex;
+		    flex-direction: column;
+		    align-items: center;
+		    justify-content: center;
+		    
+		}
+		
+		.card1 .face.front-face .profile 
+		{
+		    width: 80%;
+		    height: 80%;
+		}
+		
+		
+		.card1:hover .face.front-face 
+		{
+		    transform: rotateY(180deg);
+		}
+		
+		.card1 .face.back-face 
+		{
+		    position: absolute;
+           	background-image: linear-gradient( 358.7deg,  rgba(42,136,157,1) 1.7%, rgba(122,197,214,1) 51.1%, rgba(211,232,242,1) 95.5% );
+		    transform: rotateY(180deg);
+		    padding: 20px 30px;
+		    text-align: center;
+		    user-select: none;
+		    
+		    
+		}
+		
+		
+		.card1:hover .face.back-face 
+		{
+		    transform: rotateY(360deg);
+		}
+		
+		@media(max-width: 991.5px) 
+		{
+		    .col-lg-3 {
+		        margin-top: 40px;
+		        margin-bottom: 20px;
+		    }
+		}
+
+		.carousel-control-next-icon,
+		.carousel-control-prev-icon {
+		  filter: invert(1);
+		}
+		

@@ -1,0 +1,19 @@
+# DEFAULT CACHE REGION
+
+jcs.default=DC,LTCP
+jcs.default.cacheattributes=org.apache.jcs.engine.CompositeCacheAttributes
+jcs.default.cacheattributes.MaxObjects=1000
+jcs.default.cacheattributes.MemoryCacheName= org.apache.jcs.engine.memory.lru.LRUMemoryCache
+
+# PRE-DEFINED CACHE REGIONS
+
+jcs.region.UnregisteredDrugListCache=
+jcs.region.UnregisteredDrugListCache.cacheattributes=org.apache.jcs.engine.CompositeCacheAttributes
+jcs.region.UnregisteredDrugListCache.cacheattributes.MaxObjects=1000000
+jcs.region.UnregisteredDrugListCache.cacheattributes.MemoryCacheName=org.apache.jcs.engine.memory.lru.LRUMemoryCache
+jcs.region.UnregisteredDrugListCache.cacheattributes.UseMemoryShrinker=true
+jcs.region.UnregisteredDrugListCache.cacheattributes.MaxMemoryIdleTimeSeconds=72000
+jcs.region.UnregisteredDrugListCache.cacheattributes.ShrinkerIntervalSeconds=60
+jcs.region.UnregisteredDrugListCache.cacheattributes.MaxSpoolPerRun=2000
+jcs.region.UnregisteredDrugListCache.elementattributes=org.apache.jcs.engine.ElementAttributes
+jcs.region.UnregisteredDrugListCache.elementattributes.IsEternal=false

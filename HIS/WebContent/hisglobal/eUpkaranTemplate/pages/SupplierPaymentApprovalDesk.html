@@ -1,0 +1,305 @@
+<script>
+$(document).ready(function () {
+	$('#btngo').click(function(){
+		$('#LISTFORM').addClass('hideData');
+		$('#GOPAGEFORM ').removeClass('hideData');		
+	});
+	
+	$('#btnBack').click(function(){
+		$('#LISTFORM').removeClass('hideData');
+		$('#GOPAGEFORM ').addClass('hideData');		
+	});
+	
+	
+	
+	
+})
+</script>
+<!-- main page card started -->
+
+
+<div class="card card-info border-info center m-1" id='LISTFORM' >
+			<div class="card-header bg-navy"><h5 class="card-title text-center ">
+Purchase Order >> Payment Approval</h5>
+			</div>
+
+
+	<div class="card-body form-group">
+ 	
+  		 <div class='row'>
+  				 
+					 	<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="paymentAuthority" data-validation="mandatory" data-langtag="Payment Authority" >Payment Authority</label>
+	                			<select class="form-control form-control-sm  " id ='paymentAuthority' name="paymentAuthority">
+	                				<option title="Select Value" selected value="0">Select Value</option>
+<option title="AAAAA" value="5057864">AAAAA</option>
+<option title="AAAAA - ANC ROOM" value="5057865">AAAAA - ANC ROOM</option>
+<option title="Aagar- CS" value="5055972">Aagar- CS</option>
+<option title="Agar-CMHO" value="5001723">Agar-CMHO</option>
+<option title="Alirajpur-CMHO" value="5001724">Alirajpur-CMHO</option>
+<option title="Alirajpur- CS" value="5055973">Alirajpur- CS</option>
+<option title="Annupur-CMHO" value="5001725">Annupur-CMHO</option>
+<option title="Annupur- CS" value="5055974">Annupur- CS</option>
+<option title="Ashoknagar-CMHO" value="5001726">Ashoknagar-CMHO</option>
+<option title="Ashoknagar- CS" value="5055975">Ashoknagar- CS</option>
+<option title="Badwani- CS" value="5055976">Badwani- CS</option>
+<option title="Balaghat-CMHO" value="5001727">Balaghat-CMHO</option>
+<option title="Balaghat- CS" value="5055977">Balaghat- CS</option>
+<option title="Barwani-CMHO" value="5001728">Barwani-CMHO</option>
+<option title="Betul-CMHO" value="5001729">Betul-CMHO</option>
+<option title="Betul- CS" value="5055978">Betul- CS</option>
+<option title="Bhind-CMHO" value="5001730">Bhind-CMHO</option>
+<option title="Bhind- CS" value="5055979">Bhind- CS</option>
+<option title="Bhopal CMHO" value="5001102">Bhopal CMHO</option>
+<option title="Bhopal - CS" value="5055971">Bhopal - CS</option>
+<option title="Burhanpur-CMHO" value="5001732">Burhanpur-CMHO</option>
+<option title="Burhanpur- CS" value="5055980">Burhanpur- CS</option>
+<option title="Chhatarpur-CMHO" value="5001733">Chhatarpur-CMHO</option>
+<option title="Chhatarpur- CS" value="5055981">Chhatarpur- CS</option>
+<option title="Chhindwada- CS" value="5055982">Chhindwada- CS</option>
+<option title="Chhindwara-CMHO" value="5001734">Chhindwara-CMHO</option>
+	                				
+	                			</select>
+								<div class="invalid-feedback"></div>
+							</div>	
+						</div>
+		
+				 	
+					 		<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="numPurchaseOrder" data-validation="numPurchaseOrder" data-langtag="Status" >PO No.</label>
+	                			<select class="form-control form-control-sm" id ='numPurchaseOrder' name="numPurchaseOrder">
+	                				<option title="All" selected value="0">All</option>
+<option title="719059980177[LABOUR TABLE MANUAL]" value="719059980177">719059980177[LABOUR TABLE MANUAL]</option>
+<option title="719059980180[LABOUR TABLE MANUAL]" value="719059980180">719059980180[LABOUR TABLE MANUAL]</option>
+<option title="719059980149[LABOUR TABLE MANUAL]" value="719059980149">719059980149[LABOUR TABLE MANUAL]</option>
+<option title="719059980136[LABOUR TABLE MANUAL]" value="719059980136">719059980136[LABOUR TABLE MANUAL]</option>
+<option title="719059980080[RETINOSCOPE]" value="719059980080">719059980080[RETINOSCOPE]</option>
+<option title="719059980138[LABOUR TABLE MANUAL]" value="719059980138">719059980138[LABOUR TABLE MANUAL]</option>
+<option title="719059980169[LABOUR TABLE MANUAL]" value="719059980169">719059980169[LABOUR TABLE MANUAL]</option>
+<option title="719059980153[LABOUR TABLE MANUAL]" value="719059980153">719059980153[LABOUR TABLE MANUAL]</option>
+<option title="719059980155[LABOUR TABLE MANUAL]" value="719059980155">719059980155[LABOUR TABLE MANUAL]</option>
+<option title="719059980157[LABOUR TABLE MANUAL]" value="719059980157">719059980157[LABOUR TABLE MANUAL]</option>
+<option title="719059980160[LABOUR TABLE MANUAL]" value="719059980160">719059980160[LABOUR TABLE MANUAL]</option>
+<option title="719059980167[LABOUR TABLE MANUAL]" value="719059980167">719059980167[LABOUR TABLE MANUAL]</option>
+<option title="719059980166[LABOUR TABLE MANUAL]" value="719059980166">719059980166[LABOUR TABLE MANUAL]</option>
+<option title="719059980178[LABOUR TABLE MANUAL]" value="719059980178">719059980178[LABOUR TABLE MANUAL]</option>
+<option title="719059980181[LABOUR TABLE MANUAL]" value="719059980181">719059980181[LABOUR TABLE MANUAL]</option>
+<option title="719059980168[LABOUR TABLE MANUAL]" value="719059980168">719059980168[LABOUR TABLE MANUAL]</option>
+<option title="719059980170[LABOUR TABLE MANUAL]" value="719059980170">719059980170[LABOUR TABLE MANUAL]</option>
+<option title="719059980171[LABOUR TABLE MANUAL]" value="719059980171">719059980171[LABOUR TABLE MANUAL]</option>
+<option title="719059980174[LABOUR TABLE MANUAL]" value="719059980174">719059980174[LABOUR TABLE MANUAL]</option>
+<option title="719059980172[LABOUR TABLE MANUAL]" value="719059980172">719059980172[LABOUR TABLE MANUAL]</option>
+<option title="719059980176[LABOUR TABLE MANUAL]" value="719059980176">719059980176[LABOUR TABLE MANUAL]</option>
+<option title="719059980173[LABOUR TABLE MANUAL]" value="719059980173">719059980173[LABOUR TABLE MANUAL]</option>
+<option title="719059980175[LABOUR TABLE MANUAL]" value="719059980175">719059980175[LABOUR TABLE MANUAL]</option>
+	                			</select>
+								<div class="invalid-feedback"></div>
+							</div>
+						</div>
+	</div>
+	 			
+	 		
+
+			<div class='text-center'>
+	<button class='btn bg-gradient-success mt-4 btn-sm' id='btngo'><i class="fa fa-arrow-left" ></i> Go</button>
+			  		
+	
+	</div>
+	
+			 
+	</div>  
+		
+</div>
+
+
+
+<!--card for go button -->
+
+
+<div class="card card card-info border-info center m-1 hideData" id='GOPAGEFORM'  >
+	<div class="card-header bg-navy">
+		<h6 class="text-left">Purchase Order >> Payment Approval</h6>
+	</div>
+	<div class="card-body form-group">
+	<h6><b>Equipment Details :</b></h6>
+	<hr class="bg-navy">
+	
+	
+	<div class='row no-more-tables'>
+			<table class="table table-hover">
+			  <thead class="bg-light">
+			      <tr>
+			      	<th><input type="checkbox"></th>
+			        <th >Supplier Name</th>
+			        <th>PO No.</th>
+			        <th>Dispatch No.</th>
+			        <th>PO Date</th>
+			        <th>Dispatch Date</th>
+			        <th>Received Date</th>
+			        <th>ERC Date</th>
+			        <th>Received Value</th>
+			        <th>Total Penalty</th>
+			        <th>Programme Name/Budget Line 	</th>
+			        <th>Report(s) 	</th>
+			      </tr>
+			    </thead>
+			    <tbody>
+			     <tr>
+			      	<td class='d-none d-sm-block' ><input type="checkbox"></td>
+			        <td data-title='Equipment Name' >Xray Machine</td>
+			        <td data-title='Equipment Model'>ABCD</td>
+			        <td data-title='Serial No.'>1234</td>
+			        <td data-title='Bar Code'>123456</td>
+			        <td data-title='Manufacturer Name'>Bosch</td>
+			        <td data-title='Equipment Status'>Working</td>
+			        <td data-title='Verification Status'>Payment Done</td>
+			      </tr>
+			    </tbody>
+			 </table>	
+			</div>
+			<div class="row"></div>
+			<h6><b>Payment Details :
+</b></h6>
+	<hr class="bg-navy">
+	 <div class='row m-4'>
+	 
+  <div class='col-lg-3' >
+ 
+  				<div><b>Received Amount Without Tax (₹) [A] :</b>	239000.00</div>	
+  				<div><b>Total Penalty (₹) [B] :</b>	0.00</div>
+				
+  		</div>
+  		<div class='col-lg-3' >		 
+  				<div><b>GST (%)[T] :	</b>18.00<p class="text-danger">(SGST:9.00%,CGST:9.00%)</p></div> 	
+  				<div><b>Tax Amount (₹) [C=T%(A-B)] :</b>	43020.00</div>
+				
+</div>
+			
+				<div class='col-lg-3' >		 
+  				<div><b>TDS (2.00 %) [D=2%(A-B)] :	</b>	4780.00	</div>
+  				<div><b>Total Payable Amt.[A-B+C-D](₹) :	</b>277240.00</div>
+				
+</div>
+	<div class='col-lg-3' >		 
+  				 
+  				<div><b>Po Net Amount (₹)[A-B+C] :</b>	282020.00	</div>
+  				
+</div> 	
+	</div>
+	
+	<div class="row m-4"></div>
+	<div><h6><b>Bill Details :
+</b></h6>
+	<hr class="bg-navy">
+	 <div class='row'>
+	 
+  <div class='col-lg-3' >
+ 
+  				<div><b>Bill No. :</b>	22190503752</div>	
+  				<div><b>Bill Amount (₹) :</b>	277240.00</div>
+				
+  		</div>
+  		<div class='col-lg-3' >		 
+  				<div><b>Bill Date :	</b>29-May-2019 11:15</div> 	
+  				<div><b>Payable Amount (₹)  :</b>	277240.00</div>
+				
+</div>
+			
+				<div class='col-lg-3' >		 
+  				<div><b>Bill Submitted By :	</b>	AARTI GUPTA	</div>
+  				<div><b>Remarks :	</b> sad</div>
+				
+</div>
+	<div class='col-lg-3' >		 
+  				 
+  				<div><b>Supplier A/C Details :</b> 	201000298305 : INDB0000042	</div>
+  				
+</div> 	
+	</div>
+	
+	
+	
+	
+	</div>
+	
+	<div class="row m-4"></div>
+		<div><h6><b> Digital Signature Details :
+
+</b></h6>
+	<hr class="bg-navy"></div>
+		 <div class='row'>
+	 
+  					<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="certificate" data-validation="mandatory" data-langtag="Certificate" >Certificate :</label>
+	                			<select class="form-control form-control-sm  " id ='certificate' name="certificate">
+	                				<option value="" selected="selected">Select Category</option>
+	                			</select>
+								<div class="invalid-feedback"></div>
+							</div>	
+						</div>
+						
+						
+						
+						<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="serialNo" data-langtag="Serial No"  >Serial No :</label>
+	                			<input class="form-control form-control-sm  " type="text" id="serialNo" name="serialNo" maxlength="50" data-validation="mandatory,alphabetOnly">
+	                			<div class="invalid-feedback"></div>
+	              			</div>
+					 	</div>	
+					 	<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="digitallySignBy" data-langtag="Digitally Sign By"  >Digitally Sign By :</label>
+	                			<input class="form-control form-control-sm  " type="text" id="digitallySignBy" name="digitallySignBy" maxlength="50" data-validation="mandatory,alphabetOnly">
+	                			<div class="invalid-feedback"></div>
+	              			</div>
+					 	</div>	
+					 	<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="certificateIssuedBy" data-langtag="Certificate Issued By"  >Certificate Issued By :</label>
+	                			<input class="form-control form-control-sm  " type="text" id="certificateIssuedBy" name="certificateIssuedBy" maxlength="50" data-validation="mandatory,alphabetOnly">
+	                			<div class="invalid-feedback"></div>
+	              			</div>
+					 	</div>	
+					 	<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="certificateValidFrom" data-langtag="Certificate Valid From"  >Certificate Valid From :</label>
+	                			<input class="form-control form-control-sm  " type="text" id="certificateValidFrom" name="certificateValidFrom" maxlength="50" data-validation="mandatory,alphabetOnly">
+	                			<div class="invalid-feedback"></div>
+	              			</div>
+					 	</div>	
+					 	<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="certificateValidTo" data-langtag="Certificate Valid To"  >Certificate Valid To :</label>
+	                			<input class="form-control form-control-sm  " type="text" id="certificateValidTo" name="certificateValidTo" maxlength="50" data-validation="mandatory,alphabetOnly">
+	                			<div class="invalid-feedback"></div>
+	              			</div>
+					 	</div>	 	
+	
+	</div>
+	
+	</div>
+    <div class="card-footer">
+		<div class="text-center">
+		<button class='btn bg-gradient-success mt-4 btn-sm' ><i class="fa fa-save"></i> Save</button>
+	<button class='btn bg-gradient-success mt-4 btn-sm' > <i class="fa fa-window-close"></i> Clear</button>
+              <button class="btn bg-gradient-success mt-4 btn-sm" id="btnBack"><i class="fas fa-arrow-circle-left"></i> Back</button>                            
+		</div>
+	</div>  
+ 
+  
+</div>
+ 
+  <div class="row">
+<p> <i class="fa fa-circle m-2" style="font-size:8px;color:#17a2b8"></i>   * Mandatory Fields</p>
+<p> <i class="fa fa-circle m-2" style="font-size:8px;color:#17a2b8"></i>   ! Please check supplier account detaiils before approving payment.</p>
+<p> <i class="fa fa-circle m-2" style="font-size:8px;color:#17a2b8"></i>   Re-Payment Bill</p>
+			
+
+
+</div>
+
+

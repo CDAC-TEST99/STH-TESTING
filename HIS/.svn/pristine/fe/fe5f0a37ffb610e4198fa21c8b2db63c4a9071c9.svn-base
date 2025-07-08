@@ -1,0 +1,567 @@
+
+<script>
+$(document).ready(function () {
+	$('#btnview').click(function(){
+		$('#LISTFORM').addClass('hideData');
+		$('#VIEWPAGEFORM ').removeClass('hideData');		
+	});
+	
+	$('#btnback').click(function(){
+		$('#LISTFORM').removeClass('hideData');
+		$('#VIEWPAGEFORM ').addClass('hideData');		
+	});
+	$('#btnreceive').click(function(){
+		$('#LISTFORM').addClass('hideData');
+		$('#RECEIVELISTFORM').removeClass('hideData');		
+	});
+	$('#btnbackreceive').click(function(){
+		$('#LISTFORM').removeClass('hideData');
+		$('#RECEIVELISTFORM').addClass('hideData');		
+	});
+	
+})
+</script>
+
+<div class="card card-info border-info center m-1" id='LISTFORM' >
+			<div class="card-header bg-navy"><h5 class="card-title text-center ">
+Purchase Order Payment Desk</h5>
+			</div>
+
+
+	<div class="card-body form-group ">
+
+  
+  
+  <div class='row'>
+  				 
+					 	<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="consigneeName" data-validation="mandatory" data-langtag="Consignee Name" >Consignee Name</label>
+	                			<select class="form-control form-control-sm  " id ='consigneeName' name="consigneeName">
+	                				<option value="" selected="selected">Select Category</option>
+	                			</select>
+								<div class="invalid-feedback"></div>
+							</div>	
+						</div>
+						
+						
+					 	<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="numPONo" data-validation="mandatory" data-langtag="PO No." >PO No.</label>
+	                			<select class="form-control form-control-sm  " id ='numPONo' name="numPONo">
+	                				<option value="" selected="selected">Select Category</option>
+	                			</select>
+								<div class="invalid-feedback"></div>
+							</div>	
+						</div>
+						
+						<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="status" data-validation="mandatory" data-langtag="Status" >Status</label>
+	                			<select class="form-control form-control-sm" id ='status' name="status">
+	                				<option value="" selected="selected">Select Category</option>
+	                			</select>
+								<div class="invalid-feedback"></div>
+							</div>
+						</div>
+					
+  				 
+				 	
+	</div>
+	
+	<div class='text-center'>
+	<button class='btn bg-gradient-success mt-4
+	 btn-sm' id='btnreceive' ><i class="fa fa-check-double"></i> Receive</button>
+	<button class='btn bg-gradient-success mt-4
+	 btn-sm' id='btnview' ><i class="fas fa-satellite-dish"></i> View</button>
+	 	
+			 
+		  		
+
+	</div>
+	
+
+	 <div class='row'>
+			<div class='col-lg-4'>	
+				<div class="form-group row">                   
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" id="search" placeholder="Search">
+                    </div>
+                  </div>
+			</div>
+			
+			</div>	
+			<div class='row no-more-tables'>
+			<table class="table table-hover">
+			  <thead class="bg-navy">
+			      <tr>
+			      	<th><input type="checkbox"></th>
+			        <th >Dispatch No.</th>
+			        <th>PO No.</th>
+			        <th>Supplier Name </th>
+			        <th>Equipment Name</th>
+			        <th>Serial No./Catlog No.</th>
+			        <th>Qty. to be received</th>
+			        <th>Dispatch Date</th>
+			        <th>Received Date</th>
+			         <th>Challan Status</th>
+			      </tr>
+			    </thead>
+			    <tbody>
+			     <tr>
+			      	<td class='d-none d-sm-block' ><input type="checkbox"></td>
+			        <td data-title='' >	819089980005</td>
+			        <td data-title=''> 	 719089980005</td>
+			        <td data-title=''> Inline Medicare</td>
+			        <td data-title=''> Bed Side Locker SS</td>
+			        <td data-title=''>asd34</td>
+			        <td data-title=''>10</td>
+			        <td data-title='' >	  	 16-Aug-2019</td>
+			        <td data-title=''> 16-Aug-2019</td>
+			        <td data-title=''> ERC Approved</td>
+			       
+			       
+			      </tr>
+			      <tr>
+			      	<td class='d-none d-sm-block' ><input type="checkbox"></td>
+			        <td data-title='' >	819089980005</td>
+			        <td data-title=''> 	 719089980005</td>
+			        <td data-title=''> Inline Medicare</td>
+			        <td data-title=''> Bed Side Locker SS</td>
+			        <td data-title=''>asd34</td>
+			        <td data-title=''>10</td>
+			        <td data-title='' >	  	 16-Aug-2019</td>
+			        <td data-title=''> 16-Aug-2019</td>
+			        <td data-title=''> ERC Approved</td>
+			       
+			       
+			      </tr>
+			        <tr>
+			      	<td class='d-none d-sm-block' ><input type="checkbox"></td>
+			        <td data-title='' >	819089980005</td>
+			        <td data-title=''> 	 719089980005</td>
+			        <td data-title=''> Inline Medicare</td>
+			        <td data-title=''> Bed Side Locker SS</td>
+			        <td data-title=''>asd34</td>
+			        <td data-title=''>10</td>
+			        <td data-title='' >	  	 16-Aug-2019</td>
+			        <td data-title=''> 16-Aug-2019</td>
+			        <td data-title=''> ERC Approved</td>
+			       
+			       
+			      </tr>
+			    </tbody>
+			 </table>	
+			</div>
+			 
+	</div> 
+	</div> 
+		
+
+
+
+<div class="card card card-info border-info center m-1 hideData" id='VIEWPAGEFORM'  >
+	<div class="card-header bg-navy">
+		<h6 class="text-left">Dispatch Details >> View</h6>
+	</div>
+	<div class="card-body form-group">
+	<h6 class='m-2'><b>Consignee and Equipmet Details :
+</b></h6>
+	<hr class="bg-navy">
+	 <div class='row'>
+	 
+							
+	
+	
+	 
+  <div class='col-lg-3' >
+  				<div><b>PO Ref. No. :</b>	719089980005</div>	
+  				<div><b> Consignee Name :</b>	Aagar- CS	</div>
+				<div><b>Dispatch No. :</b>	819089980005</div>	
+				
+  		</div>
+  		<div class='col-lg-3' >		 
+  				<div><b>Equipment Name :</b>		Bed Side Locker SS</div> 	
+  				<div><b>Serial No./Catlog No. :</b>	asd34</div>
+  				<div><b>Dispatch Status  :</b>	ERC Approved</div>
+				<div><b> ERC Status :</b>	Approved</div>	
+				
+</div>
+			
+				<div class='col-lg-3' >	
+				<div><b> Supplier Name :	</b>	Inline Medicare</div>	 
+  				<div><b>Dispatch Date :			</b>	16-Aug-2019	</div>
+  				<div><b>Model Name:	</b>Inmade BSLD-M-01</div>
+				
+</div>
+	<div class='col-lg-3' >		 
+  				 
+  				<div><b>Quantity :</b>	10</div>
+  				<div><b>Post Inspection Status :</b>	Done</div>
+				
+				<div><b>Penalty Amount :	</b>0</div>
+				
+</div> 	
+	</div>
+	<h6 class='m-2'><b>Delivery AND Others Details :
+</b></h6>
+	<hr class="bg-navy">
+	<div class='row'>
+	 
+  <div class='col-lg-3' >
+  				<div><b>Delivery Mode :</b>	Truck</div>	
+  				<div><b> Delivery Day(s) :</b>	2	</div>
+				<div><b>Service Engineers Name :</b> sad</div>	
+				
+  		</div>
+  		<div class='col-lg-3' >		 
+  				<div><b>Invoice No. :</b>May/2019/321</div> 	
+  				<div><b>Installation Required :</b>	No</div>
+				<div><b> Commisioning/Calibration Required </b>	No</div>	
+				<div><b> Training Required :	</b>	No</div>
+</div>
+			
+				<div class='col-lg-3' >	
+				<div><b>Dispatch Part Detail :	</b>	0##0##</div>	 
+  				<div><b>Remarks :			</b>	</div>
+  				<div><b>Delivery Detail :	</b>dsad</div>
+  				<div><b>Expected Delivery Date :		</b>16-Aug-2019</div>
+				
+</div>
+	<div class='col-lg-3' >		 
+  				 
+  				<div><b>Expected Delivery Date :	</b>	16-Aug-2019</div>
+  				<div><b>Mobile No./ E-Mail Id :</b>	5456465666/add@as.com</div>
+				<div><b>Invoice Date 	</b>16-Aug-2019	</div>
+				
+				
+</div> 	
+	</div>
+		<h6 class='m-2'><b> Uploaded Document 
+</b></h6>
+	<hr class="bg-navy">
+	<div class='row'>
+	 
+	 
+  <div class='col-lg-3' >
+  				<div><b>Invoice Copy. :</b><a href="#">	9524.jpg</a></div>	
+  				<div><b> Inspection Certificate </b>	Not Uploaded	</div>
+				<div><b>Insurance Certificate :</b> Not Uploaded</div>	
+				<div><b>Packing List  :</b><a href="#">	9525.jpg </a></div>	
+  				<div><b>ERC : </b>	<a href="#">ERC_1219080003.pdf</a>[19-Aug-2019]	</div>
+			
+  		</div>
+  		</div>
+	
+	
+<h6 class='m-2'><b>Receiving Details :</b></h6><hr class="bg-navy">
+	
+<div class='row'>
+	 <div class='col-lg-3' >
+  		<div><b>Received Date :</b>16-Aug-2019</div>	
+  				<div><b>Remarks </b> sad</div>	
+	</div>
+	
+  	<div class='col-lg-3' >		
+  				<div><b> Received By :</b>	AARTI GUPTA	</div> 
+  	</div>
+  	
+	<div class='col-lg-3' >	
+				<div><b>Stock Register Page No :</b>sa222</div> 
+	</div>
+	
+	<div class='col-lg-3' >		 
+  				 <div><b>Receiving Status :</b>	Received</div>
+  	</div> 	
+</div>
+	
+	
+<h6 class='m-2'><b> Post Inspection Details  </b></h6><hr class="bg-navy">
+
+<div class='row'>
+	 
+	 
+  <div class='col-lg-3' >
+  				<div><b>Post Inspection By(Service Engineer) :</b>	sad</div>	
+  				<div><b> Contact No :</b>	5456465666	</div>
+				<div><b>Store Keeper Name :</b> sdasd</div>	
+				
+  		</div>
+  		<div class='col-lg-3' >		 
+  				<div><b>Store Keeper Contact No :</b>3453454654</div> 	
+  				<div><b>Status  :</b>	No Damage</div>
+				<div><b> Other Details : </b>	--</div>	
+			
+</div>
+			
+				<div class='col-lg-3' >	
+				<div><b>Inspection Date :	</b>	16-Aug-2019</div>	 
+  				<div><b>Email Id :			</b>	add@as.com</div>
+  				
+				
+</div>
+	<div class='col-lg-3' >		 
+  				 
+  				<div><b>Store Keeper Email Id :		</b>	sds@gmail.com</div>
+  				<div><b>Post Inspection Report :</b>	<a href="#">453008.jpg</a></div>
+				<div><b>Remarks : 	</b>--	</div>
+				
+				
+</div> 	
+	</div>
+	
+	</div>
+    <div class="card-footer">
+		<div class="text-center">
+              <button class="btn bg-gradient-success mt-4 btn-sm" id="btnback"><i class="fas fa-arrow-circle-left"></i> Back</button>                            
+		</div>
+	</div>  
+ 
+  
+</div>
+  
+  
+  <!--card for POST INSPECTION button-->
+  
+<div class="card card-info border-info center m-1 hideData" id='RECEIVELISTFORM' >
+			<div class="card-header bg-navy"><h5 class="card-title text-center ">
+Challan Receive Form</h5>
+			</div>
+
+
+	<div class="card-body form-group">
+	<h6 class='m-2'><b>Purchase Order Details :</b></h6>
+	<hr class="bg-navy">
+	 <div class='row'>
+	 
+							
+	
+	
+	 
+  <div class='col-lg-3' >
+  				<div><b>Purchasing Authority :</b>	Aagar- CS</div>	
+  				<div><b> PO Type :</b>	Central Purchase	</div>
+			
+				
+  		</div>
+  		<div class='col-lg-3' >		 
+  				<div><b>PO Ref. No. :</b>719109980002</div> 	
+  				<div><b>Supplier Name :</b><a href="#">Micro Lab Instrument</a></div>
+					
+				
+</div>
+			
+				<div class='col-lg-3' >	
+				<div><b> Status :	</b>	<i class="text-danger">Delivery Start</i></div>	 
+  				<div><b>Financial Year :			</b>	2019-2020	</div>
+  			
+				
+</div>
+	<div class='col-lg-3' >		 
+  				 
+  				<div><b>Tender No.  :</b>	NIT - 127</div>
+  				<div><b>PO Date :		</b>	31-Oct-2019</div>
+				<div><b>Funding Source 	</b>State	</div>
+				
+				
+</div> 	
+	</div>
+	<h6 class='m-2'><b>Consignee Equipment Details :
+</b></h6>
+	<hr class="bg-navy">
+	
+	
+	
+	<div class='row no-more-tables'>
+			<table class="table table-hover">
+			  <thead class="bg-light">
+			      <tr>
+			      	<th>S. No.</th>
+			        <th >Consignee Name</th>
+			        <th>Equipment Name</th>
+			        <th>Model Name</th>
+			        <th>Rate Contract No.</th>
+			        <th>Rate/Unit inclusive Tax(Rs.)</th>
+			        <th>Ordered Qty</th>
+			        <th>Remaining Qty</th>
+			        <th>Dispatched Qty</th>
+			      </tr>
+			    </thead>
+			    <tbody>
+			     <tr>
+			      	<td class='d-none d-sm-block' >1</td>
+			        <td data-title='Equipment Name' >Aagar- DH</td>
+			        <td data-title='Equipment Model'>ELISA READER AND WASHER</td>
+			          <td data-title='Equipment Name' >WRX-806 plus </td>
+			        <td data-title='Serial No.'>	<a href="#">218099980015 </a></td>
+			        <td data-title='Bar Code'>303408.00 </td>
+			        <td data-title='Manufacturer Name'>1</td>
+			        <td data-title='Equipment Status'>0</td>
+			        <td data-title='Verification Status'>1 </td>
+			      </tr>
+			       <tr>
+			      	<td class='d-none d-sm-block' >1</td>
+			        <td data-title='Equipment Name' >Aagar- DH</td>
+			        <td data-title='Equipment Model'>ELISA READER AND WASHER</td>
+			          <td data-title='Equipment Name' >WRX-806 plus </td>
+			        <td data-title='Serial No.'>	<a href="#">218099980015 </a></td>
+			        <td data-title='Bar Code'>303408.00 </td>
+			        <td data-title='Manufacturer Name'>1</td>
+			        <td data-title='Equipment Status'>0</td>
+			        <td data-title='Verification Status'>1 </td>
+			      </tr>
+			       <tr>
+			      	<td class='d-none d-sm-block' >1</td>
+			        <td data-title='Equipment Name' >Aagar- DH</td>
+			        <td data-title='Equipment Model'>ELISA READER AND WASHER</td>
+			          <td data-title='Equipment Name' >WRX-806 plus </td>
+			        <td data-title='Serial No.'>	<a href="#">218099980015 </a></td>
+			        <td data-title='Bar Code'>303408.00 </td>
+			        <td data-title='Manufacturer Name'>1</td>
+			        <td data-title='Equipment Status'>0</td>
+			        <td data-title='Verification Status'>1 </td>
+			      </tr>
+			    </tbody>
+			 </table>	
+			</div>
+		<h6 class='m-2'><b> Received Equipment Detail(s) :
+ 
+</b></h6>
+	<hr class="bg-navy">
+	
+	<div class='row no-more-tables'>
+			<table class="table table-hover">
+			  <thead class="bg-light">
+			      <tr>
+			      	<th>S. No.</th>
+			      	<th >Dispatch No</th>
+			        <th >Consignee Name</th>
+			        <th>Equipment Name</th>
+			        <th>Serial/Catlog No.</th>
+			        <th>Quantity</th>
+			        <th>Received Date</th>
+			        <th>Stock Register Page No.</th>
+			        <th>Invoice No.</th>
+			        <th>Invoice Date</th>
+			      </tr>
+			    </thead>
+			    <tbody>
+			     <tr>
+			      	<td class='d-none d-sm-block' >1</td>
+			        <td data-title='Equipment Name' >Aagar- DH</td>
+			        <td data-title='Equipment Model'>ELISA READER AND WASHER</td>
+			          <td data-title='Equipment Name' >WRX-806 plus </td>
+			        <td data-title='Serial No.'>	<a href="#">218099980015 </a></td>
+			        <td data-title='Bar Code'>303408.00 </td>
+			        <td data-title='Manufacturer Name'>1</td>
+			        <td data-title='Equipment Status'>0</td>
+			        <td data-title='Verification Status'>1 </td>
+			         <td data-title='Equipment Status'>0</td>
+			      </tr>
+			       <tr>
+			      	<td class='d-none d-sm-block' >1</td>
+			        <td data-title='Equipment Name' >Aagar- DH</td>
+			        <td data-title='Equipment Model'>ELISA READER AND WASHER</td>
+			          <td data-title='Equipment Name' >WRX-806 plus </td>
+			        <td data-title='Serial No.'>	<a href="#">218099980015 </a></td>
+			        <td data-title='Bar Code'>303408.00 </td>
+			        <td data-title='Manufacturer Name'>1</td>
+			        <td data-title='Equipment Status'>0</td>
+			        <td data-title='Verification Status'>1 </td>
+			         <td data-title='Equipment Status'>0</td>
+			      </tr>
+			       <tr>
+			      	<td class='d-none d-sm-block' >1</td>
+			        <td data-title='Equipment Name' >Aagar- DH</td>
+			        <td data-title='Equipment Model'>ELISA READER AND WASHER</td>
+			          <td data-title='Equipment Name' >WRX-806 plus </td>
+			        <td data-title='Serial No.'>	<a href="#">218099980015 </a></td>
+			        <td data-title='Bar Code'>303408.00 </td>
+			        <td data-title='Manufacturer Name'>1</td>
+			        <td data-title='Equipment Status'>0</td>
+			        <td data-title='Verification Status'>1 </td>
+			         <td data-title='Equipment Status'>0</td>
+			      </tr>
+			    </tbody>
+			 </table>	
+			</div>
+			
+			<h6 class='m-2'><b> Equipment Pending to Received Detail(s) :
+ 
+</b></h6>
+	<hr class="bg-navy">
+	
+	<div class='row no-more-tables'>
+			<table class="table table-hover">
+			  <thead class="bg-light">
+			      <tr>
+			      	<th>S. No.</th>
+			      	<th >Dispatch No</th>
+			        <th >Consignee Name</th>
+			        <th>Equipment Name</th>
+			        <th>Serial/Catlog No.</th>
+			        <th>Quantity</th>
+			        <th>Delivery Mode</th>
+			        <th>Delivery Details</th>
+			        <th>Invoice No.</th>
+			        <th>Invoice Date</th>
+			        <th>Action</th>
+			      </tr>
+			    </thead>
+			    <tbody>
+			     <tr>
+			      	<td class='d-none d-sm-block' >1</td>
+			        <td data-title='Equipment Name' >Aagar- DH</td>
+			        <td data-title='Equipment Model'>ELISA READER AND WASHER</td>
+			          <td data-title='Equipment Name' >WRX-806 plus </td>
+			        <td data-title='Serial No.'>	<a href="#">218099980015 </a></td>
+			        <td data-title='Bar Code'>303408.00 </td>
+			        <td data-title='Manufacturer Name'>1</td>
+			        <td data-title='Equipment Status'>0</td>
+			        <td data-title='Verification Status'>1 </td>
+			         <td data-title='Equipment Status'>0</td>
+			        <td data-title='Verification Status'>1 </td>
+			      </tr>
+			       <tr>
+			      	<td class='d-none d-sm-block' >1</td>
+			        <td data-title='Equipment Name' >Aagar- DH</td>
+			        <td data-title='Equipment Model'>ELISA READER AND WASHER</td>
+			          <td data-title='Equipment Name' >WRX-806 plus </td>
+			        <td data-title='Serial No.'>	<a href="#">218099980015 </a></td>
+			        <td data-title='Bar Code'>303408.00 </td>
+			        <td data-title='Manufacturer Name'>1</td>
+			        <td data-title='Equipment Status'>0</td>
+			        <td data-title='Verification Status'>1 </td>
+			         <td data-title='Equipment Status'>0</td>
+			        <td data-title='Verification Status'>1 </td>
+			      </tr>
+			       <tr>
+			      	<td class='d-none d-sm-block' >1</td>
+			        <td data-title='Equipment Name' >Aagar- DH</td>
+			        <td data-title='Equipment Model'>ELISA READER AND WASHER</td>
+			          <td data-title='Equipment Name' >WRX-806 plus </td>
+			        <td data-title='Serial No.'>	<a href="#">218099980015 </a></td>
+			        <td data-title='Bar Code'>303408.00 </td>
+			        <td data-title='Manufacturer Name'>1</td>
+			        <td data-title='Equipment Status'>0</td>
+			        <td data-title='Verification Status'>1 </td>
+			         <td data-title='Equipment Status'>0</td>
+			        <td data-title='Verification Status'>1 </td>
+			      </tr>
+			    </tbody>
+			 </table>	
+			</div>
+	
+</div>
+<div class="card-footer">
+<div class="text-center">
+			
+            <button class="btn bg-gradient-success mt-4 btn-sm" id="btnbackreceive"><i class="fas fa-arrow-circle-left"></i> Back</button>                            
+		</div>
+
+
+</div>
+</div>
+
+
+ 

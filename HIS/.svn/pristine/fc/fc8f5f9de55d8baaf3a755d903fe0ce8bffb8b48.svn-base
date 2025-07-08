@@ -1,0 +1,566 @@
+<script>
+$(document).ready(function () {
+	$('#btnview').click(function(){
+		$('#LISTFORM').addClass('hideData');
+		$('#VIEWPAGEFORM ').removeClass('hideData');		
+	});
+	
+	$('#btnBack').click(function(){
+		$('#LISTFORM').removeClass('hideData');
+		$('#VIEWPAGEFORM ').addClass('hideData');		
+	});
+	$('#btnBackCONDEMN').click(function(){
+		$('#LISTFORM').removeClass('hideData');
+		$('#CODEMNATIONCERTIFICATEPAGEFORM ').addClass('hideData');		
+	});
+	$('#btnGenerate').click(function(){
+		$('#LISTFORM').addClass('hideData');
+		$('#CODEMNATIONCERTIFICATEPAGEFORM ').removeClass('hideData');
+	});
+	
+})
+</script>
+<div class="card card-info border-info center m-1" id='LISTFORM' >
+	<div class="card-header bg-navy">
+		<h6 class="card-title text-left">Condemnation Desk</h6>
+		<div class="buttonContainer  bg-light">
+			<button class='btn   bg-gradient-success btn-sm' id='btnGenerate'><i class="fa fa-recycle"></i>&nbsp;Generate Condemnation Certificate</button>&nbsp;
+			<button class="btn   bg-gradient-success btn-sm" id="btnview"><i class="fa fa-eye" aria-hidden="true"></i> View</button>		
+		</div>
+	</div>
+	<div class="card-body form-group">
+ 	
+  			<div class="row " >
+						
+						<div class='col-lg-3'  >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="institutionType" data-validation="mandatory" data-langtag="Institution Type" >Institution Type</label>
+	                			<select class="form-control form-control-sm  " id ='institutionType' name="institutionType">
+	                				<option value="" selected="selected">Select Institution Type</option>
+	                				<option title="Budget Authority" selected="" value="51">DME</option>
+	                			</select>
+	                		<div class="invalid-feedback"></div>
+ 	  					</div>
+	 				</div>
+	 	
+	 	
+	 				<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="institutionName" data-validation="mandatory" data-langtag=Institution Name" >Institution Name</label>
+	                			<select class="form-control form-control-sm  " id ='institutionName' name="institutionName">
+	                				<option value="" selected="selected">Madras Medical College</option>
+	                			</select>
+	              				<div class="invalid-feedback"></div>
+ 	  						</div>
+	 					</div>
+	 					
+	 					
+	 					<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="departmentName" data-validation="mandatory" data-langtag="Department Name" >Department Name</label>
+	                			<select class="form-control form-control-sm  " id ='departmentName' name="departmentName">
+	                				<option value="" selected="selected">ENT</option>
+	                			</select>
+	              			<div class="invalid-feedback"></div>
+ 	  					</div>
+	 				</div>
+	 				
+	
+		
+	 				<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="requestStatus" data-validation="mandatory" data-langtag="Request Status" >Request Status</label>
+	                			<select class="form-control form-control-sm  " id ='requestStatus' name="requestStatus">
+	                				<option title="Condemnation Suggested by Engineer" selected value="19">Condemnation Suggested by Engineer </option>
+									<option title="Condemnation Pending" value="13">Condemnation Pending</option>
+									<option title="Condemned Equipment" value="14">Condemned Equipment</option>									
+	                			</select>
+	              			<div class="invalid-feedback"></div>
+ 	  					</div>
+	 				</div>
+	 				
+	 			
+  			</div>
+						
+						
+	 				
+	
+
+			
+			
+			<div class='row'>
+			<div class='col-lg-4'>	
+				<div class="form-group row">                   
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" id="search" placeholder="Search">
+                    </div>
+                  </div>
+			</div>
+			
+			</div>	
+			<div class='row no-more-tables'>
+			<table class="table table-hover">
+			  <thead class="bg-navy">
+			      <tr>
+			      	<th><input type="checkbox"></th>
+			      	<th>Unique Id </th>
+			        <th>Equipment Name</th>
+			        <th>Equipment Model</th>			        
+			        <th>Location</th>
+			        <th>Last complaint Id</th>
+			        <th>Last complaint Date</th>		      
+			      </tr>
+			    </thead>
+			    <tbody>
+			     <tr>
+			      	<td class='d-none d-sm-block' ><input type="checkbox"></td>
+			        <td data-title='Unique Id' >10262533325</td>
+			        <td data-title='Equipment Name'>3 Fold Labour table SS with foam mattress</td>
+			        <td data-title='Equipment Model'>aks</td>
+			        <td data-title='Location'>Cancer Dept</td>
+			        <td data-title='Last complaint Id'>1131245338</td>
+			        <td data-title='Last complaint Date'>12-DEC-2019</td>			       
+			      </tr>
+			    </tbody>
+			    
+			 </table>	
+			</div>
+		
+</div>
+</div>
+<div class="card card card-info border-info center m-1 hideData" id='CODEMNATIONCERTIFICATEPAGEFORM'  >
+	<div class="card-header bg-navy">
+		<h6 class="card-title text-left">Generate Condemnation Certificate</h6>
+		<div class="buttonContainer  bg-light">
+			<button class='btn   bg-gradient-success btn-sm' id='BTNSAVE'><i class="far fa-save"></i>&nbsp;Save</button>&nbsp;
+			<button class="btn   bg-gradient-success btn-sm" id="btnBackCONDEMN"><i class="fas fa-arrow-circle-left"></i> Back</button>			
+		</div>
+	</div>
+		<div class="card-body form-group">
+			<h6 class='font-weight-bold' data-lang='Equipment Details'><b>Equipment Details :</b></h6>
+			<hr class="bg-navy">
+			
+		<div class='row'>
+			<div class='col-lg-2' ><label class="col-form-label col-form-label-sm font-weight-bold" data-lang='Ref. No'>Ref. No:</label></div>
+			<div class='col-lg-2' >	<label class='col-form-label col-form-label-sm font-weight-normal'>	/ CRC / Madras Medical College / AE ( B M ) / T N M S C/ 2019 - 2020</label></div>
+			<div class='col-lg-2' ><label class="col-form-label col-form-label-sm font-weight-bold" data-lang='Date'>Date:</label></div>	
+			<div class='col-lg-2' >	<label class='col-form-label col-form-label-sm font-weight-normal'>24-Jan-2020</label></div>
+		</div>
+		
+		<div class='row'>
+			<div class='col-lg-2' ><label class="col-form-label col-form-label-sm font-weight-bold" data-lang='Institution'>Institution :</label></div>
+			<div class='col-lg-2' >	<label class='col-form-label col-form-label-sm font-weight-normal'>Madras Medical College</label></div>
+			<div class='col-lg-2' ><label class="col-form-label col-form-label-sm font-weight-bold" data-lang='Department'>Department :</label></div>
+			<div class='col-lg-2' >	<label class='col-form-label col-form-label-sm font-weight-normal'>Cancer Dept</label></div>
+			
+		</div>
+		
+		<div class='row'>
+			<div class='col-lg-2' ><label class="col-form-label col-form-label-sm font-weight-bold" data-lang='Equipment Name'>Equipment Name :</label></div>
+			<div class='col-lg-2' >	<label class='col-form-label col-form-label-sm font-weight-normal'>3 Fold Labour table SS with foam mattress</label></div>
+			<div class='col-lg-2' ><label class="col-form-label col-form-label-sm font-weight-bold" data-lang='Unique Id'>Unique Id :</label></div>
+			<div class='col-lg-2' >	<label class='col-form-label col-form-label-sm font-weight-normal'>10262533325</label></div>
+			<div class='col-lg-2' ><label class="col-form-label col-form-label-sm font-weight-bold" data-lang='Serial No.'>Serial No. :</label></div>
+			<div class='col-lg-2' >	<label class='col-form-label col-form-label-sm font-weight-normal'>AKSA111</label></div>
+		</div>
+		
+		<div class='row'>
+			<div class='col-lg-2' ><label class="col-form-label col-form-label-sm font-weight-bold" data-lang='Model Name'>Model Name :</label></div>
+			<div class='col-lg-2' >	<label class='col-form-label col-form-label-sm font-weight-normal'>aks</label></div>
+			<div class='col-lg-2' ><label class="col-form-label col-form-label-sm font-weight-bold" data-lang='Supplier Name'>Supplier Name :</label></div>
+			<div class='col-lg-2' >	<label class='col-form-label col-form-label-sm font-weight-normal'>Acme</label></div>
+			<div class='col-lg-2' ><label class="col-form-label col-form-label-sm font-weight-bold" data-lang='Manufacturer Name.'>Manufacturer Name :</label></div>
+			<div class='col-lg-2' >	<label class='col-form-label col-form-label-sm font-weight-normal'>Aarpen V1</label></div>			
+		</div>
+		
+		<div class='row'>
+			<div class='col-lg-2' ><label class="col-form-label col-form-label-sm font-weight-bold" data-lang='Purchase Cost'>Purchase Cost :</label></div>
+			<div class='col-lg-2' >	<label class='col-form-label col-form-label-sm font-weight-normal'>10852.00</label></div>
+			<div class='col-lg-2' ><label class="col-form-label col-form-label-sm font-weight-bold" data-lang='Purchase Date'>Purchase Date :</label></div>
+			<div class='col-lg-2' >	<label class='col-form-label col-form-label-sm font-weight-normal'>15-Apr-2001</label></div>
+			<div class='col-lg-2' ><label class="col-form-label col-form-label-sm font-weight-bold" data-lang='Serial No.'>Installation Date :</label></div>
+			<div class='col-lg-2' >	<label class='col-form-label col-form-label-sm font-weight-normal'>15-May-2001</label></div>			
+		</div>
+			
+		
+		<h6 class='font-weight-bold' data-lang='Equipment Details'><b>Condemnation Details :</b></h6>
+			<hr class="bg-navy">	
+		
+		<div class='row'>
+			<div class='col-lg-4 form-group' >
+				<label class="col-form-label col-form-label-sm" for="notificationBy"  data-langtag="Notification By">Notification By </label>
+          		<select class="form-control form-control-sm w-75 " id="notificationBy" name="notificationBy" data-validation="mandatory">
+          				<option value="" selected="selected">Select</option>
+          				<option  value="Memo">Memo</option>
+						<option  value="Letter">Letter</option>
+						<option value="Email">Email</option>									
+          		</select>
+           		<div class="invalid-feedback"></div>			
+			</div>
+			<div class='col-lg-4 form-group' >
+					<label class="col-form-label col-form-label-sm" for="letterRefNo"  data-langtag="Ref. No.">Ref. No. </label>
+        			<input type='text' name="letterRefNo" id='letterRefNo' class="form-control form-control-sm w-75 " data-validation="mandatory"  maxlength='100' />	
+           			<div class="invalid-feedback"></div>				
+			</div>
+			<div class='col-lg-4 form-group' >
+					<label class="col-form-label col-form-label-sm " for="letterDate"  data-langtag="Ref. No.">Date </label>
+        			<input type='text' name="letterDate" id='letterDate' class="form-control form-control-sm w-75 singleDatePicker" data-validation="mandatory"  maxlength='100' />	
+           			<div class="invalid-feedback"></div>				
+			</div>
+			<div class='col-lg-4 form-group' >
+					<label class="col-form-label col-form-label-sm" for="cuurentCost" data-langtag="Current Cost of equipment">Current Cost of equipment </label>
+        			<input type='text' name="cuurentCost" id='cuurentCost' class="form-control form-control-sm w-75 " data-validation="mandatory"  maxlength='100' />	
+           			<div class="invalid-feedback"></div>				
+			</div>
+			<div class='col-lg-4 form-group' >
+					<label class="col-form-label col-form-label-sm" for="timeServed" data-langtag="Time served by equipment">Time served by equipment(in Years)</label>
+        			<input type='text' name="timeServed" id='timeServed' class="form-control form-control-sm w-75 " data-validation="mandatory,numeric"  maxlength='3' />	
+           			<div class="invalid-feedback"></div>				
+			</div>		
+			
+		</div>
+		<div class='row'>
+			<div class='col-lg-12 form-group ' >
+			<label class="col-form-label col-form-label-sm " for="reasonForCondemnation" data-langtag="Reason For Condemnation">Reason For Condemnation </label>
+			</div>
+		</div>
+		<div class='row'>
+			<div class='col-lg-4 form-group' >
+				<div class="form-check">
+	                  <input class="form-check-input" type="checkbox"  name="reasonForCondemnation"  value="">
+	                  <label class="form-check-label">Obsolete</label>
+	             </div>
+             </div>
+             <div class='col-lg-4 form-group' >
+             	<div class="form-check">
+	                 <input class="form-check-input" type="checkbox"  name="reasonForCondemnation"  value="">
+	                 <label class="form-check-label">Manufacture does not exist</label>
+	             </div>    	             
+             </div>
+             <div class='col-lg-4 form-group' >
+             	<div class="form-check">
+	                <input class="form-check-input" type="checkbox"  name="reasonForCondemnation"  value="">
+	                <label class="form-check-label">Spare parts not available in market</label>
+	            </div>    	             
+             </div>
+             </div>
+            <div class='row'> 
+             <div class='col-lg-4 form-group' >
+             	<div class="form-check">
+	               <input class="form-check-input" type="checkbox"  name="reasonForCondemnation"  value="">
+	               <label class="form-check-label">Manufacture end of support</label>
+	            </div>   	             
+             </div>
+             <div class='col-lg-4 form-group' >
+             	<div class="form-check">
+	              <input class="form-check-input" type="checkbox"  name="reasonForCondemnation"  value="">
+	              <label class="form-check-label">Complete Failure of critical safty systems. Patient & operator safety compromise. </label>
+	            </div>  	             
+             </div>
+              <div class='col-lg-4 form-group' >
+              	<div class="form-check">
+	               <input class="form-check-input" type="checkbox"  name="reasonForCondemnation"  value="">
+	               <label class="form-check-label">uneconomical and unrepairable repair. Cost of serice ratio exceeds actual value </label>
+	           </div>
+             </div>
+             </div>
+             <div class='row'>
+             <div class='col-lg-4 form-group' >
+             	<div class="form-check">
+	               <input class="form-check-input" type="checkbox"  name="reasonForCondemnation"  value="">
+	               <label class="form-check-label">Better options are available in new systems </label>
+	            </div>   	             
+             </div>
+              <div class='col-lg-4 form-group' >
+              	<div class="form-check">
+	               <input class="form-check-input" type="checkbox"  name="reasonForCondemnation"  value="">
+	               <label class="form-check-label">Life time served </label>
+	            </div>   	             
+             </div>
+             </div>
+	
+		
+		<div class='row'>
+			<div class='col-lg-8 form-group' >
+				<label class="col-form-label col-form-label-sm" for="remarks" data-validation="mandatory" data-langtag="Remarks">Remarks</label>
+				<textarea name="remarks" id='remarks' class="form-control form-control-sm "   maxlength='1000' rows="3"></textarea>
+        		<div class="invalid-feedback"></div>	
+			</div>
+		</div>	
+		<div class='row'>
+			<div class='col-lg-12 form-group ' >
+			<label class="col-form-label col-form-label-sm " for="attachements" data-langtag="Attachements">Attachements </label>
+			</div>
+		</div>
+		<div class='row'>
+			<div class='col-lg-6 form-group' >
+				<div class="form-check">
+	                  <input class="form-check-input" type="checkbox"  name="attachements"  value="">
+	                  <label class="form-check-label">Estimate of Repair from the Manufacturer/Authorized Representative/Supplier </label>
+	             </div>
+             </div>
+             <div class='col-lg-6 form-group' >
+				<div class="form-check">
+	                  <input class="form-check-input" type="checkbox"  name="attachements"  value="">
+	                  <label class="form-check-label">Certificate of Recomendation for Condemnation from the Manufacturer/Authorized Representative/Supplier </label>
+	             </div>
+             </div>
+		</div>
+		<div class="row">
+			 <div class='col-lg-6 form-group' >
+				<div class="form-check">
+	                  <input class="form-check-input" type="checkbox"  name="attachements"  value="">
+	                  <label class="form-check-label">Certificate of Product Service End of Support from the Manufacturer/Authorized Representative/Supplier </label>
+	             </div>
+             </div>
+             <div class='col-lg-6 form-group' >
+				<div class="form-check">
+	                  <input class="form-check-input" type="checkbox"  name="attachements"  value="">
+	                  <label class="form-check-label">Others</label>
+	             </div>
+             </div>
+		</div>
+	</div>	<!--card body ends here  -->	 
+</div><!--card ends here  -->
+
+<div class="card card card-info border-info center m-1 hideData" id='VIEWPAGEFORM'  >
+		<div class="card-header bg-navy"><h5 class="card-title text-center ">Inventory Desk</h5>
+			<div class="buttonContainer  bg-light">
+				<button class="btn bg-gradient-success btn-sm" ><i class="fa fa-print" aria-hidden="true"></i> Print</button>
+				<button class="btn bg-gradient-success btn-sm" id="btnBack"><i class="fas fa-arrow-circle-left"></i> Back</button>				
+			</div>
+		</div>
+
+	
+		<div class="card-body form-group">
+		<h6 class='font-weight-bold' data-lang='Equipment Details'>Equipment Details</h6>
+		<hr class="bg-navy">	 	
+	 	<div class='row'>
+			<div class='col-lg-2' ><label class="col-form-label col-form-label-sm font-weight-bold" data-lang='District Name'>District Name:</label></div>
+			<div class='col-lg-2' >	<label class='col-form-label col-form-label-sm font-weight-normal'>	Madurai</label></div>
+			<div class='col-lg-2' ><label class="col-form-label col-form-label-sm font-weight-bold" data-lang='Institution Name'>Institution Name :</label></div>	
+			<div class='col-lg-2' >	<label class='col-form-label col-form-label-sm font-weight-normal'>Govt. Rajaji Hospital</label></div>
+			<div class='col-lg-2' ><label class="col-form-label col-form-label-sm font-weight-bold" data-lang='Department Name'>Department Name :</label></div>	
+			<div class='col-lg-2' >	<label class='col-form-label col-form-label-sm font-weight-normal'>Govt. Rajaji Hospital - AUTO CLAVE ROOM</label></div>
+			
+			<div class='col-lg-2' ><label class="col-form-label col-form-label-sm font-weight-bold" data-lang='Programme Name '>Programme Name :</label></div>	
+			<div class='col-lg-2' >	<label class='col-form-label col-form-label-sm font-weight-normal'>CW(Cw)</label></div>
+			<div class='col-lg-2' ><label class="col-form-label col-form-label-sm font-weight-bold" data-lang='CMC Upto'>Group Name :</label></div>	
+			<div class='col-lg-2' >	<label class='col-form-label col-form-label-sm font-weight-normal'>Eif</label></div>
+			<div class='col-lg-2' ><label class="col-form-label col-form-label-sm font-weight-bold" data-lang='SubGroup Name'>SubGroup Name :</label></div>	
+			<div class='col-lg-2' >	<label class='col-form-label col-form-label-sm font-weight-normal'>Equipment</label></div>
+			
+			<div class='col-lg-2' ><label class="col-form-label col-form-label-sm font-weight-bold" data-lang='Generic Equipment Name'>Generic Equipment Name :</label></div>	
+			<div class='col-lg-2' >	<label class='col-form-label col-form-label-sm font-weight-normal'>3 Fold Labour table SS with foam mattress</label></div>
+			<div class='col-lg-2' ><label class="col-form-label col-form-label-sm font-weight-bold" data-lang='Serial No'>Serial No :</label></div>	
+			<div class='col-lg-2' >	<label class='col-form-label col-form-label-sm font-weight-normal'>AKSA111</label></div>
+			<div class='col-lg-2' ><label class="col-form-label col-form-label-sm font-weight-bold" data-lang='Unique Id'>Unique Id :</label></div>	
+			<div class='col-lg-2' >	<label class='col-form-label col-form-label-sm font-weight-normal'>123456</label></div>
+			
+			<div class='col-lg-2' ><label class="col-form-label col-form-label-sm font-weight-bold" data-lang='Model Name'>Model Name :</label></div>	
+			<div class='col-lg-2' >	<label class='col-form-label col-form-label-sm font-weight-normal'>111111</label></div>
+			<div class='col-lg-2' ><label class="col-form-label col-form-label-sm font-weight-bold" data-lang='Manufacturer Name'>Manufacturer Name:</label></div>	
+			<div class='col-lg-2' >	<label class='col-form-label col-form-label-sm font-weight-normal'>Aarpen V1</label></div>
+			<div class='col-lg-2' ><label class="col-form-label col-form-label-sm font-weight-bold" data-lang='Supplied By'>Supplied By :</label></div>	
+			<div class='col-lg-2' >	<label class='col-form-label col-form-label-sm font-weight-normal'>Acme</label></div>	
+					
+			<div class='col-lg-2' ><label class="col-form-label col-form-label-sm font-weight-bold" data-lang='Category'>Equipment Category:</label></div>	
+			<div class='col-lg-2' >	<label class='col-form-label col-form-label-sm font-weight-normal'>B1</label></div>			
+			<div class='col-lg-2' ><label class="col-form-label col-form-label-sm font-weight-bold" data-lang='Cost/Unit (in Rs)'>Cost/Unit (in Rs):</label></div>	
+			<div class='col-lg-2' >	<label class='col-form-label col-form-label-sm font-weight-normal'>11000.00</label></div>
+			<div class='col-lg-2' ><label class="col-form-label col-form-label-sm font-weight-bold" data-lang='Equipment Status'>Equipment Status :</label></div>	
+			<div class='col-lg-2' >	<label class='col-form-label col-form-label-sm font-weight-normal'>Functional</label></div>
+			
+			<div class='col-lg-2' ><label class="col-form-label col-form-label-sm font-weight-bold" data-lang='Receive Date'>Receive Date :</label></div>	
+			<div class='col-lg-2' >	<label class='col-form-label col-form-label-sm font-weight-normal'>13-DEC-2019</label></div>						
+			<div class='col-lg-2' ><label class="col-form-label col-form-label-sm font-weight-bold" data-lang='Under Warranty'>Under Warranty:</label></div>	
+			<div class='col-lg-2' >	<label class='col-form-label col-form-label-sm font-weight-normal'>Yes</label></div>			
+			<div class='col-lg-2' ><label class="col-form-label col-form-label-sm font-weight-bold" data-lang='Warranty Upto'>Warranty Upto :</label></div>	
+			<div class='col-lg-2' >	<label class='col-form-label col-form-label-sm font-weight-normal'>24(in Months)</label></div>
+			
+			<div class='col-lg-2' ><label class="col-form-label col-form-label-sm font-weight-bold" data-lang='Under CMC'>Under CMC:</label></div>	
+			<div class='col-lg-2' >	<label class='col-form-label col-form-label-sm font-weight-normal'>No</label></div>			
+			<div class='col-lg-2' ><label class="col-form-label col-form-label-sm font-weight-bold" data-lang='CMC Upto'>CMC Upto :</label></div>	
+			<div class='col-lg-2' >	<label class='col-form-label col-form-label-sm font-weight-normal'>---</label></div>
+			<div class='col-lg-2' ><label class="col-form-label col-form-label-sm font-weight-bold" data-lang='Under AMC'>Under AMC :</label></div>	
+			<div class='col-lg-2' >	<label class='col-form-label col-form-label-sm font-weight-normal'>No</label></div>
+			
+			<div class='col-lg-2' ><label class="col-form-label col-form-label-sm font-weight-bold" data-lang='AMC Upto'>AMC Upto :</label></div>	
+			<div class='col-lg-2' >	<label class='col-form-label col-form-label-sm font-weight-normal'>---</label></div>
+		</div>
+		<br/>
+		<h6 class='font-weight-bold' data-lang='Equipment Installation Details'>Equipment Installation Details :</h6>
+		<hr class="bg-navy">
+	 	
+	 	<div class='row '>
+	 		
+	 		<div class='col-lg-2' ><label class="col-form-label col-form-label-sm font-weight-bold" data-lang='Company Contact Number'>Company Contact Number :</label></div>	
+			<div class='col-lg-2' >	<label class='col-form-label col-form-label-sm font-weight-normal'>---</label></div>
+			<div class='col-lg-2' ><label class="col-form-label col-form-label-sm font-weight-bold" data-lang='Installation Date'>Installation Date :</label></div>	
+			<div class='col-lg-2' >	<label class='col-form-label col-form-label-sm font-weight-normal'>12-DEC-2019</label></div>
+			<div class='col-lg-2' ><label class="col-form-label col-form-label-sm font-weight-bold" data-lang='Email Id'>Email Id :</label></div>	
+			<div class='col-lg-2' >	<label class='col-form-label col-form-label-sm font-weight-normal'>csagarmalwa@gmail.com</label></div>
+				  	
+			<div class='col-lg-2' ><label class="col-form-label col-form-label-sm font-weight-bold" data-lang='Dr./Incharge'>Dr./Incharge :</label></div>	
+			<div class='col-lg-2' >	<label class='col-form-label col-form-label-sm font-weight-normal'>Rajender Kumar Atal</label></div>
+			<div class='col-lg-2' ><label class="col-form-label col-form-label-sm font-weight-bold" data-lang='Remarks'>Remarks :</label></div>	
+			<div class='col-lg-2' >	<label class='col-form-label col-form-label-sm font-weight-normal'>--</label></div>
+			<div class='col-lg-2' ><label class="col-form-label col-form-label-sm font-weight-bold" data-lang='Location Name'>Location Name :</label></div>	
+			<div class='col-lg-2' >	<label class='col-form-label col-form-label-sm font-weight-normal'>--</label></div>
+			
+			<div class='col-lg-2' ><label class="col-form-label col-form-label-sm font-weight-bold" data-lang='Installation Certificate'>Installation Certificate</label></div>	
+			<div class='col-lg-2' >	<label class='col-form-label col-form-label-sm font-weight-normal'><a href='#'>InstCertificate.pdf</a></label></div>	  		
+						
+		</div>
+		<br/>
+		<h6 class='font-weight-bold' data-lang='Equipment Warranty Details'>Equipment Warranty Details :</h6>
+		<hr class="bg-navy">
+		<div class='row no-more-tables'>
+			<table class="table table-bordered table-striped " >
+				<thead class="bg-navy">
+			      <tr>
+			      	<th>S.No.</th>
+			        <th>Warranty Start Date</th>
+			        <th>Warranty Upto</th>
+			        <th>Frequency of Periodic Maintenance</th>
+			        <th>Terms & Conditions</th>
+			        <th>Remarks</th>
+			      </tr>
+			    </thead>
+			    <tbody>
+			     <tr>
+			        <td data-title='S.No.'>1</td>
+			        <td data-title='Warranty Start Date'>12-DEC-2019</td>
+			        <td data-title='Warranty Upto'>12-DEC-2021</td>
+			        <td data-title='Frequency of Periodic Maintenance'>---</td>
+			        <td data-title='Terms & Conditions'>---</td>
+			        <td data-title='Remarks'>---</td>
+			      </tr>
+			    </tbody>
+			 </table>	
+		</div>
+		<br/>
+		<h6 class='font-weight-bold' data-lang='Equipment Maintenance(AMC/CMC) Details'>Equipment Maintenance(AMC/CMC) Details</h6>
+		<hr class="bg-navy">
+		<div class='row no-more-tables'>
+			<table class="table table-bordered table-striped " >
+				<thead class="bg-navy">
+			      <tr>
+			      	<th>S.No.</th>
+			        <th>Maintenance Type</th>
+			        <th>Maintenance Start Date</th>
+			        <th>Maintenance End Date</th>
+			        <th>Preventive Maintenance Frequency</th>
+			        <th>Maintenance Cost</th>
+			        <th>Terms & Conditions</th>
+			        <th>Penalty Conditions</th>
+			        <th>Remarks</th>
+			        <th>Contract Copy Attach</th>
+			        
+			      </tr>
+			    </thead>
+			    <tbody>
+			     <tr>
+			        <td data-title='S.No.'>1</td>
+			        <td data-title='Maintenance Type'>CAMC</td>
+			        <td data-title='Maintenance Start Date'>12-DEC-2019</td>
+			        <td data-title='Maintenance End Date'>12-DEC-2021</td>			        
+			        <td data-title='Preventive Maintenance Frequency'>4</td>
+			        <td data-title='Maintenance Cost'>Rs. 1500</td>
+			        <td data-title='Terms & Conditions'>---</td>
+			        <td data-title='Penalty Conditions'></td>
+			        <td data-title='Remarks'>---</td>
+			        <td data-title='Contract Copy Attach'><a href='#'>Contract.pdf</a></td>
+			      </tr>
+			    </tbody>
+			 </table>
+		</div>	 
+		<br/>
+		<h6 class='font-weight-bold' data-lang='Inventory Verification Details'>Inventory Verification Details</h6>
+		<hr class="bg-navy">
+		<div class='row no-more-tables'>
+			<table class="table table-bordered table-striped " >
+				<thead class="bg-navy">
+			      <tr>
+			      	<th>Verified By </th>
+			        <th>Verification Status</th>
+			        <th>Verification Status Date</th>
+			        <th>Remarks</th>
+			        <th>Upload Document(s)</th>
+			      </tr>
+			    </thead>
+			    <tbody>
+			     <tr>			        
+			        <td data-title='Verified By '>Siddharth</td>
+			        <td data-title='Verification Status'>Verified</td>
+			        <td data-title='Verification Status Date'>12-DEC-2021</td>			        
+			        <td data-title='Remarks'>-</td>			        
+			        <td data-title='Upload Document(s)'><a href='#'>Contract.pdf</a></td>
+			      </tr>
+			    </tbody>
+			 </table>
+		</div>
+		
+		<br/>
+		<h6 class='font-weight-bold' data-lang='Equipment Complaint Details'>Equipment Complaint Details</h6>
+		<hr class="bg-navy">
+		<div class='row no-more-tables'>
+			<table class="table table-bordered table-striped " >
+				<thead class="bg-navy">
+			      <tr>
+			      <th>S.No.</th>
+			        <th>Complaint Id</th>
+			        <th>Complaint Date & Time</th>
+			        <th>Service Action Date</th>
+			        <th>Close Date</th>
+			        <th>Complaint Description</th>
+			        <th>Status</th>
+			        <th>Down Time</th>
+			        <th>Penalty Amount</th>			        
+			      </tr>
+			    </thead>
+			    <tbody>
+			     <tr>
+			        <td data-title='S.No.'>1</td>
+			        <td data-title='Complaint Id'>13120010000002</td>
+			        <td data-title='Complaint Date & Time'>29-JAN-020 03:01 PM</td>
+			        <td data-title='Service Action Date'>29-JAN-020 03:01 PM</td>			        
+			        <td data-title='Close Date'>29-JAN-020 03:01 PM</td>
+			        <td data-title='Complaint Descriptio'>Not Working</td>
+			        <td data-title='Status'>Final Close</td>
+			        <td data-title='Down Time'>0:2:51</td>
+			        <td data-title='Penalty Amount'>0</td>			        
+			      </tr>
+			    </tbody>
+			 </table>
+		</div>
+		
+		<h6 class='font-weight-bold' data-lang='Equipment Condemnation & Auction Desk Details'>Equipment Condemnation & Auction Desk Details</h6>
+		<hr class="bg-navy">
+		<table class="table table-bordered table-striped " >
+				<thead class="bg-navy">
+			      <tr>
+			        <th>Request No.</th>
+			        <th>Request Date</th>
+			        <th>Identified By</th>
+			        <th>Remarks / Reason for Condemnation</th>
+			        <th>Condemnation Certificate</th>
+			        			        
+			      </tr>
+			    </thead>
+			    <tbody>
+			     <tr>
+			        <td data-title='Request No.'>131200100012</td>
+			        <td data-title='Request Date'>29-JAN-020 03:01 PM</td>
+			        <td data-title='Identified By'>Abhishek</td>			        
+			        <td data-title='Remarks / Reason for Condemnation'>Repair cost greater then equipment cost</td>
+			        <td data-title='Condemnation Certificate'><a href='#'>CondemnationCertificate.pdf</a></td>			        			        
+			      </tr>
+			    </tbody>
+			 </table>
+	</div>
+</div><!-- card ends -->
+
+
+	
+	

@@ -1,0 +1,584 @@
+<script>
+$(document).ready(function () {
+	$('#btnverify').click(function(){
+		$('#LISTFORM').addClass('hideData');
+		$('#VERIFYPAGEFORM').removeClass('hideData');		
+	});
+	
+	$('#btnBack').click(function(){
+		$('#LISTFORM').removeClass('hideData');
+		$('#VERIFYPAGEFORM').addClass('hideData');		
+	});
+	$('#vendornamelink').click(function(){
+		$('#LISTFORM').addClass('hideData');
+		$('#VERIFYPAGEFORM').addClass('hideData');
+		$('#VENDORDETAILSPAGEFORM').removeClass('hideData');
+	});
+	$('#btnBackVendorList').click(function(){
+		$('#VERIFYPAGEFORM').removeClass('hideData');
+		$('#VENDORDETAILSPAGEFORM').addClass('hideData');
+	});
+	$('#equipmentlistlink').click(function(){
+		$('#LISTFORM').addClass('hideData');
+		$('#VERIFYPAGEFORM').addClass('hideData');
+		$('#EQUIPMENTLISTPAGEFORM').removeClass('hideData');		
+	});
+	$('#btnBackEquipmentList').click(function(){
+		$('#VERIFYPAGEFORM').removeClass('hideData');
+		$('#EQUIPMENTLISTPAGEFORM').addClass('hideData');
+	});
+	$('#requestlistlink').click(function(){
+		$('#LISTFORM').addClass('hideData');
+		$('#VERIFYPAGEFORM').addClass('hideData');
+		$('#REQUESTLISTPAGEFORM').removeClass('hideData');		
+	});
+	$('#btnBackRequestList').click(function(){
+		$('#VERIFYPAGEFORM').removeClass('hideData');
+		$('#REQUESTLISTPAGEFORM').addClass('hideData');
+	});
+})
+</script>
+
+<div class="card card-info border-info center m-1" id='LISTFORM' >
+			<div class="card-header bg-navy"><h5 class="card-title text-center ">
+
+Maintenance Verification and Payment Desk</h5>
+			</div>
+
+
+	<div class="card-body form-group">
+ 	
+  		 <div class='row'>
+  				 
+					 	<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="paymentAuthority" data-validation="mandatory" data-langtag="Payment Authority" >Payment Authority</label>
+	                			<select class="form-control form-control-sm  " id ='paymentAuthority' name="paymentAuthority">
+	                				<option value="" selected="selected">Select</option>
+	                				<option value="" selected="selected">MPPHSCL HQ</option>
+	                				
+	                			</select>
+								<div class="invalid-feedback"></div>
+							</div>	
+						</div>
+		
+				 	
+					 	<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="status" data-validation="mandatory" data-langtag="Status" >Status</label>
+	                			<select class="form-control form-control-sm" id ='status' name="status">
+	                				
+	                					<option value="" selected="selected">Select </option>
+	                				<option value="">Payment done</option>
+	                				<option value="">Payment failed</option>
+	                				<option value="">Payment process</option>
+	                			</select>
+								<div class="invalid-feedback"></div>
+							</div>
+						</div>
+	</div>
+	 			
+	 		
+
+			<div class='text-center'>
+	<button class='btn bg-gradient-success mt-4 btn-sm' id='btnverify' ><i class="fa fa-check"></i> Verify</button>
+	<button class='btn bg-gradient-success mt-4 btn-sm' id='btnpayment'><i class="fa fa-credit-card"></i> Payment</button>
+	
+			  		
+	
+	</div>
+	
+	
+			<div class='row'>
+			<div class='col-lg-4'>	
+				<div class="form-group row">                   
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" id="search" placeholder="Search">
+                    </div>
+                  </div>
+			</div>
+			
+			</div>	
+			<div class='row no-more-tables'>
+			<table class="table table-hover">
+			  <thead class="bg-navy">
+		
+			      <tr>
+			      	<th><input type="checkbox"></th>
+			        <th >Bill No.</th>
+			        <th>Bill Date</th>
+			       <th>Payment Quarter	</th>
+			        <th>Vendor Name	</th>
+			        <th>Quarter NAV	</th>
+			        <th>Penalty Amt</th>
+			        <th>Tax Amt	</th>
+			        <th>Payable Amt	</th>
+			        <th>Pending At</th>
+			        <th>Status</th>
+			      </tr>
+			    </thead>
+			    <tbody>
+			     <tr>
+			      	<td class='d-none d-sm-block' ><input type="checkbox"></td>
+			        <td data-title='' >10009998002</td>
+			        <td data-title=''>11-Nov-2019</td>
+			        <td data-title=''>Q10 (01-Jul-2019 to 30-Sep-2019)</td>
+			        <td data-title=''> Aim Healthcare</td>
+			        <td data-title=''>	 1047653.05</td>
+			        <td data-title=''>	 46500.00</td>
+			        <td data-title=''>	 180207.55</td>
+			        <td data-title=''>	 1141314.48</td>
+			        <td data-title=''>	 Verified</td>
+			        <td data-title=''>	  Payment Processed</td>
+			      </tr>
+			       <tr>
+			      	<td class='d-none d-sm-block' ><input type="checkbox"></td>
+			        <td data-title='' >	 10007998002</td>
+			        <td data-title=''>21-Aug-2019</td>
+			        <td data-title=''>Q8 (01-Jan-2019 to 31-Mar-2019)</td>
+			        <td data-title=''> Aim Healthcare</td>
+			        <td data-title=''>	 87832.58</td>
+			        <td data-title=''>	 00</td>
+			        <td data-title=''>	 180207.55</td>
+			        <td data-title=''>	 1141314.48</td>
+			        <td data-title=''>	 emmsmp</td>
+			        <td data-title=''>	 Bill Verification In Process</td>
+			      </tr>
+			       <tr>
+			      	<td class='d-none d-sm-block' ><input type="checkbox"></td>
+			        <td data-title='' >10009998002</td>
+			        <td data-title=''>11-Nov-2019</td>
+			        <td data-title=''>Q10 (01-Jul-2019 to 30-Sep-2019)</td>
+			        <td data-title=''> Aim Healthcare</td>
+			        <td data-title=''>	 1047653.05</td>
+			        <td data-title=''>	 46500.00</td>
+			        <td data-title=''>	 180207.55</td>
+			        <td data-title=''>	 1141314.48</td>
+			        <td data-title=''>	 Verified</td>
+			        <td data-title=''>	  Payment Processed</td>
+			      </tr>
+			    </tbody>
+			 </table>	
+			</div>
+			
+			
+			 
+	</div>  
+		
+</div>
+
+
+
+ <!--card for VERIFY button -->
+
+
+
+<div class="card card card-info border-info center m-1 hideData" id='VERIFYPAGEFORM'  >
+	<div class="card-header bg-navy">
+		<h6 class="text-left">Maintenance Verification and Payment Desk >> Verification</h6>
+	</div>
+	<div class="card-body form-group">
+	<div class="m-4"><h6><b>Bill Information  :
+	
+</b></h6></div>
+	<hr class="bg-navy">
+	 <div class='row'>
+	 
+  <div class='col-lg-3' >
+  				<div><b>Vendor Name : </b> 	<a id="vendornamelink" href="#">Aim Healthcare</a>	</div>	
+  				<div><b>Bill No  :</b>	10007998002</div></div>
+  				<div class='col-lg-3' >
+				<div><b>Total NAV (₹)  :</b>	<a id="equipmentlistlink" href="#">5228130.00</a></div>	
+				<div><b>Invoice No  :</b>	uyiuyi</div>
+				<div><b>Invoice Copy  :</b>	<a href="#"> 9524.jpg</a></div></div>
+  		
+  		<div class='col-lg-3' >		 
+  				<div><b>Payment Quarter :	</b>Q8 (01-Jan-2019 to 31-Mar-2019)</div> 	
+  				<div><b>Bill Date  :</b>	21-Aug-2019 13:26</div></div>
+  				<div class='col-lg-3' >
+				<div><b> Quarter Factor :</b>	6.72(%)</div>	
+				<div><b> Invoice Date :	</b>06-Aug-2019</div></div>
+
+			
+				
+
+	</div>
+	<div class="m-4"><h6><b>Previous Verification Details :
+	
+</b></h6></div>
+	
+	<hr class="bg-navy">
+	
+	<div class='row no-more-tables'>
+			<table class="table table-hover">
+			  <thead class="bg-light">
+		
+			      <tr>
+			      	<th><input type="checkbox"></th>
+			        <th >Verified By</th>
+			        <th>Verified Amount</th>
+			       <th>Verification Date</th>
+			        <th>Verification Remarks	</th>
+			        <th>Digitally Signed	</th>
+			        <th>Signer Name</th>
+			       
+			      </tr>
+			    </thead>
+			    <tbody>
+			     <tr>
+			      	<td class='d-none d-sm-block' ><input type="checkbox"></td>
+			        <td data-title='' >Xray Machine</td>
+			        <td data-title=''>ABCD</td>
+			        <td data-title=''>1234</td>
+			        <td data-title=''>123456</td>
+			        <td data-title=''>Bosch</td>
+			        <td data-title=''>Working</td>
+			     
+			      </tr>
+			    </tbody>
+			 </table>	
+			</div>
+	
+	
+	<div class="m-4"><h6><b>Bill Details :
+	
+</b></h6></div>
+	<hr class="bg-navy">
+	 <div class='row'>
+	  <div class='row'>
+	 
+  					<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="certificate" data-validation="mandatory" data-langtag="Certificate" >Certificate :</label>
+	                			<select class="form-control form-control-sm  " id ='certificate' name="certificate">
+	                				<option value="" selected="selected">Select Category</option>
+	                			</select>
+								<div class="invalid-feedback"></div>
+							</div>	
+						</div>
+						
+						
+						
+						<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="serialNo" data-langtag="Serial No"  >1 Quarter NAV (₹) [A] :</label>
+	                			<input class="form-control form-control-sm  " type="text" id="serialNo" name="serialNo" maxlength="50" data-validation="mandatory,alphabetOnly">
+	                			<div class="invalid-feedback"></div>
+	              			</div>
+					 	</div>	
+					 	<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="digitallySignBy" data-langtag="Digitally Sign By"  >Tax Amount (₹) [C=18%(A-B)]:	15809.86 <i class="text-danger">(CGST:9.00%,SGST:9.00%)</i></label>
+	                			
+	                			<div class="invalid-feedback"></div>
+	              			</div>
+					 	</div>	
+					 	<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="certificateIssuedBy" data-langtag="Certificate Issued By"  >IT Amount (₹) [E=2%(A-B)] :	1756.65</label>
+	                			
+	                			<div class="invalid-feedback"></div>
+	              			</div>
+					 	</div>	
+					 	<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="certificateValidFrom" data-langtag="Certificate Valid From"  >Total Payable Amount (₹) [F-D-E] :	100129.14</label>
+	                			
+	                			<div class="invalid-feedback"></div>
+	              			</div>
+					 	</div>	
+					 	<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="certificateValidTo" data-langtag="Certificate Valid To"  >Penalty Amount (₹) [B]: <a id="requestlistlink" href="#">	0.00</a></label>
+	                			
+	                			<div class="invalid-feedback"></div>
+	              			</div>
+					 	</div>	 
+					 	<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="certificateValidTo" data-langtag="Certificate Valid To"  >TDS Amount (₹) [D=2%(A-B)]   :	1756.65 <i class="text-danger">(CGST:1.00%,SGST:1.00%)</i></label>
+	                			
+	                			<div class="invalid-feedback"></div>
+	              			</div>
+					 	</div>	
+					 	<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="certificateValidTo" data-langtag="Certificate Valid To"  >Net Bill Amount (₹) [F=A-B+C]	103642.44</label>
+	                			
+	                			<div class="invalid-feedback"></div>
+	              			</div>
+					 	</div>	
+					 	<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="serialNo" data-langtag="Serial No"  >Payable Amount (₹) :</label>
+	                			<input class="form-control form-control-sm  " type="text" id="serialNo" name="serialNo" maxlength="50" data-validation="mandatory,alphabetOnly">
+	                			<div class="invalid-feedback"></div>
+	              			</div>
+					 	</div>	
+					 	<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="paymentAuthority" data-validation="mandatory" data-langtag="Payment Authority" >Payment Option :</label>
+	                			<select class="form-control form-control-sm  " id ='paymentAuthority' name="paymentAuthority">
+	                				<option value="" selected>Offline </option>
+	                				
+	                				<option value="" >Online</option>
+	                				
+	                			</select>
+								<div class="invalid-feedback"></div>
+							</div>	
+						</div>		
+						<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="paymentAuthority" data-validation="mandatory" data-langtag="Payment Authority" >Funding Source :</label>
+	                			<select class="form-control form-control-sm  " id ='paymentAuthority' name="paymentAuthority">
+	                				<option value="" selected>select </option>
+	                				
+	                			
+	                				
+	                			</select>
+								<div class="invalid-feedback"></div>
+							</div>	
+						</div>			
+	
+	</div>
+	
+	</div>
+	
+	<div class="m-4"><h6><b>Others Details :
+
+	
+</b></h6></div>
+	<hr class="bg-navy">
+	 
+	  <div class='row'>
+	 
+  					<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="certificate" data-validation="mandatory" data-langtag="Certificate" >Verified By :</label>
+	                			<select class="form-control form-control-sm  " id ='certificate' name="certificate">
+	                				<option value="" selected="selected">Select Category</option>
+	                			</select>
+								<div class="invalid-feedback"></div>
+							</div>	
+						</div>
+				
+				<div class='col-lg-3'  >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="inspectionDate :" data-validation="mandatory" data-langtag="Inspection Date :" >Remarks : 		 </label>
+	                			<textarea rows="" cols="" class="form-control form-control-sm  "></textarea>
+	                		<div class="invalid-feedback"></div>
+ 	  					</div>
+	 				</div>	  
+					 	<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="certificateValidTo" data-langtag="Certificate Valid To"  >All Details of Bill is checked and verified :</label>
+	                			<input type="checkbox" id="certificateValidTo" name="certificateValidTo" maxlength="50" data-validation="mandatory,alphabetOnly">
+	                			<div class="invalid-feedback"></div>
+	              			</div>
+					 	</div>	
+					 	 	
+	
+	</div>
+  
+	</div>
+
+	
+	
+	 <div class="card-footer">
+		<div class="text-center">
+		<button class='btn bg-gradient-success mt-4 btn-sm' ><i class="fa fa-save"></i> Save</button>
+	<button class='btn bg-gradient-success mt-4 btn-sm' ><i class="fa fa-window-close"></i> Clear</button>
+              <button class="btn bg-gradient-success mt-4 btn-sm" id="btnBack"><i class="fas fa-arrow-circle-left"></i> Back</button>                            
+		</div>
+		
+		<p> <i class="fa fa-circle" style="font-size:8px;color:#17a2b8"></i>   * Mandatory Fields</p>
+			<p> <i class="fa fa-circle" style="font-size:8px;color:#17a2b8"></i>	1 Quarter NAV = (Quarter Factor%Total NAV)/4 </p>
+			<p> <i class="fa fa-circle" style="font-size:8px;color:#17a2b8"></i>	# Please check account details of Vendor  </p>
+	
+	</div>  	
+  </div>
+ 
+
+  
+  
+  <div class="card card card-info border-info center m-1 hideData" id='VENDORDETAILSPAGEFORM'  >
+	<div class="card-header bg-navy">
+		<h6 class="text-left">Supplier Details</h6>
+	</div>
+	<div class="card-body form-group">
+	
+	<hr class="bg-navy">
+	 <div class='row'>
+	
+
+	 
+  <div class='col-lg-3' >
+  				<div><b>Contact No. : </b> 	9425680875	</div>	
+  				<div><b>E-Mail Id  :</b>	aimbpl2016@gmail.com</div>
+				<div><b>Bank Name   :</b>	Hdfc Bank</div>	
+				<div><b>Bank A/C No  :</b>	ABGFA5961K1ZB</div>
+				
+  		</div>
+  		<div class='col-lg-3' >		 
+  				<div><b>Bank IFSC Coder :	</b>ABGFA5961K1ZB</div> 	
+  				<div><b>GST No  :</b>	23ABGFA5961K1ZB</div>
+				<div><b>Address :</b>	C-36,Housing Board Colony, Koh-E-Fiza</div>	
+				
+</div>
+			
+				
+
+	</div>
+	
+	</div>
+	<div class="card-footer">
+		<div class="text-center">
+		
+              <button class="btn bg-gradient-success mt-4 btn-sm" id="btnBackVendorList"><i class="fas fa-arrow-circle-left"></i> Back</button>                            
+		</div>
+		
+		
+	</div> 
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	  <div class="card card card-info border-info center m-1 hideData" id='EQUIPMENTLISTPAGEFORM'  >
+	<div class="card-header bg-navy">
+		<h6 class="text-left">Supplier Details</h6>
+	</div>
+	<div class="card-body form-group">
+	
+	
+	 <div class='row no-more-tables'>
+			<table class="table table-hover">
+			  <thead class="bg-light">
+		
+			      <tr>
+			      	
+			        <th >Request Id</th>
+			        <th>Request Date</th>
+			       <th>Request Source</th>
+			        <th>Hospital Name	</th>
+			        <th>Department Name	</th>
+			        <th>Barcode</th>
+			         <th>Eng Closed Date	</th>
+			        <th>Final Closed Date</th>
+			         <th>Total Downtime (In Hours)	</th>
+			        <th>Penalty Amount(₹)</th>
+			       
+			      </tr>
+			    </thead>
+			    <tbody>
+			     <tr>
+			      	<td class='d-none d-sm-block' >1</td>
+			        <td data-title=' ' >Xray Machine</td>
+			        <td data-title=' '>ABCD</td>
+			        <td data-title=' '>1234</td>
+			        <td data-title=' '>123456</td>
+			        <td data-title=''>Bosch</td>
+			        <td data-title=' '>Working</td>
+			       
+			     
+			      </tr>
+			      <tr>
+			      
+			       <td colspan="6">Total Equipment : 57</td>
+			        
+			         <td colspan="3">Total Cost  : 5228130.00</td>
+			          
+			       
+			      </tr>
+			    </tbody>
+			 </table>	
+			</div>
+	</div>
+	<div class="card-footer">
+		<div class="text-center">
+		
+              <button class="btn bg-gradient-success mt-4 btn-sm" id="btnBackEquipmentList"><i class="fas fa-arrow-circle-left"></i> Back</button>                            
+		</div>
+		
+		
+	</div> 
+	</div>
+	
+	
+	
+	
+	
+	  <div class="card card card-info border-info center m-1 hideData" id='REQUESTLISTPAGEFORM' >
+	<div class="card-header bg-navy">
+		<h6 class="text-left">Request List</h6>
+	</div>
+	<div class="card-body form-group">
+	
+	
+	 <div class='row no-more-tables'>
+			<table class="table table-hover">
+			  <thead class="bg-light">
+		
+			      <tr>
+			      	<th></th>
+			        <th >Payment Authority</th>
+			        <th>Hospital Name</th>
+			       <th>Department Name</th>
+			        <th>Equipment Name	</th>
+			        <th>Model Name	</th>
+			        <th>Serial No.</th>
+			         <th>Barcode	</th>
+			        <th>Current Value(₹)</th>
+			       
+			      </tr>
+			    </thead>
+			    <tbody>
+			     <tr>
+			      	<td class='d-none d-sm-block' >1</td>
+			        <td data-title='Equipment Name' >Xray Machine</td>
+			        <td data-title='Equipment Model'>ABCD</td>
+			        <td data-title='Serial No.'>1234</td>
+			        <td data-title='Bar Code'>123456</td>
+			        <td data-title='Manufacturer Name'>Bosch</td>
+			        <td data-title='Equipment Status'>Working</td>
+			       
+			     
+			      </tr>
+			     
+			    </tbody>
+			 </table>	
+			</div>
+	</div>
+	<div class="card-footer">
+		<div class="text-center">
+		
+              <button class="btn bg-gradient-success mt-4 btn-sm" id="btnBackRequestList"><i class="fas fa-arrow-circle-left"></i> Back</button>                            
+		</div>
+		
+		
+	</div> 
+	</div>
+	
+	
+	
+  
+ 
+
+  
+
+
+  
+
+
+
+
+
+
+
+

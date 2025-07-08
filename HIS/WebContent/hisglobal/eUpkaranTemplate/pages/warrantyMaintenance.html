@@ -1,0 +1,481 @@
+<script>
+$(document).ready(function () {
+	$('#btnAdd').click(function(){
+		$('#LISTFORM').addClass('hideData');
+		$('#ADDFORM ').removeClass('hideData');		
+	});
+	
+	$('#btnBack').click(function(){
+		$('#LISTFORM').removeClass('hideData');
+		$('#ADDFORM ').addClass('hideData');		
+	});
+	
+	$('#btnview').click(function(){
+		$('#LISTFORM').addClass('hideData');
+		$('#VIEWPAGEFORM ').removeClass('hideData');		
+	});
+	
+	$('#btnBack1').click(function(){
+		$('#LISTFORM').removeClass('hideData');
+		$('#VIEWPAGEFORM').addClass('hideData');		
+	});
+})
+</script>
+
+<div class="card card-info border-info center m-1" id='LISTFORM' >
+			<div class="card-header bg-navy"><h5 class="card-title text-center ">Warranty and Maintenance Contract Desk</h5>
+
+			</div>
+
+
+	<div class="card-body form-group">
+ 	
+  			<div class="row " >
+	
+						<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="institutionName" data-validation="mandatory" data-langtag="Institution Name" >Institution Name</label>
+	                			<select class="form-control form-control-sm  " id ='institutionName' name="institutionName">
+	                				<option value="" selected="selected">Select Institution Name</option>
+	                				<option title="Aagar- DH" value="5001672">Aagar- DH</option>
+									<option title="Alirajpur- DH" value="5001673">Alirajpur- DH</option>
+									<option title="Annupur- DH" value="5001674">Annupur- DH</option>
+									<option title="Ashoknagar- DH" value="5001675">Ashoknagar- DH</option>
+									<option title="Badwani- DH" value="5001676">Badwani- DH</option>
+									<option title="Balaghat- DH" value="5001677">Balaghat- DH</option>
+									<option title="Betul- DH" value="5001678">Betul- DH</option>
+									<option title="Bhind- DH" value="5001679">Bhind- DH</option>
+									<option title="Bhopal - DH" value="5001614">Bhopal - DH</option>
+	                			</select>
+	              				<div class="invalid-feedback"></div>
+ 	  						</div>
+	 					</div>
+	 					
+	 					
+	 					<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="departmentName" data-validation="mandatory" data-langtag="Department Name" >Department Name</label>
+	                			<select class="form-control form-control-sm  " id ='departmentName' name="departmentName">
+	                				<option value="" selected="selected">Select Department Name</option>
+	                				<option title="All"  value="0">All</option>
+									<option title="Aagar- DH - BLOOD BANK DEP" value="5003337">Aagar- DH - BLOOD BANK DEP</option>
+									<option title="Aagar- DH - BURN UNIT" value="5003338">Aagar- DH - BURN UNIT</option>
+									<option title="Aagar- DH - CENCER DEPT" value="5003339">Aagar- DH - CENCER DEPT</option>
+									<option title="Aagar- DH - CHILDREN WARD" value="5003340">Aagar- DH - CHILDREN WARD</option>
+									<option title="Aagar- DH - COLD CHAIN DEP" value="5003341">Aagar- DH - COLD CHAIN DEP</option>
+									<option title="Aagar- DH - DAILYSIS DEPT" value="5003342">Aagar- DH - DAILYSIS DEPT</option>
+	                			</select>
+	              			<div class="invalid-feedback"></div>
+ 	  					</div>
+	 				</div>
+	 				
+					<div class='col-lg-3'  >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="type" data-validation="mandatory" data-langtag="Type" >Type</label>
+	                			<select class="form-control form-control-sm  " id ='type' name="type">
+	                				<option value="" selected="selected">Select Type</option>
+	                				<option value="1">Maintenance</option>
+									<option value="0">Warranty</option>
+	                			</select>
+	                		<div class="invalid-feedback"></div>
+ 	  					</div>
+	 				</div>
+		
+	 				<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="status" data-validation="mandatory" data-langtag="Status" >Status</label>
+	                			<select class="form-control form-control-sm  " id ='status' name="status">
+	                				<option value="" selected="selected">Select Status</option>
+	                				<option value="2">All</option>
+									<option value="1">Under Maintenance </option>
+									<option value="0">No Maintenance  / Expire Maintenance </option>
+	                			</select>
+
+								<div class="invalid-feedback"></div>
+							</div>
+						</div>
+	</div>
+	
+
+	              			<div class="invalid-feedback"></div>
+ 	  					</div>
+	 				</div>
+	 				
+
+
+			<div class="text-center">
+				<button class="btn   bg-gradient-success btn-sm" id="btnAdd"><i class="fa fa-plus"></i> Add Maintenance</button>
+				<button class="btn   bg-gradient-success btn-sm" id="btnview"><i class="fa fa-eye" aria-hidden="true"></i> View</button>
+			</div>
+			
+			
+			<div class='row'>
+				<div class='col-lg-4'>	
+					<div class="form-group row">                   
+	                    <div class="col-sm-10">
+	                      <input type="text" class="form-control" id="search" placeholder="Search">
+	                    </div>
+	                  </div>
+				</div>
+			</div>	
+			
+			<div class='row no-more-tables'>
+				<table class="table table-hover">
+				  <thead class="bg-navy" >
+				      <tr>
+				      	<th><input type="checkbox"></th>
+				        <th >Equipment Name</th>
+				        <th>Equipment Model</th>
+				        <th>Serial No.</th>
+				        <th>Bar Code</th>
+				        <th>Manufacturer Name</th>
+				        <th>Maintenance Start Date</th>
+				        <th>Maintenance End Date</th>
+				      </tr>
+				    </thead>
+				    <tbody>
+				     <tr>
+				      	<td class='d-none d-sm-block' ><input type="checkbox"></td>
+				        <td data-title='Equipment Name'>3 Fold Labour table SS with foam mattress</td>
+				        <td data-title='Equipment Model'>111111</td>
+				        <td data-title='Serial No.'>AKSA111</td>
+				        <td data-title='Bar Code'>887766</td>
+				        <td data-title='Manufacturer Name'>Aarpen V1</td>
+				        <td data-title='Maintenance Start Date'>12-DEC-2019</td>
+				        <td data-title='Maintenance End Date'>12-DEC-2020</td>
+				      </tr>
+				       <tr>
+				      	<td class='d-none d-sm-block' ><input type="checkbox"></td>
+				        <td data-title='Equipment Name'>SYRINGE NEEDLE CUTTER</td>
+				        <td data-title='Equipment Model'>MODEL NOT AVAILABLE</td>
+				        <td data-title='Serial No.'> 0245-0512</td>
+				        <td data-title='Bar Code'>428583</td>
+				        <td data-title='Manufacturer Name'>Alfa Gold</td>
+				        <td data-title='Maintenance Start Date'>12-DEC-2019</td>
+				        <td data-title='Maintenance End Date'>12-DEC-2020</td>
+				      </tr>
+				      <tr>
+				      	<td class='d-none d-sm-block' ><input type="checkbox"></td>
+				        <td data-title='Equipment Name'>STERLIZER</td>
+				        <td data-title='Equipment Model'>MODEL NOT AVAILABLE</td>
+				        <td data-title='Serial No.'>28593</td>
+				        <td data-title='Bar Code'>428593</td>
+				        <td data-title='Manufacturer Name'>Hll Lifecare Limited</td>
+				        <td data-title='Maintenance Start Date'>12-DEC-2019</td>
+				        <td data-title='Maintenance End Date'>12-DEC-2020</td>
+				      </tr>
+				    </tbody>
+				 </table>	
+			</div>
+
+
+<div class="card card-info border-info center m-1" id='ENTRYFORM' >
+
+
+	<div class="card-header bg-navy"></div>
+			
+				
+				<h6 class="text-left">
+					<label >Show:
+					  <select class="" id ='entries' name="entries" >
+					  <option value="" selected="selected">10</option>
+					  <option value="" selected="selected">25</option>
+					  <option value="" selected="selected">50</option>
+					  <option value="" selected="selected">All</option>
+		  			</select>Entries
+  					</label></h6>
+
+<div class="card card card-info border-info center m-1 hideData" id='ADDFORM' >
+			<div class="card-header bg-navy"><h5 class="card-title text-center ">Maintenance Contract Detail Form >> Add</h5>
+			</div>
+
+<table class="table hideData" id="ENTRYFORM">
+  <thead class="bg-pink">
+    <tr>
+    <th scope="col">#</th>
+      <th scope="col">Equipment Name  <i class="fa fa-sort"></i></th>
+      <th scope="col">Equipment Model  <i class="fa fa-sort"></i></th>
+      <th scope="col">Serial No.  <i class="fa fa-sort"></i></th>
+      <th scope="col">Bar Code  <i class="fa fa-sort"></i></th>
+      <th scope="col"> Manufacturer Name  <i class="fa fa-sort"></i></th>
+      <th scope="col">Maintenance Start Date  <i class="fa fa-sort"></i></th>
+      <th scope="col">Maintenance End Date  <i class="fa fa-sort"></i></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>cotton</td>
+      <td>h4</td>
+      <td>1</td>
+      <td>1122</td>
+      <td>cipla</td>
+      <td>11-11-11</td>
+       <td>11-12-25</td>
+    </tr>
+   
+  </tbody>
+</table>
+<div class="card-footer">
+                Showing 1 to 1 of 1 entries
+                <div class="card-tools">
+                        <ul class="pagination pagination-sm justify-content-end info">
+                                <li class="page-item">
+                                        <a href="#" class="page-link">  </a>
+                                </li>
+                                <li class="page-item">
+                                        <a href="#" class="page-link">1</a>
+                                </li>
+                                <li class="page-item">
+                                        <a href="#" class="page-link">2</a>
+                                </li>
+                                <li class="page-item">
+                                        <a href="#" class="page-link">3</a>
+                                </li>
+                                <li class="page-item">
+                                        <a href="#" class="page-link"> >> </a>                
+                                </li>
+                        </ul>
+                </div>
+</div>  </div>
+
+	<div class="card-body form-group">
+ 			<h6><b>Equipment Selection :</b></h6>
+			<hr class="bg-navy">
+  			
+  			<div class="row " >
+						
+					<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="institutionName" data-validation="mandatory" data-langtag="Institution Name" >Institution Name</label>
+	                			<select class="form-control form-control-sm  " id ='institutionName' name="institutionName">
+	                				<option value="" selected="selected">Select Institution Name</option>
+	                				<option title="Aagar- DH" value="5001672">Aagar- DH</option>
+									<option title="Alirajpur- DH" value="5001673">Alirajpur- DH</option>
+									<option title="Annupur- DH" value="5001674">Annupur- DH</option>
+									<option title="Ashoknagar- DH" value="5001675">Ashoknagar- DH</option>
+									<option title="Badwani- DH" value="5001676">Badwani- DH</option>
+									<option title="Balaghat- DH" value="5001677">Balaghat- DH</option>
+									<option title="Betul- DH" value="5001678">Betul- DH</option>
+									<option title="Bhind- DH" value="5001679">Bhind- DH</option>
+									<option title="Bhopal - DH" value="5001614">Bhopal - DH</option>
+	                			</select>
+	              				<div class="invalid-feedback"></div>
+ 	  						</div>
+	 					</div>
+	 					
+	 					
+	 					<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="departmentName" data-validation="mandatory" data-langtag="Department Name" >Department Name</label>
+	                			<select class="form-control form-control-sm  " id ='departmentName' name="departmentName">
+	                				<option value="" selected="selected">Select Department Name</option>
+	                				<option title="All"  value="0">All</option>
+									<option title="Aagar- DH - BLOOD BANK DEP" value="5003337">Aagar- DH - BLOOD BANK DEP</option>
+									<option title="Aagar- DH - BURN UNIT" value="5003338">Aagar- DH - BURN UNIT</option>
+									<option title="Aagar- DH - CENCER DEPT" value="5003339">Aagar- DH - CENCER DEPT</option>
+									<option title="Aagar- DH - CHILDREN WARD" value="5003340">Aagar- DH - CHILDREN WARD</option>
+									<option title="Aagar- DH - COLD CHAIN DEP" value="5003341">Aagar- DH - COLD CHAIN DEP</option>
+									<option title="Aagar- DH - DAILYSIS DEPT" value="5003342">Aagar- DH - DAILYSIS DEPT</option>
+	                			</select>
+	              			<div class="invalid-feedback"></div>
+ 	  					</div>
+	 				</div>
+	 	
+	 				<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="equipmentName" data-validation="mandatory" data-langtag="Equipment Name" >Equipment Name</label>
+	                			<select class="form-control form-control-sm  " id ='equipmentName' name="equipmentName">
+	                				<option value="" >Select Equipment Name</option>
+	                				<option title="Select Value" value="0">Select Value</option>
+									<option title="3 Fold Labour Table Ss With Foam Mattress [99999]" value="18000306">3 Fold Labour Table Ss With Foam Mattress [99999]</option>
+									<option title="Abg Machine [10001]" value="18000001">Abg Machine [10001]</option>
+									<option title="Iv Stand Ss [42]" value="18000162">Iv Stand Ss [42]</option>
+									<option title="Weighing Machine Pediatrics [10139]" value="18000139">Weighing Machine Pediatrics [10139]</option>
+	                			</select>
+	              			<div class="invalid-feedback"></div>
+ 	  					</div>
+	 				</div>
+	 		
+	 				<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="equipmentModel" data-validation="mandatory" data-langtag="Equipment Model" >Equipment Model</label>
+	                			<select class="form-control form-control-sm  " id ='equipmentModel' name="equipmentModel">
+	                				<option value="" selected="selected">Select Equipment Model</option>
+	                				<option value="" >XS-1000T</option>
+	                				<option title="3870ELUPU-D" value="18100614">3870ELUPU-D</option>
+									<option title="AUT (IND)" value="18100572">AUT (IND)</option>
+									<option title="MODEL NOT AVAILABLE" value="18100506">MODEL NOT AVAILABLE</option>
+									<option title="NA" value="18100645">NA</option>
+									<option title="SS-702100" value="18100304">SS-702100</option>
+									<option title="YSI 402 D" value="18100429">YSI 402 D</option>
+	                			</select>
+	              			<div class="invalid-feedback"></div>
+ 	  					</div>
+	 				</div>
+	 		
+	 		</div>
+	 		
+	 		
+			<h6><b>AMC Selection :</b></h6>
+			<hr class="bg-navy">
+			<h6 class='text-center'><b>AMC Details</b></h6>
+			
+			<div class='row no-more-tables'>
+				<table class="table table-hover">
+				  <thead class="bg-light">
+				      <tr>
+				        <th>Serial No.</th>
+				        <th>Order No.</th>
+				        <th>Service Provider Name</th>
+				        <th>Contract Start Date</th>
+				        <th>Contract End Date</th>
+				      </tr>
+				    </thead>
+				    <tbody>
+				     <tr>
+				  		<td data-title='Serial No.'>1.</td>
+				        <td data-title='Order No' >Aim Health Care</td>
+				        <td data-title='Service Provider Name'>Aim Healthcare</td>
+				        <td data-title='Contract Start Date'>20-Feb-2010</td>
+				        <td data-title='Contract End Date'>19-Feb-2022</td>
+				      </tr>
+				    </tbody>
+				 </table>	
+			</div>
+			
+			<h6><b> Stock Selection :</b></h6>
+			<hr class="bg-navy">
+			<h6 class='text-center'><b>Stock Details</b></h6>
+			
+			<div class='row no-more-tables'>
+				<table class="table table-hover">
+				  <thead class="bg-light">
+				      <tr>
+				        <th>Serial No.</th>
+				        <th>Bar Code</th>
+				        <th>Manufacturer Name</th>
+				        <th>Installation Date</th>
+				        <th>Installed Location</th>
+				        <th>Dr.In-Charge</th>
+				        <th>Cost</th>
+				      </tr>
+				    </thead>
+				    <tbody>
+				     <tr>
+				        <td data-title='Serial No.'>1.</td>
+				        <td data-title='Bar Code' >429435</td>
+				        <td data-title='Manufacturer Name'>Hll Lifecare Limited</td>
+				        <td data-title='Installation Date'>01-Jan-2012</td>
+				        <td data-title='Installed Location' >NA</td>
+				        <td data-title='Dr.In-Charge'>NA</td>
+				        <td data-title='Cost'>30000.00</td>
+				      </tr>
+				    </tbody>
+				 </table>	
+			</div>
+			
+		<h6><b>Added Equipment Serial Numbers:</b></h6>
+		<hr class="bg-navy">
+		<br>
+		<hr class="bg-navy">
+		<h6><b><i class="text-center text-danger">*</i> Mandatory Fields</b></h6>
+		
+	
+   </div>
+
+ <div class="card-footer">
+		<div class="text-center">
+			   <button class="btn bg-gradient-success mt-4 btn-sm" id="btnSave"><i class="fa fa-save"></i> Save</button>
+			   <button class="btn bg-gradient-success mt-4 btn-sm" id="btnClear"><i class="fa fa-paint-brush"></i> Clear</button>
+              <button class="btn bg-gradient-success mt-4 btn-sm" id="btnBack"><i class="fas fa-arrow-circle-left"></i> Back</button>                            
+		</div>
+	</div>  
+
+</div>
+
+
+<div class="card card card-info border-info center m-1 hideData" id='VIEWPAGEFORM'  >
+	<div class="card-header bg-navy">
+		<h6 class="text-left">Inventory Details Desk >> View</h6>
+	</div>
+		<div class="card-body form-group">
+			<h6><b>Equipment Details :</b></h6>
+			<hr class="bg-navy">
+	 	<div class='row'>
+				  		<div class='col-lg-3' >
+				  				<div><b>District Name :</b>	Aagar</div>	
+				  				<div><b>Hospital Name :</b> Aagar- DH</div> 
+				  				<div><b>Manufacturer Name :</b> Aarpen V1</div>
+				  				<div><b>Cost/Unit :</b>	108.00	</div>
+				  				<div><b>Under Warranty :</b> Yes</div>
+								<div><b>Under CMC :</b> No</div>
+				  		</div>
+				  		<div class='col-lg-3' >	
+				  				<div><b>Programme Name :</b> CW(Cw)</div>
+				  				<div><b>Department Name :</b> Aagar- DH - CENCER DEPT</div>
+				  				<div><b>Supplied By :</b> Acme</div>
+								<div><b>Current Cost :</b> 1000.00  (in Rupees)</div>
+								<div><b>Warranty Upto :</b> 24(in Months)</div>
+								<div><b>CMC Upto :</b> ---</div>
+						</div>
+						<div class='col-lg-3' >	
+								<div><b>Group Name :</b> Eif</div>	
+								<div><b>Equipment Name :</b> 3 Fold Labour table SS with foam mattress</div>	 
+								<div><b>Serial No :</b> AKSA111</div>
+								<div><b>Equipment Status :</b> Functional(Functional)</div>
+								<div><b>Under AMC :</b> No</div>
+						</div>
+						<div class='col-lg-3' >	
+								<div><b>Sub Group Name :</b> Equipment</div>
+								<div><b>Model Name :</b>111111</div>
+								<div><b>Bar Code :</b> 887766</div>	 
+								<div><b>Receive Date :</b> 13-DEC-2019</div>
+								<div><b>AMC Upto :</b> ---</div>
+						</div> 	
+		</div>
+		
+		
+		<br>	
+		
+		<h6><b>Equipment Warranty Details :</b></h6>
+			<hr class="bg-navy">
+			<table class="table table-hover">
+			  <thead class="bg-light" >
+			      <tr>
+			      	<th>S.No.</th>
+			        <th>Warranty Start Date</th>
+			        <th>Warranty Upto</th>
+			        <th>Frequency of Periodic Maintenance</th>
+			        <th>Terms & Conditions</th>
+			        <th>Remarks</th>
+			      </tr>
+			    </thead>
+			    <tbody>
+			     <tr>
+			        <td>1</td>
+			        <td>12-DEC-2019</td>
+			        <td>12-DEC-2021</td>
+			        <td>---</td>
+			        <td>---</td>
+			        <td>---</td>
+			      </tr>
+			    </tbody>
+			 </table>	
+		
+		<h6><b>Equipment Maintenance(AMC/CMC) Details :</b></h6>
+			<hr class="bg-navy">
+			<p class="text-center text-danger">No Detali(s) found.</p>
+			
+
+	</div>
+	
+    <div class="card-footer">
+		<div class="text-center">
+              <button class="btn bg-gradient-success mt-4 btn-sm" id="btnBack1"><i class="fas fa-arrow-circle-left"></i> Back</button>                            
+		</div>
+	</div>  
+ 
+  
+</div>
+

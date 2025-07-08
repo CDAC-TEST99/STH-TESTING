@@ -1,0 +1,194 @@
+<script>
+$(document).ready(function () {
+	$('#btngo').click(function(){
+	$('#VIEWPAGEFORM ').removeClass('hideData');		
+	});
+	
+	$('#btnBack').click(function(){
+		$('#LISTFORM').removeClass('hideData');
+		$('#VIEWPAGEFORM ').addClass('hideData');		
+	});
+	$('#btnrequest').click(function(){
+		$('#LISTFORM').addClass('hideData');
+		$('#REQUESTLISTFORM').removeClass('hideData');		
+	});
+	$('#btnBackReq').click(function(){
+		$('#LISTFORM').removeClass('hideData');
+		$('#REQUESTLISTFORM').addClass('hideData');		
+	});
+	
+})
+</script>
+
+<div class="card card-info border-info center m-1" id='LISTFORM' >
+	<div class="card-header bg-navy"><h5 class="card-title text-center ">Maintenance Budget Allocation Desk</h5>
+		<div class="buttonContainer  bg-light">
+			<button class='btn bg-gradient-success btn-sm' > <i class="fa fa-save"></i> Save</button>
+			<button class='btn bg-gradient-success btn-sm' > <i class="fa fa-window-close"></i> Clear</button>				
+		</div>
+	</div>
+	<div class="card-body form-group">
+ 		<div class="row">
+		 	<div class='col-lg-3' >
+				<div class="form-group">
+               		<label class="col-form-label col-form-label-sm" for="fundingSource" data-langtag="Funding Source" >Funding Source</label>
+              			<select name="fundingSource" id="fundingSource" class="form-control form-control-sm ">
+               				
+               			<option value='NHM' selected>NHM</option>
+               			<option value='WB'>WB</option>
+               			<option value='JICA'>JICA</option>
+               			
+              			</select>
+              			<div class="invalid-feedback"></div>
+             		</div>
+			</div>
+			<div class='col-lg-3' >
+				<div class="form-group">
+               		<label class="col-form-label col-form-label-sm" for="strFinancialYearId" data-langtag="Financial Year" >Financial Year</label>
+              			<select name="strProgrammeTypeId" id="strFinancialYearId" class="form-control form-control-sm ">
+               			<option value='2019-2020' selected>2019-2020</option>	                			
+              			</select>
+              			<div class="invalid-feedback"></div>
+             		</div>
+			</div>
+			<div class='col-lg-3' >
+				<div class="form-group">
+               		<label class="col-form-label col-form-label-sm" for="strBudgetClassId" data-langtag="Budget Head" >Budget Head</label>
+              			<select name="strBudgetClassId" id="strBudgetClassId" class="form-control form-control-sm ">
+               			<option value='Equipment Procurement' selected>Equipment Maintanance</option>
+               				                			
+              			</select>
+              			<div class="invalid-feedback"></div>
+             		</div>
+			</div>
+			<div class='col-lg-3' >
+				<div class="form-group">
+               		<label class="col-form-label col-form-label-sm" for="programmeName" data-langtag="Budget Head" >Programme Name</label>
+              			<select name="programmeName" id="programmeName" class="form-control form-control-sm ">
+	               			<option title="Select Value" selected value="0">Select Value</option>
+							<option title="Blood Storage Unit" value="255">Blood Storage Unit</option>
+							<option title="CW" value="270">CW</option>
+							<option title="DFID" value="264">DFID</option>
+							<option title="Free Pathological Services" value="269">Free Pathological Services</option>
+							<option title="LAQSHYA" value="262">LAQSHYA</option>
+							<option title="Maternity Wing - DP" value="265">Maternity Wing - DP</option>
+							<option title="MCH" value="263">MCH</option>
+							<option title="N-HDU" value="259">N-HDU</option>
+							<option title="NPCB-VI" value="266">NPCB-VI</option>
+							<option title="NPHCE" value="268">NPHCE</option>
+							<option title="Obstetric ICU/HDU" value="257">Obstetric ICU/HDU</option>
+							<option title="PICU" value="260">PICU</option>
+							<option title="RBSK" value="272">RBSK</option>
+							<option title="RCH" value="267">RCH</option>
+							<option title="RNTCP" value="271">RNTCP</option>
+							<option title="SNCU" value="261">SNCU</option>
+							<option title="USG" value="256">USG</option>
+              			</select>
+              			<div class="invalid-feedback"></div>
+             		</div>
+			</div>
+			<div class='col-lg-3' >
+				<div class="form-group">
+               		<label class="col-form-label col-form-label-sm" for="govtPrecedingReference" data-langtag="govtPrecedingReference">GO No. </label>
+              			<select name="govtPrecedingReference" id="govtPrecedingReference" class="form-control form-control-sm ">
+               			<option title="Select Value" selected value="0">Select Value</option>
+						<option title="6.1.1.1.D-BSU" value="107">6.1.1.1.D-BSU</option>
+              			</select>
+              			<div class="invalid-feedback"></div>
+             		</div>
+			</div>
+			<div class='col-lg-3' >
+				<div class="form-group">
+               		<label class="col-form-label col-form-label-sm" for="directorate" data-langtag="Directorate" >Directorate</label>
+              			<select name="directorate" id="directorate" class="form-control form-control-sm ">
+               				<option title="Select Value" selected value="0">Select Value</option>
+							<option title="DME" value="DME">Directorate of Medical Education (DME)</option>
+							<option title="DMS" value="DMS">Directorate of Medical Rural Services (DM-RS)</option>
+							<option title="DPH" value="DPH">Directorate of public Health (DPH)</option>
+              			</select>
+              			<div class="invalid-feedback"></div>
+             		</div>
+			</div>
+			<div class='col-lg-3' >
+				<div class="form-group">
+               		<label class="col-form-label col-form-label-sm" for="institutionName"  data-langtag="Institution Name" >Institution Name</label>
+               			<select class="form-control form-control-sm   " id ='institutionName' name="institutionName">
+               				<option value="All" selected="selected">All</option>
+               				<option title="Aagar- DH"  value="5001672">Govt. Rajaji Hospital Chennai</option>									
+               			</select>
+              			<div class="invalid-feedback"></div>
+             		</div>
+			</div>
+		 	<div class='col-lg-3 hideData'  >
+			 		<div class="form-group">
+               			<label class="col-form-label col-form-label-sm" for="Local Budget Percent" data-langtag="% of local Budget"  >% of local Budget</label>
+               			<input class="form-control form-control-sm  " type="text" id="localBudgetPercent" value="0" name="localBudgetPercent" maxlength="50" data-validation="mandatory,alphabetOnly">
+               			<div class="invalid-feedback"></div>
+             			</div>
+		 	</div>		 	
+		 </div>		
+		 <div class="row">
+		 	<div class='col-lg-12 text-center'  >			 	
+				<button class='btn bg-gradient-success btn-sm' id="btngo"><i class="fa fa-arrow-left"></i> Go</button>
+			</div>
+		 </div>
+</div>
+</div>
+
+<div class="card card card-info border-info center m-1 hideData" id='VIEWPAGEFORM'  >
+	<div class="card-body form-group">
+			<div class='row no-more-tables'>
+				<table class="table table-bordered table-striped " id='tbl-listing' >
+				  <thead class="bg-navy">
+				      <tr>
+				      	<th><input type="checkbox">#</th>
+				      	<th >Directorate</th>	
+				        <th >Institution Name</th>
+				        <th class='hideData'>Un-used Local Budget (INR)[2018-2019]</th>
+				        <th>Un-used Central Budget (INR)[2018-2019]</th>
+				        <th>New Budget (INR)[2019-2020]</th>
+				        <th class='hideData'>Central</th>
+				        <th class='hideData'>Local</th>			          
+				      </tr>
+			      </thead>
+			      <tbody>
+			      <tr>
+			      	<td class='d-none d-sm-block' ><input type="checkbox"></td>
+			      	<td data-title='Directorate' >DME</td>
+			      	<td data-title='Institution Name' >Govt. Rajaji Hospital Chennai</td>
+			        <td class='hideData' data-title='Un-used Local Budget (INR)[2018-2019]'>NA</td>
+			        <td data-title='Un-used Central Budget (INR)[2018-2019]'>NA</td>
+			        <td data-title='New Budget (INR)[2019-2020]'><input type="text"></td>
+			        <td data-title='Central' class='hideData'><input type="text"></td>
+			        <td  class='hideData' data-title='Local'><input type="text"></td>
+			      </tr>
+			       <tr>
+			      	<td class='d-none d-sm-block' ><input type="checkbox"></td>
+			      	<td data-title='Directorate' >DME</td>
+			      	<td data-title='Institution Name' >GoStanley Medical college Chennai</td>
+			        <td class='hideData' data-title='Un-used Local Budget (INR)[2018-2019]'>NA</td>
+			        <td data-title='Un-used Central Budget (INR)[2018-2019]'>NA</td>
+			        <td data-title='New Budget (INR)[2019-2020]'><input type="text"></td>
+			        <td data-title='Central' class='hideData'><input type="text"></td>
+			        <td  class='hideData' data-title='Local'><input type="text"></td>
+			      </tr>
+			    </tbody>
+			 </table>
+		</div>
+		<div class='row'>
+			<div class='col-lg-2' data-langtag="Total Budget">Total Budget</div>
+			<div class='col-lg-2'  >0 </div>
+			 <div class='col-lg-2' data-langtag="Remarks">Remarks</div>
+			 <div class='col-lg-3'>
+			 	<textarea class='form-control form-control-sm' rows="3"> </textarea>
+			 </div>
+		 </div>     
+</div>
+  
+  </div>
+  
+  
+
+
+
+ 

@@ -1,0 +1,247 @@
+<script>
+$(document).ready(function () {
+	$('#btnview').click(function(){
+		$('#LISTFORM').addClass('hideData');
+		$('#VIEWPAGEFORM ').removeClass('hideData');		
+	});
+	
+	$('#btnBack').click(function(){
+		$('#LISTFORM').removeClass('hideData');
+		$('#VIEWPAGEFORM ').addClass('hideData');		
+	});
+})
+</script>
+
+<div class="card card-info border-info center m-1" id='LISTFORM' >
+			<div class="card-header bg-navy"><h5 class="card-title text-center ">Demand Verify Desk</h5>
+			</div>
+
+
+	<div class="card-body form-group">
+ 	
+  			<div class="row " >
+						
+	 				<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="institutionName" data-validation="mandatory" data-langtag=Institution Name" >Institution Name</label>
+	                			<select class="form-control form-control-sm  " id ='institutionName' name="institutionName">
+	                				<option value="" selected="selected">Select Institution Name</option>
+	                				<option title="Uphari  Shahdol-PHC" value="5003176">Uphari  Shahdol-PHC</option>
+									<option title="Urban Shahdol-PHC" value="5057718">Urban Shahdol-PHC</option>
+									<option title="Usrar  Satna-PHC" value="5003100">Usrar  Satna-PHC</option>
+									<option title="Utiakala  Raisen-PHC" value="5002948">Utiakala  Raisen-PHC</option>
+									<option title="Utila   Gwalior-PHC" value="5002591">Utila   Gwalior-PHC</option>
+									<option title="Veerpur Dam Sehore-PHC" value="5056033">Veerpur Dam Sehore-PHC</option>
+									<option title="Veerpur   Gwalior-PHC" value="5002592">Veerpur   Gwalior-PHC</option>
+									<option title="Veerpur Sheopur-PHC" value="5057719">Veerpur Sheopur-PHC</option>
+									<option title="Venkatnagar  Annupur-CHC" value="5001844">Venkatnagar  Annupur-CHC</option>
+									<option title="Vidisha-CMHO" value="5001773">Vidisha-CMHO</option>
+	                			</select>
+	              				<div class="invalid-feedback"></div>
+ 	  						</div>
+	 					</div>
+	 					
+	 					
+	 					<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="departmentName" data-validation="mandatory" data-langtag="Department Name" >Department Name</label>
+	                			<select class="form-control form-control-sm  " id ='departmentName' name="departmentName">
+	                				<option value="" selected="selected">Select Department Name</option>
+	                				<option title="Aagar PHC  Indore-PHC - MALE MEDICAL WARD" value="5033781">Aagar PHC  Indore-PHC - MALE MEDICAL WARD</option>
+									<option title="Aagar PHC  Indore-PHC - N B S U DEP" value="5033782">Aagar PHC  Indore-PHC - N B S U DEP</option>
+									<option title="Aagar PHC  Indore-PHC - NCD DEPT" value="5033783">Aagar PHC  Indore-PHC - NCD DEPT</option>
+									<option title="Aagar PHC  Indore-PHC - NICU" value="5033784">Aagar PHC  Indore-PHC - NICU</option>
+									<option title="Aagar PHC  Indore-PHC - NRC DEPT" value="5033785">Aagar PHC  Indore-PHC - NRC DEPT</option>
+									<option title="Aagar PHC  Indore-PHC - OPD DEPT" value="5033786">Aagar PHC  Indore-PHC - OPD DEPT</option>
+									<option title="Aagar PHC  Indore-PHC - PATHOLOGY DEPT" value="5033787">Aagar PHC  Indore-PHC - PATHOLOGY DEPT</option>
+									<option title="Aagar PHC  Indore-PHC - RADIOLOGY  DEPARTMENT" value="5033788">Aagar PHC  Indore-PHC - RADIOLOGY  DEPARTMENT</option>
+									<option title="Aagar PHC  Indore-PHC - SNCU DEPT" value="5033789">Aagar PHC  Indore-PHC - SNCU DEPT</option>
+									<option title="Aagar PHC  Indore-PHC - STAFF DUTY ROOM" value="5033790">Aagar PHC  Indore-PHC - STAFF DUTY ROOM</option>
+									<option title="Aagar PHC  Indore-PHC - STERLIZATION ROOM" value="5033791">Aagar PHC  Indore-PHC - STERLIZATION ROOM</option>
+	                			</select>
+	              			<div class="invalid-feedback"></div>
+ 	  					</div>
+	 				</div>
+	 				
+	 				<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="equipmentName" data-validation="mandatory" data-langtag="Equipment Name" >Equipment Name</label>
+	                			<select class="form-control form-control-sm  " id ='equipmentName' name="equipmentName">
+	                				<option value="" selected="selected">Select Equipment Name</option>
+	                				<option title="Vortex Shaker" value="18000356">Vortex Shaker</option>
+									<option title="Vusellum forceps SS" value="18000284">Vusellum forceps SS</option>
+									<option title="Wall Mounted Dental X-Ray" value="18000349">Wall Mounted Dental X-Ray</option>
+									<option title="WATER BATH" value="18000137">WATER BATH</option>
+									<option title="Water Bath Incubator Shaker" value="18000176">Water Bath Incubator Shaker</option>
+									<option title="WEIGHING MACHINE ADULT" value="18000138">WEIGHING MACHINE ADULT</option>
+									<option title="Weighing Machine-Baby" value="18000225">Weighing Machine-Baby</option>
+									<option title="WEIGHING MACHINE PEDIATRICS" value="18000139">WEIGHING MACHINE PEDIATRICS</option>
+									<option title="WHEEL CHAIR" value="18000187">WHEEL CHAIR</option>
+									<option title="Wheel chair folding" value="18000339">Wheel chair folding</option>
+									<option title="X-RAY MACHINE 100 MA" value="18000141">X-RAY MACHINE 100 MA</option>
+									<option title="X-RAY MACHINE 100 MA PORTABLE" value="18000142">X-RAY MACHINE 100 MA PORTABLE</option>
+									<option title="X-RAY MACHINE 150 MA" value="18000144">X-RAY MACHINE 150 MA</option>
+									<option title="X-RAY MACHINE 15 MA" value="18000143">X-RAY MACHINE 15 MA</option>
+	                			</select>
+	              			<div class="invalid-feedback"></div>
+ 	  					</div>
+	 				</div>
+	 				
+	 				<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="status" data-validation="mandatory" data-langtag="Status" >Status</label>
+	                			<select class="form-control form-control-sm  " id ='status' name="status">
+	                				<option value="" selected="selected">Select Status</option>
+	                				<option title="All" selected="" value="0">All</option>
+									<option title="New" value="10">New</option>
+									<option title="Cancelled" value="11">Cancelled</option>
+									<option title="Compilation in Process" value="12">Compilation in Process</option>
+									<option title="PO Generated" value="13">PO Generated</option>
+									<option title="Verified" value="15">Verified</option>
+									<option title="Compilation Freezed" value="16">Compilation Freezed</option>
+									<option title="Rejected" value="17">Rejected</option>
+	                				
+	                			</select>
+	              			<div class="invalid-feedback"></div>
+ 	  					</div>
+	 				</div>
+	 			</div>	
+	 			
+
+			<div class="text-center">
+				<button class="btn   bg-gradient-success btn-sm" id="btnVerify"><i class="fa fa-check-circle"></i> Verify</button>
+				<button class="btn   bg-gradient-success btn-sm" id="btnview"><i class="fa fa-eye" aria-hidden="true"></i> View</button>
+			</div>
+			
+			
+			<div class='row'>
+				<div class='col-lg-4'>	
+					<div class="form-group row">                   
+	                    <div class="col-sm-10">
+	                      <input type="text" class="form-control" id="search" placeholder="Search">
+	                    </div>
+	                  </div>
+				</div>
+			</div>	
+			
+			<div class='row no-more-tables'>
+				<table class="table table-hover">
+				  <thead class="bg-navy">
+				      <tr>
+				      	<th><input type="checkbox"></th>
+				        <th>Department Name</th>
+				        <th>Equipment Name</th>
+				        <th>Demand Qty.</th>
+				        <th>Demand Date</th>
+				        <th>Demand Status</th>
+				      </tr>
+				    </thead>
+				    <tbody>
+				     <tr>
+				      	<td class='d-none d-sm-block' ><input type="checkbox"></td>
+				        <td data-title='Department Name' > Aagar- DH - CANCER DEPT</td>
+				        <td data-title='Equipment Model'> ABG MACHINE</td>
+				        <td data-title='Demand Qty.'>1</td>
+				        <td data-title='Demand Date'> 18-DEC-2019</td>
+				        <td data-title='Demand Status'> Compilation Freezed</td>
+				      </tr>
+				      <tr>
+				      	<td class='d-none d-sm-block' ><input type="checkbox"></td>
+				        <td data-title='Department Name' >  Aagar- DH - BLOOD BANK DEP</td>
+				        <td data-title='Equipment Model'> ABG MACHINE</td>
+				        <td data-title='Demand Qty.'>1</td>
+				        <td data-title='Demand Date'> 18-DEC-2019</td>
+				        <td data-title='Demand Status'> Compilation Freezed</td>
+				      </tr>
+				      <tr>
+				      	<td class='d-none d-sm-block' ><input type="checkbox"></td>
+				        <td data-title='Department Name' >  Aagar- DH - BURN UNIT</td>
+				        <td data-title='Equipment Model'> ABG MACHINE</td>
+				        <td data-title='Demand Qty.'>1</td>
+				        <td data-title='Demand Date'> 18-DEC-2019</td>
+				        <td data-title='Demand Status'> Compilation Freezed</td>
+				      </tr>
+				    </tbody>
+				 </table>	
+			</div>
+	</div>
+</div>
+
+
+<div class="card card card-info border-info center m-1 hideData" id='VIEWPAGEFORM'  >
+	<div class="card-header bg-navy">
+		<h6 class="text-left">Demand Verify Desk >> View</h6>
+	</div>
+		<div class="card-body form-group">
+			<h6><b>Demand / Intent Details :</b></h6>
+			<hr class="bg-navy">
+	 	<div class='row'>
+				  		<div class='col-lg-3' >
+				  				<div><b>Demand / Intent No :</b> 319129980029</div>	
+				  				<div><b>Equipment Name :</b> ABG MACHINE</div> 
+				  				<div><b>Quantity (in Numbers) :</b> 1</div>
+				  		</div>
+				  		<div class='col-lg-3' >	
+				  				<div><b>Demand / Intent Date :</b> CW(Cw)</div>
+				  				<div><b>No of Existing Equipment :</b> 0</div>
+				  				<div><b>Justification for Need :</b> rt</div>
+						</div>
+						<div class='col-lg-3' >	
+								<div><b>Hospital Name :</b> Aagar- DH</div>	
+								<div><b>Equipment Group :</b> Eif</div>	 
+								<div><b>Demand / Intent Cancel Remark :</b> --</div>
+						</div>
+						<div class='col-lg-3' >	
+								<div><b>Department Name :</b> Aagar- DH - BLOOD BANK DEP</div>
+								<div><b> Equipment Sub Group :</b>Equipment</div>
+						</div> 	
+		</div>
+		<br>
+		<h6><b>Checklist :</b></h6>
+			<hr class="bg-navy">
+			<div class='row'>
+				  		<div class='col-lg-3' >
+				  				<div><b>Trained HR :</b> No</div>	
+				  		</div>
+				  		<div class='col-lg-3' >	
+				  				<div><b>Technical Specification Evaluated :</b> No</div> 
+						</div>
+						<div class='col-lg-3' >	
+								<div><b> Space Availability :</b> No</div>
+						</div>
+						<div class='col-lg-3' >	
+								<div><b>Whether Indian Standard Specification are available or not :</b> No</div>
+						</div> 	
+		</div>
+		<br>	
+		
+		<h6><b>Details Demand / Intent Verification Details :</b></h6>
+			<hr class="bg-navy">
+			<div class='row'>
+				  		<div class='col-lg-3' >
+				  				<div><b>Status :</b> Approved</div>	
+				  		</div>
+				  		<div class='col-lg-3' >	
+				  				<div><b>Verification Date :</b> 18-Dec-2019</div> 
+						</div>
+						<div class='col-lg-3' >	
+								<div><b>Verified Quantity(in Numbers) :</b> 1.00</div>
+						</div>
+						<div class='col-lg-3' >	
+								<div><b>Remarks :</b> --</div>
+						</div> 	
+		</div>
+		<br>	
+		
+		
+	</div>
+	
+    <div class="card-footer">
+		<div class="text-center">
+              <button class="btn bg-gradient-success mt-4 btn-sm" id="btnBack"><i class="fas fa-arrow-circle-left"></i> Back</button>                            
+		</div>
+	</div>  
+ 
+  
+</div>
+

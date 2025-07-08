@@ -1,0 +1,166 @@
+<div class="card card-info border-info center m-1" id='LISTFORM' >
+			<div class="card-header bg-navy"><h5 class="card-title text-center ">Complaint Approval Desk</h5>
+			</div>
+
+
+	<div class="card-body form-group">
+ 	
+  			<div class="row " >
+						
+						<div class='col-lg-3'  >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="institutionType" data-validation="mandatory" data-langtag="Institution Type" >Institution Type</label>
+	                			<select class="form-control form-control-sm  " id ='institutionType' name="institutionType">
+	                				<option value="" selected="selected">Select Institution Type</option>
+	                				<option title="Budget Authority" selected="" value="51">Budget Authority</option>
+									<option title="CH" value="19">CH</option>
+									<option title="CHC" value="21">CHC</option>
+									<option title="CMHO" value="13">CMHO</option>
+									<option title="CS" value="14">CS</option>
+									<option title="DH" value="17">DH</option>
+									<option title="HQ" value="50">HQ</option>
+									<option title="PHC" value="11">PHC</option>
+									<option title="Superintendent" value="12">Superintendent</option>
+									<option title="TB Hospital" value="18">TB Hospital</option>
+	                				
+	                			</select>
+	                		<div class="invalid-feedback"></div>
+ 	  					</div>
+	 				</div>
+	 	
+	 	
+	 				<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="institutionName" data-validation="mandatory" data-langtag=Institution Name" >Institution Name</label>
+	                			<select class="form-control form-control-sm  " id ='institutionName' name="institutionName">
+	                				<option value="" selected="selected">Select Institution Name</option>
+	                			</select>
+	              				<div class="invalid-feedback"></div>
+ 	  						</div>
+	 					</div>
+	 					
+	 					
+	 					<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="departmentName" data-validation="mandatory" data-langtag="Department Name" >Department Name</label>
+	                			<select class="form-control form-control-sm  " id ='departmentName' name="departmentName">
+	                				<option value="" selected="selected">Select Department Name</option>
+	                			</select>
+	              			<div class="invalid-feedback"></div>
+ 	  					</div>
+	 				</div>
+	 				
+	
+		
+	 				<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="requestStatus" data-validation="mandatory" data-langtag="Request Status" >Request Status</label>
+	                			<select class="form-control form-control-sm  " id ='requestStatus' name="requestStatus">
+	                				<option value="" selected="selected">Select Request Status</option>
+	                				<option title="Eng. Close" selected="" value="19">Eng. Close</option>
+									<option title="Pending - Raise and Acknowledge" value="13">Pending - Raise and Acknowledge</option>
+									<option title="Pending - Re-Open" value="14">Pending - Re-Open</option>
+									<option title="Pending - All" value="1">Pending - All</option>
+									<option title="Pending - Re-Schedule" value="16">Pending - Re-Schedule</option>
+									<option title="Pending - Attend" value="17">Pending - Attend</option>
+									<option title="Pending - Schedule" value="15">Pending - Schedule</option>
+	                				
+	                			</select>
+	              			<div class="invalid-feedback"></div>
+ 	  					</div>
+	 				</div>
+	 			
+	 				
+	 				<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="serviceProvider" data-validation="mandatory" data-langtag="Service Provider " >Service Provider </label>
+	                			<select class="form-control form-control-sm  " id ='serviceProvider' name="serviceProvider">
+	                				<option value="" selected="selected">Select Service Provider </option>
+	                				<option title="All" selected="" value="0">All</option>
+									<option title="Acme" value="1810144">Acme</option>
+									<option title="Accord Electronic" value="1810932">Accord Electronic</option>
+									<option title="Aim Healthcare" value="1812086">Aim Healthcare</option>
+									<option title="Adarsh Enterprises" value="1812088">Adarsh Enterprises</option>
+	                				
+	                			</select>
+	              			<div class="invalid-feedback"></div>
+ 	  					</div>
+	 				</div>
+	 				
+		 	
+		 	       <div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="requestType" data-validation="mandatory" data-langtag="Request Type" >Request Type</label>
+	                			<select class="form-control form-control-sm  " id ='requestType' name="requestType">
+	                				<option value="" selected="selected">Select Request Type</option>
+	                				<option title="Breakdown" selected="" value="1">Breakdown</option>
+									<option title="Calibration Maintenance" value="3">Calibration Maintenance</option>
+									<option title="Preventive Maintenance" value="2">Preventive Maintenance</option>
+	                				
+	                			</select>
+	              			<div class="invalid-feedback"></div>
+ 	  					</div>
+	 				</div>
+	 			</div>	
+	 			
+	 			
+  			
+						
+						
+	 				
+	
+
+			<div class="text-center">
+			     <button class="btn   bg-gradient-success btn-sm" id="btnrequest" ><i class="fa fa-recycle" aria-hidden="true"></i> Substitute Approval</button>
+			     <button class="btn   bg-gradient-success btn-sm" ><i class="fa fa-trash" aria-hidden="true"></i> Discard Substitute</button>
+			     <button class="btn   bg-gradient-success btn-sm" ><i class="fa fa-times" aria-hidden="true"></i> Final Close</button>
+				<button class="btn   bg-gradient-success btn-sm" id="btnview"><i class="fa fa-eye" aria-hidden="true"></i> View</button>
+				
+			</div>
+			
+			<div class='row'>
+			<div class='col-lg-4'>	
+				<div class="form-group row">                   
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" id="search" placeholder="Search">
+                    </div>
+                  </div>
+			</div>
+			
+			</div>	
+			<div class='row no-more-tables'>
+			<table class="table table-hover">
+			  <thead class="bg-navy">
+			      <tr>
+			      	<th><input type="checkbox"></th>
+			        <th >Request Id</th>
+			        <th>Request Date</th>
+			        <th>Department</th>
+			        <th>Equipment Name</th>
+			        <th>Equipment Model</th>
+			        <th>Barcode</th>
+			        <th>Request Source</th>
+			        <th>Request Status</th>
+			      </tr>
+			    </thead>
+			    <tbody>
+			     <tr>
+			      	<td class='d-none d-sm-block' ><input type="checkbox"></td>
+			        <td data-title='Request Id' >Xray Machine</td>
+			        <td data-title='Request Date'>ABCD</td>
+			        <td data-title='Department'>1234</td>
+			        <td data-title='Equipment Name'>123456</td>
+			        <td data-title='Equipment Model'>Bosch</td>
+			        <td data-title='Barcode'>Working</td>
+			        <td data-title='Request Source'>Payment Done</td>
+			        <td data-title='Request Status'>Payment Done</td>
+			      </tr>
+			    </tbody>
+			    
+			 </table>	
+			</div>
+		
+</div>
+	</div>
+	
+	<p> <i class="fa fa-circle" style="font-size:8px;color:#17a2b8"></i> Non Functional  Bold Font - Verified Equipments;  Normal Font - Unverified Equipments</p>

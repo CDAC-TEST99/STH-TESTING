@@ -1,0 +1,954 @@
+<script>
+$(document).ready(function () {
+	$('#btnview').click(function(){
+		$('#LISTFORM').addClass('hideData');
+		$('#VIEWPAGEFORM ').removeClass('hideData');		
+	});
+	
+	$('#btnBack').click(function(){
+		$('#LISTFORM').removeClass('hideData');
+		$('#VIEWPAGEFORM ').addClass('hideData');		
+	});
+	$('#btnattand').click(function(){
+		$('#LISTFORM').addClass('hideData');
+		$('#ATTANDPAGEFORM ').removeClass('hideData');		
+	});
+	
+	$('#btnBacks').click(function(){
+		$('#LISTFORM').removeClass('hideData');
+		$('#ATTANDPAGEFORM ').addClass('hideData');		
+	});
+	$('#btndeallocate').click(function(){
+		$('#LISTFORM').addClass('hideData');
+		$('#DEALLOCATEPAGEFORM ').removeClass('hideData');		
+	});
+	
+	$('#btnBackDalt').click(function(){
+		$('#LISTFORM').removeClass('hideData');
+		$('#DEALLOCATEPAGEFORM ').addClass('hideData');		
+	});
+	$('#btnsubstitute').click(function(){
+		$('#LISTFORM').addClass('hideData');
+		$('#SUBSTITUTEPAGEFORM ').removeClass('hideData');		
+	});
+	
+	$('#btnBackSub').click(function(){
+		$('#LISTFORM').removeClass('hideData');
+		$('#SUBSTITUTEPAGEFORM ').addClass('hideData');		
+	});
+	$('#btnschedule').click(function(){
+		$('#LISTFORM').addClass('hideData');
+		$('#SCHEDULEEPAGEFORM ').removeClass('hideData');		
+	});
+	
+	$('#btnBackSchedule').click(function(){
+		$('#LISTFORM').removeClass('hideData');
+		$('#SCHEDULEEPAGEFORM ').addClass('hideData');		
+	});
+})
+</script>
+
+
+<div class="card card-info border-info center m-1" id='LISTFORM' >
+			<div class="card-header bg-navy"><h5 class="card-title text-center ">Service Provider Desk</h5>
+			</div>
+
+
+	<div class="card-body form-group">
+ 	
+  			<div class="row " >
+						
+						<div class='col-lg-3'  >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="institutionType" data-validation="mandatory" data-langtag="Institution Type" >Institution Type</label>
+	                			<select class="form-control form-control-sm  " id ='institutionType' name="institutionType">
+	                				<option value="" selected="selected">Select Institution Type</option>
+	                				<option title="All" selected="" value="0">All</option>
+									<option title="CH" value="19">CH</option>
+									<option title="DH" value="17">DH</option>
+	                				
+	                			</select>
+	                		<div class="invalid-feedback"></div>
+ 	  					</div>
+	 				</div>
+	 	
+	 	
+	 				<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="institutionName" data-validation="mandatory" data-langtag="Institution Name" >Institution Name</label>
+	                			<select class="form-control form-control-sm  " id ='institutionName' name="institutionName">
+	                				<option value="" selected="selected">Select Institution Name</option>
+	                				<option title="Jhabua- DH" value="5001695">Jhabua- DH</option>
+									<option title="Katni- DH" value="5001696">Katni- DH</option>
+									<option title="Khandwa- DH" value="5001697">Khandwa- DH</option>
+									<option title="Khargone- DH" value="5001698">Khargone- DH</option>
+									<option title="Mandla- DH" value="5001699">Mandla- DH</option>
+									<option title="Mandsour- DH" value="5001700">Mandsour- DH</option>
+									<option title="Morena- DH" value="5001701">Morena- DH</option>
+									<option title="Narsinghpur- DH" value="5001702">Narsinghpur- DH</option>
+									<option title="Neemuch- DH" value="5001703">Neemuch- DH</option>
+									<option title="Panna- DH" value="5001704">Panna- DH</option>
+									<option title="Raisen- DH" value="5001705">Raisen- DH</option>
+									<option title="Rajgarh- DH" value="5001706">Rajgarh- DH</option>
+	                			</select>
+	              				<div class="invalid-feedback"></div>
+ 	  						</div>
+	 					</div>
+	 					
+	 					
+	 					<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="departmentName" data-validation="mandatory" data-langtag="Department Name" >Department Name</label>
+	                			<select class="form-control form-control-sm  " id ='departmentName' name="departmentName">
+	                				<option value="" selected="selected">Select Department Name</option>
+	                			</select>
+	              			<div class="invalid-feedback"></div>
+ 	  					</div>
+	 				</div>
+	 				
+	
+		
+	 				<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="requestStatus" data-validation="mandatory" data-langtag="Request Status" >Request Status</label>
+	                			<select class="form-control form-control-sm  " id ='requestStatus' name="requestStatus">
+	                				<option value="" selected="selected">Select Request Status</option>
+	                				<option title="Pending - All" selected="" value="1">Pending - All</option>
+									<option title="Pending - Raise and Acknowledge" value="13">Pending - Raise and Acknowledge</option>
+									<option title="Pending - Re-Open" value="14">Pending - Re-Open</option>
+									<option title="Pending - Schedule" value="15">Pending - Schedule</option>
+									<option title="Pending - Re-Schedule" value="16">Pending - Re-Schedule</option>
+									<option title="Pending - Attend" value="17">Pending - Attend</option>
+									<option title="Eng. Close" value="19">Eng. Close</option>
+	                				
+	                			</select>
+	              			<div class="invalid-feedback"></div>
+ 	  					</div>
+	 				</div>
+	 			
+	 				
+	 				<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="serviceProvider" data-validation="mandatory" data-langtag="Service Provider " >Service Provider </label>
+	                			<select class="form-control form-control-sm  " id ='serviceProvider' name="serviceProvider">
+	                				<option value="" selected="selected">Select Service Provider </option>
+	                				<option title="All" selected="" value="0">All</option>
+									<option title="Acme" value="1810144">Acme</option>
+									<option title="Accord Electronic" value="1810932">Accord Electronic</option>
+									<option title="Aim Healthcare" value="1812086">Aim Healthcare</option>
+									<option title="Adarsh Enterprises" value="1812088">Adarsh Enterprises</option>
+	                				
+	                			</select>
+	              			<div class="invalid-feedback"></div>
+ 	  					</div>
+	 				</div>
+	 				
+		 	
+		 	       <div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="requestType" data-validation="mandatory" data-langtag="Request Type" >Request Type</label>
+	                			<select class="form-control form-control-sm  " id ='requestType' name="requestType">
+	                				<option value="" selected="selected">Select Request Type</option>
+	                				<option title="Breakdown" selected="" value="1">Breakdown</option>
+									<option title="Calibration Maintenance" value="3">Calibration Maintenance</option>
+									<option title="Preventive Maintenance" value="2">Preventive Maintenance</option>
+	                				
+	                			</select>
+	              			<div class="invalid-feedback"></div>
+ 	  					</div>
+	 				</div>
+	 			</div>	
+	 			
+	 			
+  			
+						
+						
+	 				
+	
+
+			<div class="text-center">
+			     <button class='btn  bg-gradient-success btn-sm' id="btnschedule"><i class="fa fa-calendar-check"></i> Schedule/Reschedule</button>
+                 <button class='btn  bg-gradient-success btn-sm' id="btnsubstitute" ><i class="fa fa-check-circle"></i>  Substitute</button>
+                 <button class='btn  bg-gradient-success btn-sm' id="btnattand"><i class="fa fa-reply"></i> Attend</button>
+                 <button class="btn  bg-gradient-success btn-sm" id="btndeallocate"><i class="fa fa-undo" aria-hidden="true"></i> Deallocate</button>
+		         <button class="btn  bg-gradient-success btn-sm" id="btnview"><i class="fa fa-eye" aria-hidden="true"></i> View</button>
+				</div>
+			
+			<hr class="bg-white">
+			<div class='row'>
+			<div class='col-lg-4'>	
+				<div class="form-group row">                   
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" id="search" placeholder="Search">
+                    </div>
+                  </div>
+			</div>
+			
+			</div>	
+			<div class='row no-more-tables'>
+			<table class="table table-hover">
+			  <thead class="bg-navy">
+			      <tr>
+			      	<th><input type="checkbox"></th>
+			        <th >Request Id</th>
+			        <th>Request Date</th>
+			        <th>Department</th>
+			        <th>Equipment Name</th>
+			        <th>Equipment Model</th>
+			        <th>Barcode</th>
+			        <th>Request Source</th>
+			        <th>Request Status</th>
+			      </tr>
+			    </thead>
+			    <tbody>
+			     <tr>
+			      	<td class='d-none d-sm-block' ><input type="checkbox"></td>
+			        <td data-title='Request Id' > 13120010000002	</td>
+			        <td data-title='Request Date'> 04-Jan-2020 12:55:07</td>
+			        <td data-title='Department'>Aamla Betul-CH - ANC ROOM</td>
+			        <td data-title='Equipment Name'>3 Fold Labour Table Ss With Foam Mattress</td>
+			        <td data-title='Equipment Model'> 111111</td>
+			        <td data-title='Barcode'>6454554</td>
+			        <td data-title='Request Source'> IVRS</td>
+			        <td data-title='Request Status'>Raise and Acknowledge</td>
+			      </tr>
+			    </tbody>
+			    <tbody>
+			     <tr>
+			      	<td class='d-none d-sm-block' ><input type="checkbox"></td>
+			        <td data-title='Request Id' >1234</td>
+			        <td data-title='Request Date'>12/12/2012</td>
+			        <td data-title='Department'>1234</td>
+			        <td data-title='Equipment Name'>Xray Machine</td>
+			        <td data-title='Equipment Model'>Bosch</td>
+			        <td data-title='Barcode'>Working Request</td>
+			        <td data-title='Request Source'>Payment Done</td>
+			        <td data-title='Request Status'>Payment Done</td>
+			      </tr>
+			    </tbody>
+			     <tbody>
+			     <tr>
+			      	<td class='d-none d-sm-block' ><input type="checkbox"></td>
+			        <td data-title='Request Id' > 13120010000002	</td>
+			        <td data-title='Request Date'> 04-Jan-2020 12:55:07</td>
+			        <td data-title='Department'>Aamla Betul-CH - ANC ROOM</td>
+			        <td data-title='Equipment Name'>3 Fold Labour Table Ss With Foam Mattress</td>
+			        <td data-title='Equipment Model'> 111111</td>
+			        <td data-title='Barcode'>6454554</td>
+			        <td data-title='Request Source'> IVRS</td>
+			        <td data-title='Request Status'>Raise and Acknowledge</td>
+			      </tr>
+			    </tbody>
+			     
+			 </table>	
+			</div>
+		
+</div>
+	</div>
+	
+	
+	<div class="card card card-info border-info center m-1 hideData" id='VIEWPAGEFORM'  >
+	<div class="card-header bg-navy">
+		<h6 class="text-left">View Page</h6>
+	</div>
+	<div class="card-body form-group">
+	<h6><b>Request Details:</b></h6>
+	<hr class="bg-navy">
+	 
+	                  <div class='row'>
+                                      <div class='col-lg-3' ><b>Request Id :</b>	13118090000688
+  				                       </div>
+  		                              <div class='col-lg-3' ><b>Request Date :</b>	27-Sep-2018 15:37:59		 
+  				                       </div>
+  				                       <div class='col-lg-3' ><b>Hospital Name :	</b>	Aathner Betul-CHC :
+  				                       </div>
+  		                              <div class='col-lg-3' ><b>Aathner Betul-CHC :</b>	Aathner Betul-CHC - LABOUR ROOM	 
+  				                       </div>
+  				                       <div class='col-lg-3' ><b>Request Type :	</b>	Breakdown
+  				                       </div>
+  		                              <div class='col-lg-3' ><b>Request Source</b>	Desktop
+  				                       </div>
+  				                       <div class='col-lg-3' ><b>Equipment Name</b>		AUTOCLAVE VERTICAL
+  				                       </div>
+  		                              <div class='col-lg-3' ><b>Equipment Model</b>	MODEL NOT AVAILABLE		 
+  				                       </div>
+  				                       <div class='col-lg-3' ><b>Equipment Serial No.</b>	1311
+  				                       </div>
+  		                              <div class='col-lg-3' ><b>Barcode:</b>	3759		 
+  				                       </div>
+  				                       <div class='col-lg-3' ><b>Manufacturer / Supplier Name :</b>	Aut(V)(Ind) / Aut(V)(Ind)
+  				                       </div>
+  		                              <div class='col-lg-3' ><b>Equipment Cost </b>40000.0		 
+  				                       </div>
+  				                       <div class='col-lg-3' ><b>Problem Description : </b>	Other [proper not working]
+  				                       </div>
+  		                              <div class='col-lg-3' ><b>Is Item Not in Working Condition [Date, If yes] :</b>no		 
+  				                       </div>
+  				                        <div class='col-lg-3' ><b>Contact Person Name</b>	Ramsingmarshkole	 
+  				                       </div>
+  				                       <div class='col-lg-3' ><b>Contact No. / Email Id :</b>	9617423020 / bmo.ath.bet@gmail.com 	 	
+  				                       </div>
+  		                              <div class='col-lg-3' ><b>Remarks :</b>	proper not working	 
+  				                       </div>
+  				                       <div class='col-lg-3' ><b>Upload Doc:</b>	--
+  				                       </div>
+  				                       </div>
+  				                       </div>
+  		                     
+  		               <div class="card-body form-group">         
+	                 <h6><b>Collapse Details Allocation / De-Allocation Details:</b></h6>
+	                 <hr class="bg-navy">
+	                 <div class='row no-more-tables'>
+			<table class="table table-hover">
+			  <thead class="bg-light">
+			      <tr>
+			      	
+			        <th >S. No.</th>
+			        <th>Service Eng. Name</th>
+			        <th>User Name</th>
+			        <th>Allocation Date Time</th>
+			        <th>	De-Allocation Date Time</th>
+			        <th>Status </th>
+			        <th>Remarks</th>
+			       
+			      </tr>
+			       <tbody>
+			     <tr>
+			      
+			        <td data-title='Request Id' >1</td>
+			        <td data-title='Request Date'>Surendra Gupta</td>
+			        <td data-title='Department'>se_surendragupta</td>
+			        <td data-title='Equipment Name'>De-Allocation Date Time		</td>
+			        <td data-title='Equipment Model'>----</td>
+			        <td data-title='Barcode'>Allocated	</td>
+			        <td data-title='Request Source'>-------</td>
+			        
+			      </tr>
+			    </tbody>
+			    </thead>
+			    </table></div>
+			    </div>	
+	                 
+	                 
+	                  <div class="card-body form-group">
+	                 <h6><b>Collapse Details Schedule/Reschedule Details:</b></h6>
+	                 <hr class="bg-navy">
+	                 <center ><h7 class="text-danger"> <b>No Details Found.</b></h7></center> 
+	                 </div>
+	                  
+	                 <div class="card-body form-group">
+	                  <h6><b>Collapse Details Substitute Details:</b></h6> 
+                     <hr class="bg-navy">
+	                 <center ><h7 class="text-danger"> <b>No Details Found.</b></h7></center> 
+	                 </div>
+	                 
+	                  <div class="card-body form-group">   
+	                 <h6><b>Collapse Details Attend Details:</b></h6>
+	                 <hr class="bg-navy">
+	                  <center ><h7 class="text-danger"> <b>No Details Found.</b></h7></center> 
+	                 </div>
+	                 
+	                  <div class="card-body form-group">   
+                     <h6><b>Collapse Details Current Maintenance Details::</b></h6>
+	                 <hr class="bg-navy">
+	                   <div class='row'>
+	                                  <div class='col-lg-3' ><b>Request Id :</b>	13118090000688
+  				                       </div>
+  		                              <div class='col-lg-3' ><b>Work Order No.  :</b>	Aim Health Care		 
+  				                       </div>
+  				                       <div class='col-lg-3' ><b>Maintenance Contract Type  :	</b>	CMC
+  				                       </div>
+  		                              <div class='col-lg-3' ><b>Contract Start Date:</b>		20-FEB-2017	 
+  				                       </div>
+  				                       <div class='col-lg-3' ><b>Contract End Date:	</b>	19-FEB-2022
+  				                       </div>
+  		                              <div class='col-lg-3' ><b>Contractor Name </b>Aim Healthcare
+  				                       </div>
+  				                       <div class='col-lg-3' ><b>Contractor Contact Number </b>		426985369532
+  				                       </div>
+  				                        <div class='col-lg-3' ><b>Contractor Mail id :</b>		aimbpl2016@gmail.com
+  				                       </div>
+	                 </div>
+	                </div>
+    <div class="card-footer">
+		<div class="text-center">
+              <button class="btn bg-gradient-success mt-4 btn-sm" id="btnBack"><i class="fas fa-arrow-circle-left"></i> Back</button>                            
+		</div>
+	</div>  
+ 
+  
+</div>
+</div>
+
+<div class="card card card-info border-info center m-1 hideData" id='DEALLOCATEPAGEFORM'  >
+	<div class="card-header bg-navy">
+	
+		<h6 class="text-left">Request Deallocation Details>> Add</h6></div>
+		<div class="card-body form-group">
+		<h6><b>Request Details:</b></h6>
+	<hr class="bg-navy">
+	 
+	                  <div class='row'>
+                                      <div class='col-lg-3' ><b>Request Id :</b>	13118090000688
+  				                       </div>
+  		                              <div class='col-lg-3' ><b>Request Date :</b>	27-Sep-2018 15:37:59		 
+  				                       </div>
+  				                       <div class='col-lg-3' ><b>Hospital Name :	</b>	Aathner Betul-CHC :
+  				                       </div>
+  		                              <div class='col-lg-3' ><b>Department Name:</b>	Aathner Betul-CHC - LABOUR ROOM	 
+  				                       </div>
+  				                       <div class='col-lg-3' ><b>Request Type :	</b>	Breakdown
+  				                       </div>
+  		                              <div class='col-lg-3' ><b>Request Source</b>	Desktop
+  				                       </div>
+  				                       <div class='col-lg-3' ><b>Equipment Name</b>		AUTOCLAVE VERTICAL
+  				                       </div>
+  		                              <div class='col-lg-3' ><b>Equipment Model</b>	MODEL NOT AVAILABLE		 
+  				                       </div>
+  				                       <div class='col-lg-3' ><b>Equipment Serial No.</b>	1311
+  				                       </div>
+  		                              <div class='col-lg-3' ><b>Barcode:</b>	3759		 
+  				                       </div>
+  				                       <div class='col-lg-3' ><b>Manufacturer / Supplier Name :</b>	Aut(V)(Ind) / Aut(V)(Ind)
+  				                       </div>
+  		                              <div class='col-lg-3' ><b>Equipment Cost </b>40000.0		 
+  				                       </div>
+  				                       <div class='col-lg-3' ><b>Problem Description : </b>	Other [proper not working]
+  				                       </div>
+  		                              <div class='col-lg-3' ><b>Is Item Not in Working Condition [Date, If yes] :</b>no		 
+  				                       </div>
+  				                        <div class='col-lg-3' ><b>Contact Person Name</b>	Ramsingmarshkole	 
+  				                       </div>
+  				                       <div class='col-lg-3' ><b>Contact No. / Email Id :</b>	9617423020 / bmo.ath.bet@gmail.com 	 	
+  				                       </div>
+  		                              <div class='col-lg-3' ><b>Remarks :</b>	proper not working	 
+  				                       </div>
+  				                       <div class='col-lg-3' ><b>Upload Doc:</b>	--
+  				                       </div>
+  				                       
+  				 </div>
+  				   </div>
+  				    <div class="card-body form-group">         
+	                 <h6><b>Previous Allocation / De-Allocation Details</b></h6>
+	                 <hr class="bg-navy">
+	                 <div class='row no-more-tables'>
+			<table class="table table-hover">
+			  <thead class="bg-light">
+			      <tr>
+			      	
+			        <th >S. No.</th>
+			        <th>Service Eng. Name</th>
+			        <th>User Name</th>
+			        <th>Allocation Date Time</th>
+			        <th>	De-Allocation Date Time</th>
+			        <th>Status </th>
+			        <th>Remarks</th>
+			       
+			      </tr>
+			      </thead>
+			       <tbody>
+			     <tr>
+			      
+			        <td data-title='Request Id' >1</td>
+			        <td data-title='Request Date'>Surendra Gupta</td>
+			        <td data-title='Department'>se_surendragupta</td>
+			        <td data-title='Equipment Name'>De-Allocation Date Time		</td>
+			        <td data-title='Equipment Model'>----</td>
+			        <td data-title='Barcode'>Allocated	</td>
+			        <td data-title='Request Source'>-------</td>
+			        
+			      </tr>
+			    </tbody>
+			    <tbody>
+			     <tr>
+			      
+			        <td data-title='Request Id' >2</td>
+			        <td data-title='Request Date'>Surendra Gupta</td>
+			        <td data-title='Department'>se_surendragupta</td>
+			        <td data-title='Equipment Name'>De-Allocation Date Time		</td>
+			        <td data-title='Equipment Model'>----</td>
+			        <td data-title='Barcode'>Allocated	</td>
+			        <td data-title='Request Source'>-------</td>
+			        
+			      </tr>
+			    </tbody>
+		
+			    </table></div>
+			    </div>	
+			     <div class="card-body form-group">   
+	                 <h6><b>Deallocation Details:</b></h6>
+	                 <hr class="bg-navy">
+	                 <div class='row'>
+	                   <div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="remarks" data-langtag="Remarks"  >Remarks :</label>
+	                			<textarea class="form-control form-control-sm " name="remarks"  id="remarks" name="remarks" maxlength="50" data-validation="mandatory,alphabetOnly"></textarea>
+	                			<div class="invalid-feedback"></div>
+	              			</div>
+					 	</div>
+	                 </div>
+	                 </div>
+    <div class="card-footer">
+		<div class="text-center">
+		      <button class='btn bg-gradient-success mt-4 btn-sm' ><i class="fa fa-save"></i> Deallocate</button>
+              <button class="btn bg-gradient-success mt-4 btn-sm"><i class="fa fa-window-close" aria-hidden="true"></i> Clear</button>
+              <button class="btn bg-gradient-success mt-4 btn-sm" id="btnBackDalt"><i class="fas fa-arrow-circle-left"></i> Back</button>                            
+		</div>
+	</div>  
+ 
+  
+</div>
+
+  
+<div class="card card card-info border-info center m-1 hideData" id='ATTANDPAGEFORM'  >
+	<div class="card-header bg-navy">
+		<h6 class="text-left">Request Attend Details>> Add</h6></div>
+		<div class="card-body form-group">
+		<h6><b>Request Details:</b></h6>
+	<hr class="bg-navy">
+	 
+	                  <div class='row'>
+                                      <div class='col-lg-3' ><b>Request Id :</b>	13118090000688
+  				                       </div>
+  		                              <div class='col-lg-3' ><b>Request Date :</b>	27-Sep-2018 15:37:59		 
+  				                       </div>
+  				                       <div class='col-lg-3' ><b>Hospital Name :	</b>	Aathner Betul-CHC :
+  				                       </div>
+  		                              <div class='col-lg-3' ><b>Department Name:</b>	Aathner Betul-CHC - LABOUR ROOM	 
+  				                       </div>
+  				                       <div class='col-lg-3' ><b>Request Type :	</b>	Breakdown
+  				                       </div>
+  		                              <div class='col-lg-3' ><b>Request Source</b>	Desktop
+  				                       </div>
+  				                       <div class='col-lg-3' ><b>Equipment Name</b>		AUTOCLAVE VERTICAL
+  				                       </div>
+  		                              <div class='col-lg-3' ><b>Equipment Model</b>	MODEL NOT AVAILABLE		 
+  				                       </div>
+  				                       <div class='col-lg-3' ><b>Equipment Serial No.</b>	1311
+  				                       </div>
+  		                              <div class='col-lg-3' ><b>Barcode:</b>	3759		 
+  				                       </div>
+  				                       <div class='col-lg-3' ><b>Manufacturer / Supplier Name :</b>	Aut(V)(Ind) / Aut(V)(Ind)
+  				                       </div>
+  		                              <div class='col-lg-3' ><b>Equipment Cost </b>40000.0		 
+  				                       </div>
+  				                       <div class='col-lg-3' ><b>Problem Description : </b>	Other [proper not working]
+  				                       </div>
+  		                              <div class='col-lg-3' ><b>Is Item Not in Working Condition [Date, If yes] :</b>no		 
+  				                       </div>
+  				                        <div class='col-lg-3' ><b>Contact Person Name</b>	Ramsingmarshkole	 
+  				                       </div>
+  				                       <div class='col-lg-3' ><b>Contact No. / Email Id :</b>	9617423020 / bmo.ath.bet@gmail.com 	 	
+  				                       </div>
+  		                              <div class='col-lg-3' ><b>Remarks :</b>	proper not working	 
+  				                       </div>
+  				                       <div class='col-lg-3' ><b>Upload Doc:</b>	--
+  				                       </div>
+  				                       
+  				 </div>
+  				   </div>
+  				       
+	
+	                  
+	                 <div class="card-body form-group">
+	                  <h6><b>Collapse Details Schedule/Reschedule Details:</b></h6> 
+                     <hr class="bg-navy">
+	                 <center ><h7 class="text-danger"> <b>No Details Found.</b></h7></center> 
+	                 </div>
+	                 
+	                  <div class="card-body form-group">   
+	                 <h6><b>Collapse Details Substitute Details:</b></h6>
+	                 <hr class="bg-navy">
+	                  <center ><h7 class="text-danger"> <b>No Details Found.</b></h7></center> 
+	                 </div>
+	                 
+	                 
+	                 <div class="card-body form-group">
+	                 <h6><b>Collapse Details Previous Attend Details:</b></h6>
+	                 <hr class="bg-navy">
+	                 <center ><h7 class="text-danger"> <b>No Details Found.</b></h7></center> 
+	                 </div>
+	                 
+	                 <div class="card-body form-group">
+		<h6><b>Complaint Attend Details:</b></h6>
+	<hr class="bg-navy">
+	 
+	                  <div class='row'>
+	                                <div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="serviceEngineerName" data-langtag="Service Engineer Name"  >Service Engineer Name :</label>
+	                			<input class="form-control form-control-sm desabledTextBox " type="text" id="serviceEngineerName" name="serviceEngineerName" value="Arvind" maxlength="50" data-validation="mandatory,alphabetOnly">
+	                			<div class="invalid-feedback"></div>
+	              			</div>
+					 	</div>	
+					 	
+	                                <div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="serviceEngineerContactNumber" data-langtag="Service Engineer Contact Number"  >Service Engineer Contact Number :</label>
+	                			<input class="form-control form-control-sm desabledTextBox " type="text" id="serviceEngineerContactNumber" name="serviceEngineerContactNumber" value="27-Sep-2018 15:37:59 " maxlength="50" data-validation="mandatory,alphabetOnly">
+	                			<div class="invalid-feedback"></div>
+	              			</div>
+					 	</div>	
+	                                
+                            <div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="emailId" data-langtag="Email ID"  >Email ID. :</label>
+	                			<input class="form-control form-control-sm  " type="email" id="emailId" name="emailId" maxlength="50" data-validation="mandatory,alphabetOnly">
+	                			<div class="invalid-feedback"></div>
+	              			</div>
+					 	</div>	
+					 	
+					 	<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="Attend Date" data-langtag="Attend Date"  >Attend Date :</label>
+	                			<input class="form-control form-control-sm desabledTextBox " type="text" id="Attend Date" name="Attend Date" value="08-Jan-2020 " maxlength="50" data-validation="mandatory,alphabetOnly">
+	                			<div class="invalid-feedback"></div>
+	              			</div>
+					 	</div>	
+					 	
+					 	<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="attendTime" data-langtag="Attend Time"  >Attend Time :</label>
+	                			<input class="form-control form-control-sm desabledTextBox " type="text" id="attendTime" name="attendTime" value="08-Jan-2020	 " maxlength="50" data-validation="mandatory,alphabetOnly">
+	                			<div class="invalid-feedback"></div>
+	              			</div>
+					 	</div>	
+					 	  
+  		                <div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="actualProblemDescription" data-langtag="Actual Problem Description"  >Actual Problem Description:</label>
+	                			<textarea class="form-control form-control-sm " name="actualProblemDescription"  id="actualProblemDescription" maxlength="50" data-validation="mandatory,alphabetOnly"></textarea>
+	                			<div class="invalid-feedback"></div>
+	              			</div>
+	              			</div>
+	              			 <div class='col-lg-3' >
+	              			<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="solutionProvided" data-langtag="Solution Provided"  >Solution Provided:</label>
+	                			<textarea class="form-control form-control-sm " name="solutionProvided"  id="solutionProvided" maxlength="50" data-validation="mandatory,alphabetOnly"></textarea>
+	                			<div class="invalid-feedback"></div>
+	              			</div>
+	              			</div>
+	              			
+	              			<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="Out Date" data-langtag="outDate"  >Out Date :</label>
+	                			<input class="form-control form-control-sm desabledTextBox " type="text" id="outDate" name="outDate" value="08-Jan-2020	 " maxlength="50" data-validation="mandatory,alphabetOnly">
+	                			<div class="invalid-feedback"></div>
+	              			</div>
+					 	</div>	
+					 	
+					 	<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="inDate" data-langtag="In Date"  >In Date :</label>
+	                			<input class="form-control form-control-sm desabledTextBox " type="text" id="inDate" name="inDate" value="08-Jan-2020	 " maxlength="50" data-validation="mandatory,alphabetOnly">
+	                			<div class="invalid-feedback"></div>
+	              			</div>
+					 	</div>	
+					 	
+  				        <div class='col-lg-3' ><b>Upload Support Document :.</b>  Select a file: <input type="file" name="myFile"><br><br>
+  				                       </div>
+  				         
+  				         <div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="attendStatus" data-langtag="Attend Status"  >Attend Status :</label>
+	                			<input class="form-control form-control-sm desabledTextBox " type="text" id="attendStatus" name="attendStatus" value="3759	 " maxlength="50" data-validation="mandatory,alphabetOnly">
+	                			<div class="invalid-feedback"></div>
+	              			</div>
+					 	</div>	
+  		                              
+  				        <div class="form-group">
+				 	        <label for="scales">Is Item in Working Condition :</label>
+				 	            <input type="checkbox" id="checkbox1" name="checkbox1" checked>
+                                <div class="invalid-feedback"></div>
+	              		</div>
+	              		
+	              		<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="totalDownTime" data-langtag="Total DownTime"  >Total DownTime :</label>
+	                			<input class="form-control form-control-sm desabledTextBox " type="text" id="totalDownTime" name="totalDownTime" value="125:5:25 (HH:MI:SS) 	 " maxlength="50" data-validation="mandatory,alphabetOnly">
+	                			<div class="invalid-feedback"></div>
+	              			</div>
+					 	</div>	
+  		                              
+  				          <div class='col-lg-3' ><b>Upload Service Report : </b>	 Select a file: <input type="file" name="myFile"><br><br>
+  				                       </div>
+  		                   <div class='col-lg-3' ><b>Machine Report :</b>  Select a file: <input type="file" name="myFile"><br><br>	 
+  				                       </div>
+  				              
+  				             <div class="form-group">
+				 	         
+				 	             <label for="scales">Is External cost occured ?  :</label>
+				 	            <input type="checkbox" id="checkbox1" name="checkbox1" checked>
+                                 <div class="invalid-feedback"></div>
+	              		</div>
+  				                       
+  				 
+  				   </div>
+  				   </div>
+  				   
+  				       
+	                 
+	                 <div class="card-footer">
+		<div class="text-center">
+		  <button class='btn bg-gradient-success mt-4 btn-sm' ><i class="fa fa-save"></i> Save</button>
+              <button class="btn bg-gradient-success mt-4 btn-sm"><i class="fa fa-window-close" aria-hidden="true"></i> Clear</button>
+              <button class="btn bg-gradient-success mt-4 btn-sm" id="btnBacks"><i class="fas fa-arrow-circle-left"></i> Back</button>                            
+		</div>
+	</div> 
+	</div>
+	
+	
+	<div class="card card card-info border-info center m-1 hideData" id='SUBSTITUTEPAGEFORM'  >
+	<div class="card-header bg-navy">
+		<h6 class="text-left">Request Substitute Details>> Add</h6></div>
+		<div class="card-body form-group">
+		<h6><b>Request Details:</b></h6>
+	<hr class="bg-navy">
+	 
+	                  <div class='row'>
+                                      <div class='col-lg-3' ><b>Request Id :</b>	13118090000688
+  				                       </div>
+  		                              <div class='col-lg-3' ><b>Request Date :</b>	27-Sep-2018 15:37:59		 
+  				                       </div>
+  				                       <div class='col-lg-3' ><b>Hospital Name :	</b>	Aathner Betul-CHC :
+  				                       </div>
+  		                              <div class='col-lg-3' ><b>Department Name:</b>	Aathner Betul-CHC - LABOUR ROOM	 
+  				                       </div>
+  				                       <div class='col-lg-3' ><b>Request Type :	</b>	Breakdown
+  				                       </div>
+  		                              <div class='col-lg-3' ><b>Request Source</b>	Desktop
+  				                       </div>
+  				                       <div class='col-lg-3' ><b>Equipment Name</b>		AUTOCLAVE VERTICAL
+  				                       </div>
+  		                              <div class='col-lg-3' ><b>Equipment Model</b>	MODEL NOT AVAILABLE		 
+  				                       </div>
+  				                       <div class='col-lg-3' ><b>Equipment Serial No.</b>	1311
+  				                       </div>
+  		                              <div class='col-lg-3' ><b>Barcode:</b>	3759		 
+  				                       </div>
+  				                       <div class='col-lg-3' ><b>Manufacturer / Supplier Name :</b>	Aut(V)(Ind) / Aut(V)(Ind)
+  				                       </div>
+  		                              <div class='col-lg-3' ><b>Equipment Cost </b>40000.0		 
+  				                       </div>
+  				                       <div class='col-lg-3' ><b>Problem Description : </b>	Other [proper not working]
+  				                       </div>
+  		                              <div class='col-lg-3' ><b>Is Item Not in Working Condition [Date, If yes] :</b>no		 
+  				                       </div>
+  				                        <div class='col-lg-3' ><b>Contact Person Name</b>	Ramsingmarshkole	 
+  				                       </div>
+  				                       <div class='col-lg-3' ><b>Contact No. / Email Id :</b>	9617423020 / bmo.ath.bet@gmail.com 	 	
+  				                       </div>
+  		                              <div class='col-lg-3' ><b>Remarks :</b>	proper not working	 
+  				                       </div>
+  				                       <div class='col-lg-3' ><b>Upload Doc:</b>	--
+  				                       </div>
+  				                       
+  				 </div>
+  				   </div>
+  				       
+	
+	                  
+	                 <div class="card-body form-group">
+	                  <h6><b>Collapse Details Schedule/Reschedule Details:</b></h6> 
+                     <hr class="bg-navy">
+	                 <center ><h7 class="text-danger"> <b>No Details Found.</b></h7></center> 
+	                 </div>
+	                 
+	                  <div class="card-body form-group">   
+	                 <h6><b>Collapse Details Previous Substitute Details:</b></h6>
+	                 <hr class="bg-navy">
+	                  <center ><h7 class="text-danger"> <b>No Details Found.</b></h7></center> 
+	                 </div>
+	                 
+	                 <div class="card-body form-group">   
+	                 <h6><b>Collapse Details Substitute Details:</b></h6>
+	                 <hr class="bg-navy">
+	                  
+	                   <div class='row'>
+	                   <div class='col-lg-3' >
+	                  <div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="substituteName" data-langtag="Substitute Name"  >Substitute Name :</label>
+	                			<input class="form-control form-control-sm " name="substituteName"  id="substituteName" maxlength="50" data-validation="mandatory,alphabetOnly">
+	                			<div class="invalid-feedback"></div>
+	              			</div>
+	              			 </div>
+	              			<div class='col-lg-3' >
+	              	   <div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="substituteModel" data-langtag="Substitute Model"  >Substitute Model:</label>
+	                			<input class="form-control form-control-sm " name="substituteModel"  id="substituteModel" maxlength="50" data-validation="mandatory,alphabetOnly">
+	                			<div class="invalid-feedback"></div>
+	              			</div> </div>
+	              	        <div class='col-lg-3' >
+	              	    <div class="form-group">
+	              	    
+	                			<label class="col-form-label col-form-label-sm" for="substituteSerialNo" data-langtag="Substitute Serial No"  >Substitute Serial No:</label>
+	                			<input class="form-control form-control-sm " name="substituteSerialNo"  id="substituteSerialNo" maxlength="50" data-validation="mandatory,alphabetOnly">
+	                			<div class="invalid-feedback"></div>
+	              			</div></div>
+	              			
+	              			  <div class='col-lg-3' >
+	              			<div class="form-group">
+				 	             
+				 	             <label for="scales">Does the Substitute fulfill all requirementsof original equipment? :</label>
+				 	            <input type="checkbox" id="checkbox1" name="checkbox1" checked>
+                                  <div class="invalid-feedback"></div></div>
+	              		      
+					 	    </div>
+					 	       <div class='col-lg-3' >
+					 	     <div class="form-group">
+					 	     
+	                			<label class="col-form-label col-form-label-sm" for="dateSubstituteAdded" data-langtag="Date Substitute Added"  >Date Substitute Added :</label>
+	                			<input class="form-control form-control-sm " name="dateSubstituteAdded :"  id="dateSubstituteAdded" maxlength="50" data-validation="mandatory,alphabetOnly">
+	                			<div class="invalid-feedback"></div></div>
+	              			</div> 
+	              			<div class='col-lg-3' ><b>Time Substitute Added : </b>	------
+  				                       </div>
+  				                       <div class='col-lg-3' ><b>Upload Substitute Specification:</b> Select a file: <input type="file" name="myFile">	 
+  				                       </div>
+	              			
+	            </div>
+	     </div>
+	<div class="card-footer">
+		<div class="text-center">
+		      <button class='btn bg-gradient-success mt-4 btn-sm' ><i class="fa fa-save"></i>Save</button>
+              <button class="btn bg-gradient-success mt-4 btn-sm"><i class="fa fa-window-close" aria-hidden="true"></i> Clear</button>
+              <button class="btn bg-gradient-success mt-4 btn-sm" id="btnBackSub"><i class="fas fa-arrow-circle-left"></i> Back</button>                            
+		</div>
+	</div> 
+	</div>   
+	
+	
+	
+	
+	<div class="card card card-info border-info center m-1 hideData" id='SCHEDULEEPAGEFORM'  >
+	<div class="card-header bg-navy">
+		<h6 class="text-left">Request Schedule Details>> Add</h6>
+	</div>
+	<div class="card-body form-group">
+	<h6><b>Request Details:</b></h6>
+	<hr class="bg-navy">
+	 
+	                  <div class='row'>
+                                      <div class='col-lg-3' ><b>Request Id :</b>	13118090000688
+  				                       </div>
+  		                              <div class='col-lg-3' ><b>Request Date :</b>	27-Sep-2018 15:37:59		 
+  				                       </div>
+  				                       <div class='col-lg-3' ><b>Hospital Name :	</b>	Aathner Betul-CHC :
+  				                       </div>
+  		                              <div class='col-lg-3' ><b>Aathner Betul-CHC :</b>	Aathner Betul-CHC - LABOUR ROOM	 
+  				                       </div>
+  				                       <div class='col-lg-3' ><b>Request Type :	</b>	Breakdown
+  				                       </div>
+  		                              <div class='col-lg-3' ><b>Request Source</b>	Desktop
+  				                       </div>
+  				                       <div class='col-lg-3' ><b>Equipment Name</b>		AUTOCLAVE VERTICAL
+  				                       </div>
+  		                              <div class='col-lg-3' ><b>Equipment Model</b>	MODEL NOT AVAILABLE		 
+  				                       </div>
+  				                       <div class='col-lg-3' ><b>Equipment Serial No.</b>	1311
+  				                       </div>
+  		                              <div class='col-lg-3' ><b>Barcode:</b>	3759		 
+  				                       </div>
+  				                       <div class='col-lg-3' ><b>Manufacturer / Supplier Name :</b>	Aut(V)(Ind) / Aut(V)(Ind)
+  				                       </div>
+  		                              <div class='col-lg-3' ><b>Equipment Cost </b>40000.0		 
+  				                       </div>
+  				                       <div class='col-lg-3' ><b>Problem Description : </b>	Other [proper not working]
+  				                       </div>
+  		                              <div class='col-lg-3' ><b>Is Item Not in Working Condition [Date, If yes] :</b>no		 
+  				                       </div>
+  				                        <div class='col-lg-3' ><b>Contact Person Name</b>	Ramsingmarshkole	 
+  				                       </div>
+  				                       <div class='col-lg-3' ><b>Contact No. / Email Id :</b>	9617423020 / bmo.ath.bet@gmail.com 	 	
+  				                       </div>
+  		                              <div class='col-lg-3' ><b>Remarks :</b>	proper not working	 
+  				                       </div>
+  				                       <div class='col-lg-3' ><b>Upload Doc:</b>	--
+  				                       </div>
+  				                       </div>
+  				                       </div>
+ 
+ 
+   
+	    <div class="card-body form-group">
+	                 <h6><b>Complaint Schedule</b></h6>
+	                 <hr class="bg-navy">
+	                  
+	                   <div class='row' >
+	                <div class='col-lg-3' >
+					 	 <div class="form-group">	
+					 	<b>Intimation Date :</b> </br>
+					 	<input type="date" name="bday">
+					 	</div></div>
+	                 
+	                 
+	                 <div class='col-lg-3' >
+	              	    <div class="form-group">
+	              	    
+	                			<label class="col-form-label col-form-label-sm" for="intimationTime" data-langtag="Intimation Time"  >Intimation Time : :</label>
+	                			<input class="form-control form-control-sm " name="intimationTime"  id="intimationTime" maxlength="50" data-validation="mandatory,alphabetOnly">
+	                			<div class="invalid-feedback"></div>
+	              			</div></div>
+	                 
+	                <div class='col-lg-3' >
+					 	 <div class="form-group">	
+					 	<b>Expected Visit Date :</b><br> <input type="date" name="bday">
+					 	</div></div>
+	              	<div class='col-lg-3' >
+	              	    <div class="form-group">
+	              	    
+	                			<label class="col-form-label col-form-label-sm" for="expectedVisitTime" data-langtag="Expected Visit Time "  >Expected Visit Time :</label>
+	                			<input class="form-control form-control-sm " name="expectedVisitTime"  id="expectedVisitTime" maxlength="50" data-validation="mandatory,alphabetOnly">
+	                			<div class="invalid-feedback"></div>
+	              			</div></div>	
+	              			
+	              	<div class='col-lg-3' >
+	              	    <div class="form-group">
+	              	    
+	                			<label class="col-form-label col-form-label-sm" for="serviceEngineerName " data-langtag="Service Engineer Name "  >Service Engineer Name  :</label>
+	                			<input class="form-control form-control-sm " name="serviceEngineerName"  id="serviceEngineerName" maxlength="50" data-validation="mandatory,alphabetOnly">
+	                			<div class="invalid-feedback"></div>
+	              			</div></div>
+	              		<div class='col-lg-3' >
+	              	    <div class="form-group">
+	              	    
+	                			<label class="col-form-label col-form-label-sm" for="serviceEngineerContactNumber " data-langtag="Service Engineer Contact Number "  >Service Engineer Contact Number :</label>
+	                			<input class="form-control form-control-sm " name="serviceEngineerContactNumber"  id="serviceEngineerContactNumber" maxlength="50" data-validation="mandatory,alphabetOnly">
+	                			<div class="invalid-feedback"></div>
+	              			</div></div>	
+	              		<div class='col-lg-3' >
+	              	    <div class="form-group">
+	              	    
+	                			<label class="col-form-label col-form-label-sm" for="email " data-langtag="E-mail  "  >E-mail   :</label>
+	                			<input class="form-control form-control-sm " name="email"  id="email" maxlength="50" data-validation="mandatory,alphabetOnly">
+	                			<div class="invalid-feedback"></div>
+	              			</div></div>	
+	              		<div class='col-lg-3' >
+	              	    <div class="form-group">
+	              	    
+	                			<label class="col-form-label col-form-label-sm" for="remarks " data-langtag="Remarks "  >Remarks  :</label>
+	                			<textarea class="form-control form-control-sm " name="remarks"  id="remarks" maxlength="50" data-validation="mandatory,alphabetOnly"></textarea>
+	                			<div class="invalid-feedback"></div>
+	              			</div></div>			
+	              	
+	              			
+	              			
+	                 
+	    
+	    </div>
+	         </div>        
+	                 
+	 <div class="card-footer">
+		<div class="text-center">
+		      <button class='btn bg-gradient-success mt-4 btn-sm' ><i class="fa fa-save"></i> Save</button>
+              <button class="btn bg-gradient-success mt-4 btn-sm"><i class="fa fa-window-close" aria-hidden="true"></i> Clear</button>
+              <button class="btn bg-gradient-success mt-4 btn-sm" id="btnBackSchedule"><i class="fas fa-arrow-circle-left"></i> Back</button>                            
+		</div>
+	</div>
+	</div>  
+ 
+  
+
+
+  		                                   
+	

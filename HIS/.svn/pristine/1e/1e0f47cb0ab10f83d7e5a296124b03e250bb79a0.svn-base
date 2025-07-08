@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link rel="stylesheet" href="/HIS/hisglobal/eUpkaranTemplate/dist/css/adminlte.min.css">
+</head>
+<body>
+
+<div style="letter-spacing: 1px;">
+<style type="text/css">
+.table td, .table th{
+	padding: 2px;
+	border: none;
+}
+</style>
+<table class='table' style="width: 100%">
+<tbody>
+ <tr>
+   <td  style="text-decoration: underline;font-weight: bold;text-align: left;"><h4>Term and Condition -</h4></td>
+</tr>
+<tr>
+   <td  style="font-weight: bold;text-align: left;"><h6><b>(1)</b>&nbsp;The rate indicated is firm and includes all cost like packing and forwardina
+inland transport, insurance and other cost incidental to delivery, erection testina and commission at site</h6></td>   
+</tr>
+
+<tr>
+   <td  style="font-weight: bold;text-align: left;"><h6><b>(2)</b>&nbsp; In the invoice "Govt. of Tamil Nadu supply" to be mentioned along with TNMSC.
+GST no. #gstNo# in the "To" address column. </h6></td>   
+</tr>
+
+<tr>
+   <td  style="font-weight: bold;text-align: left;"><h6><b>(3)</b>&nbsp; The total value indicated above is inclusive of variable GST @ 12%, 18% and 28%.
+</h6></td>   
+</tr>
+
+
+<tr>
+   <td  style="font-weight: bold;text-align: left;"><h6><b>(4)</b>&nbsp;The rate for the consumable, Stryker blades (Cat.no: #CatNo#), is fixed
+at Rs.1,370/-.</h6></td>   
+</tr>
+
+<tr>
+   <td  style="font-weight: bold;text-align: left;"><h6><b>(5)</b>&nbsp;The item shall be manufactured and installed strictly as per the Tender
+Specifications in Annexure-I, your bid and subsequent correspondences.</h6></td>   
+</tr>
+
+<tr>
+   <td  style="font-weight: bold;text-align: left;"><h6><b>(6)</b>&nbsp; The equipment shall be supplied and installed at places indicated at
+Annexure-II within 90 days from the date of purchase order.</h6></td>   
+</tr>
+
+<tr>
+   <td  style="font-weight: bold;text-align: left;"><h6><b>(7)</b>&nbsp; If you fail to deliver any or all of the goods or perform the services within the
+period specified above, liquidated damages will be levied at 0.5% of the value of
+the delayed goods or unperformed service for each week of delay or part thereof
+until actual delivery or performance up to a maximum deduction of 10% of the
+contract price.</h6></td>   
+</tr>
+
+<tr>
+   <td  style="font-weight: bold;text-align: left;"><h6><b>(8)</b>&nbsp;You shall warrant the goods supplied under this contract free from defects
+arising out of design, materials, workmanship etc., for a period of 3 years from the
+date of installation at the site.</h6></td>   
+</tr>
+
+
+<tr>
+   <td  style="font-weight: bold;text-align: left;"><h6><b>(9)</b>&nbsp; You shall undertake maintenance including replacement of defective spares of
+the equipment and its accessories during the warranty period at free of cost.</h6></td>   
+
+</tr>
+</tbody>
+</table>
+
+<table style="width: 100%;length:50%;font-size:11px;margin-top: 10px;" class='tbldatavo2'>
+<thead>
+	<tr >
+	<th style="border:1px solid;vertical-align: top; width:15%;text-align: center;background:#dee2e6" >Equipment</th>
+	<th colspan="2" style="border:1px solid;vertical-align: top; width:25%;text-align: center;background:#dee2e6">CAMC Rate per unit for 7 years after 3 years warranty (excl.GST@ #gstTax#) </th>
+	
+	
+	</tr>
+</thead>
+<tbody>
+<tr>
+
+
+<td style="border:1px solid;vertical-align: top;text-align: left;padding-right:5px">#equipmentName#</td>
+<td style="border:1px solid;vertical-align: top;text-align: center">#camcYear#</td>
+<td style="border:1px solid;vertical-align: top;text-align: center;padding-right:5px">#camcCost#</td>
+
+
+</tr>
+</tbody>
+
+</table>
+
+
+
+<table class='table' style="width: 100%">
+<tbody>
+
+<tr>
+   <td  style="font-weight: bold;text-align: left;"><h6><b>(10)</b>&nbsp; After successful completion of #warranryYear# years warranty period, comprehensive annual
+maintenance contract including replacement of defective spares will be undertaken
+by you at the following rates per year per unit (excluding service tax) after #warranryYear# years
+warranty from the date of acceptance of the equipment.</h6></td>   
+</tr>
+
+<tr>
+   <td  style="font-weight: bold;text-align: left;"><h6><b>(11)</b>&nbsp; Within days from the date of receipt of this order you shall arrange to furnish
+a performance security for 5% of the contract price in the form of Demand Draft
+or Bank Guarantee in the form provided in the bidding document, valid upto 60
+days after completion of performance obligation including warranty obligation.</h6></td>   
+</tr>
+
+<tr>
+   <td  style="font-weight: bold;text-align: left;"><h6><b>(12)</b>&nbsp; After successful completion of  #warranryYear# years warranty period, you shall furnis a
+performance security for 5% of Comprehensive AMC value applicable for 7 years
+maintenance period either in the form of Demand Draft or Bank Guaranty valid for
+7 years period of maintenance. Only after furnishing the above mentioned
+performance security for maintenance, the performance security furnished for 5%
+of supply value will be returned.</h6></td>   
+</tr>
+
+<tr>
+   <td  style="font-weight: bold;text-align: left;"><h6><b>(13)</b>&nbsp; 50% of value of performance security will be discharged and returned not later
+than 60 days following the date of completion of the supplier's performance
+obligations including any warranty obligations. The balance 50% of the
+performance security will be released after entering into a comprehensive
+maintenance contract after the warranty period and on payment of required
+performance security for the CAMC contract. However in no case, the performance
+security will be returned before the date of completion of the warranty obligation.
+After successful completion of warranty period of  #warranryYear# years, you shall furnish
+performance security for 5% of the comprehensive AMC applicable for 7 years
+maintenance period valid for 7 years period of maintenance.</h6></td>   
+</tr>
+
+<tr>
+   <td  style="font-weight: bold;text-align: left;"><h6><b>(14)</b>&nbsp; You shall enter into a contract with TNMSC Ltd., in Rs.100/- Non-Judicial Stamp
+Paper in the format provided in the bidding document within 7 days from the date
+of receipt of this Purchase Order and also enter in to an agreement for CAMC
+applicable after #warranryYear# years within 7 days from the date of receipt of this order in the
+model agreement enclosed with this purchase order.</h6></td>   
+</tr>
+
+<tr>
+   <td  style="font-weight: bold;text-align: left;"><h6><b>(15)</b>&nbsp; Further as TNMSC is procuring and supplying the drugs and medicines,
+equipment etc., on behalf of Govt. of Tamil Nadu, each supplier/vendor should be
+advised to mention "Tamil Nadu Government Supply" in the invoices under consignee column without fail.</h6></td>   
+</tr>
+
+<tr>
+   <td  style="font-weight: bold;text-align: left;"><h6><b>(16)</b>&nbsp;Also in all the bills of inward supplies should have the TNMSC's GST number to
+ avail the eligible input credit by TNMSC.</h6></td>   
+</tr>
+
+<tr>
+   <td  style="font-weight: bold;text-align: left;"><h6><b>(17)&nbsp;<u>Payment:</u><br> </b> Payment for Goods and Services shall be made in Indian Rupees as following.</h6></td>
+</tr>
+
+<tr>
+   <td  style="font-weight: bold;text-align: left;"><h6><b>Advance Payment: </b> &nbsp;Ten (10) percent of the Contract PriIce shall be paid of
+within thirty days (30), upon signing of the Contract and upon submission of
+invoice and a bank guarantee for the equivalent amount valid until the Goods and
+Related Services are delivered and in the form provided in the Bidding Documents
+or another form acceptable to the Purchaser.</h6></td>
+</tr>
+
+<tr>
+   <td  style="font-weight: bold;text-align: left;"><h6><b>On Supply: </b> &nbsp;Seventy (70) percent of the Contract Price shall be paid within thirty
+(30) days after receipt of invoice and the documents specified in GC Clause 9 along
+with certification from the consignee/end user for receipt of consignment as per
+the description in the packing list and in good condition. This is applicable only
+when the site is ready for taking up installation immediately after the supply.</h6></td>
+</tr>
+
+<tr>
+   <td  style="font-weight: bold;text-align: left;"><h6><b>On Acceptance: </b> &nbsp; Twenty (20) percent of the Contract Price shall be paid within
+thirty (30) days after receipt of invoice along with installation certificate along with
+point wise compliance statement of the technical specification indicated in
+Annexure I of this Purchase Order, in the format at Annexure III and stock entry
+certificate from the end user in a proforma acceptable to the purchaser.
+Subject to the following terms:-</h6></td>
+</tr>
+
+<tr>
+   <td  style="font-weight: bold;text-align: left;"><h6>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>(a)</b>&nbsp; If the installation could not be taken up immediately after the supply, duE
+reason of non-readiness of site, 40% of the supply value will be released agains supply and certification from the consignee/end user for receipt of consignment
+as per the description in the packing list and in good condition. The remaining 30% of the supply value will be released after the site is ready for taking u
+installation.</h6></td>   
+</tr>
+
+<tr>
+   <td  style="font-weight: bold;text-align: left;"><h6>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>(b)</b>&nbsp;  The balance 20% is payable as per point no. (ii) above.
+</h6></td>   
+</tr>
+
+<tr>
+   <td  style="font-weight: bold;text-align: left;"><h6>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>(c)</b>&nbsp;  For items ordered in bulk quantities, the first payment will be released only after
+Supply / installation of atleast 20% of the ordered quantity or Rs.25,00 lak
+whichever is less,</h6></td>   
+</tr>
+
+<tr>
+   <td  style="font-weight: bold;text-align: left;"><h6>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>(d)</b>&nbsp;  If the price indludes customs duty, relevant documentary evidence for impo of the equipment/ goods (Bill of lading Airwary Bill, Bill of entryy copy) 
+and proof for payment of Custom duty shall be furnished.</h6></tr>
+</tr>
+
+<tr>
+   <td  style="font-weight: bold;text-align: left;"><h6>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>(e)</b>&nbsp;   Payment will be made either by means of Cheque or through RTGS (Real Time
+Gross Settlement System)/ Core Banking / NEFT (Net Electronic Fund Transfer).
+<br><br></h6></tr>
+
+
+<tr>
+   <td  style="font-weight: bold;text-align: left;"><h6>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   All other terms and conditions of the bid document are applicable to this
+order. Receipt of the order may please be acknowledged. </h6></td>   
+</tr>
+
+<tr>
+   <td  style="font-weight: bold;text-align: left;"><h6>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ Receipt of the order may be acknowledged. </h6></td>   
+</tr>
+
+<tr>
+   <td  style="font-weight: bold;text-align: right;"><h5><b>Sd/-</b><br> </h5></td>   
+</tr>
+
+
+<tr>
+   <td  style="font-weight: bold;text-align: right;"><h5><b>Managing Director</b> <br></h5></td>   
+</tr>
+
+
+<tr>
+   <td  style="font-weight: bold;text-align: center;"><h5><b> \\ True Copy \\ By order \\ <br><br></b></h5></td>   
+</tr>
+
+<tr>
+   <td  style="font-weight: bold;text-align: center;"><h5><b> Authorized Signatory <br><br></b></h5></td>   
+</tr>
+
+<tr>
+   <td  style="font-weight: bold;text-align: left;"><h5><b>Copy to:</b><br> </h5></td>   
+</tr>
+
+
+<tr>
+   <td  style="font-weight: bold;text-align: left;"><h5><b>The Dean</b> <br></h5></td>   
+</tr>
+
+
+<tr>
+   <td  style="font-weight: bold;text-align: left;"><h5><b> #institutionName# <br></b></h5></td>   
+</tr>
+
+<tr>
+   <td  style="font-weight: bold;text-align: left;"><h5><b> #institutionAddress# </b></h5></td>   
+</tr>
+
+
+
+
+</tbody>
+</table>
+
+
+
+
+</div>
+</body>
+</html>

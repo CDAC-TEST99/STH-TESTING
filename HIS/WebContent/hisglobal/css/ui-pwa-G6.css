@@ -1,0 +1,22 @@
+/* Scollbar */
+::-webkit-scrollbar {
+  width: 10px;   
+}
+
+::-webkit-scrollbar-track {
+  background: white;
+  border: 1px solid #e8e9ea;
+ 
+}
+ 
+::-webkit-scrollbar-thumb {
+  background: lightgray;
+  border-radius:25px;
+/*   border: .09em solid lightgray;*/
+
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background:  #007bff; 
+  
+  /* Scollbar */

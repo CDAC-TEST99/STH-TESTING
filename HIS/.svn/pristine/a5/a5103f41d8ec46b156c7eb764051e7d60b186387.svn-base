@@ -1,0 +1,804 @@
+<script>
+$(document).ready(function () {
+	$('#btnview').click(function(){
+		$('#LISTFORM').addClass('hideData');
+		$('#VIEWPAGEFORM ').removeClass('hideData');		
+	});
+	
+	$('#btnBack').click(function(){
+		$('#LISTFORM').removeClass('hideData');
+		$('#VIEWPAGEFORM ').addClass('hideData');		
+	});
+	
+	$('#btnDispatch').click(function(){
+		$('#LISTFORM').addClass('hideData');
+		$('#DISPATCHFORM ').removeClass('hideData');		
+	});
+	
+	$('#btnCancel1').click(function(){
+		$('#LISTFORM').removeClass('hideData');
+		$('#DISPATCHFORM ').addClass('hideData');		 
+	});
+	
+	$('#btnUpload').click(function(){
+		$('#LISTFORM').addClass('hideData');
+		$('#UPLOADFORM ').removeClass('hideData');		
+	});
+	
+	$('#btnCancel2').click(function(){
+		$('#LISTFORM').removeClass('hideData');
+		$('#UPLOADFORM ').addClass('hideData');		 
+	});
+})
+</script>
+
+<div class="card card-info border-info center m-1" id='LISTFORM' >
+			<div class="card-header bg-navy"><h5 class="card-title text-center ">Supplier Interface Desk</h5>
+			</div>
+
+
+	<div class="card-body form-group">
+ 	
+  			<div class="row " >
+					
+						<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="supplierName" data-validation="mandatory" data-langtag="Supplier Name" >Supplier Name</label>
+	                			<select class="form-control form-control-sm  " id ='supplierName' name="supplierName">
+	                				<option value="" selected="selected">Select Supplier Name</option>
+	                				<option title="ACME" selected="" value="1810144">ACME</option>
+									<option title="Adarsh Enterprises" value="1812088">Adarsh Enterprises</option>
+									<option title="Adonis Medical Systems Private Limited" value="1810444">Adonis Medical Systems Private Limited</option>
+									<option title="Agilent Technologies India Pvt Ltd" value="1812089">Agilent Technologies India Pvt Ltd</option>
+									<option title="AIM Healthcare" value="1812086">AIM Healthcare</option>
+									<option title="ALLIED MEDICAL LTD" value="1810031">ALLIED MEDICAL LTD</option>
+									<option title="Anthrometriques Medical Instruments" value="1812090">Anthrometriques Medical Instruments</option>
+									<option title="Anu Sales Corporation" value="1812091">Anu Sales Corporation</option>
+									<option title="Appasamy Associates" value="1810042">Appasamy Associates</option>
+									<option title="Arsh Traders" value="1812093">Arsh Traders</option>
+	                			</select>
+	              				<div class="invalid-feedback"></div>
+ 	  						</div>
+	 					</div>
+	 					
+	 					<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="poStatus" data-validation="mandatory" data-langtag="PO Status" >PO Status</label>
+	                			<select class="form-control form-control-sm  " id ='poStatus' name="poStatus">
+	                				<option value="" selected="selected">Select PO Status</option>
+	                				<option title="All" selected="" value="0">All</option>
+									<option title="Approved" value="12">Approved</option>
+									<option title="Delivery Start" value="17">Delivery Start</option>
+									<option title="Delivery Complete" value="18">Delivery Complete</option>
+									<option title="Closed" value="19">Closed</option>
+	                			</select>
+	              				<div class="invalid-feedback"></div>
+ 	  						</div>
+	 					</div>
+	 					
+	 					<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="poList" data-validation="mandatory" data-langtag="PO(s) List" >PO(s) List</label>
+	                			<select class="form-control form-control-sm  " id ='poList' name="poList">
+									<option title="All" selected="" value="0">All</option>
+									<option title="718099980108" value="718099980108">718099980108</option>
+									<option title="718099980109" value="718099980109">718099980109</option>
+									<option title="718099980110" value="718099980110">718099980110</option>
+									<option title="718099980111" value="718099980111">718099980111</option>
+									<option title="718099980203" value="718099980203">718099980203</option>
+									<option title="718099980221" value="718099980221">718099980221</option>
+									<option title="718099980253" value="718099980253">718099980253</option>
+									<option title="718099980282" value="718099980282">718099980282</option>
+									<option title="718099980286" value="718099980286">718099980286</option>
+									<option title="718109980190" value="718109980190">718109980190</option>
+									<option title="718109980227" value="718109980227">718109980227</option>
+									<option title="718109980233" value="718109980233">718109980233</option>
+									<option title="718109980277" value="718109980277">718109980277</option>
+	                			</select>
+	              				<div class="invalid-feedback"></div>
+ 	  						</div>
+	 					</div>
+	 					
+	 		</div>
+	 			
+ 			<div class="text-center">
+				<button class="btn   bg-gradient-success btn-sm" id="btnDispatch"><i class="fa fa-truck" aria-hidden="true"></i> Dispatch</button>
+				<button class="btn   bg-gradient-success btn-sm" id="btnPrint"><i class="fa fa-print"></i> Print</button>
+				<button class="btn   bg-gradient-success btn-sm" id="btnview"><i class="fa fa-eye" aria-hidden="true"></i> View</button>
+				<button class="btn   bg-gradient-success btn-sm" id="btnUpload"><i class="fa fa-upload"></i> Upload</button>
+			</div>
+			
+			
+			<div class='row'>
+				<div class='col-lg-4'>	
+					<div class="form-group row">                   
+	                    <div class="col-sm-10">
+	                      <input type="text" class="form-control" id="search" placeholder="Search">
+	                    </div>
+	                  </div>
+				</div>
+			</div>	
+			
+			<div class='row no-more-tables'>
+				<table class="table table-hover">
+				  <thead class="bg-navy">
+				      <tr>
+				      	<th><input type="checkbox"></th>
+				        <th>PO No.</th>
+				        <th>Dispatch No.</th>
+				        <th>Equipment Name</th>
+				        <th>Consignee Name</th>
+				        <th>Dispatch No.</th>
+				        <th>Serial No./Qty.</th>
+				        <th>Status</th>
+				      </tr>
+				    </thead>
+				    <tbody>
+				     <tr>
+				      	<td class='d-none d-sm-block' ><input type="checkbox"></td>
+				        <td data-title='PO No.'>718099980221</td>
+				        <td data-title='Dispatch No.'>818129980002</td>
+				        <td data-title='Equipment Name'>Hospital Bed SS with mattress</td>
+				        <td data-title='Consignee Name'>Chopna Betul-PHC</td>
+				        <td data-title='Dispatch Date'>01-Dec-2018</td>
+				        <td data-title='Serial No./Qty.'>cp/1/1</td>
+				        <td data-title='Status'>Dispatched</td>
+				      </tr>
+				       <tr>
+				      	<td class='d-none d-sm-block' ><input type="checkbox"></td>
+				        <td data-title='PO No.'>718099980221</td>
+				        <td data-title='Dispatch No.'>818129980002</td>
+				        <td data-title='Equipment Name'>Hospital Bed SS with mattress</td>
+				        <td data-title='Consignee Name'>Chopna Betul-PHC</td>
+				        <td data-title='Dispatch Date'>01-Dec-2018</td>
+				        <td data-title='Serial No./Qty.'>cp/7/1</td>
+				        <td data-title='Status'>Dispatched</td>
+				      </tr>
+				      <tr>
+				      	<td class='d-none d-sm-block' ><input type="checkbox"></td>
+				        <td data-title='PO No.'>718099980221</td>
+				        <td data-title='Dispatch No.'>818129980002</td>
+				        <td data-title='Equipment Name'>Hospital Bed SS with mattress</td>
+				        <td data-title='Consignee Name'>Chopna Betul-PHC</td>
+				        <td data-title='Dispatch Date'>01-Dec-2018</td>
+				        <td data-title='Serial No./Qty.'>cp/5/1</td>
+				        <td data-title='Status'>Dispatched</td>
+				      </tr>
+				    </tbody>
+				 </table>	
+			</div>
+	
+   </div>
+</div>
+
+
+
+<div class="card card card-info border-info center m-1 hideData" id='DISPATCHFORM' >
+			<div class="card-header bg-navy"><h5 class="card-title text-center ">Supplier Interface Desk >> Dispatch Details(s)</h5>
+			</div>
+
+
+	<div class="card-body form-group">
+	
+	
+			<h6><b>Work Order Detail :</b></h6>
+			<hr class="bg-navy">
+	 		<div class='row'>
+				  		<div class='col-lg-3' >
+				  				<div><b>Purchasing Authority :</b> Barwani-CMHO </div>	
+				  				<div><b>PO Ref. No. :</b> 718099980108</div> 
+				  				<div><b>Status :</b> Approved</div>
+				  		</div>
+				  		<div class='col-lg-3' >	
+				  				<div><b>Financial Year :</b>  2018-2019</div>
+				  				<div><b>PO Date :</b> 24-Sep-2018</div>
+						</div>
+						<div class='col-lg-3' >	
+								<div><b>PO Type :</b> Central Purchase</div>	
+								<div><b>Supplier Name :</b> Acme</div>	 
+						</div>
+						<div class='col-lg-3' >	
+								<div><b>Tender No. :</b> NIT-149</div>
+								<div><b>Funding Source :</b> State</div>
+						</div> 	
+			</div>
+			<br>
+			
+			<h6><b> Collapse Details Consignee Equipment Details :</b></h6>
+			<hr class="bg-navy">
+			
+			<div class='row no-more-tables'>
+				<table class="table table-hover">
+				  <thead class="bg-light">
+				      <tr>
+				        <th>S. No.</th>
+				        <th>Consignee Name</th>
+				        <th>Equipment Name</th>
+				        <th>Model Name</th>
+				        <th>Rate Contract No.</th>
+				        <th>Rate/Unit inclusive Tax(Rs.)</th>
+				        <th>Ordered Qty</th>
+				        <th>Remaining Qty</th>
+				        <th>Dispatched Qty</th>
+				      </tr>
+				    </thead>
+				    <tbody>
+				     <tr>
+				        <td data-title='S. No.'>1</td>
+				        <td data-title='Consignee Name'>Barla Barwani-CHC</td>
+				        <td data-title='Equipment Name'>Hospital Bed SS with mattress</td>
+				        <td data-title='Model Name'>ACME1013</td>
+				        <td data-title='Rate Contract No.'>218099980028</td>
+				        <td data-title='Rate/Unit inclusive Tax(Rs.)'>9086.00</td>
+				        <td data-title='Ordered Qty'>20</td>
+				        <td data-title='Remaining Qty'>20</td>
+				        <td data-title='Dispatched Qty'>0</td>
+				      </tr>
+				    </tbody>
+				 </table>	
+			</div>
+			
+			
+			
+			<h6><b>Previous Dispatch Details(s) :</b></h6>
+			<hr class="bg-navy">
+			
+			<div class='row no-more-tables'>
+				<table class="table table-hover">
+				  <thead class="bg-light">
+				      <tr>
+				        <th>S. No.</th>
+				        <th>Consignee Name</th>
+				        <th>Equipment Name</th>
+				        <th>Serial No./ Catalog No.</th>
+				        <th>Quantity</th>
+				        <th>Invoice No.</th>
+				        <th>Invoice Date</th>
+				        <th>Received Date</th>
+				        <th>Status</th>
+				      </tr>
+				    </thead>
+				    <tbody>
+				     <tr>
+				        <td data-title='S. No.'>1</td>
+				        <td data-title='Consignee Name'>Barla Barwani-CHC</td>
+				        <td data-title='Equipment Name'>Hospital Bed SS with mattress</td>
+				        <td data-title='Serial No./ Catalog No.'>123456</td>
+				        <td data-title='Quantity'>1</td>
+				        <td data-title='Invoice No.'>78451296</td>
+				        <td data-title='Invoice Date'>20-DEC-2019</td>
+				        <td data-title='Received Date'>21-DEC-2019</td>
+				        <td data-title='Status'>Dispatched</td>
+				      </tr>
+				    </tbody>
+				 </table>	
+			</div>
+	
+	
+	
+	
+	
+ 			<h6><b>Dispatch Details :</b></h6>
+			<hr class="bg-navy">
+  			
+  			<div class="row " >
+  					<div class='col-lg-3' >
+				 		<div class="form-group">
+	            			<label class="col-form-label col-form-label-sm" for="=invoiceNo"  data-langtag="Invoice No."  data-validation="mandatory">Invoice No.</label>
+	            		   	<text class="form-control form-control-sm "  id="invoiceNo" name="invoiceNo" maxlength="50" ></text>
+	          				<div class="invalid-feedback"></div>
+	 	  				</div>
+	 				</div>
+  					
+  					<div class='col-lg-3' >
+				 		<div class="form-group">
+	            			<label class="col-form-label col-form-label-sm" for="invoiceDate"  data-langtag="Invoice Date"  data-validation="mandatory">Invoice Date</label>
+	            		   	<input type="date" class="form-control form-control-sm "  id="invoiceDate" name="invoiceDate" maxlength="50" >
+	          				<div class="invalid-feedback"></div>
+	 	  				</div>
+	 				</div> 
+	 				
+	 				<div class='col-lg-3' >
+				 		<div class="form-group">
+	            			<label class="col-form-label col-form-label-sm" for="=expDeliveryDays"  data-langtag="Expected Delivery Days :"  data-validation="mandatory">Expected Delivery Days</label>
+	            		   	<text class="form-control form-control-sm "  id="expDeliveryDays" name="expDeliveryDays" maxlength="50" ></text>
+	          				<div class="invalid-feedback"></div>
+	 	  				</div>
+	 				</div>
+						
+					<div class='col-lg-3' >
+				 		<div class="form-group">
+                			<label class="col-form-label col-form-label-sm" for="deliveryMode" data-validation="mandatory" data-langtag="Delivery Mode" >Delivery Mode</label>
+                			<select class="form-control form-control-sm  " id ='deliveryMode' name="deliveryMode">
+                				<option value="" selected="selected">Select Delivery Mode</option>
+                				<option value="" >Air</option>
+                				<option value="" >Hand Delivery</option>
+                				<option value="" >Courier</option>
+                				<option value="" >Auto</option>
+                			</select>
+              				<div class="invalid-feedback"></div>
+	  						</div>
+ 					</div>
+ 					
+ 					<div class='col-lg-3' >
+				 		<div class="form-group">
+	            			<label class="col-form-label col-form-label-sm" for="deliveryDetail"  data-langtag="Delivery Detail"  data-validation="mandatory">Delivery Detail</label>
+	            		   	<textarea class="form-control form-control-sm "  id="deliveryDetail" name="deliveryDetail" maxlength="50" ></textarea>
+	          				<div class="invalid-feedback"></div>
+	 	  				</div>
+	 				</div>
+	 				
+	 				<div class='col-lg-3' >
+				 		<div class="form-group">
+	            			<label class="col-form-label col-form-label-sm" for="remarks"  data-langtag="Remarks"  data-validation="mandatory">Remarks</label>
+	            		   	<textarea class="form-control form-control-sm "  id="remarks" name="remarks" maxlength="50" ></textarea>
+	          				<div class="invalid-feedback"></div>
+	 	  				</div>
+	 				</div>
+	 				
+	 				<div class='col-lg-3' >
+		 				<div class="form-group">
+                			<label class="col-form-label col-form-label-sm" for="invoiceReport" data-langtag="Invoice Report" data-validation="mandatory"><b>Invoice Report</b></label>
+                   			<input type="file" class="form-control-file" id="invoiceReport">
+                			<div class="invalid-feedback"></div>
+		              	</div>
+	 				</div> 	
+	 				
+	 				<div class='col-lg-3' >
+		 				<div class="form-group">
+                			<label class="col-form-label col-form-label-sm" for="inspectionCertificate" data-langtag="Inspection Certificate"><b>Inspection Certificate</b></label>
+                   			<input type="file" class="form-control-file" id="inspectionCertificate">
+                			<div class="invalid-feedback"></div>
+		              	</div>
+	 				</div> 	
+	 				
+	 				<div class='col-lg-3' >
+		 				<div class="form-group">
+                			<label class="col-form-label col-form-label-sm" for="insuranceCertificate" data-langtag="Insurance Certificate" ><b>Insurance Certificate</b></label>
+                   			<input type="file" class="form-control-file" id="insuranceCertificate">
+                			<div class="invalid-feedback"></div>
+		              	</div>
+	 				</div> 	
+	 				
+	 				<div class='col-lg-3' >
+		 				<div class="form-group">
+                			<label class="col-form-label col-form-label-sm" for="packingList" data-langtag="Packing List" data-validation="mandatory"><b>Packing List</b></label>
+                   			<input type="file" class="form-control-file" id="packingList">
+                			<div class="invalid-feedback"></div>
+		              	</div>
+	 				</div> 	
+		
+	 		</div>
+			
+			<h6><b>Equipment Detail(s) :</b></h6>
+			<hr class="bg-navy">
+			<div class="row " >
+			
+					<div class='col-lg-3' >
+				 		<div class="form-group">
+                			<label class="col-form-label col-form-label-sm" for="consigneeStore" data-validation="mandatory" data-langtag="Consignee Store" >Consignee Store</label>
+                			<select class="form-control form-control-sm  " id ='consigneeStore' name="consigneeStore">
+                				<option value="" selected="selected">Select Consignee Store</option>
+								<option title="Barla  Barwani-CHC" value="5001858">Barla  Barwani-CHC</option>
+                			</select>
+              				<div class="invalid-feedback"></div>
+	  					</div>
+ 					</div>
+ 					
+ 					<div class='col-lg-3' >
+				 		<div class="form-group">
+                			<label class="col-form-label col-form-label-sm" for="equipmentName" data-validation="mandatory" data-langtag="Equipment Name/Institute Furniture" >Equipment Name/Institute Furniture</label>
+                			<select class="form-control form-control-sm  " id ='equipmentName' name="equipmentName">
+                				<option value="" selected="selected">Select Equipment Name</option>
+									<option title="3 Fold Labour Table Ss With Foam Mattress [99999]" value="18000306">3 Fold Labour Table Ss With Foam Mattress [99999]</option>
+									<option title="Abg Machine [10001]" value="18000001">Abg Machine [10001]</option>
+									<option title="Iv Stand Ss [42]" value="18000162">Iv Stand Ss [42]</option>
+									<option title="Weighing Machine Pediatrics [10139]" value="18000139">Weighing Machine Pediatrics [10139]</option>
+                			</select>
+              				<div class="invalid-feedback"></div>
+	  					</div>
+ 					</div>
+ 					
+ 					<div class='col-lg-3' >
+				 		<div class="form-group">
+                			<label class="col-form-label col-form-label-sm" for="installtaionType" data-validation="mandatory" data-langtag="Installataion Type" >Installataion Type</label>
+                			<select class="form-control form-control-sm  " id ='installtaionType' name="equipmentName">
+                				<option value="" selected="selected">Select Installtaion Type</option>
+                				 <option value="" >Onsite</option>
+                				 <option value="" >Offsite</option>
+                			</select>
+              				<div class="invalid-feedback"></div>
+	  					</div>
+ 					</div>
+ 					
+ 					<div class='col-lg-3' >
+				 		<div class="form-group">
+                			<label class="col-form-label col-form-label-sm" for="trainingRequired" data-validation="mandatory" data-langtag="Training Required" >Training Required</label>
+                			<select class="form-control form-control-sm  " id ='trainingRequired' name="trainingRequired">
+                				<option value="" selected="selected">Yes</option>
+                				<option value="">No</option>
+                			</select>
+              				<div class="invalid-feedback"></div>
+	  					</div>
+ 					</div>
+ 			 </div>
+ 			 
+ 			 <div class="row " >
+	 				<div class='col-lg-3' >
+				 		<div class="form-group">
+	            			<label class="col-form-label col-form-label-sm" for="serialNo"  data-langtag="Serial No."  data-validation="mandatory">Serial No.</label>
+	            		   	<text class="form-control form-control-sm "  id="serialNo" name="serialNo" maxlength="50" ></text>
+	          				<div class="invalid-feedback"></div>
+	 	  				</div>
+	 				</div>
+	 				
+	 				<div class='col-lg-3' >
+				 		<div class="form-group">
+	            			<label class="col-form-label col-form-label-sm" for="serviceEngineersName"  data-langtag="Service Engineers Name"  data-validation="mandatory">Service Engineers Name</label>
+	            		   	<text class="form-control form-control-sm "  id="serviceEngineersName" name="serviceEngineersName" maxlength="50" ></text>
+	          				<div class="invalid-feedback"></div>
+	 	  				</div>
+	 				</div>
+	 				
+	 				<div class='col-lg-3' >
+				 		<div class="form-group">
+	            			<label class="col-form-label col-form-label-sm" for="mobileNo"  data-langtag="Mobile No."  data-validation="mandatory">Mobile No.</label>
+	            		   	<text class="form-control form-control-sm "  id="mobileNo" name="mobileNo" maxlength="50" ></text>
+	          				<div class="invalid-feedback"></div>
+	 	  				</div>
+	 				</div>
+	 				
+	 				<div class='col-lg-3' >
+				 		<div class="form-group">
+	            			<label class="col-form-label col-form-label-sm" for="emailId"  data-langtag="Email Id"  data-validation="mandatory">Email Id</label>
+	            		   	<text class="form-control form-control-sm "  id="emailId" name="emailId" maxlength="50" ></text>
+	          				<div class="invalid-feedback"></div>
+	 	  				</div>
+	 				</div>
+	 		  </div>
+	 		  
+	 		  <div class="row " >
+	 				<div class='col-lg-3' >
+				 		<div class="form-group">
+	            			<label class="col-form-label col-form-label-sm" for="expDeliveryDate"  data-langtag="Expected Delivery Date"  data-validation="mandatory">Expected Delivery Date</label>
+	            		   	<text class="form-control form-control-sm "  id="expDeliveryDate" name="expDeliveryDate" maxlength="50" ></text>
+	          				<div class="invalid-feedback"></div>
+	 	  				</div>
+	 				</div>
+	 				
+	 				<div class='col-lg-3' >
+				 		<div class="form-group">
+	            			<label class="col-form-label col-form-label-sm" for="partDetails"  data-langtag="Part Details"  data-validation="mandatory">Part Details</label>
+	            		   	<textarea class="form-control form-control-sm "  id="partDetails" name="partDetails" maxlength="50" ></textarea>
+	          				<div class="invalid-feedback"></div>
+	 	  				</div>
+	 				</div>
+	 		</div>
+	 		
+	 		<div class="row justify-content-center " >
+	 				<div class='col-lg-3' >
+				 		<div class="form-group">
+	            			<input type= "checkbox" class="form-check-input"  id='declaration' name="declaration" maxlength="50" >
+	               			 <label class="col-form-check-label" for="declaration"  data-langtag="" >I hereby declare that spare parts given into below table are supplied.</label>
+	          				<div class="invalid-feedback"></div>
+	 	  				</div>
+	 				</div>
+	 		 </div>
+	 				
+	 				
+			<div class="text-center">
+			<button class="btn   bg-gradient-success btn-sm" id="btnAdd"><i class="fa fa-plus"></i> Add</button>
+			</div>
+			<br>
+			
+			<div class='row no-more-tables'>
+				<table class="table table-hover">
+				  <thead class="bg-light">
+				      <tr>
+				        <th>S.No.</th>
+				        <th>Consignee Store</th>
+				        <th>Equipment Name</th>
+				        <th>Serial No./Qty</th>
+				        <th>Expected Installation Date/ Commissioning Date/ Training Date</th>
+				        <th>Service Engineers Name/ Mobile No./ Email Id</th>
+				        <th>Part</th>
+				      </tr>
+				    </thead>
+				    <tbody>
+				     <tr>
+				        <td data-title='S.No.' >1</td>
+				        <td data-title='Consignee Store'>Barla Barwani-CHC</td>
+				        <td data-title='Equipment Name'>Hospital Bed SS with mattress</td>
+				        <td data-title='Serial No./Qty'>1234/1</td>
+				        <td data-title='Expected Installation Date/ Commissioning Date/ Training Date' >12-DEC-2019</td>
+				        <td data-title='Service Engineers Name/ Mobile No./ Email Id'>Rohit/ 9512365470/ rohit@gmail.com</td>
+				        <td data-title='Part'>2</td>
+				      </tr>
+				    </tbody>
+				 </table>	
+			</div>
+			
+		
+		<hr class="bg-navy">
+		<h6><b><i class="text-center text-danger">*</i> Mandatory Fields</b></h6>
+		
+	
+   </div>
+
+	 	<div class="card-footer">
+			<div class="text-center">
+				  <button class="btn bg-gradient-success mt-4 btn-sm" id="btnSave1"><i class="fa fa-save"></i> Save</button>
+				  <button class="btn bg-gradient-success mt-4 btn-sm" id="btnClear1"><i class="fa fa-paint-brush"></i> Clear</button>
+	              <button class="btn bg-gradient-success mt-4 btn-sm" id="btnCancel1"><i class="fa fa-close"></i> Cancel</button>                            
+			</div>
+		</div>  
+</div>
+
+
+<div class="card card card-info border-info center m-1 hideData" id='VIEWPAGEFORM'  >
+	<div class="card-header bg-navy">
+		<h6 class="text-left">Dispatch Details >> View</h6>
+	</div>
+		<div class="card-body form-group">
+			<h6><b>Consignee & Equipmet Details :</b></h6>
+			<hr class="bg-navy">
+	 		<div class='row'>
+				  		<div class='col-lg-3' >
+				  				<div><b>PO Ref. No. :</b> 719129980003</div>	
+				  				<div><b>Dispatch Date :</b>  17-Dec-2019</div>  
+				  				<div><b>Quantity :</b>  1</div>
+				  				<div><b>Penalty Amount :</b> 0</div>
+				  		</div>
+				  		<div class='col-lg-3' >	
+				  				<div><b>Supplier Name :</b>  Acme</div>
+				  				<div><b>Equipment Name :</b> 3 Fold Labour table SS with foam mattress</div>
+				  				<div><b>Dispatch Status :</b>  Dispatch</div>
+						</div>
+						<div class='col-lg-3' >	
+								<div><b>Consignee Name :</b> Aagar- DH</div>	
+								<div><b> Model Name :</b> 111111</div>
+								<div><b> Post Inspection Status :</b> Not Done</div>	 
+						</div>
+						<div class='col-lg-3' >	
+								<div><b>Dispatch No. :</b> 819129980002</div>
+								<div><b>Serial No./Catlog No. :</b> 120</div>
+								<div><b>ERC Status :</b> NA</div>
+						</div> 	
+			</div>
+			<br>
+			
+			<h6><b>Delivery & Others Details :</b></h6>
+			<hr class="bg-navy">
+	 		<div class='row'>
+				  		<div class='col-lg-3' >
+				  				<div><b>Delivery Mode :</b> Bus</div>	
+				  				<div><b>Service Engineers Name :</b> Siddharth</div> 
+				  				<div><b>Installation Required :</b> No</div>
+				  				<div><b>Remarks :</b> </div>
+				  		</div>
+				  		<div class='col-lg-3' >	
+				  				<div><b>Delivery Detail :</b> Test</div>
+				  				<div><b>Mobile No./ E-Mail Id :</b> 8130135196/ siddharth@gmail.com</div>
+				  				<div><b>Commisioning/Calibration Required :</b> No</div>
+						</div>
+						<div class='col-lg-3' >	
+								<div><b>Delivery Day(s) :</b> 10</div>	
+								<div><b>Invoice No. :</b> 123</div>
+								<div><b>Training Required :</b> No</div>	 
+						</div>
+						<div class='col-lg-3' >	
+								<div><b>Expected Delivery Date :</b> 17-Dec-2019</div>
+								<div><b>Invoice Date :</b> 17-Dec-2019</div>
+								<div><b>Dispatch Part Detail :</b> abcd</div>
+						</div> 	
+			</div>
+			<br>
+			
+			<h6><b>Uploaded Documnet :</b></h6>
+			<hr class="bg-navy">
+	 		<div class='row'>
+				  		<div class='col-lg-3' >
+				  				<div><b>Invoice Copy :</b> <i class="text-center text-blue">20k.pdf</i></div>	
+				  		</div>
+				  		<div class='col-lg-3' >	
+				  				<div><b>Inspection Certificate :</b>  Not Uploaded</div>
+						</div>
+						<div class='col-lg-3' >	
+								<div><b>Insurance Certificate :</b> Not Uploaded</div>	
+						</div>
+						<div class='col-lg-3' >	
+								<div><b>Packing List :</b> <i class="text-center text-blue">20k.pdf</i></div>
+						</div> 	
+			</div>
+
+	</div>
+	
+    <div class="card-footer">
+		<div class="text-center">
+              <button class="btn bg-gradient-success mt-4 btn-sm" id="btnBack"><i class="fas fa-arrow-circle-left"></i> Back</button>                            
+		</div>
+	</div>  
+ 
+  
+</div>
+
+
+<div class="card card card-info border-info center m-1 hideData" id='UPLOADFORM'  >
+	<div class="card-header bg-navy">
+		<h6 class="text-left">Dispatch Details >> Upload</h6>
+	</div>
+		<div class="card-body form-group">
+			<h6><b>Consignee & Equipmet Details :</b></h6>
+			<hr class="bg-navy">
+	 		<div class='row'>
+				  		<div class='col-lg-3' >
+				  				<div><b>PO Ref. No. :</b> 719129980003</div>	
+				  				<div><b>Dispatch Date :</b>  17-Dec-2019</div>  
+				  				<div><b>Quantity :</b>  1</div>
+				  				<div><b>Penalty Amount :</b> 0</div>
+				  		</div>
+				  		<div class='col-lg-3' >	
+				  				<div><b>Supplier Name :</b>  Acme</div>
+				  				<div><b>Equipment Name :</b> 3 Fold Labour table SS with foam mattress</div>
+				  				<div><b>Dispatch Status :</b>  Dispatch</div>
+						</div>
+						<div class='col-lg-3' >	
+								<div><b>Consignee Name :</b> Aagar- DH</div>	
+								<div><b> Model Name :</b> 111111</div>
+								<div><b> Post Inspection Status :</b> Not Done</div>	 
+						</div>
+						<div class='col-lg-3' >	
+								<div><b>Dispatch No. :</b> 819129980002</div>
+								<div><b>Serial No./Catlog No. :</b> 120</div>
+								<div><b>ERC Status :</b> NA</div>
+						</div> 	
+			</div>
+			<br>
+			
+			<h6><b>Delivery & Others Details :</b></h6>
+			<hr class="bg-navy">
+	 		<div class='row'>
+				  		<div class='col-lg-3' >
+				  				<div><b>Delivery Mode :</b> Bus</div>	
+				  				<div><b>Service Engineers Name :</b> Siddharth</div> 
+				  				<div><b>Installation Required :</b> No</div>
+				  				<div><b>Remarks :</b> </div>
+				  		</div>
+				  		<div class='col-lg-3' >	
+				  				<div><b>Delivery Detail :</b> Test</div>
+				  				<div><b>Mobile No./ E-Mail Id :</b> 8130135196/ siddharth@gmail.com</div>
+				  				<div><b>Commisioning/Calibration Required :</b> No</div>
+						</div>
+						<div class='col-lg-3' >	
+								<div><b>Delivery Day(s) :</b> 10</div>	
+								<div><b>Invoice No. :</b> 123</div>
+								<div><b>Training Required :</b> No</div>	 
+						</div>
+						<div class='col-lg-3' >	
+								<div><b>Expected Delivery Date :</b> 17-Dec-2019</div>
+								<div><b>Invoice Date :</b> 17-Dec-2019</div>
+								<div><b>Dispatch Part Detail :</b> abcd</div>
+						</div> 	
+			</div>
+			<br>
+			
+			<h6><b>Uploaded Documnet :</b></h6>
+			<hr class="bg-navy">
+	 		<div class='row'>
+				  		<div class='col-lg-3' >
+				  				<div><b>Invoice Copy :</b> <i class="text-center text-blue">20k.pdf</i></div>	
+				  		</div>
+				  		<div class='col-lg-3' >	
+				  				<div><b>Inspection Certificate :</b>  Not Uploaded</div>
+						</div>
+						<div class='col-lg-3' >	
+								<div><b>Insurance Certificate :</b> Not Uploaded</div>	
+						</div>
+						<div class='col-lg-3' >	
+								<div><b>Packing List :</b> <i class="text-center text-blue">20k.pdf</i></div>
+						</div> 	
+			</div>
+		    
+		    <br>
+		   <h6><b>Upload Report(s) :</b></h6>
+			<hr class="bg-navy">
+			<div class='row'>
+	 				<div class='col-lg-3' >
+				 		<div class="form-group">
+	            			<label class="col-form-label col-form-label-sm" for="invoiceNo"  data-langtag="Invoice No."  data-validation="mandatory">Invoice No.</label>
+	            		   	<text class="form-control form-control-sm "  id="invoiceNo" name="invoiceNo" maxlength="50" ></text>
+	          				<div class="invalid-feedback"></div>
+	 	  				</div>
+	 				</div>	
+	 				
+	 				
+	 				<div class='col-lg-3' >
+				 		<div class="form-group">
+	            			<label class="col-form-label col-form-label-sm" for="invoiceDate"  data-langtag="Invoice Date"  data-validation="mandatory">Invoice Date</label>
+	            		   	<input type="date" class="form-control form-control-sm "  id="invoiceDate" name="invoiceDate" maxlength="50" placeholder="DD-MM-YYY" >
+	          				<div class="invalid-feedback"></div>
+	 	  				</div>
+	 				</div>
+	 				
+	 				<div class='col-lg-3' >
+		 				<div class="form-group">
+                			<label class="col-form-label col-form-label-sm" for="invoiceReport" data-langtag="Invoice Report" data-validation="mandatory"><b>Invoice Report</b></label>
+                   			<input type="file" class="form-control-file" id="invoiceReport">
+                			<div class="invalid-feedback"></div>
+		              	</div>
+	 				</div>
+	 				
+	 				<div class='col-lg-3' >
+		 				<div class="form-group">
+                			<label class="col-form-label col-form-label-sm" for="inspectionCertificate" data-langtag="Inspection Certificate" data-validation="mandatory"><b>Inspection Certificate</b></label>
+                   			<input type="file" class="form-control-file" id="inspectionCertificate">
+                			<div class="invalid-feedback"></div>
+		              	</div>
+	 				</div>
+	 				
+	 				<div class='col-lg-3' >
+		 				<div class="form-group">
+                			<label class="col-form-label col-form-label-sm" for="insuranceCertificate" data-langtag="Insurance Certificate" data-validation="mandatory"><b>Insurance Certificate</b></label>
+                   			<input type="file" class="form-control-file" id="insuranceCertificate">
+                			<div class="invalid-feedback"></div>
+		              	</div>
+	 				</div>
+	 				
+	 				<div class='col-lg-3' >
+		 				<div class="form-group">
+                			<label class="col-form-label col-form-label-sm" for="packingList" data-langtag="Packing List" data-validation="mandatory"><b>Packing List</b></label>
+                   			<input type="file" class="form-control-file" id="packingList">
+                			<div class="invalid-feedback"></div>
+		              	</div>
+	 				</div> 	
+	 				
+	 				<div class='col-lg-3' >
+		 				<div class="form-group">
+                			<label class="col-form-label col-form-label-sm" for="technicalComplaint" data-langtag="Technical Complaint Report" data-validation="mandatory"><b>Technical Complaint Report</b></label>
+                   			<input type="file" class="form-control-file" id="technicalComplaint">
+                			<div class="invalid-feedback"></div>
+		              	</div>
+	 				</div> 	
+				  		
+		    </div>
+		    
+		     <h6><b>Proof Of Delivery :</b></h6>
+			<hr class="bg-navy">
+	 				<div class='col-lg-3' >
+				 		<div class="form-group">
+	            			<label class="col-form-label col-form-label-sm" for="podDate"  data-langtag="POD Date"  data-validation="mandatory">POD Date</label>
+	            		   	<input type="date" class="form-control form-control-sm "  id="podDate" name="podDate" maxlength="50" placeholder="DD-MM-YYY" >
+	          				<div class="invalid-feedback"></div>
+	 	  				</div>
+	 				</div>
+	 				
+	 				<div class='col-lg-3' >
+		 				<div class="form-group">
+                			<label class="col-form-label col-form-label-sm" for="podDocument" data-langtag="POD Document" ><b>POD Document</b></label>
+                   			<input type="file" class="form-control-file" id="podDocument">
+                			<div class="invalid-feedback"></div>
+		              	</div>
+	 				</div>
+			
+			<div class='row'>
+				  		
+			</div>
+			
+	 		<hr class="bg-navy">
+			<h6><b><i class="text-center text-danger">*</i> Mandatory Fields</b></h6>
+			<h6><b><i class="text-center text-danger">!</i> Previous file/value will be overwrite if previously entered.</b></h6>
+			<h6><b><i class="text-center text-danger">#</i> Fields will available for modify until equipmnet will not received.</b></h6>
+			
+	</div>
+	
+	    <div class="card-footer">
+			<div class="text-center">
+			  <button class="btn bg-gradient-success mt-4 btn-sm" id="btnSave2"><i class="fa fa-save"></i> Save</button>
+			  <button class="btn bg-gradient-success mt-4 btn-sm" id="btnClear2"><i class="fa fa-paint-brush"></i> Clear</button>
+              <button class="btn bg-gradient-success mt-4 btn-sm" id="btnCancel2"><i class="fa fa-window-close"></i> Cancel</button> 			
+	        </div>
+		</div>  
+ 
+</div>
+
+

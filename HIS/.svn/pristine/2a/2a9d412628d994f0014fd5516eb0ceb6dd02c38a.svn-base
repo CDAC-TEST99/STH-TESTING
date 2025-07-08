@@ -1,0 +1,471 @@
+<script>
+$(document).ready(function () {
+	$('#btngenerate').click(function(){
+		$('#LISTFORM').addClass('hideData');
+		$('#GENERATEPAGEFORM').removeClass('hideData');		
+	});
+	
+	$('#btnBack').click(function(){
+		$('#LISTFORM').removeClass('hideData');
+		$('#BILLANDDIGITALSIGNDETAILSLISTFORM').addClass('hideData');
+		$('#GENERATEPAGEFORM').addClass('hideData');
+		$('#MAINTAINANCEDETAILSLISTFORM').addClass('hideData');
+		$('#VIEWICONLISTFORM').addClass('hideData');
+	});
+	
+	$('#btngo').click(function(){
+		$('#LISTFORM').addClass('hideData');
+		$('#MAINTAINANCEDETAILSLISTFORM').removeClass('hideData');		
+	});
+	$('#btnBackView').click(function(){
+		$('#INVOICEPAGEFORM').removeClass('hideData');
+		$('#VIEWICONLISTFORM').addClass('hideData');		
+	});
+	$('#btnviewdetails').click(function(){
+		$('#LISTFORM').addClass('hideData');
+		$('#BILLANDDIGITALSIGNDETAILSLISTFORM').removeClass('hideData');		
+	});
+	$('#btnBackView').click(function(){
+		$('#INVOICEPAGEFORM').removeClass('hideData');
+		$('#VIEWICONLISTFORM').addClass('hideData');		
+	});
+})
+</script>
+
+<div class="card card-info border-info center m-1" id='LISTFORM' >
+			<div class="card-header bg-navy"><h5 class="card-title text-center ">
+
+Maintenance Bill Desk</h5>
+
+
+</div>
+
+
+	<div class="card-body form-group">
+ 	
+  		 <div class='row'>
+  				 
+					 	<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="paymentAuthority" data-validation="mandatory" data-langtag="Institution Name" >Institution Name</label>
+	                			<select class="form-control form-control-sm  " id ='paymentAuthority' name="paymentAuthority">
+	                				<option value="" selected="selected">Select </option>
+	                				<option value="" >Agar-CMHO</option>
+	                				<option value="" >Alirajpur-CMHO</option>
+	                				<option value="" >Annurpur-CMHO</option>
+	                				<option value="" >Bhopal-CS</option>
+	                			</select>
+								<div class="invalid-feedback"></div>
+							</div>	
+						</div>
+		
+				 	
+					 	<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="status" data-validation="mandatory" data-langtag="Status" >Status</label>
+	                			<select class="form-control form-control-sm" id ='status' name="status">
+	                					<option value="" selected="selected">Select </option>
+	                					<option value="" selected>Select </option>
+	                				<option value="" >Bill Verified</option>
+	                				<option value="" >Offline</option>
+	                				<option value="" >Payment done</option>
+	                				<option value="" >Payment failed</option>
+	                				<option value="" >Payment process</option>
+	                			</select>
+								<div class="invalid-feedback"></div>
+							</div>
+						</div>
+	</div>
+	 			
+	 		
+
+			<div class='text-center'>
+	<button class='btn bg-gradient-success mt-4 btn-sm' id='btngenerate'><i class="fa fa-file" ></i> Generate</button>
+	
+			  		
+	
+	</div>
+	
+	
+			<div class='row'>
+			<div class='col-lg-4'>	
+				<div class="form-group row">                   
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" id="search" placeholder="Search">
+                    </div>
+                  </div>
+			</div>
+			
+			</div>	
+			<div class='row no-more-tables'>
+			<table class="table table-hover">
+			  <thead class="bg-navy">
+		
+			      <tr>
+			      	<th><input type="checkbox"></th>
+			        <th >Bill No.</th>
+			        <th>Bill Date</th>
+			       <th>Payment Quarter	</th>
+			        <th>Vendor Name	</th>
+			        <th>Quarter NAV	</th>
+			        <th>Penalty Amt</th>
+			        <th>Status</th>
+			      </tr>
+			    </thead>
+			    <tbody>
+			     <tr>
+			      	<td class='d-none d-sm-block' ><input type="checkbox"></td>
+			        <td data-title='Equipment Name' >	 2119110003</td>
+			        <td data-title='Equipment Model'>	 11-Nov-2019</td>
+			        <td data-title='Serial No.'>Q10 (01-Jul-2019 to 30-Sep-2019)</td>
+			        <td data-title='Bar Code'>Aim HealthcareAim Healthcare</td>
+			        <td data-title='Manufacturer Name'>	 92015.09</td>
+			        <td data-title='Equipment Status'>	 0.00</td>
+			        <td data-title='Verification Status'>	 Payment Processed</td>
+			      </tr>
+			       <tr>
+			      	<td class='d-none d-sm-block' ><input type="checkbox"></td>
+			        <td data-title='Equipment Name' >	 2119110003</td>
+			        <td data-title='Equipment Model'>	 11-Nov-2019</td>
+			        <td data-title='Serial No.'>Q10 (01-Jul-2019 to 30-Sep-2019)</td>
+			        <td data-title='Bar Code'>Aim HealthcareAim Healthcare</td>
+			        <td data-title='Manufacturer Name'>	 92015.09</td>
+			        <td data-title='Equipment Status'>	 0.00</td>
+			        <td data-title='Verification Status'>	 Payment Processed</td>
+			      </tr>
+			       <tr>
+			      	<td class='d-none d-sm-block' ><input type="checkbox"></td>
+			        <td data-title='Equipment Name' >	 2119110003</td>
+			        <td data-title='Equipment Model'>	 11-Nov-2019</td>
+			        <td data-title='Serial No.'>Q10 (01-Jul-2019 to 30-Sep-2019)</td>
+			        <td data-title='Bar Code'>Aim HealthcareAim Healthcare</td>
+			        <td data-title='Manufacturer Name'>	 92015.09</td>
+			        <td data-title='Equipment Status'>	 0.00</td>
+			        <td data-title='Verification Status'>	 Payment Processed</td>
+			      </tr>
+			    </tbody>
+			 </table>	
+			</div>
+			
+			
+			 
+	</div>  
+		
+</div>
+ <!--card for GENERATE button -->
+
+<div class="card card card-info border-info center m-1 hideData" id='GENERATEPAGEFORM'  >
+	<div class="card-header bg-navy">
+		<h6 class="text-left">Maintenance Payment Desk >> NAV Verification</h6>
+	</div>
+	<div class="card-body form-group">
+	<h6><b>Request Information :
+	
+</b></h6>
+	<hr class="bg-navy">
+	 <div class='row'>
+	 
+  
+  	
+					 		<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="paymentAuthority" data-validation="mandatory" data-langtag="Payment Authority" >Payment Authority</label>
+	                			<select class="form-control form-control-sm  " id ='paymentAuthority' name="paymentAuthority">
+	                				
+						<option title="Select Value" selected value="0">Select Value</option>
+<option title="Agar-CMHO" selected value="5001723">Agar-CMHO</option>
+<option title="Alirajpur-CMHO" value="5001724">Alirajpur-CMHO</option>
+<option title="Annupur-CMHO" value="5001725">Annupur-CMHO</option>
+<option title="Bhopal - CS" value="5055971">Bhopal - CS</option>
+<option title="Aagar- CS" value="5055972">Aagar- CS</option>
+
+					
+	                			</select>
+								<div class="invalid-feedback"></div>
+							</div>	
+						</div>
+						
+		
+				 	
+					 	<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="maintenanceContract" data-validation="mandatory" data-langtag="Maintenance Contract" >Maintenance Contract </label>
+	                			<select class="form-control form-control-sm" id ='maintenanceContract' name="maintenanceContract">
+	                				
+	                				
+					
+<option title="Aim Health Care"  value="517129980001" selected>Aim Health Care</option>
+
+					
+	                			</select>
+								<div class="invalid-feedback"></div>
+							</div>
+						</div>
+						
+						<div class='col-lg-3' >
+						<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="paymentQuarter" data-validation="mandatory" data-langtag="Payment Quarter" >Payment Quarter :</label>
+	                			<select class="form-control form-control-sm" id ='paymentQuarter' name="paymentQuarter">
+	                				
+					<option title="Select Value" selected value="0">Select Value</option>
+<option title="Q11 [01-Oct-2019 to 31-Dec-2019]" value="10010">Q11 [01-Oct-2019 to 31-Dec-2019]</option>
+<option title="Q9 [01-Apr-2019 to 30-Jun-2019]" value="10008">Q9 [01-Apr-2019 to 30-Jun-2019]</option>
+<option title="Q8 [01-Jan-2019 to 31-Mar-2019]" value="10007">Q8 [01-Jan-2019 to 31-Mar-2019]</option>
+
+					
+	                			</select>
+								<div class="invalid-feedback"></div>
+							</div>
+
+						</div>
+					</div>
+	
+	</div>
+   <div class='text-center'>
+	<button class='btn bg-gradient-success mt-4 btn-sm' id='btngo'><i class="fa fa-arrow-left" ></i> Go</button>
+			  		
+	
+	</div>
+ 
+</div>
+  
+  
+  
+  
+  <!--card for go button (maintainance details)-->
+  
+  
+  
+<div class="card card-info border-info center m-1 hideData" id='MAINTAINANCEDETAILSLISTFORM' >
+			<div class="card-header bg-navy"><h5 class="card-title text-center ">
+Maintenance Details :
+</h5>
+			</div>
+
+
+	<div class="card-body form-group">
+ 	 
+  		 
+	 <div class='row no-more-tables'>
+			<table class="table table-hover">
+			  <thead class="bg-light">
+		
+			      <tr>
+			      	<th><input type="checkbox"></th>
+			        <th >Supplier Name</th>
+			        <th>Total Equipment</th>
+			       <th>Total Equipment Cost (NAV)	</th>
+			        <th>Quarter Factor Value	</th>
+			        <th>Quarter NAV	</th>
+			        <th>Total Breakdown Request</th>
+			        <th>Total PM Request</th>
+			        <th>Total Calibration Request</th>
+			        <th>Total Penalty</th>
+			      </tr>
+			    </thead>
+			    <tbody>
+			     <tr>
+			      	<td class='d-none d-sm-block' ><input type="checkbox"></td>
+			        <td data-title='Supplier Name' >Ace</td>
+			        <td data-title='Total Equipmen'>10</td>
+			        <td data-title='Total Equipment Cost (NAV)'>200000</td>
+			        <td data-title='Quarter Factor Value'>20000</td>
+			        <td data-title='Quarter NAV'>4%</td>
+			        <td data-title='Total Breakdown Request'><a href='#'>5</a></td>
+			        <td data-title='Total PM Request'><a href='#'>3</a></td>
+			        <td data-title='Total Calibration Request'><a href='#'>2</a></td>
+			        <td data-title='Total Penalty'>10000</td>
+			      </tr>
+			      <tr>
+			     <td class='d-none d-sm-block' ><input type="checkbox"></td>
+			        <td data-title='Supplier' >Addars</td>
+			        <td data-title='Total Equipmen'>10</td>
+			        <td data-title='Total Equipment Cost (NAV)'>200000</td>
+			        <td data-title='Quarter Factor Value'>20000</td>
+			        <td data-title='Quarter NAV'>4%</td>
+			        <td data-title='Total Breakdown Request'><a href='#'>5</a></td>
+			        <td data-title='Total PM Request'><a href='#'>3</a></td>
+			        <td data-title='Total Calibration Request'><a href='#'>2</a></td>
+			        <td data-title='Total Penalty'>10000</td>
+			      </tr>
+			      
+			    </tbody>
+			 </table>	
+			</div>
+  
+  		<div class='text-center'>
+	<button class='btn bg-gradient-success mt-4 btn-sm' id='btnviewdetails'><i class="fa fa-arrow-left" ></i> View Details</button>
+			  		
+	
+	</div>
+			
+	
+	</div>
+	 			
+	 		
+
+</div>
+
+
+  
+  <!--card for radio button (bill and digital signature details)-->
+
+
+<div class="card card-info border-info center m-1 hideData" id='BILLANDDIGITALSIGNDETAILSLISTFORM' >
+			<div class="card-header bg-navy">
+
+			</div>
+
+
+	<div class="card-body form-group">
+	
+	<div class="m-4"><h6><b> Bill Details :
+
+</b></h6>
+	<hr class="bg-navy"></div>
+ 	  <div class='row'>
+	 
+						<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="billNo" data-langtag="Bill No"  >Bill No :</label>
+	                			<input class="form-control form-control-sm  " type="text" id="billNo" name="billNo" maxlength="50" data-validation="mandatory,alphabetOnly">
+	                			<div class="invalid-feedback"></div>
+	              			</div>
+					 	</div>	
+					 	<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="billDate" data-langtag="Bill Date"  >Bill Date  :</label>
+	                			<input class="form-control form-control-sm  " type="text" id="billDate" name="billDate" maxlength="50" data-validation="mandatory,alphabetOnly">
+	                			<div class="invalid-feedback"></div>
+	              			</div>
+					 	</div>	
+					 	<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="totalNAV" data-langtag="Total NAV"  >Total NAV (₹) [A]  :</label>
+	                			<input class="form-control form-control-sm  " type="text" id="totalNAV" name="totalNAV" maxlength="50" data-validation="mandatory,alphabetOnly">
+	                			<div class="invalid-feedback"></div>
+	              			</div>
+					 	</div>	
+					 	<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="quarterFactorValue" data-langtag="Quarter Factor Value"  >Quarter Factor Value (₹) [B]  :</label>
+	                			<input class="form-control form-control-sm  " type="text" id="quarterFactorValue" name="quarterFactorValue" maxlength="50" data-validation="mandatory,alphabetOnly">
+	                			<div class="invalid-feedback"></div>
+	              			</div>
+					 	</div>	
+					 	<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="quarterNAV" data-langtag="Quarter NAV"  >Quarter NAV (₹) [C=(B%A)/4] :</label>
+	                			<input class="form-control form-control-sm  " type="text" id="quarterNAV" name="quarterNAV" maxlength="50" data-validation="mandatory,alphabetOnly">
+	                			<div class="invalid-feedback"></div>
+	              			</div>
+					 	</div>	
+					 	<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="totalPenalty" data-langtag="Total Penalty"  >Total Penalty (₹) [D] :</label>
+	                			<input class="form-control form-control-sm  " type="text" id="totalPenalty" name="totalPenalty" maxlength="50" data-validation="mandatory,alphabetOnly">
+	                			<div class="invalid-feedback"></div>
+	              			</div>
+					 	</div>
+					 	<div>
+					 	<label class="col-form-label col-form-label-sm" for="totalPenalty" data-langtag="Total Penalty"  >Remarks</label>
+					 	<textarea rows="" cols="">
+					 	
+					 	
+					 	</textarea>
+					 	</div>	  	
+	
+	</div>
+	
+	<div class="m-4"><h6><b> Digital Signature Details :
+
+</b></h6>
+	<hr class="bg-navy"></div>
+	
+	
+	<div class='row'>
+	 
+  					<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="certificate" data-validation="mandatory" data-langtag="Certificate" >Certificate :</label>
+	                			<select class="form-control form-control-sm  " id ='certificate' name="certificate">
+	                				<option value="" selected="selected">Select Category</option>
+	                			</select>
+								<div class="invalid-feedback"></div>
+							</div>	
+						</div>
+						<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="serialNo" data-langtag="Serial No"  >Serial No :</label>
+	                			<input class="form-control form-control-sm  " type="text" id="serialNo" name="serialNo" maxlength="50" data-validation="mandatory,alphabetOnly">
+	                			<div class="invalid-feedback"></div>
+	              			</div>
+	              			</div>
+						
+						
+						<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="serialNo" data-langtag="Serial No"  >Serial No :</label>
+	                			<input class="form-control form-control-sm  " type="text" id="serialNo" name="serialNo" maxlength="50" data-validation="mandatory,alphabetOnly">
+	                			<div class="invalid-feedback"></div>
+	              			</div>
+					 	</div>	
+					 	
+					 	<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="digitallySignBy" data-langtag="Digitally Sign By"  >Digitally Sign By :</label>
+	                			<input class="form-control form-control-sm  " type="text" id="digitallySignBy" name="digitallySignBy" maxlength="50" data-validation="mandatory,alphabetOnly">
+	                			<div class="invalid-feedback"></div>
+	              			</div>
+					 	</div>	
+					 	
+					 	<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="certificateIssuedBy" data-langtag="Certificate Issued By"  >Certificate Issued By :</label>
+	                			<input class="form-control form-control-sm  " type="text" id="certificateIssuedBy" name="certificateIssuedBy" maxlength="50" data-validation="mandatory,alphabetOnly">
+	                			<div class="invalid-feedback"></div>
+	              			</div>
+					 	</div>	
+					 	<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="certificateValidFrom" data-langtag="Certificate Valid From"  >Certificate Valid From :</label>
+	                			<input class="form-control form-control-sm  " type="text" id="certificateValidFrom" name="certificateValidFrom" maxlength="50" data-validation="mandatory,alphabetOnly">
+	                			<div class="invalid-feedback"></div>
+	              			</div>
+					 	</div>	
+					 	<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="certificateValidTo" data-langtag="Certificate Valid To"  >Certificate Valid To :</label>
+	                			<input class="form-control form-control-sm  " type="text" id="certificateValidTo" name="certificateValidTo" maxlength="50" data-validation="mandatory,alphabetOnly">
+	                			<div class="invalid-feedback"></div>
+	              			</div>
+					 	</div>	 	
+	
+	</div>
+  		 
+	 
+	
+	</div>
+	 			
+	 	 <div class="card-footer">
+		<div class="text-center">
+		<button class='btn bg-gradient-success mt-4 btn-sm' ><i class="fa fa-save"></i> Save</button>
+	<button class='btn bg-gradient-success mt-4 btn-sm' ><i class="fa fa-window-close"></i> Clear</button>
+              <button class="btn bg-gradient-success mt-4 btn-sm" id="btnBack"><i class="fas fa-arrow-circle-left"></i> Back</button>                            
+		</div>
+		
+		<p> <i class="fa fa-circle" style="font-size:8px;color:#17a2b8"></i>   * Mandatory Fields</p>
+			<p> <i class="fa fa-circle" style="font-size:8px;color:#17a2b8"></i>	# Quarter NAV Calculation Formula : ((Quarter Factor Value) % (Total NAV))/4</p>
+	
+	</div>  	
+</div>
+
+  
+
+
+
+
+
+
+
+

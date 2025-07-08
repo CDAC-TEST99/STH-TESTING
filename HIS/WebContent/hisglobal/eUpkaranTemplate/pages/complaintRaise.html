@@ -1,0 +1,258 @@
+<script>
+$(document).ready(function () {
+	$('#btnview').click(function(){
+		$('#LISTFORM').addClass('hideData');
+		$('#VIEWPAGEFORM ').removeClass('hideData');		
+	});
+	
+	$('#btnBack').click(function(){
+		$('#LISTFORM').removeClass('hideData');
+		$('#VIEWPAGEFORM ').addClass('hideData');		
+	});
+	
+	$('#btnrequest').click(function(){
+		$('#LISTFORM').addClass('hideData');
+		$('#REQUESTPAGEFORM').removeClass('hideData');		
+	});
+	$('#btnBackReq').click(function(){
+		$('#LISTFORM').removeClass('hideData');
+		$('#REQUESTPAGEFORM ').addClass('hideData');		
+	})
+	$('#btnSearchEquipment').click(function(){
+		$('#openEquipmentList').modal('show');	
+	});
+})
+</script>
+
+
+<div class="card card card-info border-info center m-1 " id='REQUESTPAGEFORM'  >
+	<div class="card-header bg-navy">
+		<h6 class="text-left">Request Desk >> Raise</h6>
+	</div>
+	<div class="card-body form-group SerachEquipmentEntry">
+		<div class="row " >
+			<div class='col-lg-3 form-group'>
+				<label class="col-form-label col-form-label-sm" for="indentRefNo"
+					data-validation="mandatory" data-langtag="Equipment Unique Id">Equipment Unique Id</label>
+					<input type='text'	class="form-control form-control-sm " id="barcodetoSearchEquipment"	name="barcodetoSearchEquipment" data-validation="mandatory" />
+					<div class="invalid-feedback"></div>
+			</div>
+			<div class='col-lg-3 form-group'>
+				<button class="btn   bg-gradient-success btn-sm" id="btnGo"	style="margin-top: 30px">
+					<i class="fas fa-arrow-circle-right" aria-hidden="true"></i> GO
+				</button>
+				<button class="btn   bg-gradient-success btn-sm" id="btnSearchEquipment"  style="margin-top: 30px">
+					<i class="fas fa-search" aria-hidden="true" id='btnSearch'></i> SEARCH
+				</button>
+			</div>
+		</div>
+
+	</div>
+	 					
+	 				
+	 				
+	 				
+	 				 
+	 	<div class="card-body form-group">
+	
+	                  <h6><b>Equipment Details:</b></h6>
+	                    <hr class="bg-navy">
+	                          
+	                  <div class='row'>
+	                  	<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="institutionName" data-langtag="Institution Name"  >Institution Name :</label>
+	                			<input class="form-control form-control-sm desabledTextBox" type="text" id="institutionName" placeholder="Apolo Hospital" name="institutionName" maxlength="50" data-validation="mandatory,alphabetOnly">
+	                			<div class="invalid-feedback"></div>
+	              			</div>
+					 	</div>	
+					 	
+					 	<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="Department Name" data-langtag="Department Name"  >Department Name :</label>
+	                			<input class="form-control form-control-sm desabledTextBox" type="text" id="Department Name" placeholder="Aathner Betul-CHC - ANC ROOM" name="Department Name" maxlength="50" data-validation="mandatory,alphabetOnly">
+	                			<div class="invalid-feedback"></div>
+	              			</div>
+					 	</div>
+                                     
+  		                              
+  				         <div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="equipmentName" data-validation="mandatory" data-langtag="Equipment Name" >Equipment Name : 	</label>
+	                			<select class="form-control form-control-sm  " id ='equipmentName' name="equipmentName">
+	                				<option value="" selected="selected">Select Equipment Name</option>
+								   <option title="Select Value" selected="" value="0">Select Value</option>
+									<option title="4 To 13 Mhz Linear  Transducer  With Near Focus (Probe For Usg Machine ) [2011]" value="18000341">4 To 13 Mhz Linear  Transducer  With Near Focus (Probe For Usg Machine ) [2011]</option>
+									<option title="Abg Machine [10001]" value="18000001">Abg Machine [10001]</option>
+		                        </select>
+	              			<div class="invalid-feedback"></div>
+ 	  					</div>
+	 				</div>
+	 			
+	 				
+	 				<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="equipmentModel" data-validation="mandatory" data-langtag="Equipment Model " >Equipment Model: </label>
+	                			<select class="form-control form-control-sm  " id ='equipmentModel' name="equipmentModel">
+	                				<option value="" selected="selected">Select Equipment Model </option>
+	                			</select>
+	              			<div class="invalid-feedback"></div>
+ 	  					</div>
+	 				</div>
+  				       </div>
+  				      
+	
+	                  <h6><b> Request Details:</b></h6>
+	                    <hr class="bg-navy">
+	                          
+	                  <div class='row'>
+						
+						<div class='col-lg-3'  >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="problemDescription" data-validation="mandatory" data-langtag="Problem Description " >Problem Description </label>
+	                			<select class="form-control form-control-sm  " id ='problemDescription ' name="problemDescription">
+	                				<option value="" selected="selected">Select Problem Description </option>
+	                			</select>
+	                		<div class="invalid-feedback"></div>
+ 	  					</div>
+	 				</div>
+	 				
+	 	
+	 				<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="contactPersonName" data-validation="mandatory" data-langtag="Contact Person Name" >Contact Person Name :</label>
+	                			<select class="form-control form-control-sm  " id ='contactPersonName' name="contactPersonName">
+	                				<option value="" selected="selected">Select Contact Person Name</option>
+	                			</select>
+	              				<div class="invalid-feedback"></div>
+ 	  						</div>
+	 					</div>
+	 					
+	 					
+	 					<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="mobileNo" data-langtag="Mobile No"  >Mobile No. :</label>
+	                			<input class="form-control form-control-sm  " type="text" id="mobileNo" name="mobileNo" maxlength="50" data-validation="mandatory,alphabetOnly">
+	                			<div class="invalid-feedback"></div>
+	              			</div>
+					 	</div>	
+					 <div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="remarks" data-langtag="Remarks"  >Remarks :</label>
+	                			<input class="form-control form-control-sm  " type="text" id="remarks" name="remarks" maxlength="50" data-validation="mandatory,alphabetOnly">
+	                			<div class="invalid-feedback"></div>
+	              			</div>
+					 	</div>
+					 	
+	 					<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="emailId" data-langtag="Email ID"  >Email ID. :</label>
+	                			<input class="form-control form-control-sm  " type="email" id="emailId" name="emailId" maxlength="50" data-validation="mandatory,alphabetOnly">
+	                			<div class="invalid-feedback"></div>
+	              			</div>
+					 	</div>	
+					 	
+					 	<div class="row">
+				 	<div class='col-lg-3 d-md-none d-lg-block'>&nbsp;</div>
+					 	<div class="form-group">
+				 	         <label for="scales">Is Item not in Working Condition :</label>
+				 	            <input type="checkbox" id="checkbox1" name="checkbox1" checked>
+                                 <div class="invalid-feedback"></div>
+	              			
+					 	</div>
+					 	</div>
+				 
+			
+					                
+                 
+                 
+	</div>
+	</div>
+    <div class="card-footer">
+		<div class="text-center">
+		      <button class="btn bg-gradient-success mt-4 btn-sm" id="btnBackReq"><i class="fas fa-arrow-circle-left"></i> Back</button>
+                                         
+		</div>
+	</div>  
+ 
+  
+</div>
+
+
+<div class="modal fade" id="openEquipmentList">
+	<div class="modal-dialog modal-lg">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h4 class="modal-title">Search Equipment</h4>
+				<button type="button" class="close" data-dismiss="modal"
+					aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body">
+				<div class='row'  >
+	              <div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="institutionName" data-validation="mandatory" data-langtag=Institution Name" >Institution Name</label>
+	                			<select class="form-control form-control-sm  " id ='institutionName' name="institutionName">
+	                				<option value="" selected="selected">Select Institution Name</option>
+	                			</select>
+	              				<div class="invalid-feedback"></div>
+ 	  						</div>
+	 					</div>
+	 					
+	 					
+	 					<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="departmentName" data-validation="mandatory" data-langtag="Department Name" >Department Name</label>
+	                			<select class="form-control form-control-sm  " id ='departmentName' name="departmentName">
+	                				<option value="" selected="selected">Select Department Name</option>
+	                			</select>
+	              			<div class="invalid-feedback"></div>
+ 	  					</div>
+	 				</div>	 			
+		 		</div>	
+		 	<div class='row no-more-tables'>
+			<table class="table table-hover">
+			  <thead class="bg-navy">
+			      <tr>
+			      	<th><input type="checkbox"></th>
+			        <th >Request Id</th>
+			        <th>Request Date</th>
+			        <th>Department</th>
+			        <th>Equipment Name</th>
+			        <th>Equipment Model</th>
+			        <th>Unique Id</th>
+			       
+			      </tr>
+			    </thead>
+			    <tbody>
+			     <tr>
+			      	<td class='d-none d-sm-block' ><input type="checkbox"></td>
+			        <td data-title='Request Id' >Xray Machine</td>
+			        <td data-title='Request Date'>ABCD</td>
+			        <td data-title='Department'>1234</td>
+			        <td data-title='Equipment Name'>123456</td>
+			        <td data-title='Equipment Model'>Bosch</td>
+			        <td data-title='Unique Id'>2458645</td>			        
+			      </tr>
+			    </tbody>
+			    <tbody>
+			     <tr>
+			      	<td class='d-none d-sm-block' ><input type="checkbox"></td>
+			        <td data-title='Request Id' >1234</td>
+			        <td data-title='Request Date'>12/12/2012</td>
+			        <td data-title='Department'>1234</td>
+			        <td data-title='Equipment Name'>Xray Machine</td>
+			        <td data-title='Equipment Model'>Bosch</td>
+			        <td data-title='Unique Id'>48522355</td>			        
+			      </tr>
+			    </tbody>
+			 </table>	
+			</div>
+			</div>
+		</div>
+	</div>
+	<!-- /.modal-content -->
+</div>
+<!-- /.modal-dialog -->

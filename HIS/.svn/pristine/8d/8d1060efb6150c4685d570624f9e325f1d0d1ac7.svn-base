@@ -1,0 +1,139 @@
+<div class="card card-info border-info center m-1" id='ENTRYFORM' >
+			<div class="card-header bg-navy "><h5 class="card-title text-center ">RC Demand Desk</h5>
+			  		
+			</div>
+			
+<div class="card-body form-group">
+  			
+  			<div class="row justify-content-center" >
+		
+	 					
+	 				
+				
+				         <div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="indentingAuthority " data-validation="mandatory" data-langtag="Indenting Authority " >Indenting Authority </label>
+	                			<select class="form-control form-control-sm  " id ='indentingAuthority ' name="indentingAuthority ">
+	                				<option value="" selected="selected">Select Indenting Authority </option>
+	                			</select>
+	              			<div class="invalid-feedback"></div>
+ 	  					</div>
+	 				</div>
+	 				
+		
+	 					<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="status" data-validation="mandatory" data-langtag="Status" >Status</label>
+	                			<select class="form-control form-control-sm  " id ='status' name="status">
+	                				<option value="" selected="selected">Select Status</option>
+	                			</select>
+	              			<div class="invalid-feedback"></div>
+ 	  					</div>
+ 	  					</div>
+ 	  					</div>
+ 	  					
+ 	  					
+	 				
+				
+				         
+	 				
+	 				
+		 	  <div class="row justify-content-center" >
+		
+		 	                  
+				<div class="text-center">
+					
+                          
+                           <button  class='btn bg-gradient-success mt-4 btn-sm'><i class="fa fa-file"></i> New Demand</button>
+                          
+                           
+				</div>
+				</div>
+				</div>
+				</div>
+				
+
+
+
+                            
+		 	    
+<div class="card card-info border-info center m-1" id='ENTRYFORM' >
+			<div class="card-header bg-navy">
+			
+				
+				<h6 class="text-left">
+					<label >Show:
+					  <select class="" id ='entries' name="entries" >
+					  <option value="" selected="selected">10</option>
+					  <option value="" selected="selected">25</option>
+					  <option value="" selected="selected">50</option>
+					  <option value="" selected="selected">All</option>
+		  			</select>Entries
+  					</label></h6>
+
+					 <h6 class="text-right">
+					  <label><i class="fa fa-search" aria-hidden="true"></i> Search:
+					  <input type="text"></input>
+					  </label>
+					  </h6>
+  
+ 			</div>
+  
+                             
+                             		
+<table class="table table-hover " >
+
+    <thead class="bg-pink">
+      <tr>
+      	<th>S.No.<i class="fa fa-sort "></i></th>
+        <th>Demand No. <i class="fa fa-sort "></i></th>
+        <th>Equipment Nmae <i class="fa fa-sort "></i></th>
+        <th>Consignee Name <i class="fa fa-sort "></i></th>
+        <th>Demand quantity <i class="fa fa-sort "></i></th>
+        <th>Demanded Date <i class="fa fa-sort "></i></th>
+        <th>Status <i class="fa fa-sort "></i></th>
+        <th>Verification Pending at <i class="fa fa-sort "></i></th>
+        
+      </tr>
+    </thead>
+    <tbody>
+     <tr>
+      	<td>1.</td>
+        <td>Xray Macjine</td>
+        <td>ABCD</td>
+        <td>1234</td>
+        <td>123456</td>
+        <td>Bosch</td>
+        <td>Bosch</td>
+        <td>1234</td>
+       
+      </tr>
+    </tbody>
+    
+     
+  </table>
+ <div class="card-footer">
+		Showing 1 to 1 of 1 entries
+		<div class="card-tools">
+			<ul class="pagination pagination-sm justify-content-end">
+				<li class="page-item">
+					<a href="#" class="page-link" style="color:#17a2b8"> << </a>
+				</li>
+				<li class="page-item">
+					<a href="#" class="page-link" style="color:#17a2b8">1</a>
+				</li>
+				<li class="page-item">
+					<a href="#" class="page-link" style="color:#17a2b8">2</a>
+				</li>
+				<li class="page-item">
+					<a href="#" class="page-link" style="color:#17a2b8">3</a>
+				</li>
+				<li class="page-item">
+					<a href="#" class="page-link" style="color:#17a2b8"> >> </a>		
+				</li>
+			</ul>
+		</div>
+</div>  
+
+</div>
+

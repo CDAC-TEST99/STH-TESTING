@@ -1,0 +1,735 @@
+<script>
+$(document).ready(function () {
+	$('#btnview').click(function(){
+		$('#LISTFORM').addClass('hideData');
+		$('#VIEWPAGEFORM ').removeClass('hideData');		
+	});
+	
+	$('#btnBack').click(function(){
+		$('#LISTFORM').removeClass('hideData');
+		$('#VIEWPAGEFORM ').addClass('hideData');		
+	});
+	
+	$('#btnAdd').click(function(){
+		$('#LISTFORM').addClass('hideData');
+		$('#ADDFORM ').removeClass('hideData');		
+	});
+	
+	$('#btnBack1').click(function(){
+		$('#LISTFORM').removeClass('hideData');
+		$('#ADDFORM ').addClass('hideData');		
+	});
+	
+	$('#btnModify').click(function(){
+		$('#LISTFORM').addClass('hideData');
+		$('#MODIFYFORM ').removeClass('hideData');		
+	});
+	
+	$('#btnBack2').click(function(){
+		$('#LISTFORM').removeClass('hideData');
+		$('#MODIFYFORM ').addClass('hideData');		
+	});
+})
+</script>
+
+<div class="card card-info border-info center m-1" id='LISTFORM' >
+	<div class="card-header bg-navy"><h5 class="card-title text-center ">Maintenance Contract Desk</h5>
+			<div class="buttonContainer  bg-light">
+				<button class="btn bg-gradient-success btn-sm" id="btnAdd"><i class="fa fa-plus"></i> Add</button>
+				<button class="btn bg-gradient-success btn-sm" id="btnModify"><i class="fa fa-edit"></i> Modify</button>
+				<button class="btn bg-gradient-success btn-sm" id="btnview"><i class="fa fa-eye" aria-hidden="true"></i> View</button>
+				<button class="btn bg-gradient-danger btn-sm" id="btnDelete"><i class="fa fa-trash-o"></i> Delete</button>
+			</div>
+	</div>
+	<div class="card-body form-group">
+ 		<div class="row " >
+		<div class='col-lg-3' >
+ 			<div class="form-group">
+       			<label class="col-form-label col-form-label-sm" for="contractorName" data-validation="mandatory" data-langtag=Contractor Name" >Contractor Name</label>
+       			<select class="form-control form-control-sm  " id ='contractorName' name="contractorName">
+       				<option value="" selected="selected">Select Contractor Name</option>
+       				<option value="">Aim Health Care</option>
+       				<option value="">Vivo Health Care</option>
+       			</select>
+     				<div class="invalid-feedback"></div>
+			</div>
+		</div>	 					
+	 </div>
+	 <div class='container-fluid m-1 '>
+			<div class='row no-more-tables'>
+				<table class="table table-bordered table-striped tbl-listing"  >
+				  <thead class="bg-navy">
+				      <tr>
+				      	<th><input type="checkbox"></th>
+				        <th>Contract Id</th>
+				        <th>Work Order No.</th>
+				        <th>Contractor Name</th>
+				        <th>Contract Start Date</th>
+				        <th>Contract End Date</th>
+				      </tr>
+				    </thead>
+				    <tbody>
+				     <tr>
+				      	<td class='d-none d-sm-block' ><input type="checkbox"></td>
+				        <td data-title='Contract Id'>615429980001</td>
+				        <td data-title='Work Order No.'>Aim Health Care</td>
+				        <td data-title='Contractor Name'>Aim Healthcare</td>
+				        <td data-title='Contract Start Date'>20-Feb-2019</td>
+				        <td data-title='Contract End Date'>19-Feb-2022</td>
+				      </tr>
+				       <tr>
+				      <td class='d-none d-sm-block' ><input type="checkbox"></td>
+				        <td data-title='Contract Id'>725429980001</td>
+				        <td data-title='Work Order No.'>Life Health Care</td>
+				        <td data-title='Contractor Name'>Life Health Care</td>
+				        <td data-title='Contract Start Date'>20-Feb-2019</td>
+				        <td data-title='Contract End Date'>19-Feb-2022</td>
+				      </tr>
+				      <tr>
+				      	<td class='d-none d-sm-block' ><input type="checkbox"></td>
+				        <td data-title='Contract Id'>517129980001</td>
+				        <td data-title='Work Order No.'>Apolo Health Care</td>
+				        <td data-title='Contractor Name'>Apolo Health Care</td>
+				        <td data-title='Contract Start Date'>20-Feb-2019</td>
+				        <td data-title='Contract End Date'>19-Feb-2022</td>
+				      </tr>
+				    </tbody>
+				 </table>	
+			</div>
+		</div>
+   </div>
+</div>
+
+
+
+<div class="card card card-info border-info center m-1 hideData" id='ADDFORM' >
+<div class="card-header bg-navy"><h5 class="card-title text-center ">Maintenance Contract Desk >> Add</h5>
+			<div class="buttonContainer  bg-light">
+				<button class="btn bg-gradient-success btn-sm" id="btnSave"><i class="fa fa-save"></i> Save</button> 
+              	<button class="btn bg-gradient-success btn-sm" id="btnClear"><i class="fa fa-paint-brush"></i> Clear</button>
+              	<button class="btn bg-gradient-success btn-sm" id="btnBack1"><i class="fas fa-arrow-circle-left"></i> Back</button> 
+			</div>
+	</div>
+
+	<div class="card-body form-group">
+ 			<h6><b> Work Order Detail :</b></h6>
+			<hr class="bg-navy">
+  			<div class="row " >
+  			
+  						<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="workOrderNo" data-validation="mandatory" data-langtag="Work Order No." >Work Order No.</label>
+								<input type= "text" class="form-control form-control-sm"  id="workOrderNo" name="workOrderNo" maxlength="50" >
+	              				<div class="invalid-feedback"></div>
+ 	  						</div>
+	 					</div>
+	 					
+	 					
+	 					<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="contractprName" data-validation="mandatory" data-langtag="Contract Name" >Contractor Name</label>
+	                			<select class="form-control form-control-sm  " id ='contractorName' name="contractorName">
+	                				<option value="" selected="selected">Select Contractor Name</option>
+	                				<option value="">Aim Health Care</option>
+	                				<option value="">Vivo Health Care</option>
+	                			</select>
+	              				<div class="invalid-feedback"></div>
+ 	  						</div>
+	 					</div>
+	 				
+ 					<div class='col-lg-3' >
+				 		<div class="form-group">
+                			<label class="col-form-label col-form-label-sm" for="contractorContactNo" data-validation="mandatory" data-langtag="Contractor Contact Number" >Contractor Contact Number</label>
+							<input type= "text" class="form-control form-control-sm"  id="contractorContactNo" name="contractorContactNo" maxlength="50" >
+              				<div class="invalid-feedback"></div>
+	  						</div>
+ 					</div>
+ 					
+ 					<div class='col-lg-3' >
+				 		<div class="form-group">
+                			<label class="col-form-label col-form-label-sm" for="contractorMailId" data-validation="mandatory" data-langtag="Contractor Mail ID" >Contractor Mail ID</label>
+							<input type= "text" class="form-control form-control-sm"  id="contractorMailId" name="contractorMailId" maxlength="50" >
+              				<div class="invalid-feedback"></div>
+	  						</div>
+ 					</div>
+	 		 </div>
+	 		 <div class="row " >			
+	 				<div class='col-lg-3' >
+				 		<div class="form-group">
+                			<label class="col-form-label col-form-label-sm" for="contractStartDate" data-validation="mandatory" data-langtag="Contract Start Date" >Contract Start Date</label>
+							<input type= "date" class="form-control form-control-sm"  id="contractStartDate" name="contractStartDate" maxlength="50" >
+              				<div class="invalid-feedback"></div>
+	  					</div>
+ 					</div>
+ 					
+ 					<div class='col-lg-3' >
+				 		<div class="form-group">
+                			<label class="col-form-label col-form-label-sm" for="contractEndDate" data-validation="mandatory" data-langtag="Contract End Date" >Contract End Date</label>
+							<input type= "date" class="form-control form-control-sm"  id="contractEndDate" name="contractEndDate" maxlength="50" >
+              				<div class="invalid-feedback"></div>
+	  					</div>
+ 					</div>
+ 					
+					<div class='col-lg-3' >
+				 		<div class="form-group">
+	               			<label class="col-form-label col-form-label-sm" for="contractType" data-validation="mandatory" data-langtag="Contract Type" >Contract Type</label>
+	               			<select class="form-control form-control-sm  " id ='contractType' name="contractType">
+	               				<option value="" selected="selected">Select Contract Type</option>
+	               				<option title="AMC" value="1">AMC</option>
+								<option title="CMC" value="2">CAMC</option>
+								<option title="CMC" value="2">CMC</option>
+								<option title="CMC" value="3">Repair</option>
+	               			</select>
+	             				<div class="invalid-feedback"></div>
+	  					</div>
+					</div>
+					
+					<div class='col-lg-3' >
+				 		<div class="form-group">
+	               			<label class="col-form-label col-form-label-sm" for="selectEquipment" data-validation="mandatory" data-langtag="Select Equipment" >Select Equipment</label>
+	               			<select class="form-control form-control-sm  " id ='selectEquipment' name="selectEquipment">
+	               				<option value="" selected="selected">Select Equipment</option>
+	               			</select>
+	             				<div class="invalid-feedback"></div>
+	  					</div>
+					</div>
+					
+					<div class='col-lg-3 hideData' >
+				 		<div class="form-group">
+                			<label class="col-form-label col-form-label-sm" for="inventroziationTime" data-validation="mandatory" data-langtag="Inventroziation Time" >Inventroziation Time(in months)</label>
+							<input type= "text" class="form-control form-control-sm"  id="inventroziationTime" name="inventroziationTime" maxlength="50" >
+              				<div class="invalid-feedback"></div>
+	  						</div>
+ 					</div>
+			</div>
+	 		
+	 		<h6><b>Breakdown Detail :</b></h6>
+			<hr class="bg-navy">
+			
+	 		<div class="row " >	
+	 				<div class='col-lg-3' >
+				 		<div class="form-group">
+                			<label class="col-form-label col-form-label-sm" for="breakdownResponseTime" data-validation="mandatory" data-langtag="Breakdown Response Time" >Breakdown Response Time (/hour(s))</label>
+							<input type= "text" class="form-control form-control-sm"  id="breakdownResponseTime" name="breakdownResponseTime" maxlength="50" placeholder="24 hr">
+              				<div class="invalid-feedback"></div>
+	  						</div>
+ 					</div>
+	 		</div>
+	 		
+	 		<h6><b>Preventive Maintenance Detail :</b></h6>
+			<hr class="bg-navy">
+			
+	 		<div class="row " >
+	 				<div class='col-lg-3' >
+				 		<div class="form-group">
+                			<label class="col-form-label col-form-label-sm" for="pMStartDate" data-validation="mandatory" data-langtag="Preventive Maintenance Start Date" >Preventive Maintenance Start Date</label>
+							<input type= "date" class="form-control form-control-sm"  id="pMStartDate" name="pMStartDate" maxlength="50" >
+              				<div class="invalid-feedback"></div>
+	  					</div>
+ 					</div>
+ 					
+ 					<div class='col-lg-3' >
+				 		<div class="form-group">
+                			<label class="col-form-label col-form-label-sm" for="frequencyPM" data-validation="mandatory" data-langtag="Frequency of Preventive Maintenance" >Frequency of Preventive Maintenance (/Year(s))</label>
+							<input type= "text" class="form-control form-control-sm"  id="frequencyPM" name="frequencyPM" maxlength="50" >
+              				<div class="invalid-feedback"></div>
+	  						</div>
+ 					</div>
+ 					
+ 					<div class='col-lg-3' >
+				 		<div class="form-group">
+                			<label class="col-form-label col-form-label-sm" for="pMResponseTime" data-validation="mandatory" data-langtag="Preventive Maintenance Response Time" >Preventive Maintenance Response Time (/Day(s))</label>
+							<input type= "text" class="form-control form-control-sm"  id="pMResponseTime" name="pMResponseTime" maxlength="50" >
+              				<div class="invalid-feedback"></div>
+	  						</div>
+ 					</div> 
+	 	
+	 		</div>
+	 		
+	 		<h6><b>Calibration Detail :</b></h6>
+			<hr class="bg-navy">
+	 		
+	 		<div class="row " >		
+	 				<div class='col-lg-3' >
+				 		<div class="form-group">
+                			<label class="col-form-label col-form-label-sm" for="calibStartDate" data-validation="mandatory" data-langtag="Calibration Start Date" >Calibration Start Date</label>
+							<input type= "date" class="form-control form-control-sm"  id="calibStartDate" name="calibStartDate" maxlength="50" >
+              				<div class="invalid-feedback"></div>
+	  					</div>
+ 					</div>
+	 			
+	 				<div class='col-lg-3' >
+				 		<div class="form-group">
+                			<label class="col-form-label col-form-label-sm" for="frequencyCalib" data-validation="mandatory" data-langtag="Frequency of Calibration(/Year(s))" >Frequency of Calibration (/Year(s))</label>
+							<input type= "text" class="form-control form-control-sm"  id="frequencyCalib" name="frequencyCalib" maxlength="50" >
+              				<div class="invalid-feedback"></div>
+	  						</div>
+ 					</div>
+ 					
+ 					<div class='col-lg-3' >
+				 		<div class="form-group">
+                			<label class="col-form-label col-form-label-sm" for="calibResponseTime" data-validation="mandatory" data-langtag="Calibration Response Time(/Day(s))" >Calibration Response Time (/Day(s))</label>
+							<input type= "text" class="form-control form-control-sm"  id="calibResponseTime" name="calibResponseTime" maxlength="50" >
+              				<div class="invalid-feedback"></div>
+	  						</div>
+ 					</div>
+	 		 </div>	
+	 		 
+	 		<h6><b>Payment Detail :</b></h6>
+			<hr class="bg-navy">
+	 		 
+	 		 <div class="row " >			
+	 				<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="paymentToBeDone" data-validation="mandatory" data-langtag="Payment to be done" >Payment to be done</label>
+	                			<select class="form-control form-control-sm  " id ='paymentToBeDone' name="paymentToBeDone">
+	                				<option value="">Monthly</option>
+	                				<option value="" selected="selected">Quarterly</option>
+	                				<option value="">Yearly</option>
+	                				<option value="">Half-Yearly</option>
+	                			</select>
+	              				<div class="invalid-feedback"></div>
+ 	  						</div>
+	 					</div>
+	 				
+	 			  	<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="fYearForPayment" data-validation="mandatory" data-langtag="Financial Year for Payment" >Financial Year for Payment</label>
+	                			<select class="form-control form-control-sm  " id ='fYearForPayment' name="fYearForPayment">
+	                				<option value="" selected="selected">Financial Year</option>
+	                				<option value="">Calender Year</option>
+	                				<option value="">Contract Start Date</option>
+	                			</select>
+	              				<div class="invalid-feedback"></div>
+ 	  						</div>
+	 					</div>
+	 					
+	 					<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="maintenanceCost" data-validation="mandatory" data-langtag="Maintenance Cost" >Maintenance Cost</label>
+	                			<select class="form-control form-control-sm  " id ='maintenanceCost' name="maintenanceCost">
+	                				<option value="" selected="selected">% of total N.A.V.</option>
+	                				<option value="">Fixed Cost</option>
+	                			</select>
+	              				<div class="invalid-feedback"></div>
+ 	  						</div>
+	 					</div>
+	 					
+	 					<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="costIncrement" data-validation="mandatory" data-langtag="Cost Increment" >Cost Increment</label>
+	                			<select class="form-control form-control-sm  " id ='costIncrement' name="costIncrement">
+	                				<option value="" selected="selected">Yearly</option>
+	                				<option value="">Half Yearly</option>
+	                				<option value="">No Increment</option>
+	                			</select>
+	              				<div class="invalid-feedback"></div>
+ 	  						</div>
+	 					</div>
+	 		 </div>
+	 		 
+	 		 <h6><b>Terms & Condition :</b></h6>
+			 <hr class="bg-navy">
+			
+	 		 <div class="row " >
+	 		 		<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="terms&Condition"  data-langtag="Terms & Condition" >Terms & Condition</label>
+	                		   	<textarea class="form-control form-control-sm "  id="terms&Condition" name="terms&Condition" maxlength="50" ></textarea>
+	              			<div class="invalid-feedback"></div>
+ 	  					</div>
+	 				</div> 	
+	 				
+	 				<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="penaltyConditions"  data-langtag="Penalty Conditions" >Penalty Conditions</label>
+	                		   	<textarea class="form-control form-control-sm "  id="penaltyConditions" name="penaltyConditions" maxlength="50" ></textarea>
+	              			<div class="invalid-feedback"></div>
+ 	  					</div>
+	 				</div> 	
+	 				<div class="col-lg-6 form-group">
+                    <label for="exampleInputFile">Contract Copy Attach</label>
+                    <div class="input-group">
+                      <div class="custom-file">
+                        <input type="file" class="custom-file-input" id="exampleInputFile">
+                        <label class="custom-file-label" for="exampleInputFile">Choose file</label>
+                      </div>
+                      <div class="input-group-append">
+                        <span class="input-group-text" id="">Upload</span>
+                      </div>
+                    </div>
+                    <label class='col-form-label col-form-label-sm font-weight-normal' >(Only .pdf, .jpg, .jpeg, .png Files are allowed)</label>
+              </div>
+	 				
+	 				
+	 		 
+	 				
+	 		</div>		
+	
+		
+	
+   </div>
+
+</div>
+
+
+
+<div class="card card card-info border-info center m-1 hideData" id='MODIFYFORM' >
+			<div class="card-header bg-navy"><h5 class="card-title text-center ">Maintenance Contract Desk >> Modify</h5>
+			</div>
+
+
+	<div class="card-body form-group">
+ 			<h6 class="text-center"><b>Contract Details</b></h6>
+			<hr>
+			<h6><b> Work Order Detail :</b></h6>
+			<hr class="bg-navy">
+  			<div class="row " >
+  			
+  						<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="workOrderNo" data-validation="mandatory" data-langtag="Work Order No." >Work Order No.</label>
+								<input type= "text" class="form-control form-control-sm"  id="workOrderNo" name="workOrderNo" maxlength="50" >
+	              				<div class="invalid-feedback"></div>
+ 	  						</div>
+	 					</div>
+	 					
+	 					
+	 					<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="contractprName" data-validation="mandatory" data-langtag="Contract Name" >Contractor Name</label>
+	                			<select class="form-control form-control-sm  " id ='contractorName' name="contractorName">
+	                				<option value="" selected="selected">Select Contractor Name</option>
+	                				<option value="">Aim Health Care</option>
+	                				<option value="">Vivo Health Care</option>
+	                			</select>
+	              				<div class="invalid-feedback"></div>
+ 	  						</div>
+	 					</div>
+	 				
+ 					<div class='col-lg-3' >
+				 		<div class="form-group">
+                			<label class="col-form-label col-form-label-sm" for="contractorContactNo" data-validation="mandatory" data-langtag="Contractor Contact Number" >Contractor Contact Number</label>
+							<input type= "text" class="form-control form-control-sm"  id="contractorContactNo" name="contractorContactNo" maxlength="50" >
+              				<div class="invalid-feedback"></div>
+	  						</div>
+ 					</div>
+ 					
+ 					<div class='col-lg-3' >
+				 		<div class="form-group">
+                			<label class="col-form-label col-form-label-sm" for="contractorMailId" data-validation="mandatory" data-langtag="Contractor Mail ID" >Contractor Mail ID</label>
+							<input type= "text" class="form-control form-control-sm"  id="contractorMailId" name="contractorMailId" maxlength="50" >
+              				<div class="invalid-feedback"></div>
+	  						</div>
+ 					</div>
+	 		 </div>
+	 		 <div class="row " >			
+	 				<div class='col-lg-3' >
+				 		<div class="form-group">
+                			<label class="col-form-label col-form-label-sm" for="contractStartDate" data-validation="mandatory" data-langtag="Contract Start Date" >Contract Start Date</label>
+							<input type= "date" class="form-control form-control-sm"  id="contractStartDate" name="contractStartDate" maxlength="50" >
+              				<div class="invalid-feedback"></div>
+	  					</div>
+ 					</div>
+ 					
+ 					<div class='col-lg-3' >
+				 		<div class="form-group">
+                			<label class="col-form-label col-form-label-sm" for="contractEndDate" data-validation="mandatory" data-langtag="Contract End Date" >Contract End Date</label>
+							<input type= "date" class="form-control form-control-sm"  id="contractEndDate" name="contractEndDate" maxlength="50" >
+              				<div class="invalid-feedback"></div>
+	  					</div>
+ 					</div>
+ 					
+					<div class='col-lg-3' >
+				 		<div class="form-group">
+	               			<label class="col-form-label col-form-label-sm" for="contractType" data-validation="mandatory" data-langtag="Contract Type" >Contract Type</label>
+	               			<select class="form-control form-control-sm  " id ='contractType' name="contractType">
+	               				<option value="" selected="selected">Select Contract Type</option>
+	               				<option title="AMC" value="1">AMC</option>
+								<option title="CMC" value="2">CAMC</option>
+								<option title="CMC" value="3">Repair</option>
+	               			</select>
+	             				<div class="invalid-feedback"></div>
+	  					</div>
+					</div>
+					
+					<div class='col-lg-3' >
+				 		<div class="form-group">
+	               			<label class="col-form-label col-form-label-sm" for="selectEquipment" data-validation="mandatory" data-langtag="Select Equipment" >Select Equipment</label>
+	               			<select class="form-control form-control-sm  " id ='selectEquipment' name="selectEquipment">
+	               				<option value="" selected="selected">Select Equipment</option>
+	               			</select>
+	             				<div class="invalid-feedback"></div>
+	  					</div>
+					</div>
+					
+					<div class='col-lg-3' >
+				 		<div class="form-group">
+                			<label class="col-form-label col-form-label-sm" for="inventroziationTime" data-validation="mandatory" data-langtag="Inventroziation Time" >Inventroziation Time(in months)</label>
+							<input type= "text" class="form-control form-control-sm"  id="inventroziationTime" name="inventroziationTime" maxlength="50" >
+              				<div class="invalid-feedback"></div>
+	  						</div>
+ 					</div>
+			</div>
+	 		
+	 		<h6><b>Breakdown Detail :</b></h6>
+			<hr class="bg-navy">
+			
+	 		<div class="row " >	
+	 				<div class='col-lg-3' >
+				 		<div class="form-group">
+                			<label class="col-form-label col-form-label-sm" for="breakdownResponseTime" data-validation="mandatory" data-langtag="Breakdown Response Time" >Breakdown Response Time (/hour(s))</label>
+							<input type= "text" class="form-control form-control-sm"  id="breakdownResponseTime" name="breakdownResponseTime" maxlength="50" placeholder="24 hr">
+              				<div class="invalid-feedback"></div>
+	  						</div>
+ 					</div>
+	 		</div>
+	 		
+	 		<h6><b>Preventive Maintenance Detail :</b></h6>
+			<hr class="bg-navy">
+			
+	 		<div class="row " >
+	 				<div class='col-lg-3' >
+				 		<div class="form-group">
+                			<label class="col-form-label col-form-label-sm" for="pMStartDate" data-validation="mandatory" data-langtag="Preventive Maintenance Start Date" >Preventive Maintenance Start Date</label>
+							<input type= "date" class="form-control form-control-sm"  id="pMStartDate" name="pMStartDate" maxlength="50" >
+              				<div class="invalid-feedback"></div>
+	  					</div>
+ 					</div>
+ 					
+ 					<div class='col-lg-3' >
+				 		<div class="form-group">
+                			<label class="col-form-label col-form-label-sm" for="frequencyPM" data-validation="mandatory" data-langtag="Frequency of Preventive Maintenance" >Frequency of Preventive Maintenance (/Year(s))</label>
+							<input type= "text" class="form-control form-control-sm"  id="frequencyPM" name="frequencyPM" maxlength="50" >
+              				<div class="invalid-feedback"></div>
+	  						</div>
+ 					</div>
+ 					
+ 					<div class='col-lg-3' >
+				 		<div class="form-group">
+                			<label class="col-form-label col-form-label-sm" for="pMResponseTime" data-validation="mandatory" data-langtag="Preventive Maintenance Response Time" >Preventive Maintenance Response Time (/Day(s))</label>
+							<input type= "text" class="form-control form-control-sm"  id="pMResponseTime" name="pMResponseTime" maxlength="50" >
+              				<div class="invalid-feedback"></div>
+	  						</div>
+ 					</div> 
+	 	
+	 		</div>
+	 		
+	 		<h6><b>Calibration Detail :</b></h6>
+			<hr class="bg-navy">
+	 		
+	 		<div class="row " >		
+	 				<div class='col-lg-3' >
+				 		<div class="form-group">
+                			<label class="col-form-label col-form-label-sm" for="calibStartDate" data-validation="mandatory" data-langtag="Calibration Start Date" >Calibration Start Date</label>
+							<input type= "date" class="form-control form-control-sm"  id="calibStartDate" name="calibStartDate" maxlength="50" >
+              				<div class="invalid-feedback"></div>
+	  					</div>
+ 					</div>
+	 			
+	 				<div class='col-lg-3' >
+				 		<div class="form-group">
+                			<label class="col-form-label col-form-label-sm" for="frequencyCalib" data-validation="mandatory" data-langtag="Frequency of Calibration(/Year(s))" >Frequency of Calibration (/Year(s))</label>
+							<input type= "text" class="form-control form-control-sm"  id="frequencyCalib" name="frequencyCalib" maxlength="50" >
+              				<div class="invalid-feedback"></div>
+	  						</div>
+ 					</div>
+ 					
+ 					<div class='col-lg-3' >
+				 		<div class="form-group">
+                			<label class="col-form-label col-form-label-sm" for="calibResponseTime" data-validation="mandatory" data-langtag="Calibration Response Time(/Day(s))" >Calibration Response Time (/Day(s))</label>
+							<input type= "text" class="form-control form-control-sm"  id="calibResponseTime" name="calibResponseTime" maxlength="50" >
+              				<div class="invalid-feedback"></div>
+	  						</div>
+ 					</div>
+	 		 </div>	
+	 		 
+	 		<h6><b>Payment Detail :</b></h6>
+			<hr class="bg-navy">
+	 		 
+	 		 <div class="row " >			
+	 				<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="paymentToBeDone" data-validation="mandatory" data-langtag="Payment to be done" >Payment to be done</label>
+	                			<select class="form-control form-control-sm  " id ='paymentToBeDone' name="paymentToBeDone">
+	                				<option value="">Monthly</option>
+	                				<option value="" selected="selected">Quarterly</option>
+	                				<option value="">Yearly</option>
+	                				<option value="">Half-Yearly</option>
+	                			</select>
+	              				<div class="invalid-feedback"></div>
+ 	  						</div>
+	 					</div>
+	 				
+	 			  	<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="fYearForPayment" data-validation="mandatory" data-langtag="Financial Year for Payment" >Financial Year for Payment</label>
+	                			<select class="form-control form-control-sm  " id ='fYearForPayment' name="fYearForPayment">
+	                				<option value="" selected="selected">Financial Year</option>
+	                				<option value="">Calender Year</option>
+	                				<option value="">Contract Start Date</option>
+	                			</select>
+	              				<div class="invalid-feedback"></div>
+ 	  						</div>
+	 					</div>
+	 					
+	 					<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="maintenanceCost" data-validation="mandatory" data-langtag="Maintenance Cost" >Maintenance Cost</label>
+	                			<select class="form-control form-control-sm  " id ='maintenanceCost' name="maintenanceCost">
+	                				<option value="" selected="selected">% of total N.A.V.</option>
+	                				<option value="">Fixed Cost</option>
+	                			</select>
+	              				<div class="invalid-feedback"></div>
+ 	  						</div>
+	 					</div>
+	 					
+	 					<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="costIncrement" data-validation="mandatory" data-langtag="Cost Increment" >Cost Increment</label>
+	                			<select class="form-control form-control-sm  " id ='costIncrement' name="costIncrement">
+	                				<option value="" selected="selected">Yearly</option>
+	                				<option value="">Half Yearly</option>
+	                				<option value="">No Increment</option>
+	                			</select>
+	              				<div class="invalid-feedback"></div>
+ 	  						</div>
+	 					</div>
+	 		 </div>
+	 		 
+	 		 <h6><b>Terms & Condition :</b></h6>
+			 <hr class="bg-navy">
+			
+	 		 <div class="row " >
+	 		 		<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="terms&Condition"  data-langtag="Terms & Condition" >Terms & Condition</label>
+	                		   	<textarea class="form-control form-control-sm "  id="terms&Condition" name="terms&Condition" maxlength="50" ></textarea>
+	              			<div class="invalid-feedback"></div>
+ 	  					</div>
+	 				</div> 	
+	 				
+	 				<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="penaltyConditions"  data-langtag="Penalty Conditions" >Penalty Conditions</label>
+	                		   	<textarea class="form-control form-control-sm "  id="penaltyConditions" name="penaltyConditions" maxlength="50" ></textarea>
+	              			<div class="invalid-feedback"></div>
+ 	  					</div>
+	 				</div> 	
+	 				
+	 				<div class='col-lg-3' >
+		 				<div class="form-group">
+                			<label class="col-form-label col-form-label-sm" for="contractCopyAttach" data-langtag="Contract Copy Attach"><b>Contract Copy Attach</b></label>
+                   			<input type="file" class="form-control-file" id="contractCopyAttach">
+                			<div class="invalid-feedback"></div>
+		              	</div>
+	 				</div> 	
+	 		 
+	 				
+	 		</div>		
+	
+		<hr class="bg-navy">
+		<h6><b><i class="text-center text-danger">*</i> Mandatory Fields</b></h6>
+	
+   </div>
+
+ <div class="card-footer">
+		<div class="text-center">
+              <button class="btn bg-gradient-success mt-4 btn-sm" id="btnSave"><i class="fa fa-save"></i> Save</button> 
+              <button class="btn bg-gradient-success mt-4 btn-sm" id="btnClear"><i class="fa fa-paint-brush"></i> Clear</button>
+              <button class="btn bg-gradient-success mt-4 btn-sm" id="btnBack2"><i class="fas fa-arrow-circle-left"></i> Back</button>                            
+		</div>
+	</div>  
+</div>
+
+
+
+<div class="card card card-info border-info center m-1 hideData" id='VIEWPAGEFORM'  >
+	<div class="card-header bg-navy">
+		<h6 class="text-left">Equipment AMC Maintenance Detail >> View</h6>
+	</div>
+		<div class="card-body form-group">
+			<h6><b>Work Order Detail :</b></h6>
+			<hr class="bg-navy">
+	 		<div class='row'>
+				  		<div class='col-lg-3' >
+				  				<div><b>Work Order No. :</b> Aim Health Care </div>	
+				  				<div><b>Contract Start Date :</b> 20-Feb-2019</div> 
+				  		</div>
+				  		<div class='col-lg-3' >	
+				  				<div><b>Contractor Name :</b>  Aim Healthcare</div>
+				  				<div><b>Contract Type :</b> CMC</div>
+						</div>
+						<div class='col-lg-3' >	
+								<div><b>Contractor Contact Number :</b> 9425680875</div>	
+								<div><b>Inventroziation Time :</b> 6 (In Months)</div>	 
+						</div>
+						<div class='col-lg-3' >	
+								<div><b>Contractor Mail id :</b> aimbpl2016@gmail.com</div>
+						</div> 	
+			</div>
+			<br>
+			<h6><b> Breakdown Detail :</b></h6>
+			<hr class="bg-navy">
+			<div class='row'>
+				  		<div class='col-lg-3' >
+				  				<div><b>Breakdown Response Time :</b> 7 Day(s)</div>	
+				  		</div>
+			</div>
+			<br>
+			<h6><b> Preventive Maintenance Detail :</b></h6>
+			<hr class="bg-navy">
+			<div class='row'>
+				  		<div class='col-lg-3' >
+				  				<div><b>Preventive Maintenance Start Date :</b> 01-Jan-2019</div>	
+				  		</div>
+				  		<div class='col-lg-3' >	
+				  				<div><b>Frequency of Preventive Maintenance :</b>  2 / Year(s)</div>
+						</div>
+						<div class='col-lg-3' >	
+								<div><b>Preventive Maintenance Response Time :</b> 15 Day(s)</div>	
+						</div>
+			</div>
+			<br>
+			<h6><b> Calibration Detail :</b></h6>
+			<hr class="bg-navy">
+			<div class='row'>
+				  		<div class='col-lg-3' >
+				  				<div><b>Calibration Start Date :</b> 01-Jan-2019</div>	
+				  		</div>
+				  		<div class='col-lg-3' >	
+				  				<div><b>Frequency of Calibration :</b>  2 / Year(s)</div>
+						</div>
+						<div class='col-lg-3' >	
+								<div><b>Calibration Response Time :</b> 30 Day(s)</div>	
+						</div>
+			</div>	
+			<br>		 			
+			<h6><b> Terms & Condition :</b></h6>
+			<hr class="bg-navy">
+			<div class='row'>
+				  		<div class='col-lg-3' >
+				  				<div><b>Terms & Condition :</b> </div>	
+				  		</div>
+				  		<div class='col-lg-3' >	
+				  				<div><b>Penalty Conditions :</b> </div>
+						</div>
+						<div class='col-lg-3' >	
+								<div><b>Old Contract Copy Attach :</b> </div>	
+						</div>
+			</div>
+			
+			<hr class="bg-navy">
+			<h6><b><i class="text-center text-danger">*</i> Mandatory Fields</b></h6>
+		
+	</div>
+	
+    <div class="card-footer">
+		<div class="text-center">
+              <button class="btn bg-gradient-success mt-4 btn-sm" id="btnBack"><i class="fas fa-arrow-circle-left"></i> Back</button>                            
+		</div>
+	</div>  
+ 
+  
+</div>
+

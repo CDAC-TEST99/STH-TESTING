@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link rel="stylesheet" href="/HIS/hisglobal/eUpkaranTemplate/dist/css/adminlte.min.css">
+</head>
+<body>
+
+<div style="letter-spacing: 1px;">
+<style type="text/css">
+.table td, .table th{
+	padding: 2px;
+	border: none;
+}
+</style>
+<table class='table' style="width: 100%">
+<tbody>
+ 
+ <tr>
+   <td  style="width:75%;"><b>From :</b>
+   <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b> #name# </b> 
+   <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Professor & HOD,
+   <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#department#,
+   <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; #fromInstituionName#,
+   <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; #fromInstitutionAddress#<br><br>
+   
+   
+   </td>
+   <td  style="width:25%;text-align: left;"><b>Date : #date#</b><br><br></td>   
+</tr>
+ 
+ 
+<tr>
+   <td  style="width:75%;"><b>To :</b>
+   <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b> The Dean,</b>
+   <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; #toInstituionName#,
+   <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; #toInstitutionAddress#<br><br>
+   
+   
+   </td>
+</tr>
+
+ <tr>
+
+  <td   style="width:10%;text-align: left;"><b>Respected Madam/Sir,</b> </td>
+   
+</tr>
+
+<tr>
+    <td   style="width:10%;text-align: left;"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sub : </b>surrendering of #equipmentName# - reg<br><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We herewith surrender the following <b>#equipmentName#</b>  in excess, for use in other needy wards.
+      <br><br></td>
+</tr>
+</tbody>
+</table>
+
+<table class='table' style="width: 100%">
+<tbody>
+ 
+    <tr>
+   <td 	style="width:30%;text-align: left;width:5%;">Number of #equipmentName#&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>:</b><br></td>
+     <td colspan ="4" style="width:0%;text-align: left;">  #equipQty#  <br><br></td>
+  
+   </tr>
+   
+    <tr>
+   <td 	style="width:30%;text-align: left;">Make and Model&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>:</b><br></td>
+     <td colspan ="4" style="width:90%;text-align: left;">  #make# , #model# <br><br></td>
+  
+   </tr>
+   
+    <tr>
+   <td 	style="width:30%;text-align: left;">Year of purchase &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>:</b> <br></td>
+     <td 	colspan ="4" style="width:90%;text-align: left;"> #equipPurchaseYear#<br><br></td>
+  
+   </tr>
+   
+    <tr>
+   <td 	style="width:30%;text-align: left;">Cost of each unit&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>:</b> <br></td>
+     <td colspan ="4"	style="width:90%;text-align: left;"> Rs.#cost# /-<br><br></td>
+  
+   </tr>
+   
+    <tr>
+   <td 	style="width:30%;text-align: left;">Working Condition&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>:</b> <br></td>
+     <td colspan ="4"	style="width:90%;text-align: left;"> #workingCondition#<br><br></td>
+  
+   </tr>
+   
+    <tr>
+   <td 	style="width:30%;text-align: left;"> Under AMC &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>:</b> <br></td>
+     <td colspan ="4"	style="width:90%;text-align: left;"> #isUnderAmc#<br><br></td>
+  
+   </tr>
+   
+   <tr>
+   <td 	colspan ="4" style="width:10%;text-align: center;"> Thanking You,<br></td>
+   </tr>
+
+    <tr>
+   <td 	 colspan ="4" style="width:10%;text-align: right;"> Yours sincerely,<br></td>
+   </tr>
+   
+    <tr>
+   <td 	colspan ="4" style="width:10%;text-align: left;"> Copy to:</td>
+   </tr>
+   
+    <tr>
+   <td 	style="width:10%;text-align: left;"> (1) #designation#</td>
+   </tr>
+   
+    <tr>
+   <td 	style="width:10%;text-align: left;"> (2) #department#</td>
+   </tr>
+   
+   
+</tbody>
+</table>
+
+
+
+
+</div>
+</body>
+</html>

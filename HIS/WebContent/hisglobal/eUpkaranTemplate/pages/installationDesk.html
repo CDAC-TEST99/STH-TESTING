@@ -1,0 +1,602 @@
+<script>
+$(document).ready(function () {
+	$('#btnview').click(function(){
+		$('#LISTFORM').addClass('hideData');
+		$('#VIEWPAGEFORM ').removeClass('hideData');		
+	});
+	
+	$('#btnBack').click(function(){
+		$('#LISTFORM').removeClass('hideData');
+		$('#VIEWPAGEFORM ').addClass('hideData');		
+	});
+	
+	$('#btnInstall').click(function(){
+		$('#LISTFORM').addClass('hideData');
+		$('#MODIFYFORM ').removeClass('hideData');		
+	});
+	
+	$('#btnModify').click(function(){
+		$('#LISTFORM').addClass('hideData');
+		$('#MODIFYFORM ').removeClass('hideData');		
+	});
+	
+	$('#btnBack1').click(function(){
+		$('#LISTFORM').removeClass('hideData');
+		$('#MODIFYFORM ').addClass('hideData');		
+	});
+	
+	$('#btnUpload').click(function(){
+		$('#LISTFORM').addClass('hideData');
+		$('#UPLOADFORM ').removeClass('hideData');		
+	});
+	
+	$('#btnBack2').click(function(){
+		$('#LISTFORM').removeClass('hideData');
+		$('#UPLOADFORM ').addClass('hideData');		
+	});
+})
+</script>
+
+<div class="card card-info border-info center m-1" id='LISTFORM' >
+	<div class="card-header bg-navy"><h5 class="card-title text-center ">Installation Desk</h5>
+			<div class="buttonContainer  bg-light">
+				<button class="btn bg-gradient-success btn-sm" id="btnInstall"><i class="fa fa-cog" aria-hidden="true"></i> Install</button>
+				<button class="btn bg-gradient-success btn-sm" id="btnModify"><i class="fa fa-edit"></i> Modify</button>
+				<button class="btn bg-gradient-success btn-sm" id="btnview"><i class="fa fa-eye" aria-hidden="true"></i> View</button>
+				<button class="btn bg-gradient-success btn-sm" id="btnPrint"><i class="fa fa-print"></i> Print</button>
+				<button class="btn bg-gradient-success btn-sm" id="btnUpload"><i class="fa fa-upload"></i> Upload</button>				
+			</div>
+	</div>
+
+
+	<div class="card-body form-group">
+ 	
+  			<div class="row " >
+					<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="institutionName" data-validation="mandatory" data-langtag=Institution Name" >Institution Name</label>
+	                			<select class="form-control form-control-sm  " id ='institutionName' name="institutionName">
+	                				<option value="" selected="selected">Select Institution Name</option>
+	                				<option title="Aagar- DH" value="5001672">Aagar- DH</option>
+									<option title="Alirajpur- DH" value="5001673">Alirajpur- DH</option>
+									<option title="Annupur- DH" value="5001674">Annupur- DH</option>
+									<option title="Ashoknagar- DH" value="5001675">Ashoknagar- DH</option>
+									<option title="Badwani- DH" value="5001676">Badwani- DH</option>
+									<option title="Balaghat- DH" value="5001677">Balaghat- DH</option>
+									<option title="Betul- DH" value="5001678">Betul- DH</option>
+									<option title="Bhind- DH" value="5001679">Bhind- DH</option>
+									<option title="Bhopal - DH" value="5001614">Bhopal - DH</option>
+	                			</select>
+	              				<div class="invalid-feedback"></div>
+ 	  						</div>
+	 					</div>
+	 					
+	 					
+	 					<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="departmentName" data-validation="mandatory" data-langtag="Department Name" >Department Name</label>
+	                			<select class="form-control form-control-sm  " id ='departmentName' name="departmentName">
+	                				<option value="" selected="selected">Select Department Name</option>
+	                				<option title="All"  value="0">All</option>
+									<option title="Aagar- DH - BLOOD BANK DEP" value="5003337">Aagar- DH - BLOOD BANK DEP</option>
+									<option title="Aagar- DH - BURN UNIT" value="5003338">Aagar- DH - BURN UNIT</option>
+									<option title="Aagar- DH - CENCER DEPT" value="5003339">Aagar- DH - CENCER DEPT</option>
+									<option title="Aagar- DH - CHILDREN WARD" value="5003340">Aagar- DH - CHILDREN WARD</option>
+									<option title="Aagar- DH - COLD CHAIN DEP" value="5003341">Aagar- DH - COLD CHAIN DEP</option>
+									<option title="Aagar- DH - DAILYSIS DEPT" value="5003342">Aagar- DH - DAILYSIS DEPT</option>
+	                			</select>
+	              			<div class="invalid-feedback"></div>
+ 	  					</div>
+	 				</div>
+	 				
+	 				<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="status" data-validation="mandatory" data-langtag="Status" >Status</label>
+	                			<select class="form-control form-control-sm  " id ='status' name="status">
+	                				<option value="" selected="selected">Select Status</option>
+	                				<option selected="" value="2">All</option>
+									<option value="1">Installed</option>
+									<option value="0">UnInstalled</option>
+	                			</select>
+	              			<div class="invalid-feedback"></div>
+ 	  					</div>
+	 				</div>
+	 				
+	 		</div>	
+
+			<div class='container-fluid m-1 '>
+			<div class='row no-more-tables'>
+				<table class="table table-bordered table-striped tbl-listing"  >
+				  <thead class="bg-navy">
+				      <tr>
+				      	<th><input type="checkbox"></th>
+				        <th >Equipment Name</th>
+				        <th>Model Name</th>
+				        <th>Serial No.</th>
+				        <th>Manufacturer Name</th>
+				        <th>Installation Date/Receive Date</th>
+				        <th>Status</th>
+				        <th>Bar Code</th>
+				      </tr>
+				    </thead>
+				    <tbody>
+				     <tr>
+				      	<td class='d-none d-sm-block' ><input type="checkbox"></td>
+				        <td data-title='Equipment Name'>3 Fold Labour table SS with foam mattress</td>
+				        <td data-title='Model Name'>111111</td>
+				        <td data-title='Serial No.'>1234321</td>
+				        <td data-title='Manufacturer Name'>Aarpen V1</td> 
+				        <td data-title='Installation Date/Receive Date'> 01-JAN-2019</td>
+				        <td data-title='Status'>UNINSTALLED</td>
+				        <td data-title='Bar Code'>165432</td>
+				      </tr>
+				        <tr>
+				      	<td class='d-none d-sm-block' ><input type="checkbox"></td>
+				        <td data-title='Equipment Name'> AMBU BAG ADULT </td>
+				        <td data-title='Model Name'> MODEL NOT AVAILABLE</td>
+				        <td data-title='Serial No.'>28593</td>
+				        <td data-title='Manufacturer Name'> Hll Lifecare Limited</td> 
+				        <td data-title='Installation Date/Receive Date'> 01-JAN-2019</td>
+				        <td data-title='Status'>INSTALLED</td>
+				        <td data-title='Bar Code'>428593</td>
+				      </tr>
+				       <tr>
+				      	<td class='d-none d-sm-block' ><input type="checkbox"></td>
+				        <td data-title='Equipment Name'> AUTOCLAVE VERTICAL</td>
+				        <td data-title='Model Name'> MODEL NOT AVAILABLE</td>
+				        <td data-title='Serial No.'>28598</td>
+				        <td data-title='Manufacturer Name'> Aut(V)(Ind)</td> 
+				        <td data-title='Installation Date/Receive Date'> 01-JAN-2019</td>
+				        <td data-title='Status'>INSTALLED</td>
+				        <td data-title='Bar Code'>428598</td>
+				      </tr>
+				    </tbody>
+				 </table>	
+			</div>
+		</div>	
+	<hr>
+	<p> <i class="fa fa-circle" style="font-size:12px;color:bg-navy"></i> Unistalled</p>
+   </div>
+</div>
+
+
+
+<div class="card card card-info border-info center m-1 hideData" id='MODIFYFORM' >
+	<div class="card-header bg-navy"><h5 class="card-title text-center ">Installation Details Desk >> Add/Modify</h5>
+		<div class="buttonContainer  bg-light">
+			<button class="btn bg-gradient-success btn-sm"  id='btnUpdate'><i class="fa fa-save" aria-hidden="true"></i> Save</button>
+			<button class="btn bg-gradient-success btn-sm" id="btnBack1"><i class="fas fa-arrow-circle-left"></i> Back</button>				
+		</div>
+	</div>
+	<div class="card-body form-group">
+ 	
+  			<div class="row " >
+						
+					<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="institutionName" data-validation="mandatory" data-langtag="Institution Name" >Institution Name:</label>
+	                			<br/>
+	                			<label class='col-form-label col-form-label-sm font-weight-normal'>Govt. Rajaji Hospital</label>
+	              				<div class="invalid-feedback"></div>
+ 	  						</div>
+	 					</div>
+	 					
+	 					
+	 					<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="departmentName" data-validation="mandatory" data-langtag="Department Name" >Department Name</label>
+	                			<br/>
+								<label class='col-form-label col-form-label-sm font-weight-normal'>Govt. Rajaji Hospital - BIO CHEMISTRY DEPT</label>
+	              			<div class="invalid-feedback"></div>
+ 	  					</div>
+	 				</div>
+	 				
+	 				<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="equipmentGroup" data-validation="mandatory" data-langtag="Equipment Group" >Equipment Group</label>
+	                			<br/>
+	                			<label class='col-form-label col-form-label-sm font-weight-normal'>Eif</label>	                			
+	              			<div class="invalid-feedback"></div>
+ 	  					</div>
+	 				</div>
+	 				<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="manufacturerName"  data-langtag="Manufacturer Name" >Supplier Name</label>
+	                			<br/>
+	                			<label class='col-form-label col-form-label-sm font-weight-normal'>Adarsh Enterprises</label>
+	              			<div class="invalid-feedback"></div>
+ 	  					</div>
+	 				</div>
+	 	
+	 				<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="equipmentName" data-validation="mandatory" data-langtag="Equipment Name" >Equipment Name</label>
+	                			<br/>
+	                			<label class='col-form-label col-form-label-sm font-weight-normal'>-80 degree C Vertical Ultra Low Freezer</label>
+	              			<div class="invalid-feedback"></div>
+ 	  					</div>
+	 				</div>
+	 				
+	 				<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="equipmentModel" data-validation="mandatory" data-langtag="Equipment Model" >Equipment Model</label>
+	                			<br/>
+	                			<label class='col-form-label col-form-label-sm font-weight-normal'>YSI 273 EX</label>
+	              			<div class="invalid-feedback"></div>
+ 	  					</div>
+	 				</div>
+	 				
+	 				<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="serialNo"  data-langtag="Serial No." >Serial No.</label>
+	                			<br/>
+	                			<label class='col-form-label col-form-label-sm font-weight-normal'>02012020</label>
+	              			<div class="invalid-feedback"></div>
+ 	  					</div>
+	 				</div> 	
+	 				
+	 				<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="barCode"  data-langtag="Unique Id" >Unique Id</label>
+	                			<br/>
+	                			<label class='col-form-label col-form-label-sm font-weight-normal'>020120</label>
+	              			<div class="invalid-feedback"></div>
+ 	  					</div>
+	 				</div> 	
+	 		</div>
+	 		
+	 		<h6 class='font-weight-bold'>Location Details :</h6>
+			<hr class="bg-navy">	
+			
+	 		<div class="row " >
+		
+	 				<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="locationName"  data-langtag="Location Name" >Location Name</label>
+	                			<select class="form-control form-control-sm  " id ='locationName' name="locationName">
+	                				<option value="" selected="selected">Select Location Name</option>
+	                				<option value="" >Chennai, Tamil Nadu</option>
+	                			</select>
+	              			<div class="invalid-feedback"></div>
+ 	  					</div>
+	 				</div> 	
+	 				
+	 				<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="blockName"  data-langtag="Block Name" >Block Name</label>
+	                			<br/>
+	                			<label class='col-form-label col-form-label-sm font-weight-normal'>---</label>
+	              			<div class="invalid-feedback"></div>
+ 	  					</div>
+	 				</div> 	
+	 				
+	 				<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="buildingName"  data-langtag="Building Name" >Building Name</label>
+	                			<br/>
+	                			<label class='col-form-label col-form-label-sm font-weight-normal'>---</label>
+	              			<div class="invalid-feedback"></div>
+ 	  					</div>
+	 				</div> 	
+	 				
+	 				<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="floor"  data-langtag="Floor" >Floor</label>
+	                			<br/>
+	                			<label class='col-form-label col-form-label-sm font-weight-normal'>---</label>
+	              			<div class="invalid-feedback"></div>
+ 	  					</div>
+	 				</div> 	
+	 		
+	 				<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="room"  data-langtag="Room" >Room</label>
+	                			<br/>
+	                			<label class='col-form-label col-form-label-sm font-weight-normal'>---</label>
+	              			<div class="invalid-feedback"></div>
+ 	  					</div>
+	 				</div> 	
+	 		 </div>	
+
+			<h6 class='font-weight-bold'>Installation Details :</h6>
+			<hr class="bg-navy">	 			
+	 		<div class="row " >			
+	 				<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="installationDate"  data-langtag="Installation Date" >Installation Date</label>
+	                			<input type= "date" class="form-control form-control-sm  "  id="installationDate" name="installationDate" maxlength="50"  >
+	              			<div class="invalid-feedback"></div>
+ 	  					</div>
+	 				</div> 
+	 				
+	 				<div class="col-lg-6 form-group">
+                    <label for="exampleInputFile">Installation Certificate Upload</label>
+                    <div class="input-group">
+                      <div class="custom-file">
+                        <input type="file" class="custom-file-input" id="exampleInputFile">
+                        <label class="custom-file-label" for="exampleInputFile">Choose file</label>
+                      </div>
+                      <div class="input-group-append">
+                        <span class="input-group-text" id="">Upload</span>
+                      </div>
+                    </div>
+                    <label class='col-form-label col-form-label-sm font-weight-normal' >(Only .pdf, .jpg, .jpeg, .png Files are allowed)</label>
+              </div>
+	 		  <div class='col-lg-3' >
+		 		<div class="form-group">
+              			<label class="col-form-label col-form-label-sm" for="remarks"  data-langtag="Remarks" >Remarks</label>
+              		   	<textarea class="form-control form-control-sm "  id="remarks" name="remarks"data-validation="mandatory"></textarea>
+            			<div class="invalid-feedback"></div>
+ 					</div>
+	 			</div> 	
+	 				
+	 		 </div>
+	 		  
+	 		<h6 class='font-weight-bold'>Other Details :</h6>
+			<hr class="bg-navy">	
+			<div class="row " >
+
+	 				<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="receivedDate"  data-langtag="Received Date" >Received Date</label>
+	                			<input type= "date" class="form-control form-control-sm  "  id="receivedDate" name="receivedDate" maxlength="50" >
+	              			<div class="invalid-feedback"></div>
+ 	  					</div>
+	 				</div> 
+	 				
+	 				<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="inCharge"  data-langtag="In-Charge" >In-Charge</label>
+	                			<select class="form-control form-control-sm  " id ='inCharge' name="inCharge" data-validation="mandatory">
+	                				<option value="" selected="selected">Select In-Charge</option>
+	                				<option value="" >Dr. Sharma</option>
+	                				<option value="" >Dr. Verma</option>
+	                				<option value="" >Dr. Batra</option>
+	                			</select>
+	              			<div class="invalid-feedback"></div>
+ 	  					</div>
+	 				</div> 
+	 				
+	 				<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="contact"  data-langtag="Contact No." >Contact No.</label>
+	                		   	<text class="form-control form-control-sm "  id="contact" name="contact" maxlength="12" ></text>
+	              			<div class="invalid-feedback"></div>
+ 	  					</div>
+	 				</div> 
+					
+					<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="email"  data-langtag="Email Id" >Email Id</label>
+	                		   	<text class="form-control form-control-sm "  id="email" name="email" maxlength="50"></text>
+	              			<div class="invalid-feedback"></div>
+ 	  					</div>
+	 				</div> 
+	 				
+	 				<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="companyContact"  data-langtag="Company Contact Detail" >Company Contact Detail (+91-)</label>
+	                		   	<text class="form-control form-control-sm "  id="companyContact" name="companyContact" maxlength="50" "></text>
+	              			<div class="invalid-feedback"></div>
+ 	  					</div>
+	 				</div> 
+			</div>
+		
+		
+	 </div>		
+		
+</div>
+
+		
+
+
+
+<div class="card card card-info border-info center m-1 hideData" id='VIEWPAGEFORM'  >
+	<div class="card-header bg-navy">
+		<h6 class="text-left">Installation Details Desk >> View</h6>
+	</div>
+		<div class="card-body form-group">
+			<hr class="bg-navy">
+	 	<div class='row'>
+				  		<div class='col-lg-3' >
+				  				<div><b>Hospital Name :</b>	Aagar</div>	
+				  				<div><b>Building Name :</b> --</div> 
+				  		</div>
+				  		<div class='col-lg-3' >	
+				  				<div><b>Department Name :</b> Aagar- DH - A.R.T</div>
+				  				<div><b>Floor :</b> 2</div>
+						</div>
+						<div class='col-lg-3' >	
+								<div><b>Location Name : </b> --</div>	
+								<div><b>Room :</b> --</div>	 
+						</div>
+						<div class='col-lg-3' >	
+								<div><b>Block Name :</b> --</div>
+								</div> 	
+		</div>
+		<br>
+			
+		<h6><b>Equipment Details :</b></h6>
+			<hr class="bg-navy">
+			<div class='row'>
+				  		<div class='col-lg-3' >
+				  				<div><b>Equipment Group :</b> Eif</div>	
+				  				<div><b>Serial No. :</b> 11111</div>	
+				  		</div>
+				  		<div class='col-lg-3' >	
+				  				<div><b>Supplier Name :</b> Adarsh Enterprises</div> 
+				  				<div><b>Bar Code :</b> 111111</div>	
+						</div>
+						<div class='col-lg-3' >	
+								<div><b>Equipment Name : </b> 3 Fold Labour table SS with foam mattress</div>
+						</div>
+						<div class='col-lg-3' >	
+								<div><b>Equipment Model : </b> 2222</div>
+						</div> 	
+		</div>
+		<br>	
+		
+		<h6><b>Installation Details :</b></h6>
+			<hr class="bg-navy">
+			<div class='row'>
+				  		<div class='col-lg-3' >
+				  				<div><b>Installation Date : </b> 16-Dec-2019</div>	
+				  		</div>
+				  		<div class='col-lg-3' >	
+				  				<div><b>Installation File Upload :</b> ---</div> 
+						</div>
+						<div class='col-lg-3' >	
+								<div><b>Remarks :</b> ---</div>
+						</div>
+						 	
+		</div>
+		<br>
+		
+		<h6><b>Calibration / Commissioning Details :</b></h6>
+			<hr class="bg-navy">
+			<div class='row'>
+				  		<div class='col-lg-3' >
+				  				<div><b>Calibration / Commissioning Date :</b> ---</div>	
+				  		</div>
+				  		<div class='col-lg-3' >	
+				  				<div><b>Calibration / Commissioning Certitificate :</b> ---</div> 
+						</div>
+						<div class='col-lg-3' >	
+								<div><b>Calibration / Commissioning Details :</b> ---</div>
+						</div>
+						 	
+		</div>
+		<br>
+		
+		<h6><b>Training Details :</b></h6>
+			<hr class="bg-navy">
+			<div class='row'>
+				  		<div class='col-lg-3' >
+				  				<div><b>Training Date :</b> ---</div>	
+				  		</div>
+				  		<div class='col-lg-3' >	
+				  				<div><b>Installation Date :</b> ---</div> 
+						</div>
+						<div class='col-lg-3' >	
+								<div><b>Training Details :</b> ---</div>
+						</div>
+						
+		</div>
+		<br>
+		
+		<h6><b>Other Details :</b></h6>
+			<hr class="bg-navy">
+			<div class='row'>
+				  		<div class='col-lg-3' >
+				  				<div><b>In Charge :</b> ---</div>	
+				  				<div><b>Company Contact Number :</b> 7566969251</div>	
+				  		</div>
+				  		<div class='col-lg-3' >	
+				  				<div><b>Contact No. :</b> 12-DEC-2019</div> 
+						</div>
+						<div class='col-lg-3' >	
+								<div><b>Email Id </b> Rajender Kumar Atal</div>
+						</div>
+						<div class='col-lg-3' >	
+								<div><b>Received Date :</b> ABC</div>
+						</div> 	
+		</div>
+		
+	</div>
+	
+    <div class="card-footer">
+		<div class="text-center">
+              <button class="btn bg-gradient-success mt-4 btn-sm" id="btnBack"><i class="fas fa-arrow-circle-left"></i> Back</button>                            
+		</div>
+	</div>  
+ 
+  
+</div>
+
+
+
+<div class="card card card-info border-info center m-1 hideData" id='UPLOADFORM'  >
+	<div class="card-header bg-navy">
+		<h6 class="text-left">Installation Details Desk >> Upload</h6>
+	</div>
+		<div class="card-body form-group">
+			<hr class="bg-navy">
+	 	<div class='row'>
+				  		<div class='col-lg-3' >
+				  				<div><b>Hospital Name :</b>	Aagar</div>	
+				  				<div><b>Equipment Name :</b> --</div> 
+				  		</div>
+				  		<div class='col-lg-3' >	
+				  				<div><b>Department Name :</b> Aagar- DH - A.R.T</div>
+				  				<div><b>Equipment Model :</b> 2</div>
+						</div>
+						<div class='col-lg-3' >	
+								<div><b>Equipment Group :</b> --</div>	
+								<div><b>Serial No. :</b> --</div>	 
+						</div>
+						<div class='col-lg-3' >	
+								<div><b>Supplier Name :</b> --</div> 
+								<div><b>Bar Code :</b> --</div>
+								</div> 	
+		</div>
+		<br>
+			
+		<h6><b>Location Details :</b></h6>
+			<hr class="bg-navy">
+			<div class='row'>
+				  		<div class='col-lg-3' >
+				  				<div><b>Location Name :</b> ---</div>	
+				  				<div><b>Room :</b> 11111</div>	
+				  		</div>
+				  		<div class='col-lg-3' >	
+				  				<div><b>Block Name :</b> ---</div> 
+						</div>
+						<div class='col-lg-3' >	
+								<div><b>Building Name :</b> ---</div>
+						</div>
+						<div class='col-lg-3' >	
+								<div><b>Floor :</b> ---</div>
+						</div> 	
+		</div>
+		<br>	
+		
+		<h6><b>Installation Details :</b></h6>
+			<hr class="bg-navy">
+			<div class='row'>
+				  		<div class='col-lg-3' >
+				  				<div><b>Received Date :</b> 16-Dec-2019</div>	
+				  				<div><b>Installation Date :</b> 16-Dec-2019</div>
+				  				<div><b>Installation Certificate Upload :</b> ---</div> 
+				  		</div>
+				  		<div class='col-lg-3' >	
+				  				<div><b>In Charge :</b> ---</div> 
+				  				<div><b>Old Installation Certificate Uploaded :</b> ---</div> 
+				  				<div><b>In Charge :</b> ---</div> 
+						</div>
+						<div class='col-lg-3' >	
+								<div><b>Contact No. :</b> ---</div>
+								<div><b>Remarks :</b> ---</div> 
+						</div>
+						<div class='col-lg-3' >	
+								<div><b>Email Id :</b> ---</div>
+								<div><b>Company Contact Detail :</b> ---</div> 
+						</div>
+						 	
+		</div>
+	
+		
+		
+	
+	</div>
+	
+    <div class="card-footer">
+		<div class="text-center">
+              <button class="btn bg-gradient-success mt-4 btn-sm" id="btnBack2"><i class="fas fa-arrow-circle-left"></i> Back</button>                            
+		</div>
+	</div>  
+ 
+  
+</div>
+
+
+

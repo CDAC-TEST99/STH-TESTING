@@ -1,0 +1,483 @@
+<script>
+$(document).ready(function () {
+	$('#btnview').click(function(){
+		$('#LISTFORM').addClass('hideData');
+		$('#VIEWPAGEFORM').removeClass('hideData');		
+	});
+	$('#btnBackView').click(function(){
+		$('#LISTFORM').removeClass('hideData');
+		$('#VIEWPAGEFORM').addClass('hideData');		
+	});
+	$('#btndemand').click(function(){
+		$('#LISTFORM').addClass('hideData');
+		$('#NEWDEMANDPAGEFORM').removeClass('hideData');		
+	});
+	$('#btnBackDemand').click(function(){
+		$('#LISTFORM').removeClass('hideData');
+		$('#NEWDEMANDPAGEFORM').addClass('hideData');		
+	});
+	$('#activerclink').click(function(){
+		$('#LISTFORM').addClass('hideData');
+		$('#NEWDEMANDPAGEFORM').addClass('hideData');
+		$('#ACTIVELINKPAGEFORM').removeClass('hideData');		
+	});
+	$('#btnBackActive').click(function(){
+		$('#NEWDEMANDPAGEFORM').removeClass('hideData');
+		$('#LISTFORM').addClass('hideData');
+		$('#ACTIVELINKPAGEFORM').addClass('hideData');
+		$('#CURRENTBUDGETPAGEFORM').addClass('hideData');
+	});
+	$('#currentbudgetlink').click(function(){
+		$('#LISTFORM').addClass('hideData');
+		$('#NEWDEMANDPAGEFORM').addClass('hideData');
+		$('#CURRENTBUDGETPAGEFORM').removeClass('hideData');		
+	});
+	$('#btnBackCurrentBudget').click(function(){
+		$('#NEWDEMANDPAGEFORM').removeClass('hideData');
+		$('#ACTIVELINKPAGEFORM').addClass('hideData');
+		$('#LISTFORM').addClass('hideData');
+		$('#CURRENTBUDGETPAGEFORM').addClass('hideData');
+	});
+	
+})
+</script>
+
+<div class="card card-info border-info center m-1" id='LISTFORM' >
+			<div class="card-header bg-navy"><h5 class="card-title text-center ">
+
+Demand Desk</h5>
+			</div>
+
+
+	<div class="card-body form-group">
+  			
+  			<div class="row justify-content-center" >
+		
+	 					
+	 				
+				
+				         <div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="institutionName" data-validation="mandatory" data-langtag="Institution Name" >Institution Name</label>
+	                			<select class="form-control form-control-sm  " id ='institutionName' name="institutionName">
+	                				<option value="" selected="selected">Select Institution Name</option>
+	                				<option title="Vidisha- DH" value="5001722">Vidisha- DH</option>
+									<option title="Vijayganj Mandi  Dewas-CHC" value="5001924">Vijayganj Mandi  Dewas-CHC</option>
+									<option title="Vijaypur  Guna-PHC" value="5002577">Vijaypur  Guna-PHC</option>
+									<option title="Vijaypur  Mandla-PHC" value="5002817">Vijaypur  Mandla-PHC</option>
+									<option title="Vijaypur  Sheopur-CHC" value="5002125">Vijaypur  Sheopur-CHC</option>
+									<option title="Vijayraghogarh-Katni -CH" value="5001797">Vijayraghogarh-Katni -CH</option>
+									<option title="Vikrampur  Chhatarpur-PHC" value="5002380">Vikrampur  Chhatarpur-PHC</option>
+									<option title="Vikrampur  Dindori-CHC" value="5001946">Vikrampur  Dindori-CHC</option>
+									<option title="Wara Seoni-Balaghat -CH" value="5001775">Wara Seoni-Balaghat -CH</option>
+									<option title="Wardha&nbsp;  Vidisha-PHC" value="5003333">Wardha&nbsp;  Vidisha-PHC</option>
+	                			</select>
+	              			<div class="invalid-feedback"></div>
+ 	  					</div>
+	 				</div>
+	 				
+		
+	 					<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="departmentName" data-validation="mandatory" data-langtag="Department Name" >Department Name</label>
+	                			<select class="form-control form-control-sm  " id ='departmentName' name="departmentName">
+	                				<option value="" selected="selected">Select Department Name</option>
+	                				<option title="Aagar PHC  Indore-PHC - PATHOLOGY DEPT" value="5033787">Aagar PHC  Indore-PHC - PATHOLOGY DEPT</option>
+									<option title="Aagar PHC  Indore-PHC - RADIOLOGY  DEPARTMENT" value="5033788">Aagar PHC  Indore-PHC - RADIOLOGY  DEPARTMENT</option>
+									<option title="Aagar PHC  Indore-PHC - SNCU DEPT" value="5033789">Aagar PHC  Indore-PHC - SNCU DEPT</option>
+									<option title="Aagar PHC  Indore-PHC - STAFF DUTY ROOM" value="5033790">Aagar PHC  Indore-PHC - STAFF DUTY ROOM</option>
+									<option title="Aagar PHC  Indore-PHC - STERLIZATION ROOM" value="5033791">Aagar PHC  Indore-PHC - STERLIZATION ROOM</option>
+									<option title="Aagar PHC  Indore-PHC - STORE DEPT" value="5033792">Aagar PHC  Indore-PHC - STORE DEPT</option>
+									<option title="Aagar PHC  Indore-PHC - SURGICAL WARD" value="5033793">Aagar PHC  Indore-PHC - SURGICAL WARD</option>
+									<option title="Aagar PHC  Indore-PHC - TB DEPT" value="5033794">Aagar PHC  Indore-PHC - TB DEPT</option>
+									<option title="Aagar PHC  Indore-PHC - VACCINE ROOM" value="5033795">Aagar PHC  Indore-PHC - VACCINE ROOM</option>
+									<option title="Aagar PHC  Indore-PHC - X-RAY ROOM" value="5033796">Aagar PHC  Indore-PHC - X-RAY ROOM</option>
+	                			</select>
+	              			<div class="invalid-feedback"></div>
+ 	  					</div>
+ 	  					</div>
+	 				
+				
+				         <div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="equipmentName " data-validation="mandatory" data-langtag="Equipment Name  " >Equipment Name  </label>
+	                			<select class="form-control form-control-sm  " id ='equipmentName' name="equipmentName">
+	                				<option value="" selected="selected">Select Equipment Name  </option>
+	                				<option title="WHEEL CHAIR" value="18000187">WHEEL CHAIR</option>
+									<option title="Wheel chair folding" value="18000339">Wheel chair folding</option>
+									<option title="X-RAY MACHINE 100 MA" value="18000141">X-RAY MACHINE 100 MA</option>
+									<option title="X-RAY MACHINE 100 MA PORTABLE" value="18000142">X-RAY MACHINE 100 MA PORTABLE</option>
+									<option title="X-RAY MACHINE 150 MA" value="18000144">X-RAY MACHINE 150 MA</option>
+									<option title="X-RAY MACHINE 15 MA" value="18000143">X-RAY MACHINE 15 MA</option>
+									<option title="X-RAY MACHINE 160 MA" value="18000145">X-RAY MACHINE 160 MA</option>
+									<option title="X-RAY MACHINE 200 MA" value="18000146">X-RAY MACHINE 200 MA</option>
+	                			</select>
+	              			<div class="invalid-feedback"></div>
+ 	  					</div>
+	 				</div>
+	 				
+                        <div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="status" data-validation="mandatory" data-langtag="Status" >Status </label>
+	                			<select class="form-control form-control-sm  " id ='status ' name="status">
+	                				<option value="" selected="selected">Select Status </option>
+	                				<option title="All" value="0">All</option>
+									<option title="New" value="10">New</option>
+									<option title="Cancelled" value="11">Cancelled</option>
+									<option title="Verified" value="15">Verified</option>
+									<option title="Rejected" value="17">Rejected</option>
+									<option title="Compilation in Process" value="12">Compilation in Process</option>
+									<option title="Compilation Freezed" value="16">Compilation Freezed</option>
+									<option title="PO Generated" value="13">PO Generated</option>
+	                				
+	                			</select>
+	              			<div class="invalid-feedback"></div>
+ 	  					</div>
+	 				</div>
+	 				
+	 				
+	 				
+		 	  
+		 	                  
+				<div class="text-center">
+					
+                          
+                           <button  class='btn bg-gradient-success mt-4 btn-sm' id="btndemand"><i class="fa fa-file"></i> New Demand</button>
+                           <button class='btn bg-gradient-success mt-4 btn-sm' ><i class="fa fa-edit"></i> Modify</button>
+                           <button  class='btn bg-gradient-success mt-4 btn-sm'><i class="fa fa-times"></i> Cancel</button>
+                            <button  class='btn bg-gradient-success mt-4 btn-sm' id="btnview"><i class="fa fa-eye"></i> View</button>
+				</div>
+				
+		</div>
+</div>
+
+</div>
+
+
+
+
+ <!--card for View button -->
+
+
+
+<div class="card card card-info border-info center m-1 hideData" id='VIEWPAGEFORM'  >
+	<div class="card-header bg-navy">
+		<h6 class="text-left">Demand / Intent Desk >> View </h6>
+	</div>
+	<div class="card-body form-group">
+	<div class="m-4"><h6><b>Demand / Intent Details :
+	
+</b></h6></div>
+	<hr class="bg-navy">
+	 <div class='row'>
+	 		 
+			
+
+	 
+	 
+  <div class='col-lg-3' >
+  				<div><b>Demand / Intent No : </b> 	319129980030</div>	
+  				<div><b>Demand / Intent Date  :</b>	18-Dec-2019</div>
+				<div><b>Hospital Name :</b>	Aagar- DH</div>	</div>
+				
+		<div class='col-lg-3' >		
+				<div><b>Department Name :</b>	Aagar- DH - CENCER DEPT</div>
+				<div><b>Equipment Name :</b>	ABG MACHINE</div>
+  		</div>
+  		<div class='col-lg-3' >		 
+  				<div><b>No of Existing Equipment :	</b>0</div> 	
+  				<div><b>Equipment Group  :</b>	Eif</div>
+				<div><b> Equipment Sub Group :</b>	Equipment</div>	</div>
+				<div class='col-lg-3' >	
+				<div><b> Quantity (in Numbers)  :	</b>1</div>
+				<div><b> Justification for Need  :	</b>text</div>
+				<div><b> Demand / Intent Cancel Remark  :	</b>--</div>
+</div>
+			
+				
+
+	</div>
+	<div class="m-4"><h6><b>Checklist :
+	
+</b></h6></div>
+	
+	<hr class="bg-navy">
+	
+	<div class='row'>
+
+  <div class='col-lg-3' >
+  				<div><b>Trained HR : </b> 	No</div>	
+  				<div><b>Technical Specification Evaluated   :</b>	No</div>
+				<div><b>Whether Indian Standard Specification are available or not :</b>	No</div>	
+				
+  		</div>
+  		<div class='col-lg-3' >		 
+  				<div><b>Space Availability :	</b>No</div> 	
+  				<div><b>Equipment Group  :</b>	Eif</div>
+				<div><b> Equipment Sub Group :</b>	Equipment</div>	</div>
+				
+				<div class='col-lg-3' >	
+				<div><b> Quantity (in Numbers)  :	</b>1</div>
+				<div><b> Justification for Need  :	</b>text</div></div>
+				<div class='col-lg-3' >
+				
+				<div><b> Demand / Intent Cancel Remark  :	</b>--</div>
+</div></div>
+			
+				
+
+	
+	
+	
+	<div class="m-4"><h6><b>Demand / Intent Verification Details :
+	
+</b></h6></div>
+	<hr class="bg-navy">
+	 <div class='row'>
+	 
+  <div class='col-lg-3' >
+  				<div><b>Status  : </b> Approved</div>	
+  				<div><b>Verified Quantity(in Numbers) ::</b>		1.00 </div>
+				<div><b>Remarks   :</b>	--</div>	
+				
+				
+  		</div>
+  		<div class='col-lg-3' >		 
+  				<div><b>Verification Date:	</b> 19-Dec-2019</div> 	
+  				
+</div>
+	
+	</div>
+	
+	
+	</div>
+	
+	
+	 <div class="card-footer">
+		<div class="text-center">
+		 <button class="btn bg-gradient-success mt-4 btn-sm" id="btnBackView"><i class="fas fa-arrow-circle-left"></i> Back</button>                            
+		</div>
+	</div>  	
+  
+ </div>
+
+  
+  
+   <!--card for NEW DEMAND button -->
+  
+  
+  <div class="card card card-info border-info center m-1 hideData" id='NEWDEMANDPAGEFORM'  >
+	<div class="card-header bg-navy">
+		<h6 class="text-left">Demand / Intent Desk >> Raise </h6>
+	</div>
+	<div class="card-body form-group">
+	<div class="m-4"><h6><b>Demand / Intent Generation Details
+	
+</b></h6></div>
+	<hr class="bg-navy">
+	 <div class='row'>
+	 
+	            <div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="institutionName" data-langtag="Institution Name"  >Institution Name :</label>
+	                			<input class="form-control form-control-sm desabledTextBox " value="Aagasod Sagar-PHC" type="text" id="institutionName" name="institutionName" maxlength="50" data-validation="mandatory,alphabetOnly">
+	                			<div class="invalid-feedback"></div>
+	              			</div>
+					 	</div>	
+	
+
+  			
+	 	    <div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="storeKeeperName" data-validation="mandatory" data-langtag="Status" >Equipment Name :</label>
+	                			<select class="form-control form-control-sm  " id ='storeKeeperName' name="storeKeeperName">
+	                				<option value="" selected="selected">Select value</option>
+	                				<option title="X- RAY MACHINE 240 MA [10140] " value="18000140">X- RAY MACHINE 240 MA [10140] </option>
+									<option title="X-RAY MACHINE 250 MA [10147] " value="18000147">X-RAY MACHINE 250 MA [10147] </option>
+									<option title="X-RAY MACHINE 300 MA [10149] " value="18000149">X-RAY MACHINE 300 MA [10149] </option>
+									<option title="X-RAY MACHINE 30 MA [10148] " value="18000148">X-RAY MACHINE 30 MA [10148] </option>
+									<option title="X-RAY MACHINE 500 MA [10151] " value="18000151">X-RAY MACHINE 500 MA [10151] </option>
+									<option title="X-RAY MACHINE 50 MA [10150] " value="18000150">X-RAY MACHINE 50 MA [10150] </option>
+									<option title="X-RAY MACHINE 600 MA [10153] " value="18000153">X-RAY MACHINE 600 MA [10153] </option>
+									<option title="X-RAY MACHINE 60 MA [10152] " value="18000152">X-RAY MACHINE 60 MA [10152] </option>
+									<option title="X-RAY MACHINE 70 MA [10154] " value="18000154">X-RAY MACHINE 70 MA [10154] </option>
+									<option title="YAG LASER [10155] " value="18000155">YAG LASER [10155] </option>
+	                			</select>
+	              			<div class="invalid-feedback"></div>
+ 	  					</div>
+	 		</div>
+	 		
+	 		<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="equipmentGroup" data-langtag="Equipment Group"  >Equipment Group :</label>
+	                			<input class="form-control form-control-sm desabledTextBox " type="text" id="equipmentGroup" name="equipmentGroup" value="NA " maxlength="50" data-validation="mandatory,alphabetOnly">
+	                			<div class="invalid-feedback"></div>
+	              			</div>
+					 	</div>	
+					 	
+			<div class='col-lg-3' >
+					 	<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="activeRCs" data-langtag="Active RCs"  >Active RC(s) :</label>
+	                			<input class="form-control form-control-sm desabledTextBox " type="text" id="activeRCs" name="activeRCs" value="0 " maxlength="50" data-validation="mandatory,alphabetOnly">
+	                			<div class="invalid-feedback"></div>
+	              			</div>
+	              			</div>
+		
+	 				<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="postInspection" data-validation="mandatory" data-langtag="Post Inspection" >*Quantity (in Numbers) :</label>
+	                			<input class="form-control form-control-sm  " type="text" id="postInspection" name="postInspection" maxlength="50" data-validation="mandatory,alphabetOnly">
+	              				<div class="invalid-feedback"></div>
+ 	  						</div>
+	 					</div>
+	 					
+	 				<div class='col-lg-3' >
+					 	<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="currentAvailableBudget" data-langtag="Current Available Budget"  >Current Available Budget :</label>
+	                			<input class="form-control form-control-sm desabledTextBox " type="text" id="currentAvailableBudget" name="currentAvailableBudget" value=" " maxlength="50" data-validation="mandatory,alphabetOnly">
+	                			<div class="invalid-feedback"></div>
+	              			</div>
+	              			</div>
+	              			
+	              	<div class='col-lg-3' >
+					 	<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="departmentName" data-langtag="Department Name "  >Department Name  :</label>
+	                			<input class="form-control form-control-sm desabledTextBox " type="text" id="departmentName" name="departmentName" value="Aagar- DH - ANC ROOM " maxlength="50" data-validation="mandatory,alphabetOnly">
+	                			<div class="invalid-feedback"></div>
+	              			</div>
+	              			</div>
+	              			
+	              	<div class='col-lg-3' >
+					 	<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="noofExistingEquipment" data-langtag="No of Existing Equipment"  >No of Existing Equipment :</label>
+	                			<input class="form-control form-control-sm desabledTextBox " type="text" id="noofExistingEquipment" name="noofExistingEquipment" value="0 " maxlength="50" data-validation="mandatory,alphabetOnly">
+	                			<div class="invalid-feedback"></div>
+	              			</div>
+	              			</div>
+	              			
+	              	<div class='col-lg-3' >
+					 	<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="subGroupName" data-langtag="Sub Group Name"  >Sub-Group Name :</label>
+	                			<input class="form-control form-control-sm desabledTextBox " type="text" id="subGroupName" name="subGroupName" value="NA " maxlength="50" data-validation="mandatory,alphabetOnly">
+	                			<div class="invalid-feedback"></div>
+	              			</div>
+	              			</div>
+	              			
+	 				<div class='col-lg-3'  >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="inspectionDate :" data-validation="mandatory" data-langtag="Inspection Date :" >Justification for Need :	 </label>
+	                			<textarea rows="" cols=""></textarea>
+	                		<div class="invalid-feedback"></div>
+ 	  					</div>
+	 				</div>
+	 			
+		 	 </div>   
+	
+	
+	
+	<div class="m-4"><h6><b>Checklist
+	
+</b></h6></div>
+	<hr class="bg-navy">
+	 
+		 <div class='row'>
+	<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="postInspection" data-validation="mandatory" data-langtag="Post Inspection" >Trained HR : </label>
+	                			<input  type="checkbox" id="postInspection" name="postInspection" maxlength="50" data-validation="mandatory,alphabetOnly">
+	              				<div class="invalid-feedback"></div>
+ 	  						</div>
+	 					</div>
+	 					
+	 					<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="postInspection" data-validation="mandatory" data-langtag="Post Inspection" >Fund Availability : </label>
+	                			<input  type="checkbox" id="postInspection" name="postInspection" maxlength="50" data-validation="mandatory,alphabetOnly">
+	              				<div class="invalid-feedback"></div>
+ 	  						</div>
+	 					</div>
+	 					
+	 					<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="postInspection" data-validation="mandatory" data-langtag="Post Inspection" >Resource Availability : </label>
+	                			<input  type="checkbox" id="postInspection" name="postInspection" maxlength="50" data-validation="mandatory,alphabetOnly">
+	              				<div class="invalid-feedback"></div>
+ 	  						</div>
+	 					</div>
+	 					
+	 					<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="postInspection" data-validation="mandatory" data-langtag="Post Inspection" >Space Availability : </label>
+	                			<input  type="checkbox" id="postInspection" name="postInspection" maxlength="50" data-validation="mandatory,alphabetOnly">
+	              				<div class="invalid-feedback"></div>
+ 	  						</div>
+	 					</div>
+	 					
+	 					<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="postInspection" data-validation="mandatory" data-langtag="Post Inspection" >Technical Specification Evaluated : </label>
+	                			<input  type="checkbox" id="postInspection" name="postInspection" maxlength="50" data-validation="mandatory,alphabetOnly">
+	              				<div class="invalid-feedback"></div>
+ 	  						</div>
+	 					</div>
+	 					
+	 					<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="postInspection" data-validation="mandatory" data-langtag="Post Inspection" >Whether Indian Standard Specification are available or not : </label>
+	                			yes<input  type="radio" id="postInspection" name="postInspection" >
+	                			no<input  type="radio" id="postInspection" name="postInspection" >
+	              				<div class="invalid-feedback"></div>
+ 	  						</div>
+	 					</div>
+	 			
+		 	 </div>  
+
+	 
+  <div class='row' >
+	 					<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="postInspection" data-validation="mandatory" data-langtag="Post Inspection" >ISS No :</label>
+	                			<input class="form-control form-control-sm  " type="text" id="postInspection" name="postInspection" maxlength="50" data-validation="mandatory,alphabetOnly">
+	              				<div class="invalid-feedback"></div>
+ 	  						</div>
+	 					</div><div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="postInspection" data-validation="mandatory" data-langtag="Post Inspection" >Year :</label>
+	                			<input class="form-control form-control-sm  " type="text" id="postInspection" name="postInspection" maxlength="50" data-validation="mandatory,alphabetOnly">
+	              				<div class="invalid-feedback"></div>
+ 	  						</div>
+	 					</div>
+  	 
+	</div>
+	
+	</div>
+	
+	
+	 <div class="card-footer">
+		<div class="text-center">
+		 <button class="btn bg-gradient-success mt-4 btn-sm" id="btnBackDemand"><i class="fas fa-arrow-circle-left"></i> Back</button>                            
+		</div>
+	</div>  	
+	</div>
+	
+	
+	
+	
+	
+	
+	
+  
+ 
+
+  
+
+
+  
+
+
+
+
+
+
+
+

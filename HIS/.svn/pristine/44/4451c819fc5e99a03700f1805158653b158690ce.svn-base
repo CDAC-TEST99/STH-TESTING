@@ -1,0 +1,443 @@
+
+:root {
+	--button_color: #131226;
+	--button_gradient-color : radial-gradient(circle, rgba(64,63,129,1) 0%, rgba(19,18,38,1) 100%); 
+	--button_text-color : #ffc107;
+	--container-border:#274426;
+ 	--welcomebg-gradient: radial-gradient(circle, rgba(49,86,47,1) 0%, rgba(39,68,38,1) 100%);
+						   
+}
+
+			.form {
+		  display: flex;
+		  flex-direction: column;
+		  gap: 10px;
+		  /* max-width: 350px; */
+		  /* background-color: #1d2b52; */
+		  padding: 20px;
+		  border-radius: 10px;
+		  position: relative;
+		}
+		/*change*/
+		.message {
+		  color: #ed1848;
+		  font-size: 14px;
+		}
+		
+		.flex {
+		  display: flex;
+		  width: 100%;
+		  gap: 6px;
+		}
+		
+		.form label {
+		  position: relative;
+		}
+		
+		.form label .input {
+		  width: 100%;
+		  padding: 10px 10px 20px 10px;
+		  outline: 0;
+		  border: 1px solid #ed1848;
+		  border-radius: 5px;
+		}
+		
+		.form label .input + span {
+		  position: absolute;
+		  left: 10px;
+		  top: 15px;
+		  color: #ed1848;
+		  font-size: 0.9em;
+		  cursor: text;
+		  transition: 0.3s ease;
+		}
+		
+		.form label .input:placeholder-shown + span {
+		  top: 15px;
+		  font-size: 0.9em;
+		}
+		
+		.form label .input:focus + span,.form label .input:valid + span {
+		  top: 30px;
+		  font-size: 0.7em;
+		  font-weight: 600;
+		}
+		
+		.form label .input:valid + span {
+		  color: green;
+		}
+		
+		.input01 {
+		  width: 100%;
+		  padding: 10px 10px 20px 10px;
+		  outline: 0;
+		  border: 1px solid #ed1848;
+		  border-radius: 5px;
+		}
+		
+		.form label .input01 + span {
+		  position: absolute;
+		  left: 10px;
+		  top: 50px;
+		  color: #ed1848;
+		  font-size: 0.9em;
+		  cursor: text;
+		  transition: 0.3s ease;
+		}
+		
+		.form label .input01:placeholder-shown + span {
+		  top: 40px;
+		  font-size: 0.9em;
+		}
+		
+		.form label .input01:focus + span,.form label .input01:valid + span {
+		  top: 50px;
+		  font-size: 0.7em;
+		  font-weight: 600;
+		}
+		
+		.form label .input01:valid + span {
+		  color: green;
+		}
+		
+		.fancy {
+		  background: rgb(218,82,111);
+		  background: radial-gradient(circle, rgba(218,82,111,1) 0%, rgba(236,26,71,1) 100%); 
+		  border: 2px solid rgb(218,82,111);
+		  border-radius: 0px;
+		  box-sizing: border-box;
+		  color: #ffffff;
+		  cursor: pointer;
+		  display: inline-block;
+		  font-weight: 390;
+		  letter-spacing: 2px;
+		  margin: 0;
+		  outline: none;
+		  overflow: visible;
+		  padding: 8px 30px;
+		  position: relative;
+		  text-align: center;
+		  text-decoration: none;
+		  text-transform: none;
+		  transition: all 0.3s ease-in-out;
+		  user-select: none;
+		  font-size: 13px;
+		  border-radius: 7px;
+		}
+		
+		.fancy::before {
+		  content: " ";
+		  width: 1.7rem;
+		  height: 2px;
+		  background: rgb(218,82,111);
+		  top: 50%;
+		  left: 1.5em;
+		  position: absolute;
+		  transform: translateY(-50%);
+		  transform: translateX(230%);
+		  transform-origin: center;
+		  transition: background 0.3s linear, width 0.3s linear;
+		}
+		
+		.fancy .text {
+		  font-size: 1.125em;
+		  line-height: 1.33333em;
+		  padding-left: 2em;
+		  display: block;
+		  text-align: left;
+		  transition: all 0.3s ease-in-out;
+		  text-transform: lowercase;
+		  text-decoration: none;
+		  color: white;
+		  transform: translateX(30%);
+		}
+		
+		.fancy .top-key {
+		  height: 2px;
+		  width: 1.5625rem;
+		  top: -2px;
+		  left: 0.625rem;
+		  position: absolute;
+		  background: #ed1848;
+		  transition: width 0.5s ease-out, left 0.3s ease-out;
+		}
+		
+		.fancy .bottom-key-1 {
+		  height: 2px;
+		  width: 1.5625rem;
+		  right: 1.875rem;
+		  bottom: -2px;
+		  position: absolute;
+		  background: #ed1848;
+		  transition: width 0.5s ease-out, right 0.3s ease-out;
+		}
+		
+		.fancy .bottom-key-2 {
+		  height: 2px;
+		  width: 0.625rem;
+		  right: 0.625rem;
+		  bottom: -2px;
+		  position: absolute;
+		  background: #ed1848;
+		  transition: width 0.5s ease-out, right 0.3s ease-out;
+		}
+		
+		.fancy:hover {
+		  color: #ffffff;
+		  background: #d73d60;
+		}
+		
+		.fancy:hover::before {
+		  width: 1.5rem;
+		  background: #ed1848;
+		}
+		
+		.fancy:hover .text {
+		  color: white;
+		  padding-left: 1.5em;
+		}
+		
+		.fancy:hover .top-key {
+		  left: -2px;
+		  width: 0px;
+		}
+		
+		.fancy:hover .bottom-key-1,
+		 .fancy:hover .bottom-key-2 {
+		  right: 0;
+		  width: 0;
+		}
+		.loginimg{background-image: url("/HIS/hisglobal/images/loginbg.png");background-size: 550px;background-repeat: no-repeat;background-position: center;}
+		
+		.mobileOTPimg{background-image: url("/HIS/hisglobal/images/mobileVerification.jpg");background-size: 550px;background-repeat: no-repeat;background-position: center;}
+    
+    
+    
+	.btn-his {
+			 padding: 15px 15px;
+			 border: 1px solid var(--button_color);
+			 background: var(--button_color);
+		 	 background: var(--button_gradient-color);
+		 	 color:var(--button_text-color);
+		 	 border-radius: 4px;
+			 z-index: 1;			 
+			 position: relative;
+			 font-weight: 700;
+  			 font-size: 12px;
+			 -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+			 box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+			 transition: all 250ms;
+			 overflow: hidden;
+			 cursor: pointer;
+		}
+	.btn-his:hover,.btn-his:active, .btn-his:focus {
+		 background: #fff;		 
+		 border: 1px solid var(--button_color);
+		 color:var(--button_color);
+	}	
+		
+	
+	
+	.btn-his-outline {
+			 padding: 15px 15px;
+			 border: 1px solid var(--button_color);
+			 border-radius: 4px;
+			 color:var(--button_color);
+			 z-index: 1;
+			 background-color:  #fff;
+			 position: relative;
+			 font-weight: 700;
+  			 font-size: 12px;
+			 -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+			 box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+			 transition: all 250ms;
+			 overflow: hidden;
+			 cursor: pointer;
+		}
+	.btn-his-outline:hover,.btn-his-outline:active, .btn-his-outline:focus {
+		 background: var(--button_color);
+		 background: var(--button_gradient-color);
+		 border: unset;
+		 color: var(--button_text-color);
+	}		
+		
+		
+		.btn-his-outline-sm {
+			  padding: 8px 10px 6px 10px;
+			 border: 1px solid var(--button_color);
+			 border-radius: 10px;
+			 color:var(--button_color);
+			 z-index: 1;
+			 background-color:  #fff;;
+			 position: relative;
+			 font-weight: 700;
+  			 font-size: 12px;
+			 -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+			 box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+			 transition: all 250ms;
+			 overflow: hidden;
+			 cursor: pointer;
+		}
+	.btn-his-outline-sm:hover,.btn-his-outline:active, .btn-his-outline:focus {
+		 background: var(--button_color);
+		 background: var(--button_gradient-color);
+		 border: unset;
+		 color: var(--button_text-color);
+	}	
+	
+	.btn-his-sm {
+			  padding: 8px 10px 6px 10px;
+			 border: unset;
+			 border-radius: 10px;
+			 color: var(--button_text-color);
+			 z-index: 1;			 
+			 position: relative;
+			 font-weight: 700;
+  			 font-size: 12px;
+  			 background: var(--button_color);
+		     background: var(--button_gradient-color);
+			 -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+			 box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+			 transition: all 250ms;
+			 overflow: hidden;
+			 cursor: pointer;
+		}
+	.btn-his-sm:hover,.btn-his:active,.btn-his:focus   {
+	 background-color:  var(--button_color);
+	 border: 1px solid var(--button_color);
+	 color:#fff;
+	}
+	
+	.modal-content-bg{
+		    width: 100%;
+			 border: 3px solid var(--container-border);
+		       border-left:20px solid var(--container-border);
+		       -moz-border-radius: 5px;
+		       -webkit-border-radius: 5px;
+		       border-radius: 15px;		      
+		       margin-top: 10px;
+		       box-shadow: 0px 187px 75px rgba(0, 0, 0, 0.01), 0px 105px 63px rgba(0, 0, 0, 0.05), 0px 47px 47px rgba(0, 0, 0, 0.09), 0px 12px 26px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.1);
+		       padding-bottom: 35px;
+		       background: #eef;	    
+	    }
+	  .welcomebg{
+	  	background:  var(--container-border);
+	  	background:var(--welcomebg-gradient);
+	  	margin-left: -9px;
+  		margin-bottom: -36px;
+  		 border-radius: 15px;
+	  }  
+  
+  .nav-link{
+  		   color: var(--button_color);		  
+		   border-color: var(--button_color) !important;
+		   background: #fff !important;		   	
+		   font-weight: 700;
+  		   font-size: 12px;	
+   }
+  .nav-tabs .nav-link.active {
+		   color: var(--button_text-color);
+		   background: var(--button_color) !important;
+		   background: var(--button_gradient-color) !important;	
+		   font-weight: 700;
+  		   font-size: 12px;	
+	}
+	
+		
+		#seatBox{
+			z-index: 999;
+		}
+		
+		.slider-one .slider-seat-image {
+		  width: 110%;
+		  height: 100%;
+		  background-image: url("/AHIMSG5/hissso/portal/images/slider/slider1.png");
+		  background-position: center center;
+		  background-size: cover;
+		  background-repeat: no-repeat;
+		  filter: blur(8px);
+		  -webkit-filter: blur(8px);
+		  }
+		  
+		  
+		  
+        /* Modal Content Width */
+        .modal-dialog { max-width: 600px; }
+        .modal-dialog {
+			   
+			   margin-right: auto;
+			   margin-left: 35%;
+			   margin-bottom: 5%;
+			 }
+
+        /* Form Control Styling */
+        .form-control-lg { padding: 0.75rem 1.25rem; }
+        .btn-custom { background-color: #007bff; color: white; }
+        .btn-outline-custom { border: 1px solid #007bff; color: #007bff; }
+        .btn-outline-custom:hover { background-color: #007bff; color: white; }
+
+        /* Centering Elements */
+        .modal-body .text-center { text-align: center; }
+
+        /* Form Spacing */
+        .form-label { font-weight: bold; }
+
+        /* Fade Animation */
+        .fade-tab { opacity: 0; transition: opacity 0.5s ease-in-out; }
+        .fade-tab.show { opacity: 1; }
+
+	    .btn-link{	--bs-btn-bg: #d5322e;
+	    }
+	
+	    .required{
+	    color: rgb(255, 30, 30);
+	    margin-left: 1px;
+	    }
+	    
+	   
+	
+		.mb-4 {
+		  margin-top: 1.5rem !important;
+		}
+		.btn {
+		--bs-btn-hover-border-color: black;}
+		
+		.group {
+		  display: flex;
+		  line-height: 30px;
+		  align-items: center;
+		  position: relative;  
+		}
+		
+		.input {
+		  width: 100%;
+		  height: 45px;
+		  line-height: 30px;
+		  padding: 0 5rem;
+		  padding-left: 3rem;
+		  border: 2px solid transparent;
+		  border-radius: 10px;
+		  outline: none;
+		  background-color: #f8fafc;
+		  color: #0d0c22;
+		  transition: .5s ease;
+		}
+		
+		.input::placeholder {
+		  color: #94a3b8;
+		}
+		
+		.input:focus, input:hover {
+		  outline: none;
+		  border-color: rgba(129, 140, 248);
+		  background-color: #fff;
+		  box-shadow: 0 0 0 5px rgb(129 140 248 / 30%);
+		}
+		
+		.icon {
+		  position: absolute;
+		  left: 1rem;
+		  fill: none;
+		  width: 1rem;
+		  height: 1rem;
+		}

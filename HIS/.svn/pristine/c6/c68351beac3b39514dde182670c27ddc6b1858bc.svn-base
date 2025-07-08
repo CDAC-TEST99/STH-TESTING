@@ -1,0 +1,343 @@
+<script>
+$(document).ready(function () {
+	$('#btnview').click(function(){
+		$('#LISTFORM').addClass('hideData');
+		$('#VIEWPAGEFORM ').removeClass('hideData');		
+	});
+	
+	$('#btnBack').click(function(){
+		$('#LISTFORM').removeClass('hideData');
+		$('#VIEWPAGEFORM ').addClass('hideData');		
+	});
+	
+	$('#btnCompile').click(function(){
+		$('#LISTFORM').addClass('hideData');
+		$('#COMPILEFORM').removeClass('hideData');		
+	});
+	
+	$('#btnBack1').click(function(){
+		$('#LISTFORM').removeClass('hideData');
+		$('#COMPILEFORM').addClass('hideData');		
+	});
+})
+</script>
+
+<div class="card card-info border-info center m-1 hideData" id='COMPILEFORM' >
+			<div class="card-header bg-navy"><h5 class="card-title text-center ">Demand Compilation Desk >> Compile</h5>
+			</div>
+
+
+	<div class="card-body form-group">
+ 	
+  			<div class="row " >
+						
+					<div class='col-lg-3'  >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="demandPeriod" data-validation="mandatory" data-langtag="Demand Period" >Demand Period</label>
+	                			<select class="form-control form-control-sm  " id ='demandPeriod' name="demandPeriod">
+	                				<option value="" selected="selected">2019-2020</option>
+	                			</select>
+	                		<div class="invalid-feedback"></div>
+ 	  					</div>
+	 				</div>
+	 				
+	 				<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="compilationDate"  data-langtag="Compilation Date" >Compilation Date</label>
+	                			<input type= "date" class="form-control form-control-sm  "  id="compilationDate" name="compilationDate" maxlength="50"  >
+	              			<div class="invalid-feedback"></div>
+ 	  					</div>
+	 				</div> 
+	 				
+	 				<div class='col-lg-3'  >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="equipmentName" data-validation="mandatory" data-langtag="Equipment Name" >Equipment Name</label>
+	                			<select class="form-control form-control-sm  " id ='equipmentName' name="equipmentName">
+	                				<option value="" selected="selected">Select Equipment Name</option>
+	                				<option title="All" selected="" value="0">All</option>
+									<option title="3 Fold Labour Table Ss With Foam Mattress [99999] " value="18000306">3 Fold Labour Table Ss With Foam Mattress [99999] </option>
+									<option title="4 To 13 Mhz Linear  Transducer  With Near Focus (Probe For Usg Machine ) [2011] " value="18000341">4 To 13 Mhz Linear  Transducer  With Near Focus (Probe For Usg Machine ) [2011] </option>
+									<option title="-80 Degree C Vertical Ultra Low Freezer [Labe021] " value="18000288">-80 Degree C Vertical Ultra Low Freezer [Labe021] </option>
+									<option title="Aaaa [1111] " value="18000360">Aaaa [1111] </option>
+									<option title="Abg Machine [10001] " value="18000001">Abg Machine [10001] </option>
+									<option title="Advance Icu Ventilator [Icue010] " value="18000195">Advance Icu Ventilator [Icue010] </option>
+									<option title="Allis Forceps 20cm Ss [Gyne018] " value="18000277">Allis Forceps 20cm Ss [Gyne018] </option>
+									<option title="Amalgameter [10002] " value="18000002">Amalgameter [10002] </option>
+									<option title="Ambu Bag Adult [10003] " value="18000003">Ambu Bag Adult [10003] </option>
+	                			</select>
+	                		<div class="invalid-feedback"></div>
+ 	  					</div>
+	 				</div> 	
+	 				
+	 				<div class='col-lg-3'  >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="compilationAuthority" data-validation="mandatory" data-langtag="Compilation Authority" >Compilation Authority</label>
+	                			<select class="form-control form-control-sm  " id ='compilationAuthority' name="compilationAuthority">
+	                				<option value="" selected="selected">Select Compilation Authority</option>
+	                				<option title="All" selected="" value="0">All</option>
+									<option title="Aagar- CS" value="5055972">Aagar- CS</option>
+									<option title="Aagar- DH" value="5001672">Aagar- DH</option>
+									<option title="Aagar PHC  Indore-PHC" value="5002615">Aagar PHC  Indore-PHC</option>
+									<option title="Aagasod   Sagar-PHC" value="5003031">Aagasod   Sagar-PHC</option>
+	                			</select>
+	                		<div class="invalid-feedback"></div>
+ 	  					</div>
+	 				</div>
+	 		</div>
+	 		
+	 		 <div class="row " >
+	 				<div class='col-lg-3'  >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="approvingAuthority" data-validation="mandatory" data-langtag="Approving Authority" >Approving Authority</label>
+	                			<select class="form-control form-control-sm  " id ='approvingAuthority' name="approvingAuthority">
+	                				<option value="" selected="selected">Select Approving Authority</option>
+	                				<option title="Aagar- CS" value="5055972">Aagar- CS</option>
+									<option title="Aagar- DH" value="5001672">Aagar- DH</option>
+									<option title="Aagar PHC  Indore-PHC" value="5002615">Aagar PHC  Indore-PHC</option>
+									<option title="Aagasod   Sagar-PHC" value="5003031">Aagasod   Sagar-PHC</option>
+	                			</select>
+	                		<div class="invalid-feedback"></div>
+ 	  					</div>
+	 				</div>
+			 </div>
+			 
+			 <div class="text-center">
+		         <button class="btn bg-gradient-success mt-4 btn-sm" id="btnGo"><i class="fa fa-arrow-right"></i> Go</button> 
+			 </div>
+		 			
+	 			
+	 			
+	 		<h6><b>Other Detail(s) :</b></h6>
+			<hr class="bg-navy">
+	 		<div class="row " >
+	 				
+	 				<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="compileQty"  data-langtag="Compile Qty" >Compile Qty</label>
+	                		   	<text class="form-control form-control-sm "  id="compileQty" name="compileQty" maxlength="50" "></text>
+	              			<div class="invalid-feedback"></div>
+ 	  					</div>
+	 				</div> 
+	 				
+	 				<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="totalQty"  data-langtag="Total Qty" >Total Qty</label>
+	                		   	<text class="form-control form-control-sm "  id="totalQty" name="totalQty" maxlength="50" "></text>
+	              			<div class="invalid-feedback"></div>
+ 	  					</div>
+	 				</div> 
+	 				
+	 				<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="remarks"  data-langtag="Remarks" >Remarks</label>
+	                		   	<textarea class="form-control form-control-sm "  id="remarks" name="remarks" maxlength="50" "></textarea>
+	              			<div class="invalid-feedback"></div>
+ 	  					</div>
+	 				</div> 
+	 				
+		 	 </div>
+   </div>
+   
+		    <div class="card-footer">
+				<div class="text-center">	
+					  <button class="btn bg-gradient-success mt-4 btn-sm" id="btnSave"><i class="fa fa-save"></i> Save</button> 
+		              <button class="btn bg-gradient-success mt-4 btn-sm" id="btnClear"><i class="fa fa-paint-brush"></i> Clear</button>
+		              <button class="btn bg-gradient-success mt-4 btn-sm" id="btnBack1"><i class="fas fa-arrow-circle-left"></i> Back</button>		
+		         </div>
+			</div>  
+</div>
+
+
+
+<div class="card card-info border-info center m-1" id='LISTFORM' >
+			<div class="card-header bg-navy"><h5 class="card-title text-center ">Demand Compilation Desk</h5>
+			</div>
+
+
+	<div class="card-body form-group">
+ 	
+  		   <div class="row " >
+	 			   <div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="compilationAuthority" data-validation="mandatory" data-langtag="Compilation Authority" >Compilation Authority</label>
+	                			<select class="form-control form-control-sm  " id ='compilationAuthority' name="compilationAuthority">
+	                				<option value="" selected="selected">Select Compilation Authority</option>
+	                				<option title="All" selected="" value="0">All</option>
+									<option title="Aagar- CS" value="5055972">Aagar- CS</option>
+									<option title="Aagar- DH" value="5001672">Aagar- DH</option>
+									<option title="Aagar PHC  Indore-PHC" value="5002615">Aagar PHC  Indore-PHC</option>
+									<option title="Aagasod   Sagar-PHC" value="5003031">Aagasod   Sagar-PHC</option>
+	                			</select>
+	              			<div class="invalid-feedback"></div>
+ 	  					</div>
+	 				</div>
+	 				
+	
+		
+	 				<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="equipmentName" data-validation="mandatory" data-langtag="Equipment Name" >Equipment Name</label>
+	                			<select class="form-control form-control-sm  " id ='equipmentName' name="equipmentName">
+	                				<option value="" selected="selected">Select Equipment Name</option>
+	                				<option title="All" selected="" value="0">All</option>
+									<option title="3 Fold Labour Table Ss With Foam Mattress [99999] " value="18000306">3 Fold Labour Table Ss With Foam Mattress [99999] </option>
+									<option title="4 To 13 Mhz Linear  Transducer  With Near Focus (Probe For Usg Machine ) [2011] " value="18000341">4 To 13 Mhz Linear  Transducer  With Near Focus (Probe For Usg Machine ) [2011] </option>
+									<option title="-80 Degree C Vertical Ultra Low Freezer [Labe021] " value="18000288">-80 Degree C Vertical Ultra Low Freezer [Labe021] </option>
+									<option title="Aaaa [1111] " value="18000360">Aaaa [1111] </option>
+									<option title="Abg Machine [10001] " value="18000001">Abg Machine [10001] </option>
+									<option title="Advance Icu Ventilator [Icue010] " value="18000195">Advance Icu Ventilator [Icue010] </option>
+									<option title="Allis Forceps 20cm Ss [Gyne018] " value="18000277">Allis Forceps 20cm Ss [Gyne018] </option>
+									<option title="Amalgameter [10002] " value="18000002">Amalgameter [10002] </option>
+									<option title="Ambu Bag Adult [10003] " value="18000003">Ambu Bag Adult [10003] </option>
+	                			</select>
+	              			<div class="invalid-feedback"></div>
+ 	  					</div>
+	 				</div>
+	 		</div>	
+
+			<div class="text-center">
+				<button class="btn   bg-gradient-success btn-sm" id="btnCompile"><i class="fa fa-plus"></i> Compile</button>
+				<button class="btn   bg-gradient-success btn-sm" id="btnview"><i class="fa fa-eye" aria-hidden="true"></i> View</button>
+				<button class="btn   bg-gradient-success btn-sm" id="btnPrint"><i class="fa fa-print"></i> Print</button>
+			</div>
+			
+			
+			<div class='row'>
+				<div class='col-lg-4'>	
+					<div class="form-group row">                   
+	                    <div class="col-sm-10">
+	                      <input type="text" class="form-control" id="search" placeholder="Search">
+	                    </div>
+	                  </div>
+				</div>
+			</div>	
+			
+			<div class='row no-more-tables'>
+				<table class="table table-hover">
+				  <thead class="bg-navy">
+				      <tr>
+				      	<th><input type="checkbox"></th>
+				        <th>Compilaton No.</th>
+				        <th>Compilation Authority</th>
+				        <th>Approving Authority</th>
+				        <th>Equipment Name</th>
+				        <th>Compile Date</th>
+				        <th>Status</th>
+				      </tr>
+				    </thead>
+				    <tbody>
+				     <tr>
+				      	<td class='d-none d-sm-block' ><input type="checkbox"></td>
+				        <td data-title='Compilaton No.'>619129980024</td>
+				        <td data-title='Compilation Authority'>Aagar- CS</td>
+				        <td data-title='Approving Authority'>Aagar- CS</td>
+				        <td data-title='Equipment Name'>ABG MACHINE</td>
+				        <td data-title='Compile Date'>19-12-2019</td>
+				        <td data-title='Status'> Compilation Freezed</td>
+				      </tr>
+				       <tr>
+				      	<td class='d-none d-sm-block' ><input type="checkbox"></td>
+				        <td data-title='Compilaton No.'>619129980045</td>
+				        <td data-title='Compilation Authority'>Agar-CMHO</td>
+				        <td data-title='Approving Authority'>Agar-CMHO</td>
+				        <td data-title='Equipment Name'> SCHIOTZ TONOMETER</td>
+				        <td data-title='Compile Date'>19-12-2019</td>
+				        <td data-title='Status'> Compilation Freezed</td>
+				      </tr>
+				      <tr>
+				      	<tr>
+				      	<td class='d-none d-sm-block' ><input type="checkbox"></td>
+				        <td data-title='Compilaton No.'>619129980067</td>
+				        <td data-title='Compilation Authority'>Aagar- CS</td>
+				        <td data-title='Approving Authority'>Aagar- CS</td>
+				        <td data-title='Equipment Name'>CENTRAL MONITORING SYSTEM</td>
+				        <td data-title='Compile Date'>17-12-2019</td>
+				        <td data-title='Status'> Compilation Freezed</td>
+				      </tr>
+				    </tbody>
+				 </table>	
+			</div>
+	
+   </div>
+</div>
+
+
+<div class="card card card-info border-info center m-1 hideData" id='VIEWPAGEFORM'  >
+	<div class="card-header bg-navy">
+		<h6 class="text-left">Demand Compilation Desk >> View</h6>
+	</div>
+		<div class="card-body form-group">
+			
+	 	<div class='row'>
+				  		<div class='col-lg-3' >
+				  				<div><b>Demand Compilation No. :</b> 619089980001</div>	
+				  				<div><b>Equipment Name :</b> Bed Side Monitor</div> 
+				  				<div><b>PO Quantity :</b> 0</div>
+				  				<div><b>Financial Start Date :</b> 01-APR-2019</div>
+				  		</div>
+				  		<div class='col-lg-3' >	
+				  				<div><b>Compilation Date :</b> 14-AUG-2019</div>
+				  				<div><b>Group Name :</b> ---</div>
+				  				<div><b>Total Quantity :</b> 2</div>
+								<div><b>Financial End Date :</b> 31-MAR-2020</div>
+						</div>
+						<div class='col-lg-3' >	
+								<div><b>Compilation Authority :</b> Aagar- CS</div>	
+								<div><b>Programme Name :</b> ---</div>	 
+								<div><b>Demand Compilation Status :</b> Compiled</div>
+								<div><b>Remark :</b> </div>
+						</div>
+						<div class='col-lg-3' >	
+								<div><b>Approving Authority :</b> Aagar- DH</div>
+								<div><b>PO Generated :</b>0</div>
+								<div><b>Request Type :</b> Other</div>	 
+						</div> 	
+		</div>
+		<br>
+		<h6><b>Demand Compilation Indent Details :</b></h6>
+			<hr class="bg-navy">
+			<table class="table table-hover">
+			  <thead >
+			      <tr>
+			      	<th>S.No.</th>
+			        <th>COMPILATION NO.</th>
+			        <th>INDENT NO.</th>
+			        <th>HOSPITAL NAME</th>
+			        <th>CONSIGNEE STORE</th>
+			        <th>ITEM NAME</th>
+			        <th>COMPILATION DATE</th>
+			        <th>DEMAND QUANTITY</th>
+			        <th>APPROVE QUANTITY</th>
+			        <th>INDENT COMPILED</th>
+			        <th>REQUEST TYPE</th>
+			      </tr>
+			    </thead>
+			    <tbody>
+			     <tr>
+			        <td>1</td>
+			        <td>619089980001</td>
+			        <td>319089980003</td>
+			        <td>Aagar- CS</td>
+			        <td>Aagar- DH</td>
+			        <td>Bed Side Monitor</td>
+			        <td>14-AUG-2019</td>
+			        <td>2</td>
+			        <td>2</td>
+			        <td>0</td>
+			        <td>Other</td>
+			      </tr>
+			    </tbody>
+			 </table>	
+			<br>	
+	
+	</div>
+	
+    <div class="card-footer">
+		<div class="text-center">
+              <button class="btn bg-gradient-success mt-4 btn-sm" id="btnBack"><i class="fas fa-arrow-circle-left"></i> Back</button>                            
+		</div>
+	</div>  
+ 
+  
+</div>
+

@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link rel="stylesheet" href="/HIS/hisglobal/eUpkaranTemplate/dist/css/adminlte.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link rel="stylesheet"
+	href="/eUpkaran/global/plugins/eUpkaranTemplate/plugins/daterangepicker/daterangepicker.css">
+<script
+	src="/eUpkaran/global/plugins/eUpkaranTemplate/plugins/daterangepicker/daterangepicker.js"></script>
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	
+</head>
+<body>
+
+
+<div style="letter-spacing: 1px;">
+
+<style type="text/css">
+.table td, .table th{
+	padding: 2px;
+	border: none;
+}
+</style>
+
+
+<div id="listPage">
+<table class='table' style="width: 100%">
+<tbody>
+<tr>
+   <td style="font-weight: bold;text-align: left;"><h4>Demand Compilation Desk >> List Page</h4></td>
+   <td>
+   <div style="text-align: right;">
+   <button   style="text-align: right; background-color: DodgerBlue;" onclick="newDemand()"><i class="fa fa-edit"></i>&nbsp;Compile</button>&nbsp;
+   <button  type="button" style="text-align: right; background-color: DodgerBlue;" onclick="document.getElementById('cancelModalView').style.display='block'"
+   ><i class="fa fa-eye"></i>&nbsp;View</button>&nbsp;
+  <!--  <button  type="button" style="text-align: right; background-color: DodgerBlue;" onclick="document.getElementById('cancelModalView').style.display='block'"
+   ><i class="fas fa-arrow-circle-left"></i>&nbsp;View</button> -->
+	</div>	
+   </td>
+</tr>
+
+</tbody>
+</table>
+
+<hr style=" border-top: 1px solid DodgerBlue;" ><br>
+<!-- <table class='table' style="width: 100%">
+<tbody> -->
+<div class="row">
+
+       
+             
+             <div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="locationId" data-langtag="Institute Name" >Compilation Authority</label>
+	                			<select class="form-control form-control-sm  select2" id ='locationId' name="locationId" data-validation="mandatory">
+	                				<option value="0">OSMCL</option>
+	                				<option value="1">ODISHA GOVERNMENT MULTI SUPER SPECIALITY HOSPITAL</option>
+	                			</select>
+	                			<div class="invalid-feedback"></div>
+	              			</div>          			
+					 	</div>
+					 	
+					
+					 	
+					 	<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="locationId" data-langtag="Location" >Equipment Name</label>
+	                			<select class="form-control form-control-sm  select2" id ='locationId' name="locationId" data-validation="mandatory">
+	                				<option value="1">Select Value</option>
+	                				<option value="2">0 Degree Nasal Endoscope</option>
+	                			</select>
+	                			<div class="invalid-feedback"></div>
+	              			</div>          			
+					 	</div> 	
+					 	
+					 	
+					 	
+					</div>
+					 	
+
+		<div class="row">
+
+       <button  type="button" style="text-align: right; background-color: DodgerBlue;"><i class="fa fa-cog"></i></button>&nbsp;&nbsp;&nbsp;
+             
+             <label for="Search">Search</label>
+  <input type="text" id="Search" name="Search">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+  
+   <label for="Search" style="text-align: left;">Show</label>
+  <select type="text" id="Search" name="Search">
+  <option>10</option>
+  <option>20</option>
+  <option>50</option>
+  <option>All</option>
+  </select>entries
+  
+					 	
+			</div>			 	
+
+
+
+<table style="width: 100%;length:80%;font-size:15px;margin-top: 10px;" class='tbldatavo2'>
+<thead>
+	<tr >
+	<th style="vertical-align: top; width:5%;text-align: center;background:purple;color:white;" ><input type="checkbox"><br></th>
+	<th style="vertical-align: top;text-align: center;background:purple;color:white;" bgcolor="purple">Compilation No. <br></th>
+	<th style="vertical-align: top; text-align: center;background:purple;color:white;" bgcolor="purple">Compilation Authority <br></th>
+	<th style="vertical-align: top;text-align: center;background:purple;color:white;" bgcolor="purple">Approving Authority<br></th>
+	<th style="vertical-align: top;text-align: center;background:purple;color:white;" bgcolor="purple">Equipment Name <br></th>
+	<th style="vertical-align: top;text-align: center;background:purple;color:white;" bgcolor="purple">Compile Date<br></th>
+	<th style="vertical-align: top;text-align: center;background:purple;color:white;" bgcolor="purple"> Status<br></th>
+	
+	</tr>
+</thead>
+<tbody>
+<tr>
+<td style="vertical-align: top;text-align: center;"><input type="checkbox"><br></td>
+<td style="vertical-align: top;text-align: center">621059980003<br></td>
+<td style="vertical-align: top;text-align: center">ODISHA GOVERNMENT MULTI SUPER SPECIALITY HOSPITAL<br></td>
+<td style="vertical-align: top;text-align: center;padding-right:5px">OSMCL<br></td>
+<td style="vertical-align: top;text-align: center">0 DEGREE NASAL ENDOSCOPE<br></td>
+<td style="vertical-align: top;text-align: center">3-may-2021<br></td>
+<td style="vertical-align: top;text-align: center;padding-right:5px">Compiled <br></td>
+
+
+</tr>
+
+<tr>
+<td style="vertical-align: top;text-align: center;"><input type="checkbox"><br></td>
+<td style="vertical-align: top;text-align: center">621059980003<br></td>
+<td style="vertical-align: top;text-align: center">ODISHA GOVERNMENT MULTI SUPER SPECIALITY HOSPITAL<br></td>
+<td style="vertical-align: top;text-align: center;padding-right:5px">OSMCL<br></td>
+<td style="vertical-align: top;text-align: center">0 DEGREE NASAL ENDOSCOPE<br></td>
+<td style="vertical-align: top;text-align: center">29-04-2021<br></td>
+<td style="vertical-align: top;text-align: center;padding-right:5px">Compiled <br></td>
+
+
+
+<tr>
+<td style="vertical-align: top;text-align: center;"><input type="checkbox"><br></td>
+<td style="vertical-align: top;text-align: center">621059980005<br></td>
+<td style="vertical-align: top;text-align: center">ODISHA GOVERNMENT MULTI SUPER SPECIALITY HOSPITAL<br></td>
+<td style="vertical-align: top;text-align: center;padding-right:5px">OSMCL<br></td>
+<td style="vertical-align: top;text-align: center">100MAHF DIAGNOSTIC X RAY MACHINE<br></td>
+<td style="vertical-align: top;text-align: center">3-may-2021<br></td>
+<td style="vertical-align: top;text-align: center;padding-right:5px">Compiled <br></td>
+
+
+</tr><tr>
+<td style="vertical-align: top;text-align: center;"><input type="checkbox"><br></td>
+<td style="vertical-align: top;text-align: center">621059980006<br></td>
+<td style="vertical-align: top;text-align: center">ODISHA GOVERNMENT MULTI SUPER SPECIALITY HOSPITAL<br></td>
+<td style="vertical-align: top;text-align: center;padding-right:5px">OSMCL<br></td>
+<td style="vertical-align: top;text-align: center">100MAHF DIAGNOSTIC X RAY MACHINE<br></td>
+<td style="vertical-align: top;text-align: center">29-04-2021<br></td>
+<td style="vertical-align: top;text-align: center;padding-right:5px">Compiled <br></td>
+
+</tr>
+</tbody>
+
+</table>
+
+</div>
+
+<script>
+function newDemand() {
+	
+ document. getElementById("listPage"). style. display = "none"; //hide.
+ document. getElementById("newDemandAdd"). style. display = "block"; //show.
+ document. getElementById("newDemandAddModify"). style. display = "none";
+}
+
+function newDemandBack() {
+	
+	
+	 document. getElementById("listPage"). style. display = "block"; 
+	 document. getElementById("newDemandAdd"). style. display = "none"; 
+	 document. getElementById("newDemandAddModify"). style. display = "none";
+	}
+
+function newDemandBackModify() {
+	
+	
+	 document. getElementById("listPage"). style. display = "none"; 
+	 document. getElementById("newDemandAdd"). style. display = "none"; 
+	 document. getElementById("newDemandAddModify"). style. display = "block";
+	}
+
+function newDemandPopups() {
+	
+  alert("ok")
+     //document.getElementById("cancelModal").showModal();
+  document. getElementById("cancelModal"). modal.style.display = "block";
+ 
+     }
+
+
+</script>
+
+
+<div id="newDemandAdd" style="display:none;">
+
+<table class='table' style="width: 100%">
+<tbody>
+<tr>
+   <td style="font-weight: bold;text-align: left;"><h4>Demand Compilation Desk>>Compile</h4></td>
+   <td>
+   <div style="text-align: right;">
+   <button   style="text-align: right; background-color: DodgerBlue;" onclick="newDemandBack()"><i class="fa fa-save"></i>&nbsp;SAVE</button>&nbsp;
+   <button   style="text-align: right; background-color: DodgerBlue;"><i class="fas fa-sync"></i>&nbsp;RESET</button>&nbsp;
+   <button  type="button" style="text-align: right; background-color: DodgerBlue;" onclick="newDemandBack()"><i class="fa fa-arrow-circle-left"></i>&nbsp;BACK</button>&nbsp;
+ </div>	
+   </td>
+</tr>
+
+</tbody>
+</table>
+<hr style=" border-top: 1px solid DodgerBlue;" >
+
+
+<table class='table' style="width: 100%;" >
+<tbody>
+<tr  bgcolor="purple">
+   <td style="font-weight: bold;text-align: left; color:white;"><h5>Demand/Indent Generation Details</h5></td>
+
+</tr>
+</tbody>
+</table>
+<div class="row">
+
+       
+             
+              <div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="locationId" data-langtag="Demand Period" >Demand Period </label>
+	                			<select class="form-control form-control-sm  select2" id ='locationId' name="locationId" data-validation="mandatory">
+	                				<option value="0">2019-2020</option>
+	                				<option value="1">2020-2021</option>
+	                			</select>
+	                			<div class="invalid-feedback"></div>
+	              			</div>          			
+					 	</div>
+					 	
+					 	 <div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="locationId" data-langtag="Specification Date" >Demand Date</label>
+	                			<input class="form-control form-control-sm  select2" value="DD/MM/YYYY" name="locationId" data-validation="mandatory">
+	                				
+	                			<div class="invalid-feedback"></div>
+	              			</div>          			
+					 	</div>
+					 	
+					 <div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="locationId" data-langtag="Location" >Equipment Name</label>
+	                			<select class="form-control form-control-sm  select2" id ='locationId' name="locationId" data-validation="mandatory">
+	                				<option value="1">Select Value</option>
+	                				<option value="2">0 Degree Nasal Endoscope</option>
+	                			</select>
+	                			<div class="invalid-feedback"></div>
+	              			</div>          			
+					 	</div> 	
+					 	
+             
+             <div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="locationId" data-langtag="Institute Name" >Compilation Authority </label>
+	                			<select class="form-control form-control-sm  select2" id ='locationId' name="locationId" data-validation="mandatory">
+	                				<option value="0">OSMCL</option>
+	                				<option value="1">ODISHA GOVERNMENT MULTI SUPER SPECIALITY HOSPITAL</option>
+	                			</select>
+	                			<div class="invalid-feedback"></div>
+	              			</div>          			
+					 	</div>
+					 	
+					 <div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="locationId" data-langtag="Department Name" >Approving Authority </label>
+	                			<select class="form-control form-control-sm  select2" id ='locationId' name="locationId" data-validation="mandatory">
+	                				<option value="0">ODISHA GOVERNMENT-DEPARTMENT OF ANESTHESIA</option>
+	                			</select>
+	                			<div class="invalid-feedback"></div>
+	              			</div>          			
+					 	</div> 	
+					 	
+					 	<div class="text-center">
+           
+             <button   style="text-align: right; background-color: DodgerBlue;"><i class="fa fa-plus"></i>&nbsp;GO</button>&nbsp;
+          </div> 
+					 	
+			</div>
+
+
+<table class='table' style="width: 100%;" >
+<tbody>
+<tr  bgcolor="purple">
+   <td style="font-weight: bold;text-align: left; color:white;"><h5>Demand Details</h5></td>
+
+</tr>
+</tbody>
+</table>
+
+
+
+
+<table style="width: 100%;length:50%;font-size:15px;margin-top: 10px;" class='tbldatavo2'>
+<thead>
+	<tr>
+	<th style="vertical-align: top; width:5%;text-align: center;background:#dee2e6" ><input type="checkbox"><br></th>
+	<th style="vertical-align: top; width:15%;text-align: center;background:#dee2e6">Consignee Name</th>
+	<th style="vertical-align: top;width:20%;text-align: center;background:#dee2e6">Equipment Name</th>
+	<th style="vertical-align: top;width:10%;text-align: center;background:#dee2e6">Demand Ref. No.</th>
+	<th style="vertical-align: top; width:10%;text-align: center;background:#dee2e6">Demand Date</th>
+	<th style="vertical-align: top;width:5%;text-align: center;background:#dee2e6">Demand Quantity</th>
+	<th style="vertical-align: top;width:5%;text-align: center;background:#dee2e6">Verified Qty</th>
+	<th style="vertical-align: top;width:15%;text-align: center;background:#dee2e6">Compile Qty</th>
+	
+	
+	</tr>
+</thead>
+<tbody>
+<tr>
+<td style="vertical-align: top;text-align: center;"><input type="checkbox" checked></td>
+<td style="vertical-align: top;text-align: left">ODISHA GOVERNMENT MULTI SUPER SPECIALITY HOSPITAL-DEPARTMENT OF ANESTHESIA </td>
+<td style="vertical-align: top;text-align: left">0 Degree Nasal Endoscope</td>
+<td style="vertical-align: top;text-align: center;padding-right:5px"> 621059980001</td>
+<td style="vertical-align: top;text-align: center;">05-May-2021</td>
+<td style="vertical-align: top;text-align: left"> 15 </td>
+<td style="vertical-align: top;text-align: left">20</td>
+<td style="vertical-align: top;text-align: center;padding-right:5px"> <input class="form-control form-control-sm  select2" value="10" name="locationId" data-validation="mandatory"> </td>
+
+
+
+</tr>
+</tbody>
+
+
+</table>
+
+
+<table class='table' style="width: 100%;" >
+<tbody>
+<tr  bgcolor="purple">
+   <td style="font-weight: bold;text-align: left; color:white;"><h5>Other Details</h5></td>
+
+</tr>
+</tbody>
+</table>
+
+<div class="row">
+
+       
+             
+             <div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="locationId" data-langtag="Compiled Qty" >Compiled Qty</label>
+	                			</br>10
+	              			</div>          			
+					 	</div>
+					 	
+					 <div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="locationId" data-langtag="Total Qty" >Total Qty</label>
+	                			</br>10
+	                			<div class="invalid-feedback"></div>
+	              			</div>          			
+					 	</div> 	
+					 	
+					 	<div class='col-lg-3' id = 'remarksDiv'>
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="remarks" data-langtag="Remarks"  >Remarks</label>
+	                			<textarea class="form-control form-control-sm  "  id="remarks" name='remarks' maxlength="50" data-validation="alphanumeric,mandatory" ></textarea>
+	                			<i style =" color: black;">(Allowed Upto 500 Characters.)</i>
+	                			<div class="invalid-feedback"></div>
+	              			 </div>
+					 	 </div>
+					 	
+					 	
+					 	</div>
+	 
+
+
+
+
+</div>
+
+
+
+<div id="newDemandAddModify" style="display:none;">
+
+<table class='table' style="width: 100%">
+<tbody>
+<tr>
+   <td style="font-weight: bold;text-align: left;"><h4>Demand Raise Desk>>Modify</h4></td>
+   <td>
+   <div style="text-align: right;">
+   <button   style="text-align: right; background-color: DodgerBlue;" onclick="newDemandBack()"><i class="fa fa-close"></i>&nbsp;SAVE</button>&nbsp;
+   <button   style="text-align: right; background-color: DodgerBlue;"><i class="fa fa-save"></i>&nbsp;RESET</button>&nbsp;
+   <button  type="button" style="text-align: right; background-color: DodgerBlue;" onclick="newDemandBack()"><i class="fa fa-save"></i>&nbsp;BACK</button>&nbsp;
+ </div>	
+   </td>
+</tr>
+
+</tbody>
+</table>
+<hr style=" border-top: 1px solid DodgerBlue;" >
+
+
+<table class='table' style="width: 100%;" >
+<tbody>
+<tr  bgcolor="purple">
+   <td style="font-weight: bold;text-align: left; color:white;"><h5>Institution Details</h5></td>
+
+</tr>
+</tbody>
+</table>
+<div class="row">
+
+       
+             
+             <div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="locationId" data-langtag="Institute Name" >Institute Name</label>
+	                			</br>ODISHA GOVERNMENT MULTI SUPER SPECIALITY HOSPITAL
+	              			</div>          			
+					 	</div>
+					 	
+					 <div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="locationId" data-langtag="Department Name" >Department Name</label>
+	                			</br>ODISHA GOVERNMENT MULTI SUPER SPECIALITY HOSPITAL-DEPARTMENT OF ANESTHESIA
+	                			<div class="invalid-feedback"></div>
+	              			</div>          			
+					 	</div> 	
+					 	
+					 	</div>
+
+
+<table class='table' style="width: 100%;" >
+<tbody>
+<tr  bgcolor="purple">
+   <td style="font-weight: bold;text-align: left; color:white;"><h5>Equipment Details</h5></td>
+
+</tr>
+</tbody>
+</table>
+
+<div class="row">
+
+       
+             
+            <div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="locationId" data-langtag="Location" >Equipment Name</label>
+	                			<select class="form-control form-control-sm  select2" id ='locationId' name="locationId" data-validation="mandatory">
+	                				
+	                				<option value="2">0 Degree Nasal Endoscope</option>
+	                			</select>
+	                			<div class="invalid-feedback"></div>
+	              			</div>          			
+					 	</div> 	
+					 	
+					 <div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="locationId" data-langtag="Specification Status" >Specification Status</label>
+	                			<select class="form-control form-control-sm  select2" id ='locationId' name="locationId" data-validation="mandatory">
+	                				<option value="0">Received</option>
+	                				<option value="1">Not Received</option>
+	                			</select>
+	                			<div class="invalid-feedback"></div>
+	              			</div>          			
+					 	</div> 	
+					 	
+					 <div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="locationId" data-langtag="Specification Date" >Specification Date</label>
+	                			<input class="form-control form-control-sm  select2" id ='locationId' value=">05-May-2021" name="locationId" data-validation="mandatory">
+	                				
+	                			<div class="invalid-feedback"></div>
+	              			</div>          			
+					 	</div>
+					 	
+					 <div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="locationId" data-langtag="Specification Status" >Quantity</label>
+	                			<input	 class="form-control form-control-sm  select2" id ='locationId' value="20" name="locationId" data-validation="mandatory">
+	                				
+	                			<div class="invalid-feedback"></div>
+	              			</div>          			
+					 	</div> 	
+					 
+					  <div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="locationId" data-langtag="Remarks" >Remarks</label>
+	                			<textarea	 class="form-control form-control-sm  select2" id ='locationId' value="Equipment Remarks" name="locationId" data-validation="mandatory">
+	                				</textarea>
+	                			<div class="invalid-feedback"></div>
+	              			</div>          			
+					 	</div> 
+					 	
+					 	
+</div>
+
+
+
+
+</div>
+
+ 
+
+
+
+
+
+<div id="cancelModalView" class="w3-modal">
+    <div class="w3-modal-content">
+      <div class="w3-container">
+      
+      <h4 class='card-title float-left' data-langtag='Demand Raise>> View'>Demand Raise>> View</h4>
+  
+      
+         <span onclick="document.getElementById('cancelModalView').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+   <br>
+        <hr style=" border-top: 1px solid DodgerBlue;" >
+        <div class="modal-body">
+						<div class="card" id='bgDtlsss'>
+							
+							<div class="row">
+
+       
+             
+             <div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="locationId" data-langtag="Institute Name" >Compilation No. </label>
+	                			</br>ODISHA GOVERNMENT MULTI SUPER SPECIALITY HOSPITAL
+	              			</div>          			
+					 	</div>
+					 	
+					 <div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="locationId" data-langtag="Department Name" >Compilation Authority </label>
+	                			</br>ODISHA GOVERNMENT MULTI SUPER SPECIALITY HOSPITAL-DEPARTMENT OF ANESTHESIA
+	                			<div class="invalid-feedback"></div>
+	              			</div>          			
+					 	</div> 	
+					 	
+					 	
+					 	
+					 <div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="locationId" data-langtag="Department Name" >Approving Authority:-</label>
+	                			</br>OSMCL
+	                			<div class="invalid-feedback"></div>
+	              			</div>          			
+					 	</div> 	
+					 	
+					 	<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="locationId" data-langtag="Institute Name" >Equipment Name</label>
+	                			</br>0 DEGREE NASAL ENDOSCOPE
+	              			</div>          			
+					 	</div>
+					 	
+					 	
+					 	<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="locationId" data-langtag="Institute Name" >Compile Date :-</label>
+	                			</br>22-apr-2021
+	              			</div>          			
+					 	</div>
+					 	
+					 <div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="locationId" data-langtag="Department Name" >Compiled Qty. :-</label>
+	                			</br>20
+	                			<div class="invalid-feedback"></div>
+	              			</div>          			
+					 	</div> 	
+					 	
+					 	<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="locationId" data-langtag="Institute Name" >Demanded Qty. :-</label>
+	                			</br>29-apr-2021
+	              			</div>          			
+					 	</div>
+					 	
+					 <div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="locationId" data-langtag="Department Name" > Status :-</label>
+	                			</br>Compilation in Process
+	                			<div class="invalid-feedback"></div>
+	              			</div>          			
+					 	</div> 	
+					 	
+					 	</div>
+
+							
+
+						</div>
+
+
+      </div>
+    </div>
+  </div>
+
+
+
+
+</div>
+
+
+
+</div>
+</body>
+</html>

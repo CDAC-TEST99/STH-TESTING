@@ -1,0 +1,1917 @@
+<script>
+$(document).ready(function () {
+	
+	$('#btnadd').click(function(){
+		$('#LISTFORM').addClass('hideData');
+		$('#ADDPAGEFORM ').removeClass('hideData');		
+	});
+	
+	$('#btnBackAdd').click(function(){
+		$('#LISTFORM').removeClass('hideData');
+		$('#ADDPAGEFORM').addClass('hideData');		
+	});
+	$('#btnmodify').click(function(){
+		$('#LISTFORM').addClass('hideData');
+		$('#MODIFYPAGEFORM ').removeClass('hideData');		
+	});
+	
+	$('#btnBackMdy').click(function(){
+		$('#LISTFORM').removeClass('hideData');
+		$('#MODIFYPAGEFORM ').addClass('hideData');		
+	});
+	
+	$('#btnview').click(function(){
+		$('#LISTFORM').addClass('hideData');
+		$('#VIEWPAGEFORM ').removeClass('hideData');		
+	});
+	
+	$('#btnBack').click(function(){
+		$('#LISTFORM').removeClass('hideData');
+		$('#VIEWPAGEFORM ').addClass('hideData');		
+	});
+	
+	$('#btnstatus').click(function(){
+		$('#LISTFORM').addClass('hideData');
+		$('#STATUSPAGEFORM ').removeClass('hideData');		
+	});
+	
+	$('#btnBackStatus').click(function(){
+		$('#LISTFORM').removeClass('hideData');
+		$('#STATUSPAGEFORM ').addClass('hideData');		
+	});
+	$('#btnextend').click(function(){
+		$('#LISTFORM').addClass('hideData');
+		$('#EXTENDPAGEFORM ').removeClass('hideData');		
+	});
+	
+	$('#btnBackExtend').click(function(){
+		$('#LISTFORM').removeClass('hideData');
+		$('#EXTENDPAGEFORM ').addClass('hideData');		
+	});
+})
+</script>
+
+
+
+<div class="card card-info border-info center m-1" id='LISTFORM' >
+	<div class="card-header bg-navy">
+	<h6 class="card-title text-left">Rate Contract Desk</h6>
+		<div class="buttonContainer  bg-light">
+			  <button class='btn   bg-gradient-success btn-sm' id="btnadd"><i class="fa fa-plus-circle" ></i> Add </button>
+	             <button class='btn   bg-gradient-success btn-sm' id='btnmodify' ><i class="fa fa-edit"></i> Modify</button>
+	             <button class="btn   bg-gradient-success btn-sm" id="btnview"><i class="fa fa-eye" aria-hidden="true"></i> View</button>
+			     <button class='btn   bg-gradient-success btn-sm' id='btnstatus' ><i class="fa fa-battery-half"></i> Change Status</button>		  		
+	             <button class='btn   bg-gradient-success btn-sm' id='btnextend' ><i class="fa fa-caret-right"></i> Extend</button>
+	             <button class='btn   bg-gradient-success btn-sm'  ><i class="fa fa-print"></i> Print</button>		
+		</div>
+	</div>
+	<div class="card-body form-group">
+
+ 			<div class="row " >
+				 	<div class='col-lg-3' >
+				 		<div class="form-group">
+                			<label class="col-form-label col-form-label-sm" for="tenderingAuthority" data-validation="mandatory" data-langtag="Tendering Authority" >Tendering Authority </label>
+                			<select class="form-control form-control-sm  " id ='tenderingAuthority' name="tenderingAuthority">
+                				<option value="TNMSCL" selected="selected">TNMSCL </option>
+                			</select>
+							<div class="invalid-feedback"></div>
+						</div>	
+					</div>
+						
+					 	<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="supplierName" data-validation="mandatory" data-langtag="Supplier Name" >Supplier Name</label>
+	                			<select class="form-control form-control-sm  " id ='supplierName' name="supplierName">
+	                				<option title="All" selected="" value="0">All</option>
+									<option title="ACME" value="1810144">ACME</option>
+									<option title="Adarsh Enterprises" value="1812088">Adarsh Enterprises</option>
+									<option title="Adonis Medical Systems Private Limited" value="1810444">Adonis Medical Systems Private Limited</option>
+									<option title="Agilent Technologies India Pvt Ltd" value="1812089">Agilent Technologies India Pvt Ltd</option>
+									<option title="Allengers Medical Systems Ltd" value="1812159">Allengers Medical Systems Ltd</option>
+									<option title="ALLIED MEDICAL LTD" value="1810031">ALLIED MEDICAL LTD</option>
+									<option title="Anthrometriques Medical Instruments" value="1812090">Anthrometriques Medical Instruments</option>
+									<option title="Anu Sales Corporation" value="1812091">Anu Sales Corporation</option>
+									<option title="Appasamy Associates" value="1810042">Appasamy Associates</option>									
+	                				<option title="Panacea Medical Technologies Pvt Ltd" value="1812307">Panacea Medical Technologies Pvt Ltd</option>
+									<option title="Phoenix Dental And Medical Pvt Ltd" value="1812109">Phoenix Dental And Medical Pvt Ltd</option>
+									<option title="PHOENIX MEDICAL SYSTEM" value="1811300">PHOENIX MEDICAL SYSTEM</option>
+									<option title="Primex Products" value="1812299">Primex Products</option>
+									<option title="REMI ELEKTROTECHNIK LTD" value="1810110">REMI ELEKTROTECHNIK LTD</option>
+									<option title="RK Sales Agency" value="1812166">RK Sales Agency</option>
+									<option title="Rohit Surgical Pvt Ltd" value="1812102">Rohit Surgical Pvt Ltd</option>
+									<option title="Science House Medicals Pvt Ltd" value="1812110">Science House Medicals Pvt Ltd</option>
+									<option title="Sisco Latex Pvt Ltd" value="1812111">Sisco Latex Pvt Ltd</option>
+									<option title="SKANRAY TECHNOLOGIES" value="1811467">SKANRAY TECHNOLOGIES</option>
+									<option title="Staan Bio-Med Engineering Pvt Ltd" value="1812112">Staan Bio-Med Engineering Pvt Ltd</option>
+									<option title="Surgicoin Medequip Pvt Ltd" value="1810443">Surgicoin Medequip Pvt Ltd</option>
+									<option title="Tatva Pharmaceuticals" value="1812305">Tatva Pharmaceuticals</option>
+	                			</select>
+								<div class="invalid-feedback"></div>
+							</div>	
+						</div>
+						
+						
+					 	<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="equipmentName" data-validation="mandatory" data-langtag="Equipment Name" >Equipment Name</label>
+	                			<select class="form-control form-control-sm  " id ='equipmentName' name="equipmentName">
+	                				<option title="All" selected="" value="0">All</option>
+									<option title="3 Fold Labour Table Ss With Foam Mattress" value="18000306">3 Fold Labour Table Ss With Foam Mattress</option>
+									<option title="4 To 13 Mhz Linear  Transducer  With Near Focus (Probe For Usg Machine )" value="18000341">4 To 13 Mhz Linear  Transducer  With Near Focus (Probe For Usg Machine )</option>
+	                				<option title="Weighing Machine-Baby" value="18000225">Weighing Machine-Baby</option>
+									<option title="Weighing Machine Pediatrics" value="18000139">Weighing Machine Pediatrics</option>
+									<option title="Wheel Chair" value="18000187">Wheel Chair</option>
+									<option title="Wheel Chair Folding" value="18000339">Wheel Chair Folding</option>
+									<option title="X-Ray Machine 100 Ma" value="18000141">X-Ray Machine 100 Ma</option>
+									<option title="X-Ray Machine 100 Ma Portable" value="18000142">X-Ray Machine 100 Ma Portable</option>
+									<option title="X-Ray Machine 150 Ma" value="18000144">X-Ray Machine 150 Ma</option>
+									<option title="X-Ray Machine 15 Ma" value="18000143">X-Ray Machine 15 Ma</option>
+									<option title="X-Ray Machine 160 Ma" value="18000145">X-Ray Machine 160 Ma</option>
+									<option title="X-Ray Machine 200 Ma" value="18000146">X-Ray Machine 200 Ma</option>
+	                			</select>
+								<div class="invalid-feedback"></div>
+							</div>	
+						</div>
+						
+						
+					 	<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="equipmentModel" data-validation="mandatory" data-langtag="Equipment Model" >Equipment Model </label>
+	                			<select class="form-control form-control-sm  " id ='equipmentModel' name="equipmentModel">
+	                				<option value="" selected="selected">Select Category</option>
+	                			</select>
+								<div class="invalid-feedback"></div>
+							</div>	
+						</div>
+						
+						
+					 	<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="strRCStatus" data-validation="mandatory" data-langtag="RC Status " >RC Status </label>
+	                			<select class="form-control form-control-sm  " id ='strRCStatus' name="strRCStatus">
+	                				<option title="All" selected value="0">All</option>
+									<option title="Active" value="1">Active</option>
+									<option title="Cancel" value="2">Cancel</option>
+									<option title="Hold" value="3">Hold</option>
+									<option title="Closed" value="4">Closed</option>
+	                			</select>
+								<div class="invalid-feedback"></div>
+							</div>	
+						</div>
+							 	
+	 
+				 	
+	</div>
+	
+			<div class='row'>
+			<div class='col-lg-4'>	
+				<div class="form-group row">                   
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" id="search" placeholder="Search">
+                    </div>
+                  </div>
+			</div>
+			
+			</div>	
+	
+ <div class='row no-more-tables'>
+			<table class="table table-hover">
+			  <thead class="bg-navy">
+			      <tr>
+			      	<th><input type="checkbox"></th>
+			        <th >RC NO.</th>
+			        <th>Supplier Name</th>
+			        <th>Equipment Name</th>
+			        <th>Model Name</th>
+			        <th>Rate/Unit </th>
+			        <th>Contract Qty</th>
+			        <th>Contract End Date</th>
+			        <th>Status</th>
+			      </tr>
+			    </thead>
+			    <tbody>
+			     <tr>
+			      	<td class='d-none d-sm-block' ><input type="checkbox"></td>
+			        <td data-title='Equipment Name' > 5451562269626</td>
+			        <td data-title='Equipment Model'> Adarsh Enterprises</td>
+			        <td data-title='Serial No.'>AMALGAMETER</td>
+			        <td data-title='Bar Code'>MODEL NOT AVAILABLE</td>
+			        <td data-title='Manufacturer Name'>20.00</td>
+			        <td data-title='Equipment Status'>10</td>
+			        <td data-title='Verification Status'> 09-Aug-2020</td>
+			        <td data-title='Verification Status'>Active</td>
+			      </tr>
+			    </tbody>
+			    <tbody>
+			     <tr>
+			      	<td class='d-none d-sm-block' ><input type="checkbox"></td>
+			        <td data-title='Equipment Name' > 545878895004</td>
+			        <td data-title='Equipment Model'> Adarsh Enterprises</td>
+			        <td data-title='Serial No.'>APHERESIS UNIT</td>
+			        <td data-title='Bar Code'>MODEL NOT AVAILABLE</td>
+			        <td data-title='Manufacturer Name'>10.00</td>
+			        <td data-title='Equipment Status'>12</td>
+			        <td data-title='Verification Status'> 17-Dec-2021</td>
+			        <td data-title='Verification Status'>Active</td>
+			      </tr>
+			    </tbody>
+			    <tbody>
+			     <tr>
+			      	<td class='d-none d-sm-block' ><input type="checkbox"></td>
+			        <td data-title='Equipment Name' > 9203600001</td>
+			        <td data-title='Equipment Model'> Adarsh Enterprises</td>
+			        <td data-title='Serial No.'> CENTRAL MONITORING SYSTEM</td>
+			        <td data-title='Bar Code'>MODEL NOT AVAILABLE	</td>
+			        <td data-title='Manufacturer Name'>100.00</td>
+			        <td data-title='Equipment Status'>15</td>
+			        <td data-title='Verification Status'> 16-Dec-2021</td>
+			        <td data-title='Verification Status'>Active</td>
+			      </tr>
+			    </tbody>
+			    <tbody>
+			     <tr>
+			      	<td class='d-none d-sm-block' ><input type="checkbox"></td>
+			        <td data-title='Equipment Name' > 787874545</td>
+			        <td data-title='Equipment Model'> Acme</td>
+			        <td data-title='Serial No.'>RADIANT HEAT WARMER</td>
+			        <td data-title='Bar Code'> NWS101 with Bas100</td>
+			        <td data-title='Manufacturer Name'>200000.00</td>
+			        <td data-title='Equipment Status'>17</td>
+			        <td data-title='Verification Status'>31-Dec-2019</td>
+			        <td data-title='Verification Status'>Active</td>
+			      </tr>
+			    </tbody>
+			    <tbody>
+			     <tr>
+			      	<td class='d-none d-sm-block' ><input type="checkbox"></td>
+			        <td data-title='Equipment Name' > 9520014000</td>
+			        <td data-title='Equipment Model'> Acme</td>
+			        <td data-title='Serial No.'>3 Fold Labour table SS with foam mattress</td>
+			        <td data-title='Bar Code'>6578</td>
+			        <td data-title='Manufacturer Name'>200000.00</td>
+			        <td data-title='Equipment Status'>10</td>
+			        <td data-title='Verification Status'>31-Dec-2019</td>
+			        <td data-title='Verification Status'>Active</td>
+			      </tr>
+			    </tbody>
+			 </table>	
+			</div>
+		
+
+	</div>
+	
+</div>
+
+<div class="card card card-info border-info center m-1 hideData" id='ADDPAGEFORM'  >
+	<div class="card-header bg-navy">
+		<h6 class="text-left">Rate Contract Desk >> Add</h6>
+	</div>
+	<div class="card-body form-group">
+	<h6><b>Tender & Supplier Details</b></h6>
+	<hr class="bg-navy">
+	 
+	                  <div class='row'>
+                                      <div class='col-lg-3' >
+					 		
+	                			<label class="col-form-label col-form-label-sm" for="institutionName" data-langtag="Institution Name"  >Tendering Authority :</label>
+	                			<label class="col-form-label col-form-label-sm font-weight-normal" >TNMSCL</label>	                			
+	                			<div class="invalid-feedback"></div>
+	              			
+					 	</div>	
+  				        <div class='col-lg-3' >
+					 		
+	                			<label class="col-form-label col-form-label-sm" for="financialYear"  data-langtag="Financial Year" >Financial Year   :</label>
+	                			<select class="form-control form-control-sm  " id ='financialYear' name="financialYear " data-validation="mandatory">
+	                				<option value="" selected="selected">2019-2020 </option>
+	                			</select>
+	              				<div class="invalid-feedback"></div>
+ 	  						
+ 	  					</div>
+ 	  					<div class='col-lg-3' >
+  				             <div class="form-group">
+	                			     <label class="col-form-label col-form-label-sm" for="tenderNo"  data-langtag="Tender No." >Tender No. :</label>
+	                			    <select class="form-control form-control-sm  " id ='tenderNo' name="tenderNo " data-validation="mandatory">
+		                				<option title="Select Value" selected="" value="0">Select Value</option>
+										<option title="NIT-106 [NIT-106]" value="10000071">NIT-106 [NIT-106]</option>
+										<option title="NIT-118 [NIT-118]" value="10000070">NIT-118 [NIT-118]</option>
+										<option title="NIT-78 [NIT-78]" value="10000069">NIT-78 [NIT-78]</option>
+										<option title="NIT-175 [NIT-175]" value="10000068">NIT-175 [NIT-175]</option>
+										<option title="NIT-168 [NIT-168]" value="10000067">NIT-168 [NIT-168]</option>
+	                			</select>
+	              				<div class="invalid-feedback"></div>
+ 	  						</div>
+ 	  					</div>
+  		                           <!--  <div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="tenderDate" data-langtag="Tender Date"  >Tender Date :</label>
+	                			<label class="col-form-label col-form-label-sm font-weight-normal" >10-Jan-2020</label>
+	                			<div class="invalid-feedback"></div>
+	              			</div>
+					 	</div>	 -->
+  				                      
+  				        <div class='col-lg-3' >
+  				             <div class="form-group">
+	                			     <label class="col-form-label col-form-label-sm" for="supplierName"  data-langtag="Supplier Name" >Supplier Name   :</label>
+	                			    <select class="form-control form-control-sm  " id ='supplierName' name="supplierName " data-validation="mandatory">
+	                				<option value="" selected="selected">Select Supplier Name </option>
+	                				<option title="Panacea Medical Technologies Pvt Ltd" value="1812307">Panacea Medical Technologies Pvt Ltd</option>
+									<option title="Phoenix Dental And Medical Pvt Ltd" value="1812109">Phoenix Dental And Medical Pvt Ltd</option>
+									<option title="PHOENIX MEDICAL SYSTEM" value="1811300">PHOENIX MEDICAL SYSTEM</option>
+									<option title="Primex Products" value="1812299">Primex Products</option>
+									<option title="REMI ELEKTROTECHNIK LTD" value="1810110">REMI ELEKTROTECHNIK LTD</option>
+									<option title="RK Sales Agency" value="1812166">RK Sales Agency</option>
+									<option title="Rohit Surgical Pvt Ltd" value="1812102">Rohit Surgical Pvt Ltd</option>
+									<option title="Science House Medicals Pvt Ltd" value="1812110">Science House Medicals Pvt Ltd</option>
+									<option title="Sisco Latex Pvt Ltd" value="1812111">Sisco Latex Pvt Ltd</option>
+									<option title="SKANRAY TECHNOLOGIES" value="1811467">SKANRAY TECHNOLOGIES</option>
+	                			</select>
+	              				<div class="invalid-feedback"></div>
+ 	  						</div>
+ 	  						</div>
+ 	  						<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="gSTINNo" data-langtag="GSTIN No"  >GSTIN No. :</label>
+	                			<label class="col-form-label col-form-label-sm font-weight-normal" >23ACHPA7628M1ZJ</label>	                			
+	                			<div class="invalid-feedback"></div>
+	              			</div>
+					 		</div>	
+ 	  						          
+  				                       
+  				               <div class='col-lg-3' >
+	              	             <div class="form-group">
+	              	             	<label class="col-form-label col-form-label-sm" for="contactNo" data-langtag="Contact No"  >Contact No :</label>
+	                				<input class="form-control form-control-sm " name="contactNo"  id="contactNo" value='8130138197' maxlength="50" data-validation="mandatory,numeric">
+	                			<div class="invalid-feedback"></div>
+	              			</div></div>
+	              			 
+	              			 <div class='col-lg-3' >
+	              	            <div class="form-group">
+	              	            <label class="col-form-label col-form-label-sm" for="emailId" data-langtag="Email Id"  >Email Id  :</label>
+	                			<input class="form-control form-control-sm " name="emailId"  id="emailId" maxlength="50" data-validation="mandatory,email">
+	                			<div class="invalid-feedback"></div>
+	              			</div></div>
+	              			<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="bankName" data-langtag="Bank Name"  >Bank Name :</label>
+	                			<label class="col-form-label col-form-label-sm font-weight-normal" >Icici Bank</label>
+	                			<div class="invalid-feedback"></div>
+	              			</div>
+					 	</div>	
+					 	<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="branchName" data-langtag="Branch Name"  >Branch Name :</label>
+	                			<label class="col-form-label col-form-label-sm font-weight-normal" >Madan Mahal, Jabalpur</label>
+	                			<div class="invalid-feedback"></div>
+	              			</div>
+					 	</div>	
+					 	<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="iFSCCode" data-langtag="IFSC Code"  >IFSC Code :</label>
+	                			<label class="col-form-label col-form-label-sm font-weight-normal" >ICIC0003497</label>
+	                			<div class="invalid-feedback"></div>
+	              			</div>
+					 	</div>	
+					 	<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="accountNo" data-langtag="Account No"  >Account No. :</label>
+	                			<label class="col-form-label col-form-label-sm font-weight-normal" >349705000023</label>
+	                			<div class="invalid-feedback"></div>
+	              			</div>
+					 	</div>	
+  				        <div class='col-lg-8' >
+	              	              <div class="form-group">
+	              	              <label class="col-form-label col-form-label-sm" for="supplierAddress" data-langtag="Supplier Address"  >Supplier Address :</label>
+	                			   <textarea class="form-control form-control-sm " name="supplierAddress"  id="supplierAddress" maxlength="1000" data-validation="mandatory" rows="3">1203 Nagpur Road, Madan Mahal Jabalpur, Pincode 482001</textarea>
+	                			  <div class="invalid-feedback"></div>
+	              			   </div>
+	              		</div>               
+  				                       
+  				       </div>
+  				       </div>
+  		
+  		<div class="card-body form-group">
+	<h6><b>Equipment Details</b></h6>
+	<hr class="bg-navy">
+	 
+	                  <div class='row'>
+                                      
+  				               <div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="equipmentName" data-validation="mandatory" data-langtag="Equipment Name" >Equipment Name   :</label>
+	                			<select class="form-control form-control-sm  " id ='equipmentName' name="equipmentName ">
+	                				<option value="" >Select Equipment Name </option>
+	                				<option title="X-Ray Machine " value="18000306">X-Ray Machine </option>
+									<option title="Central Monitoring System " value="18000341">Central Monitoring System</option>
+									<!-- <option title="-80 degree C Vertical Ultra Low Freezer [LABE021] " value="18000288">-80 degree C Vertical Ultra Low Freezer [LABE021] </option>
+									<option title="ABG MACHINE [10001] " value="18000001">ABG MACHINE [10001] </option>
+									<option title="ADVANCE ICU VENTILATOR [ICUE010] " value="18000195">ADVANCE ICU VENTILATOR [ICUE010] </option>
+									<option title="Allis Forceps 20cm SS [GYNE018] " value="18000277">Allis Forceps 20cm SS [GYNE018] </option>
+									<option title="AMALGAMETER [10002] " value="18000002">AMALGAMETER [10002] </option>
+									<option title="AMBU BAG ADULT [10003] " value="18000003">AMBU BAG ADULT [10003] </option>
+									<option title="AMBU BAG NEONATAL [10004] " value="18000004">AMBU BAG NEONATAL [10004] </option>
+									<option title="ANESTHESIA MACHINE [10005] " selected="selected" value="18000005">ANESTHESIA MACHINE [10005] </option> -->	                				
+	                			</select>
+	              				<div class="invalid-feedback"></div>
+ 	  						</div>
+ 	  						</div>
+ 	  						<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="equipmentModel" data-validation="mandatory" data-langtag="Equipment Model " >Equipment Model    :</label>
+	                			<select class="form-control form-control-sm  " id ='equipmentModel' name="equipmentModel ">
+	                				<option title="Select Value"  value="0">Select Value</option>
+									<option title="Fabius GS Premium with Infinity Kappa" selected="" value="18100356">Fabius GS Premium with Infinity Kappa</option>
+									<option title="JUPITER 200" value="18100006">JUPITER 200</option>
+									<option title="MODEL NOT AVAILABLE" value="18100005">MODEL NOT AVAILABLE</option>
+									<option title="MODEL NOT AVAILABLE" value="18100518">MODEL NOT AVAILABLE</option>
+	                			</select>
+	              				<div class="invalid-feedback"></div>
+ 	  						</div>
+ 	  						</div>
+ 	  						<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="maker" data-langtag="Maker"  >Maker : </label>
+	                			<input class="form-control form-control-sm desabledTextBox " type="text" id="maker" name="maker" value="Draeger India Pvt Ltd" >
+	                			<div class="invalid-feedback"></div>
+	              			</div>
+					 	</div>	
+					 	<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="trainingRequired" data-langtag="Training Required"  >Training Required  :</label>
+	                			<input class="form-control form-control-sm desabledTextBox " type="text" id="trainingRequired" name="trainingRequired" value="Yes">
+	                			<div class="invalid-feedback"></div>
+	              			</div>
+					 	</div>	
+					 	<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm"  data-langtag="Installtaion Type"  >Installtaion Type :</label>
+	                			<label class="col-form-label col-form-label-sm font-weight-normal" >Installation and Commissioning Both Required</label>
+	                			<div class="invalid-feedback"></div>
+	              			</div>
+					 	</div>	
+ 	  						
+  				         <div class='col-lg-3' ><b>Equipment Specification :</b> <input type="file" name="myFile">		 
+  				                       </div>
+  				              
+ 	  		</div>
+ 	  		</div>
+ 	  		<div class="card-body form-group">
+	<h6><b>Contract Details</b></h6>
+	<hr class="bg-navy">
+	 
+	                  <div class='row'>
+	                   <div class='col-lg-3' >
+	              	            <div class="form-group">
+	              	            <label class="col-form-label col-form-label-sm" for="notificationofAwardNo" data-langtag="Notification of Award No"  >Notification of Award No :</label>
+	                			<input class="form-control form-control-sm " name="notificationofAwardNo"  id="notificationofAwardNo" maxlength="50" data-validation="mandatory,alphabetOnly">
+	                			<div class="invalid-feedback"></div>
+	              			</div></div>
+	              			  <div class='col-lg-3' >
+					 	 <div class="form-group">	
+					 	<b>Notification of Award Date  :</b><br> <input type="date" name="bday">
+					 	</div></div>
+					 	 <div class='col-lg-3' >
+					 	 <div class="form-group">	
+					 	<b>Contract From :</b><br> <input type="date" name="bday">
+					 	</div></div>
+					 	 <div class='col-lg-3' >
+					 	 <div class="form-group">	
+					 	<b>Contract To :</b><br> <input type="date" name="bday">
+					 	</div></div>
+	              			
+	                   <div class='col-lg-3' >
+	              	            <div class="form-group">
+	              	            <label class="col-form-label col-form-label-sm" for="supplyPeriod" data-langtag="Supply Period "  >Supply Period  :</label>
+	                			<input class="form-control form-control-sm " name="supplyPeriod"  id="supplyPeriod" maxlength="50" data-validation="mandatory,alphabetOnly">Day(s)
+	                			<div class="invalid-feedback"></div>
+	              			</div></div></div>
+	             </div>
+	             
+	             
+	             <div class="card-body form-group">
+	<h6><b>Contract Details</b></h6>
+	<hr class="bg-navy">
+	 
+	                  <div class='row'>
+	                   <div class='col-lg-3' >
+	              	            <div class="form-group">
+	              	            <label class="col-form-label col-form-label-sm" for="contractQty" data-langtag="Contract Qty"  >Contract Qty. :</label>
+	                			<input class="form-control form-control-sm " name="contractQty"  id="contractQty" maxlength="50" data-validation="mandatory,alphabetOnly"> No(s).
+	                			<div class="invalid-feedback"></div>
+	              			</div></div>
+	              			
+	                   <div class='col-lg-3' >
+	              	            <div class="form-group">
+	              	            <label class="col-form-label col-form-label-sm" for="securityAmount" data-langtag="Security Amount"  >Security Amount(%)  :</label>
+	                			<input class="form-control form-control-sm " name="securityAmount"  id="securityAmount" maxlength="50" data-validation="mandatory,alphabetOnly">
+	                			<div class="invalid-feedback"></div>
+	              			</div></div>
+	              			
+	                   <div class='col-lg-3' >
+	              	            <div class="form-group">
+	              	            <label class="col-form-label col-form-label-sm" for="ratePerUnit" data-langtag="Rate Per Unit"  >Rate Per Unit  :</label>
+	                			<input class="form-control form-control-sm " name="ratePerUnit"  id="ratePerUnit" maxlength="50" data-validation="mandatory,alphabetOnly">
+	                			<div class="invalid-feedback"></div>
+	              			</div></div>
+	              <div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="currency" data-validation="mandatory" data-langtag="Currency " >Currency    :</label>
+	                			<select class="form-control form-control-sm  " id ='currency' name="currency  ">
+	                				<option value="" selected="selected">Rs (Rs) </option>
+	                			</select>
+	              				<div class="invalid-feedback"></div>
+ 	  						</div>
+ 	  						</div>
+ 	  						<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="totalRCValue" data-langtag="Total RC Value"  >Total RC Value :</label>
+	                			<input class="form-control form-control-sm desabledTextBox " type="text" id="totalRCValue" name="totalRCValue" value="0" maxlength="50" data-validation="mandatory,alphabetOnly">
+	                			<div class="invalid-feedback"></div>
+	              			</div>
+					 	</div>
+					 	
+					 	<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="accountNo" data-langtag="Account No"  >Security Amount (In Rs.):</label>
+	                			<input class="form-control form-control-sm desabledTextBox " type="text" id="accountNo" name="accountNo" value="" maxlength="50" data-validation="mandatory,alphabetOnly">
+	                			<div class="invalid-feedback"></div>
+	              			</div>
+					 	</div>		
+ 	  						
+  				                        <div class='col-lg-3' >
+	              	            <div class="form-group">
+	              	            <label class="col-form-label col-form-label-sm" for="warrantyPeriod" data-langtag="Warranty Period"  >Warranty Period  :</label>
+	                			<input class="form-control form-control-sm " name="warrantyPeriod"  id="warrantyPeriod" maxlength="50" data-validation="mandatory,alphabetOnly"> In Year(s).
+	                			<div class="invalid-feedback"></div>
+	              			</div></div>
+	              			
+	                   <div class='col-lg-3' >
+	              	            <div class="form-group">
+	              	            <label class="col-form-label col-form-label-sm" for="period" data-langtag="AMC CMC Period"  >A.M.C./C.M.C. Period :</label>
+	                			<input class="form-control form-control-sm " name="period"  id="period" maxlength="50" data-validation="mandatory,alphabetOnly">In Year(s).
+	                			<div class="invalid-feedback"></div>
+	              			</div></div>
+	              			 <div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="taxType" data-validation="mandatory" data-langtag="Tax Type " >Tax Type  :</label>
+	                			<select class="form-control form-control-sm  " id ='taxType' name="taxType ">
+	                				<option value="" selected="selected">Select Value </option>
+	                				<option title="Gst " value="18000306">GST </option>
+	                			</select>
+	              				<div class="invalid-feedback"></div>
+ 	  						</div>
+ 	  						</div>
+ 	  						<div class='col-lg-3' >
+ 	  						<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="totalRCValue" data-langtag="Total RC Value"  >Tax Details :</label>
+	                			<input class="form-control form-control-sm desabledTextBox " type="text" id="totalRCValue" name="totalRCValue" value="0" maxlength="50" data-validation="mandatory,alphabetOnly">
+	                			<div class="invalid-feedback"></div>
+	              			</div>
+	              			</div>
+					 
+ 	  						
+  				                 
+	              			
+ 	  						<div class='col-lg-3' >
+ 	  						<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="paymentPlan" data-validation="mandatory" data-langtag="Payment Plan " >Payment Plan  :</label>
+	                			<select class="form-control form-control-sm  " id ='paymentPlan' name="paymentPlan ">
+	                				<option value="" selected="selected">Select Payment Plan </option>
+	                			</select>
+	              				<div class="invalid-feedback"></div>
+ 	  						</div></div>
+ 	  						
+ 	  						<div class='col-lg-3' >
+	              	            <div class="form-group">
+	              	            <label class="col-form-label col-form-label-sm" for="remarks" data-langtag="Remarks "  >Remarks  :</label>
+	                			<textarea class="form-control form-control-sm " name="remarks"  id="remarks " maxlength="50" data-validation="mandatory,alphabetOnly"></textarea>
+	                			<div class="invalid-feedback"></div>
+	              			</div></div>
+	              			
+                </div></div>  
+                
+                 <div class="card-body form-group">
+	<h6><b>Bank Guarantee Details</b></h6>
+	<hr class="bg-navy">
+	 
+	                  <div class='row'> 
+	                  <div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="bankName" data-validation="mandatory" data-langtag="Bank Name  " >Bank Name   :</label>
+	                			<select class="form-control form-control-sm  " id ='bankName' name="bankName ">
+	                				<option value="" selected="selected">Select Bank Name </option>
+	                				<option title="State Bank of India " value="18000306">State Bank of India </option>
+									
+	                			</select>
+	              				<div class="invalid-feedback"></div>
+ 	  						</div>
+ 	  						</div>   
+ 	  						
+ 	  							
+	                  <div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="branchName" data-validation="mandatory" data-langtag="Branch Name " >Branch Name    :</label>
+	                			<select class="form-control form-control-sm  " id ='branchName' name="branchName ">
+	                				<option value="" selected="selected">Select Branch Name  </option>
+	                				<option title="Siruthozhil Branch " value="18000306">Siruthozhil Branch </option>
+	                				<option title="ROYAL MARKET " value="18000306">ROYAL MARKET </option>
+	                			</select>
+	              				<div class="invalid-feedback"></div>
+ 	  						</div>
+ 	  						</div> 
+ 	  						<div class='col-lg-3' >
+	              	            <div class="form-group">
+	              	            <label class="col-form-label col-form-label-sm" for="bGAmount" data-langtag="BG Amount"  >BG Amount:</label>
+	                			<input class="form-control form-control-sm " name="bGAmount"  id="bGAmount" maxlength="50" data-validation="mandatory,alphabetOnly">
+	                			<div class="invalid-feedback"></div>
+	              			</div></div>
+	              			<div class='col-lg-3' >
+	              	            <div class="form-group">
+	              	            <label class="col-form-label col-form-label-sm" for="bGNo" data-langtag="BG No"  >BG No. :</label>
+	                			<input class="form-control form-control-sm " name="bGNo"  id="bGNo" maxlength="50" data-validation="mandatory,alphabetOnly">
+	                			<div class="invalid-feedback"></div>
+	              			</div></div>
+	              			<div class='col-lg-3' >
+	              	            <div class="form-group">
+	              	            <label class="col-form-label col-form-label-sm" for="bGIFSCCode" data-langtag="BG IFSC Code"  >BG IFSC Code :</label>
+	                			<input class="form-control form-control-sm " name="bGIFSCCode"  id="bGIFSCCode" maxlength="50" data-validation="mandatory,alphabetOnly">
+	                			<div class="invalid-feedback"></div>
+	              			</div></div> 
+	              			 <div class='col-lg-3' >
+					 	 <div class="form-group">	
+					 	<b>*BG Validity :</b> <input type="date" name="bday">
+					 	</div></div>
+					 	<div class='col-lg-3' >
+					 	 <div class="form-group">	
+					 	 TO <input type="date" name="bday">
+					 	</div></div>
+					 	  
+ 	  		</div>
+ 	  		</div>  
+ 	  		
+ 	  		          <div class="card-body form-group">         
+	                 <h6><b>Accessories/Consumable/Reagents</b></h6>
+	                 <hr class="bg-navy">
+	                 <div class='row no-more-tables'>
+			<table class="table table-hover">
+			  <thead class="bg-light">
+			      <tr>
+			      	
+			        <th >S. No.</th>
+			        <th>Type</th>
+			        <th> Name</th>
+			        <th>Qty</th>
+			        <th>Description</th>
+			        <th></th>
+			       </tr>
+			      </thead>
+			       <tbody>
+			     <tr>
+			       <td data-title='Request Id' >1</td>
+			        <td data-title='Request Date'>Consumable</td>
+			        <td data-title='Department'>se_surendragupta</td>
+			        <td data-title='Equipment Name'>4		</td>
+			        <td data-title='Equipment Model'>----</td>
+			        <td data-title='Equipment Model'><i class="fa fa-plus-circle"></td>
+			       </tr>
+			    </tbody>
+			   </table></div>
+			    </div>	             	
+  				      
+    <div class="card-footer">
+		<div class="text-center">
+		       <button class='btn bg-gradient-success mt-4 btn-sm' ><i class="fa fa-save"></i> Save</button>
+              <button class="btn bg-gradient-success mt-4 btn-sm"><i class="fa fa-remove" ></i> Clear</button>
+              <button class="btn bg-gradient-success mt-4 btn-sm" id="btnBackAdd"><i class="fas fa-arrow-circle-left"></i> Back</button>                            
+		</div>
+	</div>
+	</div>  
+ 
+  
+
+
+
+<div class="card card card-info border-info center m-1 hideData" id='MODIFYPAGEFORM'  >
+	<div class="card-header bg-navy">
+		<h6 class="text-left">Rate Contract Desk >> Modify</h6>
+	</div>
+	<div class="card-body form-group">
+	<h6><b>Tender & Supplier Details</b></h6>
+	<hr class="bg-navy">
+	 
+	                  <div class='row'>
+	                  <div class='col-lg-3' >
+ 	  						<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="totalRCValue" data-langtag="Total RC Value"  >Tendering Authority :</label>
+	                			<input class="form-control form-control-sm desabledTextBox " type="text" id="totalRCValue" name="totalRCValue" value="Aagar- CS " maxlength="50" data-validation="mandatory,alphabetOnly">
+	                			<div class="invalid-feedback"></div>
+	              			</div>
+	              			</div>
+                                      
+  				               <div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="financialYear" data-validation="mandatory" data-langtag="Financial Year" >Financial Year   :</label>
+	                			<select class="form-control form-control-sm  " id ='financialYear' name="financialYear ">
+	                				<option value="" selected="selected">2019-2020 </option>
+	                			</select>
+	              				<div class="invalid-feedback"></div>
+ 	  						</div>
+ 	  						</div>
+ 	  						 <div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="tenderNo" data-validation="mandatory" data-langtag="Tender No" >Tender No.   :</label>
+	                			<select class="form-control form-control-sm  " id ='tenderNo' name="tenderNo ">
+	                				<option value="" selected="selected">Select Tender No. </option>
+									<option title="23198 [tender 3]" selected="" value="10000084">23198 [tender 3]</option>
+									<option title="1011 [test tender 2]" value="10000081">1011 [test tender 2]</option>
+									<option title="9213 [tender cms]" value="10000083">9213 [tender cms]</option>
+                                    <option value="999">Others</option>
+				               </select>
+	              				<div class="invalid-feedback"></div>
+ 	  						</div></div>
+ 	  						
+ 	  						<div class='col-lg-3' >
+ 	  						<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="totalRCValue" data-langtag="Total RC Value"  >Tender Date :</label>
+	                			<input class="form-control form-control-sm desabledTextBox " type="text" id="totalRCValue" name="totalRCValue" value="03-Dec-2019 " maxlength="50" data-validation="mandatory,alphabetOnly">
+	                			<div class="invalid-feedback"></div>
+	              			</div>
+	              			</div>
+ 	  						
+  				              
+ 	  						 <div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="supplierName" data-validation="mandatory" data-langtag="Supplier Name " >Supplier Name   :</label>
+	                			<select class="form-control form-control-sm  " id ='supplierName' name="supplierName ">
+	                				<option value="" selected="selected">Select Supplier Name  </option>
+	                				<option title="Phoenix Dental And Medical Pvt Ltd" value="1812109">Phoenix Dental And Medical Pvt Ltd</option>
+									<option title="PHOENIX MEDICAL SYSTEM" value="1811300">PHOENIX MEDICAL SYSTEM</option>
+									<option title="Primex Products" value="1812299">Primex Products</option>
+									<option title="REMI ELEKTROTECHNIK LTD" value="1810110">REMI ELEKTROTECHNIK LTD</option>
+									<option title="RK Sales Agency" value="1812166">RK Sales Agency</option>
+									<option title="Rohit Surgical Pvt Ltd" value="1812102">Rohit Surgical Pvt Ltd</option>
+									<option title="Science House Medicals Pvt Ltd" value="1812110">Science House Medicals Pvt Ltd</option>
+									<option title="Sisco Latex Pvt Ltd" value="1812111">Sisco Latex Pvt Ltd</option>
+									<option title="SKANRAY TECHNOLOGIES" value="1811467">SKANRAY TECHNOLOGIES</option>
+									<option title="Staan Bio-Med Engineering Pvt Ltd" value="1812112">Staan Bio-Med Engineering Pvt Ltd</option>
+									<option title="Surgicoin Medequip Pvt Ltd" value="1810443">Surgicoin Medequip Pvt Ltd</option>
+	                			</select>
+	              				<div class="invalid-feedback"></div>
+ 	  						</div>
+ 	  						</div>
+ 	  						
+ 	  						<div class='col-lg-3' >
+ 	  						<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="totalRCValue" data-langtag="Total RC Value"  >GSTIN No. :</label>
+	                			<input class="form-control form-control-sm desabledTextBox " type="text" id="totalRCValue" name="totalRCValue" value="23ACHPA7628M1ZJ" maxlength="50" data-validation="mandatory,alphabetOnly">
+	                			<div class="invalid-feedback"></div>
+	              			</div>
+	              			</div>
+ 	  						
+  				                      <div class='col-lg-3' >
+	              	             <div class="form-group">
+	              	             <label class="col-form-label col-form-label-sm" for="contactNo" data-langtag="Contact No"  >Contact No :</label>
+	                			<input class="form-control form-control-sm " name="contactNo"  id="contactNo" maxlength="50" data-validation="mandatory,alphabetOnly">
+	                			<div class="invalid-feedback"></div>
+	              			</div></div>
+	              			 
+	              			 <div class='col-lg-3' >
+	              	            <div class="form-group">
+	              	            <label class="col-form-label col-form-label-sm" for="emailId" data-langtag="E-mail Id"  >E-mail Id  :</label>
+	                			<input class="form-control form-control-sm " name="emailId"  id="emailId" maxlength="50" data-validation="mandatory,alphabetOnly">
+	                			<div class="invalid-feedback"></div>
+	              			</div></div>
+	              			
+	              			<div class='col-lg-3' >
+ 	  						<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="totalRCValue" data-langtag="Total RC Value"  >Bank Name :</label>
+	                			<input class="form-control form-control-sm desabledTextBox " type="text" id="totalRCValue" name="totalRCValue" value="" maxlength="50" data-validation="mandatory,alphabetOnly">
+	                			<div class="invalid-feedback"></div>
+	              			</div>
+	              			</div>
+	              			<div class='col-lg-3' >
+ 	  						<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="totalRCValue" data-langtag="Total RC Value"  >Branch Name :</label>
+	                			<input class="form-control form-control-sm desabledTextBox " type="text" id="totalRCValue" name="totalRCValue" value="" maxlength="50" data-validation="mandatory,alphabetOnly">
+	                			<div class="invalid-feedback"></div>
+	              			</div>
+	              			</div>
+	              			<div class='col-lg-3' >
+ 	  						<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="totalRCValue" data-langtag="Total RC Value"  >IFSC Code :</label>
+	                			<input class="form-control form-control-sm desabledTextBox " type="text" id="totalRCValue" name="totalRCValue" value="" maxlength="50" data-validation="mandatory,alphabetOnly">
+	                			<div class="invalid-feedback"></div>
+	              			</div>
+	              			</div>
+	              			<div class='col-lg-3' >
+ 	  						<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="totalRCValue" data-langtag="Total RC Value"  >Account No. :</label>
+	                			<input class="form-control form-control-sm desabledTextBox " type="text" id="totalRCValue" name="totalRCValue" value="" maxlength="50" data-validation="mandatory,alphabetOnly">
+	                			<div class="invalid-feedback"></div>
+	              			</div>
+	              			</div>
+  				                       
+  				               <div class='col-lg-3' >
+	              	              <div class="form-group">
+	              	              <label class="col-form-label col-form-label-sm" for="supplierAddress" data-langtag="Supplier Address"  >Supplier Address :</label>
+	                			   <textarea class="form-control form-control-sm " name="supplierAddress"  id="supplierAddress" maxlength="50" data-validation="mandatory,alphabetOnly"></textarea>
+	                			  <div class="invalid-feedback"></div>
+	              			   </div></div>
+  				                       
+ 	  		</div>
+ 	  		</div>
+ 	  		<div class="card-body form-group">
+	<h6><b>Equipment Details</b></h6>
+	<hr class="bg-navy">
+	 
+	                  <div class='row'>
+                                      
+  				               <div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="equipmentName" data-validation="mandatory" data-langtag="Equipment Name" >Equipment Name   :</label>
+	                			<select class="form-control form-control-sm  " id ='equipmentName' name="equipmentName ">
+	                				<option value="" selected="selected">Select Equipment Name </option>
+	                				<option title="Weighing Machine-Baby [FURN002] " value="18000225">Weighing Machine-Baby [FURN002] </option>
+									<option title="WEIGHING MACHINE PEDIATRICS [10139] " value="18000139">WEIGHING MACHINE PEDIATRICS [10139] </option>
+									<option title="WHEEL CHAIR [WCH] " value="18000187">WHEEL CHAIR [WCH] </option>
+									<option title="Wheel chair folding [99999] " value="18000339">Wheel chair folding [99999] </option>
+									<option title="X-RAY MACHINE 100 MA [10141] " value="18000141">X-RAY MACHINE 100 MA [10141] </option>
+									<option title="X-RAY MACHINE 100 MA PORTABLE [10142] " value="18000142">X-RAY MACHINE 100 MA PORTABLE [10142] </option>
+									<option title="X-RAY MACHINE 150 MA [10144] " value="18000144">X-RAY MACHINE 150 MA [10144] </option>
+									<option title="X-RAY MACHINE 15 MA [10143] " value="18000143">X-RAY MACHINE 15 MA [10143] </option>
+									<option title="X-RAY MACHINE 160 MA [10145] " value="18000145">X-RAY MACHINE 160 MA [10145] </option>
+									<option title="X-RAY MACHINE 200 MA [10146] " value="18000146">X-RAY MACHINE 200 MA [10146] </option>
+									<option title="X- RAY MACHINE 240 MA [10140] " value="18000140">X- RAY MACHINE 240 MA [10140] </option>
+	                			</select>
+	              				<div class="invalid-feedback"></div>
+ 	  						</div>
+ 	  						</div>
+ 	  						<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="equipmentModel" data-validation="mandatory" data-langtag="Equipment Model " >Equipment Model    :</label>
+	                			<select class="form-control form-control-sm  " id ='equipmentModel' name="equipmentModel ">
+	                				<option value="" selected="selected">Select Equipment Model  </option>
+									<option title="Select Value" selected="" value="0">Select Value</option>
+									<option title="123" value="18100698">123</option>
+									<option title="12321" value="18100699">12321</option>
+									<option title="MODEL NOT AVAILABLE" value="18100001">MODEL NOT AVAILABLE</option>
+									<option title="rg 45" selected="" value="18100694">rg 45</option>
+
+				
+	                			</select>
+	              				<div class="invalid-feedback"></div>
+ 	  						</div>
+ 	  						</div>
+ 	  							<div class='col-lg-3' >
+ 	  						<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="totalRCValue" data-langtag="Total RC Value"  >Maker  :</label>
+	                			<input class="form-control form-control-sm desabledTextBox " type="text" id="totalRCValue" name="totalRCValue" value="Aastha" maxlength="50" data-validation="mandatory,alphabetOnly">
+	                			<div class="invalid-feedback"></div>
+	              			</div>
+	              			</div>
+	              				<div class='col-lg-3' >
+ 	  						<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="totalRCValue" data-langtag="Total RC Value"  >Training Required  :</label>
+	                			<input class="form-control form-control-sm desabledTextBox " type="text" id="totalRCValue" name="totalRCValue" value="Yes" maxlength="50" data-validation="mandatory,alphabetOnly">
+	                			<div class="invalid-feedback"></div>
+	              			</div>
+	              			</div>
+	              				<div class='col-lg-3' >
+ 	  						<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="totalRCValue" data-langtag="Total RC Value"  >Installtaion Type :</label>
+	                			<input class="form-control form-control-sm desabledTextBox " type="text" id="totalRCValue" name="totalRCValue" value="Installation and Commissioning Both Required" maxlength="50" data-validation="mandatory,alphabetOnly">
+	                			<div class="invalid-feedback"></div>
+	              			</div>
+	              			</div>
+ 	  						  <div class='col-lg-3' ><b>Old Equipment Specification  :</b> <input type="file" name="myFile">			 
+  				                       </div>
+  				                      <div class='col-lg-3' ><b>Equipment Specification :</b> <input type="file" name="myFile">			 
+  				                       </div>
+  				              
+ 	  		</div>
+ 	  		</div>
+ 	  		<div class="card-body form-group">
+	<h6><b>Contract Details</b></h6>
+	<hr class="bg-navy">
+	 
+	                  <div class='row'>
+	                   <div class='col-lg-3' >
+	              	            <div class="form-group">
+	              	            <label class="col-form-label col-form-label-sm" for="notificationofAwardNo" data-langtag="Notification of Award No"  >Notification of Award No :</label>
+	                			<input class="form-control form-control-sm " name="notificationofAwardNo"  id="notificationofAwardNo" maxlength="50" data-validation="mandatory,alphabetOnly">
+	                			<div class="invalid-feedback"></div>
+	              			</div></div>
+	              			  <div class='col-lg-3' >
+					 	 <div class="form-group">	
+					 	<b>Notification of Award Date  :</b><br> <input type="date" name="bday">
+					 	</div></div>
+					 	 <div class='col-lg-3' >
+					 	 <div class="form-group">	
+					 	<b>Contract From :</b><br> <input type="date" name="bday">
+					 	</div></div>
+					 	 <div class='col-lg-3' >
+					 	 <div class="form-group">	
+					 	<b>Contract To :</b><br> <input type="date" name="bday">
+					 	</div></div>
+	              			
+	                   <div class='col-lg-3' >
+	              	            <div class="form-group">
+	              	            <label class="col-form-label col-form-label-sm" for="supplyPeriod" data-langtag="Supply Period "  >Supply Period  :</label>
+	                			<input class="form-control form-control-sm " name="supplyPeriod"  id="supplyPeriod" maxlength="50" data-validation="mandatory,alphabetOnly">Day(s)
+	                			<div class="invalid-feedback"></div>
+	              			</div></div></div>
+	             </div>
+	             
+	             
+	             <div class="card-body form-group">
+	<h6><b>Quantity,Rate & Other Details</b></h6>
+	<hr class="bg-navy">
+	 
+	                  <div class='row'>
+	                   <div class='col-lg-3' >
+	              	            <div class="form-group">
+	              	            <label class="col-form-label col-form-label-sm" for="contractQty" data-langtag="Contract Qty"  >Contract Qty. :</label>
+	                			<input class="form-control form-control-sm " name="contractQty"  id="contractQty" maxlength="50" data-validation="mandatory,alphabetOnly"> No(s).
+	                			<div class="invalid-feedback"></div>
+	              			</div></div>
+	              			
+	                   <div class='col-lg-3' >
+	              	            <div class="form-group">
+	              	            <label class="col-form-label col-form-label-sm" for="securityAmount" data-langtag="Security Amount"  >Security Amount(%)  :</label>
+	                			<input class="form-control form-control-sm " name="securityAmount"  id="securityAmount" maxlength="50" data-validation="mandatory,alphabetOnly">
+	                			<div class="invalid-feedback"></div>
+	              			</div></div>
+	              			
+	                   <div class='col-lg-3' >
+	              	            <div class="form-group">
+	              	            <label class="col-form-label col-form-label-sm" for="ratePerUnit" data-langtag="Rate Per Unit"  >Rate Per Unit  :</label>
+	                			<input class="form-control form-control-sm " name="ratePerUnit"  id="ratePerUnit" maxlength="50" data-validation="mandatory,alphabetOnly">
+	                			<div class="invalid-feedback"></div>
+	              			</div></div>
+	              <div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="currency" data-validation="mandatory" data-langtag="Currency " >Currency    :</label>
+	                			<select class="form-control form-control-sm  " id ='currency' name="currency  ">
+	                				<option value="" selected="selected">Rs (Rs) </option>
+	                			</select>
+	              				<div class="invalid-feedback"></div>
+ 	  						</div>
+ 	  						</div>
+ 	  						
+ 	  						<div class='col-lg-3' >
+ 	  						<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="totalRCValue" data-langtag="Total RC Value"  >Total RC Value :</label>
+	                			<input class="form-control form-control-sm desabledTextBox " type="text" id="totalRCValue" name="totalRCValue" value="0.00 Rs." maxlength="50" data-validation="mandatory,alphabetOnly">
+	                			<div class="invalid-feedback"></div>
+	              			</div>
+	              			</div>
+	              			<div class='col-lg-3' >
+ 	  						<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="totalRCValue" data-langtag="Total RC Value"  >Security Amount (In Rs.)  :</label>
+	                			<input class="form-control form-control-sm desabledTextBox " type="text" id="totalRCValue" name="totalRCValue" value="0.00 Rs." maxlength="50" data-validation="mandatory,alphabetOnly">
+	                			<div class="invalid-feedback"></div>
+	              			</div>
+	              			</div>
+ 	  						
+  				                        <div class='col-lg-3' >
+	              	            <div class="form-group">
+	              	            <label class="col-form-label col-form-label-sm" for="warrantyPeriod" data-langtag="Warranty Period"  >Warranty Period  :</label>
+	                			<input class="form-control form-control-sm " name="warrantyPeriod"  id="warrantyPeriod" maxlength="50" data-validation="mandatory,alphabetOnly"> In Year(s).
+	                			<div class="invalid-feedback"></div>
+	              			</div></div>
+	              			
+	                   <div class='col-lg-3' >
+	              	            <div class="form-group">
+	              	            <label class="col-form-label col-form-label-sm" for="period" data-langtag="AMC CMC Period"  >A.M.C./C.M.C. Period :</label>
+	                			<input class="form-control form-control-sm " name="period"  id="period" maxlength="50" data-validation="mandatory,alphabetOnly">In Year(s).
+	                			<div class="invalid-feedback"></div>
+	              			</div></div>
+	              			 <div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="taxType" data-validation="mandatory" data-langtag="Tax Type " >Tax Type  :</label>
+	                			<select class="form-control form-control-sm  " id ='taxType' name="taxType ">
+	                				<option value="" selected="selected">Select Value </option>
+	                				<option title="Gst " value="18000306">GST </option>
+									
+	                			</select>
+	              				<div class="invalid-feedback"></div>
+ 	  						</div>
+ 	  						</div>
+ 	  						
+ 	  						<div class='col-lg-3' >
+ 	  						<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="totalRCValue" data-langtag="Total RC Value"  >Tax Details  :</label>
+	                			<input class="form-control form-control-sm desabledTextBox " type="text" id="totalRCValue" name="totalRCValue" value="IGST @ 10.00(%)" maxlength="50" data-validation="mandatory,alphabetOnly">
+	                			<div class="invalid-feedback"></div>
+	              			</div>
+	              			</div>
+ 	  						 
+ 	  						 <div class='col-lg-3' >
+ 	  						<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="paymentPlan" data-validation="mandatory" data-langtag="Payment Plan " >Payment Plan  :</label>
+	                			<select class="form-control form-control-sm  " id ='paymentPlan' name="paymentPlan ">
+	                				<option value="" selected="selected">Select Payment Plan </option>
+	                			</select>
+	              				<div class="invalid-feedback"></div>
+ 	  						</div></div>
+ 	  						
+ 	  						<div class='col-lg-3' >
+	              	            <div class="form-group">
+	              	            <label class="col-form-label col-form-label-sm" for="remarks" data-langtag="Remarks "  >Remarks  :</label>
+	                			<textarea class="form-control form-control-sm " name="remarks"  id="remarks " maxlength="50" data-validation="mandatory,alphabetOnly"></textarea>
+	                			<div class="invalid-feedback"></div>
+	              			</div>
+	              			</div>
+	              			
+                </div></div> 
+                  <div class="card-body form-group">         
+	                 <h6><b>A.M.C./C.M.C. Details</b></h6>
+	                 <hr class="bg-navy">
+	                 <div class='row no-more-tables'>
+			<table class="table table-hover">
+			  <thead class="bg-light">
+			      <tr>
+			      	
+			        <th >Year(s).</th>
+			        <th>Type</th>
+			        <th> Cost (Rs.)A</th>
+			        <th>Tax Amt (Rs.)B</th>
+			        <th>Net Cost (Rs.)(A+B)</th>
+			        <th></th>
+			       </tr>
+			      </thead>
+			       <tbody>
+			     <tr>
+			       <td data-title='Request Id' >1st Yr. </td>
+			        <td data-title='Department'>
+	                			
+	                			<select class="form-control form-control-sm  " id ='paymentPlan' name="paymentPlan ">
+	                				<option value="" selected="selected">AMC </option>
+	                			</select>
+	              			
+ 	  						</td>
+			        <td data-title='Request Date'>
+	              	            
+	              	           
+	                			<input "form-control form-control-sm " name="remarks" placeholder="90.00" id="remarks " maxlength="50" placeholder="90.00" data-validation="mandatory,alphabetOnly">
+	                			
+	              			</td>
+			       
+			        <td data-title='Equipment Name'>0		</td>
+			        <td data-title='Equipment Model'>100</td>
+			       </tr>
+			    </tbody>
+			     <tbody>
+			     <tr>
+			       <td data-title='Request Id' >2st Yr. </td>
+			        <td data-title='Department'>
+	                			
+	                			<select class="form-control form-control-sm  " id ='paymentPlan' name="paymentPlan ">
+	                				<option value="" selected="selected">AMC </option>
+	                			</select>
+	              			
+ 	  						</td>
+			        <td data-title='Request Date'>
+	              	            
+	              	           
+	                			<input "form-control form-control-sm " name="remarks" placeholder="90.00" id="remarks " maxlength="50" data-validation="mandatory,alphabetOnly">
+	                			
+	              			</td>
+			       
+			        <td data-title='Equipment Name'>0		</td>
+			        <td data-title='Equipment Model'>90</td>
+			       </tr>
+			    </tbody>
+			      <tbody>
+			     <tr>
+			       <td colspan="3"><center ><b>Total :</b></center></td>
+			       
+			        <td data-title='Equipment Name'>0.00		</td>
+			        <td data-title='Equipment Model'>190.0</td>
+			       </tr>
+			    </tbody>
+			   </table>
+			    <div class="card-body form-group">
+			    <div class='row'>
+			   <div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="taxType" data-validation="mandatory" data-langtag="Tax Type" >Tax Type  :</label>
+	                			<select class="form-control form-control-sm  " id ='taxType' name="taxType ">
+	                				<option value="" selected="selected">Select Value </option>
+	                				<option title="Gst " value="18000306">GST </option>
+	                				
+	                			</select>
+	              				<div class="invalid-feedback"></div>
+ 	  						</div>
+ 	  						</div>
+ 	  						<div class='col-lg-3' ><b>Tax Details  :</b> 		 
+  				                       </div>
+ 	  						</div>
+			   </div>
+			   </div>
+			    </div> 
+                
+                
+                 <div class="card-body form-group">
+	<h6><b>Bank Guarantee Details</b></h6>
+	<hr class="bg-navy">
+	 
+	                  <div class='row'> 
+	                  <div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="bankName" data-validation="mandatory" data-langtag="Bank Name  " >Bank Name   :</label>
+	                			<select class="form-control form-control-sm  " id ='bankName' name="bankName ">
+	                				<option value="" selected="selected">Select Bank Name </option>
+	                				<option title="Punjab National Bank-" value="121">Punjab National Bank-</option>
+									<option title="South Indian Bank " value="133">South Indian Bank </option>
+									<option title="Standard Chartered Bank" value="159">Standard Chartered Bank</option>
+									<option title="State Bank of Bikaner and Jaipur" value="122">State Bank of Bikaner and Jaipur</option>
+									<option title="State Bank of Hyderabad " value="108">State Bank of Hyderabad </option>
+									<option title="State Bank of India" value="116">State Bank of India</option>
+									<option title="State Bank of Indore " value="112">State Bank of Indore </option>
+									<option title="State Bank of Mysore " value="111">State Bank of Mysore </option>
+	                			</select>
+	              				<div class="invalid-feedback"></div>
+ 	  						</div>
+ 	  						</div>   
+ 	  						
+ 	  							
+	                  <div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="branchName" data-validation="mandatory" data-langtag="Branch Name " >Branch Name    :</label>
+	                			<select class="form-control form-control-sm  " id ='branchName' name="branchName ">
+	                				<option value="" selected="selected">Select Branch Name  </option>
+	                			</select>
+	              				<div class="invalid-feedback"></div>
+ 	  						</div>
+ 	  						</div> 
+ 	  						<div class='col-lg-3' >
+	              	            <div class="form-group">
+	              	            <label class="col-form-label col-form-label-sm" for="bGAmount" data-langtag="BG Amount"  >BG Amount:</label>
+	                			<input class="form-control form-control-sm " name="bGAmount"  id="bGAmount" maxlength="50" data-validation="mandatory,alphabetOnly">
+	                			<div class="invalid-feedback"></div>
+	              			</div></div>
+	              			<div class='col-lg-3' >
+	              	            <div class="form-group">
+	              	            <label class="col-form-label col-form-label-sm" for="bGNo" data-langtag="BG No"  >BG No. :</label>
+	                			<input class="form-control form-control-sm " name="bGNo"  id="bGNo" maxlength="50" data-validation="mandatory,alphabetOnly">
+	                			<div class="invalid-feedback"></div>
+	              			</div></div>
+	              			<div class='col-lg-3' >
+	              	            <div class="form-group">
+	              	            <label class="col-form-label col-form-label-sm" for="bGIFSCCode" data-langtag="BG IFSC Code"  >BG IFSC Code :</label>
+	                			<input class="form-control form-control-sm " name="bGIFSCCode"  id="bGIFSCCode" maxlength="50" data-validation="mandatory,alphabetOnly">
+	                			<div class="invalid-feedback"></div>
+	              			</div></div> 
+	              			 <div class='col-lg-3' >
+					 	 <div class="form-group">	
+					 	<b>*BG Validity :</b> <input type="date" name="bday">
+					 	</div></div>
+					 	<div class='col-lg-3' >
+					 	 <div class="form-group">	
+					 	 TO <input type="date" name="bday">
+					 	</div></div>
+					 	  
+ 	  		</div>
+ 	  		</div>  
+ 	  		
+ 	  		          <div class="card-body form-group">         
+	                 <h6><b>Accessories/Consumable/Reagents</b></h6>
+	                 <hr class="bg-navy">
+	                 <div class='row no-more-tables'>
+			<table class="table table-hover">
+			  <thead class="bg-light">
+			      <tr>
+			      	
+			        <th >S. No.</th>
+			        <th>Type</th>
+			        <th> Name</th>
+			        <th>Qty</th>
+			        <th>Description</th>
+			        <th></th>
+			       </tr>
+			      </thead>
+			       <tbody>
+			     <tr>
+			       <td data-title='Request Id' >1</td>
+			        <td data-title='Request Date'>Consumable</td>
+			        <td data-title='Department'>se_surendragupta</td>
+			        <td data-title='Equipment Name'>4		</td>
+			        <td data-title='Equipment Model'>----</td>
+			        <td data-title='Equipment Model'><i class="fa fa-plus-circle"></td>
+			       </tr>
+			    </tbody>
+			   </table></div>
+			    </div> 
+                
+    <div class="card-footer">
+		<div class="text-center">
+		      <button class='btn bg-gradient-success mt-4 btn-sm' ><i class="fa fa-save"></i> Save</button>
+              <button class="btn bg-gradient-success mt-4 btn-sm"><i class="fa fa-window-close" ></i> Clear</button>
+              <button class="btn bg-gradient-success mt-4 btn-sm" id="btnBackMdy"><i class="fas fa-arrow-circle-left"></i> Back</button>                            
+		</div>
+	</div>  
+ 
+  
+</div>
+
+<div class="card card card-info border-info center m-1 hideData" id='VIEWPAGEFORM'  >
+	<div class="card-header bg-navy">
+		<h6 class="text-left">Rate Contract Desk >> View</h6>
+	</div>
+	<div class="card-body form-group">
+	<h6><b>Tender & Hospital Details ::</b></h6>
+	<hr class="bg-navy">
+	 
+	                  <div class='row'>
+                                      <div class='col-lg-3' ><b>Tendering Authority :</b>	Aagar- CS
+  				                       </div>
+  		                              <div class='col-lg-3' ><b>Financial Year :</b>	2019-2020		 
+  				                       </div>
+  				                       <div class='col-lg-3' ><b>Tender No.:	</b>		23198 [tender 3]
+  				                       </div>
+  		                              <div class='col-lg-3' ><b>Tender Date  :</b>	A03-Dec-2019	 
+  				                       </div>
+  				                       <div class='col-lg-3' ><b>Tender Title:	</b>	tender 3
+  				                       </div>
+  		                              <div class='col-lg-3' ><b>RRC Status : </b><i class = "text-danger">Active</i>
+  		                              </div>
+  				                       </div>
+  				                       </div>
+  				                       
+  	<div class="card-body form-group">
+	<h6><b>Contract Details:</b></h6>
+	<hr class="bg-navy">
+	 
+	                  <div class='row'> 
+  				                       <div class='col-lg-3' ><b>Rate Contract (RC) No.</b>			219129980008
+  				                       </div>
+  		                              <div class='col-lg-3' ><b>Supply Period </b>	20 Days		 
+  				                       </div>
+  				                       <div class='col-lg-3' ><b>Notification of Award</b>	12
+  				                       </div>
+  		                              <div class='col-lg-3' ><b>Notification of Award Date:</b>			05-Dec-2019		 
+  				                       </div>
+  				                       <div class='col-lg-3' ><b>Contract From  :</b>	18-Dec-2019
+  				                       </div>
+  		                              <div class='col-lg-3' ><b>Contract To </b> 17-Dec-2021	 
+  				                       </div>
+  				                       <div class='col-lg-3' ><b>Remarks  : </b>	----
+  				                       </div>
+  				                         </div>
+  				                       </div>
+  		                             
+  		      				                       
+  	<div class="card-body form-group">
+	<h6><b>Supplier Detail:</b></h6>
+	<hr class="bg-navy">
+	 
+	                  <div class='row'>                          
+  		                              <div class='col-lg-3' ><b>Supplier Name:</b>	Adarsh Enterprises
+  				                       </div>
+  				                        <div class='col-lg-3' ><b>GST No. </b>	23ACHPA7628M1ZJ 
+  				                       </div>
+  				                       <div class='col-lg-3' ><b>Contact No.:</b>	9617423020 	 	
+  				                       </div>
+  		                              <div class='col-lg-3' ><b>E-mail Id :</b>	 bmo.ath.bet@gmail.com 	 
+  				                       </div>
+  				                       <div class='col-lg-3' ><b>Bank Name:</b>			Icici Bank
+  				                       </div>
+  				                       <div class='col-lg-3' ><b>Branch Name:</b>	Madan Mahal, Jabalpur
+  				                       </div>
+  				                        <div class='col-lg-3' ><b>Bank Account No  </b>	349705000015
+  				                       </div>
+  				                       <div class='col-lg-3' ><b>Bank Ifsc Code :</b>	Bank Ifsc Code 	
+  				                       </div>
+  		                              <div class='col-lg-3' ><b>E-mail Id :</b>	bmo.ath.bet@gmail.com 	 
+  				                       </div>
+  				                       <div class='col-lg-3' ><b>Address:</b>		1203 Nagpur Road, Madan Mahal
+  				                       </div>
+  				                       </div>
+  				                       </div>
+  				                       
+    <div class="card-body form-group">
+	<h6><b>Equipment Detail:</b></h6>
+	<hr class="bg-navy">
+	 
+	                  <div class='row'>                          
+  		                              <div class='col-lg-3' ><b>Equipment Name:</b>	ABG MACHINE
+  				                       </div>
+  				                        <div class='col-lg-3' ><b>Equipment Model </b>	rg 45
+  				                       </div>
+  				                       <div class='col-lg-3' ><b>Make:</b>		Aastha 	 	
+  				                       </div>
+  		                              <div class='col-lg-3' ><b>Installtaion Type :</b>Installation and Commissioning Both Required	 
+  				                       </div>
+  				                       <div class='col-lg-3' ><b>Training Required:</b>		YES
+  				                       </div>
+  				                       <div class='col-lg-3' ><b>Equipment Specification:</b>	<a href="">20k.pdf</a>		
+  				                       </div>
+  				                        </div>
+  				                        </div>
+  				                        
+  		  <div class="card-body form-group">
+	<h6><b>Quantity and A.M.C./C.M.C. Details :</b></h6>
+	<hr class="bg-navy">
+	 
+	                  <div class='row'> 		                        
+  				                        
+  				                        <div class='col-lg-3' ><b>Contract Qty.  </b>	12
+  				                       </div>
+  				                       <div class='col-lg-3' ><b>Ordered Qty. :</b>	0 	
+  				                       </div>
+  		                              <div class='col-lg-3' ><b>Rate per unit  :</b>		100.00 Rs 
+  				                       </div>
+  				                       <div class='col-lg-3' ><b>Tax per unit:</b>		10.0 Rs
+  				                       </div>
+  				                        <div class='col-lg-3' ><b>Rate per unit (Including Tax):  </b>	110.00 Rs
+  				                       </div>
+  				                       <div class='col-lg-3' ><b>OSecurity Amount  :</b>	100.00 Rs	
+  				                       </div>
+  		                              <div class='col-lg-3' ><b>Payment Plan :</b>		10.00 (%) 
+  				                       </div>
+  				                       <div class='col-lg-3' ><b>Tax Details :</b>			IGST @ 10.00
+  				                       </div>
+  				                       <div class='col-lg-3' ><b>Warranty Period :</b>		1 Year(s) 
+  				                       </div>
+  				                       <div class='col-lg-3' ><b>C.M.C. Period :</b>		2 Year
+  				                       </div>
+  				                       </div>
+  				                       </div>
+  				                       
+  				         <div class="card-body form-group">         
+	                 <h6><b>A.M.C./C.M.C. Details</b></h6>
+	                 <hr class="bg-navy">
+	                 <div class='row no-more-tables'>
+			<table class="table table-hover">
+			  <thead class="bg-light">
+			      <tr>
+			      	
+			        <th >Year</th>
+			        <th>CMC Charges/Year/Unit</th>
+			        
+			       </tr>
+			      </thead>
+			       <tbody>
+			     <tr>
+			       <td data-title='Request Id' >2nd</td>
+			        <td data-title='Request Date'>100.00</td>
+			        
+			       </tr>
+			    </tbody>
+			    <tbody>
+			     <tr>
+			       <td data-title='Request Id' >3rd</td>
+			        <td data-title='Request Date'>90.00</td>
+			        
+			       </tr>
+			    </tbody>
+			    <tbody>
+			     <tr>
+			       <td data-title='Request Id' >Total</td>
+			        <td data-title='Request Date'>190.00</td>
+			        
+			       </tr>
+			    </tbody>
+			   </table>
+			   
+			    <div class='row'> 		                        
+  				                        
+			   <div class='col-lg-12' ><b>Tax Details in (%) :</b>		IGST @ 10.00
+  				                       </div></div>
+			   
+			   </div>
+			    </div>	
+			    <div class="card-body form-group">
+	<h6><b>Bank Details :</b></h6>
+	<hr class="bg-navy">
+	 
+	                  <div class='row'> 		                        
+  				                        
+  				                        <div class='col-lg-3' ><b>Bank Name :  </b>	
+  				                       </div>
+  				                       <div class='col-lg-3' ><b>Branch Name  :</b>	0 	
+  				                       </div>
+  		                              <div class='col-lg-3' ><b>BG Amount :</b>		00 
+  				                       </div>
+  				                       <div class='col-lg-3' ><b>Tax BG No. :</b>		0 
+  				                       </div>
+  				                        <div class='col-lg-3' ><b>BG IFSC Code:  </b>	0
+  				                       </div>
+  				                       <div class='col-lg-3' ><b>BG Validity From   :</b>---
+  				                       </div>
+  		                              <div class='col-lg-3' ><b>BG Validity Upto :</b>		----
+  				                       </div>  
+  				                       </div>
+  				                       </div>   
+  				                       
+     <div class="card-body form-group">
+	<h6><b>Extend Details :</b></h6>
+	<hr class="bg-navy">
+	 
+	                  <div class='row'> 		                        
+  				                        
+  				                        <div class='col-lg-3' ><b>Sr No. :  </b> 1	
+  				                       </div>
+  				                       <div class='col-lg-3' ><b>Extended Date  :</b>	----
+  				                       </div>
+  		                              <div class='col-lg-3' ><b>Extended From :</b>	18-Dec-2019
+  				                       </div>
+  				                       <div class='col-lg-3' ><b>Extended Upto :</b>				17-Dec-2021
+  				                       </div>
+  				                        <div class='col-lg-3' ><b>Remarks:  </b>	-----
+  				                       </div>
+  				                      
+  				                       </div>
+  				                       </div>                 	
+  	<div class="card-body form-group">         
+	                 <h6><b>Accessories/Consumable/Reagents</b></h6>
+	                 <hr class="bg-navy">
+	                 <div class='row no-more-tables'>
+			<table class="table table-hover">
+			  <thead class="bg-light">
+			      <tr>
+			      	
+			        <th >S. No.</th>
+			        <th>Part Type</th>
+			        <th>Part Name</th>
+			        <th>Quantity</th>
+			        <th>Description</th>
+			        <th></th>
+			       </tr>
+			      </thead>
+			       <tbody>
+			     <tr>
+			       <td data-title='Request Id' >1</td>
+			        <td data-title='Request Date'>Accessories</td>
+			        <td data-title='Department'>test accessory</td>
+			        <td data-title='Equipment Name'>1		</td>
+			        <td data-title='Equipment Model'>----</td>
+			       
+			       </tr>
+			    </tbody>
+			   </table></div>
+			    </div>	             	
+ 
+ 
+	
+    <div class="card-footer">
+		<div class="text-center">
+		<button class='btn bg-gradient-success mt-4 btn-sm' ><i class="fa fa-save"></i> Save</button>
+              <button class="btn bg-gradient-success mt-4 btn-sm"><i class="fa fa-remove" ></i> Clear</button>
+              <button class="btn bg-gradient-success mt-4 btn-sm" id="btnBack"><i class="fas fa-arrow-circle-left"></i> Back</button>                            
+		</div>
+	</div>  
+ 
+  
+</div>
+
+<div class="card card card-info border-info center m-1 hideData" id='STATUSPAGEFORM'  >
+	<div class="card-header bg-navy">
+		<h6 class="text-left">Rate Contract Desk >> Status</h6>
+	</div>
+	<div class="card-body form-group">
+	<h6><b>Tender & Hospital Details ::</b></h6>
+	<hr class="bg-navy">
+	 
+	                  <div class='row'>
+                                      <div class='col-lg-3' ><b>Tendering Authority :</b>	Aagar- CS
+  				                       </div>
+  		                              <div class='col-lg-3' ><b>Financial Year :</b>	2019-2020		 
+  				                       </div>
+  				                       <div class='col-lg-3' ><b>Tender No.:	</b>		23198 [tender 3]
+  				                       </div>
+  		                              <div class='col-lg-3' ><b>Tender Date  :</b>	A03-Dec-2019	 
+  				                       </div>
+  				                       <div class='col-lg-3' ><b>Tender Title:	</b>	tender 3
+  				                       </div>
+  		                              <div class='col-lg-3' ><b>RRC Status : </b><i class = "text-danger">Active</i>
+  		                              </div>
+  				                       </div>
+  				                       </div>
+  	  <div class="card-body form-group">
+	<h6><b>Supplier Detail:</b></h6>
+	<hr class="bg-navy">
+	 
+	                  <div class='row'>                          
+  		                              <div class='col-lg-3' ><b>Supplier Name:</b>	Adarsh Enterprises
+  				                       </div>
+  				                        <div class='col-lg-3' ><b>GST No. </b>	23ACHPA7628M1ZJ 
+  				                       </div>
+  				                       <div class='col-lg-3' ><b>Contact No.:</b>	9617423020 	 	
+  				                       </div>
+  		                              <div class='col-lg-3' ><b>E-mail Id :</b>	 bmo.ath.bet@gmail.com 	 
+  				                       </div>
+  				                       <div class='col-lg-3' ><b>Bank Name:</b>			Icici Bank
+  				                       </div>
+  				                       <div class='col-lg-3' ><b>Branch Name:</b>	Madan Mahal, Jabalpur
+  				                       </div>
+  				                        <div class='col-lg-3' ><b>Bank Account No  </b>	349705000015
+  				                       </div>
+  				                       <div class='col-lg-3' ><b>Bank Ifsc Code :</b>	Bank Ifsc Code 	
+  				                       </div>
+  		                              <div class='col-lg-3' ><b>E-mail Id :</b>	bmo.ath.bet@gmail.com 	 
+  				                       </div>
+  				                       <div class='col-lg-3' ><b>Address:</b>		1203 Nagpur Road, Madan Mahal
+  				                       </div>
+  				                       </div>
+  				                       </div>
+  				
+  				  <div class="card-body form-group">
+  				 <h6><b>Equipment Detail:</b></h6>
+	              <hr class="bg-navy">
+	 
+	                  <div class='row'>                          
+  		                              <div class='col-lg-3' ><b>Equipment Name:</b>	ABG MACHINE
+  				                       </div>
+  				                        <div class='col-lg-3' ><b>Equipment Model </b>	rg 45
+  				                       </div>
+  				                       <div class='col-lg-3' ><b>Make:</b>		Aastha 	 	
+  				                       </div>
+  		                              <div class='col-lg-3' ><b>Installtaion Type :</b>Installation and Commissioning Both Required	 
+  				                       </div>
+  				                       <div class='col-lg-3' ><b>Training Required:</b>		YES
+  				                       </div>
+  				                       <div class='col-lg-3' ><b>Equipment Specification:</b>	<a href="">20k.pdf</a>		
+  				                       </div>
+  				                        </div>
+  				                        </div>
+  	 <div class="card-body form-group">
+	<h6><b>Contract Details:</b></h6>
+	<hr class="bg-navy">
+	 
+	                  <div class='row'> 
+  				                       <div class='col-lg-3' ><b>Rate Contract (RC) No.</b>			219129980008
+  				                       </div>
+  		                              <div class='col-lg-3' ><b>Supply Period </b>	20 Days		 
+  				                       </div>
+  				                       <div class='col-lg-3' ><b>Notification of Award</b>	12
+  				                       </div>
+  		                              <div class='col-lg-3' ><b>Notification of Award Date:</b>			05-Dec-2019		 
+  				                       </div>
+  				                       <div class='col-lg-3' ><b>Contract From  :</b>	18-Dec-2019
+  				                       </div>
+  		                              <div class='col-lg-3' ><b>Contract To </b> 17-Dec-2021	 
+  				                       </div>
+  				                       <div class='col-lg-3' ><b>Remarks  : </b>	----
+  				                       </div>
+  				                         </div>
+  				                       </div>
+  		  <div class="card-body form-group">
+	<h6><b>Quantity and A.M.C./C.M.C. Details :</b></h6>
+	<hr class="bg-navy">
+	 
+	                  <div class='row'> 		                        
+  				                        
+  				                        <div class='col-lg-3' ><b>Contract Qty.  </b>	12
+  				                       </div>
+  				                       <div class='col-lg-3' ><b>Ordered Qty. :</b>	0 	
+  				                       </div>
+  		                              <div class='col-lg-3' ><b>Rate per unit  :</b>		100.00 Rs 
+  				                       </div>
+  				                       <div class='col-lg-3' ><b>Tax per unit:</b>		10.0 Rs
+  				                       </div>
+  				                        <div class='col-lg-3' ><b>Rate per unit (Including Tax):  </b>	110.00 Rs
+  				                       </div>
+  				                       <div class='col-lg-3' ><b>OSecurity Amount  :</b>	100.00 Rs	
+  				                       </div>
+  		                              <div class='col-lg-3' ><b>Payment Plan :</b>		10.00 (%) 
+  				                       </div>
+  				                       <div class='col-lg-3' ><b>Tax Details :</b>			IGST @ 10.00
+  				                       </div>
+  				                       <div class='col-lg-3' ><b>Warranty Period :</b>		1 Year(s) 
+  				                       </div>
+  				                       <div class='col-lg-3' ><b>C.M.C. Period :</b>		2 Year
+  				                       </div>
+  				                       </div>
+  				                       </div>
+  				                       
+  				         <div class="card-body form-group">         
+	                 <h6><b>A.M.C./C.M.C. Details</b></h6>
+	                 <hr class="bg-navy">
+	                 <div class='row no-more-tables'>
+			<table class="table table-hover">
+			  <thead class="bg-light">
+			      <tr>
+			      	
+			        <th >Year</th>
+			        <th>CMC Charges/Year/Unit</th>
+			        
+			       </tr>
+			      </thead>
+			       <tbody>
+			     <tr>
+			       <td data-title='Request Id' >2nd</td>
+			        <td data-title='Request Date'>100.00</td>
+			        
+			       </tr>
+			    </tbody>
+			    <tbody>
+			     <tr>
+			       <td data-title='Request Id' >3rd</td>
+			        <td data-title='Request Date'>90.00</td>
+			        
+			       </tr>
+			    </tbody>
+			    <tbody>
+			     <tr>
+			       <td data-title='Request Id' >Total</td>
+			        <td data-title='Request Date'>190.00</td>
+			        
+			       </tr>
+			    </tbody>
+			   </table>
+			   
+			    <div class='row'> 		                        
+  				                        
+			   <div class='col-lg-12' ><b>Tax Details in (%) :</b>		IGST @ 10.00
+  				                       </div></div>
+			   
+			   </div>
+			    </div>	
+			    <div class="card-body form-group">
+	<h6><b>Bank Details :</b></h6>
+	<hr class="bg-navy">
+	 
+	                  <div class='row'> 		                        
+  				                        
+  				                        <div class='col-lg-3' ><b>Bank Name :  </b>	
+  				                       </div>
+  				                       <div class='col-lg-3' ><b>Branch Name  :</b>	0 	
+  				                       </div>
+  		                              <div class='col-lg-3' ><b>BG Amount :</b>		00 
+  				                       </div>
+  				                       <div class='col-lg-3' ><b>Tax BG No. :</b>		0 
+  				                       </div>
+  				                        <div class='col-lg-3' ><b>BG IFSC Code:  </b>	0
+  				                       </div>
+  				                       <div class='col-lg-3' ><b>BG Validity From   :</b>---
+  				                       </div>
+  		                              <div class='col-lg-3' ><b>BG Validity Upto :</b>		----
+  				                       </div>  
+  				                       </div>
+  				                       </div>   
+  			<div class="card-body form-group">         
+	                 <h6><b>Accessories/Consumable/Reagents</b></h6>
+	                 <hr class="bg-navy">
+	                 <div class='row no-more-tables'>
+			<table class="table table-hover">
+			  <thead class="bg-light">
+			      <tr>
+			      	
+			        <th >S. No.</th>
+			        <th>Part Type</th>
+			        <th>Part Name</th>
+			        <th>Quantity</th>
+			        <th>Description</th>
+			        <th></th>
+			       </tr>
+			      </thead>
+			       <tbody>
+			     <tr>
+			       <td data-title='Request Id' >1</td>
+			        <td data-title='Request Date'>Accessories</td>
+			        <td data-title='Department'>test accessory</td>
+			        <td data-title='Equipment Name'>1		</td>
+			        <td data-title='Equipment Model'>----</td>
+			       
+			       </tr>
+			    </tbody>
+			   </table></div>
+			    </div>	   
+			    
+			    <div class="card-body form-group">
+	<h6><b> Rate Contract Status Details :
+ :</b></h6>
+	<hr class="bg-navy">
+	 
+	                  <div class='row'> 
+	                                
+ 	  						 <div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="status" data-validation="mandatory" data-langtag="Supplier Name " >Status  :</label>
+	                			<select class="form-control form-control-sm  " id ='status' name="status ">
+	                				<option value="" selected="selected">Select Status  </option>
+	                			</select>
+	              				<div class="invalid-feedback"></div>
+ 	  						</div>
+ 	  						</div>
+ 	  						</div>
+ 	  						</div>          	
+  				                         
+  		                             
+	<div class="card-body form-group">
+	</div>
+    <div class="card-footer">
+		<div class="text-center">
+              <button class="btn bg-gradient-success mt-4 btn-sm" id="btnBackStatus"><i class="fas fa-arrow-circle-left"></i> Back</button>                            
+		</div>
+	</div>  
+ 
+  
+</div>
+
+<div class="card card card-info border-info center m-1 hideData" id='EXTENDPAGEFORM'  >
+	<div class="card-header bg-navy">
+		<h6 class="text-left">Rate Contract Desk >> Extend</h6>
+	</div>
+	
+	<div class="card-body form-group">
+	<h6><b>Tender & Hospital Details ::</b></h6>
+	<hr class="bg-navy">
+	 
+	                  <div class='row'>
+                                      <div class='col-lg-3' ><b>Tendering Authority :</b>	Aagar- CS
+  				                       </div>
+  		                              <div class='col-lg-3' ><b>Financial Year :</b>	2019-2020		 
+  				                       </div>
+  				                       <div class='col-lg-3' ><b>Tender No.:	</b>		23198 [tender 3]
+  				                       </div>
+  		                              <div class='col-lg-3' ><b>Tender Date  :</b>	A03-Dec-2019	 
+  				                       </div>
+  				                       <div class='col-lg-3' ><b>Tender Title:	</b>	tender 3
+  				                       </div>
+  		                              <div class='col-lg-3' ><b>RRC Status : </b><i class = "text-danger">Active</i>
+  		                              </div>
+  				                       </div>
+  				                       </div>
+  	  <div class="card-body form-group">
+	<h6><b>Supplier Detail:</b></h6>
+	<hr class="bg-navy">
+	 
+	                  <div class='row'>                          
+  		                              <div class='col-lg-3' ><b>Supplier Name:</b>	Adarsh Enterprises
+  				                       </div>
+  				                        <div class='col-lg-3' ><b>GST No. </b>	23ACHPA7628M1ZJ 
+  				                       </div>
+  				                       <div class='col-lg-3' ><b>Contact No.:</b>	9617423020 	 	
+  				                       </div>
+  		                              <div class='col-lg-3' ><b>E-mail Id :</b>	 bmo.ath.bet@gmail.com 	 
+  				                       </div>
+  				                       <div class='col-lg-3' ><b>Bank Name:</b>			Icici Bank
+  				                       </div>
+  				                       <div class='col-lg-3' ><b>Branch Name:</b>	Madan Mahal, Jabalpur
+  				                       </div>
+  				                        <div class='col-lg-3' ><b>Bank Account No  </b>	349705000015
+  				                       </div>
+  				                       <div class='col-lg-3' ><b>Bank Ifsc Code :</b>	Bank Ifsc Code 	
+  				                       </div>
+  		                              <div class='col-lg-3' ><b>E-mail Id :</b>	bmo.ath.bet@gmail.com 	 
+  				                       </div>
+  				                       <div class='col-lg-3' ><b>Address:</b>		1203 Nagpur Road, Madan Mahal
+  				                       </div>
+  				                       </div>
+  				                       </div>
+  				
+  				  <div class="card-body form-group">
+  				 <h6><b>Equipment Detail:</b></h6>
+	              <hr class="bg-navy">
+	 
+	                  <div class='row'>                          
+  		                              <div class='col-lg-3' ><b>Equipment Name:</b>	ABG MACHINE
+  				                       </div>
+  				                        <div class='col-lg-3' ><b>Equipment Model </b>	rg 45
+  				                       </div>
+  				                       <div class='col-lg-3' ><b>Make:</b>		Aastha 	 	
+  				                       </div>
+  		                              <div class='col-lg-3' ><b>Installtaion Type :</b>Installation and Commissioning Both Required	 
+  				                       </div>
+  				                       <div class='col-lg-3' ><b>Training Required:</b>		YES
+  				                       </div>
+  				                       <div class='col-lg-3' ><b>Equipment Specification:</b>	<a href="">20k.pdf</a>		
+  				                       </div>
+  				                        </div>
+  				                        </div>
+  	 <div class="card-body form-group">
+	<h6><b>Contract Details:</b></h6>
+	<hr class="bg-navy">
+	 
+	                  <div class='row'> 
+  				                       <div class='col-lg-3' ><b>Rate Contract (RC) No.</b>			219129980008
+  				                       </div>
+  		                              <div class='col-lg-3' ><b>Supply Period </b>	20 Days		 
+  				                       </div>
+  				                       <div class='col-lg-3' ><b>Notification of Award</b>	12
+  				                       </div>
+  		                              <div class='col-lg-3' ><b>Notification of Award Date:</b>			05-Dec-2019		 
+  				                       </div>
+  				                       <div class='col-lg-3' ><b>Contract From  :</b>	18-Dec-2019
+  				                       </div>
+  		                              <div class='col-lg-3' ><b>Contract To </b> 17-Dec-2021	 
+  				                       </div>
+  				                       <div class='col-lg-3' ><b>Remarks  : </b>	----
+  				                       </div>
+  				                         </div>
+  				                       </div>
+  		  <div class="card-body form-group">
+	<h6><b>Quantity and A.M.C./C.M.C. Details :</b></h6>
+	<hr class="bg-navy">
+	 
+	                  <div class='row'> 		                        
+  				                        
+  				                        <div class='col-lg-3' ><b>Contract Qty.  </b>	12
+  				                       </div>
+  				                       <div class='col-lg-3' ><b>Ordered Qty. :</b>	0 	
+  				                       </div>
+  		                              <div class='col-lg-3' ><b>Rate per unit  :</b>		100.00 Rs 
+  				                       </div>
+  				                       <div class='col-lg-3' ><b>Tax per unit:</b>		10.0 Rs
+  				                       </div>
+  				                        <div class='col-lg-3' ><b>Rate per unit (Including Tax):  </b>	110.00 Rs
+  				                       </div>
+  				                       <div class='col-lg-3' ><b>OSecurity Amount  :</b>	100.00 Rs	
+  				                       </div>
+  		                              <div class='col-lg-3' ><b>Payment Plan :</b>		10.00 (%) 
+  				                       </div>
+  				                       <div class='col-lg-3' ><b>Tax Details :</b>			IGST @ 10.00
+  				                       </div>
+  				                       <div class='col-lg-3' ><b>Warranty Period :</b>		1 Year(s) 
+  				                       </div>
+  				                       <div class='col-lg-3' ><b>C.M.C. Period :</b>		2 Year
+  				                       </div>
+  				                       </div>
+  				                       </div>
+  		 <div class="card-body form-group">
+	<h6><b>Bank Details :</b></h6>
+	<hr class="bg-navy">
+	 
+	                  <div class='row'> 		                        
+  				                        
+  				                        <div class='col-lg-3' ><b>Bank Name :  </b>	
+  				                       </div>
+  				                       <div class='col-lg-3' ><b>Branch Name  :</b>	0 	
+  				                       </div>
+  		                              <div class='col-lg-3' ><b>BG Amount :</b>		00 
+  				                       </div>
+  				                       <div class='col-lg-3' ><b>Tax BG No. :</b>		0 
+  				                       </div>
+  				                        <div class='col-lg-3' ><b>BG IFSC Code:  </b>	0
+  				                       </div>
+  				                       <div class='col-lg-3' ><b>BG Validity From   :</b>---
+  				                       </div>
+  		                              <div class='col-lg-3' ><b>BG Validity Upto :</b>		----
+  				                       </div>  
+  				                       </div>
+  				                       </div>   
+  			<div class="card-body form-group">         
+	                 <h6><b>Accessories/Consumable/Reagents</b></h6>
+	                 <hr class="bg-navy">
+	                 <div class='row no-more-tables'>
+			<table class="table table-hover">
+			  <thead class="bg-light">
+			      <tr>
+			      	
+			        <th >S. No.</th>
+			        <th>Part Type</th>
+			        <th>Part Name</th>
+			        <th>Quantity</th>
+			        <th>Description</th>
+			        <th></th>
+			       </tr>
+			      </thead>
+			       <tbody>
+			     <tr>
+			       <td data-title='Request Id' >1</td>
+			        <td data-title='Request Date'>Accessories</td>
+			        <td data-title='Department'>test accessory</td>
+			        <td data-title='Equipment Name'>1		</td>
+			        <td data-title='Equipment Model'>----</td>
+			       
+			       </tr>
+			    </tbody>
+			   </table></div>
+			    </div>	
+			     <div class="card-body form-group">
+	<h6><b>Rate Contract Extend Details :</b></h6>
+	<hr class="bg-navy">
+	 
+	                  <div class='row'>  
+	                   <div class='col-lg-3' >
+					 	 <div class="form-group">	
+					 	<b>Contract Upto :</b><br> <input type="date" name="bday">
+					 	</div></div>
+					 	
+					 	 <div class='col-lg-3' >
+	              	            <div class="form-group">
+	              	            <label class="col-form-label col-form-label-sm" for="remarks" data-langtag="Remarks "  >Remarks :</label>
+	                			<textarea class="form-control form-control-sm " name="remarks"  id="remarks" maxlength="50" data-validation="mandatory,alphabetOnly"> 	</textarea>
+(Allowed Upto 500 Characters.)
+	                			<div class="invalid-feedback"></div>
+	              			</div></div>
+ 	  						</div> 
+ 	  						</div>
+ 	  						
+ 	  						 
+  				                       
+	
+    <div class="card-footer">
+		<div class="text-center">
+		<button class='btn bg-gradient-success mt-4 btn-sm' ><i class="fa fa-save"></i> Save</button>
+              <button class="btn bg-gradient-success mt-4 btn-sm"><i class="fa fa-remove" ></i> Clear</button>
+              <button class="btn bg-gradient-success mt-4 btn-sm" id="btnBackExtend"><i class="fas fa-arrow-circle-left"></i> Back</button>                            
+		</div>
+	</div>  
+ 
+  
+</div>
+
+

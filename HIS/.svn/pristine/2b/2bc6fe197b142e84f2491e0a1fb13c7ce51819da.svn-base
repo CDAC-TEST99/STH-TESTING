@@ -1,0 +1,485 @@
+<script>
+$(document).ready(function () {
+	$('#btnview').click(function(){
+		$('#LISTFORM').addClass('hideData');
+		$('#VIEWPAGEFORM ').removeClass('hideData');		
+	});
+	
+	$('#btnBack').click(function(){
+		$('#LISTFORM').removeClass('hideData');
+		$('#VIEWPAGEFORM ').addClass('hideData');		
+	});
+	
+	$('#btnrequest').click(function(){
+		$('#LISTFORM').addClass('hideData');
+		$('#REQUESTPAGEFORM').removeClass('hideData');		
+	});
+	$('#btnBackReq').click(function(){
+		$('#LISTFORM').removeClass('hideData');
+		$('#REQUESTPAGEFORM ').addClass('hideData');		
+	})
+})
+</script>
+
+<div class="card card-info border-info center m-1" id='LISTFORM' >
+			<div class="card-header bg-navy"><h5 class="card-title text-center ">Complaint Raise Desk</h5>
+			</div>
+
+
+	<div class="card-body form-group">
+ 	
+  			<div class="row " >
+						
+						<div class='col-lg-3'  >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="institutionType" data-validation="mandatory" data-langtag="Institution Type" >Institution Type</label>
+	                			<select class="form-control form-control-sm  " id ='institutionType' name="institutionType">
+	                				<option value="" selected="selected">Select Institution Type</option>
+	                				<option title="Budget Authority" selected="" value="51">Budget Authority</option>
+									<option title="DH" value="17">DH</option>
+									<option title="HQ" value="50">HQ</option>
+									<option title="PHC" value="11">PHC</option>
+									<option title="Superintendent" value="12">Superintendent</option>
+									<option title="TB Hospital" value="18">TB Hospital</option>
+	                			</select>
+	                		<div class="invalid-feedback"></div>
+ 	  					</div>
+	 				</div>
+	 	
+	 	
+	 				<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="institutionName" data-validation="mandatory" data-langtag=Institution Name" >Institution Name</label>
+	                			<select class="form-control form-control-sm  " id ='institutionName' name="institutionName">
+	                				<option value="" selected="selected">Select Institution Name</option>
+	                			</select>
+	              				<div class="invalid-feedback"></div>
+ 	  						</div>
+	 					</div>
+	 					
+	 					
+	 					<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="departmentName" data-validation="mandatory" data-langtag="Department Name" >Department Name</label>
+	                			<select class="form-control form-control-sm  " id ='departmentName' name="departmentName">
+	                				<option value="" selected="selected">Select Department Name</option>
+	                			</select>
+	              			<div class="invalid-feedback"></div>
+ 	  					</div>
+	 				</div>
+	 				
+	
+		
+	 				<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="requestStatus" data-validation="mandatory" data-langtag="Request Status" >Request Status</label>
+	                			<select class="form-control form-control-sm  " id ='requestStatus' name="requestStatus">
+	                				<option value="" selected="selected">Select Request Status</option>
+	                				<option title="Eng. Close" selected="" value="19">Eng. Close</option>
+									<option title="Pending - Raise and Acknowledge" value="13">Pending - Raise and Acknowledge</option>
+									<option title="Pending - Re-Open" value="14">Pending - Re-Open</option>
+									<option title="Pending - All" value="1">Pending - All</option>
+									<option title="Pending - Re-Schedule" value="16">Pending - Re-Schedule</option>
+									<option title="Pending - Attend" value="17">Pending - Attend</option>
+									<option title="Pending - Schedule" value="15">Pending - Schedule</option>
+	                			</select>
+	              			<div class="invalid-feedback"></div>
+ 	  					</div>
+	 				</div>
+	 			
+	 				
+	 				<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="serviceProvider" data-validation="mandatory" data-langtag="Service Provider " >Service Provider </label>
+	                			<select class="form-control form-control-sm  " id ='serviceProvider' name="serviceProvider">
+	                				<option value="" selected="selected">Select Service Provider </option>
+	                				<option title="All" selected="" value="0">All</option>
+									<option title="Acme" value="1810144">Acme</option>
+									<option title="Accord Electronic" value="1810932">Accord Electronic</option>
+									<option title="Aim Healthcare" value="1812086">Aim Healthcare</option>
+									<option title="Adarsh Enterprises" value="1812088">Adarsh Enterprises</option>
+	                			</select>
+	              			<div class="invalid-feedback"></div>
+ 	  					</div>
+	 				</div>
+	 				
+		 	
+		 	       <div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="requestType" data-validation="mandatory" data-langtag="Request Type" >Request Type</label>
+	                			<select class="form-control form-control-sm  " id ='requestType' name="requestType">
+	                				<option value="" selected="selected">Select Request Type</option>
+	                				<option title="Breakdown" selected="" value="1">Breakdown</option>
+									<option title="Calibration Maintenance" value="3">Calibration Maintenance</option>
+									<option title="Preventive Maintenance" value="2">Preventive Maintenance</option>
+	                				
+	                			</select>
+	              			<div class="invalid-feedback"></div>
+ 	  					</div>
+	 				</div>
+	 			</div>	
+	 			
+	 			
+  			
+						
+						
+	 				
+	
+
+			<div class="text-center">
+			     <button class="btn   bg-gradient-success btn-sm" id="btnrequest" ><i class="fa fa-paper-plane" aria-hidden="true"></i> Request</button>
+				<button class="btn   bg-gradient-success btn-sm" id="btnview"><i class="fa fa-eye" aria-hidden="true"></i> View</button>
+				<button class="btn   bg-gradient-success btn-sm" ><i class="fa fa-gift" aria-hidden="true"></i> Voucher</button>
+			</div>
+			
+			<div class='row'>
+			<div class='col-lg-4'>	
+				<div class="form-group row">                   
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" id="search" placeholder="Search">
+                    </div>
+                  </div>
+			</div>
+			
+			</div>	
+			<div class='row no-more-tables'>
+			<table class="table table-hover">
+			  <thead class="bg-navy">
+			      <tr>
+			      	<th><input type="checkbox"></th>
+			        <th >Request Id</th>
+			        <th>Request Date</th>
+			        <th>Department</th>
+			        <th>Equipment Name</th>
+			        <th>Equipment Model</th>
+			        <th>Barcode</th>
+			        <th>Request Source</th>
+			        <th>Request Status</th>
+			      </tr>
+			    </thead>
+			    <tbody>
+			     <tr>
+			      	<td class='d-none d-sm-block' ><input type="checkbox"></td>
+			        <td data-title='Request Id' >Xray Machine</td>
+			        <td data-title='Request Date'>ABCD</td>
+			        <td data-title='Department'>1234</td>
+			        <td data-title='Equipment Name'>123456</td>
+			        <td data-title='Equipment Model'>Bosch</td>
+			        <td data-title='Barcode'>Working</td>
+			        <td data-title='Request Source'>Payment Done</td>
+			        <td data-title='Request Status'>Payment Done</td>
+			      </tr>
+			    </tbody>
+			    <tbody>
+			     <tr>
+			      	<td class='d-none d-sm-block' ><input type="checkbox"></td>
+			        <td data-title='Request Id' >1234</td>
+			        <td data-title='Request Date'>12/12/2012</td>
+			        <td data-title='Department'>1234</td>
+			        <td data-title='Equipment Name'>Xray Machine</td>
+			        <td data-title='Equipment Model'>Bosch</td>
+			        <td data-title='Barcode'>Working Request</td>
+			        <td data-title='Request Source'>Payment Done</td>
+			        <td data-title='Request Status'>Payment Done</td>
+			      </tr>
+			    </tbody>
+			 </table>	
+			</div>
+		
+</div>
+	</div>
+
+
+
+
+
+<div class="card card card-info border-info center m-1 hideData" id='VIEWPAGEFORM'  >
+	<div class="card-header bg-navy">
+		<h6 class="text-left">View Page</h6>
+	</div>
+	<div class="card-body form-group">
+	<h6><b>Request Details:</b></h6>
+	<hr class="bg-navy">
+	 
+	                  <div class='row'>
+                                      <div class='col-lg-3' ><b>Request Id :</b>	13118090000688
+  				                       </div>
+  		                              <div class='col-lg-3' ><b>Request Date :</b>	27-Sep-2018 15:37:59		 
+  				                       </div>
+  				                       <div class='col-lg-3' ><b>Hospital Name :	</b>	Aathner Betul-CHC :
+  				                       </div>
+  		                              <div class='col-lg-3' ><b>Aathner Betul-CHC :</b>	Aathner Betul-CHC - LABOUR ROOM	 
+  				                       </div>
+  				                       <div class='col-lg-3' ><b>Request Type :	</b>	Breakdown
+  				                       </div>
+  		                              <div class='col-lg-3' ><b>Request Source</b>	Desktop
+  				                       </div>
+  				                       <div class='col-lg-3' ><b>Equipment Name</b>		AUTOCLAVE VERTICAL
+  				                       </div>
+  		                              <div class='col-lg-3' ><b>Equipment Model</b>	MODEL NOT AVAILABLE		 
+  				                       </div>
+  				                       <div class='col-lg-3' ><b>Equipment Serial No.</b>	1311
+  				                       </div>
+  		                              <div class='col-lg-3' ><b>Barcode:</b>	3759		 
+  				                       </div>
+  				                       <div class='col-lg-3' ><b>Manufacturer / Supplier Name :</b>	Aut(V)(Ind) / Aut(V)(Ind)
+  				                       </div>
+  		                              <div class='col-lg-3' ><b>Equipment Cost </b>40000.0		 
+  				                       </div>
+  				                       <div class='col-lg-3' ><b>Problem Description : </b>	Other [proper not working]
+  				                       </div>
+  		                              <div class='col-lg-3' ><b>Is Item Not in Working Condition [Date, If yes] :</b>no		 
+  				                       </div>
+  				                        <div class='col-lg-3' ><b>Contact Person Name</b>	Ramsingmarshkole	 
+  				                       </div>
+  				                       <div class='col-lg-3' ><b>Contact No. / Email Id :</b>	9617423020 / bmo.ath.bet@gmail.com 	 	
+  				                       </div>
+  		                              <div class='col-lg-3' ><b>Remarks :</b>	proper not working	 
+  				                       </div>
+  				                       <div class='col-lg-3' ><b>Upload Doc:</b>	--
+  				                       </div>
+  				                       </div>
+  				                       </div>
+  		                     
+  		               <div class="card-body form-group">         
+	                 <h6><b>Collapse Details Allocation / De-Allocation Details:</b></h6>
+	                 <hr class="bg-navy">
+	                 <div class='row no-more-tables'>
+			<table class="table table-hover">
+			  <thead class="bg-light">
+			      <tr>
+			      	
+			        <th >S. No.</th>
+			        <th>Service Eng. Name</th>
+			        <th>User Name</th>
+			        <th>Allocation Date Time</th>
+			        <th>	De-Allocation Date Time</th>
+			        <th>Status </th>
+			        <th>Remarks</th>
+			       
+			      </tr>
+			       <tbody>
+			     <tr>
+			      
+			        <td data-title='Request Id' >1</td>
+			        <td data-title='Request Date'>Surendra Gupta</td>
+			        <td data-title='Department'>se_surendragupta</td>
+			        <td data-title='Equipment Name'>De-Allocation Date Time		</td>
+			        <td data-title='Equipment Model'>----</td>
+			        <td data-title='Barcode'>Allocated	</td>
+			        <td data-title='Request Source'>-------</td>
+			        
+			      </tr>
+			    </tbody>
+			    </thead>
+			    </table></div>
+			    </div>	
+	                 
+	                 
+	                  <div class="card-body form-group">
+	                 <h6><b>Collapse Details Schedule/Reschedule Details:</b></h6>
+	                 <hr class="bg-navy">
+	                 <center ><h7 class="text-danger"> <b>No Details Found.</b></h7></center> 
+	                 </div>
+	                  
+	                 <div class="card-body form-group">
+	                  <h6><b>Collapse Details Substitute Details:</b></h6> 
+                     <hr class="bg-navy">
+	                 <center ><h7 class="text-danger"> <b>No Details Found.</b></h7></center> 
+	                 </div>
+	                 
+	                  <div class="card-body form-group">   
+	                 <h6><b>Collapse Details Attend Details:</b></h6>
+	                 <hr class="bg-navy">
+	                  <center ><h7 class="text-danger"> <b>No Details Found.</b></h7></center> 
+	                 </div>
+	                 
+	                  <div class="card-body form-group">   
+                     <h6><b>Collapse Details Current Maintenance Details::</b></h6>
+	                 <hr class="bg-navy">
+	                   <div class='row'>
+	                                  <div class='col-lg-3' ><b>Request Id :</b>	13118090000688
+  				                       </div>
+  		                              <div class='col-lg-3' ><b>Work Order No.  :</b>	Aim Health Care		 
+  				                       </div>
+  				                       <div class='col-lg-3' ><b>Maintenance Contract Type  :	</b>	CMC
+  				                       </div>
+  		                              <div class='col-lg-3' ><b>Contract Start Date:</b>		20-FEB-2017	 
+  				                       </div>
+  				                       <div class='col-lg-3' ><b>Contract End Date:	</b>	19-FEB-2022
+  				                       </div>
+  		                              <div class='col-lg-3' ><b>Contractor Name </b>Aim Healthcare
+  				                       </div>
+  				                       <div class='col-lg-3' ><b>Contractor Contact Number </b>		426985369532
+  				                       </div>
+  				                        <div class='col-lg-3' ><b>Contractor Mail id :</b>		aimbpl2016@gmail.com
+  				                       </div>
+	                 </div>
+	                </div>
+    <div class="card-footer">
+		<div class="text-center">
+              <button class="btn bg-gradient-success mt-4 btn-sm" id="btnBack"><i class="fas fa-arrow-circle-left"></i> Back</button>                            
+		</div>
+	</div>  
+ 
+  
+</div>
+</div>
+<div class="card card card-info border-info center m-1 hideData" id='REQUESTPAGEFORM'  >
+	<div class="card-header bg-navy">
+		<h6 class="text-left">Request Desk >> Raise</h6>
+	</div>
+	<div class="card-body form-group">
+	
+	<h6><b>Search Equipment:</b></h6>
+	<hr class="bg-navy">
+	 
+	                  <div class='row'>
+	                  	
+						<div class='col-lg-3'  >
+					 		<div class="form-group">
+			                     <label class="col-form-label col-form-label-sm" for="barcodetoSearchEquipment" data-validation="mandatory" data-langtag="Barcode to Search Equipment" >Barcode to Search Equipment</label>
+	                			<select class="form-control form-control-sm  " id ='barcodetoSearchEquipment' name="barcodetoSearchEquipment">
+	                				<option value="" selected="selected">Select Barcode to Search Equipment	</option>
+	                				<option title="142311 [ 4 to 13 MHz linear  transducer  with near focus (probe for USG machine ) (7L4P) ]" value="1##This equipment is not yet verified! First verify the equipment in inventory.">142311 [ 4 to 13 MHz linear  transducer  with near focus (probe for USG machine ) (7L4P) ]</option>
+									<option title="312343 [ 4 to 13 MHz linear  transducer  with near focus (probe for USG machine ) (7L4P) ]" value="4##A Breakdown Request for this equipment is already in process! First close the previous request.">312343 [ 4 to 13 MHz linear  transducer  with near focus (probe for USG machine ) (7L4P) ]</option>
+									<option title="852963 [ ABG MACHINE (MODEL NOT AVAILABLE) ]" value="1##This equipment is not yet verified! First verify the equipment in inventory.">852963 [ ABG MACHINE (MODEL NOT AVAILABLE) ]</option>
+									<option title="989898 [ ABG MACHINE (rg 45) ]" value="1##This equipment is not yet verified! First verify the equipment in inventory.">989898 [ ABG MACHINE (rg 45) ]</option>
+                               </select>
+	                		<div class="invalid-feedback"></div>
+ 	  					</div>
+	 				</div>
+	 				</div>
+	 				</div>
+	 					
+	 				
+	 				
+	 				
+	 				 
+	 	<div class="card-body form-group">
+	
+	                  <h6><b>Equipment Details:</b></h6>
+	                    <hr class="bg-navy">
+	                          
+	                  <div class='row'>
+	                  	<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="institutionName" data-langtag="Institution Name"  >Institution Name :</label>
+	                			<input class="form-control form-control-sm desabledTextBox" type="text" id="institutionName" placeholder="Apolo Hospital" name="institutionName" maxlength="50" data-validation="mandatory,alphabetOnly">
+	                			<div class="invalid-feedback"></div>
+	              			</div>
+					 	</div>	
+					 	
+					 	<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="Department Name" data-langtag="Department Name"  >Department Name :</label>
+	                			<input class="form-control form-control-sm desabledTextBox" type="text" id="Department Name" placeholder="Aathner Betul-CHC - ANC ROOM" name="Department Name" maxlength="50" data-validation="mandatory,alphabetOnly">
+	                			<div class="invalid-feedback"></div>
+	              			</div>
+					 	</div>
+                                     
+  		                              
+  				         <div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="equipmentName" data-validation="mandatory" data-langtag="Equipment Name" >Equipment Name : 	</label>
+	                			<select class="form-control form-control-sm  " id ='equipmentName' name="equipmentName">
+	                				<option value="" selected="selected">Select Equipment Name</option>
+								   <option title="Select Value" selected="" value="0">Select Value</option>
+									<option title="4 To 13 Mhz Linear  Transducer  With Near Focus (Probe For Usg Machine ) [2011]" value="18000341">4 To 13 Mhz Linear  Transducer  With Near Focus (Probe For Usg Machine ) [2011]</option>
+									<option title="Abg Machine [10001]" value="18000001">Abg Machine [10001]</option>
+		                        </select>
+	              			<div class="invalid-feedback"></div>
+ 	  					</div>
+	 				</div>
+	 			
+	 				
+	 				<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="equipmentModel" data-validation="mandatory" data-langtag="Equipment Model " >Equipment Model: </label>
+	                			<select class="form-control form-control-sm  " id ='equipmentModel' name="equipmentModel">
+	                				<option value="" selected="selected">Select Equipment Model </option>
+	                			</select>
+	              			<div class="invalid-feedback"></div>
+ 	  					</div>
+	 				</div>
+  				       </div>
+  				       </div>
+  				  <div class="card-body form-group">
+	
+	                  <h6><b> Request Details:</b></h6>
+	                    <hr class="bg-navy">
+	                          
+	                  <div class='row'>
+						
+						<div class='col-lg-3'  >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="problemDescription" data-validation="mandatory" data-langtag="Problem Description " >Problem Description </label>
+	                			<select class="form-control form-control-sm  " id ='problemDescription ' name="problemDescription">
+	                				<option value="" selected="selected">Select Problem Description </option>
+	                			</select>
+	                		<div class="invalid-feedback"></div>
+ 	  					</div>
+	 				</div>
+	 				
+	 	
+	 				<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="contactPersonName" data-validation="mandatory" data-langtag="Contact Person Name" >Contact Person Name :</label>
+	                			<select class="form-control form-control-sm  " id ='contactPersonName' name="contactPersonName">
+	                				<option value="" selected="selected">Select Contact Person Name</option>
+	                			</select>
+	              				<div class="invalid-feedback"></div>
+ 	  						</div>
+	 					</div>
+	 					
+	 					
+	 					<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="mobileNo" data-langtag="Mobile No"  >Mobile No. :</label>
+	                			<input class="form-control form-control-sm  " type="text" id="mobileNo" name="mobileNo" maxlength="50" data-validation="mandatory,alphabetOnly">
+	                			<div class="invalid-feedback"></div>
+	              			</div>
+					 	</div>	
+					 <div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="remarks" data-langtag="Remarks"  >Remarks :</label>
+	                			<input class="form-control form-control-sm  " type="text" id="remarks" name="remarks" maxlength="50" data-validation="mandatory,alphabetOnly">
+	                			<div class="invalid-feedback"></div>
+	              			</div>
+					 	</div>
+					 	
+	 					<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="emailId" data-langtag="Email ID"  >Email ID. :</label>
+	                			<input class="form-control form-control-sm  " type="email" id="emailId" name="emailId" maxlength="50" data-validation="mandatory,alphabetOnly">
+	                			<div class="invalid-feedback"></div>
+	              			</div>
+					 	</div>	
+					 	
+					 	<div class="row">
+				 	<div class='col-lg-3 d-md-none d-lg-block'>&nbsp;</div>
+					 	<div class="form-group">
+				 	         <label for="scales">Is Item not in Working Condition :</label>
+				 	            <input type="checkbox" id="checkbox1" name="checkbox1" checked>
+                                 <div class="invalid-feedback"></div>
+	              			
+					 	</div>
+					 	</div>
+				 
+			
+					                
+                 
+                 
+	</div>
+	</div>
+    <div class="card-footer">
+		<div class="text-center">
+		      <button class="btn bg-gradient-success mt-4 btn-sm" id="btnBackReq"><i class="fas fa-arrow-circle-left"></i> Back</button>
+                                         
+		</div>
+	</div>  
+ 
+  
+</div>
+
+<p> <i class="fa fa-circle" style="font-size:8px;color:#17a2b8"></i> Non Functional  Bold Font - Verified Equipments;  Normal Font - Unverified Equipments</p>

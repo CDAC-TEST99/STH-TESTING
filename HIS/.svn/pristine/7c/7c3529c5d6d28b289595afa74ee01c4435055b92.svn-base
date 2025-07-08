@@ -1,0 +1,636 @@
+<script>
+$(document).ready(function () {
+	$('#btnview').click(function(){
+		$('#LISTFORM').addClass('hideData');
+		$('#VIEWPAGEFORM ').removeClass('hideData');		
+	});
+	$('#btnBack').click(function(){
+		$('#LISTFORM').removeClass('hideData');
+		$('#VIEWPAGEFORM ').addClass('hideData');		
+	});
+	$('#btnrequest').click(function(){
+		$('#LISTFORM').addClass('hideData');
+		$('#REQUESTLISTFORM').removeClass('hideData');		
+	});
+	$('#btnBackReq').click(function(){
+		$('#LISTFORM').removeClass('hideData');
+		$('#REQUESTLISTFORM').addClass('hideData');		
+	});
+	$('#btnrepayment').click(function(){
+		$('#LISTFORM').addClass('hideData');
+		$('#REPAYMENTLISTFORM').removeClass('hideData');		
+	});
+	$('#btnBackRepay').click(function(){
+		$('#LISTFORM').removeClass('hideData');
+		$('#REPAYMENTLISTFORM').addClass('hideData');		
+	});
+	
+})
+</script>
+
+<div class="card card-info border-info center m-1" id='LISTFORM' >
+			<div class="card-header bg-navy"><h5 class="card-title text-center ">
+Purchase Order Payment Desk</h5>
+			</div>
+
+
+	<div class="card-body form-group">
+ 	
+  		 <div class='row'>
+  				 
+					 	<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="paymentAuthority" data-validation="mandatory" data-langtag="Payment Authority" >Payment Authority</label>
+	                			<select class="form-control form-control-sm  " id ='paymentAuthority' name="paymentAuthority">
+	                				<option value="" selected="selected">Select </option>
+	                				<option value="" selected="selected">Ashoknagar-CMHO</option>
+	                				<option value="" selected="selected">Alirajpur-CS</option>
+	                				<option value="" selected="selected">Betul-CS</option>
+	                				<option value="" selected="selected">Bhopal-CS</option>
+	                				<option value="" selected="selected">Dhar-CMHO</option>
+	                				<option value="" selected="selected">Guna-CS</option>
+	                			</select>
+								<div class="invalid-feedback"></div>
+							</div>	
+						</div>
+		
+				 	
+					 	<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="status" data-validation="mandatory" data-langtag="Status" >Status</label>
+	                			<select class="form-control form-control-sm" id ='status' name="status">
+	                				<option value="" selected>Select </option>
+	                				<option value="" >Bill Verified</option>
+	                				<option value="" >Offline</option>
+	                				<option value="" >Payment done</option>
+	                				<option value="" >Payment failed</option>
+	                				<option value="" >Payment process</option>
+	                				<option value="" >Payment failed</option>
+	                				<option value="" >Payment rejected</option>
+	                			</select>
+								<div class="invalid-feedback"></div>
+							</div>
+						</div>
+						
+	</div>
+	 		
+
+			<div class='text-center'>
+				<button class='btn bg-gradient-success mt-4 btn-sm' id='btnrequest'><i class="fa fa-paper-plane"  ></i> Request</button>
+				<button class='btn bg-gradient-success mt-4 btn-sm' id='btnrepayment' ><i class="fa fa-credit-card"></i> Re-Payment</button>
+				<button class='btn bg-gradient-success mt-4 btn-sm' id='btnview' ><i class="fa fa-eye"></i> View</button>
+			</div>
+	
+	
+			<div class='row'>
+			<div class='col-lg-4'>	
+				<div class="form-group row">                   
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" id="search" placeholder="Search">
+                    </div>
+                  </div>
+			</div>
+			
+			</div>	
+			<div class='row no-more-tables'>
+			<table class="table table-hover">
+			  <thead class="bg-navy">
+			      <tr>
+			      	<th><input type="checkbox"></th>
+			        <th >Bill Ref No</th>
+			        <th>Bill Date</th>
+			        <th>Supplier Name</th>
+			        <th>PO Number</th>
+			        <th>Amount Requested</th>
+			        <th>Status</th>
+			        
+			      </tr>
+			    </thead>
+			    <tbody>
+			     <tr>
+			      	<td class='d-none d-sm-block' ><input type="checkbox"></td>
+			        <td data-title='Equipment Name' >2219020098</td>
+			        <td data-title='Equipment Model'>08-Feb-2019</td>
+			        <td data-title='Serial No.'>Fuji Film India Pvt Ltd</td>
+			        <td data-title='Bar Code'>718099980066</td>
+			        <td data-title='Manufacturer Name'>	 605000.00</td>
+			        <td data-title='Equipment Status'>Payment Done</td>
+			        
+			      </tr>
+			      <tr>
+			      	<td class='d-none d-sm-block' ><input type="checkbox"></td>
+			        <td data-title='Equipment Name' >	 2219022679</td>
+			        <td data-title='Equipment Model'> 23-Feb-2019</td>
+			        <td data-title='Serial No.'> Inline Medicare</td>
+			        <td data-title='Bar Code'>		 719019980633</td>
+			        <td data-title='Manufacturer Name'>	  11020.00</td>
+			        <td data-title='Equipment Status'>Payment Done</td>
+			        
+			      </tr>
+			      <tr>
+			      	<td class='d-none d-sm-block' ><input type="checkbox"></td>
+			        <td data-title='Equipment Name' >2219020098</td>
+			        <td data-title='Equipment Model'>08-Feb-2019</td>
+			        <td data-title='Serial No.'>Fuji Film India Pvt Ltd</td>
+			        <td data-title='Bar Code'>718099980066</td>
+			        <td data-title='Manufacturer Name'>	 605000.00</td>
+			        <td data-title='Equipment Status'>Payment Done</td>
+			        
+			      </tr>
+			    </tbody>
+			 </table>	
+			</div>
+			 
+	</div>  
+		<div class="card-footer">
+		             <p> <i class="fa fa-circle m-2" style="font-size:8px;color:#17a2b8"></i>   Approved
+			 <i class="fa fa-circle m-2" style="font-size:8px;color:#17a2b8"></i>	Payment Done
+			<i class="fa fa-circle m-2" style="font-size:8px;color:#17a2b8"></i> 	Offline Payment Done</p> 
+		</div>
+</div>
+
+
+<div class="card card card-info border-info center m-1 hideData" id='VIEWPAGEFORM'  >
+	<div class="card-header bg-navy">
+		<h6 class="text-left">Bill Request Details >> View</h6>
+	</div>
+	<div class="card-body form-group">
+	<h6><b>Bill Details :</b></h6>
+	<hr class="bg-navy">
+	 <div class='row'>
+	 
+  <div class='col-lg-3' >
+  				<div><b>Bill No. :</b>	22191200007</div>	
+  				<div><b>Bill Date :</b>	19-Dec-2019 15:35:35</div>
+				<div><b>Supplier Name :</b>	Adarsh Enterprises</div>	
+				<div><b>Payment Authority :</b>	Aagar- CS</div>
+  		</div>
+  		<div class='col-lg-3' >		 
+  				<div><b>PO No. :	</b>719129980010</div> 	
+  				<div><b>Dispatch No. :</b>	819129980007</div>
+				<div><b> Received Amt Without Tax (₹) [A] :</b>	100.00</div>	
+				<div><b> Penalty Amt (₹) [B] :	</b>0.00</div>
+</div>
+			
+				<div class='col-lg-3' >		 
+  				<div><b>GST Rate (%)[T] :	</b>	IGST:10.00%	</div>
+  				<div><b>Tax Amount (₹) [C=T%(A-B)] :	</b>10.00</div>
+				<div><b>TDS Amt (₹)[D=2%(A-B)] :</b>	2.00	</div>
+				<div><b>Net Amt. (₹)[E=A-B+C] :</b>	110.00</div>
+</div>
+	<div class='col-lg-3' >		 
+  				 
+  				<div><b>Total Payable Amt. (₹)[E-D] :</b>	108.00	</div>
+  				<div><b>Payable Amount (₹) :</b>	108.00</div>
+				<div><b>Submitted By :	</b>siddharth	</div>
+				<div><b>Remarks :	</b>ok</div>
+				<div><b>Status : 	</b>Payment Pending</div>
+</div> 	
+	</div>
+	<div><h6><b>Supplier Details :</b></h6>
+	<hr class="bg-navy"></div>
+		<div><h6><b> Payment Process Details :
+</b></h6>
+	<hr class="bg-navy"></div>
+	
+	</div>
+    <div class="card-footer">
+		<div class="text-center">
+              <button class="btn bg-gradient-success mt-4 btn-sm" id="btnBack"><i class="fas fa-arrow-circle-left"></i> Back</button>                            
+		</div>
+	</div>  
+ 
+  
+</div>
+  
+  
+  <!--card for request button-->
+  
+<div class="card card-info border-info center m-1 hideData" id='REQUESTLISTFORM' >
+			<div class="card-header bg-navy"><h5 class="card-title text-center ">
+Purchase Order >> Payment Desk</h5>
+			</div>
+
+
+	<div class="card-body form-group">
+ 	<div><h6><b> Request Information :
+	</b></h6>
+	<hr class="bg-navy"></div> 
+  		 <div class='row'>
+  				 
+					 	<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="paymentAuthority" data-validation="mandatory" data-langtag="Payment Authority" >Payment Authority</label>
+	                			<select class="form-control form-control-sm  " id ='paymentAuthority' name="paymentAuthority">
+	                				
+							<option title="Select Value" selected value="0">Select Value</option>
+							<option title="AAAAA" value="5057864">AAAAA</option>
+							<option title="AAAAA - ANC ROOM" value="5057865">AAAAA - ANC ROOM</option>
+							<option title="Aagar- CS" value="5055972">Aagar- CS</option>
+							<option title="Agar-CMHO" value="5001723">Agar-CMHO</option>
+							<option title="Alirajpur-CMHO" value="5001724">Alirajpur-CMHO</option>
+							<option title="Alirajpur- CS" selected value="5055973">Alirajpur- CS</option>
+							<option title="Annupur-CMHO" value="5001725">Annupur-CMHO</option>
+							<option title="Annupur- CS" value="5055974">Annupur- CS</option>
+							<option title="Ashoknagar-CMHO" value="5001726">Ashoknagar-CMHO</option>
+							<option title="Ashoknagar- CS" value="5055975">Ashoknagar- CS</option>
+							<option title="Badwani- CS" value="5055976">Badwani- CS</option>
+							<option title="Bairagarh SUP Bhopal" value="5057802">Bairagarh SUP, Bhopal</option>
+							<option title="Balaghat-CMHO" value="5001727">Balaghat-CMHO</option>
+							<option title="Balaghat- CS" value="5055977">Balaghat- CS</option>
+							<option title="Barwani-CMHO" value="5001728">Barwani-CMHO</option>
+	                			</select>
+								<div class="invalid-feedback"></div>
+							</div>	
+						</div>
+		
+				 	
+					 	<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="numPONo" data-validation="numPONo" data-langtag="PO No" >PO No.</label>
+	                			<select class="form-control form-control-sm" id ='numPONo' name="numPONo">
+	                				
+										<option title="All" selected value="0">All</option>
+										<option title="719109980003[PULSE OXIMETER]" value="719109980003">719109980003[PULSE OXIMETER]</option>
+										<option title="719039981433[ECG MACHINE]" value="719039981433">719039981433[ECG MACHINE]</option>
+										<option title="719039981213[4 to 13 MHz linear  transducer  with near focus (probe for USG machine )]" value="719039981213">719039981213[4 to 13 MHz linear  transducer  with near focus (probe for USG machine )]</option>
+										<option title="719039981214[Transvaginal probe with FOV of 145degree with 90degree volume scan angle with 4to9MHz freq band widt]" value="719039981214">719039981214[Transvaginal probe with FOV of 145degree with 90degree volume scan angle with 4to9MHz freq band widt]</option>
+										<option title="719039981215[USG MACHINE]" value="719039981215">719039981215[USG MACHINE]</option>
+										<option title="719019980122[HAEMOGLOBINOMETER]" value="719019980122">719019980122[HAEMOGLOBINOMETER]</option>
+
+								</select>
+										<div class="invalid-feedback"></div>
+							</div>
+						</div>
+	</div>
+	 			
+	 		
+
+	<div class='text-center'>
+					
+	<button class='btn bg-gradient-success mt-4 btn-sm' id="btngoequipment"><i class="fa fa-arrow-left"></i> Go</button>
+	
+	</div>
+	
+	<h6><b>Equipment Details :</b></h6><hr class="bg-navy">
+	
+	<div class='row no-more-tables'>
+			<table class="table table-hover">
+			  <thead class="bg-light">
+			      <tr>
+			      	<th><input type="checkbox"></th>
+			        <th >Supplier Name</th>
+			        <th>PO No.</th>
+			        <th>Dispatch No.</th>
+			        <th>PO Date</th>
+			        <th>Dispatch Date</th>
+			        <th>Received Date</th>
+			        <th>ERC Date</th>
+			        <th>Received Value</th>
+			        <th>Total Penalty</th>
+			        <th>ERC Date</th>
+			         <th>Report(s)</th>
+			        
+			      </tr>
+			    </thead>
+			    <tbody>
+			     <tr>
+			      	<td class='d-none d-sm-block' ><input type="checkbox"></td>
+			        <td data-title='Supplier Name'>	Acme</td>
+			        <td data-title='PO No.'>719129980001</td>
+			        <td data-title='Dispatch No.'>719129980001</td>
+			        <td data-title='PO Date'>13-Dec-2019</td>
+			        <td data-title='Dispatch Date'>13-Dec-2019</td>
+			        <td data-title='Received Date'>	13-Dec-2019</td>
+			        <td data-title='ERC Date'>	13-Dec-2019</td>
+			        <td data-title='Received Value'>1000.00</td>
+			        <td data-title='Total Penalty'>0</td>
+			        <td data-title='ERC Date'>	NHM CW(Cw)/6.1.1.2.b</td>
+			        <td data-title='Report(s)'>	</td>
+			        
+			      </tr>
+			      <tr>
+			      	<td class='d-none d-sm-block' ><input type="checkbox"></td>
+			        <td data-title='Supplier Name' >	Inline Medicare</td>
+			        <td data-title='PO No.'>719129980005</td>
+			        <td data-title='Dispatch No.'> 819129980001</td>
+			        <td data-title='PO Date'> 16-Aug-2019</td>
+			        <td data-title='Dispatch Date'>	16-Aug-2019</td>
+			        <td data-title='Received Date'> 16-Aug-2019</td>
+			        <td data-title='ERC Date'> 19-Aug-2019</td>
+			        <td data-title='Received Value'> 19990.00</td>
+			        <td data-title='Total Penalty'> 0</td>
+			        <td data-title='ERC Date'> State VITAL(Vital)</td>
+			        <td data-title='Report(s)'>	</td>
+			        
+			      </tr>
+			      <tr>
+			      	<td class='d-none d-sm-block' ><input type="checkbox"></td>
+			        <td data-title='Supplier Name' >	Acme</td>
+			        <td data-title='PO No.'>719129980001</td>
+			        <td data-title='Dispatch No.'>719129980001</td>
+			        <td data-title='PO Date'>13-Dec-2019</td>
+			        <td data-title='Dispatch Date'>13-Dec-2019</td>
+			        <td data-title='Received Date'>	13-Dec-2019</td>
+			        <td data-title='ERC Date'>	13-Dec-2019</td>
+			        <td data-title='Received Value'>1000.00</td>
+			        <td data-title='Total Penalty'>0</td>
+			        <td data-title='ERC Date'>	NHM BSU(Blood Storage Unit)</td>
+			        <td data-title='Report(s)'>	</td>
+			        
+			      </tr>
+			    </tbody>
+			 </table>	
+			</div>
+	
+	
+	
+<div><h6><b>Payment Details :</b></h6>
+	<hr class="bg-navy"></div> 
+	 <div class='row'>
+	 
+  <div class='col-lg-3' >
+ 
+  				<div><b>Received Amount Without Tax (₹) [A] : 	</b>	</div>	
+  				<div><b>GST (%)[T] :</b>	undefined(undefined)</div>
+				
+  		</div>
+  		<div class='col-lg-3' >		 
+  				<div><b>TDS (2.00 %) [D=2%(A-B)] :	</b></div> 	
+  				<div><b>PO Net Amount (₹)[A-B+C] : 	</b>	</div>
+				
+</div>
+			
+				<div class='col-lg-3' >		 
+  				<div><b>Total Penalty (₹) [B] : 	</b>	 	</div>
+  				<div><b>Tax Amount (₹) [C=T%(A-B)] :	</b> </div>
+				
+</div>
+	<div class='col-lg-3' >		 
+  				 
+  				<div><b> Total Payable Amt.[A-B+C-D](₹) :</b> 	 	</div>
+  				
+</div> 	
+	</div>
+		<div class="row m-4"></div>
+		<div><h6><b> Bill Details : 
+
+</b></h6>
+	<hr class="bg-navy"></div>
+		 <div class='row'>
+	 			<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="billNo" data-langtag="Bill No"  >Bill No. :</label>
+	                			<input class="form-control form-control-sm  " type="text" id="billNo" name="billNo" maxlength="50" data-validation="mandatory,alphabetOnly">
+	                			<div class="invalid-feedback"></div>
+	              			</div>
+					 	</div>	
+					 	<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="billDate" data-langtag="Bill Date"  >Bill Date : 	14-Jan-2020</label>
+	                			<input class="form-control form-control-sm" type="text" id="billDate" name="billDate" maxlength="50" data-validation="mandatory,alphabetOnly">
+	                			<div class="invalid-feedback"></div>
+	              			</div>
+					 	</div>
+					 	<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="billSubmittedBy" data-validation="mandatory" data-langtag="Bill Submitted By" >Bill Submitted By :</label>
+	                			<select class="form-control form-control-sm  " id ='billSubmittedBy' name="billSubmittedBy">
+	                				<option value="" selected>Select </option>
+	                				<option value="" >AARTI GUPTA</option>
+	                				<option value="" >others</option>
+	                				
+	                			</select>
+								<div class="invalid-feedback"></div>
+							</div>	
+						</div>	
+					 	<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="billAmount" data-langtag="Bill Amount"  >Bill Amount (₹) :</label>
+	                			<input class="form-control form-control-sm  " type="text" id="billAmount" name="billAmount" maxlength="50" data-validation="mandatory,alphabetOnly">
+	                			<div class="invalid-feedback"></div>
+	              			</div>
+					 	</div>	
+					 	<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="payableAmount" data-langtag="Payable Amount"  >Payable Amount (₹) :</label>
+	                			<input class="form-control form-control-sm  " type="text" id="payableAmount" name="payableAmount" maxlength="50" data-validation="mandatory,alphabetOnly">
+	                			<div class="invalid-feedback"></div>
+	              			</div>
+					 	</div>
+					 	<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="paymentOption" data-validation="mandatory" data-langtag="Payment Option" >Payment Option :</label>
+	                			<select class="form-control form-control-sm  " id ='paymentOption' name="paymentOption">
+	                				<option value="" selected>Offline </option>
+	                				
+	                				<option value="" >Online</option>
+	                				
+	                			</select>
+								<div class="invalid-feedback"></div>
+							</div>	
+						</div>		
+					 <div class='col-lg-3'>
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="remarks" data-validation="mandatory" data-langtag="Remarks" >Remarks : 		 </label>
+	                			<textarea rows="" cols="" class="form-control form-control-sm  "></textarea>
+	                		<div class="invalid-feedback"></div>
+ 	  					</div>
+	 				</div>	 
+	 				<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label for="postInspection" data-validation="mandatory" data-langtag="Post Inspection" >All Details of Payment is checked and verified : </label>
+	                			<input  type="checkbox" id="postInspection" name="postInspection" maxlength="50" data-validation="mandatory,alphabetOnly">
+	              				<div class="invalid-feedback"></div>
+ 	  						</div>
+	 					</div>	
+	
+	</div>
+	
+			</div>
+			
+			
+
+<div class="card-footer">
+	<div class='text-center'>
+			
+					
+	<button class='btn bg-gradient-success mt-4 btn-sm' ><i class="fa fa-save"></i> Save</button>
+	<button class='btn bg-gradient-success mt-4 btn-sm' ><i class="fa fa-window-close"></i> Clear</button>
+	<button class="btn bg-gradient-success mt-4 btn-sm" id="btnBackReq"><i class="fas fa-arrow-circle-left"></i> Back</button> 
+			  		
+	
+	</div>
+<p> <i class="fa fa-circle" style="font-size:8px;color:#17a2b8"></i>   * Mandatory Fields</p>
+<p> <i class="fa fa-circle" style="font-size:8px;color:#17a2b8"></i>	! Please check supplier detaiils like GST, account before generating payment.</p>
+
+
+</div>
+
+</div>
+
+  <!--card for re-payment button-->
+  
+<div class="card card-info border-info center m-1 hideData" id='REPAYMENTLISTFORM' >
+			<div class="card-header bg-navy"><h5 class="card-title text-center ">
+Purchase Order >> Re-Payment Desk</h5>
+			</div>
+
+
+	<div class="card-body form-group">
+ 	<div><h6><b> Request Information :
+</b></h6>
+	<hr class="bg-navy"></div> 
+  		 <div class='row'>
+  				 
+					 	<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="paymentAuthority" data-validation="mandatory" data-langtag="Payment Authority" >Payment Authority</label>
+	                			<select class="form-control form-control-sm  " id ='paymentAuthority' name="paymentAuthority">
+	                			<option title="Select Value" selected value="0">Select Value</option>
+<option title="AAAAA" value="5057864">AAAAA</option>
+<option title="AAAAA - ANC ROOM" value="5057865">AAAAA - ANC ROOM</option>
+<option title="Aagar- CS" value="5055972">Aagar- CS</option>
+<option title="Agar-CMHO" value="5001723">Agar-CMHO</option>
+<option title="Alirajpur-CMHO" value="5001724">Alirajpur-CMHO</option>
+<option title="Alirajpur- CS" selected value="5055973">Alirajpur- CS</option>
+<option title="Annupur-CMHO" value="5001725">Annupur-CMHO</option>
+<option title="Annupur- CS" value="5055974">Annupur- CS</option>
+<option title="Ashoknagar-CMHO" value="5001726">Ashoknagar-CMHO</option>
+<option title="Ashoknagar- CS" value="5055975">Ashoknagar- CS</option>
+<option title="Badwani- CS" value="5055976">Badwani- CS</option>
+<option title="Bairagarh SUP, Bhopal" value="5057802">Bairagarh SUP, Bhopal</option>
+<option title="Balaghat-CMHO" value="5001727">Balaghat-CMHO</option>
+<option title="Balaghat- CS" value="5055977">Balaghat- CS</option>
+<option title="Barwani-CMHO" value="5001728">Barwani-CMHO</option>
+	                			</select>
+								<div class="invalid-feedback"></div>
+							</div>	
+						</div>
+		
+				 	
+					 	<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="supplierName" data-validation="supplierName" data-langtag="Supplier Name" >Supplier Name</label>
+	                			<select class="form-control form-control-sm" id ='supplierName' name="supplierName">
+	                				
+						<option title="All" selected value="0">All</option>
+<option title="Anthrometriques Medical Instruments" value="1812090">Anthrometriques Medical Instruments</option>
+<option title="Biomedical System Pvt Ltd" value="1812139">Biomedical System Pvt Ltd</option>
+<option title="Bpl Medical Technologies" value="1810194">Bpl Medical Technologies</option>
+<option title="Science House Medicals Pvt Ltd" value="1812110">Science House Medicals Pvt Ltd</option>
+
+					
+	                			</select>
+								<div class="invalid-feedback"></div>
+							</div>
+						</div>
+	</div>
+	 			
+	 		
+
+			<div class='text-center'>
+			
+					
+	<button class='btn bg-gradient-success mt-4 btn-sm' ><i class="fa fa-arrow-left"></i> Go</button>
+	 
+			  		
+	
+	</div>
+	
+	<div><h6><b>Equipment Details :</b></h6>
+	<hr class="bg-navy"></div> 
+	
+	<div class='row no-more-tables'>
+			<table class="table table-hover">
+			  <thead class="bg-light">
+			      <tr>
+			      	<th><input type="checkbox"></th>
+			        <th >Supplier Name</th>
+			        <th>PO No.</th>
+			        <th>Dispatch No.</th>
+			        <th>PO Date</th>
+			        <th>Dispatch Date</th>
+			        <th>Received Date</th>
+			        <th>ERC Date</th>
+			        <th>Received Value</th>
+			        <th>Total Penalty</th>
+			        <th>Programme Name/Budget Line </th>
+			        <th>Report(s)</th>
+			        <th>Rejected Date/Remarks</th>
+			         
+			      </tr>
+			    </thead>
+			    <tbody>
+			    <tr>
+			      	<td class='d-none d-sm-block' ><input type="checkbox"></td>
+			        <td data-title=''>	Acme</td>
+			        <td data-title=''>719129980001</td>
+			        <td data-title=''>719129980001</td>
+			        <td data-title='Bar Code'>13-Dec-2019</td>
+			        <td data-title='Manufacturer Name'>13-Dec-2019</td>
+			        <td data-title='Equipment Status'>	13-Dec-2019</td>
+			        <td data-title='Verification Status'>	13-Dec-2019</td>
+			        <td data-title='Bar Code'>1000.00</td>
+			        <td data-title='Manufacturer Name'>0</td>
+			        <td data-title='Equipment Status'>	NHM CW(Cw)/6.1.1.2.b</td>
+			        <td data-title='Verification Status'>	</td>
+			        <td data-title='Verification Status'>	</td>
+			      </tr>
+			       <tr>
+			      	<td class='d-none d-sm-block' ><input type="checkbox"></td>
+			        <td data-title='Equipment Name' >		Inline Medicare</td>
+			        <td data-title='Equipment Model'>719129980005</td>
+			        <td data-title='Serial No.'>	819129980001</td>
+			        <td data-title='Bar Code'>	16-Aug-2019</td>
+			        <td data-title='Manufacturer Name'>	16-Aug-2019</td>
+			        <td data-title='Equipment Status'>		16-Aug-2019</td>
+			        <td data-title='Verification Status'>		19-Aug-2019</td>
+			        <td data-title='Bar Code'>19990.00</td>
+			        <td data-title='Manufacturer Name'>0</td>
+			        <td data-title='Equipment Status'>	State VITAL(Vital)</td>
+			        <td data-title='Verification Status'>	</td>
+			        <td data-title='Verification Status'>	</td>
+			      </tr>
+			       <tr>
+			      	<td class='d-none d-sm-block' ><input type="checkbox"></td>
+			        <td data-title='Equipment Name' >	Acme</td>
+			        <td data-title='Equipment Model'>719129980001</td>
+			        <td data-title='Serial No.'>719129980001</td>
+			        <td data-title='Bar Code'>13-Dec-2019</td>
+			        <td data-title='Manufacturer Name'>13-Dec-2019</td>
+			        <td data-title='Equipment Status'>	13-Dec-2019</td>
+			        <td data-title='Verification Status'>	13-Dec-2019</td>
+			        <td data-title='Bar Code'>1000.00</td>
+			        <td data-title='Manufacturer Name'>0</td>
+			        <td data-title='Equipment Status'>	NHM BSU(Blood Storage Unit)</td>
+			        <td data-title='Verification Status'>	</td>
+			        <td data-title='Verification Status'>	</td>
+			      </tr>
+			    </tbody>
+			 </table>	
+			</div>
+			
+			
+		
+			
+</div>
+<div class="card-footer">
+<div class='text-center'>
+			
+					
+	<button class='btn bg-gradient-success mt-4 btn-sm' ><i class="fa fa-save"></i> Save</button>
+	<button class='btn bg-gradient-success mt-4 btn-sm' ><i class="fa fa-window-close"></i> Clear</button>
+	<button class="btn bg-gradient-success mt-4 btn-sm" id="btnBackRepay"><i class="fas fa-arrow-circle-left"></i> Back</button> 
+			  		
+	
+	</div>
+<p> <i class="fa fa-circle" style="font-size:8px;color:#17a2b8"></i>   * Mandatory Fields</p>
+<p> <i class="fa fa-circle" style="font-size:8px;color:#17a2b8"></i>	! Please check supplier detaiils like GST, account before generating payment.</p>
+
+
+</div>
+</div>
+
+
+

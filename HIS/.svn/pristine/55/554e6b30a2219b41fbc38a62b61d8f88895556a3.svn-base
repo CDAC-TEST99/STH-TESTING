@@ -1,0 +1,125 @@
+ body {
+     /*  background: url('https://hmiscghs.uat.dcservices.in/AHIMSG5/hissso/portal/images/slider/slider1.png');
+      background-position: center;
+      background-size: 100% 130vh;
+      background-repeat: repeat; */
+      background: #fff
+    }
+    
+	.processTypeHeading{
+	 	text-align: center;
+	 	color: #e73a5c;
+	 	 font-weight: bold;
+	}
+    .module-heading {
+      font-size: 15px;
+	  font-weight: bold;
+	  text-align: left;
+	  color: #e73a5c;
+	  border-bottom:1px solid #f0f0f0;
+    }
+    .module-heading img{
+    	width: 50px;
+    	height: 50px;
+    	margin:10px
+    }
+
+    .moduleContainer {
+      border: 2px solid #b7b7d2;
+      border-radius: 10px;
+      padding: 10px;
+      background: #eef; 
+      margin-bottom: 10px;      
+      margin-left: 2px;
+      width: 99%;
+      padding-top: 30px;
+    }
+	
+	.box-col{
+		height: 170px;
+	}
+    .box {
+      /* height: 150px; */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .box:hover {
+      transform: scale(1.05);
+    }
+
+    .icon-container {
+      width: 50px;
+      height: 50px;
+      /*background-color: #f1f2f1;*/
+      background-color:#F6F4F0;
+	  color:#62ac5f;	  
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 5px;
+      transform-style: preserve-3d;
+      transition: transform 0.6s;
+    }
+    
+    .box:hover .icon-container {
+            transform: rotateY(180deg); /* Flips the box */
+        }
+
+       
+
+    .icon {
+      font-size: 30px;      
+    }
+    
+     .icon-green {
+      color: #448234;
+    }
+    .icon-blue {
+      color: #364f95;
+    }
+    .icon-purple {
+      color: #931a73;
+    }
+    
+    .icon-drill {
+      color: #e73a5c;
+    }
+
+    .text {
+      margin-top: 10px;
+      font-size: 10px;
+      color: #1414f7;
+      letter-spacing: 1px;
+    }
+
+    @media (min-width: 992px) {
+      /* .box {
+        height: 150px;
+      } */
+
+      .icon-container {
+        width: 70px;
+        height: 70px;
+      }
+
+      .icon {
+        font-size: 40px;
+      }
+
+      .text {
+        font-size: 12px;
+      	color: #1414f7;
+      letter-spacing: 1px;
+      }
+    }
+
+    .drill-down-container {
+      background: #f4d5db;
+  	  margin: 5px;
+    }

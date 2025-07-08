@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link rel="stylesheet" href="/HIS/hisglobal/eUpkaranTemplate/dist/css/adminlte.min.css">
+</head>
+<body>
+<div style="letter-spacing: 1px;">
+<style type="text/css">
+ .table td, .table th{
+	/* padding: 2px; */
+	border: none;
+} 
+</style>
+<table class='table' style="width: 100%" >
+<tbody>
+<tr>
+   <td colspan="3" style="text-decoration: underline;font-weight: bold;text-align: center;"><h4>DISBURSEMENT NOTE</h4></td>
+</tr>
+<tr>
+   <td style="text-align: center;width:5%">No. </td>
+   <td  style="width:50%% ;text-align: left;" >Bill No. : #billNo#</td>
+   <td  style="text-align: right;width:45%%">Date : #dt#</td>   
+</tr>
+<tr>
+   <td style="text-align: center;width:5%">1. </td>
+   <td  style="width:50%% ;text-align: left;" >Details of Government Order</td>
+   <td  style="text-align: left;width:45%">#goRefNo#</td>   
+</tr>
+<tr>
+   <td style="text-align: center;width:5%">2. </td>
+   <td  style="width:50%% ;text-align: left;" >Proceedings of Directorate for transfer of funds</td>
+   <td  style="text-align: left;width:45%">#allRefNo#</td>   
+</tr>
+<tr>
+   <td style="text-align: center;width:5%">3. </td>
+   <td  style="width:50%% ;text-align: left;" >Details of Amount Deposited</td>
+   <td  style="width:45%">
+   <table class='table' style="width: 100%" class='tbldatavo3'>
+   		<td  style="text-align: left;width:60%">Amount deposited on @depositdt@</td>
+   		<td  style="text-align: right;width:40%">Rs. @depositAmt@</td>
+   </table>
+   </td>   
+</tr>
+<tr>
+   <td style="text-align: center;width:5%">4. </td>
+   <td  style="width:50%% ;text-align: left;" >OSMCL /Directorates Purchase Orders</td>
+   <td  style="text-align: left;width:45%">#porefNo#</td>   
+</tr>
+<tr>
+   <td style="text-align: center;width:5%">5. </td>
+   <td  style="width:50%% ;text-align: left;" >Details of Equipments/items ordered</td>
+   <td  style="text-align: left;width:45%">#equipmentdtl#</td>   
+</tr>
+<tr>
+   <td style="text-align: center;width:5%">6. </td>
+   <td  style="width:50%% ;text-align: left;" >Suppliers Name and address</td>
+   <td  style="text-align: left;width:45%">#supplierName#<br/>#address#</td>   
+</tr>
+<tr>
+   <td style="text-align: center;width:5%">7. </td>
+   <td  style="width:50%% ;text-align: left;" >Details of Invoice(s)</td>
+   <td  style="text-align: left;width:45%">#supplierName#<br/>Annexed</td>   
+</tr>
+<tr>
+   <td style="text-align: center;width:5%"></td>
+   <td  style="text-align: left;font-weight: bold;" colspan="2">Payment of Rs. #totalNetAmt# /- ( #RsInWords# ) to M/s.#supplierName#    is recommended.</td>
+</tr>
+<tr>
+   <td style="text-align: center;width:5%"></td>
+   <td  style="text-align: left;" colspan="2">For orders please. Subject to approval sanction order(s) is/are  placed below for approval.</td>
+</tr>
+<tr>
+   <td style="text-align: center;width:5%"></td>
+   <td  style="width:50%% ;text-align: left;" ><br/><br/>A.A.O.</td>
+   <td  style="text-align: left;width:45%"><br/><br/>A.O.</td>   
+</tr>
+<tr>
+   <td style="text-align: center;width:5% ;border-top: 1px solid;"></td>
+   <td  style="text-align: left;font-weight: bold;text-decoration: underline;border-top: 1px solid;" colspan="2">Accounts Section</td>
+</tr>
+<tr>
+   <td style="text-align: center;width:5%"></td>
+   <td  style="width:50%% ;text-align: left;" >Amount sanctioned in the G.O</td>
+   <td  style="text-align: left;width:45%">Rs. #totalSanctionedAmount#</td>   
+</tr>
+<tr>
+   <td style="text-align: center;width:5%"></td>
+   <td  style="width:50%% ;text-align: left;" >Amount deposited</td>
+   <td  style="text-align: left;width:45%">Rs. #totalDepositedAmount#</td>   
+</tr>
+<tr>
+   <td style="text-align: center;width:5%"></td>
+   <td  style="width:50%% ;text-align: left;" >Amount already paid- Bill No. #allBillNos#</td>
+   <td  style="text-align: left;width:45%">Rs. #totalAmountPaid#</td>   
+</tr>
+<tr>
+   <td style="text-align: center;width:5%"></td>
+   <td  style="text-align: left;font-weight: bold;text-decoration: underline;" colspan="2">Details of allocation</td>
+</tr>
+<tr>
+   <td style="text-align: center;width:5%"></td>
+   <td  style="width:50%% ;text-align: left;" >Total value of order placed including Tax</td>
+   <td  style="text-align: left;width:45%">Rs. ##</td>   
+</tr>
+<tr>
+   <td style="text-align: center;width:5%"></td>
+   <td  style="text-align: left;font-weight: bold;text-decoration: underline;" colspan="2">Less</td>
+</tr>
+<tr>
+   <td style="text-align: center;width:5%"></td>
+   <td  style="width:50%% ;text-align: left;" >Amount already paid</td>
+   <td  style="text-align: left;width:45%">Rs. #totalPrevAmount#</td>   
+</tr>
+<tr>
+   <td style="text-align: center;width:5%"></td>
+   <td  style="width:50%% ;text-align: left;" >Amount now proposed (Gross)</td>
+   <td  style="text-align: left;width:45%">Rs. ##</td>   
+</tr>
+<tr>
+   <td style="text-align: center;width:5%"></td>
+   <td  style="width:50%% ;text-align: left;" >Less; LD</td>
+   <td  style="text-align: left;width:45%">Rs. ##</td>   
+</tr>
+<tr>
+   <td style="text-align: center;width:5%"></td>
+   <td  style="width:50%% ;text-align: left;" >Less:Retention amount - 5% for (BG Confirmation)</td>
+   <td  style="text-align: left;width:45%">Rs. ##</td>   
+</tr>
+<tr>
+   <td style="text-align: center;width:5%"></td>
+   <td  style="width:50%% ;text-align: left;" >Less:  Retention amount - 50% for (want of IR & Spcification compliance)</td>
+   <td  style="text-align: left;width:45%">Rs. ##</td>   
+</tr>
+<tr>
+   <td style="text-align: center;width:5%"></td>
+   <td  style="width:50%% ;text-align: left;" >Less:  Retention amount - 30% for Provision Stock Entry</td>
+   <td  style="text-align: left;width:45%">Rs. ##</td>   
+</tr>
+<tr>
+   <td style="text-align: center;width:5%"></td>
+   <td  style="width:50%% ;text-align: left;" >Less:  Retention amount - 20% for IR</td>
+   <td  style="text-align: left;width:45%">Rs. ##</td>   
+</tr>
+<tr>
+   <td style="text-align: center;width:5%"></td>
+   <td  style="width:50%% ;text-align: left;" >Less:  Retention amount - 10% for Technical Spec</td>
+   <td  style="text-align: left;width:45%">Rs. ##</td>   
+</tr>
+<tr>
+   <td style="text-align: center;width:5%"></td>
+   <td  style="width:50%% ;text-align: left;" >Less: TDS on 1% CGST</td>
+   <td  style="text-align: left;width:45%">Rs. ##</td>   
+</tr>
+
+<tr>
+   <td style="text-align: center;width:5%"></td>
+   <td  style="width:50%% ;text-align: left;" >Less: TDS on 1% SGST</td>
+   <td  style="text-align: left;width:45%">Rs. ##</td>   
+</tr>
+
+<tr>
+   <td style="text-align: center;width:5%"></td>
+   <td  style="width:50%% ;text-align: left;" >Less: TDS on 1% IGST</td>
+   <td  style="text-align: left;width:45%">Rs. ##</td>   
+</tr>
+
+
+<tr>
+   <td style="text-align: center;width:5%"></td>
+   <td  style="width:50%% ;text-align: left;" >Net Payable in this proposal</td>
+   <td  style="text-align: left;width:45%">Rs. ##</td>   
+</tr>
+
+<tr>
+   <td style="text-align: center;width:5%"></td>
+   <td  style="width:50%% ;text-align: left;font-weight: bold;" >Total payment</td>
+   <td  style="text-align: left;width:45%">Rs. ##</td>   
+</tr>
+
+<tr>
+   <td style="text-align: center;width:5%"></td>
+   <td  style="width:50%% ;text-align: left;font-weight: bold;" >Balance available in PO</td>
+   <td  style="text-align: left;width:45%">Rs. ##</td>   
+</tr>
+
+
+<tr>
+   <td style="text-align: center;width:5%"></td>
+   <td  style="width:50%% ;text-align: left;font-weight: bold;" >Balance in the GO</td>
+   <td  style="text-align: left;width:45%">Rs. ##</td>   
+</tr>
+
+
+
+
+
+</tbody>
+</table>
+
+</div>
+</body>
+</html>

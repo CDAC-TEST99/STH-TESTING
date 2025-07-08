@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link rel="stylesheet" href="/HIS/hisglobal/eUpkaranTemplate/dist/css/adminlte.min.css">
+</head>
+<body>
+
+<div style="letter-spacing: 1px;">
+<style type="text/css">
+.table td, .table th{
+	padding: 2px;
+	border: none;
+}
+</style>
+<table class='table' style="width: 100%">
+<tbody>
+<!-- <tr>
+   <td colspan="4" style="text-decoration: underline;font-weight: bold;text-align: center;"><h4>SANCTION ORDER</h4></td>
+</tr> -->
+<tr>
+   <td  style="width:75%;"><b>Ref No.: #refNo# </b></td>
+   <td  style="width:25%;text-align: left;font-weight: bold;"><b>Date : #date#</b></td>   
+</tr>
+
+<tr>
+
+  <td  colspan="2" style="width:10%;text-align: left;"><br><br>To : </td>
+   
+</tr>
+
+<tr>
+ 
+   
+   <td  style="text-align: left;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>#supplierName#,</b></td>
+   <td  style="text-align: left;">&nbsp;</td>
+</tr>
+<tr>
+   
+   
+   <td  style="text-align: left;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#supplierAddress#</td>
+   <td  style="text-align: left;">&nbsp;</td>
+</tr>
+ 
+ <tr>
+
+  <td  colspan="2" style="width:10%;text-align: left;"><br><br>Sir,  </td>
+   
+</tr>
+</tbody>
+</table>
+
+<table class='table' style="width: 100%">
+<tbody>
+
+<tr>
+     <td  colspan="4" style="text-align: left;"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sub : </b> CAMC for 9 Nos. of #equipmentName# system with all accessories available at various Govt.
+     Medical  Institute/ Hospital in the state - placement of order- Reg.  <br><br></td>
+    
+</tr>
+
+<tr>
+   <td colspan="4" style="width:10%;text-align: left;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Ref : (1)</b> P.O.Ref: #poRefNumber#, Date: #poDate# </td>
+  </tr>
+
+<tr>
+   <td colspan="4" style="width:10%;text-align: center;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>_______________________________________</b><br><br><br></td>
+  </tr>
+
+<tr>
+   <td colspan="4" style="width:10%;text-align: left;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; With reference to the above, we place the order s with you Comprehensive
+   Annual Maintenance Contract for 9 Nos. of Nos. of #equipmentName# system with all accessories available at various Govt. Medical  Institute/ Hospital in the state with the following terms and conditions.</td>
+  
+</tr>
+
+</tbody>
+</table>
+
+
+
+<table style="width: 100%;length:50%;font-size:11px;margin-top: 10px;" class='tbldatavo2'>
+<thead>
+	<tr >
+	<th style="border:1px solid;vertical-align: top; width:5%;text-align: center;background:#dee2e6" >S No.</th>
+	<th style="border:1px solid;vertical-align: top; width:20%;text-align: center;background:#dee2e6">Description </th>
+	<th style="border:1px solid;vertical-align: top;width:5%;text-align: center;background:#dee2e6">Qty.</th>
+	<th style="border:1px solid;vertical-align: top;width:15%;text-align: center;background:#dee2e6">CAMC rates/unit/year applicable for 7 years</th>
+	
+	
+	</tr>
+</thead>
+<tbody>
+<tr>
+<td style="border:1px solid;vertical-align: top;text-align: center;">#slNo#</td>
+<td style="border:1px solid;vertical-align: top;text-align: center">Comprehensive Annual Maintenance Contract for #equipmentName# with all accessories.<br>Model: #model# <br>Make: #make#</td>
+<td style="border:1px solid;vertical-align: top;text-align: center">#qty#</td>
+<td style="border:1px solid;vertical-align: top;text-align: center;padding-right:5px"> Rs. #cost# /-</td>
+
+
+</tr>
+</tbody>
+
+</table>
+
+<table style="width: 100%;length:50%;font-size:11px;margin-top: 10px;" class='tbldatavo2'>
+<thead>
+	<tr >
+	<th style="border:1px solid;vertical-align: top; width:5%;text-align: center;background:#dee2e6" >Sl. No.</th>
+	<th style="border:1px solid;vertical-align: top; width:20%;text-align: center;background:#dee2e6">Name of the Institute </th>
+	<th style="border:1px solid;vertical-align: top;width:5%;text-align: center;background:#dee2e6">OSMCL Equip ID</th>
+	<th style="border:1px solid;vertical-align: top;width:15%;text-align: center;background:#dee2e6">CAMC with Effect from</th>
+	
+	
+	</tr>
+</thead>
+<tbody>
+<tr>
+<td style="border:1px solid;vertical-align: top;text-align: center;">#slNo#</td>
+<td style="border:1px solid;vertical-align: top;text-align: center"> #institutionName# , #district# </td>
+<td style="border:1px solid;vertical-align: top;text-align: center">#equipId#</td>
+<td style="border:1px solid;vertical-align: top;text-align: center;padding-right:5px"> #camcEffectiveFrom#</td>
+
+
+</tr>
+</tbody>
+
+</table>
+
+<table class='table' style="width: 100%">
+<tbody>
+ <tr>
+   <td  style="text-decoration: underline;font-weight: bold;text-align: left;"><br><br><h4>Term and Condition -</h4></td>
+</tr>
+<tr>
+   <td  style="font-weight: bold;text-align: left;"><h6><b>(1)</b>&nbsp;This order is applicable for #contractYear# at the rates and CAMC commenncement date is  </h6></td>   
+</tr>
+
+<tr>
+   <td  style="font-weight: bold;text-align: left;"><h6><b>(2)</b>&nbsp; Service Tax (GST) extra as applicable.
+</h6></td>   
+</tr>
+
+<tr>
+   <td  style="font-weight: bold;text-align: left;"><h6><b>(3)</b>&nbsp; any breakdown of the equipment witch are under warranty period , shall be rectify with 3 calendar days failing witch, the CAMC commenncement date will be extended accordingly.
+</h6></td>   
+</tr>
+
+
+<tr>
+   <td  style="font-weight: bold;text-align: left;"><h6><b>(4)</b>&nbsp;The Rates of firm during the contract period and no revision will be entertained.</h6></td>   
+</tr>
+
+<tr>
+   <td  style="font-weight: bold;text-align: left;"><h6><b>(5)</b>&nbsp;Being a comprehensive maintenance contract, The rate is inclusive of cost of spares without any exclusion.
+</h6></td>   
+</tr>
+
+<tr>
+   <td  style="font-weight: bold;text-align: left;"><h6><b>(6)</b>&nbsp;The rates indicates cover all charges towards cost of spare parts, transportation and installation charges. cost of travel , boarding ,lodging and expenses related to maintenance of the equipment. no other claim whatsoever will be entertain, in this regard.
+</h6></td>   
+</tr>
+
+<tr>
+   <td  style="font-weight: bold;text-align: left;"><h6><b>(7)</b>&nbsp; During the contract period, four preventive maintenance service shall be rendered at one per quarter and the minimum gap between any two Preventive Maintenance should not be less than 75days and not more than 105 days.
+   in addition, all breakdown call repairs shall be attended to immediately  and all major repairs shall be rectified within 3 calendar date from the date of intimation, as per clause 16 of SCC tender, failing witch, a penalty of Rs.10,000 per day or part there of is leviable until the equipment is repaired and commissioned to the 
+   satisfaction of the end user, for this purpose  you shall carry sufficient inventories to assure prompt replacement of defective parts as per clause 8 of SSC (GCC Clause (3)) of the tender.</h6></td>   
+</tr>
+
+<tr>
+   <td  style="font-weight: bold;text-align: left;"><h6><b>(8)</b>&nbsp;No parts of the equipment shall be taken out of the center / hospital for rectification / service without prior permission.
+</h6></td>   
+</tr>
+
+
+<tr>
+   <td  style="font-weight: bold;text-align: left;"><h6><b>(9)</b>&nbsp;Soon after completion of the service/repair, your service engineer should prepare the service report and get it certified by the concerned Department/ Hospital doctor
+   and concerned district/ Hospital Bio-Medical Enginee of OSMCL submit the same to OSMCL along with your invoices. </h6></td>   
+</tr>
+
+<tr>
+   <td  style="font-weight: bold;text-align: left;"><h6><b>(10)</b>&nbsp; You shall enter into a contract agreement with OSMCL Ltd. in Rs.100/- Non-Judicial stamp paper in the format provided in the enclosed format, with in 7 days from the receipt of this order.
+</h6></td>   
+</tr>
+
+<tr>
+   <td  style="font-weight: bold;text-align: left;"><h6><b>(11)</b>&nbsp;Quarterly Payment shall be released within 30 days on submission of bills on completion of preventive and breakdown maintenance for each quarter. The invoices shall be inclosed with the service reports for having rendered the preventive and breakdown services.The breakdown calls shall not be combines
+   with preventive maintenance calls. The bill for 
+</h6></td>   
+</tr>
+<tr>
+   <td  style="font-weight: bold;text-align: left;"><h6><b>(12)</b>&nbsp;Quarterly Payment shall be released within 30 days on submission of bills on completion of preventive and breakdown maintenance for each quarter. The invoices shall be inclosed with the service reports for having rendered the preventive and breakdown services.The breakdown calls shall not be combines
+   with preventive maintenance calls. The bill for 
+</h6></td>   
+</tr>
+<tr>
+   <td  style="font-weight: bold;text-align: left;"><h6><b>(13)</b>&nbsp;Quarterly Payment shall be released within 30 days on submission of bills on completion of preventive and breakdown maintenance for each quarter. The invoices shall be inclosed with the service reports for having rendered the preventive and breakdown services.The breakdown calls shall not be combines
+   with preventive maintenance calls. The bill for 
+</h6></td>   
+</tr>
+<tr>
+<td  style="font-weight: bold;text-align: left;"><h6>All other terms and conditions as per tender terms and order are applicable to this order.<br>The receipt of this order may be acknowledge.
+</h6></td>   
+</tr>
+
+
+
+<tr>
+   <td  style="font-weight: bold;text-align: right;"><h5><b>Sd/-</b><br> </h5></td>   
+</tr>
+
+
+<tr>
+   <td  style="font-weight: bold;text-align: right;"><h5><b>General Manager (S)</b> <br></h5></td>   
+</tr>
+
+
+<tr>
+   <td  style="font-weight: bold;text-align: center;"><h5><b> \\ True Copy \\ By order \\ <br><br></b></h5></td>   
+</tr>
+
+<tr>
+   <td  style="font-weight: bold;text-align: center;"><h5><b> Executive Engineer (E&S) <br><br></b></h5></td>   
+</tr>
+
+<tr>
+   <td  style="font-weight: bold;text-align: left;"><h5><b>Copy to:</b><br> </h5></td>   
+</tr>
+
+
+<tr>
+   <td  style="font-weight: bold;text-align: center;"><h5><b>(1)</b> The Director of Medical Education ,<br>#directorateName#,<br>#institutionName#, <br>#institutionAddress#</h5></td> 
+   <td  style="font-weight: bold;text-align: left;"><h5>- for information</h5></td>   
+     
+</tr>
+
+<tr>
+   <td  style="font-weight: bold;text-align: left;"><h5><b>Copy by email to:</b><br> </h5></td>   
+</tr>
+
+
+<tr>
+   <td  style="font-weight: bold;text-align: center;"><h5><b>(2)</b> The Dean of Concerned Govt. #institutionName#. <br><br>
+   <b>(3)</b> A.E(B.M) of Concerned Govt. #institutionName#.</h5></td>   
+</tr>
+
+
+</tbody>
+</table>
+
+
+
+
+
+
+</div>
+</body>
+</html>

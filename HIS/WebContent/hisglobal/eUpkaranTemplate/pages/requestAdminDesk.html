@@ -1,0 +1,569 @@
+<script>
+$(document).ready(function () {
+	$('#btnview').click(function(){
+		$('#LISTFORM').addClass('hideData');
+		$('#VIEWPAGEFORM ').removeClass('hideData');		
+	});
+	
+	$('#btnBack').click(function(){
+		$('#LISTFORM').removeClass('hideData');
+		$('#VIEWPAGEFORM ').addClass('hideData');		
+	});
+	$('#btnallocate').click(function(){
+		$('#LISTFORM').addClass('hideData');
+		$('#ALLOCATEPAGEFORM ').removeClass('hideData');		
+	});
+	
+	$('#btnBacks').click(function(){
+		$('#LISTFORM').removeClass('hideData');
+		$('#ALLOCATEPAGEFORM ').addClass('hideData');		
+	});
+	$('#btndeallocate').click(function(){
+		$('#LISTFORM').addClass('hideData');
+		$('#DEALLOCATEPAGEFORM ').removeClass('hideData');		
+	});
+	
+	$('#btnBackDalt').click(function(){
+		$('#LISTFORM').removeClass('hideData');
+		$('#DEALLOCATEPAGEFORM ').addClass('hideData');		
+	});
+})
+</script>
+
+  
+<div class="card card-info border-info center m-1" id='LISTFORM' >
+<div class="card-header bg-navy"><h5 class="card-title text-center ">Request Admin Desk</h5>
+		<div class="buttonContainer  bg-light">
+			  <button class="btn   bg-gradient-success btn-sm" id="btnallocate" ><i class="fa fa-tasks" aria-hidden="true"></i>Allocate</button>
+			     <button class="btn   bg-gradient-success btn-sm" id="btndeallocate"><i class="fa fa-undo" aria-hidden="true"></i> Deallocate</button>
+		         <button class="btn   bg-gradient-success btn-sm" id="btnview"><i class="fa fa-eye" aria-hidden="true"></i> View</button>			
+		</div>
+	</div>
+			
+	<div class="card-body form-group">
+ 	
+  			<div class="row " >
+						
+						<div class='col-lg-3'  >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="institutionType" data-validation="mandatory" data-langtag="Institution Type" >Institution Type</label>
+	                			<select class="form-control form-control-sm  " id ='institutionType' name="institutionType">
+	                				<option value="" selected="selected">Select Institution Type</option>
+	                				<option title="CH" selected="" value="19">CH</option>
+									<option title="CHC" value="21">CHC</option>
+									<option title="DH" value="17">DH</option>
+									<option title="PHC" value="11">PHC</option>
+									<option title="All" value="1">All</option>
+	                				
+	                			</select>
+	                		<div class="invalid-feedback"></div>
+ 	  					</div>
+	 				</div>
+	 	
+	 	
+	 				<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="institutionName" data-validation="mandatory" data-langtag="Institution Name" >Institution Name</label>
+	                			<select class="form-control form-control-sm  " id ='institutionName' name="institutionName">
+	                				<option value="" selected="selected">Select Institution Name</option>
+	                				<option title="Aamla  Betul-CH" selected="" value="5001866">Aamla  Betul-CH</option>
+									<option title="Agar-Shajapur -CH" value="5001821">Agar-Shajapur -CH</option>
+									<option title="Akodia-Shajapur -CH" value="5001820">Akodia-Shajapur -CH</option>
+									<option title="All" value="1">All</option>
+									<option title="Aloat-Ratlam -CH" value="5001811">Aloat-Ratlam -CH</option>
+									<option title="Amarwada-Chhindwada CH" value="5001779">Amarwada-Chhindwada CH</option>
+									<option title="Ambah-Morena -CH" value="5001802">Ambah-Morena -CH</option>
+	                			</select>
+	              				<div class="invalid-feedback"></div>
+ 	  						</div>
+	 					</div>
+	 					
+	 					
+	 					<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="departmentName" data-validation="mandatory" data-langtag="Department Name" >Department Name</label>
+	                			<select class="form-control form-control-sm  " id ='departmentName' name="departmentName">
+	                				<option value="" selected="selected">Select Department Name</option>
+	                				<option title="Select Value" selected="" value="0">Select Value</option>
+									<option title="Aamla  Betul-CH - ANC ROOM" value="5020738">Aamla  Betul-CH - ANC ROOM</option>
+									<option title="Aamla  Betul-CH - BLOOD BANK DEP" value="5020739">Aamla  Betul-CH - BLOOD BANK DEP</option>
+									<option title="Aamla  Betul-CH - DENTAL DEPT" value="5020740">Aamla  Betul-CH - DENTAL DEPT</option>
+									<option title="Aamla  Betul-CH - DOTS ROOM" value="5020741">Aamla  Betul-CH - DOTS ROOM</option>
+									<option title="Aamla  Betul-CH - DRESSING ROOM" value="5020742">Aamla  Betul-CH - DRESSING ROOM</option>
+									<option title="Aamla  Betul-CH - DUTY ROOM" value="5020743">Aamla  Betul-CH - DUTY ROOM</option>
+									<option title="Aamla  Betul-CH - ECG ROOM" value="5020744">Aamla  Betul-CH - ECG ROOM</option>
+	                			</select>
+	              			<div class="invalid-feedback"></div>
+ 	  					</div>
+	 				</div>
+	 				
+	
+		
+	 				<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="requestStatus" data-validation="mandatory" data-langtag="Request Status" >Request Status</label>
+	                			<select class="form-control form-control-sm  " id ='requestStatus' name="requestStatus">
+	                				<option value="" selected="selected">Select Request Status</option>
+	                				<option title="Pending - All" selected="" value="1">Pending - All</option>
+									<option title="Pending - Raise and Acknowledge" value="13">Pending - Raise and Acknowledge</option>
+									<option title="Pending - Re-Open" value="14">Pending - Re-Open</option>
+									<option title="Pending - Schedule" value="15">Pending - Schedule</option>
+									<option title="Pending - Re-Schedule" value="16">Pending - Re-Schedule</option>
+									<option title="Pending - Attend" value="17">Pending - Attend</option>
+									<option title="Eng. Close" value="19">Eng. Close</option>
+	                			</select>
+	              			<div class="invalid-feedback"></div>
+ 	  					</div>
+	 				</div>
+	 			
+	 				
+	 				<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="serviceProvider" data-validation="mandatory" data-langtag="Service Provider " >Service Provider </label>
+	                			<select class="form-control form-control-sm  " id ='serviceProvider' name="serviceProvider">
+	                				<option value="" selected="selected">Select Service Provider </option>
+	                				<option title="All" selected="" value="0">All</option>
+									<option title="Acme" value="1810144">Acme</option>
+									<option title="Accord Electronic" value="1810932">Accord Electronic</option>
+									<option title="Aim Healthcare" value="1812086">Aim Healthcare</option>
+									<option title="Adarsh Enterprises" value="1812088">Adarsh Enterprises</option>
+	                			</select>
+	              			<div class="invalid-feedback"></div>
+ 	  					</div>
+	 				</div>
+	 				
+		 	
+		 	       <div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="requestType" data-validation="mandatory" data-langtag="Request Type" >Request Type</label>
+	                			<select class="form-control form-control-sm  " id ='requestType' name="requestType">
+	                				<option value="" selected="selected">Select Request Type</option>
+	                				<option title="Breakdown" selected="" value="1">Breakdown</option>
+									<option title="Calibration Maintenance" value="3">Calibration Maintenance</option>
+									<option title="Preventive Maintenance" value="2">Preventive Maintenance</option>
+	                			</select>
+	              			<div class="invalid-feedback"></div>
+ 	  					</div>
+	 				</div>
+	 			</div>	
+	 			
+	 	
+		<div class='container-fluid m-1 '>
+			<div class='row no-more-tables'>
+				<table class="table table-bordered table-striped tbl-listing"  >
+				  <thead class="bg-navy">
+			      <tr>
+			      	<th><input type="checkbox"></th>
+			        <th >Request Id</th>
+			        <th>Request Date</th>
+			        <th>Department</th>
+			        <th>Equipment Name</th>
+			        <th>Equipment Model</th>
+			        <th>Barcode</th>
+			        <th>Request Source</th>
+			        <th>Request Status</th>
+			      </tr>
+			    </thead>
+			    <tbody>
+			     <tr>
+			      	<td class='d-none d-sm-block' ><input type="checkbox"></td>
+			        <td data-title='Request Id' > 13120010000002	</td>
+			        <td data-title='Request Date'> 04-Jan-2020 12:55:07</td>
+			        <td data-title='Department'>Aamla Betul-CH - ANC ROOM</td>
+			        <td data-title='Equipment Name'>3 Fold Labour Table Ss With Foam Mattress</td>
+			        <td data-title='Equipment Model'> 111111</td>
+			        <td data-title='Barcode'>6454554</td>
+			        <td data-title='Request Source'> IVRS</td>
+			        <td data-title='Request Status'>Raise and Acknowledge</td>
+			      </tr>
+			    </tbody>
+			    <tbody>
+			     <tr>
+			      	<td class='d-none d-sm-block' ><input type="checkbox"></td>
+			        <td data-title='Request Id' >1234</td>
+			        <td data-title='Request Date'>12/12/2012</td>
+			        <td data-title='Department'>1234</td>
+			        <td data-title='Equipment Name'>Xray Machine</td>
+			        <td data-title='Equipment Model'>Bosch</td>
+			        <td data-title='Barcode'>Working Request</td>
+			        <td data-title='Request Source'>Payment Done</td>
+			        <td data-title='Request Status'>Payment Done</td>
+			      </tr>
+			    </tbody>
+			     <tbody>
+			     <tr>
+			      	<td class='d-none d-sm-block' ><input type="checkbox"></td>
+			        <td data-title='Request Id' > 13120010000002	</td>
+			        <td data-title='Request Date'> 04-Jan-2020 12:55:07</td>
+			        <td data-title='Department'>Aamla Betul-CH - ANC ROOM</td>
+			        <td data-title='Equipment Name'>3 Fold Labour Table Ss With Foam Mattress</td>
+			        <td data-title='Equipment Model'> 111111</td>
+			        <td data-title='Barcode'>6454554</td>
+			        <td data-title='Request Source'> IVRS</td>
+			        <td data-title='Request Status'>Raise and Acknowledge</td>
+			      </tr>
+			    </tbody>
+			     <tbody>
+			     <tr>
+			      	<td class='d-none d-sm-block' ><input type="checkbox"></td>
+			        <td data-title='Request Id' > 13120010000002	</td>
+			        <td data-title='Request Date'> 04-Jan-2020 12:55:07</td>
+			        <td data-title='Department'>Aamla Betul-CH - ANC ROOM</td>
+			        <td data-title='Equipment Name'>3 Fold Labour Table Ss With Foam Mattress</td>
+			        <td data-title='Equipment Model'> 111111</td>
+			        <td data-title='Barcode'>6454554</td>
+			        <td data-title='Request Source'> IVRS</td>
+			        <td data-title='Request Status'>Raise and Acknowledge</td>
+			      </tr>
+			    </tbody>
+			 </table>	
+			</div>
+		</div>
+</div>
+	</div>
+
+<div class="card card card-info border-info center m-1 hideData" id='VIEWPAGEFORM'  >
+	<div class="card-header bg-navy">
+		<h6 class="text-left">View Page</h6></div>
+		<div class="card-body form-group">
+		<h6><b>Request Details:</b></h6>
+	<hr class="bg-navy">
+	 
+	                  <div class='row'>
+                                      <div class='col-lg-3' ><b>Request Id :</b>	13118090000688
+  				                       </div>
+  		                              <div class='col-lg-3' ><b>Request Date :</b>	27-Sep-2018 15:37:59		 
+  				                       </div>
+  				                       <div class='col-lg-3' ><b>Hospital Name :	</b>	Aathner Betul-CHC :
+  				                       </div>
+  		                              <div class='col-lg-3' ><b>Department Name:</b>	Aathner Betul-CHC - LABOUR ROOM	 
+  				                       </div>
+  				                       <div class='col-lg-3' ><b>Request Type :	</b>	Breakdown
+  				                       </div>
+  		                              <div class='col-lg-3' ><b>Request Source</b>	Desktop
+  				                       </div>
+  				                       <div class='col-lg-3' ><b>Equipment Name</b>		AUTOCLAVE VERTICAL
+  				                       </div>
+  		                              <div class='col-lg-3' ><b>Equipment Model</b>	MODEL NOT AVAILABLE		 
+  				                       </div>
+  				                       <div class='col-lg-3' ><b>Equipment Serial No.</b>	1311
+  				                       </div>
+  		                              <div class='col-lg-3' ><b>Barcode:</b>	3759		 
+  				                       </div>
+  				                       <div class='col-lg-3' ><b>Manufacturer / Supplier Name :</b>	Aut(V)(Ind) / Aut(V)(Ind)
+  				                       </div>
+  		                              <div class='col-lg-3' ><b>Equipment Cost </b>40000.0		 
+  				                       </div>
+  				                       <div class='col-lg-3' ><b>Problem Description : </b>	Other [proper not working]
+  				                       </div>
+  		                              <div class='col-lg-3' ><b>Is Item Not in Working Condition [Date, If yes] :</b>no		 
+  				                       </div>
+  				                        <div class='col-lg-3' ><b>Contact Person Name</b>	Ramsingmarshkole	 
+  				                       </div>
+  				                       <div class='col-lg-3' ><b>Contact No. / Email Id :</b>	9617423020 / bmo.ath.bet@gmail.com 	 	
+  				                       </div>
+  		                              <div class='col-lg-3' ><b>Remarks :</b>	proper not working	 
+  				                       </div>
+  				                       <div class='col-lg-3' ><b>Upload Doc:</b>	--
+  				                       </div>
+  				                       
+  				 </div>
+  				   </div>
+  				   <div class="card-body form-group">
+	                 <h6><b> IVRS Detail:</b></h6>
+	                 <hr class="bg-navy">
+	                  <div class='row'>
+	                                  <div class='col-lg-3' ><b>Caller Name :</b>	13118090000688
+  				                       </div>
+  		                              <div class='col-lg-3' ><b>Caller No.  :</b>	35457		 
+  				                       </div>
+  				                       <div class='col-lg-3' ><b>Agent No:	</b>	
+  				                       </div>
+  		                              <div class='col-lg-3' ><b>IVRS Duartion(MI:SS) :</b>
+  				                       </div>
+  				                       <div class='col-lg-3' ><b>Call Duartion(MI:SS) :		</b>	
+  				                       </div>
+  		                              <div class='col-lg-3' ><b>Call Log Id</b>	
+	                
+	                 </div>
+	                 </div> 
+	                 </div>
+  				                      
+	
+	                 <div class="card-body form-group">
+	                 <h6><b> Allocation/Deallocation Details:</b></h6>
+	                 <hr class="bg-navy">
+	                 <center ><h7 class="text-danger"> <b>No Details Found.</b></h7></center> 
+	                 </div>
+	                  
+	                 <div class="card-body form-group">
+	                  <h6><b> Schedule/Reschedule Details:</b></h6> 
+                     <hr class="bg-navy">
+	                 <center ><h7 class="text-danger"> <b>No Details Found.</b></h7></center> 
+	                 </div>
+	                 
+	                  <div class="card-body form-group">   
+	                 <h6><b> Substitute Details:</b></h6>
+	                 <hr class="bg-navy">
+	                  <center ><h7 class="text-danger"> <b>No Details Found.</b></h7></center> 
+	                 </div>
+	                  <div class="card-body form-group">   
+	                 <h6><b> Attend Details:</b></h6>
+	                 <hr class="bg-navy">
+	                  <center ><h7 class="text-danger"> <b>No Details Found.</b></h7></center> 
+	                 </div>
+	                 
+	                  <div class="card-body form-group">   
+	                 <h6><b> Current Maintenance Details:</b></h6>
+	                 <hr class="bg-navy">
+	                   <div class='row'>
+	                                  <div class='col-lg-3' ><b>Work Order No:</b>		Aim Health Care
+  				                       </div>
+  		                              <div class='col-lg-3' ><b>Maintenance Contract Type  :</b>	CMC		 
+  				                       </div>
+  				                       <div class='col-lg-3' ><b>Contract Start Date:	</b>	19-FEB-2017
+  				                       </div>
+  		                              <div class='col-lg-3' ><b>Contract End Date :		</b>20-FEB-2017
+  				                       </div>
+  				                       <div class='col-lg-3' ><b>Contractor Name :		</b>	Aim Healthcare	
+  				                       </div>
+  		                              <div class='col-lg-3' ><b>Contractor Contact Number </b>	5780654437
+	                                  </div>
+	                                     <div class='col-lg-3' ><b>Contractor Mail id  </b>	aimbpl2016@gmail.com
+	                                      </div>
+	                 
+	                 </div>
+	                 </div>
+	     
+    <div class="card-footer">
+		<div class="text-center">
+              <button class="btn bg-gradient-success mt-4 btn-sm" id="btnBack"><i class="fas fa-arrow-circle-left"></i> Back</button>                            
+		</div>
+	</div> 
+	</div>
+	
+
+
+
+
+
+<div class="card card card-info border-info center m-1 hideData" id='ALLOCATEPAGEFORM'  >
+	<div class="card-header bg-navy">
+		<h6 class="text-left">Request Allocation Details>> Add</h6></div>
+		<div class="card-body form-group">
+		<h6><b>Request Details:</b></h6>
+	<hr class="bg-navy">
+	 
+	                  <div class='row'>
+                                      <div class='col-lg-3' ><b>Request Id :</b>	13118090000688
+  				                       </div>
+  		                              <div class='col-lg-3' ><b>Request Date :</b>	27-Sep-2018 15:37:59		 
+  				                       </div>
+  				                       <div class='col-lg-3' ><b>Hospital Name :	</b>	Aathner Betul-CHC :
+  				                       </div>
+  		                              <div class='col-lg-3' ><b>Department Name:</b>	Aathner Betul-CHC - LABOUR ROOM	 
+  				                       </div>
+  				                       <div class='col-lg-3' ><b>Request Type :	</b>	Breakdown
+  				                       </div>
+  		                              <div class='col-lg-3' ><b>Request Source</b>	Desktop
+  				                       </div>
+  				                       <div class='col-lg-3' ><b>Equipment Name</b>		AUTOCLAVE VERTICAL
+  				                       </div>
+  		                              <div class='col-lg-3' ><b>Equipment Model</b>	MODEL NOT AVAILABLE		 
+  				                       </div>
+  				                       <div class='col-lg-3' ><b>Equipment Serial No.</b>	1311
+  				                       </div>
+  		                              <div class='col-lg-3' ><b>Barcode:</b>	3759		 
+  				                       </div>
+  				                       <div class='col-lg-3' ><b>Manufacturer / Supplier Name :</b>	Aut(V)(Ind) / Aut(V)(Ind)
+  				                       </div>
+  		                              <div class='col-lg-3' ><b>Equipment Cost </b>40000.0		 
+  				                       </div>
+  				                       <div class='col-lg-3' ><b>Problem Description : </b>	Other [proper not working]
+  				                       </div>
+  		                              <div class='col-lg-3' ><b>Is Item Not in Working Condition [Date, If yes] :</b>no		 
+  				                       </div>
+  				                        <div class='col-lg-3' ><b>Contact Person Name</b>	Ramsingmarshkole	 
+  				                       </div>
+  				                       <div class='col-lg-3' ><b>Contact No. / Email Id :</b>	9617423020 / bmo.ath.bet@gmail.com 	 	
+  				                       </div>
+  		                              <div class='col-lg-3' ><b>Remarks :</b>	proper not working	 
+  				                       </div>
+  				                       <div class='col-lg-3' ><b>Upload Doc:</b>	--
+  				                       </div>
+  				                       
+  				 </div>
+  				 </div>
+  				   <div class="card-body form-group">
+	                 <h6><b>Previous Allocation / De-Allocation Details:</b></h6>
+	                 <hr class="bg-navy">
+	                 <center ><h7 class="text-danger"> <b>No Details Found.</b></h7></center> 
+	                 </div>
+	                  
+	                 <div class="card-body form-group">
+	                  <h6><b>Allocation Detail:</b></h6> 
+	                  <hr class="bg-navy">
+	                    <div class='row'>
+	                                  <div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="serviceEngineerName" data-validation="mandatory" data-langtag="Service Engineer Name " >Service Engineer Name  :</label>
+	                			<select class="form-control form-control-sm  " id ='serviceEngineerName' name="serviceEngineerName ">
+	                				<option value="" selected="selected">Select Service Engineer Name </option>
+	                                <option title="Abdul Salman  Khan" value="SE0000000052^7471127022^subhashmaurya1122@gmail.com^23610">Abdul Salman  Khan</option>
+									<option title="Abhishek  Bhagat" value="SE0000000002^7471127013^abhimedikals@gmail.com^23560">Abhishek  Bhagat</option>
+									<option title="Abhishek  Chaudhary" value="SE0000000003^7471127042^abhishekchoudhary359@gmail.com^23561">Abhishek  Chaudhary</option>
+									<option title="abhishek  verma" value="SE0000000068^8527890790^g@gmail.com^23011">abhishek  verma</option>
+									<option title="Ajay  Chetiwar" value="SE0000000004^7987662645^chetiwarajay@gmail.com^23562">Ajay  Chetiwar</option>
+									<option title="Anuj  Yadav" value="SE0000000006^8103051830^anujdv46@gmail.com^23564">Anuj  Yadav</option>
+	                				
+	                			</select>
+	              				<div class="invalid-feedback"></div>
+ 	  						</div>
+ 	  						</div>
+	 					
+                                       <div class='col-lg-3' ><b>Service Engineer Contact Number : </b>		----
+  				                       </div>
+  		                              <div class='col-lg-3' ><b>E-mail  :</b>	---- 
+  				                       </div> 
+  				                       
+	                 </div>
+	                 </div>
+    <div class="card-footer">
+		<div class="text-center">
+              <button class="btn bg-gradient-success mt-4 btn-sm" id="btnBacks"><i class="fas fa-arrow-circle-left"></i> Back</button>                            
+		</div>
+	</div>  
+	</div>
+	
+ 
+  
+
+
+
+<!-- Deallocation btn -->
+
+<div class="card card card-info border-info center m-1 hideData" id='DEALLOCATEPAGEFORM'  >
+	<div class="card-header bg-navy">
+	
+		<h6 class="text-left">Request Deallocation Details>> Add</h6></div>
+		<div class="card-body form-group">
+		<h6><b>Request Details:</b></h6>
+	<hr class="bg-navy">
+	 
+	                  <div class='row'>
+                                      <div class='col-lg-3' ><b>Request Id :</b>	13118090000688
+  				                       </div>
+  		                              <div class='col-lg-3' ><b>Request Date :</b>	27-Sep-2018 15:37:59		 
+  				                       </div>
+  				                       <div class='col-lg-3' ><b>Hospital Name :	</b>	Aathner Betul-CHC :
+  				                       </div>
+  		                              <div class='col-lg-3' ><b>Department Name:</b>	Aathner Betul-CHC - LABOUR ROOM	 
+  				                       </div>
+  				                       <div class='col-lg-3' ><b>Request Type :	</b>	Breakdown
+  				                       </div>
+  		                              <div class='col-lg-3' ><b>Request Source</b>	Desktop
+  				                       </div>
+  				                       <div class='col-lg-3' ><b>Equipment Name</b>		AUTOCLAVE VERTICAL
+  				                       </div>
+  		                              <div class='col-lg-3' ><b>Equipment Model</b>	MODEL NOT AVAILABLE		 
+  				                       </div>
+  				                       <div class='col-lg-3' ><b>Equipment Serial No.</b>	1311
+  				                       </div>
+  		                              <div class='col-lg-3' ><b>Barcode:</b>	3759		 
+  				                       </div>
+  				                       <div class='col-lg-3' ><b>Manufacturer / Supplier Name :</b>	Aut(V)(Ind) / Aut(V)(Ind)
+  				                       </div>
+  		                              <div class='col-lg-3' ><b>Equipment Cost </b>40000.0		 
+  				                       </div>
+  				                       <div class='col-lg-3' ><b>Problem Description : </b>	Other [proper not working]
+  				                       </div>
+  		                              <div class='col-lg-3' ><b>Is Item Not in Working Condition [Date, If yes] :</b>no		 
+  				                       </div>
+  				                        <div class='col-lg-3' ><b>Contact Person Name</b>	Ramsingmarshkole	 
+  				                       </div>
+  				                       <div class='col-lg-3' ><b>Contact No. / Email Id :</b>	9617423020 / bmo.ath.bet@gmail.com 	 	
+  				                       </div>
+  		                              <div class='col-lg-3' ><b>Remarks :</b>	proper not working	 
+  				                       </div>
+  				                       <div class='col-lg-3' ><b>Upload Doc:</b>	--
+  				                       </div>
+  				                       
+  				 </div>
+  				   </div>
+  				    <div class="card-body form-group">         
+	                 <h6><b>Previous Allocation / De-Allocation Details</b></h6>
+	                 <hr class="bg-navy">
+	                 <div class='row no-more-tables'>
+			<table class="table table-hover">
+			  <thead class="bg-light">
+			      <tr>
+			      	
+			        <th >S. No.</th>
+			        <th>Service Eng. Name</th>
+			        <th>User Name</th>
+			        <th>Allocation Date Time</th>
+			        <th>	De-Allocation Date Time</th>
+			        <th>Status </th>
+			        <th>Remarks</th>
+			       
+			      </tr>
+			      </thead>
+			       <tbody>
+			     <tr>
+			      
+			        <td data-title='Request Id' >1</td>
+			        <td data-title='Request Date'>Surendra Gupta</td>
+			        <td data-title='Department'>se_surendragupta</td>
+			        <td data-title='Equipment Name'>De-Allocation Date Time		</td>
+			        <td data-title='Equipment Model'>----</td>
+			        <td data-title='Barcode'>Allocated	</td>
+			        <td data-title='Request Source'>-------</td>
+			        
+			      </tr>
+			    </tbody>
+			    <tbody>
+			     <tr>
+			      
+			        <td data-title='Request Id' >2</td>
+			        <td data-title='Request Date'>Surendra Gupta</td>
+			        <td data-title='Department'>se_surendragupta</td>
+			        <td data-title='Equipment Name'>De-Allocation Date Time		</td>
+			        <td data-title='Equipment Model'>----</td>
+			        <td data-title='Barcode'>Allocated	</td>
+			        <td data-title='Request Source'>-------</td>
+			        
+			      </tr>
+			    </tbody>
+		
+			    </table></div>
+			    </div>	
+			     <div class="card-body form-group">   
+	                 <h6><b>Deallocation Details:</b></h6>
+	                 <hr class="bg-navy">
+	                 <div class='row'>
+	                   <div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="remarks" data-langtag="Remarks"  >Remarks :</label>
+	                			<textarea class="form-control form-control-sm " name="remarks"  id="remarks" name="remarks" maxlength="50" data-validation="mandatory,alphabetOnly"></textarea>
+	                			<div class="invalid-feedback"></div>
+	              			</div>
+					 	</div>
+	                 </div>
+	                 </div>
+    <div class="card-footer">
+		<div class="text-center">
+              <button class="btn bg-gradient-success mt-4 btn-sm" id="btnBackDalt"><i class="fas fa-arrow-circle-left"></i> Back</button>                            
+		</div>
+	</div>  
+ 
+  
+</div>
+<p> <i class="fa fa-circle" style="font-size:8px;color:#17a2b8"></i> Non Functional  Bold Font - Verified Equipments;  Normal Font - Unverified Equipments</p>
+
+  
+
+
+
+
+
+

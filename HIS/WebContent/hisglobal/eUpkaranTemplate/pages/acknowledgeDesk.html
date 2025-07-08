@@ -1,0 +1,262 @@
+
+<script>
+$(document).ready(function () {
+	$('#btnacknowledge').click(function(){
+		$('#LISTFORM').addClass('hideData');
+		$('#VIEWPAGEFORM ').removeClass('hideData');		
+	});
+	
+	$('#btnBack').click(function(){
+		$('#LISTFORM').removeClass('hideData');
+		$('#VIEWPAGEFORM ').addClass('hideData');		
+	});
+	
+})
+</script>
+
+<div class="card card-info border-info center m-1" id='LISTFORM' >
+			<div class="card-header bg-navy"><h5 class="card-title text-center ">Acknowledge Desk</h5></div>
+
+
+<div class="card-body form-group">
+ <div class="row " >
+  			<div class='col-lg-3'  >
+                <div class="form-group">
+	                <label class="col-form-label col-form-label-sm" for="issueType" data-validation="mandatory" data-langtag="Issue Type  " >Issue Type  </label>
+	                	<select class="form-control form-control-sm  " id ='issueType' name="issueType">
+	                	<option value="" selected="selected">Issue To Department</option>
+	                	<option value="" >Issue To Hospital</option>
+	                	<option value="" >Issue To Department</option>
+	                	</select>
+	                		<div class="invalid-feedback"></div>
+ 	  			</div>
+	 		</div>
+	 	
+	 	
+	 		<div class='col-lg-3' >
+				<div class="form-group">
+	                <label class="col-form-label col-form-label-sm" for="issueBy" data-validation="mandatory" data-langtag="Issue By" >Issue By  </label>
+	                	<select class="form-control form-control-sm  " id ='issueBy' name="issueBy">
+	                		<option value="" selected="selected">Aager-DH</option>
+	                		<option title="AAAAA" value="5057864">AAAAA</option>
+							<option title="AAAAA - ANC ROOM" value="5057865">AAAAA - ANC ROOM</option>
+							<option title="Aagar- CS" value="5055972">Aagar- CS</option>
+							<option title="Aagar- DH" value="5001672">Aagar- DH</option>
+							<option title="Aagar PHC  Indore-PHC" value="5002615">Aagar PHC  Indore-PHC</option>
+							<option title="Aagasod   Sagar-PHC" value="5003031">Aagasod   Sagar-PHC</option>
+							<option title="Aamdhana  Betul-PHC" value="5002278">Aamdhana  Betul-PHC</option>
+							<option title="Aamgaon  Narsinghpur-PHC" value="5002879">Aamgaon  Narsinghpur-PHC</option>
+							<option title="Aamkui  Satna-PHC" value="5003058">Aamkui  Satna-PHC</option>
+							<option title="Aamla  Betul-CH" value="5001866">Aamla  Betul-CH</option>
+							<option title="Aamla  Dewas-PHC" value="5002472">Aamla  Dewas-PHC</option>
+							<option title="Aamni Piparia  Dindori-PHC" value="5002540">Aamni Piparia  Dindori-PHC</option>
+							<option title="Aari  Seoni-PHC" value="5003116">Aari  Seoni-PHC</option>
+							<option title="Aathner  Betul-CHC" value="5001867">Aathner  Betul-CHC</option>
+							<option title="Aawan   Guna-PHC" value="5002563">Aawan   Guna-PHC</option>
+							<option title="Abhana  Damoh-PHC" value="5002448">Abhana  Damoh-PHC</option>
+							<option title="Adegaon  Seoni-PHC" value="5003117">Adegaon  Seoni-PHC</option>
+							<option title="Agara  Sheopur-PHC" value="5003197">Agara  Sheopur-PHC</option>
+							<option title="Agar-CMHO" value="5001723">Agar-CMHO</option>
+	                	</select>
+	              	<div class="invalid-feedback"></div>
+ 	  			</div>
+	 		</div>
+	 					
+	 					
+	 				<div class='col-lg-3' >
+					 	<div class="form-group">
+	                		<label class="col-form-label col-form-label-sm" for="issueTo" data-validation="mandatory" data-langtag="Issue To" >Issue To</label>
+	                			<select class="form-control form-control-sm  " id ='issueTo' name="issueTo">
+	                				<option value="" selected="selected">Aagar- DH - ANC ROOM</option>
+	                				<option value="" >Aagar- DH - A.R.T</option>
+	                				<option value="" >Aagar- DH - CANCER DEPT</option>
+	                				<option value="" >Aagar- DH - CHILDREN WARD</option>
+	                				<option value="" >Aagar- DH - COLD CHAIN DEPT</option>
+	                				<option value="" >Aager-DH ANC Room</option>
+	                			</select>
+	              			        <div class="invalid-feedback"></div>
+ 	  					</div>
+	 				</div>
+	 				
+	
+		
+	 				<div class='col-lg-3' >
+					 	<div class="form-group">
+	                		<label class="col-form-label col-form-label-sm" for="status" data-validation="mandatory" data-langtag=" Status" > Status</label>
+	                			<select class="form-control form-control-sm  " id ='status' name="status">
+	                				<option value="" selected="selected">	 Acknowledged</option>
+	                				<option value="" >	 Acknowledged pending</option>
+	                				<option value="" >All</option>
+	                			</select>
+	              			<div class="invalid-feedback"></div>
+ 	  					</div>
+	 				</div>
+	 				
+</div>
+  			
+			<div class="text-center">
+				<button class="btn  bg-gradient-success btn-sm" id="btnacknowledge"><i class="fa fa-check" aria-hidden="true"></i> Acknowledge</button>
+				<button class="btn  bg-gradient-success btn-sm"><i class="fa fa-print"></i> Print</button>
+			</div>
+		
+
+			
+
+			<div class='row'>
+			<div class='col-lg-4'>	
+				<div class="form-group row">                   
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" id="search" placeholder="Search">
+                    </div>
+                  </div>
+			</div>
+			</div>	
+			<div class='row no-more-tables'>
+			<table class="table table-hover">
+			  <thead class="bg-navy">
+			      <tr>
+			      	<th><input type="checkbox"></th>
+			        <th >Equipment Name</th>
+			        <th> Model</th>
+			        <th>Serial No.</th>
+			        <th>PO No.</th>
+			        <th>Supplier Name</th>
+			        <th>Issued Qty</th>
+			        <th>Issued Date</th>
+			         <th>Status</th>
+			      </tr>
+			    </thead>
+			    <tbody>
+			     <tr>
+			      	<td class='d-none d-sm-block' ><input type="checkbox"></td>
+			        <td data-title='Equipment Name' >ABG MACHINE</td>
+			        <td data-title='Equipment Model'>1245</td>
+			        <td data-title='Serial No.'>190</td>
+			        <td data-title='Bar Code'>123456</td>
+			        <td data-title='Manufacturer Name'>ACMO</td>
+			        <td data-title='Equipment Status'>1</td>
+			        <td data-title='Verification Status'>17-Dec-2019</td>
+			        <td data-title='Verification Status'> Acknowledged</td>
+			      </tr>
+			    </tbody>
+			     <tbody>
+			     <tr>
+			      	<td class='d-none d-sm-block' ><input type="checkbox"></td>
+			        <td data-title='Equipment Name' >	 IV stand SS</td>
+			        <td data-title='Equipment Model'> IV-01MP</td>
+			        <td data-title='Serial No.'> asd34</td>
+			        <td data-title='Bar Code'>123456</td>
+			        <td data-title='Manufacturer Name'> Inline Medicare</td>
+			        <td data-title='Equipment Status'>1</td>
+			        <td data-title='Verification Status'>10-Aug-2019</td>
+			        <td data-title='Verification Status'> Acknowledged</td>
+			      </tr>
+			    </tbody>
+			     <tbody>
+			     <tr>
+			      	<td class='d-none d-sm-block' ><input type="checkbox"></td>
+			        <td data-title='Equipment Name' >Bed Side Locker SS</td>
+			        <td data-title='Equipment Model'>nmade BSLD-M-01</td>
+			        <td data-title='Serial No.'>NA</td>
+			        <td data-title='Bar Code'>123456</td>
+			        <td data-title='Manufacturer Name'>ACMO</td>
+			        <td data-title='Equipment Status'>1</td>
+			        <td data-title='Verification Status'> 09-Aug-2019</td>
+			        <td data-title='Verification Status'> Acknowledged Pending</td>
+			      </tr>
+			    </tbody>
+			 </table>	
+			</div>
+		
+
+			</div>	
+			
+	</div>  
+	 	
+	<p><i class="fa fa-circle" style="font-size:8px;color:#17a2b8"></i> Non Functional  Bold Font - Verified Equipments;  Normal Font - Unverified Equipments</p>
+
+<div class="card card card-info border-info center m-1 hideData" id='VIEWPAGEFORM'  >
+	<div class="card-header bg-navy">
+		<h6 class="text-left">Acknowledge Desk >> Issue Acknowledge </h6>
+	</div>
+	<div class="card-body form-group">
+	<h6><b>Equipment Detail : :</b></h6>
+	<hr class="bg-navy">
+	 <div class='row'>
+	 
+  <div class='col-lg-3' >
+  				<div><b>Issued By :</b>	Aagar- DH</div>	
+  				<div><b>Purchasing Authority :</b>	Aagar- CS</div>
+				<div><b>Supplier Name :</b>	Inline Medicare</div>	
+				<div><b>Funding Source :</b>	State</div>
+				<div><b>Installation : :</b>	Not Required</div>
+  		</div>
+  		<div class='col-lg-3' >		 
+  				<div><b>Equipment Name :	</b>Bed Side Locker SS</div> 	
+  				<div><b>Serial No. :</b>	asd34</div>
+				<div><b> Received Date :</b>	16-Aug-2019</div>	
+				<div><b> Invoice No. :	</b>May/2019/321</div>
+				<div><b> Remarks  :	</b>-</div>
+</div>
+			
+				<div class='col-lg-3' >		 
+  				<div><b>Issued To :	</b>	Aagar- DH - ANC ROOM</div>
+  				<div><b>Po No :	</b>719089980005</div>
+				<div><b>Rate/Unit :</b>2358.82	</div>
+				<div><b>Programme Name :</b>	VITAL(Vital)</div>
+				<div><b>Model Name  :</b>		Inmade BSLD-M-01</div>
+</div>
+	<div class='col-lg-3' >		 
+  				 
+  				<div><b>Issued Qty :</b>	1	</div>
+  				<div><b>Stock Reg Page No. :</b>		sa222</div>
+				
+				<div><b>Invoice Date :	</b>16-Aug-2019</div>
+				<div><b>Warranty  : 	</b>3 Year(s)</div>
+</div> 	
+	</div>
+	
+	<hr class="bg-navy">
+		 <div class='row'>
+
+	
+  
+  		<div class='col-lg-3'  >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="acknowledgeBy" data-validation="mandatory" data-langtag="Acknowledge By" >Acknowledge By  </label>
+	                			<select class="form-control form-control-sm  " id ='acknowledgeBy' name="acknowledgeBy">
+	                				<option value="" >Rajendra Kumar Atal</option>
+	                				<option value="" >Rajendra Kumar Atal</option>
+	                			</select>
+	                			<div class="invalid-feedback"></div>
+ 	  						</div>
+	 	</div>
+  			
+		<div class='col-lg-3'  >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="remarks" data-validation="mandatory" data-langtag="Remarks" >Remarks  :  </label>
+	                			<textarea class="form-control form-control-sm  "></textarea>
+	                			<div class="invalid-feedback"></div>
+ 	  						</div>
+	 	</div>
+</div>
+	
+	</div>
+	
+    <div class="card-footer">
+		<div class="text-center">
+			<button class='btn bg-gradient-success mt-4 btn-sm' ><i class="fa fa-save"></i> Save</button>
+			<button class='btn bg-gradient-success mt-4 btn-sm' ><i class="fa fa-window-close"></i> Clear</button>
+            <button class="btn bg-gradient-success mt-4 btn-sm" id="btnBack"><i class="fas fa-arrow-circle-left"></i> Back</button>                            
+		</div>
+		<div>
+		<p> <i class="fa fa-circle" style="font-size:8px;color:#17a2b8"></i>   * Mandatory Fields</p>
+	</div>
+	</div>  
+ </div>
+
+  
+	
+	
+  
+ 

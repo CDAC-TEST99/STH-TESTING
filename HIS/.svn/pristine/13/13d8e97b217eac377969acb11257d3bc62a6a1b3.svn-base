@@ -1,0 +1,1405 @@
+<script>
+$(document).ready(function () {
+	$('#btnview').click(function(){
+		$('#LISTFORM').addClass('hideData');
+		$('#VIEWPAGEFORM ').removeClass('hideData');		
+	});
+	
+	$('#btnBack').click(function(){
+		$('#LISTFORM').removeClass('hideData');
+		$('#VIEWPAGEFORM ').addClass('hideData');		
+	});
+	
+	$('#btnAdd').click(function(){
+		$('#LISTFORM').addClass('hideData');
+		$('#ADDFORM ').removeClass('hideData');		
+	});
+	
+	$('#btnBack1').click(function(){
+		$('#LISTFORM').removeClass('hideData');
+		$('#ADDFORM ').addClass('hideData');		
+	});
+	
+	$('#btnModify').click(function(){
+		$('#LISTFORM').addClass('hideData');
+		$('#MODIFYFORM').removeClass('hideData');		
+	});
+	
+	$('#btnBack2').click(function(){
+		$('#LISTFORM').removeClass('hideData');
+		$('#MODIFYFORM').addClass('hideData');		
+	});
+	
+	$('#filterButton').click(function(){
+		if($('#filterHideShow').find('.row').hasClass('hideData')){
+			$('#filterHideShow').find('.row').removeClass('hideData');
+			$('#filterButton').html("Hide Filters");
+		}
+		else{
+			$('#filterHideShow').find('.row').addClass('hideData');
+			$('#filterButton').html("Show Filters");
+		}
+	});
+	var tableButtons= [
+		               {
+		                   extend: 'copy',
+		                   exportOptions: {
+		                       columns: ':visible'
+		                   }
+		               },
+		              {
+		                   extend: 'excel',
+		                   exportOptions: {
+		                       columns: ':visible'
+		                   }
+		               },
+		              {
+		                   extend: 'csv',
+		                   exportOptions: {
+		                       columns: ':visible'
+		                   }
+		               },
+		              {
+		                   extend: 'pdf',
+		                   customize : function(doc){
+                       		doc.defaultStyle.fontSize = 8; 
+                            doc.styles.tableHeader.fontSize = 10;
+                            doc.content[1].margin = [ 20, 0, 20, 0 ]; //left, top, right, bottom
+                            doc.content.splice( 0, 0, {
+                                  margin: [ 0, 0, 0, 12 ],
+                                  alignment: 'center',
+                                  image: logo,
+                                  width: 700,
+                                  height: 100,
+                              });
+                            
+                           },
+                           title: function() {
+                               return ' '
+                             },
+		                   exportOptions: {
+		                       columns: ':visible'
+		                   }
+		               },
+		              {
+		                   extend: 'print',
+		                   title: function() {
+                               return ' '
+                             },
+		                   exportOptions: {
+		                       columns: ':visible'
+		                   }
+		               }, 	      
+		               'colvis'        		              
+		               ];
+		         	
+		 
+		 var data={
+					"paging": true,
+					"searching": true,
+					"searchHighlight": true,
+					dom:'lBfrtip',
+					
+					buttons: [ 	            
+				 	           {
+				 	                extend: 'collection',
+				 	                text: 'Options',
+				 	                buttons:tableButtons
+				 	            }
+				 	     ],
+					"columnDefs": [{
+						"targets": 0,
+						"searchable": false,
+						"orderable": false,
+						"width": "1%",
+						"className": "dt-body-center"
+					},
+					{"targets": 6, "visible": false  },
+					{"targets": 7, "visible": false  },
+					{"targets": 8, "visible": false  },
+					{"targets": 9, "visible": false  },
+					{"targets": 10, "visible": false  },
+					{"targets": 11, "visible": false  },
+					{"targets": 12, "visible": false  },
+					{"targets": 13, "visible": false  },
+					{"targets": 14, "visible": false  },
+					{"targets": 15, "visible": false  },
+					{"targets": 16, "visible": false  },
+					{"targets": 17, "visible": false  },
+					{"targets": 18, "visible": false  },
+					{"targets": 19, "visible": false  },
+					{"targets": 20, "visible": false  },
+					{"targets": 21, "visible": false  },
+					{"targets": 22, "visible": false  },
+					{"targets": 23, "visible": false  },
+					{"targets": 24, "visible": false  },
+					{"targets": 25, "visible": false  }
+					]
+		 }
+		 $('#tbl-listing').DataTable(data);
+})
+</script>
+
+<div class="card card-info border-info center m-1" id='LISTFORM' >
+	<div class="card-header bg-navy"><h5 class="card-title text-center ">Inventory Detail Desk</h5>
+		<div class="buttonContainer  bg-light">
+			<button class="btn bg-gradient-success btn-sm" id="btnAdd"><i class="fa fa-plus"></i> Add</button>
+			<button class="btn bg-gradient-success btn-sm" id="btnModify"><i class="fa fa-edit"></i> Modify</button>
+			<button class="btn bg-gradient-success btn-sm" id="btnview"><i class="fa fa-eye" aria-hidden="true"></i> View</button>
+			<button class="btn bg-gradient-danger btn-sm" id="btnDelete"><i class="fa fa-trash" aria-hidden="true"></i> Delete</button>				
+		</div>
+	</div>
+
+
+	<div class="card-body form-group">
+			<div class="row " >	
+				<div class='col-lg-12'>
+						<button data-val="show" class="btn bg-gradient-success btn-xs" style="float:right;" id="filterButton" >Show Filters</button>
+    							
+				</div>
+			</div>
+ 			<div class='container-fluid '   style="border: 1px solid !important;" id='filterHideShow'>
+ 			<br/>	
+  			<div class="row hideData" >
+						
+						<div class='col-lg-3'  >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="directorate" data-langtag="Directorate" >Directorate</label>
+	                			<select class="form-control form-control-sm  " id ='directorate' name="directorate">
+	                				<option title="ALL"  selected value="ALL">All</option>
+									<option title="DME" value="DME">DME</option>
+									<option title="DM-RS" value="DM-RS">DM-RS</option>
+									<option title="DPH" value="DPH">DPH</option>									
+	                			</select>
+		                		<div class="invalid-feedback"></div>
+	 	  					</div>
+		 				</div>
+	 	
+	 	
+	 				<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="institutionName"  data-langtag="Institution Name" >Institution Name</label>
+	                			<select class="form-control form-control-sm   " id ='institutionName' name="institutionName">
+	                				<option value="" selected="selected">Select Institution Name</option>
+	                				<option title="Aagar- DH"  value="5001672">Govt. Rajaji Hospital Chennai</option>									
+	                			</select>
+	              				<div class="invalid-feedback"></div>
+ 	  						</div>
+	 					</div>
+	 					
+	 					
+	 					<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="departmentName" data-langtag="Department Name" >Department Name</label>
+	                			<select class="form-control form-control-sm   " id ='departmentName' name="departmentName">
+	                				<option value="" selected="selected">Select Department Name</option>
+	                				<option title="All" selected="" value="0">All</option>
+									<option title="Aagar- DH - BLOOD BANK DEP" value="5003337">Aagar- DH - BLOOD BANK DEP</option>
+									<option title="Aagar- DH - BURN UNIT" value="5003338">Aagar- DH - BURN UNIT</option>
+									<option title="Aagar- DH - CENCER DEPT" value="5003339">Aagar- DH - CENCER DEPT</option>
+									<option title="Aagar- DH - CHILDREN WARD" value="5003340">Aagar- DH - CHILDREN WARD</option>
+									<option title="Aagar- DH - COLD CHAIN DEP" value="5003341">Aagar- DH - COLD CHAIN DEP</option>
+									<option title="Aagar- DH - DAILYSIS DEPT" value="5003342">Aagar- DH - DAILYSIS DEPT</option>
+	                			</select>
+	              			<div class="invalid-feedback"></div>
+ 	  					</div>
+	 				</div>
+	 				
+	 				<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="genericEquipmentName"  data-langtag="Generic Equipment Name" >Generic Equipment Name</label>
+	                			<select class="form-control form-control-sm  " id ='genericEquipmentName' name="genericEquipmentName">
+	                				<option value="" selected="selected">Select Generic Equipment Name</option>
+	                			</select>
+	              			<div class="invalid-feedback"></div>
+ 	  					</div>
+	 				</div>
+	 		</div>	
+	 			
+	 				
+	 		<div class="row hideData" >
+	 				<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="equipmentStatus"  data-langtag="Equipment Status" >Equipment Status</label>
+	                			<select class="form-control form-control-sm  " id ='equipmentStatus' name="equipmentStatus">
+	                				<option value="" selected="selected">Select Equipment Status</option>
+	                				<option title="All" selected="" value="0">All</option>
+									<option title="Functional - Functional" value="12">Functional - Functional</option>
+									<option title="Functional - Functional with Substitute" value="13">Functional - Functional with Substitute</option>
+									<option title="Functional - In Complaint" value="18">Functional - In Complaint</option>
+									<option title="Non Functional - Condemned" value="19">Non Functional - Condemned</option>
+									<option title="Non Functional - In Complaint" value="16">Non Functional - In Complaint</option>
+									<option title="Non Functional - Non Functional Non Repairable" value="15">Non Functional - Non Functional Non Repairable</option>
+									<option title="Non Functional - Non Functional Repairable" value="14">Non Functional - Non Functional Repairable</option>
+	                			</select>
+	              			<div class="invalid-feedback"></div>
+ 	  					</div>
+	 				</div>
+	 				
+	 				<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="manufacturer"  data-langtag="Manufacturer" >Manufacturer</label>
+	                			<select class="form-control form-control-sm  " id ='manufacturer' name="manufacturer">
+	                				<option value="" selected="selected">Select Manufacturer</option>
+	                			</select>
+	              			<div class="invalid-feedback"></div>
+ 	  					</div>
+	 				</div>
+	 				
+	 				<div class='col-lg-3' >
+				 		<div class="form-group">
+                			<label class="col-form-label col-form-label-sm" for="uniqueId"  data-langtag="Unique Id" >Unique Id</label>
+							<input type= "text" class="form-control form-control-sm"  id="uniqueId" name="uniqueId" maxlength="50" >
+              				<div class="invalid-feedback"></div>
+	  						</div>
+ 					</div>
+ 					
+ 					<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="districtName"  data-langtag="District Name" >District Name</label>
+	                			<select class="form-control form-control-sm  " id ='districtName' name="districtName">
+	                				<option value="" selected="selected">Select District Name</option>
+	                			</select>
+	              			<div class="invalid-feedback"></div>
+ 	  					</div>
+	 				</div>
+ 			</div>
+	 				
+	 		<div class="row hideData" >	
+	 				<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="category" data-langtag="Category" >Category</label>
+	                			<select class="form-control form-control-sm  " id ='category' name="category">
+	                				<option value="" selected="selected">Select Category</option>
+	                				<option value="" >a</option>
+	                				<option value="" >b1</option>
+	                				<option value="" >b2</option>
+	                				<option value="" >c</option>
+	                			</select>
+	              			<div class="invalid-feedback"></div>
+ 	  					</div>
+	 				</div>
+	 				
+	 				<div class='col-lg-3' >
+				 		<div class="form-group">
+                			<label class="col-form-label col-form-label-sm" for="uniqueId"  data-langtag="PO Reference No." >PO Reference No.</label>
+							<input type= "text" class="form-control form-control-sm"  id="poReferenceNo" name="poReferenceNo" maxlength="50" >
+              				<div class="invalid-feedback"></div>
+	  						</div>
+ 					</div>		
+ 					
+ 					<div class='col-lg-3' >
+				 		<div class="form-group">
+                			<label class="col-form-label col-form-label-sm" for="uniqueId"  data-langtag="PO Date" >PO Date</label>
+							<input type= "date" class="form-control form-control-sm"  id="poDate" name="poDate" maxlength="50" >
+              				<div class="invalid-feedback"></div>
+	  						</div>
+ 					</div>
+ 					
+ 					<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="supplierName"  data-langtag="Supplier Name" >Supplier Name</label>
+	                			<select class="form-control form-control-sm  " id ='supplierName' name="supplierName">
+	                				<option value="" selected="selected">Select Supplier Name</option>
+	                			</select>
+	              			<div class="invalid-feedback"></div>
+ 	  					</div>
+	 				</div>
+	 		</div>
+	 				
+	 		<div class="row hideData" >	
+	 				<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="sourceOfFund"  data-langtag="Source of Fund" >Source of Fund</label>
+	                			<select class="form-control form-control-sm  " id ='sourceOfFund' name="sourceOfFund">
+	                				<option value="0" selected="selected">All</option>
+	                				<option value="">NHM</option>
+	                				<option value="">State Govt</option>
+	                				<option value="">JICA</option>
+	                				<option value="">,WORLD BANK</option>
+	                			</select>
+	              			<div class="invalid-feedback"></div>
+ 	  					</div>
+	 				</div>
+	 						
+	 				
+	 				<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="purchasedBy"  data-langtag="Purchased By" >Purchased By</label>
+	                			<select class="form-control form-control-sm  " id ='purchasedBy' name="purchasedBy">
+	                				<option value="" selected="selected">TNMSCL</option>
+	                				<option value="" >Institution</option>
+	                			</select>
+	              			<div class="invalid-feedback"></div>
+ 	  					</div>
+	 				</div>
+	 				
+	 				<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="verificationStatus"  data-langtag="Verification Status" >Verification Status</label>
+	                			<select class="form-control form-control-sm  " id ='verificationStatus' name="verificationStatus">
+	                				<option title="All" selected="" value="0">All</option>
+									<option title="New" value="1">New</option>
+									<option title="Verified" value="2">Verified</option>
+									<option title="Verification in Process" value="3">Verification in Process</option>
+									<option title="Rejected" value="4">Rejected</option>
+	                			</select>
+	              			<div class="invalid-feedback"></div>
+ 	  					</div>
+	 				</div>
+		 	 </div>
+	 		
+	 		<div class="row hideData" >
+	 				<div class='col-lg-3' >
+					 		<div class="form-check">
+	                			<input type= "checkbox" class="form-check-input"  id='underWarranty' name="underWarranty" maxlength="50" >
+	                			<label class="col-form-check-label" for="underWarranty"  data-langtag="Under Warranty" >Under Warranty</label>
+	              			<div class="invalid-feedback"></div>
+ 	  					</div>
+	 				</div> 
+	 				
+	 				<div class='col-lg-3' >
+					 		<div class="form-check">
+					 		<input type= "checkbox" class="form-check-input"  id='underAMC' name="underAMC" maxlength="50" >
+	                			<label class="col-form-check-label" for="underAMC"  data-langtag="Under AMC" >Under AMC</label>
+	              			<div class="invalid-feedback"></div>
+ 	  					</div>
+	 				</div> 
+	 				
+	 				
+	 				<div class='col-lg-3' >
+					 		<div class="form-check">
+					 			<input type= "checkbox" class="form-check-input"  id='underAMC' name="underCMC" maxlength="50" >
+	                			<label class="col-form-check-label" for="underCMC"  data-langtag="Under CMC" >Under CMC</label>
+	              			<div class="invalid-feedback"></div>
+ 	  					</div>
+	 				</div> 	
+	 		</div>
+
+			</div>
+			
+			<div class='container-fluid m-1 '>
+			<div class='row no-more-tables'>
+				<table class="table table-bordered table-striped " id='tbl-listing' >
+				  <thead class="bg-navy">
+				      <tr>
+				      	<th></th>
+				        <th >Equipment Name</th>
+				        <th>Make</th>
+				        <th>Model</th>
+				        <th>Serial No.</th>
+				        <th>TNMSC Equipment Id</th>
+				        <th >Supplier Name</th>
+				        <th >Directorate</th>
+				        <th >District</th>
+				        <th >HUD</th>
+				        <th >Block</th>
+				        <th >Hospital</th>
+				        <th >Department</th>
+				        <th >Category</th>
+				        <th >GO. Proceeeding No.</th>
+				        <th >Fund</th>
+				        <th >Tender Ref</th>
+				        <th >PO Ref</th>
+				        <th >PO Date</th>
+				        <th >Value</th>
+				        <th >Date Of Installation</th>
+				        <th >Warrenty In Years</th>
+				        <th >CAMC In Years</th>
+				        <th >CAMC Order Ref No.</th>
+				        <th >CAMC Effect From</th>
+				        <th >CAMC Expired On</th>
+				        <th >Equipment Status</th>
+				        <th>Verification Status</th>
+				      </tr>
+				    </thead>
+				    <tbody>
+				     <tr>
+				      	<td class='d-none d-sm-block' ><input type="checkbox"></td>
+				        <td data-title='Equipment Name' >Semi Auto Analyzer</td>
+				        <td data-title='Make'>M/S Transasia Biomedicals Ltd </td>
+				        <td data-title='Model'>Chem 7</td>
+				        <td data-title='Serial No.'>123456</td>
+				        <td data-title='TNMSC Equipment Id'>123456</td>
+				        <td data-title='Supplier Name' >M/S Transasia Biomedicals Ltd</td>
+				        <td data-title='Directorate' >DME</td>
+				        <td data-title='District' >Madhurai</td>
+				        <td data-title='HUD' ></td>
+				        <td data-title='Block' ></td>
+				        <td data-title='Hospital' >Madhurai Medical College</td>
+				        <td data-title='Department' >Dept. of Biochemistry</td>
+				        <td data-title='Category' >B2</td>
+				        <td data-title='GO. Proceeeding No.' ></td>
+				        <td data-title='Fund' ></td>
+				        <td data-title='Tender Ref' >2960/TNMSC/ENGG/2025</td>
+				        <td data-title='PO Ref' >2960/TNMSC/ENGG/2025</td>
+				        <td data-title='PO Date' >22-06-2016</td>
+				        <td data-title='Value' >168300</td>
+				        <td data-title='Date Of Installation' ></td>
+				        <td data-title='Warrenty In Years' >3</td>
+				        <td data-title='CAMC In Years' >7</td>
+				        <td data-title='CAMC Order Ref No.' ></td>
+				        <td data-title='CAMC Effect From' ></td>
+				        <td data-title='CAMC Expired On' ></td>
+				        <td data-title='Equipment Status'>Working</td>
+				        <td data-title='Verification Status'>Payment Done</td>
+				      </tr>
+				      <tr>
+				      	<td class='d-none d-sm-block' ><input type="checkbox"></td>
+				        <td data-title='Equipment Name' >Semi Auto Analyzer</td>
+				        <td data-title='Make'>M/S Transasia Biomedicals Ltd </td>
+				        <td data-title='Model'>Chem 7</td>
+				        <td data-title='Serial No.'>123456</td>
+				        <td data-title='TNMSC Equipment Id'>123456</td>
+				        <td data-title='Supplier Name' >M/S Transasia Biomedicals Ltd</td>
+				        <td data-title='Directorate' >DME</td>
+				        <td data-title='District' >Madhurai</td>
+				        <td data-title='HUD' ></td>
+				        <td data-title='Block' ></td>
+				        <td data-title='Hospital' >Madhurai Medical College</td>
+				        <td data-title='Department' >Dept. of Biochemistry</td>
+				        <td data-title='Category' >B2</td>
+				        <td data-title='GO. Proceeeding No.' ></td>
+				        <td data-title='Fund' ></td>
+				        <td data-title='Tender Ref' >2960/TNMSC/ENGG/2025</td>
+				        <td data-title='PO Ref' >2960/TNMSC/ENGG/2025</td>
+				        <td data-title='PO Date' >22-06-2016</td>
+				        <td data-title='Value' >168300</td>
+				        <td data-title='Date Of Installation' ></td>
+				        <td data-title='Warrenty In Years' >3</td>
+				        <td data-title='CAMC In Years' >7</td>
+				        <td data-title='CAMC Order Ref No.' ></td>
+				        <td data-title='CAMC Effect From' ></td>
+				        <td data-title='CAMC Expired On' ></td>
+				        <td data-title='Equipment Status'>Working</td>
+				        <td data-title='Verification Status'>Payment Done</td>
+				      </tr>
+				      <tr>
+				      	<td class='d-none d-sm-block' ><input type="checkbox"></td>
+				        <td data-title='Equipment Name' >Semi Auto Analyzer</td>
+				        <td data-title='Make'>M/S Transasia Biomedicals Ltd </td>
+				        <td data-title='Model'>Chem 7</td>
+				        <td data-title='Serial No.'>123456</td>
+				        <td data-title='TNMSC Equipment Id'>123456</td>
+				        <td data-title='Supplier Name' >M/S Transasia Biomedicals Ltd</td>
+				        <td data-title='Directorate' >DME</td>
+				        <td data-title='District' >Madhurai</td>
+				        <td data-title='HUD' ></td>
+				        <td data-title='Block' ></td>
+				        <td data-title='Hospital' >Madhurai Medical College</td>
+				        <td data-title='Department' >Dept. of Biochemistry</td>
+				        <td data-title='Category' >B2</td>
+				        <td data-title='GO. Proceeeding No.' ></td>
+				        <td data-title='Fund' ></td>
+				        <td data-title='Tender Ref' >2960/TNMSC/ENGG/2025</td>
+				        <td data-title='PO Ref' >2960/TNMSC/ENGG/2025</td>
+				        <td data-title='PO Date' >22-06-2016</td>
+				        <td data-title='Value' >168300</td>
+				        <td data-title='Date Of Installation' ></td>
+				        <td data-title='Warrenty In Years' >3</td>
+				        <td data-title='CAMC In Years' >7</td>
+				        <td data-title='CAMC Order Ref No.' ></td>
+				        <td data-title='CAMC Effect From' ></td>
+				        <td data-title='CAMC Expired On' ></td>
+				        <td data-title='Equipment Status'>Working</td>
+				        <td data-title='Verification Status'>Payment Done</td>
+				      </tr>
+				    </tbody>
+				 </table>	
+			</div>
+			</div>		
+	</div>
+</div>
+
+
+
+<div class="card card card-info border-info center m-1 hideData" id='ADDFORM' >			
+	<div class="card-header bg-navy"><h5 class="card-title text-center ">Inventory Details Desk>> Add</h5>
+			<div class="buttonContainer  bg-light">
+				<button class="btn bg-gradient-success btn-sm" ><i class="fa fa-save" aria-hidden="true"></i> Save</button>
+				<button class="btn bg-gradient-success btn-sm" id="btnBack1"><i class="fas fa-arrow-circle-left"></i> Back</button>				
+			</div>
+	</div>
+
+	<div class="card-body form-group">
+ 	
+  			<div class="row " >
+					<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="directorate" data-langtag="Directorate" >Directorate</label>
+	                			<select class="form-control form-control-sm  " id ='directorate' name="directorate">
+	                				<option title="ALL"  selected value="ALL">All</option>
+									<option title="DME" value="DME">DME</option>
+									<option title="DM-RS" value="DM-RS">DM-RS</option>
+									<option title="DPH" value="DPH">DPH</option>									
+	                			</select>
+	              				<div class="invalid-feedback"></div>
+ 	  						</div>
+	 					</div>
+	 					
+						
+					<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="institutionName"  data-langtag="Institution Name" >Institution Name</label>
+	                			<select class="form-control form-control-sm   " id ='institutionName' name="institutionName">
+	                				<option value="" selected="selected">Select Institution Name</option>
+	                				<option title="Aagar- DH"  value="5001672">Govt. Rajaji Hospital Chennai</option>									
+	                			</select>
+	              				<div class="invalid-feedback"></div>
+ 	  						</div>
+	 				</div>
+	 				<div class='col-lg-3' >
+		 				<div class="form-group">
+	             			<label class="col-form-label col-form-label-sm" for="districtName" data-langtag="District Name" >District Name</label>
+	             			<input type='text' class="form-control form-control-sm  " id ='districtName' name="districtName" placeholder="auto entered on select of Institution">	             			
+	           			<div class="invalid-feedback"></div>
+						</div>
+				</div>
+	 					
+	 					
+	 					<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="departmentName"  data-langtag="Department Name" >Department Name</label>
+	                			<select class="form-control form-control-sm  " id ='departmentName' name="departmentName">
+	                				<option value="" selected="selected">Select Department Name</option>
+	                				<option title="All"  value="0">All</option>
+									<option title="Aagar- DH - BLOOD BANK DEP" value="5003337"> BLOOD BANK DEP</option>
+									<option title="Aagar- DH - BURN UNIT" value="5003338"> BURN UNIT</option>									
+	                			</select>
+	              			<div class="invalid-feedback"></div>
+ 	  					</div>
+	 				</div>
+	 	
+	 				<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="equipmentName" data-langtag="Equipment Name" >Equipment Name</label>
+	                			<select class="form-control form-control-sm  " id ='equipmentName' name="equipmentName">
+	                				<option value="" selected="selected">Select Equipment Name</option>
+	                				<option title="3 Fold Labour Table Ss With Foam Mattress [99999]" value="18000306">3 Fold Labour Table Ss With Foam Mattress [99999]</option>
+									<option title="4 To 13 Mhz Linear  Transducer  With Near Focus (Probe For Usg Machine ) [2011]" value="18000341">4 To 13 Mhz Linear  Transducer  With Near Focus (Probe For Usg Machine ) [2011]</option>
+									<option title="-80 Degree C Vertical Ultra Low Freezer [Labe021]" value="18000288">-80 Degree C Vertical Ultra Low Freezer [Labe021]</option>
+									<option title="Abg Machine [10001]" value="18000001">Abg Machine [10001]</option>
+									<option title="Advance Icu Ventilator [Icue010]" value="18000195">Advance Icu Ventilator [Icue010]</option>
+	                			</select>
+	              			<div class="invalid-feedback"></div>
+ 	  					</div>
+	 				</div>
+	 		
+	 				<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="modelName" data-langtag="Model Name" >Model Name</label>
+	                			<select class="form-control form-control-sm  " id ='modelName' name="modelName">
+	                				<option value="" selected="selected">Select Model Name</option>
+	                				<option title="3870ELUPU-D" value="18100614">3870ELUPU-D</option>
+									<option title="AUT (IND)" value="18100572">AUT (IND)</option>
+									<option title="MODEL NOT AVAILABLE" value="18100506">MODEL NOT AVAILABLE</option>
+									<option title="NA" value="18100645">NA</option>
+									<option title="SS-702100" value="18100304">SS-702100</option>
+									<option title="YSI 402 D" value="18100429">YSI 402 D</option>
+									<option value="99"> Others </option>
+	                			</select>
+	              			<div class="invalid-feedback"></div>
+ 	  					</div>
+	 				</div>
+	 		
+	 		
+			<div class='col-lg-3' >
+		 		<div class="form-group">
+              			<label class="col-form-label col-form-label-sm" for="manufacturerName"   >Manufacturer Name</label>
+              			<select class="form-control form-control-sm  " id ='manufacturerName' name="manufacturerName">
+              				<option value="" selected="selected">Select Manufacturer Name</option>
+              				<option title="ABAXIS HEALTHCARE" value="1810121">ABAXIS HEALTHCARE</option>
+						<option title="ABBOTT MEDICAL" value="1810752">ABBOTT MEDICAL</option>
+						<option title="AB(IND)" value="1811631">AB(IND)</option>
+						<option title="ABSOLUTE" value="1811632">ABSOLUTE</option>
+						<option title="ACCORD ELECTRONIC" value="1810932">ACCORD ELECTRONIC</option>
+						<option title="ACCU CHECK" value="1811821">ACCU CHECK</option>
+              			</select>
+            			<div class="invalid-feedback"></div>
+ 					</div>
+			</div>
+			
+			<div class='col-lg-3' >
+		 		<div class="form-group">
+              			<label class="col-form-label col-form-label-sm" for="supplierName"  data-langtag="Supplier Name" >Supplier Name</label>
+              			<select class="form-control form-control-sm  " id ='supplierName' name="supplierName">
+              			<option value="" selected="selected">Select Supplier Name</option>
+              			<option title="ACME" value="1810144">ACME</option>
+					<option title="Adarsh Enterprises" value="1812088">Adarsh Enterprises</option>
+					<option title="Adonis Medical Systems Private Limited" value="1810444">Adonis Medical Systems Private Limited</option>
+					<option title="Agilent Technologies India Pvt Ltd" value="1812089">Agilent Technologies India Pvt Ltd</option>
+					<option title="Allengers Medical Systems Ltd" value="1812159">Allengers Medical Systems Ltd</option>
+					<option title="ALLIED MEDICAL LTD" value="1810031">ALLIED MEDICAL LTD</option>
+					<option title="Anthrometriques Medical Instruments" value="1812090">Anthrometriques Medical Instruments</option>
+              			</select>
+            			<div class="invalid-feedback"></div>
+ 					</div>
+			</div> 	
+			<div class='col-lg-3' >
+		 		<div class="form-group">
+              			<label class="col-form-label col-form-label-sm" for="supplierEmail"  data-langtag="Supplier EmailId" >Supplier EmailId</label>
+              			<input type='text' class="form-control form-control-sm  " id ='supplierEmail' name="supplierEmail" placeholder="auto entered on select of supplier">	                			
+            			<div class="invalid-feedback"></div>
+ 					</div>
+			</div>
+			<div class='col-lg-3' >
+		 		<div class="form-group">
+              			<label class="col-form-label col-form-label-sm" for="supplierContactNo"  data-langtag="Supplier Contact No." >Supplier Contact No.</label>
+              			<input type='text' class="form-control form-control-sm  " id ='supplierContactNo' name="supplierContactNo" placeholder="auto entered on select of supplier">	                			
+            			<div class="invalid-feedback"></div>
+ 					</div>
+			</div>
+			<div class='col-lg-3' >
+		 		<div class="form-group">
+              			<label class="col-form-label col-form-label-sm" for="supplierDetails"  data-langtag="Supplier Details" >Supplier Address</label>
+              		   	<textarea class="form-control form-control-sm "  id="supplierDetails" name="supplierDetails" maxlength="50" data-validation="mandatory"  placeholder="auto entered on select of supplier"></textarea>
+            			<div class="invalid-feedback"></div>
+ 					</div>
+			</div>  	
+			
+			<div class='col-lg-3' >
+		 		<div class="form-group">
+              			<label class="col-form-label col-form-label-sm" for="status"  data-langtag="Status" >Status</label>
+              			<select class="form-control form-control-sm  " id ='status' name="status">
+              				<option value="" selected="selected">Select Status</option>
+              				<optgroup title="Functional" label="Functional"><option title="Functional" value="12">Functional</option></optgroup>
+						<optgroup title="Non Functional" label="Non Functional"><option title="Non Functional Repairable" value="14">Non Functional Repairable</option>
+						<option title="Non Functional Non Repairable" value="15">Non Functional Non Repairable</option>
+						<option title="Condemned" value="19">Condemned</option>
+						</optgroup>
+              			</select>
+            			<div class="invalid-feedback"></div>
+ 					</div>
+			</div> 	
+			
+			<div class='col-lg-3' >
+		 		<div class="form-group">
+              			<label class="col-form-label col-form-label-sm" for="serialNo"  data-langtag="Serial No." >Serial No.</label>
+              			<input type= "text" class="form-control form-control-sm  "  id="serialNo" name="serialNo" maxlength="50" >
+            			<div class="invalid-feedback"></div>
+ 					</div>
+			</div>
+			
+	 	
+	 		
+	 		
+			<div class='col-lg-3' >
+	 		<div class="form-group">
+	            			<label class="col-form-label col-form-label-sm" for="uniqueId"  data-langtag="Unique Id" >Unique Id</label>
+				<input type= "text" class="form-control form-control-sm"  id="uniqueId" name="uniqueId" maxlength="50" >
+	          				<div class="invalid-feedback"></div>
+						</div>
+			</div>
+			
+			<div class='col-lg-3' >
+		 		<div class="form-group">
+	             			<label class="col-form-label col-form-label-sm" for="purchaseCost"  data-langtag="Purchase Cost" >Purchase Cost</label>
+	             			<input type= "text" class="form-control form-control-sm  "  id="purchaseCost" name="purchaseCost" maxlength="50" data-validation="mandatory">
+	           			<div class="invalid-feedback"></div>
+						</div>
+			</div> 
+			
+			<div class='col-lg-3' >
+		 		<div class="form-group">
+	             			<label class="col-form-label col-form-label-sm" for="sourceOfFund" data-langtag="Source of Fund" >Source of Fund</label>
+	             			<select class="form-control form-control-sm  " id ='sourceOfFund' name="sourceOfFund">
+	             				<option value="" selected="selected">Select Source of Fund</option>
+	             				<option value="">NHM</option>
+	             				<option value="">State Govt</option>
+	             				<option value="">JICA</option>
+	             				<option value="">WORLD BANK</option>
+	             			</select>
+	           			<div class="invalid-feedback"></div>
+						</div>
+			</div>
+	
+			<div class='col-lg-3' >
+		 		<div class="form-group">
+	             			<label class="col-form-label col-form-label-sm" for="installationDate"  data-langtag="Installation Date" >Installation Date</label>
+	             			<input type= "date" class="form-control form-control-sm  "  id="installationDate" name="installationDate" maxlength="50"  >
+	           			<div class="invalid-feedback"></div>
+						</div>
+			</div> 
+	 		
+	 		
+	 		
+			<div class='col-lg-3' >
+	 		<div class="form-group">
+	            			<label class="col-form-label col-form-label-sm" for="poReferenceNo"  data-langtag="PO Reference No." >PO Reference No.</label>
+				<input type= "text" class="form-control form-control-sm"  id="poReferenceNo" name="poReferenceNo" maxlength="50" >
+	          				<div class="invalid-feedback"></div>
+						</div>
+			</div>		
+			
+			<div class='col-lg-3' >
+	 		<div class="form-group">
+	            			<label class="col-form-label col-form-label-sm" for="poDate"  data-langtag="PO Date" >PO Date</label>
+				<input type= "date" class="form-control form-control-sm"  id="poDate" name="poDate" maxlength="50" >
+	          				<div class="invalid-feedback"></div>
+						</div>
+			</div>
+			
+			
+			
+			<div class='col-lg-3' >
+		 		<div class="form-group">
+	             			<label class="col-form-label col-form-label-sm" for="suppliedBy"  data-langtag="Supplied By" >Supplied By</label>
+	             			<select class="form-control form-control-sm  " id ='suppliedBy' name="suppliedBy">
+	             				<option value="" selected="selected">TNMSCL</option>
+	             				<option value="" >Institution</option>
+	             				<option value="" >Others</option>
+	             			</select>
+	           			<div class="invalid-feedback"></div>
+						</div>
+			</div>
+	 				
+			<div class='col-lg-3' >
+				<label class="col-form-label col-form-label-sm"   >&nbsp;</label>
+		 		<div class="form-check">		 				
+              			<input type= "checkbox" class="form-check-input"  id='underWarranty' name="underWarranty" maxlength="50" >
+              			<label class="col-form-check-label" for="underWarranty"  data-langtag="Under Warranty" >Under Warranty</label>
+            			<div class="invalid-feedback"></div>
+ 					</div>
+			</div> 
+			
+			<div class='col-lg-3' >
+				
+		 		<div class="form-group">
+              			<label class="col-form-label col-form-label-sm" for="warrantyUpto"  data-langtag="Warranty Upto(Months)" >Warranty Upto(Months)</label>
+              			<input type= "text" class="form-control form-control-sm  "  id="warrantyUpto" name="warrantyUpto" maxlength="50" >
+            			<div class="invalid-feedback"></div>
+ 					</div>
+			</div> 
+	 			
+			
+			<div class='col-lg-3' >
+				<label class="col-form-label col-form-label-sm"   >&nbsp;</label>
+		 		<div class="form-check">
+		 		<input type= "checkbox" class="form-check-input"  id='underAMC' name="underAMC" maxlength="50" >
+              			<label class="col-form-check-label" for="underAMC"  data-langtag="Under AMC" >Under AMC</label>
+            			<div class="invalid-feedback"></div>
+ 					</div>
+			</div> 
+			
+			<div class='col-lg-3' >
+		 		<div class="form-group">
+              			<label class="col-form-label col-form-label-sm" for="amcUpto"  data-langtag="AMC Upto(Months)" >AMC Upto(Months)</label>
+              			<input type= "text" class="form-control form-control-sm  "  id="amcUpto" name="amcUpto" maxlength="50" >
+            			<div class="invalid-feedback"></div>
+ 					</div>
+			</div>
+	
+			<div class='col-lg-3' >
+				<label class="col-form-label col-form-label-sm"   >&nbsp;</label>
+		 		<div class="form-check">
+		 			<input type= "checkbox" class="form-check-input"  id='underAMC' name="underCMC" maxlength="50" >
+              			<label class="col-form-check-label" for="underCMC"  data-langtag="Under CMC" >Under CMC</label>
+            			<div class="invalid-feedback"></div>
+ 					</div>
+			</div> 
+			
+			<div class='col-lg-3' >
+		 		<div class="form-group">
+              			<label class="col-form-label col-form-label-sm" for="cmcUpto"  data-langtag="CMC Upto(Months)" >CMC Upto(Months)</label>
+              			<input type= "text" class="form-control form-control-sm  "  id="cmcUpto" name="cmcUpto" maxlength="50" >
+            			<div class="invalid-feedback"></div>
+ 					</div>
+			</div>
+	 	</div>
+	 	<div class="row">
+	 		<div class="col-lg-12 text-center">		
+			<button  class="btn bg-gradient-success btn-xs" id='addEquipment'  ><i class="fa fa-plus"></i> Add Equipment</button>
+			</div>
+		 </div>	 
+  		<br/>
+  		<h6 class='font-weight-bold' data-lang='Equipment Warranty Details'>Added Equipment Details :</h6>
+		<hr class="bg-navy">
+		<div class='row no-more-tables'>
+			<table class="table table-bordered table-striped " >
+				<thead class="bg-navy">
+			      <tr>
+			        	<th >Equipment Name</th>
+				        <th>Equipment Model</th>
+				        <th>Serial No.</th>
+				        <th>Bar Code</th>
+				        <th>Manufacturer Name</th>
+				        <th>Equipment Status</th>
+				        <th>Verification Status</th>
+			      </tr>
+			    </thead>
+			    <tbody>
+				     <tr>
+				      	<td data-title='Equipment Name' > 3 Fold Labour table SS with foam mattress</td>
+				        <td data-title='Equipment Model'>111111</td>
+				        <td data-title='Serial No.'>AKSA111</td>
+				        <td data-title='Bar Code'>887766</td>
+				        <td data-title='Manufacturer Name'>Aarpen V1</td>
+				        <td data-title='Equipment Status'>Functional</td>
+				        <td data-title='Verification Status'>Verified</td>
+				      </tr>
+				       <tr>
+				      	<td data-title='Equipment Name' > 3 Fold Labour table SS with foam mattress</td>
+				        <td data-title='Equipment Model'>111111</td>
+				        <td data-title='Serial No.'>AKSA111</td>
+				        <td data-title='Bar Code'>165432</td>
+				        <td data-title='Manufacturer Name'>Aarpen V1</td>
+				        <td data-title='Equipment Status'>Functional</td>
+				        <td data-title='Verification Status'>New</td>
+				      </tr>
+				      <tr>
+				      	<td data-title='Equipment Name' >ABG MACHINE</td>
+				        <td data-title='Equipment Model'>123</td>
+				        <td data-title='Serial No.'>480</td>
+				        <td data-title='Bar Code'>191903</td>
+				        <td data-title='Manufacturer Name'>Aarpen V1</td>
+				        <td data-title='Equipment Status'>Functional</td>
+				        <td data-title='Verification Status'>Verified</td>
+				      </tr>
+				    </tbody>
+			 </table>	
+		</div>		
+   </div>
+
+</div><!-- card ends -->
+
+
+
+
+<div class="card card card-info border-info center m-1 hideData" id='MODIFYFORM' >
+		<div class="card-header bg-navy"><h5 class="card-title text-center ">Inventory Details Desk>> Add</h5>
+			<div class="buttonContainer  bg-light">
+				<button class="btn bg-gradient-success btn-sm" ><i class="fa fa-save" aria-hidden="true"></i> Save</button>
+				<button class="btn bg-gradient-success btn-sm" id="btnBack1"><i class="fas fa-arrow-circle-left"></i> Back</button>				
+			</div>
+	</div>
+
+	<div class="card-body form-group">
+ 	
+  			<div class="row " >
+					<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="directorate" data-langtag="Directorate" >Directorate</label>
+	                			<select class="form-control form-control-sm  " id ='directorate' name="directorate">
+	                				<option title="ALL"  selected value="ALL">All</option>
+									<option title="DME" value="DME">DME</option>
+									<option title="DM-RS" value="DM-RS">DM-RS</option>
+									<option title="DPH" value="DPH">DPH</option>									
+	                			</select>
+	              				<div class="invalid-feedback"></div>
+ 	  						</div>
+	 					</div>
+	 					
+						
+					<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="institutionName"  data-langtag="Institution Name" >Institution Name</label>
+	                			<select class="form-control form-control-sm   " id ='institutionName' name="institutionName">
+	                				<option value="" selected="selected">Select Institution Name</option>
+	                				<option title="Aagar- DH"  value="5001672">Govt. Rajaji Hospital Chennai</option>									
+	                			</select>
+	              				<div class="invalid-feedback"></div>
+ 	  						</div>
+	 				</div>
+	 				<div class='col-lg-3' >
+		 				<div class="form-group">
+	             			<label class="col-form-label col-form-label-sm" for="districtName" data-langtag="District Name" >District Name</label>
+	             			<input type='text' class="form-control form-control-sm  " id ='districtName' name="districtName" placeholder="auto entered on select of Institution">	             			
+	           			<div class="invalid-feedback"></div>
+						</div>
+				</div>
+	 					
+	 					
+	 					<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="departmentName"  data-langtag="Department Name" >Department Name</label>
+	                			<select class="form-control form-control-sm  " id ='departmentName' name="departmentName">
+	                				<option value="" selected="selected">Select Department Name</option>
+	                				<option title="All"  value="0">All</option>
+									<option title="Aagar- DH - BLOOD BANK DEP" value="5003337"> BLOOD BANK DEP</option>
+									<option title="Aagar- DH - BURN UNIT" value="5003338"> BURN UNIT</option>									
+	                			</select>
+	              			<div class="invalid-feedback"></div>
+ 	  					</div>
+	 				</div>
+	 	
+	 				<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="equipmentName" data-langtag="Equipment Name" >Equipment Name</label>
+	                			<select class="form-control form-control-sm  " id ='equipmentName' name="equipmentName">
+	                				<option value="" selected="selected">Select Equipment Name</option>
+	                				<option title="3 Fold Labour Table Ss With Foam Mattress [99999]" value="18000306">3 Fold Labour Table Ss With Foam Mattress [99999]</option>
+									<option title="4 To 13 Mhz Linear  Transducer  With Near Focus (Probe For Usg Machine ) [2011]" value="18000341">4 To 13 Mhz Linear  Transducer  With Near Focus (Probe For Usg Machine ) [2011]</option>
+									<option title="-80 Degree C Vertical Ultra Low Freezer [Labe021]" value="18000288">-80 Degree C Vertical Ultra Low Freezer [Labe021]</option>
+									<option title="Abg Machine [10001]" value="18000001">Abg Machine [10001]</option>
+									<option title="Advance Icu Ventilator [Icue010]" value="18000195">Advance Icu Ventilator [Icue010]</option>
+	                			</select>
+	              			<div class="invalid-feedback"></div>
+ 	  					</div>
+	 				</div>
+	 		
+	 				<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="modelName" data-langtag="Model Name" >Model Name</label>
+	                			<select class="form-control form-control-sm  " id ='modelName' name="modelName">
+	                				<option value="" selected="selected">Select Model Name</option>
+	                				<option title="3870ELUPU-D" value="18100614">3870ELUPU-D</option>
+									<option title="AUT (IND)" value="18100572">AUT (IND)</option>
+									<option title="MODEL NOT AVAILABLE" value="18100506">MODEL NOT AVAILABLE</option>
+									<option title="NA" value="18100645">NA</option>
+									<option title="SS-702100" value="18100304">SS-702100</option>
+									<option title="YSI 402 D" value="18100429">YSI 402 D</option>
+									<option value="99"> Others </option>
+	                			</select>
+	              			<div class="invalid-feedback"></div>
+ 	  					</div>
+	 				</div>
+	 		
+	 		
+			<div class='col-lg-3' >
+		 		<div class="form-group">
+              			<label class="col-form-label col-form-label-sm" for="manufacturerName"   >Manufacturer Name</label>
+              			<select class="form-control form-control-sm  " id ='manufacturerName' name="manufacturerName">
+              				<option value="" selected="selected">Select Manufacturer Name</option>
+              				<option title="ABAXIS HEALTHCARE" value="1810121">ABAXIS HEALTHCARE</option>
+						<option title="ABBOTT MEDICAL" value="1810752">ABBOTT MEDICAL</option>
+						<option title="AB(IND)" value="1811631">AB(IND)</option>
+						<option title="ABSOLUTE" value="1811632">ABSOLUTE</option>
+						<option title="ACCORD ELECTRONIC" value="1810932">ACCORD ELECTRONIC</option>
+						<option title="ACCU CHECK" value="1811821">ACCU CHECK</option>
+              			</select>
+            			<div class="invalid-feedback"></div>
+ 					</div>
+			</div>
+			
+			<div class='col-lg-3' >
+		 		<div class="form-group">
+              			<label class="col-form-label col-form-label-sm" for="supplierName"  data-langtag="Supplier Name" >Supplier Name</label>
+              			<select class="form-control form-control-sm  " id ='supplierName' name="supplierName">
+              			<option value="" selected="selected">Select Supplier Name</option>
+              			<option title="ACME" value="1810144">ACME</option>
+					<option title="Adarsh Enterprises" value="1812088">Adarsh Enterprises</option>
+					<option title="Adonis Medical Systems Private Limited" value="1810444">Adonis Medical Systems Private Limited</option>
+					<option title="Agilent Technologies India Pvt Ltd" value="1812089">Agilent Technologies India Pvt Ltd</option>
+					<option title="Allengers Medical Systems Ltd" value="1812159">Allengers Medical Systems Ltd</option>
+					<option title="ALLIED MEDICAL LTD" value="1810031">ALLIED MEDICAL LTD</option>
+					<option title="Anthrometriques Medical Instruments" value="1812090">Anthrometriques Medical Instruments</option>
+              			</select>
+            			<div class="invalid-feedback"></div>
+ 					</div>
+			</div> 	
+			<div class='col-lg-3' >
+		 		<div class="form-group">
+              			<label class="col-form-label col-form-label-sm" for="supplierEmail"  data-langtag="Supplier EmailId" >Supplier EmailId</label>
+              			<input type='text' class="form-control form-control-sm  " id ='supplierEmail' name="supplierEmail" placeholder="auto entered on select of supplier">	                			
+            			<div class="invalid-feedback"></div>
+ 					</div>
+			</div>
+			<div class='col-lg-3' >
+		 		<div class="form-group">
+              			<label class="col-form-label col-form-label-sm" for="supplierContactNo"  data-langtag="Supplier Contact No." >Supplier Contact No.</label>
+              			<input type='text' class="form-control form-control-sm  " id ='supplierContactNo' name="supplierContactNo" placeholder="auto entered on select of supplier">	                			
+            			<div class="invalid-feedback"></div>
+ 					</div>
+			</div>
+			<div class='col-lg-3' >
+		 		<div class="form-group">
+              			<label class="col-form-label col-form-label-sm" for="supplierDetails"  data-langtag="Supplier Details" >Supplier Address</label>
+              		   	<textarea class="form-control form-control-sm "  id="supplierDetails" name="supplierDetails" maxlength="50" data-validation="mandatory"  placeholder="auto entered on select of supplier"></textarea>
+            			<div class="invalid-feedback"></div>
+ 					</div>
+			</div>  	
+			
+			<div class='col-lg-3' >
+		 		<div class="form-group">
+              			<label class="col-form-label col-form-label-sm" for="status"  data-langtag="Status" >Status</label>
+              			<select class="form-control form-control-sm  " id ='status' name="status">
+              				<option value="" selected="selected">Select Status</option>
+              				<optgroup title="Functional" label="Functional"><option title="Functional" value="12">Functional</option></optgroup>
+						<optgroup title="Non Functional" label="Non Functional"><option title="Non Functional Repairable" value="14">Non Functional Repairable</option>
+						<option title="Non Functional Non Repairable" value="15">Non Functional Non Repairable</option>
+						<option title="Condemned" value="19">Condemned</option>
+						</optgroup>
+              			</select>
+            			<div class="invalid-feedback"></div>
+ 					</div>
+			</div> 	
+			
+			<div class='col-lg-3' >
+		 		<div class="form-group">
+              			<label class="col-form-label col-form-label-sm" for="serialNo"  data-langtag="Serial No." >Serial No.</label>
+              			<input type= "text" class="form-control form-control-sm  "  id="serialNo" name="serialNo" maxlength="50" >
+            			<div class="invalid-feedback"></div>
+ 					</div>
+			</div>
+			
+	 	
+	 		
+	 		
+			<div class='col-lg-3' >
+	 		<div class="form-group">
+	            			<label class="col-form-label col-form-label-sm" for="uniqueId"  data-langtag="Unique Id" >Unique Id</label>
+				<input type= "text" class="form-control form-control-sm"  id="uniqueId" name="uniqueId" maxlength="50" >
+	          				<div class="invalid-feedback"></div>
+						</div>
+			</div>
+			
+			<div class='col-lg-3' >
+		 		<div class="form-group">
+	             			<label class="col-form-label col-form-label-sm" for="purchaseCost"  data-langtag="Purchase Cost" >Purchase Cost</label>
+	             			<input type= "text" class="form-control form-control-sm  "  id="purchaseCost" name="purchaseCost" maxlength="50" data-validation="mandatory">
+	           			<div class="invalid-feedback"></div>
+						</div>
+			</div> 
+			
+			<div class='col-lg-3' >
+		 		<div class="form-group">
+	             			<label class="col-form-label col-form-label-sm" for="sourceOfFund" data-langtag="Source of Fund" >Source of Fund</label>
+	             			<select class="form-control form-control-sm  " id ='sourceOfFund' name="sourceOfFund">
+	             				<option value="" selected="selected">Select Source of Fund</option>
+	             				<option value="">NHM</option>
+	             				<option value="">State Govt</option>
+	             				<option value="">JICA</option>
+	             				<option value="">WORLD BANK</option>
+	             			</select>
+	           			<div class="invalid-feedback"></div>
+						</div>
+			</div>
+	
+			<div class='col-lg-3' >
+		 		<div class="form-group">
+	             			<label class="col-form-label col-form-label-sm" for="installationDate"  data-langtag="Installation Date" >Installation Date</label>
+	             			<input type= "date" class="form-control form-control-sm  "  id="installationDate" name="installationDate" maxlength="50"  >
+	           			<div class="invalid-feedback"></div>
+						</div>
+			</div> 
+	 		
+	 		
+	 		
+			<div class='col-lg-3' >
+	 		<div class="form-group">
+	            			<label class="col-form-label col-form-label-sm" for="poReferenceNo"  data-langtag="PO Reference No." >PO Reference No.</label>
+				<input type= "text" class="form-control form-control-sm"  id="poReferenceNo" name="poReferenceNo" maxlength="50" >
+	          				<div class="invalid-feedback"></div>
+						</div>
+			</div>		
+			
+			<div class='col-lg-3' >
+	 		<div class="form-group">
+	            			<label class="col-form-label col-form-label-sm" for="poDate"  data-langtag="PO Date" >PO Date</label>
+				<input type= "date" class="form-control form-control-sm"  id="poDate" name="poDate" maxlength="50" >
+	          				<div class="invalid-feedback"></div>
+						</div>
+			</div>
+			
+			
+			
+			<div class='col-lg-3' >
+		 		<div class="form-group">
+	             			<label class="col-form-label col-form-label-sm" for="suppliedBy"  data-langtag="Supplied By" >Supplied By</label>
+	             			<select class="form-control form-control-sm  " id ='suppliedBy' name="suppliedBy">
+	             				<option value="" selected="selected">TNMSCL</option>
+	             				<option value="" >Institution</option>
+	             				<option value="" >Others</option>
+	             			</select>
+	           			<div class="invalid-feedback"></div>
+						</div>
+			</div>
+	 				
+			<div class='col-lg-3' >
+				<label class="col-form-label col-form-label-sm"   >&nbsp;</label>
+		 		<div class="form-check">		 				
+              			<input type= "checkbox" class="form-check-input"  id='underWarranty' name="underWarranty" maxlength="50" >
+              			<label class="col-form-check-label" for="underWarranty"  data-langtag="Under Warranty" >Under Warranty</label>
+            			<div class="invalid-feedback"></div>
+ 					</div>
+			</div> 
+			
+			<div class='col-lg-3' >
+				
+		 		<div class="form-group">
+              			<label class="col-form-label col-form-label-sm" for="warrantyUpto"  data-langtag="Warranty Upto(Months)" >Warranty Upto(Months)</label>
+              			<input type= "text" class="form-control form-control-sm  "  id="warrantyUpto" name="warrantyUpto" maxlength="50" >
+            			<div class="invalid-feedback"></div>
+ 					</div>
+			</div> 
+	 			
+			
+			<div class='col-lg-3' >
+				<label class="col-form-label col-form-label-sm"   >&nbsp;</label>
+		 		<div class="form-check">
+		 		<input type= "checkbox" class="form-check-input"  id='underAMC' name="underAMC" maxlength="50" >
+              			<label class="col-form-check-label" for="underAMC"  data-langtag="Under AMC" >Under AMC</label>
+            			<div class="invalid-feedback"></div>
+ 					</div>
+			</div> 
+			
+			<div class='col-lg-3' >
+		 		<div class="form-group">
+              			<label class="col-form-label col-form-label-sm" for="amcUpto"  data-langtag="AMC Upto(Months)" >AMC Upto(Months)</label>
+              			<input type= "text" class="form-control form-control-sm  "  id="amcUpto" name="amcUpto" maxlength="50" >
+            			<div class="invalid-feedback"></div>
+ 					</div>
+			</div>
+	
+			<div class='col-lg-3' >
+				<label class="col-form-label col-form-label-sm"   >&nbsp;</label>
+		 		<div class="form-check">
+		 			<input type= "checkbox" class="form-check-input"  id='underAMC' name="underCMC" maxlength="50" >
+              			<label class="col-form-check-label" for="underCMC"  data-langtag="Under CMC" >Under CMC</label>
+            			<div class="invalid-feedback"></div>
+ 					</div>
+			</div> 
+			
+			<div class='col-lg-3' >
+		 		<div class="form-group">
+              			<label class="col-form-label col-form-label-sm" for="cmcUpto"  data-langtag="CMC Upto(Months)" >CMC Upto(Months)</label>
+              			<input type= "text" class="form-control form-control-sm  "  id="cmcUpto" name="cmcUpto" maxlength="50" >
+            			<div class="invalid-feedback"></div>
+ 					</div>
+			</div>
+	 	</div>	
+		
+		
+		
+   </div>
+ 	
+</div><!-- card ends -->
+
+
+<div class="card card card-info border-info center m-1 hideData" id='VIEWPAGEFORM'  >
+		<div class="card-header bg-navy"><h5 class="card-title text-center ">Inventory Desk</h5>
+			<div class="buttonContainer  bg-light">
+				<button class="btn bg-gradient-success btn-sm" ><i class="fa fa-print" aria-hidden="true"></i> Print</button>
+				<button class="btn bg-gradient-success btn-sm" id="btnBack"><i class="fas fa-arrow-circle-left"></i> Back</button>				
+			</div>
+		</div>
+
+	
+		<div class="card-body form-group">
+		<h6 class='font-weight-bold' data-lang='Equipment Details'>Equipment Details</h6>
+		<hr class="bg-navy">	 	
+	 	<div class='row'>
+			<div class='col-lg-2' ><label class="col-form-label col-form-label-sm font-weight-bold" data-lang='District Name'>District Name:</label></div>
+			<div class='col-lg-2' >	<label class='col-form-label col-form-label-sm font-weight-normal'>	Madurai</label></div>
+			<div class='col-lg-2' ><label class="col-form-label col-form-label-sm font-weight-bold" data-lang='Institution Name'>Institution Name :</label></div>	
+			<div class='col-lg-2' >	<label class='col-form-label col-form-label-sm font-weight-normal'>Govt. Rajaji Hospital</label></div>
+			<div class='col-lg-2' ><label class="col-form-label col-form-label-sm font-weight-bold" data-lang='Department Name'>Department Name :</label></div>	
+			<div class='col-lg-2' >	<label class='col-form-label col-form-label-sm font-weight-normal'>Govt. Rajaji Hospital - AUTO CLAVE ROOM</label></div>
+			
+			<div class='col-lg-2' ><label class="col-form-label col-form-label-sm font-weight-bold" data-lang='Programme Name '>Programme Name :</label></div>	
+			<div class='col-lg-2' >	<label class='col-form-label col-form-label-sm font-weight-normal'>CW(Cw)</label></div>
+			<div class='col-lg-2' ><label class="col-form-label col-form-label-sm font-weight-bold" data-lang='CMC Upto'>Group Name :</label></div>	
+			<div class='col-lg-2' >	<label class='col-form-label col-form-label-sm font-weight-normal'>Eif</label></div>
+			<div class='col-lg-2' ><label class="col-form-label col-form-label-sm font-weight-bold" data-lang='SubGroup Name'>SubGroup Name :</label></div>	
+			<div class='col-lg-2' >	<label class='col-form-label col-form-label-sm font-weight-normal'>Equipment</label></div>
+			
+			<div class='col-lg-2' ><label class="col-form-label col-form-label-sm font-weight-bold" data-lang='Generic Equipment Name'>Generic Equipment Name :</label></div>	
+			<div class='col-lg-2' >	<label class='col-form-label col-form-label-sm font-weight-normal'>3 Fold Labour table SS with foam mattress</label></div>
+			<div class='col-lg-2' ><label class="col-form-label col-form-label-sm font-weight-bold" data-lang='Serial No'>Serial No :</label></div>	
+			<div class='col-lg-2' >	<label class='col-form-label col-form-label-sm font-weight-normal'>AKSA111</label></div>
+			<div class='col-lg-2' ><label class="col-form-label col-form-label-sm font-weight-bold" data-lang='Unique Id'>Unique Id :</label></div>	
+			<div class='col-lg-2' >	<label class='col-form-label col-form-label-sm font-weight-normal'>123456</label></div>
+			
+			<div class='col-lg-2' ><label class="col-form-label col-form-label-sm font-weight-bold" data-lang='Model Name'>Model Name :</label></div>	
+			<div class='col-lg-2' >	<label class='col-form-label col-form-label-sm font-weight-normal'>111111</label></div>
+			<div class='col-lg-2' ><label class="col-form-label col-form-label-sm font-weight-bold" data-lang='Manufacturer Name'>Manufacturer Name:</label></div>	
+			<div class='col-lg-2' >	<label class='col-form-label col-form-label-sm font-weight-normal'>Aarpen V1</label></div>
+			<div class='col-lg-2' ><label class="col-form-label col-form-label-sm font-weight-bold" data-lang='Supplied By'>Supplied By :</label></div>	
+			<div class='col-lg-2' >	<label class='col-form-label col-form-label-sm font-weight-normal'>Acme</label></div>	
+					
+			<div class='col-lg-2' ><label class="col-form-label col-form-label-sm font-weight-bold" data-lang='Category'>Equipment Category:</label></div>	
+			<div class='col-lg-2' >	<label class='col-form-label col-form-label-sm font-weight-normal'>B1</label></div>			
+			<div class='col-lg-2' ><label class="col-form-label col-form-label-sm font-weight-bold" data-lang='Cost/Unit (in Rs)'>Cost/Unit (in Rs):</label></div>	
+			<div class='col-lg-2' >	<label class='col-form-label col-form-label-sm font-weight-normal'>11000.00</label></div>
+			<div class='col-lg-2' ><label class="col-form-label col-form-label-sm font-weight-bold" data-lang='Equipment Status'>Equipment Status :</label></div>	
+			<div class='col-lg-2' >	<label class='col-form-label col-form-label-sm font-weight-normal'>Functional</label></div>
+			
+			<div class='col-lg-2' ><label class="col-form-label col-form-label-sm font-weight-bold" data-lang='Receive Date'>Receive Date :</label></div>	
+			<div class='col-lg-2' >	<label class='col-form-label col-form-label-sm font-weight-normal'>13-DEC-2019</label></div>						
+			<div class='col-lg-2' ><label class="col-form-label col-form-label-sm font-weight-bold" data-lang='Under Warranty'>Under Warranty:</label></div>	
+			<div class='col-lg-2' >	<label class='col-form-label col-form-label-sm font-weight-normal'>Yes</label></div>			
+			<div class='col-lg-2' ><label class="col-form-label col-form-label-sm font-weight-bold" data-lang='Warranty Upto'>Warranty Upto :</label></div>	
+			<div class='col-lg-2' >	<label class='col-form-label col-form-label-sm font-weight-normal'>24(in Months)</label></div>
+			
+			<div class='col-lg-2' ><label class="col-form-label col-form-label-sm font-weight-bold" data-lang='Under CMC'>Under CMC:</label></div>	
+			<div class='col-lg-2' >	<label class='col-form-label col-form-label-sm font-weight-normal'>No</label></div>			
+			<div class='col-lg-2' ><label class="col-form-label col-form-label-sm font-weight-bold" data-lang='CMC Upto'>CMC Upto :</label></div>	
+			<div class='col-lg-2' >	<label class='col-form-label col-form-label-sm font-weight-normal'>---</label></div>
+			<div class='col-lg-2' ><label class="col-form-label col-form-label-sm font-weight-bold" data-lang='Under AMC'>Under AMC :</label></div>	
+			<div class='col-lg-2' >	<label class='col-form-label col-form-label-sm font-weight-normal'>No</label></div>
+			
+			<div class='col-lg-2' ><label class="col-form-label col-form-label-sm font-weight-bold" data-lang='AMC Upto'>AMC Upto :</label></div>	
+			<div class='col-lg-2' >	<label class='col-form-label col-form-label-sm font-weight-normal'>---</label></div>
+		</div>
+		<br/>
+		<h6 class='font-weight-bold' data-lang='Equipment Installation Details'>Equipment Installation Details :</h6>
+		<hr class="bg-navy">
+	 	
+	 	<div class='row '>
+	 		
+	 		<div class='col-lg-2' ><label class="col-form-label col-form-label-sm font-weight-bold" data-lang='Company Contact Number'>Company Contact Number :</label></div>	
+			<div class='col-lg-2' >	<label class='col-form-label col-form-label-sm font-weight-normal'>---</label></div>
+			<div class='col-lg-2' ><label class="col-form-label col-form-label-sm font-weight-bold" data-lang='Installation Date'>Installation Date :</label></div>	
+			<div class='col-lg-2' >	<label class='col-form-label col-form-label-sm font-weight-normal'>12-DEC-2019</label></div>
+			<div class='col-lg-2' ><label class="col-form-label col-form-label-sm font-weight-bold" data-lang='Email Id'>Email Id :</label></div>	
+			<div class='col-lg-2' >	<label class='col-form-label col-form-label-sm font-weight-normal'>csagarmalwa@gmail.com</label></div>
+				  	
+			<div class='col-lg-2' ><label class="col-form-label col-form-label-sm font-weight-bold" data-lang='Dr./Incharge'>Dr./Incharge :</label></div>	
+			<div class='col-lg-2' >	<label class='col-form-label col-form-label-sm font-weight-normal'>Rajender Kumar Atal</label></div>
+			<div class='col-lg-2' ><label class="col-form-label col-form-label-sm font-weight-bold" data-lang='Remarks'>Remarks :</label></div>	
+			<div class='col-lg-2' >	<label class='col-form-label col-form-label-sm font-weight-normal'>--</label></div>
+			<div class='col-lg-2' ><label class="col-form-label col-form-label-sm font-weight-bold" data-lang='Location Name'>Location Name :</label></div>	
+			<div class='col-lg-2' >	<label class='col-form-label col-form-label-sm font-weight-normal'>--</label></div>
+			
+			<div class='col-lg-2' ><label class="col-form-label col-form-label-sm font-weight-bold" data-lang='Installation Certificate'>Installation Certificate</label></div>	
+			<div class='col-lg-2' >	<label class='col-form-label col-form-label-sm font-weight-normal'><a href='#'>InstCertificate.pdf</a></label></div>	  		
+						
+		</div>
+		<br/>
+		<h6 class='font-weight-bold' data-lang='Equipment Warranty Details'>Equipment Warranty Details :</h6>
+		<hr class="bg-navy">
+		<div class='row no-more-tables'>
+			<table class="table table-bordered table-striped " >
+				<thead class="bg-navy">
+			      <tr>
+			      	<th>S.No.</th>
+			        <th>Warranty Start Date</th>
+			        <th>Warranty Upto</th>
+			        <th>Frequency of Periodic Maintenance</th>
+			        <th>Terms & Conditions</th>
+			        <th>Remarks</th>
+			      </tr>
+			    </thead>
+			    <tbody>
+			     <tr>
+			        <td data-title='S.No.'>1</td>
+			        <td data-title='Warranty Start Date'>12-DEC-2019</td>
+			        <td data-title='Warranty Upto'>12-DEC-2021</td>
+			        <td data-title='Frequency of Periodic Maintenance'>---</td>
+			        <td data-title='Terms & Conditions'>---</td>
+			        <td data-title='Remarks'>---</td>
+			      </tr>
+			    </tbody>
+			 </table>	
+		</div>
+		<br/>
+		<h6 class='font-weight-bold' data-lang='Equipment Maintenance(AMC/CMC) Details'>Equipment Maintenance(AMC/CMC) Details</h6>
+		<hr class="bg-navy">
+		<div class='row no-more-tables'>
+			<table class="table table-bordered table-striped " >
+				<thead class="bg-navy">
+			      <tr>
+			      	<th>S.No.</th>
+			        <th>Maintenance Type</th>
+			        <th>Maintenance Start Date</th>
+			        <th>Maintenance End Date</th>
+			        <th>Preventive Maintenance Frequency</th>
+			        <th>Maintenance Cost</th>
+			        <th>Terms & Conditions</th>
+			        <th>Penalty Conditions</th>
+			        <th>Remarks</th>
+			        <th>Contract Copy Attach</th>
+			        
+			      </tr>
+			    </thead>
+			    <tbody>
+			     <tr>
+			        <td data-title='S.No.'>1</td>
+			        <td data-title='Maintenance Type'>CAMC</td>
+			        <td data-title='Maintenance Start Date'>12-DEC-2019</td>
+			        <td data-title='Maintenance End Date'>12-DEC-2021</td>			        
+			        <td data-title='Preventive Maintenance Frequency'>4</td>
+			        <td data-title='Maintenance Cost'>Rs. 1500</td>
+			        <td data-title='Terms & Conditions'>---</td>
+			        <td data-title='Penalty Conditions'></td>
+			        <td data-title='Remarks'>---</td>
+			        <td data-title='Contract Copy Attach'><a href='#'>Contract.pdf</a></td>
+			      </tr>
+			    </tbody>
+			 </table>
+		</div>	 
+		<br/>
+		<h6 class='font-weight-bold' data-lang='Inventory Verification Details'>Inventory Verification Details</h6>
+		<hr class="bg-navy">
+		<div class='row no-more-tables'>
+			<table class="table table-bordered table-striped " >
+				<thead class="bg-navy">
+			      <tr>
+			      	<th>Verified By </th>
+			        <th>Verification Status</th>
+			        <th>Verification Status Date</th>
+			        <th>Remarks</th>
+			        <th>Upload Document(s)</th>
+			      </tr>
+			    </thead>
+			    <tbody>
+			     <tr>			        
+			        <td data-title='Verified By '>Siddharth</td>
+			        <td data-title='Verification Status'>Verified</td>
+			        <td data-title='Verification Status Date'>12-DEC-2021</td>			        
+			        <td data-title='Remarks'>-</td>			        
+			        <td data-title='Upload Document(s)'><a href='#'>Contract.pdf</a></td>
+			      </tr>
+			    </tbody>
+			 </table>
+		</div>
+		
+		<br/>
+		<h6 class='font-weight-bold' data-lang='Equipment Complaint Details'>Equipment Complaint Details</h6>
+		<hr class="bg-navy">
+		<div class='row no-more-tables'>
+			<table class="table table-bordered table-striped " >
+				<thead class="bg-navy">
+			      <tr>
+			      <th>S.No.</th>
+			        <th>Complaint Id</th>
+			        <th>Complaint Date & Time</th>
+			        <th>Service Action Date</th>
+			        <th>Close Date</th>
+			        <th>Complaint Description</th>
+			        <th>Status</th>
+			        <th>Down Time</th>
+			        <th>Penalty Amount</th>			        
+			      </tr>
+			    </thead>
+			    <tbody>
+			     <tr>
+			        <td data-title='S.No.'>1</td>
+			        <td data-title='Complaint Id'>13120010000002</td>
+			        <td data-title='Complaint Date & Time'>29-JAN-020 03:01 PM</td>
+			        <td data-title='Service Action Date'>29-JAN-020 03:01 PM</td>			        
+			        <td data-title='Close Date'>29-JAN-020 03:01 PM</td>
+			        <td data-title='Complaint Descriptio'>Not Working</td>
+			        <td data-title='Status'>Final Close</td>
+			        <td data-title='Down Time'>0:2:51</td>
+			        <td data-title='Penalty Amount'>0</td>			        
+			      </tr>
+			    </tbody>
+			 </table>
+		</div>
+		
+		<h6 class='font-weight-bold' data-lang='Equipment Condemnation & Auction Desk Details'>Equipment Condemnation & Auction Desk Details</h6>
+		<hr class="bg-navy">
+		<table class="table table-bordered table-striped " >
+				<thead class="bg-navy">
+			      <tr>
+			        <th>Request No.</th>
+			        <th>Request Date</th>
+			        <th>Identified By</th>
+			        <th>Remarks / Reason for Condemnation</th>
+			        <th>Condemnation Certificate</th>
+			        			        
+			      </tr>
+			    </thead>
+			    <tbody>
+			     <tr>
+			        <td data-title='Request No.'>131200100012</td>
+			        <td data-title='Request Date'>29-JAN-020 03:01 PM</td>
+			        <td data-title='Identified By'>Abhishek</td>			        
+			        <td data-title='Remarks / Reason for Condemnation'>Repair cost greater then equipment cost</td>
+			        <td data-title='Condemnation Certificate'><a href='#'>CondemnationCertificate.pdf</a></td>			        			        
+			      </tr>
+			    </tbody>
+			 </table>
+	</div>
+</div><!-- card ends -->

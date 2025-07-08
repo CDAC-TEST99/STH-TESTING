@@ -1,0 +1,685 @@
+<script>
+$(document).ready(function () {
+	$('#btnview').click(function(){
+		$('#LISTFORM').addClass('hideData');
+		$('#VIEWPAGEFORM ').removeClass('hideData');		
+	});
+	
+	$('#btnBack').click(function(){
+		$('#LISTFORM').removeClass('hideData');
+		$('#VIEWPAGEFORM ').addClass('hideData');		
+	});
+	$('#btnpostinspection').click(function(){
+		$('#LISTFORM').addClass('hideData');
+		$('#POSTINSPECTIONLISTFORM').removeClass('hideData');		
+	});
+	$('#btnBackPostInspection').click(function(){
+		$('#LISTFORM').removeClass('hideData');
+		$('#POSTINSPECTIONLISTFORM').addClass('hideData');		
+	});
+	
+})
+</script>
+
+<div class="card card-info border-info center m-1" id='LISTFORM' >
+			<div class="card-header bg-navy"><h5 class="card-title text-center ">
+Acklonledge And Post Inspection Desk</h5>
+			</div>
+
+
+	<div class="card-body form-group ">
+
+  
+  
+  <div class='row'>
+  				 
+					 	<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="consigneeName" data-validation="mandatory" data-langtag="Consignee Name" >Consignee Name</label>
+	                			<select class="form-control form-control-sm  " id ='consigneeName' name="consigneeName">
+	                				<option value="" selected="selected">Select Category</option>
+	                				<option title="Umarkhali   Khargone-PHC" value="5002787">Umarkhali   Khargone-PHC</option>
+									<option title="Umarkot  Jhabua-PHC" value="5002685">Umarkot  Jhabua-PHC</option>
+									<option title="Umrali  Alirajpur-PHC" value="5002185">Umrali  Alirajpur-PHC</option>
+									<option title="Umranala  Chhindwara-PHC" value="5002446">Umranala  Chhindwara-PHC</option>
+									<option title="Umrath  Alirajpur-PHC" value="5002186">Umrath  Alirajpur-PHC</option>
+									<option title="Umreth  Chhindwara-PHC" value="5002447">Umreth  Chhindwara-PHC</option>
+									<option title="Unchawad  Barwani-PHC" value="5002276">Unchawad  Barwani-PHC</option>
+									<option title="Unhel  Ujjain-PHC" value="5003299">Unhel  Ujjain-PHC</option>
+									<option title="Unnao - 6  Datia-PHC" value="5002471">Unnao - 6  Datia-PHC</option>
+									<option title="Upala  Barwani-PHC" value="5002277">Upala  Barwani-PHC</option>
+	                			</select>
+								<div class="invalid-feedback"></div>
+							</div>	
+						</div>
+						
+						
+					 	<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="numPONo" data-validation="mandatory" data-langtag="PO No." >PO No.</label>
+	                			<select class="form-control form-control-sm  " id ='numPONo' name="numPONo">
+	                				<option value="" selected="selected">Select Category</option>
+	                				<option title="All" selected="" value="0">All</option>
+									<option title="719029980169" value="719029980169">719029980169</option>
+									<option title="718129980137" value="718129980137">718129980137</option>
+									<option title="718119980478" value="718119980478">718119980478</option>
+									<option title="718119980116" value="718119980116">718119980116</option>
+									<option title="718099980260" value="718099980260">718099980260</option>
+									<option title="718099980259" value="718099980259">718099980259</option>
+									<option title="718099980258" value="718099980258">718099980258</option>
+									<option title="718099980257" value="718099980257">718099980257</option>
+									<option title="718099980256" value="718099980256">718099980256</option>
+
+	                				
+	                			</select>
+								<div class="invalid-feedback"></div>
+							</div>	
+						</div>
+						<div class='col-lg-3'  >
+                             <div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="issueType" data-validation="mandatory" data-langtag="Issue Type  " >Issue Type  </label>
+	                			<select class="form-control form-control-sm  " id ='issueType' name="issueType">
+	                				<option value="" selected="selected">Issue To Department</option>
+	                				<option title="Issue To Department" selected="" value="37">Issue To Department</option>
+                                    <option title="Issue To Hospital" value="31">Issue To Hospital</option>
+	                				
+	                			</select>
+	                		<div class="invalid-feedback"></div>
+ 	  					</div>
+	 				</div>
+	 	
+	 	
+	 				<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="issueBy" data-validation="mandatory" data-langtag="Issue By" >Issue By  </label>
+	                			<select class="form-control form-control-sm  " id ='issueBy' name="issueBy">
+	                				<option value="" selected="selected">Aager-DH</option>
+	                				<option title="Uphari  Shahdol-PHC" value="5003176">Uphari  Shahdol-PHC</option>
+									<option title="Urban Shahdol-PHC" value="5057718">Urban Shahdol-PHC</option>
+									<option title="Usrar  Satna-PHC" value="5003100">Usrar  Satna-PHC</option>
+									<option title="Utiakala  Raisen-PHC" value="5002948">Utiakala  Raisen-PHC</option>
+									<option title="Utila   Gwalior-PHC" value="5002591">Utila   Gwalior-PHC</option>
+									<option title="Veerpur Dam Sehore-PHC" value="5056033">Veerpur Dam Sehore-PHC</option>
+									<option title="Veerpur   Gwalior-PHC" value="5002592">Veerpur   Gwalior-PHC</option>
+									<option title="Veerpur Sheopur-PHC" value="5057719">Veerpur Sheopur-PHC</option>
+									<option title="Venkatnagar  Annupur-CHC" value="5001844">Venkatnagar  Annupur-CHC</option>
+									<option title="Vidisha- DH" value="5001722">Vidisha- DH</option>
+									<option title="Vijayganj Mandi  Dewas-CHC" value="5001924">Vijayganj Mandi  Dewas-CHC</option>
+									<option title="Vijaypur  Guna-PHC" value="5002577">Vijaypur  Guna-PHC</option>
+	                			</select>
+	              				<div class="invalid-feedback"></div>
+ 	  						</div>
+	 					</div>
+	 					
+	 					
+	 					<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="issueTo" data-validation="mandatory" data-langtag="Issue To" >Issue To</label>
+	                			<select class="form-control form-control-sm  " id ='issueTo' name="issueTo">
+	                				<option value="" selected="selected">Aager-DH ANC Room</option>
+	                				<option title="Aagar- DH - N B S U DEP" value="5003367">Aagar- DH - N B S U DEP</option>
+									<option title="Aagar- DH - NCD DEPT" value="5003369">Aagar- DH - NCD DEPT</option>
+									<option title="Aagar- DH - NICU" value="5003370">Aagar- DH - NICU</option>
+									<option title="Aagar- DH - NRC DEPT" value="5003371">Aagar- DH - NRC DEPT</option>
+									<option title="Aagar- DH - N.R.C ROOM" value="5003368">Aagar- DH - N.R.C ROOM</option>
+									<option title="Aagar- DH - OPD DEPT" value="5003372">Aagar- DH - OPD DEPT</option>
+									<option title="Aagar- DH - ORTHO OT" value="5003373">Aagar- DH - ORTHO OT</option>
+									<option title="Aagar-DH- OT DEPT" value="5055111">Aagar-DH- OT DEPT</option>
+									<option title="Aagar- DH - PATHOLOGY DEPT" value="5003374">Aagar- DH - PATHOLOGY DEPT</option>
+									<option title="Aagar- DH - PHYSIOTHERAPY DEPT." value="5003375">Aagar- DH - PHYSIOTHERAPY DEPT.</option>
+									<option title="Aagar- DH - PLASTER ROOM" value="5003376">Aagar- DH - PLASTER ROOM</option>
+									<option title="Aagar- DH - PP OT DEP" value="5003377">Aagar- DH - PP OT DEP</option>
+									<option title="Aagar- DH - PRIVATE WARD" value="5003378">Aagar- DH - PRIVATE WARD</option>
+	                			</select>
+	              			<div class="invalid-feedback"></div>
+ 	  					</div>
+	 				</div>
+	 				
+	
+		
+	 				<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="status" data-validation="mandatory" data-langtag=" Status" > Status</label>
+	                			<select class="form-control form-control-sm  " id ='status' name="status">
+	                				<option value="" selected="selected">All</option>
+	                				<option title="All" selected="" value="0">All</option>
+									<option title="Acknowledged" value="13">Acknowledged</option>
+									<option title="Acknowledged Pending" value="12">Acknowledged Pending</option>
+	                				
+	                			</select>
+	              			<div class="invalid-feedback"></div>
+ 	  					</div>
+	 				</div>
+	 				
+						
+						
+					
+  				 
+				 	
+	</div>
+	
+	<div class='text-center'>
+	<button class='btn bg-gradient-success mt-4 btn-sm' id='btnpostinspection' ><i class="fa fa-check-double"></i> Acknowledge And Post Inspection</button>
+	<button class='btn bg-gradient-success mt-4 btn-sm' id='btnview' ><i class="fas fa-eye"></i>View</button>
+    <button class='btn bg-gradient-success mt-4 btn-sm'  ><i class="fa fa-print"></i> Print</button>
+			 
+		  		
+
+	</div>
+	
+
+	 <div class='row'>
+			<div class='col-lg-4'>	
+				<div class="form-group row">                   
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" id="search" placeholder="Search">
+                    </div>
+                  </div>
+			</div>
+			
+			</div>	
+			<div class='row no-more-tables'>
+			<table class="table table-hover">
+			  <thead class="bg-navy">
+			      <tr>
+			      	<th><input type="checkbox"></th>
+			        <th >Dispatch No.</th>
+			        <th>PO No.</th>
+			        <th>Supplier Name </th>
+			        <th>Equipment Name</th>
+			        <th>Serial No./Catlog No.</th>
+			        <th>Received Qty.</th>
+			        <th>Dispatch Status</th>
+			        <th>Inspection Status</th>
+			      </tr>
+			    </thead>
+			    <tbody>
+			     <tr>
+			      	<td class='d-none d-sm-block' ><input type="checkbox"></td>
+			        <td data-title='Equipment Name' >Xray Machine</td>
+			        <td data-title='Equipment Model'>ABCD</td>
+			        <td data-title='Serial No.'>1234</td>
+			        <td data-title='Bar Code'>123456</td>
+			        <td data-title='Manufacturer Name'>Bosch</td>
+			        <td data-title='Equipment Status'>Working</td>
+			        <td data-title='Verification Status'>Payment Done</td>
+			      </tr>
+			    </tbody>
+			     <tbody>
+			     <tr>
+			      	<td class='d-none d-sm-block' ><input type="checkbox"></td>
+			        <td data-title='Equipment Name' > SHADOWLESS LAMP</td>
+			        <td data-title='Equipment Model'>718099980259</td>
+			        <td data-title='Serial No.'> Surgicoin Medequip Pvt Ltd</td>
+			        <td data-title='Bar Code'>invoice 883</td>
+			        <td data-title='Manufacturer Name'>1</td>
+			        <td data-title='Equipment Status'>Dispatch</td>
+			        <td data-title='Verification Status'>Pending </td>
+			        			         <td data-title='Verification Status'> Pending</td>
+			        
+			      </tr>
+			    </tbody>
+			     <tbody>
+			     <tr>
+			      	<td class='d-none d-sm-block' ><input type="checkbox"></td>
+			        <td data-title='Equipment Name' >Xray Machine</td>
+			        <td data-title='Equipment Model'>719029980169</td>
+			        <td data-title='Serial No.'> ENVIRONMENTAL DECONTAMINATION SYSTEM</td>
+			        <td data-title='Bar Code'> FAI-SA-UO-1363</td>
+			        <td data-title='Manufacturer Name'>1</td>
+			        <td data-title='Equipment Status'> Payment Done</td>
+			        <td data-title='Verification Status'> Done</td>
+			        			         <td data-title='Verification Status'> Pending</td>
+			        
+			      </tr>
+			    </tbody>
+			     <tbody>
+			     <tr>
+			      	<td class='d-none d-sm-block' ><input type="checkbox"></td>
+			        <td data-title='Equipment Name' >	 ECG MACHINE</td>
+			        <td data-title='Equipment Model'>718119980478</td>
+			        <td data-title='Serial No.'> Inline Medicare</td>
+			        <td data-title='Bar Code'>NA</td>
+			        <td data-title='Manufacturer Name'>1</td>
+			        <td data-title='Equipment Status'> Dispatch </td>
+			        <td data-title='Verification Status'> Pending</td>
+			        			         <td data-title='Verification Status'> Pending</td>
+			        
+			      </tr>
+			    </tbody>
+			     <tbody>
+			     <tr>
+			      	<td class='d-none d-sm-block' ><input type="checkbox"></td>
+			        <td data-title='Equipment Name' >Xray Machine</td>
+			        <td data-title='Equipment Model'>ABCD</td>
+			        <td data-title='Serial No.'> Inline Medicare</td>
+			        <td data-title='Bar Code'>Incubator-03</td>
+			        <td data-title='Manufacturer Name'>1</td>
+			        <td data-title='Equipment Status'>Dispatch</td>
+			        <td data-title='Verification Status'> Pending</td>
+			         <td data-title='Verification Status'> Pending</td>
+			      </tr>
+			    </tbody>
+			     <tbody>
+			     <tr>
+			      	<td class='d-none d-sm-block' ><input type="checkbox"></td>
+			        <td data-title='Equipment Name' >Xray Machine</td>
+			        <td data-title='Equipment Model'>ABCD</td>
+			        <td data-title='Serial No.'> Inline Medicare</td>
+			        <td data-title='Bar Code'>Incubator-03</td>
+			        <td data-title='Manufacturer Name'>1</td>
+			        <td data-title='Equipment Status'>Working</td>
+			        <td data-title='Verification Status'>Payment Done</td>
+			        			         <td data-title='Verification Status'> Pending</td>
+			        
+			      </tr>
+			    </tbody>
+			 </table>	
+			</div>
+			 
+	</div> 
+	</div> 
+		
+
+
+
+<div class="card card card-info border-info center m-1 hideData" id='VIEWPAGEFORM'  >
+	<div class="card-header bg-navy">
+		<h6 class="text-left">Dispatch Details >> View</h6>
+	</div>
+	
+	<div class="card-body form-group">
+	<h6 class='m-2'><b>Consignee and Equipmet Details :
+</b></h6>
+	<hr class="bg-navy">
+	 <div class='row'>
+	 
+							
+	
+	
+	 
+  <div class='col-lg-3' >
+  				<div><b>PO Ref. No. :</b>	719089980005</div>	
+  				<div><b> Consignee Name :</b>	Aagar- CS	</div>
+				<div><b>Dispatch No. :</b>	819089980005</div>	
+				
+  		</div>
+  		<div class='col-lg-3' >		 
+  				<div><b>Serial No./Catlog No. :</b>asd34</div> 	
+  				<div><b>Dispatch Status :</b>	ERC Approved</div>
+				<div><b> ERC Status :</b>	Approved</div>	
+				
+</div>
+			
+				<div class='col-lg-3' >	
+				<div><b> Supplier Name :	</b>	Inline Medicare</div>	 
+  				<div><b>Dispatch Date :			</b>	16-Aug-2019	</div>
+  				<div><b>Model Name:	</b>Inmade BSLD-M-01</div>
+				
+</div>
+	<div class='col-lg-3' >		 
+  				 
+  				<div><b>Quantity :</b>	10</div>
+  				<div><b>Post Inspection Status :</b>	Done</div>
+				<div><b>Submitted By :	</b>siddharth	</div>
+				<div><b>Penalty Amount :	</b>0</div>
+				
+</div> 	
+	</div>
+	<h6 class='m-2'><b>Delivery & Others Details :
+</b></h6>
+	<hr class="bg-navy">
+	
+	
+	
+	<div class='row'>
+	 
+	 
+  <div class='col-lg-3' >
+  				<div><b>Delivery Mode :</b>	Truck</div>	
+  				<div><b> Delivery Day(s) :</b>	2	</div>
+				<div><b>Service Engineers Name :</b> sad</div>	
+				
+  		</div>
+  		<div class='col-lg-3' >		 
+  				<div><b>Invoice No. :</b>May/2019/321</div> 	
+  				<div><b>Installation Required :</b>	No</div>
+				<div><b> Commisioning/Calibration Required </b>	No</div>	
+				<div><b> Training Required :	</b>	No</div>
+</div>
+			
+				<div class='col-lg-3' >	
+				<div><b>Dispatch Part Detail :	</b>	0##0##</div>	 
+  				<div><b>Remarks :			</b>	</div>
+  				<div><b>Delivery Detail :	</b>dsad</div>
+				
+</div>
+	<div class='col-lg-3' >		 
+  				 
+  				<div><b>Expected Delivery Date :	</b>	16-Aug-2019</div>
+  				<div><b>Mobile No./ E-Mail Id :</b>	5456465666/add@as.com</div>
+				<div><b>Invoice Date 	</b>16-Aug-2019	</div>
+				
+				
+</div> 	
+	</div>
+		<h6 class='m-2'><b> Uploaded Document 
+</b></h6>
+	<hr class="bg-navy">
+	<div class='row'>
+	 
+	 
+  <div class='col-lg-3' >
+  				<div><b>Invoice Copy. :</b><a href="#">	9524.jpg</a></div>	
+  				<div><b> Inspection Certificate </b>	Not Uploaded	</div>
+				<div><b>Insurance Certificate :</b> Not Uploaded</div>	
+				<div><b>Packing List  :</b><a href="#">	9525.jpg </a></div>	
+  				<div><b>ERC : </b>	<a href="#">ERC_1219080003.pdf</a>[19-Aug-2019]	</div>
+			
+  		</div>
+  		</div>
+	
+	
+<h6 class='m-2'><b>Receiving Details :</b></h6><hr class="bg-navy">
+	
+<div class='row'>
+	 <div class='col-lg-3' >
+  		<div><b>Received Date :</b>16-Aug-2019</div>	
+  				<div><b>Remarks </b> sad</div>	
+	</div>
+	
+  	<div class='col-lg-3' >		
+  				<div><b> Received By :</b>	AARTI GUPTA	</div> 
+  	</div>
+  	
+	<div class='col-lg-3' >	
+				<div><b>Stock Register Page No :</b>sa222</div> 
+	</div>
+	
+	<div class='col-lg-3' >		 
+  				 <div><b>Receiving Status :</b>	Received</div>
+  	</div> 	
+</div>
+	
+	
+<h6 class='m-2'><b> Post Inspection Details  </b></h6><hr class="bg-navy">
+
+<div class='row'>
+	 
+	 
+  <div class='col-lg-3' >
+  				<div><b>Post Inspection By(Service Engineer) :</b>	sad</div>	
+  				<div><b> Contact No :</b>	5456465666	</div>
+				<div><b>Store Keeper Name :</b> sdasd</div>	
+				
+  		</div>
+  		<div class='col-lg-3' >		 
+  				<div><b>Store Keeper Contact No :</b>3453454654</div> 	
+  				<div><b>Status  :</b>	No Damage</div>
+				<div><b> Other Details : </b>	--</div>	
+			
+</div>
+			
+				<div class='col-lg-3' >	
+				<div><b>Inspection Date :	</b>	16-Aug-2019</div>	 
+  				<div><b>Email Id :			</b>	add@as.com</div>
+  				<div><b>Delivery Detail :	</b>dsad</div>
+				
+</div>
+	<div class='col-lg-3' >		 
+  				 
+  				<div><b>Store Keeper Email Id :		</b>	sds@gmail.com</div>
+  				<div><b>Post Inspection Report :</b>	<a href="#">453008.jpg</a></div>
+				<div><b>Remarks : 	</b>--	</div>
+				
+				
+</div> 	
+	</div>
+	
+	</div>
+    <div class="card-footer">
+		<div class="text-center">
+              <button class="btn bg-gradient-success mt-4 btn-sm" id="btnBack"><i class="fas fa-arrow-circle-left"></i> Back</button>                            
+		</div>
+	</div>  
+ 
+  
+</div>
+  
+  
+  <!--card for POST INSPECTION button-->
+  
+<div class="card card-info border-info center m-1 hideData" id='POSTINSPECTIONLISTFORM' >
+			<div class="card-header bg-navy"><h5 class="card-title text-center ">Post Inspection Desk>> Add</h5>
+			</div>
+
+<div class="card-body form-group">
+	<h6><b>Equipment Detail  :</b></h6>
+	<hr class="bg-navy">
+	 <div class='row'>
+	 
+           <div class='col-lg-3' >
+  				<div><b>Issued By :</b>	Aagar- DH</div>	
+  				<div><b>Purchasing Authority :</b>	Aagar- CS</div>
+				<div><b>Supplier Name :</b>	Inline Medicare</div>	
+				<div><b>Funding Source :</b>	State</div>
+				<div><b>Installation : :</b>	Not Required</div>
+  		</div>
+  		<div class='col-lg-3' >		 
+  				<div><b>Equipment Name :	</b>Bed Side Locker SS</div> 	
+  				<div><b>Serial No. :</b>	asd34</div>
+				<div><b> Received Date :</b>	16-Aug-2019</div>	
+				<div><b> Invoice No. :	</b>May/2019/321</div>
+				<div><b> Remarks  :	</b>-</div>
+           </div>
+			
+				<div class='col-lg-3' >		 
+  				<div><b>Issued To :	</b>	Aagar- DH - ANC ROOM</div>
+  				<div><b>Po No :	</b>719089980005</div>
+				<div><b>Rate/Unit :</b>2358.82	</div>
+				<div><b>Programme Name :</b>	VITAL(Vital)</div>
+				<div><b>Model Name  :</b>		Inmade BSLD-M-01</div>
+             </div>
+	         <div class='col-lg-3' >		 
+  				 <div><b>Issued Qty :</b>	1	</div>
+  				<div><b>Stock Reg Page No. :</b>		sa222</div>
+				 <div><b>Invoice Date :	</b>16-Aug-2019</div>
+				<div><b>Warranty  : 	</b>3 Year(s)</div>
+            </div> 	
+	</div>
+	</div>
+	 
+	  <div class="card-body form-group">   
+                     <h6><b>Purchase Order Details :</b></h6>
+	                 <hr class="bg-navy">
+	                   <div class='row'>
+	                                  <div class='col-lg-3' ><b>Purchasing Authority :</b>	Aagar- CH
+  				                       </div>
+  		                              <div class='col-lg-3' ><b> PO Type :</b>	Central Purchase	
+  				                       </div>
+  				                       <div class='col-lg-3' ><b>PO Ref. No. :</b>719109980002
+  				                       </div>
+  		                              <div class='col-lg-3' ><b>Supplier Name :</b><a href="#">Micro Lab Instrument</a> 
+  				                       </div>
+  				                       <div class='col-lg-3' ><b> Status :	</b>	<i class="text-danger">Delivery Start</i>
+  				                       </div>
+  		                              <div class='col-lg-3' ><b>Financial Year :			</b>	2019-2020
+  				                       </div>
+  				                       <div class='col-lg-3' ><b>Tender No.  :</b>	NIT - 127
+  				                       </div>
+  				                        <div class='col-lg-3' ><b>PO Date :		</b>	31-Oct-2019
+  				                       </div>
+  				                       <div class='col-lg-3' ><b>Funding Source 	</b>State
+  				                       </div>
+	                 </div>
+	                </div>
+	
+	 
+	
+	
+    <div class="card-body form-group"> 
+	<h6 ><b>Consignee Equipment Details :</b></h6>
+	<hr class="bg-navy">
+	<div class='row no-more-tables'>
+			<table class="table table-hover">
+			  <thead class="bg-light">
+			      <tr>
+			      	<th>S. No.</th>
+			        <th >Consignee Name</th>
+			        <th>Equipment Name</th>
+			        <th>Model Name</th>
+			        <th>Rate Contract No.</th>
+			        <th>Rate/Unit inclusive Tax(Rs.)</th>
+			        <th>Ordered Qty</th>
+			        <th>Remaining Qty</th>
+			        <th>Dispatched Qty</th>
+			      </tr>
+			    </thead>
+			    <tbody>
+			     <tr>
+			      	<td class='d-none d-sm-block' >1</td>
+			        <td data-title='Equipment Name' >Aagar- DH</td>
+			        <td data-title='Equipment Model'>ELISA READER AND WASHER</td>
+			          <td data-title='Equipment Name' >WRX-806 plus </td>
+			        <td data-title='Serial No.'>	<a href="#">218099980015 </a></td>
+			        <td data-title='Bar Code'>303408.00 </td>
+			        <td data-title='Manufacturer Name'>1</td>
+			        <td data-title='Equipment Status'>0</td>
+			        <td data-title='Verification Status'>1 </td>
+			      </tr>
+			    </tbody>
+			 </table>	
+			</div>
+			</div>
+		
+    <div class="card-body form-group">
+    <h6 class='m-2'><b> Post Inspection Details :</b></h6>
+	<hr class="bg-navy">
+	<div class="row " >
+  			
+  			<div class='col-lg-3'  >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="inspectionDate :" data-validation="mandatory" data-langtag="Inspection Date :" >Inspection Date : </label>
+	                			
+	                		<div class="invalid-feedback"></div>
+ 	  					</div>
+	 				</div>
+	 	
+	 	
+	 				<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="postInspection" data-validation="mandatory" data-langtag="Post Inspection" >Post Inspection By(Service Engineer):</label>
+	                			<input class="form-control form-control-sm  " type="text" id="postInspection" name="postInspection" maxlength="50" data-validation="mandatory,alphabetOnly">
+	              				<div class="invalid-feedback"></div>
+ 	  						</div>
+	 					</div>
+	 					
+	 					
+	 					<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="contactNo" data-validation="mandatory" data-langtag="Contact No" >Contact No :</label>
+	                			<input class="form-control form-control-sm  " type="text" id="contactNo" name="contactNo" maxlength="50" data-validation="mandatory,alphabetOnly">
+	              			<div class="invalid-feedback"></div>
+ 	  					</div>
+	 				</div>
+	 				
+	 				<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="storeKeeperName" data-validation="mandatory" data-langtag="Status" >Store Keeper Name :</label>
+	                			<select class="form-control form-control-sm  " id ='storeKeeperName' name="storeKeeperName">
+	                				<option value="" selected="selected">Select value</option>
+	                			</select>
+	              			<div class="invalid-feedback"></div>
+ 	  					</div>
+	 				</div>
+	 				<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="contactNo" data-validation="mandatory" data-langtag="Contact No" >Store Keeper Contact No :</label>
+	                			<input class="form-control form-control-sm  " type="text" id="contactNo" name="contactNo" maxlength="50" data-validation="mandatory,alphabetOnly">
+	              			<div class="invalid-feedback"></div>
+ 	  					</div>
+	 				</div>
+	 				<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="contactNo" data-validation="mandatory" data-langtag="Contact No" >Status :  </label>
+	                			No Damage<input type="radio" name="contactNo">
+	                			Damage<input  type="radio" name="contactNo" >
+	              			<div class="invalid-feedback"></div>
+ 	  					</div>
+	 				</div>
+	 				<div class='col-lg-3'  >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="inspectionDate :" data-validation="mandatory" data-langtag="Inspection Date :" >Post Inspection Document : </label>
+	                			<input type="file" name="myFile">	
+	                		<div class="invalid-feedback"></div>
+ 	  					</div>
+	 				</div>
+	 				<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="contactNo" data-validation="mandatory" data-langtag="Contact No" > Is Return ? :</label>
+	                			<input  type="checkbox" id="contactNo" name="contactNo"  >
+	              			<div class="invalid-feedback"></div>
+ 	  					</div>
+	 				</div>
+	 				
+	 				<div class='col-lg-3'  >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="inspectionDate :" data-validation="mandatory" data-langtag="Inspection Date :" >Receive Date :  </label>
+	                			
+	                		<div class="invalid-feedback"></div>
+ 	  					</div>
+	 				</div>
+	 				<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="contactNo" data-validation="mandatory" data-langtag="Contact No" >E-mail Id :</label>
+	                			<input class="form-control form-control-sm  " type="text" id="contactNo" name="contactNo" maxlength="50" data-validation="mandatory,alphabetOnly">
+	              			<div class="invalid-feedback"></div>
+ 	  					</div>
+	 				</div>
+	 				<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="emailId" data-validation="mandatory" data-langtag="E-mail Id" >Store Keeper E-mail Id :</label>
+	                			<input class="form-control form-control-sm  " type="text" id="emailId" name="emailId" maxlength="50" data-validation="mandatory,alphabetOnly">
+	              			<div class="invalid-feedback"></div>
+ 	  					</div>
+	 				</div>
+	 				<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="contactNo" data-validation="mandatory" data-langtag="Contact No" >Store Keeper Contact No:</label>
+	                			<input class="form-control form-control-sm  " type="text" id="contactNo" name="contactNo" maxlength="50" data-validation="mandatory,alphabetOnly">
+	              			<div class="invalid-feedback"></div>
+ 	  					</div>
+	 				</div>
+	 				<div class='col-lg-3'  >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="inspectionDate :" data-validation="mandatory" data-langtag="Inspection Date :" >Any Other Details : 	 </label>
+	                			<textarea rows="" cols=""></textarea>
+	                		<div class="invalid-feedback"></div>
+ 	  					</div>
+	 				</div>
+	 				
+	 				<div class='col-lg-3'  >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="inspectionDate :" data-validation="mandatory" data-langtag="Inspection Date :" >Remarks :	 </label>
+	                			<textarea rows="" cols=""></textarea>
+	                		<div class="invalid-feedback"></div>
+ 	  					</div>
+	 				</div>
+	 				
+		 	 </div>   
+</div>
+<div class="card-footer">
+<div class="text-center">
+			<button class='btn bg-gradient-success mt-4 btn-sm' ><i class="fa fa-save"></i> Save</button>
+			<button class='btn bg-gradient-success mt-4 btn-sm' ><i class="fa fa-window-close"></i> Clear</button>
+            <button class="btn bg-gradient-success mt-4 btn-sm" id="btnBackPostInspection"><i class="fas fa-arrow-circle-left"></i> Back</button>                            
+		</div>
+<p> <i class="fa fa-circle" style="font-size:8px;color:#17a2b8"></i>   * Mandatory Fields</p>
+			<p> <i class="fa fa-circle" style="font-size:8px;color:#17a2b8"></i>	Equipment Return option will enable if status is Damage, and it can not be returned after 10 days of Received date.</p>
+
+
+</div>
+</div>
+
+
+  

@@ -1,0 +1,32 @@
+<div class="card card-info border-info center m-1" id='ENTRYFORM' >
+			<div class="card-header bg-navy "><h5 class="card-title text-center ">Demand Compilation Desk</h5>
+			</div>
+
+
+	<div class="card-body form-group">
+	
+		
+  			
+  			
+			<div class="text-center">
+				<button class="btn  bg-gradient-success btn-sm"><i class="fa fa-copy"></i> Copy</button>
+				<button class="btn  bg-gradient-success btn-sm"><i class="fa fa-reply"></i> ACK</button>
+				<button class="btn  bg-gradient-success btn-sm"><i class="fa fa-reply"></i> TACK</button>
+				<button class="btn  bg-gradient-success btn-sm"><i class="fa fa-reply"></i> RES</button>
+				<button class="btn  bg-gradient-success btn-sm"><i class="fa fa-reply"></i> CRES</button>
+				<button class="btn  bg-gradient-success btn-sm"><i class="fa fa-reply"></i> Default</button>
+				<button class="btn  bg-gradient-success btn-sm"><i class="fa fa-reply"></i> E-Sign</button>
+				
+			</div>
+				
+				
+		
+		
+
+	
+
+</div>
+
+
+
+

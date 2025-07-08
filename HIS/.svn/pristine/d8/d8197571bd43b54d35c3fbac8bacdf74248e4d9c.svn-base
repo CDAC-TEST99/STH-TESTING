@@ -1,0 +1,986 @@
+<script>
+	$(document)
+			.ready(
+					function() {
+
+						$('#btnBack').click(function() {
+							$('#LISTFORM').removeClass('hideData');
+							$('#VIEWPAGEFORM ').addClass('hideData');
+						});
+
+						$('.btnAddInstitute').click(function() {
+							$('#divAddInsitutePopup').modal('show');
+						});
+
+						$('#directorates').change(function() {
+							if (this.value == "DME") {
+								$('#divtblpopup').removeClass('hideData');
+								$('#divSearch').removeClass('hideData');
+							} else {
+								$('#divtblpopup').addClass('hideData');
+							}
+						});
+
+						$('#district')
+								.change(
+										function() {
+											var selectedDistrict = this.value;
+											if (selectedDistrict == "ALL") {
+												$('#tblpopup tbody tr')
+														.removeClass('hideData');
+											} else {
+												$('#tblpopup tbody tr')
+														.removeClass('hideData');
+												$("#tblpopup")
+														.find(
+																'[data-title="District"]')
+														.each(
+																function() {
+																	var districtName = $(
+																			this)
+																			.html()
+																			.trim();
+																	if (districtName != selectedDistrict) {
+																		$(this)
+																				.closest(
+																						'tr')
+																				.addClass(
+																						'hideData');
+																	}
+																});
+											}
+										});
+						$('#search')
+								.keyup(
+										function() {
+											var searchVal = this.value.trim()
+													.toUpperCase();
+											;
+											$('#tblpopup tbody tr')
+													.removeClass('hideData');
+											$("#tblpopup tbody tr")
+													.each(
+															function() {
+																var flagFound = false;
+																$(this)
+																		.find(
+																				'[data-title]')
+																		.each(
+																				function() {
+																					var data = this.innerHTML
+																							.trim()
+																							.toUpperCase();
+																					//alert(data + "===" + searchVal);
+																					if (data
+																							.indexOf(searchVal) >= 0) {
+																						flagFound = true;
+																					}
+																				});
+																if (flagFound == false) {
+																	$(this)
+																			.addClass(
+																					'hideData');
+																}
+															});
+										});
+
+						$('.addInst').click(
+								function() {
+									$(this).addClass('hideData');
+									addNewInstituteWiseIndentMultirow($(this)
+											.closest('tr'));
+								});
+						$('#addAll')
+								.click(
+										function() {
+											$('#tblpopup tbody tr')
+													.each(
+															function() {
+																if (!$(this)
+																		.hasClass(
+																				'hideData')) {
+																	var buttonObj = $(
+																			this)
+																			.find(
+																					'.addInst');
+																	if (!$(
+																			buttonObj)
+																			.hasClass(
+																					'hideData')) {
+																		$(
+																				buttonObj)
+																				.addClass(
+																						'hideData');
+																		addNewInstituteWiseIndentMultirow(this);
+																	}
+																}
+															});
+										});
+
+						$('#accountHead').change(function() {
+							$('#otherAccountHead').val("");
+							if (this.value == "0")
+								$('#divAccountHead').removeClass("hideData");
+							else {
+								if (!$('#divAccountHead').hasClass("hideData"))
+									$('#divAccountHead').addClass("hideData");
+							}
+						});
+						$('.BTNOPEN').click(function() {
+							$('#openIndentList').modal('show');
+						});
+						$('.btnModify').click(function() {
+							$('#modifyIndent').removeClass('hideData');
+							$('#addIndent').addClass('hideData');
+							$("#openIndentList").modal('hide');
+							var sourceTRObj = $(this).closest('tr');
+							var prevIndentRefNo = $(sourceTRObj).find('[data-title="Indent Reference No."]').html();
+							var prevIndentDate = $(sourceTRObj).find('[data-title="Date"]').html();
+							var prevIndentType = $(sourceTRObj).find('[data-title="Indent Type"]').html();
+							//alert(prevIndentType);
+							$('#prevIndentType').html(prevIndentType);
+							$('#prevIndentRefNo').html(prevIndentRefNo);
+							$('#prevIndentDate').html(prevIndentDate);
+						});
+
+						calculateTotalMoney("fundSanctionedModify",
+								"totalFundSanctioned");
+						calculateTotalMoney("fundDepositedModify",
+								"totalFundDeposited");
+						$('[name="fundSanctionedModify"]').keyup(
+								function() {
+									calculateTotalMoney("fundSanctionedModify",
+											"totalFundSanctioned");
+								});
+						$('[name="fundDepositedModify"]').keyup(
+								function() {
+									calculateTotalMoney("fundDepositedModify",
+											"totalFundDeposited");
+								});
+					});
+	function calculateTotalMoney(calculateField, TotalField) {
+		var totalVal = 0;
+		$('[name="' + calculateField + '"]').each(function() {
+			var val = this.value.trim();
+			if (isNaN(val)) {
+				val = 0;
+			}
+			totalVal = totalVal + parseFloat(val);
+			//alert(totalVal);
+		});
+
+		$('#' + TotalField).html(totalVal);
+
+	}
+
+	function addNewInstituteWiseIndentMultirow(sourceTRObj) {
+		var directorate = $(sourceTRObj).find('[data-title="Directorate"]')
+				.html()
+		var district = $(sourceTRObj).find('[data-title="District"]').html()
+		var institutions = $(sourceTRObj).find('[data-title="Institutions"]')
+				.html()
+		var html = "";
+		var sno = $('#tableIndent tbody tr').length + 1;
+		html += "<tr>";
+		html += "<td data-title='S.No.' >" + sno + "</td>";
+		html += "<td data-title='Directorate'>" + directorate + "</td>";
+		html += "<td data-title='District'>" + district + "</td>";
+		html += "<td data-title='Institutions'>" + institutions + "</td>";
+		html += "<td data-title='Department'>";
+		html += "<select  class='form-control form-control-sm' name='department'>";
+		html += "<option value=''>Select</option>";
+		html += "<option value='101'>ENT</option>";
+		html += "<option value='102'>EYE</option>";
+		html += "<option value='103'>Medicine</option>";
+		html += "</select>";
+		html += "</td>";
+		html += "<td data-title='Equipment Name'>";
+		html += "<select class='form-control form-control-sm'>";
+		html += "<option value=''>Select Equipment</option>";
+		html += "<option value='101'>X-Ray Machine</option>";
+		html += "<option value='102'>Central Monitoring System</option>";
+		html += "<option value='103'>ABG Machine</option>";
+		html += "</select>";
+		html += "</td>";
+		html += "<td data-title='Sanctioned Qty.'><input type='text'  class='form-control form-control-sm' name='sanctionedQty'></td>";
+		html += "<td data-title='Specification Status'>";
+		html += "<select  class='form-control form-control-sm' name='specificationStatus'>";
+		html += "<option value='1'>Received</option>";
+		html += "<option value='0' selected>Not Received</option>";
+		html += "</select>";
+		html += "</td>";
+		html += "<td data-title='Remark'><input type='text'  class='form-control form-control-sm' name='remarks'></td>";
+		html += "<td data-title=''>";
+		html += "<button class='btn   bg-gradient-success btn-sm addDept'  id='addDept_"+sno+"'>Add Dept.</button>";
+		html += "</td>";
+		html += "</tr>";
+		$('#tableIndent tbody ').append(html);
+		if ($('#tableIndent').hasClass('hideData')) {
+			$('#tableIndent').removeClass('hideData')
+		}
+		$('#addDept_' + sno).click(function() {
+			//alert($(this).closest('tr').length)
+			addNewDeptToInstituteInIndentMultirow($(this).closest('tr'));
+		});
+	}
+
+	function addNewDeptToInstituteInIndentMultirow(sourceTRObj) {
+		var html = "";
+		var sno = $('#tableIndent tbody tr').length + 1;
+		html += "<tr>";
+		html += "<td data-title='S.No.' ></td>";
+		html += "<td data-title='Directorate'></td>";
+		html += "<td data-title='District'></td>";
+		html += "<td data-title='Institutions'></td>";
+		html += "<td data-title='Department'>";
+		html += "<select  class='form-control form-control-sm' name='department'>";
+		html += "<option value=''>Select</option>";
+		html += "<option value='101'>ENT</option>";
+		html += "<option value='102'>EYE</option>";
+		html += "<option value='103'>Medicine</option>";
+		html += "</select>";
+		html += "</td>";
+		html += "<td data-title='Equipment Name'>";
+		html += "<select class='form-control form-control-sm'>";
+		html += "<option value=''>Select Equipment</option>";
+		html += "<option value='101'>X-Ray Machine</option>";
+		html += "<option value='102'>Central Monitoring System</option>";
+		html += "<option value='103'>ABG Machine</option>";
+		html += "</select>";
+		html += "</td>";
+		html += "<td data-title='Sanctioned Qty.'><input type='text'  class='form-control form-control-sm' name='sanctionedQty'></td>";
+		html += "<td data-title='Specification Status'>";
+		html += "<select  class='form-control form-control-sm' name='specificationStatus'>";
+		html += "<option value='1'>Received</option>";
+		html += "<option value='0' selected>Not Received</option>";
+		html += "</select>";
+		html += "</td>";
+		html += "<td data-title='Remark'><input type='text'  class='form-control form-control-sm' name='remarks'></td>";
+		html += "<td data-title=''>";
+		html += "<button class='btn   bg-gradient-success btn-sm removeDeptRow' ><i class='fas fa-minus-square'></i></button>";
+		html += "</td>";
+		html += "</tr>";
+		$(sourceTRObj).after(html);
+		$('.removeDeptRow').click(function() {
+			$(this).closest('tr').remove();
+		})
+		if ($('#BTNSAVE').hasClass('hideData'))
+			$('#BTNSAVE').removeClass('hideData')
+	}
+</script>
+
+<div class="card card-info border-info center m-1" id='addIndent'>
+	<div class="card-header bg-navy">
+		<h5 class="card-title text-center ">Indent Receipt Desk</h5>
+		<div class="buttonContainer  bg-light">
+			<button class="btn   bg-gradient-success btn-sm btnAddInstitute hideData" >
+				<i class="fas fa-plus-square" aria-hidden="true"></i> Add Institutes
+			</button>
+			<button class='btn   bg-gradient-success btn-sm  hideData' id='BTNSAVE'>
+				<i class="far fa-save"></i>&nbsp;Save
+			</button>
+			&nbsp;
+			<button class='btn   bg-gradient-success btn-sm BTNOPEN'>
+				<i class="far fa-save"></i>&nbsp;Open
+			</button>
+			&nbsp;
+			<button class='btn   bg-gradient-success btn-sm ' id='BTNCLEAR'>
+				<i class="fas fa-sync"></i>&nbsp;Reset
+			</button>
+			&nbsp;
+		</div>
+	</div>
+	<div class="card-body sw-main sw-theme-arrows" id='smartwizard'>
+		<ul class='nav nav-tabs step-anchor hideData'>
+    		<li class='nav-item active'><a class="nav-link" href="#step-1"><i class='fas fa-rupee-sign wizzardMenuIcon'></i><span class="wizzardMenuTitle">Budget Detail</span></a></li>
+     		<li class='nav-item '><a  class="nav-link" href="#step-2"><i class='fas fa-shopping-cart wizzardMenuIcon'></i> Indent Entry</a></li>     
+		</ul>
+		<div class="sw-container tab-content" id='step-1'>
+		 <h6><b>Budget Detail</b></h6>
+		 <hr class="bg-navy">
+		<div class="row ">
+			<div class='col-lg-3 form-group'>
+				<label class="col-form-label col-form-label-sm" for="indentType"
+					data-validation="mandatory" data-langtag="Indent Type">
+					Indent Type</label> <select class="form-control form-control-sm  "
+					id='indentType' name="indentType">
+					<option value="GO" selected="selected">G.O.</option>
+					<option value="Proceeding">Proceeding</option>
+					<option value="Letter">Letter</option>
+					<option value="Others">Others</option>
+				</select>
+				<div class="invalid-feedback"></div>
+			</div>
+			<div class='col-lg-3 form-group'>
+				<label class="col-form-label col-form-label-sm" for="indentRefNo"
+					data-validation="mandatory" data-langtag="Indent reference No.">Indent
+					reference No.</label> <input type='text'
+					class="form-control form-control-sm " id="indentRefNo"
+					name="indentRefNo" data-validation="mandatory" />
+				<div class="invalid-feedback"></div>
+			</div>
+			<div class='col-lg-3 form-group'>
+				<label class="col-form-label col-form-label-sm " for="indentRefDate"
+					data-validation="mandatory" data-langtag="Date">Date</label> <input
+					type='text' class="form-control form-control-sm singleDatePicker"
+					id="indentRefDate" name="indentRefDate" data-validation="mandatory" />
+				<div class="invalid-feedback"></div>
+			</div>
+
+
+
+			<div class='col-lg-3 form-group'>
+				<label class="col-form-label col-form-label-sm " for="fundingSource"
+					data-validation="mandatory" data-langtag="Funding Source">Funding
+					Source</label> <select class="form-control form-control-sm select2"
+					id='fundingSource' name="fundingSource" multiple="multiple">
+					<option value="State">State</option>
+					<option value="NHM">NHM</option>
+					<option value="Directorate">Directorate</option>
+				</select>
+				<div class="invalid-feedback"></div>
+			</div>
+			<div class='col-lg-3 form-group'>
+				<label class="col-form-label col-form-label-sm" for="programmeName"
+					data-validation="mandatory" data-langtag="Programme Name">Programme
+					Name</label> <select class="form-control form-control-sm select2"
+					id='programmeName' name="programmeName">
+					<option value="" selected="selected">Select Programme</option>
+					<option title="Select Value" selected="" value="0">Select
+						Value</option>
+					<option title="Blood Storage Unit" value="255">Blood
+						Storage Unit</option>
+					<option title="CW" value="270">CW</option>
+					<option title="DFID" value="264">DFID</option>
+					<option title="Free Pathological Services" value="269">Free
+						Pathological Services</option>
+					<option title="LAQSHYA" value="262">LAQSHYA</option>
+					<option title="Maternity Wing - DP" value="265">Maternity
+						Wing - DP</option>
+					<option title="MCH" value="263">MCH</option>
+					<option title="N-HDU" value="259">N-HDU</option>
+					<option title="NPCB-VI" value="266">NPCB-VI</option>
+					<option title="NPHCE" value="268">NPHCE</option>
+					<option title="Obstetric ICU/HDU" value="257">Obstetric
+						ICU/HDU</option>
+					<option title="PICU" value="260">PICU</option>
+					<option title="RBSK" value="272">RBSK</option>
+					<option title="RCH" value="267">RCH</option>
+					<option title="RNTCP" value="271">RNTCP</option>
+					<option title="SNCU" value="261">SNCU</option>
+					<option title="USG" value="256">USG</option>
+				</select>
+
+				<div class="invalid-feedback"></div>
+			</div>
+			<div class='col-lg-3 form-group'>
+				<label class="col-form-label col-form-label-sm" for="financialYear"
+					data-validation="mandatory" data-langtag="Financial Year">Financial
+					Year</label> <select class="form-control form-control-sm  "
+					id='financialYear' name="financialYear">
+					<option value="2019-2020" selected="selected">2019-2020</option>
+				</select>
+				<div class="invalid-feedback"></div>
+			</div>
+
+			<div class='col-lg-3 form-group'>
+				<label class="col-form-label col-form-label-sm" for="accountHead"
+					data-validation="mandatory" data-langtag="Other Account Head">Account
+					Head</label> <select class="form-control form-control-sm  "
+					id='accountHead' name="accountHead">
+					<option value="" selected="selected">Select Account Head</option>
+					<option value="AC-01">AC-01</option>
+					<option value="AC-02">AC-02</option>
+					<option value="0">Other</option>
+				</select>
+				<div class="invalid-feedback"></div>
+			</div>
+			<div class='col-lg-3 hideData form-group' id='divAccountHead'>
+				<label class="col-form-label col-form-label-sm"
+					for="otherAccountHead" data-validation="mandatory"
+					data-langtag="Other Account Head">Other Account Head</label> <input
+					type='text' class="form-control form-control-sm "
+					id="otherAccountHead" name="otherAccountHead"
+					data-validation="mandatory" />
+				<div class="invalid-feedback"></div>
+			</div>
+
+		</div>
+
+
+		<div class='row'>
+			<div class='col-lg-3 form-group'>
+				<label class="col-form-label col-form-label-sm" for="fundSanctioned"
+					data-validation="mandatory" data-langtag="Fund Sanctioned (in Rs.)">Fund
+					Sanctioned (in Rs.)</label> <input type='text'
+					class="form-control form-control-sm " id="fundSanctioned"
+					name="fundSanctioned" data-validation="mandatory" />
+				<div class="invalid-feedback"></div>
+			</div>
+			<div class='col-lg-3 form-group'>
+				<label class="col-form-label col-form-label-sm "
+					for="fundSanctionedDate" data-validation="mandatory"
+					data-langtag="Fund Sanction Date">Fund Sanction Date</label> <input
+					type='text' class="form-control form-control-sm singleDatePicker"
+					id="fundSanctionedDate" name="fundSanctionedDate"
+					data-validation="mandatory" />
+				<div class="invalid-feedback"></div>
+			</div>
+			<div class='col-lg-3 form-group'>
+				<label class="col-form-label col-form-label-sm" for="fundDeposited"
+					data-validation="mandatory" data-langtag="Fund Deposited (in Rs.)">Fund
+					Deposited (in Rs.)</label> <input type='text'
+					class="form-control form-control-sm " id="fundDeposited"
+					name="fundDeposited" data-validation="mandatory" />
+				<div class="invalid-feedback"></div>
+			</div>
+			<div class='col-lg-3 form-group'>
+				<label class="col-form-label col-form-label-sm "
+					for="fundDepositedDate" data-validation="mandatory"
+					data-langtag="Fund Deposit Date">Fund Deposit Date</label> <input
+					type='text' class="form-control form-control-sm singleDatePicker"
+					id="fundDepositedDate" name="fundDepositedDate"
+					data-validation="mandatory" />
+				<div class="invalid-feedback"></div>
+			</div>
+		</div>			
+		</div>	
+		<div class="sw-container tab-content" id='step-2'>
+			<div class='row'>
+			<div class='col-lg-8'>
+			<h6><b>Indent Entry</b></h6>
+			</div>
+			<div class='col-lg-4'>
+			<span class='float-right'>
+			<button class="btn   bg-gradient-success btn-sm btnAddInstitute" >
+				<i class="fas fa-plus-square" aria-hidden="true"></i> Add Institutes
+			</button>
+			</span>
+			</div>
+			</div>
+		 	<hr class="bg-navy">
+				
+			<div class='row no-more-tables'>
+				<table class="table hideData" id='tableIndent'>
+					<thead class="bg-pink">
+						<tr>
+							<th>S.No.</th>
+							<th>Directorate</th>
+							<th>District</th>
+							<th>Institutions</th>
+							<th>Department</th>
+							<th>Equipment Name</th>
+							<th>Sanctioned Qty.</th>
+							<th>Specification Status</th>
+							<th>Remark</th>
+							<th></th>
+						</tr>
+					</thead>
+					<tbody>
+	
+					</tbody>
+				</table>
+			</div>			
+	</div>
+	<div class="btn-toolbar sw-toolbar sw-toolbar-bottom justify-content-end hideData">
+			<div class="btn-group mr-2 sw-btn-group" role="group">
+				<button class="btn   bg-gradient-success btn-sm sw-btn-prev" type="button"><i class='fas fa-chevron-circle-right'></i>&nbsp; Previous</button>
+				<button class="btn   bg-gradient-success btn-sm sw-btn-next" type="button"><i class='fas fa-chevron-circle-left'></i>&nbsp; Next</button>
+				<button class="btn   bg-gradient-success btn-sm sw-btn-final hideData" type="button">Save</button>
+			</div>				
+	</div>	
+	</div>
+	
+</div>
+
+
+
+<div class="card card-info border-info center m-1 hideData"
+	id='modifyIndent'>
+	<div class="card-header bg-navy">
+		<h5 class="card-title text-center ">Modify Indent</h5>
+	</div>
+
+
+	<div class="card-body form-group">
+		<div class="row ">
+			<div class='col-lg-3 form-group'>
+				<label class="col-form-label col-form-label-sm" for="indentType"
+					data-validation="mandatory" data-langtag="Indent Type">
+					Indent Type : </label><br /> <label
+					class='col-form-label col-form-label-sm' id='prevIndentType'></label>
+				<div class="invalid-feedback"></div>
+			</div>
+			<div class='col-lg-3 form-group'>
+				<label class="col-form-label col-form-label-sm" for="indentRefNo"
+					data-validation="mandatory" data-langtag="Indent reference No.">Previous
+					Indent reference No.: </label><br /> <label
+					class='col-form-label col-form-label-sm' id='prevIndentRefNo'></label>
+				<div class="invalid-feedback"></div>
+			</div>
+			<div class='col-lg-3 form-group'>
+				<label class="col-form-label col-form-label-sm "
+					for="prevIndentRefDate" data-validation="mandatory"
+					data-langtag="Date">Previous Indent Date : </label><br /> <label
+					class='col-form-label col-form-label-sm' id='prevIndentDate'></label>
+				<div class="invalid-feedback"></div>
+			</div>
+		</div>
+		<div class="row ">
+			<div class='col-lg-3'>&nbsp;</div>
+			<div class='col-lg-3 form-group'>
+				<label class="col-form-label col-form-label-sm" for="indentRefNo"
+					data-validation="mandatory" data-langtag="Indent reference No.">Indent
+					reference No.</label> <input type='text'
+					class="form-control form-control-sm " id="indentRefNo"
+					name="indentRefNo" data-validation="mandatory" />
+				<div class="invalid-feedback"></div>
+			</div>
+			<div class='col-lg-3 form-group'>
+				<label class="col-form-label col-form-label-sm " for="indentRefDate"
+					data-validation="mandatory" data-langtag="Date">Date</label> <input
+					type='text' class="form-control form-control-sm singleDatePicker"
+					id="indentRefDate" name="indentRefDate" data-validation="mandatory" />
+				<div class="invalid-feedback"></div>
+			</div>
+			<div class='col-lg-3 form-group'>
+				<label class="col-form-label col-form-label-sm "
+					for="departmentName" data-validation="mandatory"
+					data-langtag="Funding Source">Funding Source</label>
+				<div class='row'>
+					<div class='col-lg-12'>
+						<select class="form-control form-control-sm select2"
+							id='departmentName' name="departmentName" multiple="multiple">
+							<option value="State">State</option>
+							<option value="NHM" selected="selected">NHM</option>
+							<option value="Directorate">Directorate</option>
+						</select>
+					</div>
+				</div>
+				<div class="invalid-feedback"></div>
+			</div>
+		</div>
+		<div class="row ">
+			<div class='col-lg-3 form-group'>
+				<label class="col-form-label col-form-label-sm" for="programme"
+					data-validation="mandatory" data-langtag="Programme Name">Programme
+					Name</label>
+				<div class='row'>
+					<div class='col-lg-12'>
+						<select class="form-control form-control-sm select2"
+							id='programme' name="programme">
+							<option value="" selected="selected">Select Programme</option>
+							<option title="Select Value" value="0">Select Value</option>
+							<option title="Blood Storage Unit" value="255">Blood
+								Storage Unit</option>
+							<option title="CW" selected="selected" value="270">CW</option>
+							<option title="DFID" value="264">DFID</option>
+							<option title="Free Pathological Services" value="269">Free
+								Pathological Services</option>
+							<option title="LAQSHYA" value="262">LAQSHYA</option>
+							<option title="Maternity Wing - DP" value="265">Maternity
+								Wing - DP</option>
+							<option title="MCH" value="263">MCH</option>
+							<option title="N-HDU" value="259">N-HDU</option>
+							<option title="NPCB-VI" value="266">NPCB-VI</option>
+							<option title="NPHCE" value="268">NPHCE</option>
+							<option title="Obstetric ICU/HDU" value="257">Obstetric
+								ICU/HDU</option>
+							<option title="PICU" value="260">PICU</option>
+							<option title="RBSK" value="272">RBSK</option>
+							<option title="RCH" value="267">RCH</option>
+							<option title="RNTCP" value="271">RNTCP</option>
+							<option title="SNCU" value="261">SNCU</option>
+							<option title="USG" value="256">USG</option>
+						</select>
+					</div>
+				</div>
+
+				<div class="invalid-feedback"></div>
+			</div>
+			<div class='col-lg-3 form-group'>
+				<label class="col-form-label col-form-label-sm" for="financialYear"
+					data-validation="mandatory" data-langtag="Financial Year">Financial
+					Year</label> <select class="form-control form-control-sm  "
+					id='financialYear' name="financialYear">
+					<option value="2019-2020" selected="selected">2019-2020</option>
+				</select>
+				<div class="invalid-feedback"></div>
+			</div>
+
+			<div class='col-lg-3 form-group'>
+				<label class="col-form-label col-form-label-sm" for="accountHead"
+					data-validation="mandatory" data-langtag="Other Account Head">Account
+					Head</label> <select class="form-control form-control-sm  "
+					id='accountHead' name="accountHead">
+					<option value="">Select Account Head</option>
+					<option selected="selected" value="AC-01">AC-01</option>
+					<option value="AC-02">AC-02</option>
+					<option value="0">Other</option>
+				</select>
+				<div class="invalid-feedback"></div>
+			</div>
+			<div class='col-lg-3 hideData form-group' id='divAccountHead'>
+				<label class="col-form-label col-form-label-sm"
+					for="otherAccountHead" data-validation="mandatory"
+					data-langtag="Other Account Head">Other Account Head</label> <input
+					type='text' class="form-control form-control-sm "
+					id="otherAccountHead" name="otherAccountHead"
+					data-validation="mandatory" />
+				<div class="invalid-feedback"></div>
+			</div>
+
+		</div>
+
+		<div class='row no-more-tables'>
+			<table class="table" id='tablefundSanctioned'>
+				<thead class="bg-pink">
+					<tr>
+						<th>Fund Sanctioned (in Rs.)</th>
+						<th>Fund Sanction Date</th>
+						<th>Fund Deposited (in Rs.)</th>
+						<th>Fund Deposit Date</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>1000000 <input type='hidden' name="fundSanctionedModify"
+							value='1000000' />
+						</td>
+						<td>02-Jan-2020</td>
+						<td>800000 <input type='hidden' name="fundDepositedModify"
+							value='800000' />
+						</td>
+						<td>05-Jan-2020</td>
+					</tr>
+					<tr>
+						<td><input type='text' name="fundSanctionedModify"
+							class="form-control form-control-sm " value='0' /></td>
+						<td><input type='text'
+							class="form-control form-control-sm singleDatePicker"
+							name="fundSanctionedDate" data-validation="mandatory" /></td>
+						<td><input type='text' name="fundDepositedModify"
+							class="form-control form-control-sm " value='0' /></td>
+						<td><input type='text'
+							class="form-control form-control-sm singleDatePicker"
+							name="fundDepositedDate" data-validation="mandatory" /></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="row ">
+			<div class='col-lg-3 form-group'>
+				<label class="col-form-label col-form-label-sm"
+					data-validation="mandatory"
+					data-langtag="Total Fund Sanctioned (in Rs.)"> Total Fund
+					Sanctioned (in Rs.) </label><br /> <label
+					class='col-form-label col-form-label-sm' id='totalFundSanctioned'></label>
+				<div class="invalid-feedback"></div>
+			</div>
+			<div class='col-lg-3 form-group'>
+				<label class="col-form-label col-form-label-sm"
+					data-validation="mandatory"
+					data-langtag="Total Fund Deposited (in Rs.)"> Total Fund
+					Deposited (in Rs.) </label><br /> <label
+					class='col-form-label col-form-label-sm' id='totalFundDeposited'></label>
+				<div class="invalid-feedback"></div>
+			</div>
+		</div>
+
+	
+		<div class='row no-more-tables'>
+			<table class="table " id='tableIndent'>
+				<thead class="bg-pink">
+					<tr>
+						<th>S.No.</th>
+						<th>Directorate</th>
+						<th>District</th>
+						<th>Institutions</th>
+						<th>Department</th>
+						<th>Equipment Name</th>
+						<th>Sanctioned Qty.</th>
+						<th>Specification Status</th>
+						<th>Remark</th>
+						<th></th>
+					</tr>
+				</thead>
+				<tbody>
+
+					<tr>
+						<td data-title="S.No.">1</td>
+						<td data-title="Directorate">DME</td>
+						<td data-title="District">Chennai</td>
+						<td data-title="Institutions">Madras Medical College</td>
+						<td data-title="Department">ENT</td>
+						<td data-title="Equipment Name">X-Ray Machine</td>
+						<td data-title="Sanctioned Qty."><input type="text"
+							class="form-control form-control-sm" name="sanctionedQty" value="1"></td>
+						<td data-title="Specification Status"><select
+							class="form-control form-control-sm" name="specificationStatus"><option
+									value="1">Received</option>
+								<option value="0" selected="">Not Received</option></select></td>
+						<td data-title="Remark"><input type="text"
+							class="form-control form-control-sm" name="remarks"></td>
+						<td data-title="">-</td>
+					</tr>
+					<tr>
+						<td data-title="S.No.">2</td>
+						<td data-title="Directorate">DME</td>
+						<td data-title="District">Chennai</td>
+						<td data-title="Institutions">Stanley Medical college</td>
+						<td data-title="Department">EYE</td>
+						<td data-title="Equipment Name">X-Ray Machine</td>
+						<td data-title="Sanctioned Qty."><input type="text"
+							class="form-control form-control-sm" name="sanctionedQty" value="2"></td>
+						<td data-title="Specification Status"><select
+							class="form-control form-control-sm" name="specificationStatus"><option
+									value="1" selected="">Received</option>
+								<option value="0" >Not Received</option></select></td>
+						<td data-title="Remark"><input type="text"
+							class="form-control form-control-sm" name="remarks"></td>
+						<td data-title="">-</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+
+	</div>
+	<div class="card-footer text-center">
+		<button class="btn   bg-gradient-success btn-sm btnAddInstitute" >
+			<i class="fas fa-plus-square" aria-hidden="true"></i> Add Institutes
+		</button>
+		<button class='btn   bg-gradient-success btn-sm  hideData'
+			id='BTNMODIFYSAVE'>
+			<i class="far fa-save"></i>&nbsp;Save
+		</button>
+		&nbsp;
+		<button class='btn   bg-gradient-success btn-sm BTNOPEN'>
+			<i class="far fa-save"></i>&nbsp;Open
+		</button>
+		&nbsp;
+		<button class='btn   bg-gradient-success btn-sm BTNCLEAR '>
+			<i class="fas fa-sync"></i>&nbsp;Reset
+		</button>
+		&nbsp;
+
+	</div>
+</div>
+
+
+<div class="modal fade" id="divAddInsitutePopup">
+	<div class="modal-dialog modal-lg">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h4 class="modal-title">Add Institutes</h4>
+				<button type="button" class="close" data-dismiss="modal"
+					aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body">
+				<div class='row'>
+					<div class='col-lg-3 form-group'>
+						<label class="col-form-label col-form-label-sm" for="directorates"
+							data-validation="mandatory" data-langtag="Directorates">Directorates</label>
+						<select class="form-control form-control-sm" id='directorates'
+							name="directorates">
+							<option value="" selected="selected">Select Directorates</option>
+							<option value="DME">DME</option>
+							<option value="DM-RS">DPH</option>
+						</select>
+
+						<div class="invalid-feedback"></div>
+					</div>
+					<div class='col-lg-3 form-group'>
+						<label class="col-form-label col-form-label-sm" for="district"
+							data-validation="mandatory" data-langtag="District">District</label>
+						<select class="form-control form-control-sm  " id='district'
+							name="district">
+							<option value="ALL" selected="selected">All</option>
+							<option value="Chennai">Chennai</option>
+							<option value="Dharmapuri">Dharmapuri</option>
+							<option value="Sivaganga">Sivaganga</option>
+							<option value="Thiruvannamalai">Thiruvannamalai</option>
+						</select>
+						<div class="invalid-feedback"></div>
+					</div>
+					<div class='col-lg-3 form-group hideData' id='divSearch'>
+						<label class="col-form-label col-form-label-sm" for="search"
+							data-validation="mandatory" data-langtag="Search">Search</label>
+						<input type='text' class="form-control form-control-sm"
+							name="search" id="search">
+						<div class="invalid-feedback"></div>
+					</div>
+				</div>
+				<div class='row no-more-tables hideData' id="divtblpopup">
+					<table class="table" id='tblpopup'>
+						<thead class="bg-pink">
+							<tr>
+								<th>Directorate</th>
+								<th>District</th>
+								<th>Institutions</th>
+								<th><button type="button"
+										class="btn  bg-gradient-success btn-xs" id='addAll'>Add
+										All</button></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td data-title='Directorate'>DME</td>
+								<td data-title='District'>Chennai</td>
+								<td data-title='Institutions'>Madras Medical College</td>
+								<td><input type="button"
+									class='btn  bg-gradient-success btn-xs addInst' name='add'
+									value='Add'></td>
+							</tr>
+							<tr>
+								<td data-title='Directorate'>DME</td>
+								<td data-title='District'>Chennai</td>
+								<td data-title='Institutions'>Stanley Medical college</td>
+								<td><input type="button"
+									class='btn  bg-gradient-success btn-xs addInst' name='add'
+									value='Add'></td>
+							</tr>
+							<tr>
+								<td data-title='Directorate'>DME</td>
+								<td data-title='District'>Chennai</td>
+								<td data-title='Institutions'>Govt. Medical College,
+									Omandurar Govt. Estate</td>
+								<td><input type="button"
+									class='btn  bg-gradient-success btn-xs addInst' name='add'
+									value='Add'></td>
+							</tr>
+							<tr>
+								<td data-title='Directorate'>DME</td>
+								<td data-title='District'>Chennai</td>
+								<td data-title='Institutions'>Kilpauk Medical College</td>
+								<td><input type="button"
+									class='btn  bg-gradient-success btn-xs addInst' name='add'
+									value='Add'></td>
+							</tr>
+							<tr>
+								<td data-title='Directorate'>DME</td>
+								<td data-title='District'>Chennai</td>
+								<td data-title='Institutions'>Stanley Medical college</td>
+								<td><input type="button"
+									class='btn  bg-gradient-success btn-xs addInst' name='add'
+									value='Add'></td>
+							</tr>
+							<tr>
+								<td data-title='Directorate'>DME</td>
+								<td data-title='District'>Sivaganga</td>
+								<td data-title='Institutions'>Sivaganga Medical College</td>
+								<td><input type="button"
+									class='btn  bg-gradient-success btn-xs addInst' name='add'
+									value='Add'></td>
+							</tr>
+							<tr>
+								<td data-title='Directorate'>DME</td>
+								<td data-title='District'>Thiruvannamalai</td>
+								<td data-title='Institutions'>Thiruvannamalai Medical
+									College</td>
+								<td><input type="button"
+									class='btn  bg-gradient-success btn-xs addInst' name='add'
+									value='Add'></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+		<!-- /.modal-content -->
+	</div>
+	<!-- /.modal-dialog -->
+</div>
+
+
+<div class="modal fade" id="openIndentList">
+	<div class="modal-dialog modal-lg">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h4 class="modal-title">Previous Indent List</h4>
+				<button type="button" class="close" data-dismiss="modal"
+					aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body">
+				<div class='row'>
+					<div class='col-lg-3 form-group'>
+						<label class="col-form-label col-form-label-sm" for="indentType"
+							data-validation="mandatory" data-langtag="Indent Type">
+							Indent Type</label> <select class="form-control form-control-sm  "
+							id='indentType' name="indentType">
+							<option value="ALL" selected="selected">ALL</option>
+							<option value="GO">G.O.</option>
+							<option value="Proceeding">Proceeding</option>
+							<option value="Letter">Letter</option>
+						</select>
+						<div class="invalid-feedback"></div>
+					</div>
+					<div class='col-lg-3 form-group'>
+						<label class="col-form-label col-form-label-sm"
+							for="financialYear" data-validation="mandatory"
+							data-langtag="Financial Year">Financial Year</label> <select
+							class="form-control form-control-sm  " id='financialYear'
+							name="financialYear">
+							<option value="2019-2020" selected="selected">2019-2020</option>
+						</select>
+						<div class="invalid-feedback"></div>
+					</div>
+					<div class='col-lg-3 form-group hideData' id='divSearch'>
+						<label class="col-form-label col-form-label-sm" for="search"
+							data-validation="mandatory" data-langtag="Search">Search</label>
+						<input type='text' class="form-control form-control-sm"
+							name="search" id="search">
+						<div class="invalid-feedback"></div>
+					</div>
+				</div>
+				<div class='row no-more-tables' id="divtblpopup">
+					<table class="table" id='tblpopup'>
+						<thead class="bg-pink">
+							<tr>
+								<th>Indent Reference No.</th>
+								<th>Date</th>
+								<th>Indent Type</th>
+								<th></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td data-title='Indent Reference No.'>102/21/222</td>
+								<td data-title='Date'>02-Jan-2020</td>
+								<td data-title='Indent Type'>G.O.</td>
+								<td><input type="button"
+									class='btn  bg-gradient-success btn-xs btnModify' name='add'
+									value='Modify'></td>
+							</tr>
+							<tr>
+								<td data-title='Indent Reference No.'>102/221/222</td>
+								<td data-title='Date'>01-Jan-2020</td>
+								<td data-title='Indent Type'>G.O.</td>
+								<td><input type="button"
+									class='btn  bg-gradient-success btn-xs btnModify' name='add'
+									value='Modify'></td>
+							</tr>
+							<tr>
+								<td data-title='Indent Reference No.'>102/221/222</td>
+								<td data-title='Date'>05-Jan-2020</td>
+								<td data-title='Indent Type'>Letter</td>
+								<td><input type="button"
+									class='btn  bg-gradient-success btn-xs btnModify' name='add'
+									value='Modify'></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- /.modal-content -->
+</div>
+
+
+
+

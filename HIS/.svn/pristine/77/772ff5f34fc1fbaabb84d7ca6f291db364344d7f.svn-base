@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link rel="stylesheet" href="/HIS/hisglobal/eUpkaranTemplate/dist/css/adminlte.min.css">
+</head>
+<body>
+<div style="letter-spacing: 1px;">
+<style type="text/css">
+.table td, .table th{
+	padding: 2px;
+	border: none;
+}
+</style>
+<table class="table" style="width: 100%">
+<tbody>
+<tr>
+   <td colspan="4" style="text-decoration: underline;font-weight: bold;text-align: center;"><h4>SANCTION ORDER</h4></td>
+</tr>
+<tr>
+   <td colspan="2" style="width:5%;text-decoration: underline;"></td>
+   <td colspan="2" style="text-align: right;font-weight: bold;">SO No. : #soNo# ,SO Date : #soDt#<br> <br><span style="border: 1px solid;padding: 4px;">NON-COMPANY</span></td>
+</tr>
+<tr>
+	<td style="text-align: right;vertical-align: top;">To, :</td>
+    <td colspan="3"><br> #supplierName#<br>#address#</td>
+</tr>
+
+<tr>
+   <td style="text-align: right;font-weight: bold;">Sub : </td>
+   <td style="width:25% ;text-align: left;">Settlement of Bill(s)/ Invoice(s)</td>
+   <td style="text-align: left;"> <br> #supplierName#<br>GSTIN : #gstIn#</td>
+   <td style="text-align: left;">&nbsp;</td>
+</tr>
+
+<tr>
+   <td style="text-align: right;">&nbsp;</td>
+   <td style="text-align: left;" colspan="3">Please find enclosed a cheque bearing number #chqNo# dated  #chqDate#</td>
+</tr>
+<tr>
+	<td style="text-align: right;">&nbsp;</td>
+   <td style="text-align: left;" colspan="3">drawn on #bank# , #bankBranch# for payment of Rs. #totalNetAmt#</td>
+</tr>
+<tr>
+	<td style="text-align: right;">&nbsp;</td>
+   <td style="text-align: left;" colspan="3">RUPEES #RsInWords#</td>
+</tr>
+<tr>
+   <td style="text-align: right;">&nbsp;</td>
+   <td style="text-align: left;" colspan="3">As per the bill(s)/Invoice(s) given below:</td>
+</tr>
+
+
+<tr>
+   <td>&nbsp;</td>
+   <td style="text-align: left;">Work Order No. : #wono#</td>
+   <td style="text-align: left;">Work Order Date : #wodt#</td>
+   <td style="text-align: left;">Ordered value : #totalNetAmt#</td>
+</tr>
+<tr>
+	<td>&nbsp;</td>
+   <td style="text-align: left;" colspan="2"> Under G.O./Proceding Reference No. : #goRefNo#</td>
+   <td style="text-align: left;">Disbursement Note No.  : #disbursementNoteNo#</td>
+</tr>
+</tbody>       
+</table>
+<table style="width: 100%;font-size:11px;margin-top: 10px;" class="tbldatavo2">
+<thead>
+	<tr>
+	<th style="border:1px solid;vertical-align: top; width:5%;text-align: center;background:#dee2e6">SNo.</th>
+	<th style="border:1px solid;vertical-align: top;width:15%;text-align: center;background:#dee2e6">Description Of Goods</th>
+	<th style="border:1px solid;vertical-align: top; width:5%;text-align: center;background:#dee2e6">Qty</th>
+	<th style="border:1px solid;vertical-align: top;width:10%;text-align: center;background:#dee2e6">Unit Rate*</th>
+	<th style="border:1px solid;vertical-align: top;width:10%;text-align: center;background:#dee2e6">Basic Amt (Rs)</th>
+	<th style="border:1px solid;vertical-align: top;width:10%;text-align: center;background:#dee2e6">GST</th>
+	<th style="border:1px solid;vertical-align: top;width:10%;text-align: center;background:#dee2e6">Gross Amt(Rs)</th>
+	<th style="border:1px solid;vertical-align: top;width:10%;text-align: center;background:#dee2e6">TDS</th>
+	<th style="border:1px solid;vertical-align: top;width:5%;text-align: center;background:#dee2e6">TDS GST</th>	
+	<th style="border:1px solid;vertical-align: top;width:10%;text-align: center;background:#dee2e6">Deductions</th>
+	<th style="border:1px solid;vertical-align: top;width:20%;text-align: center;background:#dee2e6">Net Payable Amt(Rs.)</th>	
+	</tr>
+</thead>
+<tbody>
+<tr>
+<td style="border:1px solid;vertical-align: top;text-align: center;">@sno@</td>
+<td style="border:1px solid;vertical-align: top;text-align: left">Invoice No. :@invNo@<br> Invoice Date :@invDate@<br> Consignee :@consineeName@</td>
+<td style="border:1px solid;vertical-align: top;text-align: center">@qty@</td>
+<td style="border:1px solid;vertical-align: top;text-align: right;padding-right:5px">@rate@</td>
+<td style="border:1px solid;vertical-align: top;text-align: right;padding-right:5px">@basicAmt@</td>
+<td style="border:1px solid;vertical-align: top;text-align: center">@gstAmt@<br>@CGST @cgst@% @SGST @sgst@% @IGST @igst@%</td>
+<td style="border:1px solid;vertical-align: top;text-align: right;padding-right:5px">@grossAmt@</td>
+<td style="border:1px solid;vertical-align: top;text-align: right;padding-right:5px">@tdsAmt@</td>
+<td style="border:1px solid;vertical-align: top;text-align: right;padding-right:5px">@tdsgstAmt@</td>
+<td style="border:1px solid;vertical-align: top;text-align: center">@deductionAmt@<br>@Previous Payment @prevPay@%<br>@Retention Rs.@reten@<br>@Penalty Rs.@penalty@ </td>
+<td style="border:1px solid;vertical-align: top;text-align: right;padding-right:5px">@netAmt@</td>
+</tr>
+</tbody>
+<tfoot>
+<tr>
+<th colspan="4" style="border:1px solid;vertical-align: top;background:#dee2e6;text-align:right;padding-right:5px">Total</th>
+ <th style="border:1px solid;vertical-align: top;background:#dee2e6">#totalBasicAmt#</th>
+<th style="border:1px solid;vertical-align: top;background:#dee2e6">#totalGSTAmt#</th>
+<th style="border:1px solid;vertical-align: top;background:#dee2e6">#totalGrossAmt#</th>
+<th style="border:1px solid;vertical-align: top;background:#dee2e6">#totalTdsAmt#</th>
+<th style="border:1px solid;vertical-align: top;background:#dee2e6">#totalTdsgstAmt#</th>
+<th style="border:1px solid;vertical-align: top;background:#dee2e6">#totalDeductionAmt#</th>
+<th style="border:1px solid;vertical-align: top;background:#dee2e6">#totalNetAmt#</th>
+</tr>
+</tfoot>
+</table>
+<table class="table" style="width: 98%;margin-top: 10px;margin-left: 10px;">
+<tbody>	
+	<tr>
+	   <td style="width:25%;">
+		   <table style="width: 100%;font-size:11px;margin-top: 10px;">
+			<thead>
+				<tr>
+					<th style="border:1px solid;vertical-align: top; width:33%;text-align: center;background:#dee2e6">Add</th>
+					<th style="border:1px solid;vertical-align: top; width:33%;text-align: center;background:#dee2e6">%</th>
+					<th style="border:1px solid;vertical-align: top; width:33%;text-align: center;background:#dee2e6">Amount</th>
+				</tr>
+		   </thead>
+		   <tbody>
+		   	<tr>
+		   		<td style="border:1px solid;vertical-align: top; width:33%;text-align: center;" colspan="3"><br><br><br></td>
+		   	</tr>
+		   </tbody>
+		   </table>
+	   
+	   </td>
+	   <td style="width:25%;">
+	   		<table style="width: 100%;font-size:11px;margin-top: 10px;">
+			<thead>
+				<tr>
+					<th style="border:1px solid;vertical-align: top; width:33%;text-align: center;background:#dee2e6">Less</th>
+					<th style="border:1px solid;vertical-align: top; width:33%;text-align: center;background:#dee2e6">%</th>
+					<th style="border:1px solid;vertical-align: top; width:33%;text-align: center;background:#dee2e6">Amount</th>
+				</tr>
+		   </thead>
+		   <tbody>
+   			   	<tr>
+		   		<td style="border:1px solid;vertical-align: top; width:33%;text-align: center;" colspan="3"><br><br><br></td>
+			   	</tr>
+
+		   </tbody>
+		   </table>
+	   
+	   </td>
+	   <td style="width:25%;">&nbsp;</td>
+	   <td style="width:25%;">&nbsp;</td>
+	</tr>
+	<tr>
+	   <td style="width:25%;text-align:right;padding:5px;">Basic Amount of Rs. :</td>
+	   <td style="width:25%;text-align:left;padding:5px;">#totalBasicAmt#</td>
+	   <td style="width:25%;text-align:left;padding:5px;">&nbsp;</td>
+	   <td style="width:25%;text-align:left;padding:5px;text-align: right;">Yours faithfully,</td>
+	</tr>
+	<tr>
+		<td style="width:25%;text-align:right;padding:5px;">GST Rs. :</td>
+		<td style="width:25%;text-align:left;padding:5px;">#totalGSTAmt#</td>
+		<td style="width:25%;text-align:left;padding:5px;">&nbsp;</td>
+	    <td style="width:25%;text-align:left;padding:5px;text-align: right;">for TNMSC Ltd.</td>
+	</tr>
+	<tr>
+		<td style="width:25%;text-align:right;padding:5px;">Gross Rs. :</td>
+		<td style="width:25%;text-align:left;padding:5px;" colspan="3">#totalGrossAmt#</td>
+	</tr>
+        <tr>
+		<td style="width:25%;text-align:right;padding:5px;">TDS Rs. :</td>
+		<td style="width:25%;text-align:left;padding:5px;">#totalTdsAmt#</td>
+		<td colspan="2">&nbsp;</td>
+	</tr>
+	<tr>
+		<td style="width:25%;text-align:right;padding:5px;">TDS GST Rs. :</td>
+		<td style="width:25%;text-align:left;padding:5px;">#totalTdsgstAmt#</td>
+		<td colspan="2">&nbsp;</td>
+	</tr>
+	<tr>
+		<td style="width:25%;text-align:right;padding:5px;">Deduction Of SO Rs. :</td>
+		<td style="width:25%;text-align:left;padding:5px;">#totalDeductionAmt#</td>
+		<td colspan="2">&nbsp;</td>
+	</tr>
+	<tr>
+		<td style="width:25%;text-align:right;padding:5px;">Net Amount Rs. :</td>
+		<td style="width:25%;text-align:left;padding:5px;">#totalNetAmt#</td>
+		<td style="text-align:left;padding:5px;" colspan="2">&nbsp; </td>
+	</tr>
+	<tr>
+		<td style="text-align:left;padding:5px;" colspan="3">Kindly acknowledge the reciept of payment by way of Cheque/RTGS/NEFT</td>
+		
+		<td style="text-align:right;padding:5px;">
+		 	Account Officer
+		 </td>
+	</tr>
+</tbody>
+</table>
+
+
+</div>
+</body>
+</html>

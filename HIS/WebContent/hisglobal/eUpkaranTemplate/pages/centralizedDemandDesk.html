@@ -1,0 +1,307 @@
+<script>
+$(document).ready(function () {
+	$('#btnview').click(function(){
+		$('#LISTFORM').addClass('hideData');
+		$('#VIEWPAGEFORM ').removeClass('hideData');		
+	});
+	
+	$('#btnBack').click(function(){
+		$('#LISTFORM').removeClass('hideData');
+		$('#VIEWPAGEFORM ').addClass('hideData');		
+	});
+	
+	$('#btndemand').click(function(){
+			$('#LISTFORM').addClass('hideData');
+			$('#DEMANDPAGEFORM ').removeClass('hideData');		
+		});
+		
+	$('#btnBacks').click(function(){
+			$('#LISTFORM').removeClass('hideData');
+			$('#DEMANDPAGEFORM ').addClass('hideData');		
+		});
+})
+</script>
+
+
+<div class="card card-info border-info center m-1" id='LISTFORM' >
+			<div class="card-header bg-navy"><h5 class="card-title text-center ">Centralised Demand / Intent Generation Desk</h5>
+			</div>
+
+
+	<div class="card-body form-group">
+ 	
+  			<div class="row " >
+						
+						<div class='col-lg-3'  >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="institutionTypeName" data-validation="mandatory" data-langtag="Institution Type Name" >Institution Type Name</label>
+	                			<select class="form-control form-control-sm  " id ='institutionTypeName' name="institutionTypeName">
+	                				<option value="" selected="selected">Select Institution Type Name</option>
+	                				<option title="Big hospital" selected="" value="28">Big hospital</option>
+									<option title="Blood Bank" value="29">Blood Bank</option>
+									<option title="BMED LAB" value="122">BMED LAB</option>
+									<option title="Budget Authority" value="51">Budget Authority</option>
+									<option title="CD" value="30">CD</option>
+									<option title="CH" value="19">CH</option>
+									<option title="CHC" value="21">CHC</option>
+									<option title="CMHO" value="13">CMHO</option>
+									<option title="CMHO Vaccine" value="39">CMHO Vaccine</option>
+</select>
+	                		<div class="invalid-feedback"></div>
+ 	  					</div>
+	 				</div>
+	 	
+	 	
+	 				<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="demandIntentAuthority" data-validation="mandatory" data-langtag="Demand Intent Authority" >Demand / Intent Authority</label>
+	                			<select class="form-control form-control-sm  " id ='demandIntentAuthority' name="demandIntentAuthority">
+	                				<option value="" selected="selected">Select Demand / Intent Authority</option>
+	                				<option title="Raisen-CMHO" value="5001756">Raisen-CMHO</option>
+									<option title="Rajgarh-CMHO" value="5001757">Rajgarh-CMHO</option>
+									<option title="Ratlam-CMHO" value="5001758">Ratlam-CMHO</option>
+									<option title="Rewa-CMHO" value="5001759">Rewa-CMHO</option>
+									<option title="Sagar-CMHO" value="5001760">Sagar-CMHO</option>
+									<option title="Satna-CMHO" value="5001761">Satna-CMHO</option>
+									<option title="Sehore-CMHO" value="5001762">Sehore-CMHO</option>
+									<option title="Seoni-CMHO" value="5001763">Seoni-CMHO</option>
+									<option title="Shahdol-CMHO" value="5001764">Shahdol-CMHO</option>
+									<option title="Shajapur-CMHO" value="5001765">Shajapur-CMHO</option>
+									<option title="Sheopur-CMHO" value="5001766">Sheopur-CMHO</option>
+	                			</select>
+	              				<div class="invalid-feedback"></div>
+ 	  						</div>
+	 					</div>
+	 					
+	 					
+	 					
+	 				</div>
+	 				
+		 	
+  			
+						
+	 				
+	
+
+			<div class="text-center">
+			    <button class="btn   bg-gradient-success btn-sm" id="btndemand"><i class="fa fa-file" aria-hidden="true"></i> New Demand</button>
+				<button class="btn   bg-gradient-success btn-sm" id="btnview"><i class="fa fa-eye" aria-hidden="true"></i> View</button>
+			</div>
+			<div class='row'>
+			<div class='col-lg-4'>	
+				<div class="form-group row">                   
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" id="search" placeholder="Search">
+                    </div>
+                  </div>
+			</div>
+			
+			</div>	
+			<div class='row no-more-tables'>
+			<table class="table table-hover">
+			  <thead class="bg-navy">
+			      <tr>
+			      	<th><input type="checkbox"></th>
+			        <th >Demand/Intent No.</th>
+			        <th>Demand/Intent Reference No.</th>
+			        <th>Institution Name</th>
+			        <th>Equipment Name</th>
+			        <th>Demand/Intent Quantity</th>
+			        <th>Demand/Intent Date</th>
+			        
+			      </tr>
+			    </thead>
+			    <tbody>
+			     <tr>
+			      	<td class='d-none d-sm-block' ><input type="checkbox"></td>
+			        <td data-title='Equipment Name' > 319129980007</td>
+			        <td data-title='Equipment Model'>sdsd</td>
+			        <td data-title='Serial No.'>Amarkoot Alirajpur-PHC</td>
+			        <td data-title='Bar Code'>AMBU BAG NEONATAL</td>
+			        <td data-title='Manufacturer Name'>2</td>
+			        <td data-title='Equipment Status'>16-Dec-2019</td>
+			        
+			      </tr>
+			    </tbody>
+			     <tbody>
+			     <tr>
+			      	<td class='d-none d-sm-block' ><input type="checkbox"></td>
+			        <td data-title='Equipment Name' > 319129980008</td>
+			        <td data-title='Equipment Model'>sdsd</td>
+			        <td data-title='Serial No.'>Amarkoot Alirajpur-PHC</td>
+			        <td data-title='Bar Code'>	 Bed Side Bench</td>
+			        <td data-title='Manufacturer Name'>2</td>
+			        <td data-title='Equipment Status'>16-Dec-2019</td>
+			        
+			      </tr>
+			    </tbody>
+			 </table>	
+			</div>
+		
+
+	</div>
+	</div>
+	
+
+
+
+  
+
+
+<div class="card card card-info border-info center m-1 hideData" id='VIEWPAGEFORM'  >
+	<div class="card-header bg-navy">
+		<h6 class="text-left">Demand / Intent Desk >> View </h6>
+	</div>
+	<div class="card-body form-group">
+	<h6><b> Demand / Intent Details :</b></h6>
+	<hr class="bg-navy">
+	   <div class='row'>
+                                      <div class='col-lg-3' ><b>Demand / Intent Type :</b>	Central 
+  				                       </div>
+  		                              <div class='col-lg-3' ><b>Demand / Intent No :</b>	4766845325		 
+  				                       </div>
+  				                       <div class='col-lg-3' ><b>Demand / Intent Date:	</b>		16-Dec-2019
+  				                       </div>
+  		                              <div class='col-lg-3' ><b>Institution Name  :</b>	Alirajpur-CMHO	 
+  				                       </div>
+  				                       <div class='col-lg-3' ><b>Department Name:	</b>		Amarkoot Alirajpur-PHC
+  				                       </div>
+  		                              <div class='col-lg-3' ><b>Equipment Name : </b>AMBU BAG NEONATAL
+  		                              </div>
+  		                               <div class='col-lg-3' ><b>Demand / Intent Reference No.:	</b>		sdsd
+  				                       </div>
+  		                              <div class='col-lg-3' ><b>Remarks : </b> 0
+  		                              </div>
+  				                       </div>
+  				                       </div>
+    <div class="card-footer">
+		<div class="text-center">
+              <button class="btn bg-gradient-success mt-4 btn-sm" id="btnBack"><i class="fas fa-arrow-circle-left"></i> Back</button>                            
+		</div>
+	</div>  
+ 
+  
+</div>
+
+
+
+<div class="card card card-info border-info center m-1 hideData" id='DEMANDPAGEFORM'  >
+	<div class="card-header bg-navy">
+		<h6 class="text-left">Centralised Demand / Intent Generation Desk For Multiple Equipments >> Add</h6>
+	</div>
+	<div class="card-body form-group">
+	<h6><b> Demand / Intent Generation Details :</b></h6>
+	<hr class="bg-navy">
+	   <div class='row'>
+	                           <div class='col-lg-3' >
+	              	            <div class="form-group">
+	              	            <label class="col-form-label col-form-label-sm" for="demandIntentAuthority" data-langtag="Demand Intent Authority   "  >Demand / Intent Authority    :</label>
+	                			<input class="form-control form-control-sm desabledTextBox" name="demandIntentAuthority"  id="demandIntentAuthority" value="Alirajpur-CMHO" maxlength="50" data-validation="mandatory,alphabetOnly">
+	                			<div class="invalid-feedback"></div>
+	              			</div></div>
+                                      
+  				                      
+	                   <div class='col-lg-3' >
+	              	            <div class="form-group">
+	              	            <label class="col-form-label col-form-label-sm" for="equipmentName" data-langtag="Equipment Name "  >Equipment Name  :</label>
+	                			<input class="form-control form-control-sm " name="equipmentName"  id="equipmentName" placeholder="AMBU BAG NEONATAL[1004]" maxlength="50" data-validation="mandatory,alphabetOnly"> No(s).
+	                			<div class="invalid-feedback"></div>
+	              			</div></div>
+	              	  <div class='col-lg-3' >
+	              	            <div class="form-group">
+	              	            <label class="col-form-label col-form-label-sm" for="institutionName" data-langtag="Institution Name "  >Institution Name  :</label>
+	                			<input class="form-control form-control-sm " name="institutionName"  id="institutionName" placeholder="ALIRAJPUR CMHO" maxlength="50" data-validation="mandatory,alphabetOnly"> No(s).
+	                			<div class="invalid-feedback"></div>
+	              			</div></div>
+	              			
+	              			 <div class='col-lg-3' >
+	              	            <div class="form-group">
+	              	            <label class="col-form-label col-form-label-sm" for="activeRCs" data-langtag="Active RCs  "  >Active RC(s)  :</label>
+	                			<input class="form-control form-control-sm desabledTextBox" name="activeRCs"  id="demandIntentAuthority" value="0" maxlength="50" data-validation="mandatory,alphabetOnly"> 
+	                			<div class="invalid-feedback"></div>
+	              			</div></div>
+	              			
+	              			 <div class='col-lg-3' >
+	              	            <div class="form-group">
+	              	            <label class="col-form-label col-form-label-sm" for="activeRCs" data-langtag="Active RCs  "  >Active RC(s)  :</label>
+	                			<input class="form-control form-control-sm desabledTextBox" name="activeRCs"  id="demandIntentAuthority" value="0" maxlength="50" data-validation="mandatory,alphabetOnly"> 
+	                			<div class="invalid-feedback"></div>
+	              			</div></div>
+                                      
+	              			
+	              	
+	              			
+  				              <div class='col-lg-3' >
+	              	            <div class="form-group">
+	              	            <label class="col-form-label col-form-label-sm" for="currentAvailableBudget" data-langtag="Current Available Budget"  >Current Available Budget :</label><i class="fas fa-search"></i>
+	                			<input class="form-control form-control-sm " name="currentAvailableBudget"  id="currentAvailableBudget"  maxlength="50" data-validation="mandatory,alphabetOnly"> 
+	                			<div class="invalid-feedback"></div>
+	              			</div></div>
+	              			<div class='col-lg-3' >
+	              	            <div class="form-group">
+	              	            <label class="col-form-label col-form-label-sm" for="demandIntentReferenceNo" data-langtag="Demand Intent Reference No."  >Demand / Intent Reference No.  :</label>
+	                			<input class="form-control form-control-sm desabledTextBox" name="demandIntentReferenceNo"  id="demandIntentReferenceNo" value="VVVVV" maxlength="50" data-validation="mandatory,alphabetOnly"> 
+	                			<div class="invalid-feedback"></div>
+	              			</div></div>
+	              			
+	              			
+  	</div>
+  	</div>
+  	                  
+  	 
+  	      
+  	                  <div class="text-center">
+              <button class="btn bg-gradient-success mt-4 btn-sm" ><i class="fa fa-arrow-left"></i> Go</button>
+               <button class="btn bg-gradient-success mt-4 btn-sm" ><i class="fa fa-window-close"></i> </button>                            
+		</div>
+  	 <div class="card-body form-group">         
+	                 <h6><b>Accessories/Consumable/Reagents</b></h6>
+	                 <hr class="bg-navy">
+	                 <div class='row no-more-tables'>
+			<table class="table table-hover">
+			  <thead class="bg-light">
+			      <tr>
+			      	<th></th>
+			        <th >SI. No.</th>
+			        <th>Equipment Names</th>
+			        <th>AliRajpur-CMHO</th>
+			        
+			       </tr>
+			      </thead>
+			       <tbody>
+			     <tr>
+			     <td></td>
+			       <td data-title='Request Id' >1</td>
+			        <td data-title='Request Date'>AMBU BAG NEONATAL [10004] </td>
+			        <td data-title='Request Date'>
+	              	           <input "form-control form-control-sm " name="remarks"  id="remarks " maxlength="50" placeholder="0" data-validation="mandatory,alphabetOnly">
+	                		</td>
+			       
+			       </tr>
+			    </tbody>
+			   </table></div>
+			    </div>	
+			    <div class="card-body form-group">
+	
+	<hr class="bg-navy">
+	   <div class='row'> 
+	           <div class='col-lg-3' >
+	              	            <div class="form-group">
+	              	            <label class="col-form-label col-form-label-sm" for="remarks" data-langtag="Remarks"  >Remarks  :</label>
+	                			<textarea class="form-control form-control-sm " name="remarks"  id="remarks"  maxlength="50" data-validation="mandatory,alphabetOnly"> </textarea>
+	                			<div class="invalid-feedback"></div>
+	              			</div></div> 
+	              			</div>
+	              			</div>           	
+  				      
+  	 
+    <div class="card-footer">
+		<div class="text-center">
+		      <button class='btn bg-gradient-success mt-4 btn-sm' ><i class="fa fa-save"></i> Save</button>
+              <button class="btn bg-gradient-success mt-4 btn-sm"><i class="fa fa-window-close" ></i> Clear</button>
+              <button class="btn bg-gradient-success mt-4 btn-sm" id="btnBacks"><i class="fas fa-arrow-circle-left"></i> Back</button>                            
+		</div>
+	</div>  
+ 
+  
+</div>

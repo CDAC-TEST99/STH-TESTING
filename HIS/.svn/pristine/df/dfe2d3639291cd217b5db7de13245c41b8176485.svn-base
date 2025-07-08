@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link rel="stylesheet" href="/HIS/hisglobal/eUpkaranTemplate/dist/css/adminlte.min.css">
+</head>
+<body>
+
+<div style="letter-spacing: 1px;">
+<style type="text/css">
+.table td, .table th{
+	padding: 2px;
+	border: none;
+}
+</style>
+<table class='table' style="width: 100%">
+<tbody>
+
+<tr>
+   <td  style="width:75%;text-decoration: underline;"><b>Ref No.: #refNo# </b></td>
+   <td  style="width:25%;text-align: left;"><b>#institutionName#, <br> #instituteAddress#, Date : #date#</b></td>   
+</tr>
+
+<tr>
+
+  <td  colspan="2" style="width:10%;text-align: left;">To : </td>
+   
+</tr>
+
+<tr>
+ 
+   
+   <td  style="text-align: left;"> <b>#supplierName#,</b></td>
+   <td  style="text-align: left;">&nbsp;</td>
+</tr>
+<tr>
+   
+   
+   <td  style="text-align: left;">#supplierAddress#</td>
+   <td  style="text-align: left;">&nbsp;</td>
+</tr>
+ 
+ <tr>
+
+  <td  colspan="2" style="width:10%;text-align: left;">Sir,  </td>
+   
+</tr>
+</tbody>
+</table>
+
+<table class='table' style="width: 100%">
+<tbody>
+
+<tr>
+     <td  colspan="4" style="text-align: left;"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sub : </b> #instituionName#, #instituteAddress# - Replacement of Accessories/Consumables
+     - Order issued - Regarding.
+       <br><br></td>
+    
+</tr>
+
+<tr>
+   <td colspan="4" style="width:10%;text-align: left;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Ref : (1)</b> P.O.Ref: #poRefNumber#, Date: #poDate# </td>
+   </tr>
+   
+   <tr>
+   <td colspan="4" style="width:10%;text-align: left;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b> (2)</b> P.O.Ref: #poRefNumber#, Date: #poDate# </td>
+   </tr>
+   
+   <tr>
+   <td colspan="4" style="width:10%;text-align: left;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b> (3)</b> P.O.Ref: #poRefNumber#, Date: #poDate# </td>
+  </tr>
+
+<tr>
+   <td  style="width:10%;text-align: center;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>---------------</b><br></td>
+  </tr>
+
+<tr>
+   <td colspan="4" style="width:10%;text-align: left;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; With reference to the estimate cited, the rates quoted by you towards replacements of
+   defective spares / accessories for the following #equipmentName# equipments / instruments available at #departmentName# department, #designationName# of this hospital are hereby accepted. 
+</tr>
+
+</tbody>
+</table>
+
+
+
+<table style="width: 100%;length:50%;font-size:11px;margin-top: 10px;" class='tbldatavo2'>
+<thead>
+	<tr >
+	<th style="border:1px solid;vertical-align: top; width:5%;text-align: center;background:#dee2e6" >S No.</th>
+	<th style="border:1px solid;vertical-align: top; width:15%;text-align: center;background:#dee2e6">Name of the Equipment </th>
+	<th style="border:1px solid;vertical-align: top;width:20%;text-align: center;background:#dee2e6">Work Schedule / Replacements of</th>
+	<th style="border:1px solid;vertical-align: top;width:5%;text-align: center;background:#dee2e6">Cost</th>
+	
+	
+	</tr>
+</thead>
+<tbody>
+<tr>
+<td style="border:1px solid;vertical-align: top;text-align: center;">#slNo#</td>
+<td style="border:1px solid;vertical-align: top;text-align: left"> #equipmentName# <br>Make: #make#<br>Model: #model# <br> Serial No.: #serialNo# </td>
+<td style="border:1px solid;vertical-align: top;text-align: left">#modelName#</td>
+<td style="border:1px solid;vertical-align: top;text-align: center;padding-right:5px"> Rs. #equimentCost# /-</td>
+
+
+</tr>
+</tbody>
+<tfoot>
+<tr>
+<th colspan="2" style="border:1px solid;vertical-align: top;background:#dee2e6;text-align:left;padding-right:5px"><b>Exclusive of GST</b></th>
+ <th style="border:1px solid;vertical-align: top;background:#dee2e6;text-align:right; border-left-style: hidden;"><b>Total&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></th>
+ <th style="border:1px solid;vertical-align: top;background:#dee2e6"><b>Rs.#totalEquipCost# /-</b></th>
+
+</tr>
+</tfoot>
+
+</table>
+
+<table class='table' style="width: 100%">
+<tbody>
+
+<tr>
+   <td colspan="4" style="width:10%;text-align: left;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;You are requested to carry out repair and replacement of defective accessories and
+   spare parts for the above equipment immediately at this hospital as per the schedule of work mentioned in the estimate in the presence of #designationName# of this hospital.<br><br>
+   
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;You are also requested to provide <u>#warrantyPeriod# months warranty</u> for the above replaced Accessories/ Consumables items.<br><br>
+    
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;On satisfactory working condition of the equipments on completion of the work, you are requested to submit your bill (in duplicate) along 
+    with the service repost duly signed by the concerned Head of the Department  & #designationName# of this hospital for arranging payment.<br><br>
+    
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The receipt of this order may be acknowledged.
+</tr>
+
+
+
+
+
+
+
+
+<tr>
+   <td colspan='2'  style="font-weight: bold;text-align: center;"><h6>Sd/-<br> </h6></td>   
+</tr>
+
+
+<tr>
+   <td colspan='2' style="font-weight: bold;text-align: center;"><h6><b>Dean</b> <br></h6></td>   
+</tr>
+
+
+<tr>
+   <td  style="font-weight: bold;text-align: left;"><h6> \\ True Copy \\ Forwarded \\ <br></h6></td>   
+</tr>
+
+<tr>
+   <td  style="font-weight: bold;text-align: left;"><h6> Administrative Officer <br><br></h6></td>   
+</tr>
+
+<tr>
+   <td  style="font-weight: bold;text-align: left;"><h6><b>Copy to:</b><br> </h6></td>   
+</tr>
+
+
+<tr>
+   <td  style="font-weight: bold;text-align: left;"><h6> The Director, Institute of #departmentName#,
+   <br>The #designation#, <br>The <br> #institutionName#, #institutionAddress# </h6></td> 
+    
+     
+</tr>
+
+
+</tbody>
+</table>
+
+
+
+
+
+
+</div>
+</body>
+</html>

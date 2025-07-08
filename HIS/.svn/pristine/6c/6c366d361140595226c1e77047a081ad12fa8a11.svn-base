@@ -1,0 +1,162 @@
+
+
+<div class="card card-info border-info center m-1" id='LISTFORM' >
+			<div class="card-header bg-navy"><h5 class="card-title text-center ">Issue Desk</h5>
+			</div>
+
+
+	<div class="card-body form-group">
+ 			<h6><b>Issue Detail(s) :</b></h6>
+			<hr class="bg-navy">
+  			<div class="row " >
+						
+						<div class='col-lg-3'  >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="issueType" data-validation="mandatory" data-langtag="Issue Type" >Issue Type</label>
+	                			<select class="form-control form-control-sm  " id ='issueType' name="issueType">
+	                				<option value="" selected="selected">Select Issue Type</option>
+	                				<option title="Issue To Department" selected="" value="37">Issue To Department</option>
+									<option title="Issue To Hospital" value="31">Issue To Hospital</option>
+	                			</select>
+	                		<div class="invalid-feedback"></div>
+ 	  					</div>
+	 				</div>
+	 	
+	 				<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="issueDate"  data-langtag="Issue Date" >Issue Date</label>
+	                			<input type= "date" class="form-control form-control-sm  "  id="issueDate" name="issueDate" maxlength="50"  >
+	              			<div class="invalid-feedback"></div>
+ 	  					</div>
+	 				</div> 
+	 					
+	 					<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="issuedBy" data-validation="mandatory" data-langtag="Issued By" >Issued By</label>
+	                			<select class="form-control form-control-sm  " id ='issuedBy' name="issuedBy">
+	                				<option value="" selected="selected">Select Value</option>
+	                				<option title="Aagar- DH" value="5001672">Aagar- DH</option>
+									<option title="Aagar PHC  Indore-PHC" value="5002615">Aagar PHC  Indore-PHC</option>
+									<option title="Aagasod   Sagar-PHC" value="5003031">Aagasod   Sagar-PHC</option>
+									<option title="Aamdhana  Betul-PHC" value="5002278">Aamdhana  Betul-PHC</option>
+									<option title="Aamgaon  Narsinghpur-PHC" value="5002879">Aamgaon  Narsinghpur-PHC</option>
+									<option title="Aamkui  Satna-PHC" value="5003058">Aamkui  Satna-PHC</option>
+									<option title="Aamla  Betul-CH" value="5001866">Aamla  Betul-CH</option>
+									<option title="Aamla  Dewas-PHC" value="5002472">Aamla  Dewas-PHC</option>
+									<option title="Aamni Piparia  Dindori-PHC" value="5002540">Aamni Piparia  Dindori-PHC</option>
+									<option title="Aari  Seoni-PHC" value="5003116">Aari  Seoni-PHC</option>
+	                			</select>
+	              			<div class="invalid-feedback"></div>
+ 	  					</div>
+	 				</div>
+	 				
+	
+		
+	 				<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="issuedTo" data-validation="mandatory" data-langtag="Issued To" >Issued To</label>
+	                			<select class="form-control form-control-sm  " id ='issuedTo' name="issuedTo">
+	                				<option value="" selected="selected">Select Value</option>
+	                				<option title="Aagar- DH - ANC ROOM" value="5003335">Aagar- DH - ANC ROOM</option>
+									<option title="Aagar- DH - A.R.T" value="5003334">Aagar- DH - A.R.T</option>
+									<option title="Aagar- DH - AUTO CLAVE ROOM" value="5003336">Aagar- DH - AUTO CLAVE ROOM</option>
+									<option title="Aagar- DH - BLOOD BANK DEP" value="5003337">Aagar- DH - BLOOD BANK DEP</option>
+									<option title="Aagar- DH - BURN UNIT" value="5003338">Aagar- DH - BURN UNIT</option>
+									<option title="Aagar- DH - CENCER DEPT" value="5003339">Aagar- DH - CENCER DEPT</option>
+									<option title="Aagar- DH - CHILDREN WARD" value="5003340">Aagar- DH - CHILDREN WARD</option>
+									<option title="Aagar- DH - COLD CHAIN DEP" value="5003341">Aagar- DH - COLD CHAIN DEP</option>
+									<option title="Aagar- DH - DAILYSIS DEPT" value="5003342">Aagar- DH - DAILYSIS DEPT</option>
+									<option title="Aagar- DH - DENTAL DEPT" value="5003343">Aagar- DH - DENTAL DEPT</option>
+									<option title="Aagar- DH - DIABETIES DEPT" value="5003344">Aagar- DH - DIABETIES DEPT</option>
+									<option title="Aagar- DH - DRESSING ROOM" value="5003345">Aagar- DH - DRESSING ROOM</option>
+									<option title="Aagar- DH - DUTY ROOM" value="5003346">Aagar- DH - DUTY ROOM</option>
+									<option title="Aagar- DH - ECG ROOM" value="5003347">Aagar- DH - ECG ROOM</option>
+								</select>
+	              			<div class="invalid-feedback"></div>
+ 	  					</div>
+	 				</div>
+	 			</div>	
+	 		<br>	
+			<h6><b>Stock Detail(s) :</b></h6>
+			<hr class="bg-navy">
+			<div class='row no-more-tables'>
+				<table class="table table-hover">
+				  <thead class="bg-navy">
+				      <tr>
+				      	<th><input type="checkbox"></th>
+				        <th >S.No.</th>
+				        <th>Equipment Name</th>
+				        <th>Model Name</th>
+				        <th>Serial No.</th>
+				        <th>Total Qty.</th>
+				        <th>PO No.</th>
+				        <th>Invoice No.</th>
+				        <th>Invoice Date</th>
+				        <th>Issue Qty</th>
+				      </tr>
+				    </thead>
+				    <tbody>
+				     <tr>
+				      	<td class='d-none d-sm-block' ><input type="checkbox"></td>
+				        <td data-title='S.No.' >1</td>
+				        <td data-title='Equipment Name'>3 Fold Labour table SS with foam mattress</td>
+				        <td data-title='Model Name'>ACME1013</td>
+				        <td data-title='Serial No.'>120</td>
+				        <td data-title='Total Qty.'>1</td>
+				        <td data-title='PO No.'>719129980003</td>
+				        <td data-title='Invoice No.'>96</td>
+				        <td data-title='Invoice Date'>20-OCT-2019</td>
+				   	    <td data-title='Issue Qty'>0</td>
+				      </tr>
+				      <tr>
+				     	<td class='d-none d-sm-block' ><input type="checkbox"></td>
+				        <td data-title='S.No.' >2</td>
+				        <td data-title='Equipment Name'>Bed Side Locker SS</td>
+				        <td data-title='Model Name'>Inmade BSLD-M-01</td>
+				        <td data-title='Serial No.'>asd34</td>
+				        <td data-title='Total Qty.'>2</td>
+				        <td data-title='PO No.'>719089980005</td>
+				        <td data-title='Invoice No.'>May/2019/321</td>
+				        <td data-title='Invoice Date'>20-DEC-2019</td>
+				   	    <td data-title='Issue Qty'>0</td>
+				      </tr>
+				      <tr>
+				      	<td class='d-none d-sm-block' ><input type="checkbox"></td>
+				        <td data-title='S.No.' >3</td>
+				        <td data-title='Equipment Name'>SYRINGE INFUSION PUMP</td>
+				        <td data-title='Model Name'>Graseby 2000</td>
+				        <td data-title='Serial No.'>789</td>
+				        <td data-title='Total Qty.'>1</td>
+				        <td data-title='PO No.'>719089980003</td>
+				        <td data-title='Invoice No.'>1234</td>
+				        <td data-title='Invoice Date'>06-NOV-2019</td>
+				   	    <td data-title='Issue Qty'>0</td>
+				      </tr>
+				    </tbody>
+				 </table>	
+			</div>
+			
+			<div class="row justify-content-center" >
+				<div class='col-lg-3' >
+			 		<div class="form-group">
+            			<label class="col-form-label col-form-label-sm" for="remarks"  data-langtag="Remarks" >Remarks</label>
+            		   	<textarea class="form-control form-control-sm "  id="remarks" name="remarks" maxlength="50" ></textarea>
+          				<div class="invalid-feedback"></div>
+ 	  				</div>
+	 			</div> 
+	 		 </div>
+	 		 
+			<hr class="bg-navy">
+			<h6><b><i class="text-center text-danger">*</i> Mandatory Fields</b></h6>	
+			
+			<div class="text-center">
+				   <button class="btn bg-gradient-success mt-4 btn-sm" id="btnIssue"><i class="fa fa-save"></i> Issue</button>
+				   <button class="btn bg-gradient-success mt-4 btn-sm" id="btnClear"><i class="fa fa-paint-brush"></i> Clear</button>
+	              <button class="btn bg-gradient-success mt-4 btn-sm" id="btnCancel"><i class="fa fa-close"></i> Cancel</button>                            
+			</div>
+		 
+	 </div>
+</div>
+
+
+

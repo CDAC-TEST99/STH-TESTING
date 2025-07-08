@@ -1,0 +1,239 @@
+<script>
+$(document).ready(function () {
+	$('#btnview').click(function(){
+		$('#LISTFORM').addClass('hideData');
+		$('#VIEWPAGEFORM ').removeClass('hideData');		
+	});
+	
+	$('#btnBack').click(function(){
+		$('#LISTFORM').removeClass('hideData');
+		$('#VIEWPAGEFORM ').addClass('hideData');		
+	});
+})
+</script>
+
+
+
+<div class="card card-info border-info center m-1" id='LISTFORM' >
+			<div class="card-header bg-navy"><h5 class="card-title text-center ">Purchase Order >> Cancellation Form</h5>
+			</div>
+
+
+	<div class="card-body form-group">
+ 	
+  			<div class="row " >
+  				 
+					 	<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="purchasingAuthority" data-validation="mandatory" data-langtag="Purchasing Authority" >Purchasing Authority</label>
+	                			<select class="form-control form-control-sm  " id ='purchasingAuthority' name="purchasingAuthority">
+	                				<option value="" selected="selected">Select Category</option>
+	                				<option title="719039980720[HAEMOGLOBINOMETER]" value="719039980720">719039980720[HAEMOGLOBINOMETER]</option>
+									<option title="719039980710[Trolley for patient SS]" value="719039980710">719039980710[Trolley for patient SS]</option>
+									<option title="719039980707[Dressing Trolly SS]" value="719039980707">719039980707[Dressing Trolly SS]</option>
+									<option title="719039980709[WHEEL CHAIR]" value="719039980709">719039980709[WHEEL CHAIR]</option>
+									<option title="719039980713[Emergency Cart]" value="719039980713">719039980713[Emergency Cart]</option>
+									<option title="719039980715[Bed Side Bench]" value="719039980715">719039980715[Bed Side Bench]</option>
+									<option title="719039980716[RADIANT HEAT WARMER]" value="719039980716">719039980716[RADIANT HEAT WARMER]</option>
+	                			</select>
+								<div class="invalid-feedback"></div>
+							</div>	
+						</div>
+						
+						
+					 	<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="numPOReferenceNo" data-validation="mandatory" data-langtag="PO Reference No. " >PO Reference No. </label>
+	                			<select class="form-control form-control-sm  " id ='numPOReferenceNo' name="numPOReferenceNo">
+	                				<option value="" selected="selected">Select Category</option>
+	                				<option title="Shahdol-CMHO" value="5001764">Shahdol-CMHO</option>
+									<option title="Shahdol- CS" value="5056012">Shahdol- CS</option>
+									<option title="Shajapur-CMHO" value="5001765">Shajapur-CMHO</option>
+									<option title="Shajapur- CS" value="5056013">Shajapur- CS</option>
+									<option title="Sheopur-CMHO" value="5001766">Sheopur-CMHO</option>
+									<option title="Sheopur- CS" value="5056014">Sheopur- CS</option>
+									<option title="Shivpuri-CMHO" value="5001767">Shivpuri-CMHO</option>
+									<option title="Shivpuri- CS" value="5056015">Shivpuri- CS</option>
+									<option title="Sidhi-CMHO" value="5001768">Sidhi-CMHO</option>
+	                			</select>
+								<div class="invalid-feedback"></div>
+							</div>	
+						</div>
+			 	
+	</div>
+	
+
+
+		
+
+<div class="text-center">
+				<button class="btn   bg-gradient-success btn-sm" id="btnview"><i class="fa fa-eye" aria-hidden="true"></i> View</button>
+			</div>
+
+</div>
+<ul>
+<li><b>* Mandatory Fields</b></li>
+<li><b>Only when PO cancel if status will "New or "Approved"</b></li>
+<li><b><i class="fa-char-<D>">Reset to Dispatch</i></b></li>
+<li><b><i class="fa-char-<R>">Reset to Received</i></b></li>
+</ul>
+</div>
+
+
+
+<div class="card card card-info border-info center m-1 hideData" id='VIEWPAGEFORM'  >
+	<div class="card-header bg-navy">
+		<h6 class="text-left">Purchase Order >> Cancellation Form >> View </h6>
+	</div>
+	<div class="card-body form-group">
+ 	
+  			<div class="row " >
+  				 
+					 	<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="purchasingAuthority" data-validation="mandatory" data-langtag="Purchasing Authority" >Purchasing Authority</label>
+	                			<select class="form-control form-control-sm  " id ='purchasingAuthority' name="purchasingAuthority">
+	                				<option value="" selected="selected">Alirajpur-CHMO</option>
+	                			</select>
+								<div class="invalid-feedback"></div>
+							</div>	
+						</div>
+						
+						
+					 	<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="numPOReferenceNo" data-validation="mandatory" data-langtag="PO Reference No. " >PO Reference No. </label>
+	                			<select class="form-control form-control-sm  " id ='numPOReferenceNo' name="numPOReferenceNo">
+	                				<option value="" selected="selected">646836582754[WHEEL ,CHMO ALIRAJPUR]</option>
+	                			</select>
+								<div class="invalid-feedback"></div>
+							</div>	
+						</div>
+			 	
+	</div>
+	</div>
+	<div class="card-body form-group">
+	<div class='row'>
+	                                  <div class='col-lg-3' ><b>Financial Year  :</b>	Aagar- CS
+  				                       </div>
+  		                              <div class='col-lg-3' ><b>PO Status.  :</b>	<i class="text-danger">Approved</i> 
+  				                       </div>
+  				                       <div class='col-lg-3' ><b>PO Type  :	</b>	 	Central Purchase
+  				                       </div>
+  		                              <div class='col-lg-3' ><b>PO Date :</b>		20-FEB-2017	 
+  				                       </div>
+  				                       <div class='col-lg-3' ><b>Tender No.:	</b>	NIT-149
+  				                       </div>
+  		                              <div class='col-lg-3' ><b>Rate Contract No </b> 	<a href="#">218099980058</a>
+  				                       </div>
+  				                       <div class='col-lg-3' ><b>Supplier Name </b>		<a href="#">3Godrej</a>
+  				                       </div>
+  				                       <div class='col-lg-3' ><b>Funding Source  :</b>		NHM	 
+  				                       </div>
+  				                       <div class='col-lg-3' ><b>Programme Name  :</b>		RCH(Rch)	 
+  				                       </div>
+  				                       <div class='col-lg-3' ><b>Budget Line  :</b>		6.1.2.6.b 
+  				                       </div>
+  				                        <div class='col-lg-3' ><b>PO Cost  :</b>	<i class="text-danger">Rs. 52500.85</i> 
+  				                       </div>
+  				                       </div>
+  				                       </div>
+  				                       
+  				      <div class="card-body form-group">         
+	                 <h6><b> Consignee & Order Details </b></h6>
+	                 <hr class="bg-navy">
+	                 <div class='row no-more-tables'>
+			<table class="table table-hover">
+			  <thead class="bg-light">
+			      <tr>
+			      	
+			        <th >#</th>
+			          <th>Consignee Name	</th>
+			        <th>Equipment Name :</th>
+			        <th>Ordered Qty[A] :</th>
+			       <th>Rate/Unit (Rs.)(Excluding Tax)[B] :</th>
+			        <th>Tax Amount/Unit(Rs.)[C] :</th>
+			        <th>TotRate/Unit(Rs.)(Including Tax)[B+C] :</th>
+			        <th>Total PO Cost(Rs.)[A*B]:</th>
+			        <th>Net PO Cost(Rs.)[A*(B+C)]:</th>
+			        </tr>
+			      </thead>
+			       <tbody>
+			     <tr>
+			     
+			       <td data-title='Request Id' >1</td>
+			        <td data-title='Request Date'>Bhawara Alirajpur-CHC</td>
+			        <td data-title='Equipment Model'>WHEEL CHAIR	</td>
+			        <td data-title='Department'>5</td>
+			        <td data-title='Equipment Name'>8898.45	</td>
+			        <td data-title='Equipment Model'>1601.72</td>
+			        <td data-title='Equipment Model'>10500.17 </td>
+			        <td data-title='Equipment Model'>44492.25</td>
+			         <td data-title='Equipment Model'>52500.85</td>
+			       
+			       </tr>
+			    </tbody>
+			    </table>
+			    </div>
+			    </div>
+
+<div class="card-body form-group">         
+	                 <h6><b> Dispatch Details </b></h6>
+	                 <hr class="bg-navy">
+	                 <div class='row no-more-tables'>
+			<table class="table table-hover">
+			  <thead class="bg-light">
+			      <tr>
+			      	
+			        <th >#</th>
+			          <th>Consignee Name	</th>
+			        <th>Equipment Name </th>
+			        <th>Serial No./ Catalog No.</th>
+			       <th>Quantity </th>
+			        <th>Invoice No. </th>
+			        <th>Invoice Date </th>
+			        <th>Received Date	</th>
+			        <th>Status</th>
+			        <th>Action</th>
+			        </tr>
+			      </thead>
+			       <tbody>
+			     <tr>
+			     
+			       <td data-title='Request Id' colspan='10' ><i class="text-danger">No Dispatch(s) Detail Found</i></td>
+			       
+			       
+			       </tr>
+			    </tbody>
+			    </table>
+			    </div>
+			    </div>
+			    
+			    <div class="card-body form-group">
+	<div class='row'>
+	                                  <div class='col-lg-3' ><b>Cancellation Date   :</b>	10-Jan-2020
+  				                       </div>
+  				                       
+  				                       <div class='col-lg-3' >
+	              	            <div class="form-group">
+	              	            <label class="col-form-label col-form-label-sm" for="remarks" data-langtag="Remarks  "  >Remarks   :</label>
+	                			<textarea class="form-control form-control-sm " name="remarks"  id="remarks" placeholder="Auto Generated" maxlength="50" data-validation="mandatory,alphabetOnly"> </textarea> 	
+              <i class= "text-danger">(Allowed Upto 500 Characters.)</i>
+	                			<div class="invalid-feedback"></div>
+	              			</div></div>
+	              			
+	              			<div class='col-lg-3' ><b>Upload Support Document(if any) :</b><input type="file" name="myFile">
+  				                       </div>
+         </div>
+         </div>
+
+    <div class="card-footer">
+		<div class="text-center">
+              <button class="btn bg-gradient-success mt-4 btn-sm" id="btnBack"><i class="fas fa-arrow-circle-left"></i> Back</button>                            
+		</div>
+	</div>  
+ 
+  </div>
+			
+			
+ 

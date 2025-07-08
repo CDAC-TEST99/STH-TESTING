@@ -1,0 +1,358 @@
+<script>
+$(document).ready(function () {
+	$('#btninvoice').click(function(){
+		$('#LISTFORM').addClass('hideData');
+		$('#INVOICEPAGEFORM').removeClass('hideData');		
+	});
+	
+	$('#btnBack').click(function(){
+		$('#LISTFORM').removeClass('hideData');
+		$('#INVOICEPAGEFORM').addClass('hideData');		
+	});
+	
+	$('#viewicon').click(function(){
+		$('#LISTFORM').addClass('hideData');
+		$('#INVOICEPAGEFORM').addClass('hideData');
+		$('#VIEWICONLISTFORM').removeClass('hideData');		
+	});
+	$('#btnBackView').click(function(){
+		$('#INVOICEPAGEFORM').removeClass('hideData');
+		$('#VIEWICONLISTFORM').addClass('hideData');		
+	});
+})
+</script>
+
+<div class="card card-info border-info center m-1" id='LISTFORM' >
+			<div class="card-header bg-navy"><h5 class="card-title text-center ">
+Maintenance Vendor Desk</h5>
+			</div>
+
+
+	<div class="card-body form-group">
+ 	
+  		 <div class='row'>
+  				 
+					 	<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="vendorName" data-validation="mandatory" data-langtag="Vendor Name" >Vendor Name</label>
+	                			<select class="form-control form-control-sm  " id ='vendorName' name="vendorName">
+	                				<option value="" selected="selected">Select </option>
+	                				<option value="" >AIM Healthcare</option>
+	                				
+	                			</select>
+								<div class="invalid-feedback"></div>
+							</div>	
+						</div>
+		
+				 	
+					 	<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="type" data-validation="mandatory" data-langtag="Type" >Type</label>
+	                			<select class="form-control form-control-sm" id ='type' name="type">
+	                				<option value="" selected="selected">Select</option>
+	                				<option value="" >Verified NAV</option>
+	                				<option value="" >Bill raised against verified NAV</option>
+	                			</select>
+								<div class="invalid-feedback"></div>
+							</div>
+						</div>
+	</div>
+	 			
+	 		
+
+			<div class='text-center'>
+	<button class='btn bg-gradient-success mt-4 btn-sm' id='btninvoice'><i class="fas fa-file-invoice"></i> Invoice</button>
+	<button class='btn bg-gradient-success mt-4 btn-sm' id='btnrepayment'> <i class="fa fa-credit-card"></i> Re-payment</button>
+			  		
+	
+	</div>
+	
+	
+			<div class='row'>
+			<div class='col-lg-4'>	
+				<div class="form-group row">                   
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" id="search" placeholder="Search">
+                    </div>
+                  </div>
+			</div>
+			
+			</div>	
+			<div class='row no-more-tables'>
+			<table class="table table-hover">
+			  <thead class="bg-navy">
+		
+			      <tr>
+			      	<th><input type="checkbox"></th>
+			        <th >Bill No.</th>
+			        <th>Bill Date</th>
+			        <th>Authority Name	</th>
+			        <th>Payment Quarter	</th>
+			        <th>Total NAV	</th>
+			        <th>Factor Value</th>
+			        <th>Quarter NAV</th>
+			        <th>Penalty Amt</th>
+			      </tr>
+			    </thead>
+			    <tbody>
+			     <tr>
+			      	<td class='d-none d-sm-block' ><input type="checkbox"></td>
+			        <td data-title='' >	 2119110003</td>
+			        <td data-title=''>11-Nov-2019</td>
+			        <td data-title=''> Aagar- CS</td>
+			        <td data-title=''> Q10 (01-Jul-2019 to 30-Sep-2019)</td>
+			        <td data-title=''>5228130.00</td>
+			        <td data-title=''>7.04</td>
+			        <td data-title=''>	 92015.09</td>
+			        <td data-title=''> 0.00</td>
+			      </tr>
+			       <tr>
+			      	<td class='d-none d-sm-block' ><input type="checkbox"></td>
+			        <td data-title='' >	 2119110003</td>
+			        <td data-title=''>	 31-Jul-2019</td>
+			        <td data-title=''>Alirajpur-CMHO</td>
+			        <td data-title=''>  Q8 (01-Jan-2019 to 31-Mar-2019)</td>
+			        <td data-title=''>5228130.00</td>
+			        <td data-title=''> 6.72</td>
+			        <td data-title=''>	 92015.09</td>
+			        <td data-title=''> 0.00</td>
+			      </tr>
+			       <tr>
+			      	<td class='d-none d-sm-block' ><input type="checkbox"></td>
+			        <td data-title='' >	 2119110003</td>
+			        <td data-title=''>11-Nov-2019</td>
+			        <td data-title=''>	 Bhopal - CS</td>
+			        <td data-title=''> Q10 (01-Jul-2019 to 30-Sep-2019)</td>
+			        <td data-title=''>5228130.00</td>
+			        <td data-title=''>7.04</td>
+			        <td data-title=''>	 92015.09</td>
+			        <td data-title=''>  1000.00</td>
+			      </tr>
+			    </tbody>
+			 </table>	
+			</div>
+			
+			
+			 
+	</div>  
+		<div class="card-footer">
+		             <p> <i class="fa fa-circle m-2" style="font-size:8px;color:#17a2b8"></i>   Bill Processed By Vendor
+			 <i class="fa fa-circle m-2" style="font-size:8px;color:#17a2b8"></i>	 Bill Verification In Process
+		</div>
+</div>
+
+
+<div class="card card card-info border-info center m-1 hideData" id='INVOICEPAGEFORM'  >
+	<div class="card-header bg-navy">
+		<h6 class="text-left">Maintenance Vendor Desk >> Bill Raise and Invoice Upload </h6>
+	</div>
+	<div class="card-body form-group">
+	<h6><b>Request Information :
+</b></h6>
+	<hr class="bg-navy">
+	 <div class='row'>
+	 
+  
+  	<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="maintenanceContract" data-validation="mandatory" data-langtag="Maintenance Contract" >Maintenance Contract :</label>
+	                			<select class="form-control form-control-sm  " id ='maintenanceContract' name="maintenanceContract">
+	                				
+	                				
+						<option title="Select Value" selected value="0">Select Value</option>
+<option title="Aim Health Care" selected value="517129980001">Aim Health Care</option>
+
+					
+	                			</select>
+								<div class="invalid-feedback"></div>
+							</div>	
+						</div>
+		
+				 	
+					 	<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="paymentQuarter" data-validation="mandatory" data-langtag="Payment Quarter" >Payment Quarter :</label>
+	                			<select class="form-control form-control-sm" id ='paymentQuarter' name="paymentQuarter">
+	                				
+						<option title="Select Value" selected value="0">Select Value</option>
+<option title="Q11 [01-Oct-2019 to 31-Dec-2019]" value="10010">Q11 [01-Oct-2019 to 31-Dec-2019]</option>
+<option title="Q10 [01-Jul-2019 to 30-Sep-2019]" value="10009">Q10 [01-Jul-2019 to 30-Sep-2019]</option>
+<option title="Q9 [01-Apr-2019 to 30-Jun-2019]" value="10008">Q9 [01-Apr-2019 to 30-Jun-2019]</option>
+<option title="Q8 [01-Jan-2019 to 31-Mar-2019]" value="10007">Q8 [01-Jan-2019 to 31-Mar-2019]</option>
+
+					
+	                			</select>
+								<div class="invalid-feedback"></div>
+							</div>
+						</div>
+						<div class='col-lg-3' ></div>
+					 	<div class='col-lg-3' ></div>	
+						
+						
+					 	<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="vendorDetails" data-validation="mandatory" data-langtag="Vendor Details" >Vendor A/C Details : <button id="viewicon"><i class="fas fa-arrow-circle-left lg" ></i></button></label>
+	                			
+								<div class="invalid-feedback"></div>
+							</div>
+						</div>
+  
+  					<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="vendorDetails" data-validation="mandatory" data-langtag="Vendor Details" >Total DDO(s) Mapped : 	106</label>
+	                			
+								<div class="invalid-feedback"></div>
+							</div>
+						</div>
+						<div class='col-lg-3' >
+					 		<div class="form-group">
+	                			<label class="col-form-label col-form-label-sm" for="vendorDetails" data-validation="mandatory" data-langtag="Vendor Details" >Total DDO(s) Verified NAV1 : 0 </label>
+	                			
+								<div class="invalid-feedback"></div>
+							</div>
+						</div>
+  
+  
+  		
+			
+	
+	</div>
+	<div><h6><b>Quarter Bill List :</b></h6>
+	<hr class="bg-navy">
+	
+	<div class='row no-more-tables'>
+			<table class="table table-hover">
+			  <thead class="bg-light">
+		
+			      <tr>
+			      	<th><input type="checkbox"></th>
+			        <th >Payment Authority</th>
+			        <th>Bill No</th>
+			        <th>Bill Date	</th>
+			        <th>Factor Value[A]	</th>
+			        <th>Total Equipment Value[B]	</th>
+			        <th>Quarter NAV #[(A%B)/4]</th>
+			        <th>Total Breakdown Request</th>
+			        <th>Total PM Request</th>
+			        <th>Total Calibration Request </th>
+			        <th>Total Penalty</th>
+			      </tr>
+			    </thead>
+			    <tbody>
+			     <tbody>
+			     <tr>
+			      	<td class='d-none d-sm-block' ><input type="checkbox"></td>
+			        <td data-title='' >	 2119110003</td>
+			        <td data-title=''>11-Nov-2019</td>
+			        <td data-title=''> Aagar- CS</td>
+			        <td data-title=''> Q10 (01-Jul-2019 to 30-Sep-2019)</td>
+			        <td data-title=''>5228130.00</td>
+			        <td data-title=''>7.04</td>
+			        <td data-title=''>	 92015.09</td>
+			        <td data-title=''> 0.00</td>
+			        <td data-title=''>11-Nov-2019</td>
+			        <td data-title=''> Aagar- CS</td>
+			      </tr>
+			       <tr>
+			      	<td class='d-none d-sm-block' ><input type="checkbox"></td>
+			        <td data-title='' >	 2119110003</td>
+			        <td data-title=''>	 31-Jul-2019</td>
+			        <td data-title=''>Alirajpur-CMHO</td>
+			        <td data-title=''>  Q8 (01-Jan-2019 to 31-Mar-2019)</td>
+			        <td data-title=''>5228130.00</td>
+			        <td data-title=''> 6.72</td>
+			        <td data-title=''>	 92015.09</td>
+			        <td data-title=''> 0.00</td>
+			        <td data-title=''>11-Nov-2019</td>
+			        <td data-title=''> Aagar- CS</td>
+			      </tr>
+			       <tr>
+			      	<td class='d-none d-sm-block' ><input type="checkbox"></td>
+			        <td data-title='' >	 2119110003</td>
+			        <td data-title=''>11-Nov-2019</td>
+			        <td data-title=''>	 Bhopal - CS</td>
+			        <td data-title=''> Q10 (01-Jul-2019 to 30-Sep-2019)</td>
+			        <td data-title=''>5228130.00</td>
+			        <td data-title=''>7.04</td>
+			        <td data-title=''>	 92015.09</td>
+			        <td data-title=''>  1000.00</td>
+			        <td data-title=''>11-Nov-2019</td>
+			        <td data-title=''> Aagar- CS</td>
+			      </tr>
+			    </tbody>
+			    </tbody>
+			 </table>	
+			</div>
+	
+	</div>
+		<div><h6><b> Payment Process Details :
+</b></h6>
+	<hr class="bg-navy"></div>
+	
+	</div>
+   <div class="card-footer">
+		<div class="text-center">
+		<button class='btn bg-gradient-success mt-4 btn-sm' > <i class="fa fa-save"></i> Save</button>
+	<button class='btn bg-gradient-success mt-4 btn-sm' > <i class="fa fa-window-close"></i> Clear</button>
+              <button class="btn bg-gradient-success mt-4 btn-sm" id="btnBack"><i class="fas fa-arrow-circle-left"></i> Back</button>                            
+		</div>
+		
+		<p> <i class="fa fa-circle" style="font-size:8px;color:#17a2b8"></i>   * Mandatory Fields</p>
+			<p> <i class="fa fa-circle" style="font-size:8px;color:#17a2b8"></i>	# Quarter NAV Calculation Formula : ((Quarter Factor Value) % (Total NAV))/4</p>
+		<p> <i class="fa fa-circle" style="font-size:8px;color:#17a2b8"></i>   1 Pending for Bill Raise by Vendor</p>
+	</div>  
+ 
+  
+</div>
+  
+  
+  <!--card for view icon-->
+  
+<div class="card card-info border-info center m-1 hideData" id='VIEWICONLISTFORM' >
+			<div class="card-header bg-navy"><h5 class="card-title text-center ">
+Supplier Detail</h5>
+			</div>
+
+
+	<div class="card-body form-group">
+ 	 
+  		 <div class='row'>
+	 
+  <div class='col-lg-3' >
+  
+ 
+
+ 
+  				<div><b>Contact No. :</b>	9425680875</div>	
+  				<div><b>E-Mail Id :</b>	aimbpl2016@gmail.com</div>
+  				<div><b>Bank Name : :</b>	Hdfc Bank</div>	
+  				<div><b>Bank A/C No :</b>	ABGFA5961K1ZB</div>
+				
+				
+  		</div>
+  		<div class='col-lg-3' >		 
+  				<div><b>Bank IFSC Code :	</b>HDFC0000088</div> 	
+  				<div><b>GST No   :</b>	23ABGFA5961K1ZB</div>
+  				<div><b>Address :	</b>C-36,Housing Board Colony, Koh-E-Fiz</div> 	
+  				
+				
+</div>
+			
+	
+	</div>
+	 			
+	 		
+
+</div>
+ <div class="card-footer">
+		<div class="text-center">
+		
+              <button class="btn bg-gradient-success mt-4 btn-sm" id="btnBackView"><i class="fas fa-arrow-circle-left"></i> Back</button>                            
+		</div>
+		
+		
+	</div>
+</div>
+
+
+
