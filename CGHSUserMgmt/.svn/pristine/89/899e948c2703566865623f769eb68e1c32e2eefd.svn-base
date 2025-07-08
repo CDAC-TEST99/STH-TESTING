@@ -1,0 +1,11 @@
+defaultmasterkey	=	welcomePage
+sessionExpired	=	/hissso/jsp/error/sso_error_login_authenticate.jsp
+welcomePage	=	/global/jsp/welcomePage.jsp
+UserMaster=/cghsUsm/jsp/UserMaster.jsp
+skipOtp=/cghsUsm/jsp/skipOtp.jsp
+ModifyUserMaster=/cghsUsm/jsp/ModifyUserMaster.jsp
+TransferRequest=/cghsUsm/jsp/TransferRequest.jsp
+TransferAcceptance=/cghsUsm/jsp/TransferAcceptance.jsp
+DelegateSeat=/cghsUsm/jsp/DelegateSeat.jsp
+tempTransfer=/cghsUsm/jsp/tempTransfer.jsp
+tempTransferApproval=/cghsUsm/jsp/tempTransferApproval.jsp

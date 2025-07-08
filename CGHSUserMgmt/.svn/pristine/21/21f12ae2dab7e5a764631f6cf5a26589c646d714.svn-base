@@ -1,0 +1,15 @@
+IsFileUploadOnFTP=	YES
+SUPPORTJSONB	=	YES
+HIS_WEB_MODULE_LOGIN=AHIMSG5
+MODULE_NAME	=CGHSUserMgmt
+MODE_DEBUG= ON
+
+HISPATH_WINDOWS=C:/CGHS/AHIMSG5/hisPath.xml
+HISPATH_LINUX=/opt/Arunachal_PHDM/AHIMSG5/hisPath.xml
+
+
+emailId= l2.cghs-noida@cdac.in
+password=Cghs012#@@@#682  
+emailHost=smtp.cdac.in
+emailPort= 587
+

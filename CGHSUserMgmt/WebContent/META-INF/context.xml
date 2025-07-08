@@ -1,0 +1,20 @@
+<Context>
+	
+	   <Resource 
+        name="EMMS"
+        auth="Container"
+        type="javax.sql.DataSource"
+		driverClassName="org.postgresql.Driver"
+		url="jdbc:postgresql://10.226.80.97:5433/cdac_task_mgmt"
+		username = "taskadmin"
+		password = "@wesome!@#"
+		maxActive="1000" 
+		maxIdle="30" 
+		maxWait = "15000"/> 
+		
+		
+		 
+	 
+ 	<WatchedResource>WEB-INF/web.xml</WatchedResource>
+</Context>
+
