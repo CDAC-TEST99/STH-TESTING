@@ -1,1 +1,0 @@
-<% out.println((String)request.getAttribute("buttonConfigData1")); %>
