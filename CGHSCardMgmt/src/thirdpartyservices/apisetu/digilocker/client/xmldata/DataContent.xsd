@@ -1,0 +1,124 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="Certificate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="IssuedBy">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Organization">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:string">
+                      <xs:attribute type="xs:string" name="name"/>
+                      <xs:attribute type="xs:string" name="code"/>
+                      <xs:attribute type="xs:string" name="tin"/>
+                      <xs:attribute type="xs:string" name="uid"/>
+                      <xs:attribute type="xs:string" name="type"/>
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Address">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:string">
+                      <xs:attribute type="xs:string" name="type"/>
+                      <xs:attribute type="xs:string" name="line1"/>
+                      <xs:attribute type="xs:string" name="line2"/>
+                      <xs:attribute type="xs:string" name="house"/>
+                      <xs:attribute type="xs:string" name="landmark"/>
+                      <xs:attribute type="xs:string" name="locality"/>
+                      <xs:attribute type="xs:string" name="vtc"/>
+                      <xs:attribute type="xs:string" name="district"/>
+                      <xs:attribute type="xs:int" name="pin"/>
+                      <xs:attribute type="xs:string" name="state"/>
+                      <xs:attribute type="xs:string" name="country"/>
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="IssuedTo">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Person">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:string">
+                      <xs:attribute type="xs:string" name="uid"/>
+                      <xs:attribute type="xs:string" name="title"/>
+                      <xs:attribute type="xs:string" name="name"/>
+                      <xs:attribute type="xs:string" name="dob"/>
+                      <xs:attribute type="xs:string" name="age"/>
+                      <xs:attribute type="xs:string" name="swd"/>
+                      <xs:attribute type="xs:string" name="swdIndicator"/>
+                      <xs:attribute type="xs:string" name="motherName"/>
+                      <xs:attribute type="xs:string" name="maritalStatus"/>
+                      <xs:attribute type="xs:string" name="relationWithHof"/>
+                      <xs:attribute type="xs:string" name="disabilityStatus"/>
+                      <xs:attribute type="xs:string" name="category"/>
+                      <xs:attribute type="xs:string" name="religion"/>
+                      <xs:attribute type="xs:string" name="email"/>
+                      <xs:attribute type="xs:string" name="gender"/>
+                      <xs:attribute type="xs:string" name="phone"/>
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Address">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:string">
+                      <xs:attribute type="xs:string" name="type"/>
+                      <xs:attribute type="xs:string" name="line1"/>
+                      <xs:attribute type="xs:string" name="line2"/>
+                      <xs:attribute type="xs:string" name="house"/>
+                      <xs:attribute type="xs:string" name="landmark"/>
+                      <xs:attribute type="xs:string" name="locality"/>
+                      <xs:attribute type="xs:string" name="vtc"/>
+                      <xs:attribute type="xs:string" name="district"/>
+                      <xs:attribute type="xs:string" name="pin"/>
+                      <xs:attribute type="xs:string" name="state"/>
+                      <xs:attribute type="xs:string" name="country"/>
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="CertificateData">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CghsCard">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:string">
+                      <xs:attribute type="xs:string" name="name"/>
+                      <xs:attribute type="xs:string" name="number"/>
+                      <xs:attribute type="xs:string" name="place"/>
+                      <xs:attribute type="xs:string" name="date"/>
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element type="xs:string" name="Signature"/>
+      </xs:sequence>
+      <xs:attribute type="xs:byte" name="language"/>
+      <xs:attribute type="xs:string" name="name"/>
+      <xs:attribute type="xs:string" name="type"/>
+      <xs:attribute type="xs:string" name="number"/>
+      <xs:attribute type="xs:string" name="prevNumber"/>
+      <xs:attribute type="xs:string" name="expiryDate"/>
+      <xs:attribute type="xs:string" name="validFromDate"/>
+      <xs:attribute type="xs:string" name="issuedAt"/>
+      <xs:attribute type="xs:string" name="issueDate"/>
+      <xs:attribute type="xs:string" name="status"/>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

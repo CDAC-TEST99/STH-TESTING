@@ -1,0 +1,24 @@
+IsFileUploadOnFTP=	YES
+SUPPORTJSONB	=	YES
+HIS_WEB_MODULE_LOGIN=AHIMSG5
+MODULE_NAME	=CGHSCardMgmt
+MODE_DEBUG= ON
+
+HISPATH_WINDOWS=C:/CGHS/AHIMSG5/hisPath.xml
+HISPATH_LINUX=/opt/Arunachal_PHDM/AHIMSG5/hisPath.xml
+
+#####################  DIGILOCKER Start #############
+DIGILOCKER_CERTIFICATE_PATH_WINDOWS	=	C:/CGHS/AHIMSG5/xml/digilockerXML/
+DIGILOCKER_CERTIFICATE_PATH_LINUX	=	/opt/Arunachal_PHDM/AHIMSG5/xml/digilockerXML/
+
+##################### DIGILOCKER End #############
+
+
+##################### For Bhavishya Integration Code Start #############
+
+BHAVISHYA_SECRET_KEY=BHAVISHYA#SECRET
+BHAVISHYA_ENCRYPTION_DECRYPTION_ALGO=AES
+BHAVISHYA_ENCRYPTION_DECRYPTION_KEY=Bhavishya#Encryption#Decryption#Key#2024
+
+##################### Bhavishya Integration Code End ####################
+

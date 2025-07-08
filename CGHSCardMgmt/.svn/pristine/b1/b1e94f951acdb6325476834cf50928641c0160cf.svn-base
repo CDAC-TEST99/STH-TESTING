@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Certificate language="99" name="Pension Certificate" type="GPFCR" number="" prevNumber="" expiryDate="" validFromDate="" issuedAt="" issueDate="" status="A">
+    <IssuedBy>
+        <Organization name="" code="in.gov.dvc" tin="" uid="" type="SG"/>
+        <Address type="Permanent" line1="" line2="" house="" landmark="" locality="" vtc="" district="" pin="700054" state="West Bengal" country="India"/>
+    </IssuedBy>
+    <IssuedTo>
+        <Person uid="" title="" name="" dob="" age="" swd="" swdIndicator="" motherName="" maritalStatus="" relationWithHof="" disabilityStatus="" category="" religion="" email="" gender="" phone=""/>
+        <Address type="" line1="" line2="" house="" landmark="" locality="" vtc="" district="" pin="" state="" country=""/>
+    </IssuedTo>
+    <CertificateData>
+        <Certificate name="" number="" place="" date=""/>
+    </CertificateData>
+    <Signature/>
+</Certificate>

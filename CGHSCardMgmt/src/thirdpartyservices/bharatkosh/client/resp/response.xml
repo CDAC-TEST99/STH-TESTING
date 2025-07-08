@@ -1,0 +1,9 @@
+<?xml version='1.0'?>
+<paymentService version='1.0' merchantCode='MERCHANT'>
+    <reply>
+        <orderStatus orderCode='Order123' status='statustype'>
+            <reference id='Reference123'>
+            </reference>
+        </orderStatus>
+    </reply>
+</paymentService>

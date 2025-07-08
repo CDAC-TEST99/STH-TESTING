@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+    <xs:element name="BharatKoshPayment">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="Submit"/>
+            </xs:sequence>
+            <xs:attribute name="DepartmentCode" use="required" type="xs:integer"/>
+            <xs:attribute name="Version" use="required" type="xs:decimal"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="Submit">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="OrderBatch"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="OrderBatch">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="Order"/>
+            </xs:sequence>
+            <xs:attribute name="TotalAmount" use="required" type="xs:integer"/>
+            <xs:attribute name="Transactions" use="required" type="xs:integer"/>
+            <xs:attribute name="merchantBatchCode" use="required" type="xs:integer"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="Order">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="CartDetails"/>
+                <xs:element ref="PaymentMethodMask"/>
+                <xs:element ref="Shopper"/>
+                <xs:element ref="ShippingAddress"/>
+                <xs:element ref="BillingAddress"/>
+                <xs:element ref="StatementNarrative"/>
+                <xs:element ref="Remarks"/>
+            </xs:sequence>
+            <xs:attribute name="InstallationId" use="required" type="xs:integer"/>
+            <xs:attribute name="OrderCode" use="required" type="xs:integer"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="CartDetails">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="Description"/>
+                <xs:element ref="Amount"/>
+                <xs:element ref="OrderContent"/>
+                <xs:element ref="PaymentTypeId"/>
+                <xs:element ref="PAOCode"/>
+                <xs:element ref="DDOCode"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="Description" type="xs:string"/>
+    <xs:element name="Amount">
+        <xs:complexType>
+            <xs:attribute name="CurrencyCode" use="required" type="xs:NCName"/>
+            <xs:attribute name="exponent" use="required" type="xs:integer"/>
+            <xs:attribute name="value" use="required" type="xs:integer"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="OrderContent" type="xs:integer"/>
+    <xs:element name="PaymentTypeId" type="xs:integer"/>
+    <xs:element name="PAOCode" type="xs:integer"/>
+    <xs:element name="DDOCode" type="xs:integer"/>
+    <xs:element name="PaymentMethodMask">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="Include"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="Include">
+        <xs:complexType>
+            <xs:attribute name="Code" use="required" type="xs:NCName"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="Shopper">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="ShopperEmailAddress"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="ShopperEmailAddress">
+        <xs:complexType/>
+    </xs:element>
+    <xs:element name="ShippingAddress">
+        <xs:complexType mixed="true">
+            <xs:sequence>
+                <xs:element minOccurs="0" maxOccurs="unbounded" ref="Address"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="BillingAddress">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="Address"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="StatementNarrative">
+        <xs:complexType/>
+    </xs:element>
+    <xs:element name="Remarks">
+        <xs:complexType/>
+    </xs:element>
+    <xs:element name="Address">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="FirstName"/>
+                <xs:element ref="LastName"/>
+                <xs:element ref="Address1"/>
+                <xs:element ref="Address2"/>
+                <xs:element ref="PostalCode"/>
+                <xs:element ref="City"/>
+                <xs:element ref="StateRegion"/>
+                <xs:element ref="State"/>
+                <xs:element ref="CountryCode"/>
+                <xs:element ref="MobileNumber"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="FirstName" type="xs:NCName"/>
+    <xs:element name="LastName" type="xs:NCName"/>
+    <xs:element name="Address1" type="xs:NCName"/>
+    <xs:element name="Address2">
+        <xs:complexType/>
+    </xs:element>
+    <xs:element name="PostalCode" type="xs:integer"/>
+    <xs:element name="City" type="xs:NCName"/>
+    <xs:element name="StateRegion" type="xs:NCName"/>
+    <xs:element name="State" type="xs:string"/>
+    <xs:element name="CountryCode" type="xs:NCName"/>
+    <xs:element name="MobileNumber" type="xs:integer"/>
+</xs:schema>

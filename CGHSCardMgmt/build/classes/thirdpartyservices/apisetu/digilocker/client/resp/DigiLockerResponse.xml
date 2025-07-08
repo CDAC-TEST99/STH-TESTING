@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<PullURIResponse>
+    <ResponseStatus Status="1" ts="2016-01-11T14:44:48+05:30"
+                    txn="1452503688">1</ResponseStatus>//1-Success //0-Failure //9-Pending
+    <DocDetails>
+        <IssuedTo>
+            <Persons>
+                <Person name="Sunil Kumar" dob="31-12-1990"
+                        gender="Male/Female/Transgender" phone="9876543210">
+                    <Photo format=" PNG/JPG/JPEG">Base 64 encoded image
+                        content</Photo>
+                </Person>
+                <Person name="Sunita Devi" dob="25-03-1993"
+                        gender="Male/Female/Transgender" phone="9873451238"/>
+            </Persons>
+        </IssuedTo>
+        <URI>in.gov.dept.state-INCER-1234567</URI>
+        <DocContent>Base64 encoded string of PDF file</DocContent>
+        <DataContent>Base64 encoded certificate metadata in XML format</DataContent>
+    </DocDetails>
+</PullURIResponse>

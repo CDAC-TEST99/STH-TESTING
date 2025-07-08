@@ -1,0 +1,32 @@
+# DEFAULT CACHE REGION
+
+jcs.default=DC,LTCP
+jcs.default.cacheattributes=org.apache.jcs.engine.CompositeCacheAttributes
+jcs.default.cacheattributes.MaxObjects=1000
+jcs.default.cacheattributes.MemoryCacheName= org.apache.jcs.engine.memory.lru.LRUMemoryCache
+
+# PRE-DEFINED CACHE REGIONS
+
+jcs.region.DataWebServiceConfigurationCache=
+jcs.region.DataWebServiceConfigurationCache.cacheattributes=org.apache.jcs.engine.CompositeCacheAttributes
+jcs.region.DataWebServiceConfigurationCache.cacheattributes.MaxObjects=100
+jcs.region.DataWebServiceConfigurationCache.cacheattributes.MemoryCacheName=org.apache.jcs.engine.memory.lru.LRUMemoryCache
+jcs.region.DataWebServiceConfigurationCache.cacheattributes.UseMemoryShrinker=true
+jcs.region.DataWebServiceConfigurationCache.cacheattributes.MaxMemoryIdleTimeSeconds=72000
+jcs.region.DataWebServiceConfigurationCache.cacheattributes.ShrinkerIntervalSeconds=60
+jcs.region.DataWebServiceConfigurationCache.cacheattributes.MaxSpoolPerRun=2000
+jcs.region.DataWebServiceConfigurationCache.elementattributes=org.apache.jcs.engine.ElementAttributes
+jcs.region.DataWebServiceConfigurationCache.elementattributes.IsEternal=false
+
+
+jcs.region.ModuleWiseServiceConfigurationCache=
+jcs.region.ModuleWiseServiceConfigurationCache.cacheattributes=org.apache.jcs.engine.CompositeCacheAttributes
+jcs.region.ModuleWiseServiceConfigurationCache.cacheattributes.MaxObjects=5000
+jcs.region.ModuleWiseServiceConfigurationCache.cacheattributes.MemoryCacheName=org.apache.jcs.engine.memory.lru.LRUMemoryCache
+jcs.region.ModuleWiseServiceConfigurationCache.cacheattributes.UseMemoryShrinker=true
+jcs.region.ModuleWiseServiceConfigurationCache.cacheattributes.MaxMemoryIdleTimeSeconds=72000
+jcs.region.ModuleWiseServiceConfigurationCache.cacheattributes.ShrinkerIntervalSeconds=60
+jcs.region.ModuleWiseServiceConfigurationCache.cacheattributes.MaxSpoolPerRun=2000
+jcs.region.ModuleWiseServiceConfigurationCache.elementattributes=org.apache.jcs.engine.ElementAttributes
+jcs.region.ModuleWiseServiceConfigurationCache.elementattributes.IsEternal=false
+

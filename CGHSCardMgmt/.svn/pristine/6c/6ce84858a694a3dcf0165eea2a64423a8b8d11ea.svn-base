@@ -1,0 +1,31 @@
+####################### Properties For Bhavishya Integration ##############################
+bhavishya.aes.encryption.decryption.key=ur32characterlongencryptionkey!!
+bhavishya.aes.encryption.decryption.key.iv=our16bytesIVhere
+
+bhavishya.login.username=testuser
+bhavishya.login.password=password123
+bhavishya.login.secret.key=YP29asf32F#@w234212
+
+##################### Bhavishya Base URL for getting Pensioners Data ######################
+cghs.bhavishya.base.url=https://ipension.nic.in/CGHSAPI_Staging
+
+################ In Login URL - Add encrypted string of username and password with json body ################################
+cghs.bhavishya.login.url=/api/auth/login
+
+################ Fetch Pensioner Data using PAN number (encrypted PAN number string) into pensionerRequest parameter ############
+cghs.bhavishya.get.data.url=/api/pensioner/cghs-details   
+
+################ Send Card Issue Details to Bhavishya Portal ################################################
+cghs.bhavishya.send.card.data.url=/api/pensioner/card-status   
+
+####### At below time scheduler will run 15 means 3 pm and 23 means 11 pm #######
+cghs.bhavishya.scheduler.running.day.time=15
+cghs.bhavishya.scheduler.running.night.time=23
+
+
+######### Set Request Timeout For Rejecting the Request from Bhavishya Portal ###########
+cghs.bhavishya.request.timeout=600000
+
+######### For Saving Bhavishya Request and Response Logs (DEBUG = ALL LOGS    &   ERROR = ONLY ERROR LOGS) #################
+cghs.bhavishya.save.logs=ERROR
+

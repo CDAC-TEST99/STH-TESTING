@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+    <xs:element name="paymentService">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="reply"/>
+            </xs:sequence>
+            <xs:attribute name="merchantCode" use="required" type="xs:NCName"/>
+            <xs:attribute name="version" use="required" type="xs:decimal"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="reply">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="orderStatus"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="orderStatus">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="reference"/>
+            </xs:sequence>
+            <xs:attribute name="orderCode" use="required" type="xs:NCName"/>
+            <xs:attribute name="status" use="required" type="xs:NCName"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="reference">
+        <xs:complexType>
+            <xs:attribute name="id" use="required" type="xs:NCName"/>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

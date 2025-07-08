@@ -1,0 +1,22 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:element name = "PullURIRequest">
+<xs:complexType>
+<xs:sequence>
+<xs:element name = "DocDetails">
+<xs:complexType>
+<xs:sequence>
+<xs:element type = "xs:string" name = "DocType"/>
+<xs:element type = "xs:string" name = "DigiLockerId"/>
+<xs:element type = "xs:string" name = "UID"/>
+<xs:element type = "xs:string" name = "FullName"/>
+<xs:element type = "xs:string" name = "DOB"/>
+<xs:element type = "xs:string" name = "Photo"/>
+<xs:element type = "xs:string" name = "UDF1"/>
+ </xs:sequence>
+</xs:complexType>
+</xs:element>
+ </xs:sequence>
+<xs:attribute type = "xs:float" name = "ver"/>
+</xs:complexType>
+</xs:element>
+</xs:schema>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<PullURIRequest ver="1.0" ts="2025-03-12T21:54:35+05:30" txn="1234" orgId="" keyhash="" format="xml/pdf/both">
+    <DocDetails>
+        <DocType>Document type</DocType>
+        <DigiLockerId>Unique 36 character DigiLocker Id</DigiLockerId > 
+        <UID>MD5 Hash of Aadhaar Number (Optional)</UID>
+        <FullName>Name as on Aadhaar (Optional)</FullName>
+        <DOB>Date of birth as on Aadhaar (Optional)</DOB>
+        <Photo>Base 64 encoded JPEG photograph as on Aadhaar (Optional)</Photo>
+        <UDF1>BenID</UDF1>
+    </DocDetails>
+</PullURIRequest>
